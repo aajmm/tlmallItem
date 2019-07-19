@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "visitIndex",
-  "targetURL": "http://pttlcrm.com/ptDataShow/customerview/toHomePage?filter_userId=SONGFEI&encoder=U09OR0ZFSSswMy8yMC8yMDE5IDE0OjQyOjQ3&username=SONGFEI&firstFlag",
+  "targetURL": "http://192.168.220.82:8080/ptDataShow/customerview/toHomePage?filter_userId=SONGFEI&encoder=U09OR0ZFSSswMy8yMC8yMDE5IDE0OjQyOjQ3&username=SONGFEI&firstFlag",
   "jsFile": "index.js",
   "chineseName": "拜访总览",
   "description": "",
@@ -327,8 +327,8 @@
     "page/urls": {
       "contexts": {
         "context8_HsWDeU": [
-          "pttlcrm.com/ptDataShow/customerview/toHomePage?filter_userId=SONGFEI&encoder=U09OR0ZFSSswMy8yMC8yMDE5IDE0OjQyOjQ3&username=SONGFEI&firstFlag",
-          "pttlcrm.com/ptDataShow/customerview/toHomePage?filter_userId=SONGFEI&encoder=U09OR0ZFSSswMy8yMC8yMDE5IDE0OjQ1OjAx&username=SONGFEI&firstFlag"
+          "192.168.220.82:8080/ptDataShow/customerview/toHomePage?filter_userId=SONGFEI&encoder=U09OR0ZFSSswMy8yMC8yMDE5IDE0OjQyOjQ3&username=SONGFEI&firstFlag",
+          "192.168.220.82:8080/ptDataShow/customerview/toHomePage?filter_userId=SONGFEI&encoder=U09OR0ZFSSswMy8yMC8yMDE5IDE0OjQ1OjAx&username=SONGFEI&firstFlag"
         ]
       }
     },

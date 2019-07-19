@@ -8,16 +8,16 @@
     "resource_intercept": {
       "type": [],
       "ignore": [
-        "http://pttlcrm.com/pttlCrm/res/images/ysp-map-customer-address.png",
-        "http://pttlcrm.com/pttlCrm/res/images/ysp-map-adress.png",
-        "http://pttlcrm.com/pttlCrm/res/css/common.css",
-        "http://pttlcrm.com/pttlCrm/res/js/lib/bootstrap/bootstrap.min.css",
-        "http://pttlcrm.com/pttlCrm/res/css/index.css",
-        "http://pttlcrm.com/pttlCrm/res/js/lib/viewer/main.css",
-        "http://pttlcrm.com/pttlCrm/res/js/lib/viewer/viewer.css",
-        "http://pttlcrm.com/pttlCrm/res/js/lib/layer/layui.css",
-        "http://pttlcrm.com/pttlCrm/res/js/lib/layer/skin/default/layer.css?v=3.0.3303",
-        "http://pttlcrm.com/pttlCrm/res/css/common.css"
+        "http://192.168.220.82:8080/pttlCrm/res/images/ysp-map-customer-address.png",
+        "http://192.168.220.82:8080/pttlCrm/res/images/ysp-map-adress.png",
+        "http://192.168.220.82:8080/pttlCrm/res/css/common.css",
+        "http://192.168.220.82:8080/pttlCrm/res/js/lib/bootstrap/bootstrap.min.css",
+        "http://192.168.220.82:8080/pttlCrm/res/css/index.css",
+        "http://192.168.220.82:8080/pttlCrm/res/js/lib/viewer/main.css",
+        "http://192.168.220.82:8080/pttlCrm/res/js/lib/viewer/viewer.css",
+        "http://192.168.220.82:8080/pttlCrm/res/js/lib/layer/layui.css",
+        "http://192.168.220.82:8080/pttlCrm/res/js/lib/layer/skin/default/layer.css?v=3.0.3303",
+        "http://192.168.220.82:8080/pttlCrm/res/css/common.css"
       ]
     },
     "resource_inject": [],
@@ -36,80 +36,80 @@
   "override_urls": [
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/js\\/lib\\/bootstrap\\/bootstrap-paginator\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/lib\\/bootstrap\\/bootstrap-paginator\\.js"
       ],
       "target_url": "override/bootstrap-paginator.js",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/lib/bootstrap/bootstrap-paginator.js"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/lib/bootstrap/bootstrap-paginator.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/js\\/lib\\/webuploader\\/webuploader\\.min\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/lib\\/webuploader\\/webuploader\\.min\\.js"
       ],
       "target_url": "override/webuploader.js",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/lib/webuploader/webuploader.min.js"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/lib/webuploader/webuploader.min.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/js\\/lib\\/iCheck\\/js\\/jquery\\.icheck\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/lib\\/iCheck\\/js\\/jquery\\.icheck\\.js"
       ],
       "target_url": "override/jquery.js",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/lib/iCheck/js/jquery.icheck.js"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/lib/iCheck/js/jquery.icheck.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/css\\/common\\.css"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/css\\/common\\.css"
       ],
       "target_url": "override/common.css",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/css/common.css"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/css/common.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/css\\/customer-atreport\\.css"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/css\\/customer-atreport\\.css"
       ],
       "target_url": "override/customer-atreport.css",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/css/customer-atreport.css"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/css/customer-atreport.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/css\\/customer-reportPop\\.css"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/css\\/customer-reportPop\\.css"
       ],
       "target_url": "override/customer-reportPop.css",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/css/customer-reportPop.css"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/css/customer-reportPop.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/js\\/lib\\/iCheck\\/skins\\/ick-red\\.css"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/lib\\/iCheck\\/skins\\/ick-red\\.css"
       ],
       "target_url": "override/ick-red.css",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/lib/iCheck/skins/ick-red.css"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/lib/iCheck/skins/ick-red.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/css\\/page\\.css"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/css\\/page\\.css"
       ],
       "target_url": "override/page.css",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/css/page.css"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/css/page.css"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/home\\/home\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/home\\/home\\.js.*"
       ],
       "target_url": "override/home.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/home/home.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/home/home.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHome\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHome\\.js.*"
       ],
       "target_url": "override/customerHome.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/plugins/echarts/customerHome.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/plugins/echarts/customerHome.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/jquery\\.min\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/jquery\\.min\\.js.*"
       ],
       "target_url": "override/jquery.min.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/jquery.min.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/jquery.min.js.*"
     },
     {
       "origin_url": [
@@ -127,213 +127,213 @@
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/headLeaderView\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/headLeaderView\\.js.*"
       ],
       "target_url": "override/headLeaderView.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/headLeaderView.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/headLeaderView.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/Imchat\\/im\\/imMain\\.html"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/Imchat\\/im\\/imMain\\.html"
       ],
       "target_url": "override/imMain.html",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/Imchat/im/imMain.html"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/Imchat/im/imMain.html"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/js\\/customerVisitInfo\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/customerVisitInfo\\.js.*"
       ],
       "target_url": "override/customerVisitInfo.js",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/customerVisitInfo.js"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/customerVisitInfo.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHomeMap\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHomeMap\\.js.*"
       ],
       "target_url": "override/customerHomeMap.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/plugins/echarts/customerHomeMap.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/plugins/echarts/customerHomeMap.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHomeData\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHomeData\\.js.*"
       ],
       "target_url": "override/customerHomeData.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/plugins/echarts/customerHomeData.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/plugins/echarts/customerHomeData.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesReach\\/brandManager\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesReach\\/brandManager\\.js.*"
       ],
       "target_url": "override/brandManager.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesReach/brandManager.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesReach/brandManager.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesReach\\/leader\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesReach\\/leader\\.js.*"
       ],
       "target_url": "override/leader.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesReach/leader.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesReach/leader.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesReach\\/branch\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesReach\\/branch\\.js.*"
       ],
       "target_url": "override/branch.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesReach/branch.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesReach/branch.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesReach\\/bizGeneralManager\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesReach\\/bizGeneralManager\\.js.*"
       ],
       "target_url": "override/bizGeneralManager.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesReach/bizGeneralManager.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesReach/bizGeneralManager.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesReach\\/productManager\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesReach\\/productManager\\.js.*"
       ],
       "target_url": "override/productManager.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesReach/productManager.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesReach/productManager.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesReach\\/office\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesReach\\/office\\.js.*"
       ],
       "target_url": "override/office.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesReach/office.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesReach/office.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesReach\\/salesman\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesReach\\/salesman\\.js.*"
       ],
       "target_url": "override/salesman.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesReach/salesman.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesReach/salesman.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesAll\\/leader\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesAll\\/leader\\.js.*"
       ],
       "target_url": "override/leaders.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesAll/leader.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesAll/leader.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesAll\\/common\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesAll\\/common\\.js"
       ],
       "target_url": "override/common.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesAll/common.js"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesAll/common.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesAll\\/branch\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesAll\\/branch\\.js.*"
       ],
       "target_url": "override/branchs.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesAll/branch.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesAll/branch.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesAll\\/bizGeneralManager\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesAll\\/bizGeneralManager\\.js.*"
       ],
       "target_url": "override/bizGeneralManagers.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesAll/bizGeneralManager.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesAll/bizGeneralManager.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesAll\\/productManager\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesAll\\/productManager\\.js.*"
       ],
       "target_url": "override/productManagers.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesAll/productManager.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesAll/productManager.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesAll\\/brandManager\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesAll\\/brandManager\\.js.*"
       ],
       "target_url": "override/brandManagers.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesAll/brandManager.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesAll/brandManager.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesAll\\/office\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesAll\\/office\\.js.*"
       ],
       "target_url": "override/offices.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesAll/office.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesAll/office.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesAll\\/salerMan\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesAll\\/salerMan\\.js.*"
       ],
       "target_url": "override/salerMan.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesAll/salerMan.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesAll/salerMan.js.*"
     },
     {
       "origin_url": [
-        "http://pttlcrm.com/pttlCrm/res/js/workSummary.js"
+        "http://192.168.220.82:8080/pttlCrm/res/js/workSummary.js"
       ],
       "target_url": "override/workSummary.js",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/workSummary.js"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/workSummary.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/js\\/newPlanPop\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/newPlanPop\\.js.*"
       ],
       "target_url": "override/newPlanPop.js",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/newPlanPop.js"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/newPlanPop.js"
     },
     {
       "origin_url": [
-        "http://pttlcrm.com/ptDataShow/js/salesReach/common.js"
+        "http://192.168.220.82:8080/ptDataShow/js/salesReach/common.js"
       ],
       "target_url": "override/commons.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesReach/common.js"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesReach/common.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/smartLife\\/smartLife\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/smartLife\\/smartLife\\.js"
       ],
       "target_url": "override/smartLife.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/smartLife/smartLife.js"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/smartLife/smartLife.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/smartLife\\/chart\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/smartLife\\/chart\\.js"
       ],
       "target_url": "override/chart.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/smartLife/chart.js"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/smartLife/chart.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/smartLife\\/dataAll\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/smartLife\\/dataAll\\.js"
       ],
       "target_url": "override/dataAll.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/smartLife/dataAll.js"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/smartLife/dataAll.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/js\\/salesReach\\/customer\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/js\\/salesReach\\/customer\\.js.*"
       ],
       "target_url": "override/customer.js",
-      "default_url": "http://pttlcrm.com/ptDataShow/js/salesReach/customer.js.*"
+      "default_url": "http://192.168.220.82:8080/ptDataShow/js/salesReach/customer.js.*"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/js\\/customerWorkspace\\.js.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/customerWorkspace\\.js.*"
       ],
       "target_url": "override/customerWorkspace.js",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/customerWorkspace.js"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/customerWorkspace.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/js\\/lib\\/jquery-3\\.2\\.1\\.min\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/lib\\/jquery-3\\.2\\.1\\.min\\.js"
       ],
       "target_url": "override/jq321.js",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/lib/jquery-3.2.1.min.js"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/lib/jquery-3.2.1.min.js"
     },
     {
       "origin_url": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/js\\/customerDayPsi\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/customerDayPsi\\.js"
       ],
       "target_url": "override/psi.js",
-      "default_url": "http://pttlcrm.com/pttlCrm/res/js/customerDayPsi.js"
+      "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/customerDayPsi.js"
     }
   ],
   "adapter_urls": [
@@ -341,78 +341,78 @@
       "title": "clientInfo",
       "url": "adapter://CRM_NewPlatForm/plan/clientInfo/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/cust\\/customer\\/getCustomerByCode\\?customerCode=.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/cust\\/customer\\/getCustomerByCode\\?customerCode=.*"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/cust/customer/getCustomerByCode?customerCode=C104689"
+        "http://192.168.220.82:8080/pttlCrm/cust/customer/getCustomerByCode?customerCode=C104689"
       ]
     },
     {
       "title": "orderForm",
       "url": "adapter://CRM_NewPlatForm/plan/orderForm/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/cust\\/customerCreditLimitAndDetial\\/getOrderList"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/cust\\/customerCreditLimitAndDetial\\/getOrderList"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/cust/customerCreditLimitAndDetial/getOrderList"
+        "http://192.168.220.82:8080/pttlCrm/cust/customerCreditLimitAndDetial/getOrderList"
       ]
     },
     {
       "title": "saleRebate",
       "url": "adapter://CRM_NewPlatForm/plan/saleRebate/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/cust\\/customer\\/getCustomerRebateByCustomerCode\\?customerCode=.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/cust\\/customer\\/getCustomerRebateByCustomerCode\\?customerCode=.*"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/cust/customer/getCustomerRebateByCustomerCode?customerCode=C104689"
+        "http://192.168.220.82:8080/pttlCrm/cust/customer/getCustomerRebateByCustomerCode?customerCode=C104689"
       ]
     },
     {
       "title": "walketmoney",
       "url": "adapter://CRM_NewPlatForm/plan/walketmoney/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/cust\\/customer\\/getCustomerElectronicWalletByCustomerCode\\?customerCode=C104689"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/cust\\/customer\\/getCustomerElectronicWalletByCustomerCode\\?customerCode=C104689"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/cust/customer/getCustomerElectronicWalletByCustomerCode?customerCode=C104689"
+        "http://192.168.220.82:8080/pttlCrm/cust/customer/getCustomerElectronicWalletByCustomerCode?customerCode=C104689"
       ]
     },
     {
       "title": "saleRebate",
       "url": "adapter://CRM_NewPlatForm/plan/saleRebate/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/cust\\/customer\\/getCustomerRebateByCustomerCode\\?customerCode=C104689"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/cust\\/customer\\/getCustomerRebateByCustomerCode\\?customerCode=C104689"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/cust/customer/getCustomerRebateByCustomerCode?customerCode=C104689"
+        "http://192.168.220.82:8080/pttlCrm/cust/customer/getCustomerRebateByCustomerCode?customerCode=C104689"
       ]
     },
     {
       "title": "creditlimit",
       "url": "adapter://CRM_NewPlatForm/plan/creditlimit/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/cust\\/customerCreditLimitAndDetial\\/getCustomerCreditLimit"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/cust\\/customerCreditLimitAndDetial\\/getCustomerCreditLimit"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/cust/customerCreditLimitAndDetial/getCustomerCreditLimit"
+        "http://192.168.220.82:8080/pttlCrm/cust/customerCreditLimitAndDetial/getCustomerCreditLimit"
       ]
     },
     {
       "title": "clientportrait",
       "url": "adapter://CRM_NewPlatForm/plan/clientportrait/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/cust\\/customerPhoto\\/getCustomerPhotoByCustomerCode\\?customerCode=C104689"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/cust\\/customerPhoto\\/getCustomerPhotoByCustomerCode\\?customerCode=C104689"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/cust/customerPhoto/getCustomerPhotoByCustomerCode?customerCode=C104689"
+        "http://192.168.220.82:8080/pttlCrm/cust/customerPhoto/getCustomerPhotoByCustomerCode?customerCode=C104689"
       ]
     },
     {
       "title": "index",
       "url": "adapter://CRM_NewPlatForm/plan/index/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/index\\.html",
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/index.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/index\\.html",
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/index.*"
       ],
       "demo": []
     },
@@ -420,87 +420,87 @@
       "title": "customPSI",
       "url": "adapter://CRM_NewPlatForm/plan/customPSI/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/customerPSIcollection\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/customerPSIcollection\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/customerPSIcollection.html"
+        "http://192.168.220.82:8080/pttlCrm/res/customerPSIcollection.html"
       ]
     },
     {
       "title": "clientOtherInfoCollect",
       "url": "adapter://CRM_NewPlatForm/plan/clientOtherInfoCollect/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/customerInformationCollection\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/customerInformationCollection\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/customerInformationCollection.html"
+        "http://192.168.220.82:8080/pttlCrm/res/customerInformationCollection.html"
       ]
     },
     {
       "title": "visitManager",
       "url": "adapter://CRM_NewPlatForm/plan/visitManager/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/visitManager\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/visitManager\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/visitManager.html"
+        "http://192.168.220.82:8080/pttlCrm/res/visitManager.html"
       ]
     },
     {
       "title": "clientManageInfoCollect",
       "url": "adapter://CRM_NewPlatForm/plan/clientManageInfoCollect/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/customerInfoEntry\\.html\\?rowId=1-100DGK"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/customerInfoEntry\\.html\\?rowId=1-100DGK"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/customerInfoEntry.html?rowId=1-100DGK"
+        "http://192.168.220.82:8080/pttlCrm/res/customerInfoEntry.html?rowId=1-100DGK"
       ]
     },
     {
       "title": "clientOtherInfoCollect",
       "url": "adapter://CRM_NewPlatForm/plan/clientOtherInfoCollect/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/customerInformationCollection\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/customerInformationCollection\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/customerInformationCollection.html"
+        "http://192.168.220.82:8080/pttlCrm/res/customerInformationCollection.html"
       ]
     },
     {
       "title": "AtReportDetail",
       "url": "adapter://CRM_NewPlatForm/plan/AtReportDetail/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/customerAtReport\\/checkAtReportDetail\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/customerAtReport\\/checkAtReportDetail\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/customerAtReport/checkAtReportDetail.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/customerAtReport/checkAtReportDetail.html"
       ]
     },
     {
       "title": "visitManager",
       "url": "adapter://CRM_NewPlatForm/plan/visitManager/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/visitManager\\/visitManager\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/visitManager\\/visitManager\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/visitManager/visitManager.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/visitManager/visitManager.html"
       ]
     },
     {
       "title": "informationFill",
       "url": "adapter://CRM_NewPlatForm/plan/informationFill/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/customerInfomation\\/informationEntry\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/customerInfomation\\/informationEntry\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/customerInfomation/informationEntry.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/customerInfomation/informationEntry.html"
       ]
     },
     {
       "title": "productFrom",
       "url": "adapter://CRM_NewPlatForm/plan/productFrom/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/sku\\/querySku\\?a=1.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/sku\\/querySku\\?a=1.*"
       ],
       "demo": []
     },
@@ -508,8 +508,8 @@
       "title": "login",
       "url": "adapter://CRM_NewPlatForm/plan/login/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/login",
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/login\\/login\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/login",
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/login\\/login\\.html"
       ],
       "demo": []
     },
@@ -517,217 +517,217 @@
       "title": "customerWorkspace",
       "url": "adapter://CRM_NewPlatForm/plan/customerWorkspace/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/visitManager\\/customerWorkspace\\/customerWorkspace\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/visitManager\\/customerWorkspace\\/customerWorkspace\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html"
       ]
     },
     {
       "title": "clientList",
       "url": "adapter://CRM_NewPlatForm/plan/clientList/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/customerList\\/customerList\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/customerList\\/customerList\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/customerList/customerList.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/customerList/customerList.html"
       ]
     },
     {
       "title": "saleTask",
       "url": "adapter://CRM_NewPlatForm/plan/saleTask/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/saleTask\\/saleTaskManager\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/saleTask\\/saleTaskManager\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/saleTask/saleTaskManager.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/saleTask/saleTaskManager.html"
       ]
     },
     {
       "title": "newInformationFill",
       "url": "adapter://CRM_NewPlatForm/plan/newInformationFill/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/customerInfomationWeb\\/customerPSIcollection\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/customerInfomationWeb\\/customerPSIcollection\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/customerInfomationWeb/customerPSIcollection.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/customerInfomationWeb/customerPSIcollection.html"
       ]
     },
     {
       "title": "SalesReached",
       "url": "adapter://CRM_NewPlatForm/plan/SalesReached/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/dataShow\\/dataShowManager\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/dataShow\\/dataShowManager\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/dataShow/dataShowManager.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/dataShow/dataShowManager.html"
       ]
     },
     {
       "title": "stockInquire",
       "url": "adapter://CRM_NewPlatForm/plan/stockInquire/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/inventory\\/queryInventory\\?.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/inventory\\/queryInventory\\?.*"
       ],
       "demo": [
-        "http://pttlcrm.com/ptDataShow/inventory/queryInventory?a=1&username=LIWEIWEI&encoder=TElXRUlXRUkrMDYvMTgwLzIwMTcgMTM6NTE6MzU="
+        "http://192.168.220.82:8080/ptDataShow/inventory/queryInventory?a=1&username=LIWEIWEI&encoder=TElXRUlXRUkrMDYvMTgwLzIwMTcgMTM6NTE6MzU="
       ]
     },
     {
       "title": "visitIndex",
       "url": "adapter://CRM_NewPlatForm/plan/visitIndex/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/customerview\\/toHomePage\\?(.*encoder=.*&filter_userId=.*|.*filter_userId=.*&encoder=.*)"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/customerview\\/toHomePage\\?(.*encoder=.*&filter_userId=.*|.*filter_userId=.*&encoder=.*)"
       ],
       "demo": [
-        "http://pttlcrm.com/ptDataShow/customerview/toHomePage?encoder=V0FOR0RPTkcrMDQvMDYvMjAxNyAxNDoxMjoyNg%3d%3d&filter_userId=WANGDONG"
+        "http://192.168.220.82:8080/ptDataShow/customerview/toHomePage?encoder=V0FOR0RPTkcrMDQvMDYvMjAxNyAxNDoxMjoyNg%3d%3d&filter_userId=WANGDONG"
       ]
     },
     {
       "title": "goodsMessages",
       "url": "adapter://CRM_NewPlatForm/plan/goodsMessages/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/invAllocation\\/queryInvAllocation\\?.*username=.*&encoder=.*&queryType=.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/invAllocation\\/queryInvAllocation\\?.*username=.*&encoder=.*&queryType=.*"
       ],
       "demo": [
-        "http://pttlcrm.com/ptDataShow/invAllocation/queryInvAllocation?username=ZHOUHEJIE&encoder=WkhPVUhFSklFKzAzLzMxLzIwMTcgMTU6Mjg6NTI%3d&queryType=Product"
+        "http://192.168.220.82:8080/ptDataShow/invAllocation/queryInvAllocation?username=ZHOUHEJIE&encoder=WkhPVUhFSklFKzAzLzMxLzIwMTcgMTU6Mjg6NTI%3d&queryType=Product"
       ]
     },
     {
       "title": "stockInquire",
       "url": "adapter://CRM_NewPlatForm/plan/stockInquire/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/inventory\\/queryInventory\\?.*&username=.*&encoder=.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/inventory\\/queryInventory\\?.*&username=.*&encoder=.*"
       ],
       "demo": [
-        "http://pttlcrm.com/ptDataShow/inventory/queryInventory?a=1&username=LIWEIWEI&encoder=TElXRUlXRUkrMDYvMTgwLzIwMTcgMTM6NTE6MzU="
+        "http://192.168.220.82:8080/ptDataShow/inventory/queryInventory?a=1&username=LIWEIWEI&encoder=TElXRUlXRUkrMDYvMTgwLzIwMTcgMTM6NTE6MzU="
       ]
     },
     {
       "title": "saleReach",
       "url": "adapter://CRM_NewPlatForm/plan/saleReach/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/report\\/reportsByPidAndEncoder\\?.*(encoder=.*&filter_userId=.*|filter_userId=.*&encoder=.*)"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/report\\/reportsByPidAndEncoder\\?.*(encoder=.*&filter_userId=.*|filter_userId=.*&encoder=.*)"
       ],
       "demo": [
-        "http://pttlcrm.com/ptDataShow/report/reportsByPidAndEncoder?encoder=V0FOR0RPTkcrMDQvMjUvMjAxNyAxMToyNDoyMQ%3d%3d&filter_userId=WANGDONG&reportPid=head-Company"
+        "http://192.168.220.82:8080/ptDataShow/report/reportsByPidAndEncoder?encoder=V0FOR0RPTkcrMDQvMjUvMjAxNyAxMToyNDoyMQ%3d%3d&filter_userId=WANGDONG&reportPid=head-Company"
       ]
     },
     {
       "title": "personVisitAchieveTest",
       "url": "adapter://CRM_NewPlatForm/plan/personVisitAchieveTest/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/commonReports\\/commonReportsByEncoder\\?reportPid=.*&filter_userId=.*&encoder=.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/commonReports\\/commonReportsByEncoder\\?reportPid=.*&filter_userId=.*&encoder=.*"
       ],
       "demo": [
-        "http://pttlcrm.com/ptDataShow/commonReports/commonReportsByEncoder?reportPid=customerView&filter_userId=SONGFEI&encoder=U09OR0ZFSSswNy8xOTIvMjAxNyAxMzo0NjoxOA=="
+        "http://192.168.220.82:8080/ptDataShow/commonReports/commonReportsByEncoder?reportPid=customerView&filter_userId=SONGFEI&encoder=U09OR0ZFSSswNy8xOTIvMjAxNyAxMzo0NjoxOA=="
       ]
     },
     {
       "title": "newInformationFill",
       "url": "adapter://CRM_NewPlatForm/plan/newInformationFill/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/psi\\/customerInfocollection\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/psi\\/customerInfocollection\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html"
       ]
     },
     {
       "title": "newInformationTotle",
       "url": "adapter://CRM_NewPlatForm/plan/newInformationTotle/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/home\\/commonMenu\\.html#"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/home\\/commonMenu\\.html#"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/home/commonMenu.html#"
+        "http://192.168.220.82:8080/pttlCrm/res/page/home/commonMenu.html#"
       ]
     },
     {
       "title": "customerInformationFIll",
       "url": "adapter://CRM_NewPlatForm/plan/customerInformationFIll/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/psi\\/customerInfocollection\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/psi\\/customerInfocollection\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html"
       ]
     },
     {
       "title": "HESInformationFill",
       "url": "adapter://CRM_NewPlatForm/plan/HESInformationFill/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/psi\\/storeInfocollection\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/psi\\/storeInfocollection\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/psi/storeInfocollection.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/psi/storeInfocollection.html"
       ]
     },
     {
       "title": "forecastPSI",
       "url": "adapter://CRM_NewPlatForm/plan/forecastPSI/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/customerInfomation\\/customerPSIpre\\.html\\?userId=11994"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/customerInfomation\\/customerPSIpre\\.html\\?userId=11994"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/customerInfomation/customerPSIpre.html?userId=11994"
+        "http://192.168.220.82:8080/pttlCrm/res/page/customerInfomation/customerPSIpre.html?userId=11994"
       ]
     },
     {
       "title": "clientStoreList",
       "url": "adapter://CRM_NewPlatForm/plan/clientStoreList/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/home\\/commonMenu\\.html#"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/home\\/commonMenu\\.html#"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/home/commonMenu.html#"
+        "http://192.168.220.82:8080/pttlCrm/res/page/home/commonMenu.html#"
       ]
     },
     {
       "title": "achievement",
       "url": "adapter://CRM_NewPlatForm/plan/achievement/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/salesPlan\\/salesOverview\\?a=1&filter_userId=SONGFEI&encoder=U09OR0ZFSSswNy8yMDgvMjAxNyAxODoyNDo1OQ=="
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/salesPlan\\/salesOverview\\?a=1&filter_userId=SONGFEI&encoder=U09OR0ZFSSswNy8yMDgvMjAxNyAxODoyNDo1OQ=="
       ],
       "demo": [
-        "http://pttlcrm.com/ptDataShow/salesPlan/salesOverview?a=1&filter_userId=SONGFEI&encoder=U09OR0ZFSSswNy8yMDgvMjAxNyAxODoyNDo1OQ=="
+        "http://192.168.220.82:8080/ptDataShow/salesPlan/salesOverview?a=1&filter_userId=SONGFEI&encoder=U09OR0ZFSSswNy8yMDgvMjAxNyAxODoyNDo1OQ=="
       ]
     },
     {
       "title": "saleAchievement",
       "url": "adapter://CRM_NewPlatForm/plan/saleAchievement/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/ptDataShow\\/salesAll\\/salesOverview\\?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDEvMjYvMjAxOCAxNTo0Mjo0MQ=="
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/ptDataShow\\/salesAll\\/salesOverview\\?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDEvMjYvMjAxOCAxNTo0Mjo0MQ=="
       ],
       "demo": [
-        "http://pttlcrm.com/ptDataShow/salesAll/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDEvMjYvMjAxOCAxNTo0Mjo0MQ=="
+        "http://192.168.220.82:8080/ptDataShow/salesAll/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDEvMjYvMjAxOCAxNTo0Mjo0MQ=="
       ]
     },
     {
       "title": "reportAtMeSummendLook",
       "url": "adapter://CRM_NewPlatForm/plan/reportAtMeSummendLook/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/workTask\\/workAtmeView\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/workTask\\/workAtmeView\\.html"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/workTask/workAtmeView.html"
+        "http://192.168.220.82:8080/pttlCrm/res/page/workTask/workAtmeView.html"
       ]
     },
     {
       "title": "questionnaireFeedbackSum",
       "url": "adapter://CRM_NewPlatForm/plan/questionnaireFeedbackSum/index.json",
       "matcher": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/questionnaire\\/questionStatistics\\.html\\?quId.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/questionnaire\\/questionStatistics\\.html\\?quId.*"
       ],
       "demo": [
-        "http://pttlcrm.com/pttlCrm/res/page/questionnaire/questionStatistics.html?quId=db7950cd0e124a83aa0d77b65a753b71&quName=13123"
+        "http://192.168.220.82:8080/pttlCrm/res/page/questionnaire/questionStatistics.html?quId=db7950cd0e124a83aa0d77b65a753b71&quName=13123"
       ]
     }
   ],
   "name": "普天CRM_新平台",
-  "default_url": "http://pttlcrm.com/pttlCrm/res/index.html",
+  "default_url": "http://192.168.220.82:8080/pttlCrm/res/index.html",
   "scope": "CRM_NewPlatForm",
-  "start_url": "http://pttlcrm.com/pttlCrm/res/index.html",
-  "update_time": 1561514096719,
+  "start_url": "http://192.168.220.82:8080/pttlCrm/res/index.html",
+  "update_time": 1563434134694,
   "runtime_env": "1webview"
 }

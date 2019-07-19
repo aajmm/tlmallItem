@@ -57,8 +57,8 @@
       }
     }, doAction_uiControl77_gc6Z0T: function (data, elem) {
       if (data.eventType == 'AndroidBack') {
-        ysp.customHelper.AndroidBackURL = "http://pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html";ysp.customHelper.AndroidBackModel = 'customerInformationFIll';ysp.customHelper.AndroidBackFlag = 'destination';
-      }var Backurl = "http://pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html";switch (data.eventType) {case 'topback':
+        ysp.customHelper.AndroidBackURL = "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html";ysp.customHelper.AndroidBackModel = 'customerInformationFIll';ysp.customHelper.AndroidBackFlag = 'destination';
+      }var Backurl = "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html";switch (data.eventType) {case 'topback':
           topback(data.dataCustom);
           break;case 'back':
           !top.EAPI.isAndroid() ? ysp.customHelper.BackReload(Backurl) : ysp.customHelper.AndroidBackFn(); //更换返回方式,跳回至信息录入
@@ -75,12 +75,12 @@
           sure(data.dataCustom);break;case "delete":
           elem.querySelectorAll(".delete")[data.dataCustom].querySelector("a").click();break;case "alertClick":
           ysp.customHelper.tipMsg.confirm();break;}function topback(data) {
-        // var url = "http://pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html";
+        // var url = "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html";
         // ysp.appMain.reloadPage(url); //history.back();
         //ysp.customHelper.forceMatchModels('newInformationTotle1'); // elem.ownerDocument.querySelector(".head_title").querySelector("a").click();
         //history.go(-1);
         // if (parent.EAPI.isIOS()) {
-        //   var url = "http://pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html";
+        //   var url = "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html";
         //   ysp.appMain.reloadPage(url);
         //   //history.back();
         //   setTimeout(function () {

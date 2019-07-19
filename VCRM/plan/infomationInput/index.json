@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "infomationInput",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/psi/customerDayPsi.html?rowId=11994",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerDayPsi.html?rowId=11994",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
@@ -227,7 +227,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/psi\\/customerDayPsi\\.html.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/psi\\/customerDayPsi\\.html.*"
       ]
     }
   },
@@ -400,14 +400,14 @@
     "page/urls": {
       "contexts": {
         "context53_oR8JhD": [
-          "pttlcrm.com/pttlCrm/res/page/psi/customerDayPsi.html?rowId=11994",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerDayPsi.html?rowId=1-5SKO7Q",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerDayPsi.html?rowId=1-HP70",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11994",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerDayPsi.html?rowId=10263",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerDayPsi.html?rowId=11212",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerDayPsi.html?rowId=10702",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerDayPsi.html?rowId=10251&userId=C101436"
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerDayPsi.html?rowId=11994",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerDayPsi.html?rowId=1-5SKO7Q",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerDayPsi.html?rowId=1-HP70",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11994",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerDayPsi.html?rowId=10263",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerDayPsi.html?rowId=11212",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerDayPsi.html?rowId=10702",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerDayPsi.html?rowId=10251&userId=C101436"
         ]
       }
     },

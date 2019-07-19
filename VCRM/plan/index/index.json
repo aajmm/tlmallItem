@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "index",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/index.html",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/index.html",
   "jsFile": "index.js",
   "requires": {
     "customerWorkspace": "../customerWorkspace/index.json",
@@ -191,8 +191,8 @@
     "page/urls": {
       "contexts": {
         "context1_ZpWnXN": [
-          "pttlcrm.com/pttlCrm/res/index.html",
-          "pttlcrm.com/pttlCrm/login"
+          "192.168.220.82:8080/pttlCrm/res/index.html",
+          "192.168.220.82:8080/pttlCrm/login"
         ]
       }
     },

@@ -3,10 +3,10 @@
     getData_control197_qhm3H1: function (elem) {},
     doAction_uiControl194_lb7fU4: function (data, elem) {
       if (data.eventType == 'AndroidBack') {
-        ysp.customHelper.AndroidBackURL = "http://pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html";ysp.customHelper.AndroidBackFlag = 'destination';
+        ysp.customHelper.AndroidBackURL = "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html";ysp.customHelper.AndroidBackFlag = 'destination';
       }if (data.eventType == "back") {
         if (!top.EAPI.isAndroid()) {
-          var url = "http://pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html";ysp.customHelper.BackReload(url);
+          var url = "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html";ysp.customHelper.BackReload(url);
         } else {
           //更换返回方式,跳回至信息录入
           ysp.customHelper.AndroidBackFn();

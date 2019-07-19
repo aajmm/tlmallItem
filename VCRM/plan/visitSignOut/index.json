@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "visitSignOut",
-  "targetURL": "http://pttlcrm.com/pttlCrm/visit/customerVisitPlan/addCustomerSignOut",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/visit/customerVisitPlan/addCustomerSignOut",
   "jsFile": "index.js",
   "chineseName": "签出",
   "description": "",
@@ -150,9 +150,9 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/vistiSignOut.html",
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/visit\\/customerVisitPlan\\/addCustomerSignOut",
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/visitManager\\/visitLook\\/vistiSignOut.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/vistiSignOut.html",
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/visit\\/customerVisitPlan\\/addCustomerSignOut",
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/visitManager\\/visitLook\\/vistiSignOut.html"
       ]
     }
   },
@@ -253,7 +253,7 @@
     "page/urls": {
       "contexts": {
         "context6_DNzLem": [
-          "pttlcrm.com/pttlCrm/visit/customerVisitPlan/addCustomerSignOut"
+          "192.168.220.82:8080/pttlCrm/visit/customerVisitPlan/addCustomerSignOut"
         ]
       }
     },

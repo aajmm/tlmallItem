@@ -311,7 +311,7 @@
 	//UAT/SIT
 	var SERVER_ROOT = exports.SERVER_ROOT = ''; //服务端根路径
 	var LOCAL_SERVER_ROOT = exports.LOCAL_SERVER_ROOT = ''; //本地服务端根路径
-	var PTDATASHOW_SERVER_ROOT = exports.PTDATASHOW_SERVER_ROOT = 'http://pttlcrm.com/ptDataShow';
+	var PTDATASHOW_SERVER_ROOT = exports.PTDATASHOW_SERVER_ROOT = 'http://192.168.220.82:8080/ptDataShow';
 	var Dashboard_SERVER_ROOT = exports.Dashboard_SERVER_ROOT = 'http://192.168.1.203:8082/';
 
 	//生产 nginx

@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "HESInformationFill",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/psi/storeInfocollection.html",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/psi/storeInfocollection.html",
   "jsFile": "index.js",
   "requires": {
     "customerInformationFIll": "../customerInformationFIll/index.json",
@@ -337,7 +337,7 @@
     "page/urls": {
       "contexts": {
         "context52_Wg5qcG": [
-          "pttlcrm.com/pttlCrm/res/page/psi/storeInfocollection.html"
+          "192.168.220.82:8080/pttlCrm/res/page/psi/storeInfocollection.html"
         ]
       }
     },

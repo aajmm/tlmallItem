@@ -3,7 +3,7 @@
     getData_control5_5GxFa5: function (elem) {
       if (!elem && ysp.customHelper.getTargetMenus) {
         return;
-      }var WorkSpace = ysp.customHelper.getTargetMenus(["工作台", "拜访总览", '库存查询', '信息录入'], ['门店信息录入']);var Achievement = ysp.customHelper.getTargetMenus(["销售业绩总览", "事业部达成", "项目达成", "产品达成", "分公司达成", "办事处达成", "销售人员达成", "客户门店达成", "年度销售达成(新)"]);var InFormation = ysp.customHelper.getTargetMenus([]);var ClientOrStore = ysp.customHelper.getTargetMenus([]);var atMe = ysp.customHelper.IconNum.atMe || 0;var summary = ysp.customHelper.IconNum.summary || 0;if (!atMe || !summary) {
+      }var WorkSpace = ysp.customHelper.getTargetMenus(["工作台", "拜访总览", '信息录入'], ['门店信息录入']);var Achievement = ysp.customHelper.getTargetMenus(["销售业绩总览", "事业部达成", "项目达成", "产品达成", "分公司达成", "办事处达成", "销售人员达成", "客户门店达成", "年度销售达成(新)"]);var InFormation = ysp.customHelper.getTargetMenus([]);var ClientOrStore = ysp.customHelper.getTargetMenus([]);var atMe = ysp.customHelper.IconNum.atMe || 0;var summary = ysp.customHelper.IconNum.summary || 0;if (!atMe || !summary) {
         atMe = localStorage.getItem('atMe');summary = localStorage.getItem('summary');if (summary == null) {
           summary = 0;
         }if (atMe == null) {
@@ -39,7 +39,7 @@
       } //图标尺寸  48 * 48   文字大小 17px
       if (data.eventType == 'click_infomation') {
         var src = data.dataCustom.url;var title = data.dataCustom.title;if (title == '拜访总览') {
-          ysp.customHelper.openWindow('http://pttlcrm.com/pttlCrm/res/yspHome.html');return;
+          ysp.customHelper.openWindow('http://192.168.220.82:8080/pttlCrm/res/yspHome.html');return;
         }openUrl(src, title);
       } //请求大数据参数接口 . 拼接地址进行跳转
       function openUrl(src, title) {
@@ -53,7 +53,7 @@
               src = title == '产品上下架' && src.indexOf('?') == -1 && src.indexOf('&') == -1 ? src + '/querySku?a=1&filter_userId=' + obj.userId + '&encoder=' + obj.encoder + '&username=' + obj.userId + '&a=1' + '&branch=' + branch : src.indexOf('?') != -1 && src.indexOf('&') != -1 ? src + '&filter_userId=' + obj.userId + '&encoder=' + obj.encoder + '&username=' + obj.userId + '&a=1' + '&branch=' + branch : src.indexOf('?') == -1 && src.indexOf('&') == -1 ? src + '?filter_userId=' + obj.userId + '&encoder=' + obj.encoder + '&username=' + obj.userId + '&firstFlag' : src.indexOf('?') != -1 && src.indexOf('&') == -1 && src.split('?')[1].length > 0 ? src + '&filter_userId=' + obj.userId + '&encoder=' + obj.encoder + '&username=' + obj.userId + '&a=1' : src + 'filter_userId=' + obj.userId + '&encoder=' + obj.encoder + '&username=' + obj.userId + '&a=1' + '&branch=' + branch;
             }ysp.appMain.showLoading();elem.ownerDocument.defaultView.open(src);
           }
-        };xhr.open('POST', 'http://pttlcrm.com/pttlCrm/homepage/getUserIdAndEncoder', false);xhr.send();
+        };xhr.open('POST', 'http://192.168.220.82:8080/pttlCrm/homepage/getUserIdAndEncoder', false);xhr.send();
       } // if (data.eventType == 'isNeedLoad') {
       //   if (top.EAPI.isAndroid()) {
       //     top.yspCheckIn.isRefresh(false);

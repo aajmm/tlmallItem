@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "businesHeadquartersDC",
-  "targetURL": "http://pttlcrm.com/ptDataShow/reportNew/reportsByPid?reportPid=head-Company&reportId=report1&clickLi=true&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNjozNjoyNg==&username=WANGDONG&a=1",
+  "targetURL": "http://192.168.220.82:8080/ptDataShow/reportNew/reportsByPid?reportPid=head-Company&reportId=report1&clickLi=true&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNjozNjoyNg==&username=WANGDONG&a=1",
   "jsFile": "index.js",
   "chineseName": "计划达成",
   "description": "",
@@ -346,7 +346,7 @@
     "page/urls": {
       "contexts": {
         "context4_NCNuce": [
-          "pttlcrm.com/ptDataShow/reportNew/reportsByPid?reportPid=head-Company&reportId=report1&clickLi=true&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNjozNjoyNg==&username=WANGDONG&a=1"
+          "192.168.220.82:8080/ptDataShow/reportNew/reportsByPid?reportPid=head-Company&reportId=report1&clickLi=true&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNjozNjoyNg==&username=WANGDONG&a=1"
         ]
       }
     },

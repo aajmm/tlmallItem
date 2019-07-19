@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "login",
-  "targetURL": "http://pttlcrm.com/pttlCrm/login",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/login",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
@@ -246,7 +246,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/login"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/login"
       ]
     }
   },
@@ -400,7 +400,7 @@
     "page/urls": {
       "contexts": {
         "context0_TQTAv3": [
-          "pttlcrm.com/pttlCrm/login"
+          "192.168.220.82:8080/pttlCrm/login"
         ]
       }
     },

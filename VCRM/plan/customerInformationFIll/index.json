@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "customerInformationFIll",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html",
   "jsFile": "index.js",
   "requires": {
     "customerInformationFIll": "../customerInformationFIll/index.json",
@@ -254,7 +254,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/psi\\/customerInfocollection\\.html"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/psi\\/customerInfocollection\\.html"
       ]
     }
   },
@@ -437,21 +437,21 @@
     "page/urls": {
       "contexts": {
         "context51_PhTFP3": [
-          "pttlcrm.com/pttlCrm/res/page/psi/customerInfocollection.html",
-          "pttlcrm.com/pttlCrm/res/page/home/commonMenu.html"
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html",
+          "192.168.220.82:8080/pttlCrm/res/page/home/commonMenu.html"
         ],
         "context22_Epm35T": [
-          "pttlcrm.com/pttlCrm/res/customerInfoEntry.html?rowId=1-100DGK",
-          "pttlcrm.com/pttlCrm/res/page/customerInfomation/customerInfoEntry.html?rowId=1-100DGK",
-          "pttlcrm.com/pttlCrm/res/page/customerInfomation/customerInfoEntry.html?rowId=10251",
-          "pttlcrm.com/pttlCrm/res/page/customerInfomationWeb/customerInfoEntry.html?rowId=10255",
-          "pttlcrm.com/pttlCrm/res/page/customerInfomationWeb/customerInfoEntry.html?rowId=10262",
-          "pttlcrm.com/pttlCrm/res/page/customerInfomationWeb/customerInfoEntry.html?rowId=10325",
-          "pttlcrm.com/pttlCrm/res/page/customerInfomationWeb/customerInfoEntry.html?rowId=10263"
+          "192.168.220.82:8080/pttlCrm/res/customerInfoEntry.html?rowId=1-100DGK",
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomation/customerInfoEntry.html?rowId=1-100DGK",
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomation/customerInfoEntry.html?rowId=10251",
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomationWeb/customerInfoEntry.html?rowId=10255",
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomationWeb/customerInfoEntry.html?rowId=10262",
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomationWeb/customerInfoEntry.html?rowId=10325",
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomationWeb/customerInfoEntry.html?rowId=10263"
         ],
         "context56_VUl6Pd": [
-          "pttlcrm.com/pttlCrm/res/page/customerInfomation/customerPSIpre.html?userId=11994",
-          "pttlcrm.com/pttlCrm/res/page/customerInfomation/customerPSIpre.html?userId=1-HP70"
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomation/customerPSIpre.html?userId=11994",
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomation/customerPSIpre.html?userId=1-HP70"
         ]
       }
     },

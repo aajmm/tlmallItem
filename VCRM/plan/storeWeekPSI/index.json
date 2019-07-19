@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "storeWeekPSI",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/psi/storeWeekPsi.html?rowId=1-1VQY1R",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/psi/storeWeekPsi.html?rowId=1-1VQY1R",
   "jsFile": "index.js",
   "chineseName": "HES周别PSI录入",
   "description": "HES周别PSI录入",
@@ -175,7 +175,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/psi\\/storeWeekPsi.html.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/psi\\/storeWeekPsi.html.*"
       ]
     }
   },
@@ -321,8 +321,8 @@
     "page/urls": {
       "contexts": {
         "context55_T4Zowu": [
-          "pttlcrm.com/pttlCrm/res/page/psi/storeWeekPsi.html?rowId=1-1VQY1R",
-          "pttlcrm.com/pttlCrm/res/page/psi/storeWeekPsi.html?rowId=1-52C5IA"
+          "192.168.220.82:8080/pttlCrm/res/page/psi/storeWeekPsi.html?rowId=1-1VQY1R",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/storeWeekPsi.html?rowId=1-52C5IA"
         ]
       }
     },

@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "TestModel",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/yspHome.html",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/yspHome.html",
   "jsFile": "index.js",
   "requires": {
     "TestModel": "../TestModel/index.json",
@@ -280,7 +280,7 @@
     "page/urls": {
       "contexts": {
         "context92_TDKuvB": [
-          "pttlcrm.com/pttlCrm/res/yspHome.html"
+          "192.168.220.82:8080/pttlCrm/res/yspHome.html"
         ]
       }
     },

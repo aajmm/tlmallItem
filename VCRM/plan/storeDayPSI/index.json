@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "storeDayPSI",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-2W04RP",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-2W04RP",
   "jsFile": "index.js",
   "chineseName": "HES日别PSI录入",
   "description": "HES日别PSI录入",
@@ -131,7 +131,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/psi\\/storeDayPsi.html.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/psi\\/storeDayPsi.html.*"
       ]
     }
   },
@@ -252,10 +252,10 @@
     "page/urls": {
       "contexts": {
         "context54_GuMlyR": [
-          "pttlcrm.com/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-2W04RP",
-          "pttlcrm.com/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-2W05PB",
-          "pttlcrm.com/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-1W4XKF",
-          "pttlcrm.com/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-1LAIP0"
+          "192.168.220.82:8080/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-2W04RP",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-2W05PB",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-1W4XKF",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/storeDayPsi.html?rowId=1-1LAIP0"
         ]
       }
     },

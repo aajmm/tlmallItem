@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "workPlanCustomStore",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/visitManager/customerWorkspace/customerNewPlanPop.html",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/visitManager/customerWorkspace/customerNewPlanPop.html",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
@@ -115,7 +115,7 @@
     "page/urls": {
       "contexts": {
         "context7_MAgw2r": [
-          "pttlcrm.com/pttlCrm/res/page/visitManager/customerWorkspace/customerNewPlanPop.html"
+          "192.168.220.82:8080/pttlCrm/res/page/visitManager/customerWorkspace/customerNewPlanPop.html"
         ]
       }
     },

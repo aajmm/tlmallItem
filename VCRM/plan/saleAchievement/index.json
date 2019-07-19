@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "saleAchievement",
-  "targetURL": "http://pttlcrm.com/ptDataShow/salesAll/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNTo1MToyOQ==&username=WANGDONG&a=1",
+  "targetURL": "http://192.168.220.82:8080/ptDataShow/salesAll/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNTo1MToyOQ==&username=WANGDONG&a=1",
   "jsFile": "index.js",
   "chineseName": "销售业绩总览",
   "description": "",
@@ -662,9 +662,9 @@
     "page/urls": {
       "contexts": {
         "context3_eTo7Aq": [
-          "pttlcrm.com/ptDataShow/salesAll/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNTo1MToyOQ==&username=WANGDONG&a=1",
-          "pttlcrm.com/ptDataShow/salesAll/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNjowMzowMQ==&username=WANGDONG&a=1",
-          "pttlcrm.com/ptDataShow/salesAll/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNjoyMToyOQ==&username=WANGDONG&a=1"
+          "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNTo1MToyOQ==&username=WANGDONG&a=1",
+          "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNjowMzowMQ==&username=WANGDONG&a=1",
+          "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDMvMTgvMjAxOSAxNjoyMToyOQ==&username=WANGDONG&a=1"
         ]
       }
     },

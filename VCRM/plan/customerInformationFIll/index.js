@@ -137,7 +137,7 @@
     doAction_uiControl1_k6Pm8Q: function (data, elem) {
       if (data.eventType === 'click') {
         var operation = data.dataCustom.value;if (operation == '门店信息录入') {
-          var url = "http://pttlcrm.com/pttlCrm/res/page/psi/storeInfocollection.html"; //更换返回方式,跳回至信息录入
+          var url = "http://192.168.220.82:8080/pttlCrm/res/page/psi/storeInfocollection.html"; //更换返回方式,跳回至信息录入
           ysp.customHelper.BackReload(url, 'HESInformationFill');
         }
       }

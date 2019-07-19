@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "forecastPSI",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/customerInfomation/customerPSIpre2.html?userId=11994",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/customerInfomation/customerPSIpre2.html?userId=11994",
   "jsFile": "index.js",
   "chineseName": "预测PSI",
   "description": "",
@@ -106,8 +106,8 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/customerInfomation\\/customerPSIpre\\.html.*",
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/customerInfomation\\/customerPSIpre2\\.html.*"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/customerInfomation\\/customerPSIpre\\.html.*",
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/customerInfomation\\/customerPSIpre2\\.html.*"
       ]
     }
   },
@@ -203,8 +203,8 @@
     "page/urls": {
       "contexts": {
         "context56_VUl6Pd": [
-          "pttlcrm.com/pttlCrm/res/page/customerInfomation/customerPSIpre2.html?userId=11994",
-          "pttlcrm.com/pttlCrm/res/page/customerInfomation/customerPSIpre2.html?userId=1-HP70"
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomation/customerPSIpre2.html?userId=11994",
+          "192.168.220.82:8080/pttlCrm/res/page/customerInfomation/customerPSIpre2.html?userId=1-HP70"
         ]
       }
     },

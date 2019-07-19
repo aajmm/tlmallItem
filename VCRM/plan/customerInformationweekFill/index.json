@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "customerInformationweekFill",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11994",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11994",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"
@@ -208,7 +208,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/psi\\/customerWeekPsi\\.html.*"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/psi\\/customerWeekPsi\\.html.*"
       ]
     }
   },
@@ -348,11 +348,11 @@
     "page/urls": {
       "contexts": {
         "context56_sDDtAM": [
-          "pttlcrm.com/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11994",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=10263",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=1-5SKO7Q",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=1-2YNKN1",
-          "pttlcrm.com/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11212"
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11994",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=10263",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=1-5SKO7Q",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=1-2YNKN1",
+          "192.168.220.82:8080/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11212"
         ]
       }
     },

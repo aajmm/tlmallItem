@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "newInformationTotle",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/home/commonMenu.html#",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/home/commonMenu.html#",
   "jsFile": "index.js",
   "requires": {
     "HESInformationFill": "../HESInformationFill/index.json",
@@ -458,7 +458,7 @@
     "page/urls": {
       "contexts": {
         "context50_VkOplu": [
-          "pttlcrm.com/pttlCrm/res/page/home/commonMenu.html"
+          "192.168.220.82:8080/pttlCrm/res/page/home/commonMenu.html"
         ],
         "context26_dJqbCV": [],
         "context21_rzW6UT": []

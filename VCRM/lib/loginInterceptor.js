@@ -2,7 +2,7 @@ if (window.location.href.indexOf('login') !== -1) {
   function success(data) {
     console.info(data);
     if(data.loginFlag){
-       window.location.href='http://pttlcrm.com/pttlCrm/res/index.html';
+       window.location.href='http://192.168.220.82:8080/pttlCrm/res/index.html';
     }
   }
 
@@ -57,7 +57,7 @@ if (window.location.href.indexOf('login') !== -1) {
                 }
               }
             }
-            xhr.open('POST', 'http://pttlcrm.com/pttlCrm/login/loginIn', true);
+            xhr.open('POST', 'http://192.168.220.82:8080/pttlCrm/login/loginIn', true);
             xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
             xhr.setRequestHeader('Accept','application/json, text/javascript, */*; q=0.01');
             xhr.setRequestHeader('X-Requested-With','XMLHttpRequest');

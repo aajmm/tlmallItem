@@ -13,22 +13,22 @@
     },
     doAction_uiControl189_yeSTwE: function (data, elem) {
       if (data.eventType == 'AndroidBack') {
-        var pageId = window.beforePageId;var storeUrl = "http://pttlcrm.com/pttlCrm/res/page/psi/storeInfocollection.html";if (parent.EAPI.isAndroid() && pageId == "context52_Wg5qcG") {
+        var pageId = window.beforePageId;var storeUrl = "http://192.168.220.82:8080/pttlCrm/res/page/psi/storeInfocollection.html";if (parent.EAPI.isAndroid() && pageId == "context52_Wg5qcG") {
           ysp.customHelper.AndroidBackURL = storeUrl;
         } else if (parent.EAPI.isIOS() && pageId == "context52_Wg5qcG") {
           ysp.customHelper.AndroidBackURL = storeUrl;
         } else if (parent.EAPI.isIOS() && pageId == "context2_15cCKI") {
-          var urls = "http://pttlcrm.com/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html";ysp.customHelper.AndroidBackURL = urls;
+          var urls = "http://192.168.220.82:8080/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html";ysp.customHelper.AndroidBackURL = urls;
         } else {
           ysp.customHelper.AndroidBackURL = storeUrl;
         }ysp.customHelper.AndroidBackFlag = 'destination';
       }if (data.eventType == "back") {
-        var pageId = window.beforePageId;var storeUrl = "http://pttlcrm.com/pttlCrm/res/page/psi/storeInfocollection.html";if (parent.EAPI.isAndroid() && (pageId == "context52_Wg5qcG" || pageId == "context2_15cCKI")) {
+        var pageId = window.beforePageId;var storeUrl = "http://192.168.220.82:8080/pttlCrm/res/page/psi/storeInfocollection.html";if (parent.EAPI.isAndroid() && (pageId == "context52_Wg5qcG" || pageId == "context2_15cCKI")) {
           ysp.customHelper.AndroidBackFn();
         } else if (parent.EAPI.isIOS() && pageId == "context52_Wg5qcG") {
           ysp.customHelper.BackReload(storeUrl);
         } else if (parent.EAPI.isIOS() && pageId == "context2_15cCKI") {
-          var urls = "http://pttlcrm.com/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html";ysp.customHelper.BackReload(urls);
+          var urls = "http://192.168.220.82:8080/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html";ysp.customHelper.BackReload(urls);
         } else {
           ysp.customHelper.BackReload(storeUrl);
         }

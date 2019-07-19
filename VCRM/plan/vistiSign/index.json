@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "vistiSign",
-  "targetURL": "http://pttlcrm.com/pttlCrm/visit/customerVisitPlan/addCustomerSignIn",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/visit/customerVisitPlan/addCustomerSignIn",
   "jsFile": "index.js",
   "chineseName": "签到",
   "description": "",
@@ -141,9 +141,9 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/customerSign.html",
-        "^http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/visit\\/customerVisitPlan\\/addCustomerSignIn",
-        "http:\\/\\/pttlcrm\\.com\\/pttlCrm\\/res\\/page\\/visitManager\\/visitLook\\/customerSign.html"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/customerSign.html",
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/visit\\/customerVisitPlan\\/addCustomerSignIn",
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/visitManager\\/visitLook\\/customerSign.html"
       ]
     }
   },
@@ -264,7 +264,7 @@
     "page/urls": {
       "contexts": {
         "context5_C0h1F8": [
-          "pttlcrm.com/pttlCrm/visit/customerVisitPlan/addCustomerSignIn"
+          "192.168.220.82:8080/pttlCrm/visit/customerVisitPlan/addCustomerSignIn"
         ]
       }
     },

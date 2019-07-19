@@ -1015,14 +1015,14 @@
 	//export const PTDATASHOW_SERVER_ROOT = 'http://192.168.1.224:8080/ptDataShow';
 
 	//生产 nginx
-	//export const SERVER_ROOT = 'http://pttlcrm.com'; //服务端根路径
-	//export const LOCAL_SERVER_ROOT = 'http://pttlcrm.com'; //本地服务端根路径
+	//export const SERVER_ROOT = 'http://192.168.220.82:8080'; //服务端根路径
+	//export const LOCAL_SERVER_ROOT = 'http://192.168.220.82:8080'; //本地服务端根路径
 	//export const PTDATASHOW_SERVER_ROOT = 'http://192.168.1.202/ptDataShow';
 
 	//生产 228
 	var SERVER_ROOT = exports.SERVER_ROOT = ''; //服务端根路径
 	var LOCAL_SERVER_ROOT = exports.LOCAL_SERVER_ROOT = ''; //本地服务端根路径
-	var PTDATASHOW_SERVER_ROOT = exports.PTDATASHOW_SERVER_ROOT = 'http://pttlcrm.com/ptDataShow'; //'https://vcrm-uat.pttl.com:8080/ptDataShow';
+	var PTDATASHOW_SERVER_ROOT = exports.PTDATASHOW_SERVER_ROOT = 'http://192.168.220.82:8080/ptDataShow'; //'https://vcrm-uat.pttl.com:8080/ptDataShow';
 
 	// var _dgt = _dgt || [];
 	// window._dgt = _dgt;

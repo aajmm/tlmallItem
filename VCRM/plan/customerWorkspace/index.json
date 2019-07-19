@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "customerWorkspace",
-  "targetURL": "http://pttlcrm.com/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html",
+  "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html",
   "jsFile": "index.js",
   "requires": {
     "vistiSign": "../vistiSign/index.json",
@@ -452,7 +452,7 @@
     "page/urls": {
       "contexts": {
         "context2_HsDgXa": [
-          "pttlcrm.com/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html"
+          "192.168.220.82:8080/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html"
         ]
       }
     },
