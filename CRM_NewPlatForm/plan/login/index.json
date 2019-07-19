@@ -328,7 +328,8 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/login"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/login",
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/login\\/login\\.html"
       ]
     }
   },

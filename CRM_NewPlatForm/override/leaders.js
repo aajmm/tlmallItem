@@ -308,6 +308,86 @@ window.addEventListener('DOMContentLoaded', function() {
             arr.push(visualMaxUnit);
             return arr;
         }
+				
+      	    //模块宽度拖拽
+    	function bindResize(el,Lbox,Rbox,LRwrap) {
+    	//鼠标的 X 和 Y 轴坐标
+    	var x = 0;
+    	$(el).mousedown(function (e) {
+    	//按下元素后，计算当前鼠标与对象计算后的坐标
+    	x = e.clientX - el.offsetWidth - Lbox.width();
+    	el.setCapture ? (
+    	el.setCapture(),
+    	el.onmousemove = function (ev) {
+    		mouseMove(ev || event);
+    	},
+    	el.onmouseup = mouseUp
+    	) : (
+    	$(document).bind("mousemove", mouseMove).bind("mouseup", mouseUp)
+    	);
+    	e.preventDefault();
+    	});
+    	//移动事件
+    	function mouseMove(e) {
+    		if(e.clientX>290 && e.clientX<1280){
+    			Lbox.width(e.clientX - x); 
+    			Rbox.width(LRwrap.width()-e.clientX  + x - 15);
+    		}
+    		reloadW();
+    		init();
+    	}
+    	//停止事件
+    	function mouseUp() {
+    	el.releaseCapture ? (
+    	el.releaseCapture(),
+    	el.onmousemove = el.onmouseup = null
+    	) : (
+    	$(document).unbind("mousemove", mouseMove).unbind("mouseup", mouseUp)
+    	);
+    	}
+    	}
+    	
+    	//table拖拽
+      function tableDrag(tableId){
+          var tTD;
+          var table = document.getElementById(tableId);
+          if(table){
+            for (var i = 0; i < table.rows[0].cells.length; i++) {
+              table.rows[0].cells[i].onmousedown = function() {
+                tTD = this;
+                if (event.offsetX > tTD.offsetWidth - 10) {
+                  tTD.mouseDown = true;
+                  tTD.oldX = event.x;
+                  tTD.oldWidth = tTD.offsetWidth;
+                }
+              };
+              table.rows[0].cells[i].onmouseup = function() {
+                if (tTD == undefined) tTD = this;
+                tTD.mouseDown = false;
+                tTD.style.cursor = 'default';
+              };
+              table.rows[0].cells[i].onmousemove = function() {
+                if (event.offsetX > this.offsetWidth - 10)
+                  this.style.cursor = 'col-resize';
+                else
+                  this.style.cursor = 'default';
+                if (tTD == undefined) tTD = this;
+                if (tTD.mouseDown != null && tTD.mouseDown == true) {
+                  tTD.style.cursor = 'default';
+                  if (tTD.oldWidth + (event.x - tTD.oldX) > 0)
+                    tTD.width = tTD.oldWidth + (event.x - tTD.oldX);
+                  tTD.style.width = tTD.width;
+                  tTD.style.cursor = 'col-resize';
+                  table = tTD;
+                  while (table.tagName != 'TABLE') table = table.parentElement;
+                  for (var j = 0; j < table.rows.length; j++) {
+                    table.rows[j].cells[tTD.cellIndex].width = tTD.width;
+                  }
+                }
+              };
+            }
+          }
+        }
 
         $(function () {
 
@@ -341,6 +421,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             laydate({
                 elem: '#selDay',
+                isclear: false,
                 // min: laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
                 max: laydate.now(), //+1代表明天，+2代表后天，以此类推
                 choose: function(datas){ //选择日期完毕的回调
@@ -348,7 +429,11 @@ window.addEventListener('DOMContentLoaded', function() {
                     init();
                 }
             });
-            
+          
+            $("body").delegate("#laydate_today","click", function(){
+                $("#date").text($("#selDay").val());
+                init();
+            });
             $("#orderLogic").change(function(){
             	$("#orderLogic_hidden").text($("#orderLogic").val());
                 init();
@@ -360,13 +445,17 @@ window.addEventListener('DOMContentLoaded', function() {
             });
             
             init();
-            
+             $(".lefth").append('<div id="dragbar"></div>');
+        	$("#dragbar").height($(".lefth").height());
+
+	        bindResize(document.getElementById('dragbar'),$('.lefth'),$('.righth'),$('.m-boxs'));
+	   
             //月度趋势图控件
             lineBarTag();
         });
         
         function init() {
-        	
+        		
         	//订单取数逻辑
         	if($("#orderLogic_hidden").text())
         		$("#orderLogic").val($("#orderLogic_hidden").text());
@@ -486,7 +575,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
                     // 趋势图
                     var LineDatas = [{
-                        name: '销量(台)',
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -498,7 +587,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     var bizUnits = response.department;
                     $("#bizUnitTable").empty();
                     if(bizUnits) {
-                    	bizUnits = departmentbak(bizUnits);
+                    	// bizUnits = departmentbak(bizUnits);
                     	var firstLevel = [];
                     	var secondLevel = [];
                     	var html = "";
@@ -512,10 +601,11 @@ window.addEventListener('DOMContentLoaded', function() {
                             }
                         }
                         for (var i = 0; i < firstLevel.length; i++) {
+                          var dep_url = getLink("bizUnitName",firstLevel[i].department,"01");
                         	html += '<div class="businessDimen">';
                         	html += '    <div class="u-title">';
                         	html += '        <i class="icon-line"></i>';
-                        	html += '        <h2>'+firstLevel[i].department+'</h2>';
+                        	html += '        <h2><a href="'+dep_url+'" title="' + firstLevel[i].department + '">'+firstLevel[i].department+'</a></h2>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
                         	html += '        <div class="table-content">';
@@ -524,7 +614,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -585,7 +675,7 @@ window.addEventListener('DOMContentLoaded', function() {
                             	secondLevel.push(projectName[i]);
                             }
                         }
-                        for (var i = 0; i < firstLevel.length; i++) {
+                         for (var i = 0; i < firstLevel.length; i++) {
                         	html += '<div class="businessDimen">';
                         	html += '    <div class="u-title">';
                         	html += '        <i class="icon-line"></i>';
@@ -598,24 +688,25 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
                         	html += '        <div class="table-content">';
                         	html += '            <table class="table u-table-b" id="sale-table' + i + '">';
                         	html += '        	     <thead>';
-                        	html += '                    <tr><th>机型</th><th>销量（台）</th><th>销售额（万）</th></tr>';
+                        	//html += '                    <tr><th>机型</th><th>销量（台）</th><th>销售额（万）</th></tr>';
+                        	html += '                    <tr><th code="modelName">机型</th><th code="qty">销量（台）</th><th code="amt">销售额（万）</th></tr>';
                         	html += '                </thead>';
                         	html += '                <tbody>';
                         	
                         	for (var j = 0; j < secondLevel.length; j++) {
                         		if(secondLevel[j].projectName==firstLevel[i].projectName){
-                              var url = getLink("modelName",secondLevel[j].modelName,"01");
+                        			var url = getLink("modelName",secondLevel[j].modelName,"01");//style="text-decoration:none;"
                                  	html += '<tr><td><a href="'+url+'" title="'+secondLevel[j].modelName+'">'+secondLevel[j].modelName+'</td>';
                                     html += '<td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
-                              //html += '        <tr><td>'+secondLevel[j].modelName+'</td><td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
-                            }
+                        			//html += '        <tr><td title="'+secondLevel[j].modelName+'">'+secondLevel[j].modelName+'</td><td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
+                        		}
                         	}
                         	html += '                </tbody>';
                         	html += '            </table>';
@@ -651,7 +742,8 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-
+										tableSH("sale-table5", tr_minH);
+                    tableSH("project-table", tr_minH);
                     // 分公司表格
                     var branches = response.branchName;
                     $("#branchTable").empty();
@@ -664,7 +756,11 @@ window.addEventListener('DOMContentLoaded', function() {
                     }
                     
                     tableSH("bizUnit-table", tr_minH-2);
-                  
+                    tableDrag("sale-table0");
+                    tableDrag("sale-table1");
+                    tableDrag("bizUnit-table");
+                    tableDrag("project-table");
+                    tableDrag("sale-table");
                   	/**点击排序*/
                     clickThSortCommon();
                 },
@@ -796,7 +892,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
                     // 趋势图
                     var LineDatas = [{
-                        name: '销量(台)',
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -808,7 +904,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     var bizUnits = response.department;
                     $("#bizUnitTable").empty();
                     if(bizUnits) {
-                    	bizUnits = departmentbak(bizUnits);
+                    	// bizUnits = departmentbak(bizUnits);
                     	var firstLevel = [];
                     	var secondLevel = [];
                     	var html = "";
@@ -822,10 +918,11 @@ window.addEventListener('DOMContentLoaded', function() {
                             }
                         }
                         for (var i = 0; i < firstLevel.length; i++) {
+                          var dep_url = getLink("bizUnitName",firstLevel[i].department,"01");
                         	html += '<div class="businessDimen">';
                         	html += '    <div class="u-title">';
                         	html += '        <i class="icon-line"></i>';
-                        	html += '        <h2>'+firstLevel[i].department+'</h2>';
+                        	html += '        <h2><a href="'+dep_url+'" title="' + firstLevel[i].department + '">'+firstLevel[i].department+'</a></h2>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
                         	html += '        <div class="table-content">';
@@ -834,7 +931,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -895,7 +992,7 @@ window.addEventListener('DOMContentLoaded', function() {
                             	secondLevel.push(projectName[i]);
                             }
                         }
-                        for (var i = 0; i < firstLevel.length; i++) {
+                         for (var i = 0; i < firstLevel.length; i++) {
                         	html += '<div class="businessDimen">';
                         	html += '    <div class="u-title">';
                         	html += '        <i class="icon-line"></i>';
@@ -908,24 +1005,25 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
                         	html += '        <div class="table-content">';
                         	html += '            <table class="table u-table-b" id="sale-table' + i + '">';
                         	html += '        	     <thead>';
-                        	html += '                    <tr><th>机型</th><th>销量（台）</th><th>销售额（万）</th></tr>';
+                        	//html += '                    <tr><th>机型</th><th>销量（台）</th><th>销售额（万）</th></tr>';
+                        	html += '                    <tr><th code="modelName">机型</th><th code="qty">销量（台）</th><th code="amt">销售额（万）</th></tr>';
                         	html += '                </thead>';
                         	html += '                <tbody>';
                         	
                         	for (var j = 0; j < secondLevel.length; j++) {
                         		if(secondLevel[j].projectName==firstLevel[i].projectName){
-                              var url = getLink("modelName",secondLevel[j].modelName,"01");
+                        			var url = getLink("modelName",secondLevel[j].modelName,"01");//style="text-decoration:none;"
                                  	html += '<tr><td><a href="'+url+'" title="'+secondLevel[j].modelName+'">'+secondLevel[j].modelName+'</td>';
                                     html += '<td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
-                              //html += '        <tr><td>'+secondLevel[j].modelName+'</td><td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
-                            }
+                        			//html += '        <tr><td title="'+secondLevel[j].modelName+'">'+secondLevel[j].modelName+'</td><td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
+                        		}
                         	}
                         	html += '                </tbody>';
                         	html += '            </table>';
@@ -961,7 +1059,8 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-
+										tableSH("sale-table5", tr_minH);
+                    tableSH("project-table", tr_minH);
                     // 分公司表格
                     var branches = response.branchName;
                     $("#branchTable").empty();
@@ -974,7 +1073,11 @@ window.addEventListener('DOMContentLoaded', function() {
                     }
                     
                     tableSH("bizUnit-table", tr_minH-2);
-                  
+                    tableDrag("sale-table0");
+                    tableDrag("sale-table1");
+                    tableDrag("bizUnit-table");
+                    tableDrag("project-table");
+                    tableDrag("sale-table");
                   	/**点击排序*/
                     clickThSortCommon();
                 },
@@ -1077,7 +1180,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 var projectName = $("#projectName").text();
                 
                 var modelName = $("#modelName").text().replace(/\+/g,'%2B');//机型
-                var link = "/ptDataShow/salesAll/salesOverview?type=04&branchName=" + encodeURIComponent(params.name) + "&filter_userId=" + loginName + '&encoder=' + encoder + '&date='+ $("#selDay").val() + '&cycleType='+ cycleType + '&orderLogic='+ orderLogic + '&projectName=' + encodeURIComponent(projectName)+'&modelName=' + encodeURIComponent(modelName);
+                var link = getLink("branchName",params.name,"04");
                 window.location.href = link;
             });
         }

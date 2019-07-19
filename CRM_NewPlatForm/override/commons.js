@@ -224,7 +224,76 @@ function addPercentSigns(response) {
     return response;
 }
 
+/**
+ * 导出明细数据
+ */
+function exportDetailDatas(){
+	//导出
+    $(".detailDatas a.export").unbind("click").click(function(){
+	   var columns = [];
+	   
+	   var thead_th = $(this).siblings(".content").find("table thead tr th");
+	   var name = "name";
+	   for(var i=0;i<thead_th.length;i++){
+		   var thObj = {"display":$(thead_th[i]).text(),"name":name+i};
+		   columns.push(thObj);
+	   }
+		var exportList = [];
+		
+		$(this).siblings(".content").find("table tbody tr").each(function(j,trObj){
+			var obj = {};
+			$(trObj).find("td").each(function(m,tdObj){
+				obj[columns[m][name]] = $(tdObj).text();
+			})
+			exportList.push(obj);
+		})
+		var title = $(this).siblings(".title").text();
+		downExcel(columns,exportList,title);
+    })
+}
 
+
+/**
+ * 导出数据：根据传入的列名（columns）和传入的数据（data）导出
+ */
+function downExcel(columns,data,title){
+	var content = [];
+	//表头
+	for (var i in columns){
+		if(columns[i].display != "操作"){
+			if(i < columns.length-1){
+				content.push(columns[i].display+',');
+			}else{
+				content.push(columns[i].display+'\r');
+			}
+		}
+	}
+	//表体
+	for(var i in data){
+		var row = data[i];
+		for(var j in columns){
+			if(columns[j].display != "操作"){
+				var name = "";
+				if(columns[j].name == "week" || columns[j].name == "month"){
+					name = row[columns[j].name];
+				}else{
+					name = getValue(row[columns[j].name]);
+				}
+				if(null != name && typeof name == 'string'){
+					name = name.replace(/,/g,"，");
+				}
+				if(j < columns.length-1){
+					content.push(name+',');
+				}else{
+					content.push(name+'\r');
+				}
+			}
+		}
+	}
+	
+	var blob = new Blob(content, {type: "text/plain;charset=utf-8"});
+	saveAs(blob, (getValue(title)==""?$(document).attr("title"):title) + ".csv");
+}
 
 
 /**
@@ -257,3 +326,250 @@ function toQfw(num,flag) {
 	}
 	return first_sign + str_num + result + end_num;
 }
+//2019/05/28 yue 同步pc端代码
+//发送ajax请求
+function setAutocomplete(service,callBack){
+	$('#searchInput').autocomplete({
+		ajaxSettings:{
+			dataType: "json",
+		},
+		getSearchParam:getSearchParam,
+		serviceUrl: service,
+	    onSelect: function(suggestion) {
+    		if(callBack){
+	    		callBack(suggestion);
+	    	}
+	    }
+	});
+	
+	function getSearchParam(){
+//		var branchName = $("#branchName").text();
+//	    var projectName = $("#projectName").text();
+//	    var bizUnitName = $("#bizUnitName").text();
+//	    var officeName = $("#officeName").text();
+//	    var salerName = $("#salerName").text();
+//	    var custName = $("#custName").text();
+//	    var storeName = $("#storeName").text();
+//	    var modelName = $("#modelName").text();
+		var body = {};
+		body[$("#selectSearch").val()] = $("#searchInput").val();
+		body.loginName = $("#loginName").text();
+//		body.branchName=branchName;
+//		body.projectName=projectName;
+//		body.bizUnitName=bizUnitName;
+//		body.officeName=officeName;
+//		body.salerName=salerName;
+//		body.custName=custName;
+//		body.storeName=storeName;
+//		body.modelName=modelName;
+		body.date = $("#selDay").val();
+		// 年计划或月计划
+		var isYear = '0';
+		if ($("#planTypeSelect").val() == 'month') {
+			isYear = '0';
+		} else if ($("#planTypeSelect").val() == 'year') {
+			isYear = '1';
+		}
+		body.isYear = isYear;
+		return body;
+	}
+	
+}
+$(function(){
+  $("#selectSearch").on("change",function(){
+		$("#searchInput").val("");
+	})
+	if($('#searchInput').length>0){
+		setAutocomplete("/ptDataShow/salesPlan/getSearchData",function(suggestions){
+	    	var selectType = $("#selectSearch").val();
+	    	if(suggestions){
+    			var suggObj = JSON.parse(suggestions.data);
+    			var link = "";
+		    	if("salesmanName" == selectType){
+		    		link = getLinkForSearch("07",suggObj.salerName,"","","");
+		    	}else if("cName" == selectType){
+		    		link = getLinkForSearch("08",suggObj.salerName,suggObj.customerName,"","oneCust");
+		    	}else if("sName" == selectType){
+		    		link = getLinkForSearch("08",suggObj.salerName,"",suggObj.storeName,"oneStore");
+		    	}
+		    	window.location.href = link;
+		    	if(link != ""){
+		    		var path = sessionStorage.getItem("path")?sessionStorage.getItem("path"):"";
+		    		if(path && path.indexOf("-") > -1){
+		    			path = path.substr(0,path.indexOf("-"))
+		    			sessionStorage.setItem("path",path);
+		    		}
+		    		window.location.href = link;
+		    	}
+	    	}
+	    });
+	}
+});
+function getLinkNew(type,key,value,drill1){
+	if(!type) {
+		return '#';
+	}
+	// 年计划或月计划
+    var isYear = '0';
+    if ($("#planTypeSelect").val() == 'month') {
+        isYear = '0';
+    } else if ($("#planTypeSelect").val() == 'year') {
+        isYear = '1';
+    }
+    var loginName = $("#loginName").text();
+    var encoder = $("#encoder").text();
+    var date = $("#selDay").val();
+    
+    var branchName = $("#branchName").text();
+    var projectName = $("#projectName").text();
+    var bizUnitName = $("#bizUnitName").text();
+    var officeName = $("#officeName").text();
+    var salerName = $("#salerName").text();
+    var custName = $("#custName").text();
+    var storeName = $("#storeName").text();
+    var modelName = $("#modelName").text();
+    var drill = $("#drill").text();
+    var link = '/ptDataShow/salesPlan/salesOverview?type='+type
+	+'&isYear='+ encodeURIComponent(isYear) 
+	+"&filter_userId="  + encodeURIComponent(loginName) 
+	+ '&encoder='  + encodeURIComponent(encoder) 
+	+ '&date=' + encodeURIComponent(date) 
+	+ "&" + key + "=" + encodeURIComponent(value);
+    if(branchName && key!='branchName')
+    	link += '&branchName=' + encodeURIComponent(branchName);
+    if(projectName && key!='projectName')
+    	link += '&projectName=' + encodeURIComponent(projectName);
+    if(bizUnitName && key!='bizUnitName')
+    	link += '&bizUnitName=' + encodeURIComponent(bizUnitName);
+    if(officeName && key!='officeName')
+    	link += '&officeName=' + encodeURIComponent(officeName);
+    if(salerName && key!='salerName')
+    	link += '&salerName=' + encodeURIComponent(salerName);
+    if(custName && key!='custName')
+    	link += '&custName=' + encodeURIComponent(custName);
+    if(storeName && key!='storeName')
+    	link += '&storeName=' + encodeURIComponent(storeName);
+    if(modelName && key!='modelName')
+    	link += '&modelName=' + encodeURIComponent(modelName);
+    if (drill1) {
+    	link += "&drill=" + drill1;
+    }else {
+    	link += "&drill=" + drill;
+    }
+    return link;
+}
+function getLink(type,salerName1,custName1,storeName1,drill1){
+	if(!type) {
+		return '#';
+	}
+	// 年计划或月计划
+    var isYear = '0';
+    if ($("#planTypeSelect").val() == 'month') {
+        isYear = '0';
+    } else if ($("#planTypeSelect").val() == 'year') {
+        isYear = '1';
+    }
+    var loginName = $("#loginName").text();
+    var encoder = $("#encoder").text();
+    var date = $("#selDay").val();
+    var branchName = $("#branchName").text();
+    var projectName = $("#projectName").text();
+    var bizUnitName = $("#bizUnitName").text();
+    var officeName = $("#officeName").text();
+    var salerName = $("#salerName").text();
+    var custName = $("#custName").text();
+    var storeName = $("#storeName").text();
+    var modelName = $("#modelName").text();
+    var drill = $("#drill").text();
+    var link = '/ptDataShow/salesPlan/salesOverview?type='+type
+    	+'&isYear='+ encodeURIComponent(isYear) 
+    	+"&filter_userId="  + encodeURIComponent(loginName) 
+    	+ '&encoder='  + encodeURIComponent(encoder) 
+    	+ '&date=' + encodeURIComponent(date) 
+    	+ '&branchName=' + encodeURIComponent(branchName) 
+    	+ "&projectName=" +  encodeURIComponent(projectName) 
+    	+ "&bizUnitName=" + encodeURIComponent(bizUnitName)
+    	+ "&officeName=" + encodeURIComponent(officeName);
+    	if (salerName) {
+    		link+='&salerName='+ encodeURIComponent(salerName); 
+    	}
+	    if (!salerName && salerName1) {
+	    	link+='&salerName='+ encodeURIComponent(salerName1); 
+	    }
+	    if (custName) {
+	    	link+='&custName='+ encodeURIComponent(custName); 
+	    }
+	    if (!custName && custName1) {
+	    	link+='&custName='+ encodeURIComponent(custName1); 
+	    }
+	    if (storeName) {
+	    	link+='&storeName='+ encodeURIComponent(storeName); 
+	    }
+	    if (!storeName && storeName1) {
+	    	link+='&storeName='+ encodeURIComponent(storeName1);
+	    }
+	    link+= "&modelName="  + encodeURIComponent(modelName);
+    	if (drill) {
+    		link+= "&drill=" + drill;
+    	}
+    	if (!drill && drill1) {
+    		link+= "&drill=" + drill1;
+    	}
+    return link;
+}
+function getLinkForSearch(type,salerName1,custName1,storeName1,drill1){
+	if(!type) {
+		return '#';
+	}
+	// 年计划或月计划
+	var isYear = '0';
+	if ($("#planTypeSelect").val() == 'month') {
+		isYear = '0';
+	} else if ($("#planTypeSelect").val() == 'year') {
+		isYear = '1';
+	}
+	var loginName = $("#loginName").text();
+	var encoder = $("#encoder").text();
+	var date = $("#selDay").val();
+	var drill = $("#drill").text();
+	var link = '/ptDataShow/salesPlan/salesOverview?type='+type
+	+'&isYear='+ encodeURIComponent(isYear) 
+	+"&filter_userId="  + encodeURIComponent(loginName) 
+	+ '&encoder='  + encodeURIComponent(encoder) 
+	+ '&date=' + encodeURIComponent(date) 
+	if (salerName1) {
+		link+='&salerName='+ encodeURIComponent(salerName1); 
+	}
+	if (custName1) {
+		link+='&custName='+ encodeURIComponent(custName1); 
+	}
+	if (storeName1) {
+		link+='&storeName='+ encodeURIComponent(storeName1);
+	}
+	if (drill1) {
+		link+= "&drill=" + drill1;
+	}
+	return link;
+}
+function getYearDayCount(t) {//t 代表指定的参数
+    if (t==null)
+    {
+        var Year = new Date().getFullYear(), s = 0, d;//获取当前年
+        for (var i = 1; i < 13; i++) {
+            d = new Date(Year, i, 0);//获取某一个月的天数
+            s += d.getDate();
+        };
+        return s;
+	} else if(t >= 1970) {
+	        var Year = new Date().getFullYear(), s = 0, d;
+	        for (var i = 1; i < 13; i++) {
+	            d = new Date(t, i, 0);
+	            s += d.getDate();
+	        };
+	        return s;
+	} else {
+	    return "365";
+	} 
+}
+
+

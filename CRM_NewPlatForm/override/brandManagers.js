@@ -480,7 +480,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
                     // 月度趋势图
                     var LineDatas = [{
-                        name: '销量(台)',
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -515,7 +515,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -568,13 +568,14 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-
+										tableSH("sale-table5", tr_minH);
+                  
                     var officeName = response.officeName;
                     $("#officeTable").empty();
                     if(officeName) {
                         for (var i = 0; i < officeName.length; i++) {
                         	var url = getLink("officeName",officeName[i].name,"06");
-                            var html = '<tr><td><a href="'+url+'" title="' + officeName[i].name + '">' + officeName[i].name + '</a></td><td>' + officeName[i].reachQty + '</td><td>' + officeName[i].reachAmt + '</td></tr>';
+                            var html = '<tr><td><a href="'+url+'" title="' + officeName[i].name + '">' + officeName[i].name + '</a></td><td>' + officeName[i].reachQty + '</td><td>' + officeName[i].reachAmt.toFixed(2) + '</td></tr>';
                             $("#officeTable").append(html);
                         }
                     }
@@ -706,7 +707,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
                     // 月度趋势图
                     var LineDatas = [{
-                        name: '销量(台)',
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -741,7 +742,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -794,13 +795,14 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-
+										tableSH("sale-table5", tr_minH);
+                  
                     var officeName = response.officeName;
                     $("#officeTable").empty();
                     if(officeName) {
                         for (var i = 0; i < officeName.length; i++) {
                         	var url = getLink("officeName",officeName[i].name,"06");
-                            var html = '<tr><td><a href="'+url+'" title="' + officeName[i].name + '">' + officeName[i].name + '</a></td><td>' + officeName[i].reachQty + '</td><td>' + officeName[i].reachAmt + '</td></tr>';
+                            var html = '<tr><td><a href="'+url+'" title="' + officeName[i].name + '">' + officeName[i].name + '</a></td><td>' + officeName[i].reachQty + '</td><td>' + officeName[i].reachAmt.toFixed(2) + '</td></tr>';
                             $("#officeTable").append(html);
                         }
                     }
@@ -813,6 +815,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     console.log("Error:获取后台数据失败！");
                 }
             });
+
         }
 
         // 配置：地图
@@ -841,13 +844,8 @@ window.addEventListener('DOMContentLoaded', function() {
                     var cycleType = $("#cycleType").val();
                     var orderLogic = $("#orderLogic").val();
                     
-                    var link = '/ptDataShow/salesAll/salesOverview?type=06&officeName=' + encodeURIComponent(params.data.company) 
-                    + "&projectName=" +  encodeURIComponent(projectName) 
-                    + "&bizUnitName=" + encodeURIComponent($("#bizUnitName").text()) 
-                    + "&filter_userId=" + loginName + '&encoder=' 
-                    + encoder + '&date='+ $("#selDay").val() 
-                    + '&cycleType='+ cycleType 
-                    + '&orderLogic='+ orderLogic;
+                    var modelName = $("#modelName").text().replace(/\+/g,'%2B');//机型
+                    var link = getLink("officeName",params.data.company,"06");
                     window.location.href = link;
                     })
                 });
@@ -954,7 +952,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	            for (var j = 0; j < datas[0].data.length; j++) {
 	                timeDatas.push((datas[0].data[j].time).substring(5));
 	                salesValReach.push(datas[0].data[j].value);
-	                sumValReach.push((datas[1].data[j].value)/10000);
+	                sumValReach.push(datas[1].data[j].value);
 	            }
             }
             var option = {

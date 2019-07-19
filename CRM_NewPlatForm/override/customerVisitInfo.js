@@ -2392,7 +2392,7 @@
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	var load = exports.load = function load(data) {
-	    $("#body").html(render()); //加载静态页面
+	    $("#body").html(render()); //加载静态页面
 	    $(window).resize(function () {
 	        initReportCss();
 	    });
@@ -2414,7 +2414,7 @@
 	        //签到可用
 	        inintPageHtmlFn();//PC注释掉 移动端要解开
 	        initMap();
-	        $("#longitude").attr("style", "display:none;"); //签到经度
+	        $("#longitude").attr("style", "display:none;"); //签到经度
 	        $("#latitude").attr("style", "display:none;"); //签到纬度
 	        $("#address").attr("style", "display:none;"); //地址
         	
@@ -2426,6 +2426,14 @@
               }
               doAction(data);
           });
+        
+       	// $(".customersign-active").unbind('click').on('click', function() {
+         	// if ($("#address").html() == "") {
+         	// layerUtils.info("请等待地图加载完毕！");
+         	// return;
+         	// }
+         	// doAction(data);
+         	// });
 	    }
 
 	    /** PC端 禁用签到 */
@@ -2500,7 +2508,9 @@
 	                signIn(param, referenceParentHtmlFn, data);
 	            } else {
 	                signInOutScope = '1';
+                	window.closeModel();
 	                layerUtils.info("当前签到位置与客户地址距离超过500米,请填写备注信息！");
+                	
 	                return;
 	            }
 	        });
@@ -2511,10 +2521,9 @@
 
 	var signSubmit = '0';
 	function signIn(param, referenceParentHtmlFn, data) {
-	    if (signSubmit == '1') {
+	    if (signSubmit == '1') {
 	        return;
 	    }
-    debugger;
 	    signSubmit = '1';
 	    param.signInOutScope = signInOutScope;
 	    ajaxUtils.sendAjax("visit/customerVisitPlan/addCustomerSignIn", param, null, function (reslult) {
@@ -2794,6 +2803,7 @@
 	                signOut(param, referenceParentHtmlFn, data);
 	            } else {
 	                signOutOutScope = '1';
+                	window.closeModel();
 	                layerUtils.info("当前签出位置与签到地址距离超过500米,请填写备注信息！");
 	                return;
 	            }

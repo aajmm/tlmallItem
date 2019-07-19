@@ -472,9 +472,9 @@ window.addEventListener('DOMContentLoaded', function() {
                         getMap([], mapTotal, "map");
                     }
 
-                    // 月度趋势图
+                   
                     var LineDatas = [{
-                        name: '销量(台)',
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -486,13 +486,15 @@ window.addEventListener('DOMContentLoaded', function() {
                     var bizUnits = response.department;
                     $("#bizUnitTable").empty();
                     if(bizUnits) {
-                    	bizUnits = departmentbak(bizUnits);
+                    	// bizUnits = departmentbak(bizUnits);
                     	var firstLevel = [];
                     	var secondLevel = [];
                     	var html = "";
                         for (var i = 0; i < bizUnits.length; i++) {
                             if(bizUnits[i].level==1){
-                            	firstLevel.push(bizUnits[i]);
+                            	if("" != bizUnits[i].department){//去掉事业部为空的模块 2018/09/04
+                            		firstLevel.push(bizUnits[i]);
+                            	}
                             }else{
                             	secondLevel.push(bizUnits[i]);
                             }
@@ -510,7 +512,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -601,9 +603,9 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '            <table class="table">';
                         	html += '        	     <thead>';
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
-                        	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
+                        	html += '                    <tr><th code="modelName">机型</th><th code="qty">销量（台）</th><th code="amt">销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -657,7 +659,9 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-                    
+                    tableSH("sale-table5", tr_minH);
+                    tableSH("project-table", tr_minH);
+                  
                     // 机型表格
                     var modelName = response.modelName;
                     $("#modelTable").empty();
@@ -675,7 +679,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	var reachQty_num = Number(modelName[i].reachQty);
                         	var reachAmt_num = Number(modelName[i].reachAmt);
                         	if(reachQty_num !=0 && reachAmt_num != 0){
-                        		var html = '<tr><td title="'+modelName_title+'">'+nodelName_show+'</td><td>' + modelName[i].reachQty + '</td><td>' + modelName[i].reachAmt + '</td></tr>';
+                        		var html = '<tr><td title="'+modelName_title+'">'+nodelName_show+'</td><td>' + modelName[i].reachQty + '</td><td>' + modelName[i].reachAmt.toFixed(2) + '</td></tr>';
                         		$("#modelTable").append(html);
                         	}
                         }
@@ -812,9 +816,9 @@ window.addEventListener('DOMContentLoaded', function() {
                         getMap([], mapTotal, "map");
                     }
 
-                    // 月度趋势图
+                   
                     var LineDatas = [{
-                        name: '销量(台)',
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -826,13 +830,15 @@ window.addEventListener('DOMContentLoaded', function() {
                     var bizUnits = response.department;
                     $("#bizUnitTable").empty();
                     if(bizUnits) {
-                    	bizUnits = departmentbak(bizUnits);
+                    	// bizUnits = departmentbak(bizUnits);
                     	var firstLevel = [];
                     	var secondLevel = [];
                     	var html = "";
                         for (var i = 0; i < bizUnits.length; i++) {
                             if(bizUnits[i].level==1){
-                            	firstLevel.push(bizUnits[i]);
+                            	if("" != bizUnits[i].department){//去掉事业部为空的模块 2018/09/04
+                            		firstLevel.push(bizUnits[i]);
+                            	}
                             }else{
                             	secondLevel.push(bizUnits[i]);
                             }
@@ -850,7 +856,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -941,9 +947,9 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '            <table class="table">';
                         	html += '        	     <thead>';
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
-                        	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
+                        	html += '                    <tr><th code="modelName">机型</th><th code="qty">销量（台）</th><th code="amt">销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -997,7 +1003,9 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-                    
+                    tableSH("sale-table5", tr_minH);
+                    tableSH("project-table", tr_minH);
+                  
                     // 机型表格
                     var modelName = response.modelName;
                     $("#modelTable").empty();
@@ -1015,7 +1023,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	var reachQty_num = Number(modelName[i].reachQty);
                         	var reachAmt_num = Number(modelName[i].reachAmt);
                         	if(reachQty_num !=0 && reachAmt_num != 0){
-                        		var html = '<tr><td title="'+modelName_title+'">'+nodelName_show+'</td><td>' + modelName[i].reachQty + '</td><td>' + modelName[i].reachAmt + '</td></tr>';
+                        		var html = '<tr><td title="'+modelName_title+'">'+nodelName_show+'</td><td>' + modelName[i].reachQty + '</td><td>' + modelName[i].reachAmt.toFixed(2) + '</td></tr>';
                         		$("#modelTable").append(html);
                         	}
                         }
@@ -1057,7 +1065,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             $("#" + Id).parent().find(".totalContent").remove();
             if(totalDatas){
-                $("#" + Id).parent().append('<div class="u-box-infors">' + '<div class="title">太力总部</div>' + '<div class="content">' + '<div class="a"><span>销量：</span><b>' + toQfw(totalDatas[0].value) + ' 台</b></div>' + '<div class="b"><span>销售额：</span><b>' + toQfw(totalDatas[1].value) + ' 万</b></div>' + '</div></div>');
+                $("#" + Id).parent().append('<div class="u-box-infors">' + '<div class="title">太力总部</div>' + '<div class="content">' + '<div class="a"><span>销量：</span><b>' + toQfw(totalDatas[0].value) + ' 台</b></div>' + '<div class="b"><span>销售额：</span><b>' + toQfw_new(totalDatas[1].value.toFixed(2)) + ' 万</b></div>' + '</div></div>');
             }
             var option = {
                 tooltip: {
@@ -1067,7 +1075,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     backgroundColor: 'rgba(0,0,0,0)',
                     formatter: function formatter(params) {
                         try {
-                            var tip = '<div class="m-tooltip">' + '<div class="title">' + params.data.company + '</div>' + '<div class="content">' + '<div class="a"><span>销量</span><b>' + toQfw(params.value) + '</b></div>' + '<div class="b"><span>销售额</span><b> ' + toQfw(params.data.sum) + '</b></div></div></div>';
+                            var tip = '<div class="m-tooltip">' + '<div class="title">' + params.data.company + '</div>' + '<div class="content">' + '<div class="a"><span>销量</span><b>' + toQfw(params.value) + '</b></div>' + '<div class="b"><span>销售额</span><b> ' + toQfw_new(params.data.sum.toFixed(2)) + '</b></div></div></div>';
                             return tip;
                         } catch (e) {
                             return;
@@ -1138,8 +1146,9 @@ window.addEventListener('DOMContentLoaded', function() {
                 var encoder = $("#encoder").text();
                 var orderLogic = $("#orderLogic").val();
                 var projectName = $("#projectName").text();
-                
-                var link = "/ptDataShow/salesAll/salesOverview?type=04&branchName=" + encodeURIComponent(params.name) + "&bizUnitName=" + encodeURIComponent($("#bizUnitName").html()) + "&filter_userId=" + loginName + '&encoder=' + encoder + '&date='+ $("#selDay").val() + '&cycleType='+ cycleType + '&orderLogic='+ orderLogic+ '&projectName=' + encodeURIComponent(projectName);
+          
+                var modelName = $("#modelName").text().replace(/\+/g,'%2B');//机型
+                var link = getLink("branchName",params.name,"04");
                 window.location.href = link;
             });
         }
@@ -1160,9 +1169,9 @@ window.addEventListener('DOMContentLoaded', function() {
             
             if(datas[0].data){
 	            for (var j = 0; j < datas[0].data.length; j++) {
-	                timeDatas.push((datas[0].data[j].time).substring(5));
+	                timeDatas.push(datas[0].data[j].time);
 	                salesValReach.push(datas[0].data[j].value);
-	                sumValReach.push((datas[1].data[j].value)/10000);
+	                sumValReach.push(datas[1].data[j].value);
 	            }
             }
             var option = {

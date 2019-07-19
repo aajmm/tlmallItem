@@ -3,9 +3,6 @@
   "id": "customerInformationweekFill",
   "targetURL": "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11994",
   "jsFile": "index.js",
-  "requires": {
-    "index": "../index/index.json"
-  },
   "chineseName": "信息录入（周别PSI）",
   "description": "",
   "controls": {
@@ -163,10 +160,6 @@
         "data": {
           "tagName": "DIV"
         },
-        "userData": {
-          "data": [],
-          "force": false
-        },
         "locators": [
           {
             "id": "@id/word",
@@ -227,10 +220,6 @@
       "toContexts": [
         {
           "toContextId": "context56_sDDtAM"
-        },
-        {
-          "toContextId": "context0_pD8h1P",
-          "toModelId": "index"
         }
       ]
     },

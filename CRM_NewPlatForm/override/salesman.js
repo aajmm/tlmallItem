@@ -280,11 +280,13 @@
             //exportDetailDatas();
         	
             // 年计划或月计划
-            var isYear = '0';
+          	var isYear = '0';
             if ($("#planTypeSelect").val() == 'month') {
                 isYear = '0';
+                $(".filter-search").show();
             } else if ($("#planTypeSelect").val() == 'year') {
                 isYear = '1';
+                $(".filter-search").hide();
             }
 
             //面包屑导航
@@ -625,17 +627,21 @@
             getBars(sx_barsDatas, '三星事业部', 'barsSX');
             getBars(fx_barsDatas, '分销事业部', 'barsFX');*/
         }
-      window.timeInit = function ()  {
+      
+      
+      window.timeInit = function() {
 
         	//导出明细数据
             //exportDetailDatas();
         	
             // 年计划或月计划
-            var isYear = '0';
+        		var isYear = '0';
             if ($("#planTypeSelect").val() == 'month') {
                 isYear = '0';
+                $(".filter-search").show();
             } else if ($("#planTypeSelect").val() == 'year') {
                 isYear = '1';
+                $(".filter-search").hide();
             }
 
             //面包屑导航
@@ -981,7 +987,7 @@
         function suspBySalesCountReach(rank) {
             var suspTitle = "销量达成排名";
             var suspDesc = "销售人员全部销量达成率分公司内排名（包括所有事业部和项目）";
-            var suspListName = ["月份","办事处","销售人员","销量达成率","排名"];
+            var suspListName = [$("#planTypeSelect").val() == 'month' ? "月份" : "年份","办事处","销售人员","销量达成率","排名"];
             var allData = rank.qtyRankDatas;
             var row = rank.value;
             var scriptByRank = null;
@@ -996,7 +1002,7 @@
         function suspBySalesAmountReach(rank) {
             var suspTitle = "销售额达成排名";
             var suspDesc = "销售人员全部销售额达成率分公司内排名（包括所有事业部和项目）";
-            var suspListName = ["月份","办事处","销售人员","销售额达成率","排名"];
+            var suspListName = [$("#planTypeSelect").val() == 'month' ? "月份" : "年份","办事处","销售人员","销售额达成率","排名"];
             var allData = rank.amtRankDatas;
             var row = rank.value;
             var scriptByRank = null;
@@ -1011,7 +1017,7 @@
         function suspByDeptSalesCountReach(rank) {
             var suspTitle = "销量达成排名";
             var suspDesc = "销售人员该事业部下销量达成率分公司内排名";
-            var suspListName = ["月份","办事处","销售人员","销量达成率","排名"];
+            var suspListName = [$("#planTypeSelect").val() == 'month' ? "月份" : "年份","办事处","销售人员","销量达成率","排名"];
             var allData = rank.qtyRankDatas;
             var row = rank.value;
             var scriptByRank = null;
@@ -1026,7 +1032,7 @@
         function suspByDeptSalesAmountReach(rank) {
             var suspTitle = "销售额达成排名";
             var suspDesc = "销售人员该事业部下销售额达成率分公司内排名";
-            var suspListName = ["月份","办事处","销售人员","销售额达成率","排名"];
+            var suspListName = [$("#planTypeSelect").val() == 'month' ? "月份" : "年份","办事处","销售人员","销售额达成率","排名"];
             var allData = rank.amtRankDatas;
             var row = rank.value;
             var scriptByRank = null;
@@ -1041,7 +1047,7 @@
         function suspByProjectSalesCountReach(rank) {
             var suspTitle = "销量达成排名";
             var suspDesc = "销售人员该项目下销量达成率分公司内排名";
-            var suspListName = ["月份","办事处","销售人员","销量达成率","排名"];
+            var suspListName = [$("#planTypeSelect").val() == 'month' ? "月份" : "年份","办事处","销售人员","销量达成率","排名"];
             var allData = rank.qtyRankDatas;
             var row = rank.value;
             var scriptByRank = null;
@@ -1056,7 +1062,7 @@
         function suspByProjectSalesAmountReach(rank) {
             var suspTitle = "销售额达成排名";
             var suspDesc = "销售人员该项目下销售额达成率分公司内排名";
-            var suspListName = ["月份","办事处","销售人员","销售额达成率","排名"];
+            var suspListName = [$("#planTypeSelect").val() == 'month' ? "月份" : "年份","办事处","销售人员","销售额达成率","排名"];
             var allData = rank.amtRankDatas;
             var row = rank.value;
             var scriptByRank = null;
@@ -1548,7 +1554,14 @@
             var day = new Date(year, month, 0);
             var days = day.getDate();
             if (isYear == '1') {  // 年计划不显示时间轴
-                days = 0;
+              var selYearStr = $("#selDay").val().substring(0, 4);
+            	var curYear = year;
+            	if (curYear != selYearStr) {
+                    days = 0;
+                }else {
+                	days = getYearDayCount();
+                }
+            	day = Math.ceil(( new Date() - new Date(new Date().getFullYear().toString()))/(24*60*60*1000));
             } else { // 月计划如果不是当月也不显示时间轴
                 var selYearMonthStr = $("#selDay").val().substring(0, 7);
                 var curMonthStr = month;
@@ -1829,7 +1842,19 @@
                             normal: {
                                 position: 'end',
                                 formatter: function formatter(params) {
-                                    return (params.value / days * 100).toFixed(2) + "%";
+                                   if(isYear == '1'){
+                                    	if (days && days > 0) {
+                                    		return (day / days * 100).toFixed(2) + "%";
+                                    	}else {
+                                    		return 0;
+                                    	}
+                                    }else {
+                                    	if (days && days > 0) {
+                                    		return (params.value / days * 100).toFixed(2) + "%";
+                                    	}else {
+                                    		return 0;
+                                    	}
+                                    }
                                 }
                             }
                         },

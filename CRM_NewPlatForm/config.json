@@ -1,49 +1,16 @@
 {
-    "companyName": "云适配科学研究院",
-    "projectName": "普天CRM_新平台",
-    "rtVersion": "2.7.1",
-    "studioVersion": "2.2.1-beta.3",
-    "macAddress": "dc:a9:04:6c:fd:90",
-    "isUploaded": false,
-    "menu": [
-        {
-            "name": "登录",
-            "app_id": "login",
-            "icon": "local/img/OA.png",
-            "url": "http://192.168.220.82:8080/pttlCrm/login"
-        },
-        {
-            "name": "首页",
-            "app_id": "index",
-            "icon": "img/OA.png",
-            "url": "http://192.168.220.82:8080/pttlCrm/res/index.html"
-        }
-    ],
-    "current_environ": 1,
-    "environments": [
-        {
-            "name": "环境1",
-            "domains": [
-                "http://vcrm-uat.pttl.com",
-                "",
-                ""
-            ]
-        },
-        {
-            "name": "环境2",
-            "domains": [
-                "http://192.168.220.82:8080",
-                "",
-                ""
-            ]
-        },
-        {
-            "name": "环境3",
-            "domains": [
-                "http://192.168.220.82:8080",
-                "",
-                ""
-            ]
-        }
-    ]
+  "companyName": "研究院开发测试",
+  "projectName": "普天CRM_新平台",
+  "rtVersion": "2.7.0",
+  "studioVersion": "2.2.1-beta.1",
+  "macAddress": "48:5a:b6:d4:a7:8d",
+  "isUploaded": false,
+  "menu": [
+    {
+      "name": "commonMenu",
+      "app_id": "commonMenu",
+      "icon": "local/img/OA.png",
+      "url": "http://192.168.220.82:8080/pttlCrm/res/page/home/commonMenu.html#"
+    }
+  ]
 }

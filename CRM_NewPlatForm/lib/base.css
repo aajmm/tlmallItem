@@ -345,6 +345,13 @@ header.ysp-client-list-header > span:first-child {
   display: flex;
   align-items: center;
   line-height: 1.5rem;
+  float: left;
+}
+.ysp-client-list-container > span:first-child {
+  width: 60%;
+}
+.ysp-client-list-container > span:last-child {
+  width: 35%;
 }
 .ysp-entry-icon {
   height: 1.2rem;
@@ -616,55 +623,72 @@ div[data-ysp-modelid="clientList"] {
 /*客户详情头部样式*/
 section.ysp-customer-details {
   background: #fff;
-  padding: 0 20px 10px 20px;
+  padding: 0 5px 10px 5px;
   border-bottom: 1px solid #e1e1e1;
 }
 section.ysp-customer-details i.ysp-customer-details-color-red {
   background: #e93b12;
-  border-radius: 10px;
-  padding: 0 15px;
+  border-radius: 8px;
+  padding: 0 8px;
 }
 section.ysp-customer-details i.ysp-customer-details-color-blue {
   background: #207bcf;
-  border-radius: 10px;
-  padding: 0 15px;
+  border-radius: 8px;
+  padding: 0 8px;
 }
 section.ysp-customer-details i.ysp-customer-details-color-grey {
   background: #ccc;
-  border-radius: 10px;
-  padding: 0 15px;
+  border-radius: 8px;
+  padding: 0 8px;
+}
+section.ysp-customer-details i.ysp-customer-details-color-normal {
+  color: #000000!important;
+  overflow: hidden;
 }
 section.ysp-customer-details > h1 {
   font-style: normal;
   color: #000;
   font-size: 18px;
   margin: 0 auto;
-  text-align: center;
-  padding: 16px 0;
+  text-align: left;
+  padding: 16px 0 5px 10px;
 }
 section.ysp-customer-details > div {
-  margin: 0 auto;
-  margin-bottom: 50px;
+  width: auto;
+  overflow-x: scroll;
+  padding-left: 10px;
 }
 section.ysp-customer-details > div > span {
-  width: 50%;
   display: inline-block;
+  padding-right: 5px;
+  text-align: right;
+  overflow: hidden;
 }
 section.ysp-customer-details > div > span > i {
   display: inline-block;
   font-size: 12px;
   font-style: normal;
+  vertical-align: bottom;
 }
 section.ysp-customer-details > div > span > i:first-child {
   color: #666;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 section.ysp-customer-details > div > span > i:last-child {
   color: #fff;
 }
 section.ysp-customer-details > div > span:first-child {
-  padding-right: 10px;
-  text-align: right;
+  margin-right: 5px;
+}
+section.ysp-customer-details > div > span:first-child > i:first-child {
+  color: #666;
+  margin-right: 2px;
+}
+section.ysp-customer-details > div > span:nth-child(2) {
+  margin-right: 5px;
+}
+section.ysp-customer-details > footer {
+  padding-left: 10px;
 }
 section.ysp-customer-details > footer > div {
   display: flex;
@@ -1351,6 +1375,39 @@ section.ysp-dialog-body-list > span:last-child > i:last-child {
 }
 .ysp-clientportrait-wrapper .tabTitle li span p {
   margin: 0;
+}
+/*
+	组件 : 搜索框样式,针对客户360，门店360，带切换
+*/
+#customSerchSwitch {
+  height: 50px;
+  text-align: center;
+  background: #CCCCCC;
+  padding: 10px;
+}
+#customSerchSwitch .serchSelect {
+  margin: 0;
+  padding: 5px;
+  width: 30%;
+  display: inline-block;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 3%;
+}
+#customSerchSwitch .customSerchSwitch {
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  background-image: url("images/query-icon.png");
+  background-repeat: no-repeat;
+  background-position: 38% 47%;
+  background-size: 16px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  width: 60%;
 }
 /*
 	组件 : 搜索框样式
@@ -4025,7 +4082,8 @@ div[data-ysp-modelid="AtReportDetail"] .ysp-atreport-dialog div.surebtn-right-to
   border: 1px solid #ececec;
 }
 /*搜索组件样式*/
-#customSerch .serch-btn {
+#customSerch .serch-btn,
+#customSerchSwitch .serch-btn {
   margin-left: 12px;
   padding: 3px 10px;
   border: none;
@@ -4033,7 +4091,8 @@ div[data-ysp-modelid="AtReportDetail"] .ysp-atreport-dialog div.surebtn-right-to
   color: #4359FA;
   font-weight: 600;
 }
-#customSerch .commitState-moudle .module-serch {
+#customSerch .commitState-moudle .module-serch,
+#customSerchSwitch .commitState-moudle .module-serch {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -4042,7 +4101,8 @@ div[data-ysp-modelid="AtReportDetail"] .ysp-atreport-dialog div.surebtn-right-to
   left: 0;
   z-index: 1000;
 }
-#customSerch .commitSearch-moudle .module-serch {
+#customSerch .commitSearch-moudle .module-serch,
+#customSerchSwitch .commitSearch-moudle .module-serch {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -4052,7 +4112,8 @@ div[data-ysp-modelid="AtReportDetail"] .ysp-atreport-dialog div.surebtn-right-to
   bottom: 0;
   z-index: 1000;
 }
-#customSerch .commitSearches-moudle .module-serch {
+#customSerch .commitSearches-moudle .module-serch,
+#customSerchSwitch .commitSearches-moudle .module-serch {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -16880,6 +16941,8 @@ div[data-ysp-modelid="customerLabel"] div[data-componentsid="uiControl345_fUtgMV
 .ysp_check_prevbtn {
   background-image: url(images/ysp-client-checkprev.png) !important;
 }
+div[data-ysp-modelid="saleAchievement"] .ysp-header-edit-icon,
+div[data-ysp-modelid="achievement"] .ysp-header-edit-icon,
 div[data-ysp-modelid="clientQuery"] .ysp-header-edit-icon,
 div[data-ysp-modelid="clientQuery_detail"] .ysp-header-edit-icon,
 div[data-ysp-modelid="goodsMessages"] .ysp-header-edit-icon,
@@ -16896,3 +16959,179 @@ div[data-ysp-modelid="stockInquire"] .ysp-header-edit-icon {
   font-size: 14px;
 }
 /*****************************分货客户查询end*******************************************/
+/*****************************销售业绩总揽，计划达成筛选功能start*******************************************/
+.fixWrapper {
+  position: fixed;
+  left: 0;
+  top: 43px;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+}
+.fixWrapper .fixShadow {
+  position: relative;
+  float: left;
+  height: 100vh!important;
+  z-index: 160;
+  width: 15%;
+  height: 100%;
+}
+.fixWrapper .fixContent {
+  position: relative;
+  float: left;
+  height: 100vh;
+  z-index: 160;
+  background: #FFFFFF;
+  width: 85%;
+  height: calc(95vh);
+  padding: 10px 0 0 10px;
+  overflow: scroll;
+}
+.fixWrapper .fixContent .fix {
+  border-bottom: 0.1px solid #F0F0F0;
+}
+.fixWrapper .fixContent .fixTitle {
+  font-weight: 500;
+  color: #000000;
+}
+.fixWrapper .fixContent .dateOpt {
+  padding: 10px;
+  width: 100%;
+}
+.fixWrapper .fixContent .dateOpt .dateList {
+  padding: 5px 0 5px 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.fixWrapper .fixContent .dateOpt .dateList span:first-child {
+  font-size: 12px;
+  display: inline-block;
+  width: 80%;
+}
+.fixWrapper .fixContent .dateOpt .dateList span:last-child {
+  display: inline-block;
+  width: 20%;
+}
+.fixWrapper .fixContent .dateOpt .dateList span:last-child i {
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin: 0 auto;
+  background: url(images/time.png) no-repeat;
+  background-size: 15px 15px;
+}
+.fixWrapper .fixContent .timeOpt {
+  padding: 10px;
+  width: 100%;
+}
+.fixWrapper .fixContent .timeOpt .timeList {
+  padding: 10px 0 5px 0;
+}
+.fixWrapper .fixContent .timeOpt .timeList span {
+  display: inline-block;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  background: #F2F2F2;
+  margin-right: 3%;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.fixWrapper .fixContent .searchOpt {
+  padding: 10px;
+  width: 100%;
+}
+.fixWrapper .fixContent .searchOpt .searchList {
+  padding: 10px 0 0 0;
+}
+.fixWrapper .fixContent .searchOpt .searchList select {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 0 5px 0 10px;
+}
+.fixWrapper .fixContent .searchOpt .searchList input {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 60%;
+  margin-left: 6%;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  outline: none;
+  text-indent: 20px;
+  background-image: url("images/query-icon.png");
+  background-repeat: no-repeat;
+  background-position: 20% 47%;
+  background-size: 16px;
+  text-align: center;
+}
+.fixWrapper .fixContent .searchRes {
+  padding: 10px;
+  width: 95%;
+  height: 200px;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+  background: #F2F2F2;
+}
+.fixWrapper .fixContent .searchRes   ul li {
+  font-size: 14px;
+  width: 100%;
+  padding: 5px 0 5px 5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+.fixWrapper .fixContent .searchRes   ul .select {
+  color: #F00;
+}
+.fixWrapper .fixContent .fixSelected {
+  color: #F00;
+  border: 1px solid #F00;
+  background: #FFFFFF!important;
+}
+.fixWrapper .fixContent .inquire {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 85%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #FFFFFF;
+  background: #4895ED;
+}
+/*****************************销售业绩总揽，计划达成筛选功能end*******************************************/
+/*   __客户360  5-31 lyh  基本信息滑动__   */
+.basicScroll {
+  min-width: 100%;
+  overflow: scroll;
+  white-space: nowrap;
+}
+.fixContent {
+  height: 100vh;
+}
+/*   __客户360  5-31 lyh  基本信息滑动__   */
+/*     页面加载时间输入     */
+.timeScope {
+  position: fixed;
+  color: #fff;
+  background: rgba(3, 3, 3, 0.5);
+  width: 80px;
+  height: 35px;
+  bottom: 0;
+  text-align: center;
+  line-height: 35px;
+}

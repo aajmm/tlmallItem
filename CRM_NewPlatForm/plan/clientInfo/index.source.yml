@@ -1,0 +1,190 @@
+getData_control9_4QwNn7: ''
+doAction_uiControl9_OwGTna: |
+  if (data.eventType == 'AndroidBack') {
+    ysp.customHelper.AndroidBackModel = 'clientList';
+    ysp.customHelper.AndroidBackFlag = 'ClientorStory';
+  }
+  if (data.eventType === 'back') {
+    ysp.appMain.getActiveWindow().close();
+  }
+getTemplate_uiControl9_OwGTna: "import {Component} from 'react'; \nimport {CustomHeader} from 'ysp-custom-components';\nexport default class extends Component{\n   componentDidMount(){\n    var _this = this;\n     ysp.customHelper.AndroidBackModel = 'clientList';\n  ysp.customHelper.AndroidBackFlag = 'ClientorStory';\n    var handler = _this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:'AndroidBack'\n      })\n    }\n \_ \_// const {customHandler} = _this.props;\n \_ \_// customHandler({\n \_ \_// eventType:'AndroidBack'\n \_ \_// })\n  }\n   render = () => {\n       var _this = this;\n       return (\n         <CustomHeader \n           data={{centerText:\"客户详情\",rightText:\"筛选\"}} \n           backIsShow={true} \n           back={()=>{ \n              var handler = _this.props.customHandler;\n              if (handler) {\n                handler({\n                  eventType: 'back'\n                });\n              }\n           }} \n           filterIsShow={false} \n           filter={()=>{console.info(\"header filter ...\")}}/>\n       );\n   }\n}"
+getData_control6_chrCkz: |
+  return elem.id;
+doAction_uiControl10_BBNpvA: |
+  if (data.eventType === 'click') {
+    var operation = data.dataCustom.operation;
+    var planName = data.dataCustom.planName;
+    ysp.customHelper.toPlan(elem, operation, planName);
+    ysp.appMain.showLoading();
+  }
+getTemplate_uiControl10_BBNpvA: "import {Component} from 'react';\nimport {CustomHeader} from 'ysp-custom-components';\nimport {Dialog} from 'ysp-custom-components';\nexport default class extends Component{\n  constructor(props){\n  \tsuper(props);\n    this.state = {\n    \topen: false\n    }\n  }\n  handlerInfo(e){\n    if(e.target.dataset.key == 'info'){\n      window.dispatchEvent(new Event('ysp-company-msg-show'));\n    }\n  }\n   render = ()=>{\n      var data = (this.props.customData && this.props.customData.list) || [];\n      var _this = this;\n      return (\n        <section className=\"ysp-clientinfo-wrapper\">\n         <section className=\"ysp-clientinfo-list\">\n            <div className=\"ysp-clientinfo-list-item\">\n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'客户标签',\n                             planName:'customerLabel'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-customer-lable-icon\"></span>\n                 </div>\n                 <div>\n                    <span>客户标签</span>\n                 </div>\n              </div>\n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'订单',\n                             planName:'orderForm'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-orderform-icon\"></span>\n                 </div>\n                 <div>\n                    <span>订单</span>\n                 </div>\n              </div>\n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'电子钱包',\n                             planName:'walketmoney'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-electronwallet-icon\"></span>\n                 </div>\n                 <div>\n                    <span>电子钱包</span>\n                 </div>\n              </div>\n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'销售返利',\n                             planName:'saleRebate'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-salerebate-icon\"></span>\n                 </div>\n                 <div>\n                    <span>销售返利</span>\n                 </div>\n              </div>\n              \n              \n              \n            </div>\n           <div className=\"ysp-clientinfo-list-item\">\n             <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'过往业绩',\n                             planName:'passingAchievement'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-previousyeji-icon\"></span>\n                 </div>\n                 <div>\n                    <span>过往业绩</span>\n                 </div>\n              </div>\n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'信用额度',\n                             planName:'creditlimit'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-creditlimit-icon\"></span>\n                 </div>\n                 <div>\n                    <span>信用额度</span>\n                 </div>\n              </div>\n             <div  onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'对账单',\n                             planName:'statementAccount'\n                          }\n                        });\n                      }\n                 }}>\n                 <div>\n                    <span className=\"ysp-rightbill-icon\"></span>\n                 </div>\n                 <div>\n                    <span>对账单</span>\n                 </div>\n              </div>\n             <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'客户分类',\n                             planName:'customerClassify'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-clientclassify-icon\"></span>\n                 </div>\n                 <div>\n                    <span>客户分类</span>\n                 </div>\n              </div>\n              \n              \n              \n            </div>\n           <div className=\"ysp-clientinfo-list-item\" >\n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'客户经营规模',\n                             planName:'customManageScope'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-clientmanagerscale-icon\"></span>\n                 </div>\n                 <div>\n                    <span>客户经营规模</span>\n                 </div>\n              </div>\n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'客户项目',\n                             planName:'customerProject'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-clientproject-icon\"></span>\n                 </div>\n                 <div>\n                    <span>客户项目</span>\n                 </div>\n              </div>\n              \n              \n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'收货地址',\n                             planName:'deliveryAdress'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-consigneeaddress-icon\"></span>\n                 </div>\n                 <div>\n                    <span>收货地址</span>\n                 </div>\n              </div>\n             <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'开票地址',\n                             planName:'acquirAddress'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-receivebilladdress-icon\"></span>\n                 </div>\n                 <div>\n                    <span>开票地址</span>\n                 </div>\n              </div>\n             \n            </div>\n           <div className=\"ysp-clientinfo-list-item\">\n             <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'客户详情',\n                             planName:'cumpanyinfo'\n                          }\n                        });\n                      }\n                }}>\n                 <div data-key='info'>\n                    <span data-key='info' className=\"ysp-enterpriseinfo-icon\"></span>\n                 </div>\n                 <div data-key='info'>\n                    <span data-key='info'>企业信息</span>\n                 </div>\n              </div>\n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'用户',\n                             planName:'userContacts'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-user-icon\"></span>\n                 </div>\n                 <div>\n                    <span>用户</span>\n                 </div>\n              </div>\n             \n                  <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'责任团队视图',\n                             planName:'liabilityTeam'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-dutyteamview-icon\"></span>\n                 </div>\n                 <div>\n                    <span>责任团队视图</span>\n                 </div>\n             </div>\n              \n             <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'门店',\n                             planName:'store'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-mendian-icon\"></span>\n                 </div>\n                 <div>\n                    <span>门店</span>\n                 </div>\n              </div>\n             \n             \n            </div>\n            \n           <div className=\"ysp-clientinfo-list-item\">\n             <div onClick={()=>{\n               var handler = this.props.customHandler;\n                if (handler) {\n                  handler({\n                    eventType: 'click',\n                    data:{\n                      operation:'拜访记录',\n                      planName:'clientVisitRecord'\n                    }\n                  });\n                }\n              }}>\n               <div>\n                  <span className=\"ysp-visit-react-icon\"></span>\n               </div>\n               <div>\n                  <span>拜访记录</span>\n               </div>\n              </div>\n              <div onClick={()=>{\n                     var handler = this.props.customHandler;\n                      if (handler) {\n                        handler({\n                          eventType: 'click',\n                          data:{\n                             operation:'销售达成',\n                             planName:'clientSalesReached'\n                          }\n                        });\n                      }\n                }}>\n                 <div>\n                    <span className=\"ysp-sales-reached-icon\"></span>\n                 </div>\n                 <div>\n                    <span>销售达成</span>\n                 </div>\n              </div>\n             \n              <div onClick={()=>{\n                 var handler = this.props.customHandler;\n                  if (handler) {\n                    handler({\n                      eventType: 'click',\n                      data:{\n                         operation:'附件',\n                         planName:'clientAttachment'\n                      }\n                    });\n                  }\n            }}>\n               <div>\n                  <span className=\"ysp-attachment-icon\"></span>\n               </div>\n               <div>\n                  <span>附件</span>\n               </div>\n             </div>\n              \n             <div>\n               <div>\n                <span></span>\n               </div>\n               <div>\n                <span></span>\n               </div>\n              </div>\n             {/***\n             <div>\n               <div>\n                <span></span>\n               </div>\n               <div>\n                <span></span>\n               </div>\n              </div>\n              ***/}\n\n            </div>\n             \n         </section>\n      </section>\n      );\n   }\n}"
+getData_control10_bfN0a3: >
+  if (!elem) {
+    return;
+  }
+
+  var doc = elem.ownerDocument;
+
+  var useStateXpath =
+  "//div[@id='mainContainer']//ul/li//descendant::span[text()='使用状态']";
+
+  var useStateEl = ysp.utils.xfind(useStateXpath, doc)[0];
+
+  var useState;
+
+  if (useStateEl) {
+    var userStateElNext = useStateEl.nextElementSibling;
+
+    if (userStateElNext) {
+      useState = userStateElNext.textContent;
+    }
+  }
+
+  var clientXpath =
+  "//div[@id='mainContainer']//ul/li//descendant::span[text()='客户状态']";
+
+  var clientStateEl = ysp.utils.xfind(clientXpath, doc)[0];
+
+  var clientState;
+
+  if (clientStateEl) {
+    var clientStateElNext = clientStateEl.nextElementSibling;
+
+    if (clientStateElNext) {
+      clientState = clientStateElNext.textContent;
+    }
+  }
+
+  var nameXpath =
+  "//div[@id='mainContainer']//ul/li//descendant::span[text()='客户名称']";
+
+  var nameEl = ysp.utils.xfind(nameXpath, doc)[0];
+
+  var name;
+
+  if (nameEl) {
+    var nameElNext = nameEl.nextElementSibling;
+
+    if (nameElNext) {
+      name = nameElNext.textContent;
+    }
+  }
+
+  var abbreviationXpath =
+  "//div[@id='mainContainer']//ul/li//descendant::span[text()='客户简称']";
+
+  var abbreviationEl = ysp.utils.xfind(abbreviationXpath, doc)[0];
+
+  var abbreviation;
+
+  if (nameEl) {
+    var abbreviationElNext = abbreviationEl.nextElementSibling;
+
+    if (abbreviationElNext) {
+      abbreviation = abbreviationElNext.textContent;
+    }
+  }
+
+  var code;
+
+  var codeParent = doc.querySelector('#brandHeader');
+
+  if (codeParent && codeParent.querySelector('.head-detile')) {
+    code = codeParent.querySelector('.head-detile').querySelector('h4').textContent.substr(5);
+  }
+
+  var m =
+  doc.querySelector('#mainContainer')[Object.keys(doc.querySelector('#mainContainer'))[0]];
+
+  if (m) {
+    var useAbleAmount = m.money.useableAmount;
+    var fixedPeriodLimit = m.money.fixedPeriodLimit;
+    var interimPeriodLimit = m.money.interimPeriodLimit;
+    var rebateAvailable = m.money.availableAmt;
+  }
+
+  return {
+    useState: useState,
+    clientState: clientState,
+    name: name,
+    code: code,
+    abbreviation:abbreviation,
+    useAbleAmount: useAbleAmount || 0,
+    fixedPeriodLimit: fixedPeriodLimit || 0,
+    interimPeriodLimit: interimPeriodLimit || 0,
+    rebateAvailable: rebateAvailable || 0
+  };
+doAction_uiControl11_r9Okzc: ''
+getTemplate_uiControl11_r9Okzc: "var React = require('react');\n\nmodule.exports = React.createClass({\n  render: function(){\n    var data=this.props.data.customData||[];\n    return (\n      <section className='ysp-customer-details'>\n      \t<h1>{data.name}</h1>\n        <div>\n          <span>\n            <i>客户编号:</i>\n            <i className=\"ysp-customer-details-color-normal\">{data.code}</i>\n          </span>\n          <span>\n            <i>使用状态</i>\n            <i className={data.useState=='启用'? 'ysp-customer-details-color-blue':(data.useState=='停用'? 'ysp-customer-details-color-grey' : 'ysp-customer-details-color-red')}>{data.useState}</i>\n          </span>\n          <span>\n            <i>准入状态</i>\n            <i className='ysp-customer-details-color-red'>{data.clientState}</i>\n          </span>\n        </div>\n        <div className=\"leftCtrl\">\n        \t<span>\n            <i>客户简称:</i>\n            <i className='ysp-customer-details-color-normal'>{data.abbreviation}</i>\n          </span>\n        </div>\n        <footer>\n          <div>\n          \t<ul>\n              <li>电子钱包余额</li>\n              <li>|</li>\n              <li>{data.useAbleAmount}</li>\n            </ul>\n            <ul>\n              <li>返利可用余额</li>\n              <li>|</li>\n              <li>{data.rebateAvailable}</li>\n            </ul>\n          </div>\n          <div>\n          \t<ul>\n              <li>固定额度总计</li>\n              <li>|</li>\n              <li>{data.fixedPeriodLimit}</li>\n            </ul>\n            <ul>\n              <li>临时额度总计</li>\n              <li>|</li>\n              <li>{data.interimPeriodLimit}</li>\n            </ul>\n          </div>\n        </footer>\n      </section>\n    )\n  }\n});"
+getData_control11_Tw2EXP: ''
+doAction_uiControl15_0acczp: ''
+getTemplate_uiControl15_0acczp: "export default class extends React.Component {\n\trender(){\n  \treturn (\n    \t<div className='ysp-360-view'>\n        <i></i>\n        <span>客户360视图</span>\n      </div>\n    )\n  }\n}"
+getData_control12_sVQ6Ze: ''
+doAction_uiControl16_fsWugq: ''
+getTemplate_uiControl16_fsWugq: ''
+getData_control43_OlQ3Rg: >
+  if (!elem) return;
+
+  var data = {};
+
+  var item = [];
+
+  data.prev = false;
+
+  data.numberTaotal =
+  elem.querySelector('.skip').querySelectorAll('span')[0].textContent;
+
+  var lis = elem.querySelectorAll('li');
+
+  for (var i = 0; i < lis.length; i++) {
+    var as = lis[i].querySelectorAll('a');
+
+    for (var j = 0; j < as.length; j++) {
+      if (as[j].getAttribute('title') == 'Go to previous page') {
+        data.prev = true;
+      }
+    }
+  }
+
+  data.page = elem.ownerDocument.querySelector('.content-salesrebate
+  tbody').querySelectorAll('tr').length > 0 ? true : false;
+
+  return data;
+doAction_uiControl47_p6OwTz: |
+  switch (data.eventType) {
+    case 'prev':
+      prevtitle(data.dataCustom);
+      break;
+
+    case 'next':
+      prevtitle(data.dataCustom);
+      break;
+  }
+  function prevtitle(data) {
+    var lis = elem.querySelectorAll('li');
+
+    for (var i = 0; i < lis.length; i++) {
+      var as = lis[i].querySelectorAll('a');
+
+      for (var j = 0; j < as.length; j++) {
+        if (data == 'prev' && as[j].getAttribute('title') == 'Go to previous page') {
+          as[j].click();
+        } else if (data == 'next' && as[j].getAttribute('title') == 'Go to next page') {
+          as[j].click();
+        }
+      }
+    }
+  }
+getTemplate_uiControl47_p6OwTz: "import {\n  Component\n} from 'react';\nimport {\n  Page\n} from 'ysp-custom-components';\nexport default class extends Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      prevState:false,\n      pageState:false\n    }\n  }\n  componentWillReceiveProps(props){\n    this.setState({\n      prevState: props.customData.prev,\n      pageState:props.customData.page\n    })\n  }\n  render() {\n    let _this = this;\n    return (\n      <div>\n      \t<Page \n          pageState = {this.state.pageState}\n      \t  prevState = {this.state.prevState}\n        \tprev={()=>{\n          var handler = _this.props.customHandler;\n          if(handler){\n            handler({\n              data:\"prev\",\n              eventType:'prev'\n            })\n          }\n        }}\n        \tpageNumber={this.props.customData.numberTaotal}\n        \tnext={()=>{\n          var handler = _this.props.customHandler;\n          if(handler){\n            handler({\n              data:\"next\",\n              eventType:\"next\"\n            })\n          }\n        }}\n      />\n    </div>\n    )\n  }\n}"
+getData_control19_4hyTIt: ''
+doAction_uiControl23_TGyKQG: ''
+getTemplate_uiControl23_TGyKQG: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          我是自定义组件君~ 但是我还没有任何内容，赶快来编辑我吧~
+        </div>
+      )
+    }
+  });

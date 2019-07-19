@@ -40,36 +40,6 @@
       "monitored": true,
       "frameXPath": ""
     },
-    "control286_xVOThl": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "BODY.body-bg DIV.g-main DIV.m-header"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control286_xVOThl"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": ""
-    },
     "control287_GUn0CG": {
       "location": {
         "data": {
@@ -854,13 +824,48 @@
       "roles": "element,custom",
       "monitored": true,
       "frameXPath": ""
+    },
+    "control122_QwTVfy": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[5]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control122_QwTVfy"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context76_9rFC8S": {
       "controls": [
         "control274_87SuoT",
-        "control286_xVOThl",
         "control287_GUn0CG",
         "control288_fFLi4R",
         "control289_v6gpoF",
@@ -883,7 +888,8 @@
         "control306_mmxX0Q",
         "control307_KGyTVW",
         "control308_zMrTNa",
-        "control309_l1dl7U"
+        "control309_l1dl7U",
+        "control122_QwTVfy"
       ],
       "anchors": [],
       "urlAnchor": [
@@ -893,16 +899,6 @@
   },
   "flows": {
     "flow228_qEhMTr": {
-      "toContexts": [
-        {
-          "toContextId": "context76_9rFC8S"
-        }
-      ]
-    },
-    "flow231_R9GoXz": {
-      "fromContextId": "context76_9rFC8S",
-      "fromAction": "doAction",
-      "fromControlId": "control286_xVOThl",
       "toContexts": [
         {
           "toContextId": "context76_9rFC8S"
@@ -962,6 +958,26 @@
           "toContextId": "context76_9rFC8S"
         }
       ]
+    },
+    "flow231_8OCL35": {
+      "fromContextId": "context76_9rFC8S",
+      "fromAction": "doAction",
+      "fromControlId": "control295_5r4na7",
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        }
+      ]
+    },
+    "flow297_1ybvqT": {
+      "fromContextId": "context76_9rFC8S",
+      "fromAction": "doAction",
+      "fromControlId": "control300_zQJbUV",
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        }
+      ]
     }
   },
   "pages": {
@@ -979,21 +995,6 @@
               "events": {
                 "onDoAction": "doAction_uiControl268_dLVTD8",
                 "onGetTemplate": "getTemplate_uiControl268_dLVTD8"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl274_OHNOll",
-          "controlId": "control286_xVOThl",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl274_OHNOll",
-                "onGetTemplate": "getTemplate_uiControl274_OHNOll"
               }
             }
           }
@@ -1284,6 +1285,21 @@
           }
         },
         {
+          "id": "uiControl120_FgcMoT",
+          "controlId": "control122_QwTVfy",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl120_FgcMoT",
+                "onGetTemplate": "getTemplate_uiControl120_FgcMoT"
+              }
+            }
+          }
+        },
+        {
           "id": "uiControl290_nSh4gF",
           "controlId": "control299_6Ow3Fz",
           "display": {
@@ -1376,7 +1392,9 @@
           "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?a=1&filter_userId=LIQING&encoder=TElRSU5HKzAyLzU0LzIwMTggMTA6MjA6MDA=",
           "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?a=1&filter_userId=ZENGJIAFU&encoder=WkVOR0pJQUZVKzAyLzU4LzIwMTggMTY6MDY6MTY=",
           "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?filter_userId=XUNAN&encoder=WFVOQU4rMDkvMTQvMjAxOCAxODoxMzozMg==&username=XUNAN&branch=02&firstFlag",
-          "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?projectName=%E5%8D%8E%E4%B8%BA%E4%BD%93%E9%AA%8C%E5%BA%97%E4%BE%9B%E8%B4%A7%E5%B9%B3%E5%8F%B0%E5%8E%BF%E7%BA%A7%E4%BD%93%E9%AA%8C%E5%BA%97&type=07&filter_userId=XUNAN&encoder=WFVOQU4rMDkvMTQvMjAxOCAxODoxMzozMg==&date=2018-08-14&cycleType=day&orderLogic=aduit&drill=1&branchName=PTTL_OU_02_%E5%8C%97%E4%BA%AC%E5%88%86%E5%85%AC%E5%8F%B8&officeName=%E5%8C%97%E4%BA%AC%E8%A5%BF%E5%8C%BA%E5%8A%9E%E4%BA%8B%E5%A4%84&salerName=1-7I10GT"
+          "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?projectName=%E5%8D%8E%E4%B8%BA%E4%BD%93%E9%AA%8C%E5%BA%97%E4%BE%9B%E8%B4%A7%E5%B9%B3%E5%8F%B0%E5%8E%BF%E7%BA%A7%E4%BD%93%E9%AA%8C%E5%BA%97&type=07&filter_userId=XUNAN&encoder=WFVOQU4rMDkvMTQvMjAxOCAxODoxMzozMg==&date=2018-08-14&cycleType=day&orderLogic=aduit&drill=1&branchName=PTTL_OU_02_%E5%8C%97%E4%BA%AC%E5%88%86%E5%85%AC%E5%8F%B8&officeName=%E5%8C%97%E4%BA%AC%E8%A5%BF%E5%8C%BA%E5%8A%9E%E4%BA%8B%E5%A4%84&salerName=1-7I10GT",
+          "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?filter_userId=ZHAOWEILI&encoder=WkhBT1dFSUxJKzA1LzE1LzIwMTkgMTY6MzQ6NDQ=&username=ZHAOWEILI&branch=02&firstFlag",
+          "192.168.220.82:8080/ptDataShow/salesAll/salesOverview?customerName=%E5%8C%97%E4%BA%AC%E4%BA%A8%E9%80%9A%E8%BE%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&type=07&filter_userId=WANGDONGTEST&encoder=V0FOR0RPTkdURVNUKzA1LzMwLzIwMTkgMTc6MzA6MDY=&date=2019-05-30&cycleType=year&orderLogic=aduit&branchName=PTTL_OU_02_%E5%8C%97%E4%BA%AC%E5%88%86%E5%85%AC%E5%8F%B8&officeName=%E5%8C%97%E4%BA%AC%E5%8C%97%E5%8C%BA%E5%8A%9E%E4%BA%8B%E5%A4%84&salerName=1-1HT5WN"
         ]
       }
     },
@@ -1807,6 +1825,98 @@
             "weekQty",
             "yearAmt",
             "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "branchName",
+            "configType",
+            "currentText",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "modelId",
+            "modelName",
+            "monthAmt",
+            "monthQty",
+            "office-table",
+            "officeName",
+            "officeTable",
+            "orderLogic",
+            "orderLogic_hidden",
+            "projectId",
+            "projectName",
+            "projectTable",
+            "sale-table",
+            "salerName",
+            "searchInput",
+            "selDay",
+            "selectSearch",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "bizUnitTable",
+            "branchName",
+            "configType",
+            "currentText",
+            "cust-table",
+            "custTable",
+            "customerName",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "dragbar",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "model-table",
+            "modelId",
+            "modelName",
+            "modelTable",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "positionVersion",
+            "projectId",
+            "projectName",
+            "sale-table",
+            "salerName",
+            "searchInput",
+            "selDay",
+            "selectSearch",
+            "store-table",
+            "storeName",
+            "storeTable",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
           ]
         ]
       }
@@ -2165,6 +2275,117 @@
             "u-time",
             "u-title",
             "u-visualmap"
+          ],
+          [
+            "a",
+            "activ",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "current",
+            "g-main",
+            "head-center",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "max",
+            "min",
+            "one",
+            "overview",
+            "reach-center",
+            "right",
+            "righth",
+            "search",
+            "sel",
+            "sel-box",
+            "select",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title",
+            "u-visualmap"
+          ],
+          [
+            "BMap_Marker",
+            "BMap_cpyCtrl",
+            "BMap_mask",
+            "BMap_noprint",
+            "a",
+            "activ",
+            "anchorBL",
+            "autocomplete-suggestions",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "current",
+            "g-main",
+            "head-center",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "one",
+            "overview",
+            "pano_close",
+            "pano_pc_indoor_exit",
+            "reach-center",
+            "right",
+            "righth",
+            "search",
+            "sel",
+            "sel-box",
+            "select",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title"
           ]
         ]
       }
@@ -2417,6 +2638,80 @@
             "TABLE/THEAD/TR",
             "TBODY/TR/TD",
             "THEAD/TR/TH",
+            "TR/TH/FONT",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TH/FONT",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/DIV",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "SPAN/DIV/IMG",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
             "TR/TH/FONT",
             "UL/LI/A"
           ]

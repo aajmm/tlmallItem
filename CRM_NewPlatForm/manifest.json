@@ -148,7 +148,7 @@
     },
     {
       "origin_url": [
-        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/customerVisitInfo\\.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/customerVisitInfo\\.js.*"
       ],
       "target_url": "override/customerVisitInfo.js",
       "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/customerVisitInfo.js"
@@ -274,14 +274,14 @@
     },
     {
       "origin_url": [
-        "http://192.168.220.82:8080/pttlCrm/res/js/workSummary.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/workSummary\\.js.*"
       ],
       "target_url": "override/workSummary.js",
       "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/workSummary.js"
     },
     {
       "origin_url": [
-        "http://192.168.220.82:8080/pttlCrm/res/js/newPlanPop.js"
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/js\\/newPlanPop\\.js.*"
       ],
       "target_url": "override/newPlanPop.js",
       "default_url": "http://192.168.220.82:8080/pttlCrm/res/js/newPlanPop.js"
@@ -494,11 +494,10 @@
       "title": "login",
       "url": "adapter://CRM_NewPlatForm/plan/login/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/login"
+        "^http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/login",
+        "http:\\/\\/192\\.168\\.220\\.82:8080\\/pttlCrm\\/res\\/page\\/login\\/login\\.html"
       ],
-      "demo": [
-        "http://192.168.220.82:8080/pttlCrm/login"
-      ]
+      "demo": []
     },
     {
       "title": "customerWorkspace",
@@ -714,7 +713,7 @@
   "name": "普天CRM_新平台",
   "default_url": "http://192.168.220.82:8080/pttlCrm/res/index.html",
   "scope": "CRM_NewPlatForm",
-  "start_url": "https://vcrm-uat.pttl.com:8080/pttlCrm/res/index.html",
-  "update_time": 1559532724448,
+  "start_url": "http://192.168.220.82:8080/pttlCrm/res/index.html",
+  "update_time": 1563528969167,
   "runtime_env": "1webview"
 }

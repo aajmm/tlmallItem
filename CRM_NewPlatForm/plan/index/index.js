@@ -3,17 +3,20 @@
 (function (win, ysp) {
   ysp.runtime.Model.extendLoadingModel({
     getData_control321_P7fT3E: function (elem) {
+      "use strict";
       if (!elem && ysp.customHelper.getTargetMenus) {
         return;
-      }var WorkSpace = ysp.customHelper.getTargetMenus(["工作台", "信息录入", "拜访总览", "拜访查看", "@我的报告", "汇报总结", '问卷填写', '问卷反馈'], ['门店信息录入']);var Achievement = ysp.customHelper.getTargetMenus(["销售业绩总览", "计划达成总览", "事业部达成", "项目达成", "产品达成", "分公司达成", "办事处达成", "销售人员达成", "客户门店达成", "年度销售达成(新)", "智能生活馆"]);var InFormation = ysp.customHelper.getTargetMenus(["库存查询", "产品上下架", "分货产品查询", "我的工作", "分货客户查询"]);var ClientOrStore = ysp.customHelper.getTargetMenus(['客户360', '门店360']);var atMe = ysp.customHelper.IconNum.atMe || 0;var summary = ysp.customHelper.IconNum.summary || 0;if (!atMe || !summary) {
+      }var WorkSpace = ysp.customHelper.getTargetMenus(["工作台", "信息录入", "拜访总览", "拜访查看", "@我的报告", "汇报总结", '问卷填写'], ['门店信息录入']);var Achievement = ysp.customHelper.getTargetMenus(["销售业绩总览", "计划达成总览", "事业部达成", "项目达成", "产品达成", "分公司达成", "办事处达成", "销售人员达成", "客户门店达成", "年度销售达成(新)", "智能生活馆"]);var InFormation = ysp.customHelper.getTargetMenus(["库存查询", "产品上下架", "分货产品查询", "我的工作", "分货客户查询"]);var ClientOrStore = ysp.customHelper.getTargetMenus(['客户360', '门店360']);var atMe = ysp.customHelper.IconNum.atMe || 0;var summary = ysp.customHelper.IconNum.summary || 0;if (!atMe || !summary) {
         atMe = localStorage.getItem('atMe');summary = localStorage.getItem('summary');if (summary == null) {
           summary = 0;
         }if (atMe == null) {
           atMe = 0;
         }
-      }return { WorkSpace: WorkSpace, Achievement: Achievement, InFormation: InFormation, ClientOrStore: ClientOrStore, IconNum: { atMe: atMe, summary: summary } };
+      }return { WorkSpace: WorkSpace, Achievement: Achievement, InFormation: InFormation, ClientOrStore: ClientOrStore,
+        IconNum: { atMe: atMe, summary: summary } };
     },
     doAction_uiControl63_ax7qQG: function (data, elem) {
+      'use strict';
       if (data.eventType == 'testClick') {
         elem.ownerDocument.defaultView.open(data.dataCustom);
       } //下拉刷新 , 因模版原因,现刷新原网页实现
@@ -31,9 +34,7 @@
         }
       }if (data.eventType == 'click') {
         //IOS端获取当前网速方法
-        top.EAPI.postMessageToNative('IOSLine', '');var src = data.dataCustom.url;var title = data.dataCustom.title;if (title == '信息录入') {
-          ysp.customHelper.customInfoFill = true;
-        }if (title == '拜访总览') {
+        top.EAPI.postMessageToNative('IOSLine', '');var src = data.dataCustom.url;var title = data.dataCustom.title;if (title == '拜访总览') {
           openUrl(src, title);
         } else {
           elem.ownerDocument.defaultView.open(src);

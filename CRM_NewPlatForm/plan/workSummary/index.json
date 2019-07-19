@@ -246,14 +246,16 @@
     "page/title": {
       "contexts": {
         "context82_qcPd2X": [
-          "工作总结填写"
+          "工作总结填写",
+          "客户信息列表"
         ]
       }
     },
     "page/urls": {
       "contexts": {
         "context82_qcPd2X": [
-          "192.168.220.82:8080/pttlCrm/res/page/workTask/workSummery.html"
+          "192.168.220.82:8080/pttlCrm/res/page/workTask/workSummery.html",
+          "192.168.220.82:8080/pttlCrm/res/page/visitManager/customerWorkspace/customerWorkspace.html"
         ]
       }
     },
@@ -309,6 +311,49 @@
             "workSummaryPlanTime",
             "workSummaryPlanTimeLable",
             "workSummaryPlanType"
+          ],
+          [
+            "EACDFEADA",
+            "EACEFEADA",
+            "EBBFCBEACC",
+            "EBCAFEAADB",
+            "EBCEAFEAEB",
+            "EBCEFEAEB",
+            "EBFCBEACC",
+            "EBFCCEAAE",
+            "ECCFCCBEAB",
+            "EDADFCBFEAB",
+            "EDAFCBFEAB",
+            "EEABFCDEABE",
+            "EEFFAFBEAE",
+            "EEFFFFBEAE",
+            "EFBCFCCEADD",
+            "EFBFCCEADD",
+            "calendar",
+            "chooseCustomerCodes",
+            "chooseStoreCodes",
+            "chooseVisitInfo",
+            "currentSelectDay",
+            "custom-date",
+            "custom-month",
+            "custom-next",
+            "custom-prev",
+            "custom-year",
+            "myAppUl",
+            "myDataUl",
+            "newPlanAddButton",
+            "newPlanDeleteButton",
+            "newTempVisitButton",
+            "planEaiId",
+            "planRowId",
+            "tempPlanList",
+            "viewAtMyReport",
+            "viewWorkAtme",
+            "visitPlanList",
+            "workPlan",
+            "workPlanHaveConstitute",
+            "workPlanNoConstitute",
+            "workSummaryAddBtn"
           ]
         ]
       }
@@ -400,6 +445,60 @@
             "work-box",
             "work-con",
             "work-tit"
+          ],
+          [
+            "bench-box",
+            "bench-box-r",
+            "bench-l",
+            "bench-r",
+            "bench-tit",
+            "bench-wrap",
+            "calendar",
+            "calendar-cell",
+            "clearfix",
+            "customer",
+            "customer-visit-detail",
+            "customer-visit-reach",
+            "date-tit",
+            "did",
+            "fc-body",
+            "fc-calendar",
+            "fc-five-rows",
+            "fc-head",
+            "fc-row",
+            "fc-today",
+            "i-left",
+            "i-right",
+            "i-sign",
+            "icon",
+            "icon-title",
+            "list",
+            "look",
+            "m-crumb",
+            "mask",
+            "menu-item-icon",
+            "num",
+            "plan",
+            "psiSet-customer",
+            "psiSet-hes",
+            "psiStatistics",
+            "psiSummary-day-customer",
+            "psiSummary-day-hes",
+            "psiSummary-week-customer",
+            "psiSummary-week-hes",
+            "salesPlanDetail",
+            "salesTask",
+            "self",
+            "statistics",
+            "store-visit-detail",
+            "store-visit-reach",
+            "temporary",
+            "time",
+            "visitinfo",
+            "visitlook",
+            "workbench",
+            "z-done",
+            "z-yet"
           ]
         ]
       }
@@ -468,6 +567,26 @@
             "LI/LABEL/I",
             "LI/LABEL/INPUT-checkbox",
             "UL/LI/LABEL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/H4/I",
+            "DIV/SPAN/B",
+            "DIV/SPAN/SPAN",
+            "DIV/UL/LI",
+            "LI/A/SPAN",
+            "UL/LI/A"
           ]
         ]
       }

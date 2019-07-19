@@ -492,7 +492,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
                     // 月度趋势图
                     var LineDatas = [{
-                        name: '销量(台)',
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -506,7 +506,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     var positionVersion = $("#positionVersion").text();
                     //if(bizUnits && (positionVersion=='01'||positionVersion=='02'|| positionVersion=='03'|| positionVersion=='06')) {
                     if(bizUnits) {
-                    	bizUnits = departmentbak(bizUnits);
+                    	// bizUnits = departmentbak(bizUnits);
                     	var firstLevel = [];
                     	var secondLevel = [];
                     	var html = "";
@@ -521,10 +521,11 @@ window.addEventListener('DOMContentLoaded', function() {
                         }
                         
 	                    for (var i = 0; i < firstLevel.length; i++) {
+                         	var dep_url = getLink("bizUnitName",firstLevel[i].department,"06");
 	                        html += '<div class="businessDimen">';
 	                        html += '    <div class="u-title">';
 	                        html += '        <i class="icon-line"></i>';
-	                        html += '        <h2>'+firstLevel[i].department+'</h2>';
+	                        html += '        <h2><a href="'+dep_url+'" title="' + firstLevel[i].department + '">'+firstLevel[i].department+'</a></h2>';
 	                        html += '    </div>';
 	                        html += '    <div class="m-box">';
 	                        html += '        <div class="table-content">';
@@ -533,7 +534,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	                        html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
 	                        html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
 	                        html += '                </thead>';
-	                        html += '            <table';
+	                        html += '            </table>';
 	                        html += '        </div>';
 	                        html += '    </div>';
 	                        html += '    <div class="m-box">';
@@ -625,7 +626,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -639,10 +640,11 @@ window.addEventListener('DOMContentLoaded', function() {
                         	
                         	for (var j = 0; j < secondLevel.length; j++) {
                         		if(secondLevel[j].projectName==firstLevel[i].projectName){
-                              var url = getLink("modelName",secondLevel[j].modelName,"06");
+                        			var url = getLink("modelName",secondLevel[j].modelName,"06");//style="text-decoration:none;"
                         			html += '<tr><td><a href="'+url+'" title="'+secondLevel[j].modelName+'">'+secondLevel[j].modelName+'</td>';
-                              html += '<td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
-                            }
+                                    html += '<td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
+                        			//html += '        <tr><td title="'+secondLevel[j].modelName+'">'+secondLevel[j].modelName+'</td><td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
+                        		}
                         	}
                         	html += '                </tbody>';
                         	html += '            </table>';
@@ -678,7 +680,8 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-                    
+                    tableSH("sale-table5", tr_minH);
+                  
                     // 销售人员表格
                     var salerName = response.salerName;
                     $("#salerManTable").empty();
@@ -698,10 +701,11 @@ window.addEventListener('DOMContentLoaded', function() {
                     $("#modelTable").empty();
                     if(models) {
                         for (var i = 0; i < models.length; i++) {
-                          var url = getLink("modelName",models[i].name,"06");
+                        	var url = getLink("modelName",models[i].name,"06");//
                          	var html = '<tr><td><a href="'+url+'" title="'+models[i].name+'" style="text-decoration:none;letter-spacing:normal">'+models[i].name+'</td>';
-                          html += '<td>' + models[i].reachQty + '</td><td>' + models[i].reachAmt + '</td></tr>';
-                          $("#modelTable").append(html);
+                            html += '<td>' + models[i].reachQty + '</td><td>' + models[i].reachAmt.toFixed(2) + '</td></tr>';
+                        	//var html = '<tr><td>' + models[i].name + '</td><td>' + models[i].reachQty + '</td><td>' + models[i].reachAmt + '</td></tr>';
+                            $("#modelTable").append(html);
                         }
                     }
                     tableSH("model-table", tr_minH-2);
@@ -835,7 +839,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
                     // 月度趋势图
                     var LineDatas = [{
-                        name: '销量(台)',
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -849,7 +853,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     var positionVersion = $("#positionVersion").text();
                     //if(bizUnits && (positionVersion=='01'||positionVersion=='02'|| positionVersion=='03'|| positionVersion=='06')) {
                     if(bizUnits) {
-                    	bizUnits = departmentbak(bizUnits);
+                    	// bizUnits = departmentbak(bizUnits);
                     	var firstLevel = [];
                     	var secondLevel = [];
                     	var html = "";
@@ -864,10 +868,11 @@ window.addEventListener('DOMContentLoaded', function() {
                         }
                         
 	                    for (var i = 0; i < firstLevel.length; i++) {
+                         	var dep_url = getLink("bizUnitName",firstLevel[i].department,"06");
 	                        html += '<div class="businessDimen">';
 	                        html += '    <div class="u-title">';
 	                        html += '        <i class="icon-line"></i>';
-	                        html += '        <h2>'+firstLevel[i].department+'</h2>';
+	                        html += '        <h2><a href="'+dep_url+'" title="' + firstLevel[i].department + '">'+firstLevel[i].department+'</a></h2>';
 	                        html += '    </div>';
 	                        html += '    <div class="m-box">';
 	                        html += '        <div class="table-content">';
@@ -876,7 +881,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	                        html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
 	                        html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
 	                        html += '                </thead>';
-	                        html += '            <table';
+	                        html += '            </table>';
 	                        html += '        </div>';
 	                        html += '    </div>';
 	                        html += '    <div class="m-box">';
@@ -968,7 +973,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -982,10 +987,11 @@ window.addEventListener('DOMContentLoaded', function() {
                         	
                         	for (var j = 0; j < secondLevel.length; j++) {
                         		if(secondLevel[j].projectName==firstLevel[i].projectName){
-                              var url = getLink("modelName",secondLevel[j].modelName,"06");
+                        			var url = getLink("modelName",secondLevel[j].modelName,"06");//style="text-decoration:none;"
                         			html += '<tr><td><a href="'+url+'" title="'+secondLevel[j].modelName+'">'+secondLevel[j].modelName+'</td>';
-                              html += '<td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
-                            }
+                                    html += '<td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
+                        			//html += '        <tr><td title="'+secondLevel[j].modelName+'">'+secondLevel[j].modelName+'</td><td>'+secondLevel[j].qty+'</td><td>'+secondLevel[j].amt.toFixed(2)+'</td></tr>';
+                        		}
                         	}
                         	html += '                </tbody>';
                         	html += '            </table>';
@@ -1021,7 +1027,8 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-                    
+                    tableSH("sale-table5", tr_minH);
+                  
                     // 销售人员表格
                     var salerName = response.salerName;
                     $("#salerManTable").empty();
@@ -1041,10 +1048,11 @@ window.addEventListener('DOMContentLoaded', function() {
                     $("#modelTable").empty();
                     if(models) {
                         for (var i = 0; i < models.length; i++) {
-                          var url = getLink("modelName",models[i].name,"06");//
+                        	var url = getLink("modelName",models[i].name,"06");//
                          	var html = '<tr><td><a href="'+url+'" title="'+models[i].name+'" style="text-decoration:none;letter-spacing:normal">'+models[i].name+'</td>';
-                          html += '<td>' + models[i].reachQty + '</td><td>' + models[i].reachAmt + '</td></tr>';
-                          $("#modelTable").append(html);
+                            html += '<td>' + models[i].reachQty + '</td><td>' + models[i].reachAmt.toFixed(2) + '</td></tr>';
+                        	//var html = '<tr><td>' + models[i].name + '</td><td>' + models[i].reachQty + '</td><td>' + models[i].reachAmt + '</td></tr>';
+                            $("#modelTable").append(html);
                         }
                     }
                     tableSH("model-table", tr_minH-2);
@@ -1056,6 +1064,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     console.log("Error:获取后台数据失败！");
                 }
             });
+
         }
 
      // 配置：百度地图
@@ -1108,8 +1117,9 @@ window.addEventListener('DOMContentLoaded', function() {
             var cycleType = $("#cycleType").val();
             var orderLogic = $("#orderLogic").val();
             
-            var link = '/ptDataShow/salesAll/salesOverview?type=07&salerName=' + encodeURIComponent(datas[index].id) + "&filter_userId=" + loginName + '&encoder=' + encoder + '&date='+ $("#selDay").val() + '&cycleType='+ cycleType + '&orderLogic='+ orderLogic + '&projectName=' + encodeURIComponent(projectName);
-            var content = '<div class="popup-bd"><div class="box"><h6 class="title" title="' + datas[index].name + '"><a href="' +link + '" style="color:#fff">'  + datas[index].name + '</a></h6><div class="address clearfix"><h6><i class="icon-markads"></i>地址：</h6>' + '<p title="' + datas[index].address + '">' + datas[index].address + '</p></div>' + '<div class="content"><div class="one a"><span>销量：</span><b>' + toQfw(datas[index].salesNums) + '</b></div>' + '<div class="one b"><span>金额：</span><b>' + toQfw(datas[index].sumNums) + '</b>' + '</div></div></div></div>';
+            var modelName = $("#modelName").text().replace(/\+/g,'%2B');//机型
+            var link = getLink("salerName",datas[index].id,"07");
+            var content = '<div class="popup-bd"><div class="box"><h6 class="title" title="' + datas[index].name + '"><a href="' +link + '" style="color:#fff">'  + datas[index].name + '</a></h6><div class="address clearfix"><h6><i class="icon-markads"></i>地址：</h6>' + '<p title="' + datas[index].address + '">' + datas[index].address + '</p></div>' + '<div class="content"><div class="one a"><span>销量：</span><b>' + toQfw(datas[index].salesNums) + '</b></div>' + '<div class="one b"><span>金额：</span><b>' + toQfw_new(datas[index].sumNums.toFixed(2)) + '</b>' + '</div></div></div></div>';
             return content;
         }
 
@@ -1140,7 +1150,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	            for (var j = 0; j < datas[0].data.length; j++) {
 	                timeDatas.push((datas[0].data[j].time).substring(5));
 	                salesValReach.push(datas[0].data[j].value);
-	                sumValReach.push((datas[1].data[j].value)/10000);
+	                sumValReach.push(datas[1].data[j].value);
 	            }
             }
             var option = {

@@ -3,7 +3,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/home\\/home\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/home\\/home\\.js.*"
       ],
       "local": "home.js",
       "time": 1499415779314
@@ -11,7 +11,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHome\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHome\\.js.*"
       ],
       "local": "customerHome.js",
       "time": 1514863227952
@@ -19,7 +19,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/jquery\\.min\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/jquery\\.min\\.js.*"
       ],
       "local": "jquery.min.js",
       "time": 1501035866234
@@ -43,7 +43,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/headLeaderView\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/headLeaderView\\.js.*"
       ],
       "local": "headLeaderView.js",
       "time": 1500616932336
@@ -51,7 +51,7 @@
     {
       "type": "html",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/pttlCrm\\/res\\/Imchat\\/im\\/imMain\\.html"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/pttlCrm\\/res\\/Imchat\\/im\\/imMain\\.html"
       ],
       "local": "imMain.html",
       "time": 1503541823427
@@ -59,7 +59,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/pttlCrm\\/res\\/js\\/customerVisitInfo\\.js"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/pttlCrm\\/res\\/js\\/customerVisitInfo\\.js"
       ],
       "local": "customerVisitInfo.js",
       "time": 1503830604008
@@ -67,7 +67,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHomeMap\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHomeMap\\.js.*"
       ],
       "local": "customerHomeMap.js",
       "time": 1514365831467
@@ -75,7 +75,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHomeData\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/plugins\\/echarts\\/customerHomeData\\.js.*"
       ],
       "local": "customerHomeData.js",
       "time": 1514863143684
@@ -83,7 +83,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesReach\\/brandManager\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesReach\\/brandManager\\.js.*"
       ],
       "local": "brandManager.js",
       "time": 1516947045616
@@ -91,7 +91,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesReach\\/leader\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesReach\\/leader\\.js.*"
       ],
       "local": "leader.js",
       "time": 1516947012305
@@ -99,7 +99,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesReach\\/branch\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesReach\\/branch\\.js.*"
       ],
       "local": "branch.js",
       "time": 1516946928568
@@ -107,7 +107,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesReach\\/bizGeneralManager\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesReach\\/bizGeneralManager\\.js.*"
       ],
       "local": "bizGeneralManager.js",
       "time": 1516946854676
@@ -115,7 +115,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesReach\\/productManager\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesReach\\/productManager\\.js.*"
       ],
       "local": "productManager.js",
       "time": 1516946753546
@@ -123,7 +123,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesReach\\/office\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesReach\\/office\\.js.*"
       ],
       "local": "office.js",
       "time": 1516946555460
@@ -131,7 +131,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesReach\\/salesman\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesReach\\/salesman\\.js.*"
       ],
       "local": "salesman.js",
       "time": 1516946410633
@@ -139,7 +139,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesAll\\/leader\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesAll\\/leader\\.js.*"
       ],
       "local": "leaders.js",
       "time": 1518157260207
@@ -147,7 +147,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesAll\\/common\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesAll\\/common\\.js.*"
       ],
       "local": "common.js",
       "time": 1518169863169
@@ -155,7 +155,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesAll\\/branch\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesAll\\/branch\\.js.*"
       ],
       "local": "branchs.js",
       "time": 1518314986002
@@ -163,7 +163,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesAll\\/bizGeneralManager\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesAll\\/bizGeneralManager\\.js.*"
       ],
       "local": "bizGeneralManagers.js",
       "time": 1518319408977
@@ -171,7 +171,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesAll\\/productManager\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesAll\\/productManager\\.js.*"
       ],
       "local": "productManagers.js",
       "time": 1518320932601
@@ -179,7 +179,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesAll\\/brandManager\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesAll\\/brandManager\\.js.*"
       ],
       "local": "brandManagers.js",
       "time": 1518321490437
@@ -187,7 +187,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesAll\\/office\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesAll\\/office\\.js.*"
       ],
       "local": "offices.js",
       "time": 1518332205832
@@ -195,7 +195,7 @@
     {
       "type": "js",
       "remote": [
-        "http:\\/\\/192\\.168\\.220\\.82\\:8080\\/ptDataShow\\/js\\/salesAll\\/salerMan\\.js.*"
+        "http:\\/\\/192\.168\\.1\\.227\\:8080\\/ptDataShow\\/js\\/salesAll\\/salerMan\\.js.*"
       ],
       "local": "salerMan.js",
       "time": 1518331051946

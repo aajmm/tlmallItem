@@ -6,13 +6,16 @@ if(getParam("a")=="1" || getParam("firstFlag")=="true"){
 function initTags(clickButten){
 	
 	var parms = {};
-	
+	  parms.type = $("#type").text();
     var cycleType = $("#cycleType").val();
     var orderLogic = $("#orderLogic").val();
     
     var date=$("#selDay").val();
     var loginName=$("#loginName").text();
     
+  	/** 4月13添加参数loginName **/
+    parms.loginName = loginName;
+  
     if($("#branchName").text())
     	parms.branchName=$("#branchName").text();
     if($("#projectName").text())
@@ -54,8 +57,8 @@ function ajaxData_2143(parms) {
 			var rows = data.Rows;
 			var html = '<option value="" selected="selected" ></option>';
 			for(var i in rows){
-				if(rows[i].departmentId&&rows[i].department)
-				   html += '<option value="'+rows[i].departmentId+'">'+rows[i].department+'</option>';
+			if(rows[i].departmentId&&rows[i].department && rows[i].department != "电信业务事业部")
+					html += '<option value="'+rows[i].departmentId+'">'+rows[i].department+'</option>';
 			}
 			$("#departmentId").html(html);
 		},
@@ -113,9 +116,11 @@ function getLink(key,value,type){
     var bizUnitName = $("#bizUnitName").text();
     var officeName = $("#officeName").text();
     var salerName = $("#salerName").text();
+    
     var customerName = $("#customerName").text();
-    var modelName = $("#modelName").text();
-  
+    var modelName = $("#modelName").text().replace(/\+/g,'%2B');//机型
+    var storeName = $("#storeName").text();
+    
     var link = "/ptDataShow/salesAll/salesOverview";
     link += "?" + key + "=" + encodeURIComponent(value);
     link += "&type=" + type;
@@ -124,8 +129,11 @@ function getLink(key,value,type){
     link += '&date=' + $("#selDay").val(); 
     link += '&cycleType=' + cycleType;
     link += '&orderLogic=' + orderLogic; 
-    if(key=='projectName')
-    	link += '&drill=1';
+    if(key=='projectName') {
+      link += '&drill=项目';
+    }else if(key=='bizUnitName') {
+      link += '&drill=事业部';
+    }
     
     if(branchName && key!='branchName')
     	link += '&branchName=' + branchName;
@@ -137,11 +145,33 @@ function getLink(key,value,type){
     	link += '&officeName=' + officeName;
     if(salerName && key!='salerName')
     	link += '&salerName=' + salerName;
-  	if(customerName && key!='customerName')
-    	link += '&customerName=' + customerName;
+    if(customerName && key!='customerName')
+    	link += '&customerName=' + encodeURIComponent(customerName);
     if(modelName && key!='modelName')
-    	link += '&modelName=' + modelName;
+    	link += '&modelName=' + encodeURIComponent(modelName);
+    if(storeName && key!='storeName')
+    	link += '&storeName=' + encodeURIComponent(storeName);
+    
     return link;
+}
+function getLinkForSearch(key,value,type){
+	if(!key || !value)
+		return '#';
+	
+	var loginName = $("#loginName").text();
+	var encoder = $("#encoder").text();
+	var cycleType = $("#cycleType").val();
+	var orderLogic = $("#orderLogic").val();
+	
+	var link = "/ptDataShow/salesAll/salesOverview";
+	link += "?" + key + "=" + encodeURIComponent(value);
+	link += "&type=" + type;
+	link += "&filter_userId=" + loginName;
+	link += '&encoder=' + encoder;
+	link += '&date=' + $("#selDay").val(); 
+	link += '&cycleType=' + cycleType;
+	link += '&orderLogic=' + orderLogic; 
+	return link;
 }
 
 
@@ -267,7 +297,7 @@ function breadcrumb(role,roleCode){
 	map.level = $("#type").text();
 	map.url = location.href;
 	if($("#drill").text()){
-		map.role = role+'项目';
+		map.role = role+$("#drill").text();
 		map.roleCode = roleCode+'Project';
 	}else{
 		map.role = role;
@@ -366,7 +396,7 @@ function showLineBar(){
 }
 
 
-//配置：折线图
+//配置：折线图   lyh  4-24
 function getLines(datas, Id) {
     var chart = echarts.init(document.getElementById(Id));
     window.onresize = chart.resize;
@@ -384,11 +414,14 @@ function getLines(datas, Id) {
 	        timeDatas.push(datas[0].data[j].time);
 	        salesValReach.push(datas[0].data[j].value);
 	        if(datas[1].data[j].value.toString().indexOf(".")>0){
-	        	var value1 = datas[1].data[j].value.toFixed(2);
+	        	//var value1 = datas[1].data[j].value.toFixed(2);
+            var value1 = datas[1].data[j].value;
 	        	if(value1.toString().substr(-2,2) == "00"){
-	        		value1 = datas[1].data[j].value.toFixed(0);
-	        	}else if(value1.toString().substr(-1,1) == "0"){
-	        		value1 = datas[1].data[j].value.toFixed(1);
+	        		// value1 = datas[1].data[j].value.toFixed(0);
+              value1 = datas[1].data[j].value;
+	        	}else if(value1.toString().substr(-1,1) == "0"){
+              // value1 = datas[1].data[j].value.toFixed(0);
+	        		value1 = datas[1].data[j].value;
 	        	}
 	        	sumValReach.push(value1);
 	        }else{
@@ -712,4 +745,278 @@ function toQfw_new(num,flag) {
 		str_num = str_num.slice(0, str_num.length - 3)
 	}
 	return first_sign + str_num + result + end_num;
+}
+
+$(function(){
+	$("#selectSearch").on("change",function(){
+		$("#searchInput").val("");
+	})
+	$("#orderLogic").on("change",function(){
+		$("#searchInput").val("");
+	})
+	$("#cycleType").on("change",function(){
+		$("#searchInput").val("");
+	})
+	//自动补全控件
+	if($('#searchInput').length>0){
+		setAutocomplete("/ptDataShow/salesAll/getSearchData",function(suggestions){
+      debugger
+	    	var selectType = $("#selectSearch").val();
+	    	if(suggestions){
+    			var suggObj = JSON.parse(suggestions.data);
+    			var link = "";
+		    	if("salerName" == selectType){
+		    		link = getLinkForSearch("salerName",suggObj.salesman_id,"07");
+		    		link += '&branchName=' + suggObj.branchName;
+		    		link += '&officeName=' + suggObj.officeName;
+		    	}else if("customerName" == selectType){
+		    		link = getLinkForSearch("customerName",suggObj.customerName,"07");
+		    		link += '&branchName=' + suggObj.branchName;
+		    		link += '&officeName=' + suggObj.officeName;
+		    		link += '&salerName=' + suggObj.salesman_id;
+		    	}else if("storeName" == selectType){
+		    		link = getLinkForSearch("storeName",suggObj.storeName,"07");
+		    		link += '&branchName=' + suggObj.branchName;
+		    		link += '&officeName=' + suggObj.officeName;
+		    		link += '&salerName=' + suggObj.salesman_id;
+		    	}
+		    	
+		    	if(link != ""){
+		    		var path = sessionStorage.getItem("path")?sessionStorage.getItem("path"):"";
+		    		if(path && path.indexOf("-") > -1){
+		    			path = path.substr(0,path.indexOf("-"))
+		    			sessionStorage.setItem("path",path);
+		    		}
+		    		window.location.href = link;
+		    	}
+	    	}
+	    });
+	}
+	
+	//当前纬度
+	setCurrentLatitudeText();
+})
+//发送ajax请求
+function setAutocomplete(service,callBack){
+	$('#searchInput').autocomplete({
+		ajaxSettings:{
+			dataType: "json",
+		},
+		getSearchParam:getSearchParam,
+		serviceUrl: service,
+	    onSelect: function(suggestion) {
+    		if(callBack){
+	    		callBack(suggestion);
+	    	}
+	    }
+	});
+	
+	function getSearchParam(){
+		var body = {};
+		body[$("#selectSearch").val()] = $("#searchInput").val();
+		body.loginName = $("#loginName").text();
+	    //body.branchName = $("#branchName").text();
+	    //body.projectName = $("#projectName").text();
+	    //body.bizUnitName = $("#bizUnitName").text();
+	    //body.officeName = $("#officeName").text();
+	    //body.salesman_id = $("#salerName").text();
+	    //body.customerName = $("#customerName").text();
+	    //body.modelName = $("#modelName").text().replace(/\+/g,'%2B');//机型
+	    //body.storeName = $("#storeName").text();
+		body.date = $("#selDay").val();
+		body.cycleType = $("#cycleType").val();
+		body.orderLogic = $("#orderLogic").val();
+		return body;
+	}
+	
+}
+//yue update 20190621
+/**
+ * 设置当前纬度
+ */
+function setCurrentLatitudeText(){
+	var text = "";
+	var branchName = $("#branchName").text();
+	if(null != branchName && "" != branchName){
+		branchName = branchName.substring(11,branchName.length);
+		text += branchName;
+	}
+	if (branchName == "太力总部") {
+		return;
+	}
+
+	var officeName = $("#officeName").text();
+	if(null != officeName && "" != officeName){
+		text += "-"+officeName;
+	}
+	var salerName = $("#salerName").text();
+	if(null != salerName && "" != salerName){
+		text += "-"+salerName;
+		$.ajax({
+			type : "POST",
+			url : "/ptDataShow//salesAll/getSalerName",
+			data : {"salesman_id":salerName},
+			dataType : "json",
+			success : function(data) {
+				if(data && data.salerName != ""){
+					text = text.replace(salerName,data.salerName);
+				}
+				
+				var customerName = $("#customerName").text();
+				if(null != customerName && "" != customerName){
+					text += "-"+customerName;
+				}
+				var storeName = $("#storeName").text();
+				if(null != storeName && "" != storeName){
+					text += "-"+storeName;
+				}
+				/*var bizUnitName = $("#bizUnitName").text();
+				if(null != bizUnitName && "" != bizUnitName){
+					text += "-"+bizUnitName;
+
+				}
+				var projectName = $("#projectName").text();
+				if(null != projectName && "" != projectName){
+					text += "-"+projectName;
+				}
+
+
+				var modelName = $("#modelName").text();
+				if(null != modelName && "" != modelName){
+					text += "-"+modelName;
+				}*/
+				$(".current").show();
+				$("#currentText").html(text);
+				$("#currentText").css("max-width",($(window).width() * 0.5 - 350) + "px");
+				$("#currentText").css("font-size","17px");
+				$("#currentText").attr("title",text);
+			},
+		});
+	}else {
+		var customerName = $("#customerName").text();
+		if(null != customerName && "" != customerName){
+			text += "-"+customerName;
+		}
+		var storeName = $("#storeName").text();
+		if(null != storeName && "" != storeName){
+			text += "-"+storeName;
+		}
+		/*var modelName = $("#modelName").text();
+		if(null != modelName && "" != modelName){
+			text += "-"+modelName;
+		}
+		var bizUnitName = $("#bizUnitName").text();
+		if(null != bizUnitName && "" != bizUnitName){
+			text += "-"+bizUnitName;
+
+		}
+		var projectName = $("#projectName").text();
+		if(null != projectName && "" != projectName){
+			text += "-"+projectName;
+		}*/
+
+		$(".current").show();
+		$("#currentText").html(text);
+		$("#currentText").css("max-width",($(window).width() * 0.5 - 350) + "px");
+		$("#currentText").css("font-size","17px");
+		$("#currentText").attr("title",text);
+	}
+}
+/**
+ * 导出数据：根据传入的列名（columns）和传入的数据（data）导出
+ */
+function downExcel(data1,data2,title){
+    var content = [];
+    var columns1 = [{"display":"订单取数逻辑","name":"order"},
+        {"display":"日期类型","name":"dateType"},
+        {"display":"事业部","name":"dept"},
+        {"display":"项目","name":"project"},
+        {"display":"机型","name":"model"},
+        {"display":"颜色","name":"color"}];
+    //表头
+    for (var i in columns1){
+        if(columns1[i].display != "操作"){
+            if(i < columns1.length-1){
+                content.push(columns1[i].display+',');
+            }else{
+                content.push(columns1[i].display+'\r');
+            }
+        }
+    }
+    //表体
+    for(var i in data1){
+        var row = data1[i];
+        for(var j in columns1){
+            if(columns1[j].display != "操作"){
+                var name = getValue(row[columns1[j].name]);
+                if(null != name && typeof name == 'string'){
+                    name = name.replace(/,/g,"，");
+                }
+                if(j < columns1.length-1){
+                    content.push(name+',');
+                }else{
+                    content.push(name+'\r');
+                }
+            }
+        }
+    }
+    content.push('\r');
+
+    var columns2 = [{"display":"日期","name":"date"},
+        {"display":"销量","name":"saleCount"},
+        {"display":"销售额","name":"saleAmt"},
+        {"display":"","name":""},{"display":"","name":""},{"display":"","name":""}];
+    //表头
+    for (var i in columns2){
+        if(columns2[i].display != "操作"){
+            if(i < columns2.length-1){
+                content.push(columns2[i].display+',');
+            }else{
+                content.push(columns2[i].display+'\r');
+            }
+        }
+    }
+    //表体
+    for(var i in data2){
+        var row = data2[i];
+        for(var j in columns2){
+            if(columns2[j].display != "操作"){
+                var name = getValue(row[columns2[j].name]);
+                if(null != name && typeof name == 'string'){
+                    name = name.replace(/,/g,"，");
+                }
+                if(j < columns2.length-1){
+                    content.push(name+',');
+                }else{
+                    content.push(name+'\r');
+                }
+            }
+        }
+    }
+    exportExl(content,getValue(title)==""?$(document).attr("title"):title)
+}
+
+/**
+ * 字符串处理函数
+ * @param str
+ * @returns
+ */
+function getValue(str){
+    if(typeof str == "undefined" || null == str || str == "null" || str == "" || typeof str == "object"){
+        return "";
+    }else{
+        return trim(str);
+    }
+}
+
+/**
+ * 去前后空格
+ * @param {*} str
+ */
+function trim(str){
+    if(typeof str != "undefined" && str != null && typeof str == "string"){
+        return str.replace(/(^\s*)|(\s*$)/g, "");
+    }else{
+        return "";
+    }
 }

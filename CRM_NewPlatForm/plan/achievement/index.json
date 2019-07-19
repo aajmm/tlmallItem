@@ -153,36 +153,6 @@
       "monitored": true,
       "frameXPath": ""
     },
-    "control122_ThVhza": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "BODY.body-bg DIV.g-main DIV.m-header"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control122_ThVhza"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": ""
-    },
     "control174_u04FZR": {
       "location": {
         "data": {
@@ -287,7 +257,6 @@
         "control128_5Gm11K",
         "control138_3EstT8",
         "control173_yZJTIx",
-        "control122_ThVhza",
         "control174_u04FZR",
         "control257_pLPdT2",
         "control258_htTdgO"
@@ -300,16 +269,6 @@
   },
   "flows": {
     "flow90_2Xd8a2": {
-      "toContexts": [
-        {
-          "toContextId": "context30_fLMQCM"
-        }
-      ]
-    },
-    "flow157_axsnxy": {
-      "fromContextId": "context30_fLMQCM",
-      "fromAction": "doAction",
-      "fromControlId": "control122_ThVhza",
       "toContexts": [
         {
           "toContextId": "context30_fLMQCM"
@@ -380,21 +339,6 @@
               "events": {
                 "onDoAction": "doAction_uiControl121_Umg5QL",
                 "onGetTemplate": "getTemplate_uiControl121_Umg5QL"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl120_Fgb2zu",
-          "controlId": "control122_ThVhza",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl120_Fgb2zu",
-                "onGetTemplate": "getTemplate_uiControl120_Fgb2zu"
               }
             }
           }
@@ -518,7 +462,8 @@
           "192.168.220.82:8080/ptDataShow/salesPlan/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDkvMjQ5LzIwMTcgMTc6MDg6MDE=",
           "192.168.220.82:8080/ptDataShow/salesPlan/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMTAvMzAwLzIwMTcgMTM6NDQ6MTg=",
           "192.168.220.82:8080/ptDataShow/salesPlan/salesOverview?type=05&projectName=%E5%BE%AE%E8%BD%AF%E8%AF%BA%E5%9F%BA%E4%BA%9AND&bizUnitName=&branchName=PTTL_OU_23_%E8%A5%BF%E5%AE%89%E5%88%86%E5%85%AC%E5%8F%B8&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDUvMTI0LzIwMTggMTA6MDE6MTI=&date=2018-05-04&drill=oneProject",
-          "192.168.220.82:8080/ptDataShow/salesPlan/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDgvMDEvMjAxOCAxNToxMDo0NA==&date=2018-08-01"
+          "192.168.220.82:8080/ptDataShow/salesPlan/salesOverview?filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDgvMDEvMjAxOCAxNToxMDo0NA==&date=2018-08-01",
+          "192.168.220.82:8080/ptDataShow/salesPlan/salesOverview?filter_userId=ZHAOWEILI&encoder=WkhBT1dFSUxJKzA1LzE2LzIwMTkgMTQ6MDk6MjY=&username=ZHAOWEILI&branch=02&firstFlag"
         ],
         "context37_iIDfFF": [
           "192.168.220.82:8080/ptDataShow/report/reportsByPidAndEncoder?encoder=V0FOR0RPTkcrMDQvMjUvMjAxNyAxMToyNDoyMQ%3d%3d&filter_userId=WANGDONG&reportPid=head-Company",
@@ -740,6 +685,49 @@
             "projectRankPlaceHolder",
             "salerName",
             "selDay",
+            "totalAuditAmt",
+            "totalAuditQty",
+            "totalReachAmt",
+            "totalReachAmtRate",
+            "totalReachQty",
+            "totalReachQtyRate",
+            "totalTargetAmt",
+            "totalTargetQty",
+            "type"
+          ],
+          [
+            "barLines",
+            "barLines_export",
+            "bizUnitName",
+            "branchName",
+            "branchRankAmt",
+            "branchRankName",
+            "branchRankQty",
+            "configType",
+            "data_",
+            "date",
+            "detailDatas",
+            "drill",
+            "encoder",
+            "lines",
+            "lines_export",
+            "loginName",
+            "map",
+            "model-table",
+            "modelName",
+            "modelTable",
+            "office-table",
+            "officeName",
+            "officeTable",
+            "planTypeSelect",
+            "projectName",
+            "projectRankPlaceHolder",
+            "saleman-table",
+            "salemanTable",
+            "salerName",
+            "searchInput",
+            "selDay",
+            "selectSearch",
             "totalAuditAmt",
             "totalAuditQty",
             "totalReachAmt",
@@ -1083,6 +1071,62 @@
             "overview",
             "r-chart",
             "right",
+            "sort",
+            "spaceDimen",
+            "table",
+            "tableContent",
+            "timeDimen",
+            "title",
+            "u-selt",
+            "u-table-a",
+            "u-table-b",
+            "u-time",
+            "u-title",
+            "u-visualmap"
+          ],
+          [
+            "a",
+            "activ",
+            "b",
+            "box",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "c",
+            "chart",
+            "clearfix",
+            "content",
+            "detailDatas",
+            "export",
+            "filter-search",
+            "g-main",
+            "header",
+            "icon",
+            "icon-line",
+            "l-chart",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "max",
+            "min",
+            "one",
+            "overview",
+            "pop-table",
+            "pop-tit",
+            "r-chart",
+            "rank-pop-box",
+            "ranking",
+            "reach-center",
+            "right",
+            "righth",
+            "search",
+            "select",
             "sort",
             "spaceDimen",
             "table",
@@ -2050,6 +2094,39 @@
             "TBODY/TR/TD",
             "THEAD/TR/TH",
             "TR/TD/A",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "-/DIV/H4",
+            "-/DIV/TABLE",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H3",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/THEAD/TR",
+            "THEAD/TR/TH",
             "UL/LI/A"
           ]
         ],

@@ -483,9 +483,8 @@ window.addEventListener('DOMContentLoaded', function() {
                         getMap([], mapTotal, "map");
                     }
 
-                    // 月度趋势图
-                    var LineDatas = [{
-                        name: '销量(台)',
+                    var LineDatas = [{
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -520,7 +519,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -575,7 +574,9 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-                    
+                    tableSH("sale-table5", tr_minH);
+                    tableSH("project-table", tr_minH);
+                  
                     // 分公司表格
                     var branches = response.branchName;
                     $("#branchTable").empty();
@@ -714,9 +715,8 @@ window.addEventListener('DOMContentLoaded', function() {
                         getMap([], mapTotal, "map");
                     }
 
-                    // 月度趋势图
-                    var LineDatas = [{
-                        name: '销量(台)',
+                    var LineDatas = [{
+                        name: '销量',
                         data: response.trenQtys
                     }, {
                         name: '销售额(万元)',
@@ -751,7 +751,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         	html += '                    <tr><th><font size="3" color="red">'+firstLevel[i].qty+'</font></th><th><font size="3" color="red">'+firstLevel[i].amt.toFixed(2)+'</font></th></tr>';
                         	html += '                    <tr><th>销量（台）</th><th>销售额（万）</th></tr>';
                         	html += '                </thead>';
-                        	html += '            <table';
+                        	html += '            </table>';
                         	html += '        </div>';
                         	html += '    </div>';
                         	html += '    <div class="m-box">';
@@ -806,7 +806,9 @@ window.addEventListener('DOMContentLoaded', function() {
                     tableSH("sale-table2", tr_minH);
                     tableSH("sale-table3", tr_minH);
                     tableSH("sale-table4", tr_minH);
-                    
+                    tableSH("sale-table5", tr_minH);
+                    tableSH("project-table", tr_minH);
+                  
                     // 分公司表格
                     var branches = response.branchName;
                     $("#branchTable").empty();
@@ -842,7 +844,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             $("#" + Id).parent().find(".totalContent").remove();
             if(totalDatas) {
-                $("#" + Id).parent().append('<div class="u-box-infors">' + '<div class="title">太力总部</div>' + '<div class="content">' + '<div class="a"><span>销量：</span><b>' + toQfw(totalDatas[0].value) + ' 台</b></div>' + '<div class="b"><span>销售额：</span><b>' + toQfw(totalDatas[1].value) + ' 万</b></div>' + '</div></div>');
+                $("#" + Id).parent().append('<div class="u-box-infors">' + '<div class="title">太力总部</div>' + '<div class="content">' + '<div class="a"><span>销量：</span><b>' + toQfw(totalDatas[0].value) + ' 台</b></div>' + '<div class="b"><span>销售额：</span><b>' + toQfw_new(totalDatas[1].value.toFixed(2)) + ' 万</b></div>' + '</div></div>');
             }
             var option = {
                 tooltip: {
@@ -852,7 +854,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     backgroundColor: 'rgba(0,0,0,0)',
                     formatter: function formatter(params) {
                         try {
-                            var tip = '<div class="m-tooltip">' + '<div class="title">' + params.data.company + '</div>' + '<div class="content">' + '<div class="a"><span>销量</span><b>' + toQfw(params.value) + '</b></div>' + '<div class="b"><span>销售额</span><b> ' + toQfw(params.data.sum) + '</b></div></div></div>';
+                             var tip = '<div class="m-tooltip">' + '<div class="title">' + params.data.company + '</div>' + '<div class="content">' + '<div class="a"><span>销量</span><b>' + toQfw(params.value) + '</b></div>' + '<div class="b"><span>销售额</span><b> ' + toQfw_new(params.data.sum.toFixed(2)) + '</b></div></div></div>';
                             return tip;
                         } catch (e) {
                             return;
@@ -923,7 +925,8 @@ window.addEventListener('DOMContentLoaded', function() {
                 var cycleType = $("#cycleType").val();
                 var orderLogic = $("#orderLogic").val();
                 
-                var link = '/ptDataShow/salesAll/salesOverview?type=05&branchName=' + encodeURIComponent(params.name) + '&projectName=' + encodeURIComponent(projectName) + "&filter_userId=" + loginName + '&encoder=' + encoder + '&date='+ $("#selDay").val() + '&cycleType='+ cycleType + '&orderLogic='+ orderLogic;
+                var modelName = $("#modelName").text().replace(/\+/g,'%2B');//机型
+                var link = getLink("branchName",params.name,"05");
                 window.location.href = link;
             });
         }
@@ -943,9 +946,9 @@ window.addEventListener('DOMContentLoaded', function() {
             }
             if(datas[0].data){
 	            for (var j = 0; j < datas[0].data.length; j++) {
-	                timeDatas.push((datas[0].data[j].time).substring(5));
+	                timeDatas.push(datas[0].data[j].time);
 	                salesValReach.push(datas[0].data[j].value);
-	                sumValReach.push((datas[1].data[j].value)/10000);
+	                sumValReach.push(datas[1].data[j].value);
 	            }
             }
             var option = {

@@ -1,26 +1,27 @@
 (function (win, ysp) {
   ysp.runtime.Model.extendLoadingModel({
 
-    getData_control190_oOp3N1: function (elem) {//   return;
-      // } // var data = [];
-      // // if (elem) {
-      // //   data.push(elem.textContent);
-      // // }
+    getData_control190_oOp3N1: function (elem) {
+      if (!elem) {
+        return;
+      } // var data = [];
       // if (elem) {
-      //   var load = elem.ownerDocument.defaultView.localStorage.getItem('layerLoading');
-      //   if (load == null) {
-      //     setTimeout(function () {
-      //       ysp.appMain.hideLoading();
-      //     }, 5000);
-      //   } else {
-      //     ysp.appMain.showLoading();
-      //   }
-      //   return load;
+      //   data.push(elem.textContent);
       // }
+      if (elem) {
+        var load = elem.ownerDocument.defaultView.localStorage.getItem('layerLoading'); // if (load == null) {
+        //   setTimeout(function () {
+        //     ysp.appMain.hideLoading();
+        //   }, 5000);
+        // } else {
+        //   ysp.appMain.showLoading();
+        // }
+        return load;
+      }
     },
     doAction_uiControl187_1hG0iv: function (data, elem) {
       if (data.eventType == 'AndroidBack') {
-        var pageId = window.beforePageId;ysp.appMain.hideLoading();if (parent.EAPI.isAndroid() && pageId == "context51_PhTFP3") {
+        var pageId = window.beforePageId;if (parent.EAPI.isAndroid() && pageId == "context51_PhTFP3") {
           //history.back();
           var url = "http://192.168.220.82:8080/pttlCrm/res/page/psi/customerInfocollection.html"; //更换返回方式,跳回至信息录入
           ysp.customHelper.AndroidBackURL = url;
