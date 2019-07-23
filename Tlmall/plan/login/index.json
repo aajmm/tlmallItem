@@ -1,0 +1,265 @@
+{
+  "version": "0.1",
+  "id": "login",
+  "targetURL": "http://192.168.220.23/login.html",
+  "jsFile": "index.js",
+  "chineseName": "登录",
+  "description": "",
+  "controls": {
+    "control0_vFU0yO": {
+      "location": {
+        "data": {
+          "tagName": "INPUT"
+        },
+        "locators": [
+          {
+            "id": "@placeholder",
+            "prob": 3,
+            "value": {
+              "text": [
+                "用户名/手机号"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::INPUT[@id=\"username\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.dl_form_infos DIV.one INPUT.dl_text"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[2]/DIV[1]/FORM[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]"
+          },
+          {
+            "id": "input/type",
+            "verifyEnabled": true,
+            "value": "text"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control0_vFU0yO"
+      },
+      "intendedRole": "custom",
+      "roles": "element,textbox,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context0_TxPzC2": {
+      "controls": [
+        "control0_vFU0yO"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow0_6CHiZ0": {
+      "toContexts": [
+        {
+          "toContextId": "context0_TxPzC2"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page0_Ou1SJL": {
+      "contextId": "context0_TxPzC2",
+      "layout": [
+        {
+          "id": "uiControl0_HG6DWQ",
+          "controlId": "control0_vFU0yO",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl0_HG6DWQ",
+                "onGetTemplate": "getTemplate_uiControl0_HG6DWQ"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context0_TxPzC2": [
+          "太力商城(tlmall.com)-提供全国最全面的通讯产品，正品行货、品类丰富、一键进货、安全支付！智享太力，聚赢天下！"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context0_TxPzC2": [
+          "192.168.220.23/login.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context0_TxPzC2": [
+          [
+            "caLicense",
+            "captchaCode",
+            "certEndDate",
+            "certExpiredPop",
+            "dl_error",
+            "error_msg",
+            "hasCertWidget",
+            "imageToPath",
+            "imgVerifyCode",
+            "indexImg",
+            "isCa",
+            "keyStoreProvider",
+            "loginButton",
+            "loginSuccessPop",
+            "nTalk_post_hiddenElement",
+            "needUpdateCertPop",
+            "password",
+            "signData",
+            "toSign",
+            "tucaoIcon",
+            "updateCertGap",
+            "updateError",
+            "updateErrorPop",
+            "updateLaterBtn",
+            "updateOkPop",
+            "username",
+            "verifyImg",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context0_TxPzC2": [
+          [
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "bd_ra",
+            "bgm",
+            "btn",
+            "btn_bg",
+            "center-imgs",
+            "clearfix",
+            "close",
+            "cr_red",
+            "dl_bottom",
+            "dl_btn_ac",
+            "dl_form",
+            "dl_form_c",
+            "dl_form_infos",
+            "dl_text",
+            "dlcont",
+            "dlheader",
+            "float_l",
+            "float_r",
+            "footer-bottom",
+            "footer-cc",
+            "footer-cl",
+            "footer-last-list",
+            "hint",
+            "icon",
+            "icon_",
+            "icon_down",
+            "icon_psd",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "icon_user",
+            "iconfont",
+            "img_yzm",
+            "l",
+            "line",
+            "mg_r",
+            "mg_t",
+            "normal_alink",
+            "one",
+            "page",
+            "pd_lr",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "r",
+            "text_yzm",
+            "title",
+            "tl-content",
+            "tl-footer",
+            "tl-footer-lists",
+            "tl-wrap",
+            "tlmall-app",
+            "tlmall-wx",
+            "triangle_r",
+            "txt_c",
+            "wb",
+            "wc",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context0_TxPzC2": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/SCRIPT",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H3",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-password",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/P",
+            "DIV/DIV/SAPN",
+            "DIV/DIV/SPAN",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/P/SPAN",
+            "DIV/SPAN/A",
+            "DL/DD/A",
+            "FORM/DIV/DIV",
+            "SPAN/A/I"
+          ]
+        ]
+      }
+    }
+  }
+}
