@@ -1,5 +1,5 @@
 getData_control321_P7fT3E: >
-  if (!elem && ysp.customHelper.getTargetMenus) {
+  ;if (!elem && ysp.customHelper.getTargetMenus) {
     return;
   }
 
