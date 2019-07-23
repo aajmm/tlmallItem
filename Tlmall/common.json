@@ -1,5 +1,9 @@
 {
-  "special_models": [],
+  "special_models": [
+    {
+      "path": "plan/login/index.json"
+    }
+  ],
   "common_js": [
     {
       "path": "lib/base.js"
