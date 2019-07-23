@@ -17,5 +17,5 @@
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
   "start_url": "enterplorer://Tlmall/local/index.html",
-  "update_time": 1563868267391
+  "update_time": 1563869171755
 }

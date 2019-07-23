@@ -6,7 +6,7 @@
   "chineseName": "登录",
   "description": "",
   "controls": {
-    "control0_vFU0yO": {
+    "control0_zc0mSN": {
       "location": {
         "data": {
           "tagName": "INPUT"
@@ -48,7 +48,7 @@
         ]
       },
       "events": {
-        "onGetData": "getData_control0_vFU0yO"
+        "onGetData": "getData_control0_zc0mSN"
       },
       "intendedRole": "custom",
       "roles": "element,textbox,custom",
@@ -58,38 +58,38 @@
     }
   },
   "contexts": {
-    "context0_TxPzC2": {
+    "context0_DQT6TF": {
       "controls": [
-        "control0_vFU0yO"
+        "control0_zc0mSN"
       ],
       "anchors": [],
       "urlAnchor": []
     }
   },
   "flows": {
-    "flow0_6CHiZ0": {
+    "flow0_nAr4n7": {
       "toContexts": [
         {
-          "toContextId": "context0_TxPzC2"
+          "toContextId": "context0_DQT6TF"
         }
       ]
     }
   },
   "pages": {
-    "page0_Ou1SJL": {
-      "contextId": "context0_TxPzC2",
+    "page0_PnlTO8": {
+      "contextId": "context0_DQT6TF",
       "layout": [
         {
-          "id": "uiControl0_HG6DWQ",
-          "controlId": "control0_vFU0yO",
+          "id": "uiControl0_hG9A9x",
+          "controlId": "control0_zc0mSN",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl0_HG6DWQ",
-                "onGetTemplate": "getTemplate_uiControl0_HG6DWQ"
+                "onDoAction": "doAction_uiControl0_hG9A9x",
+                "onGetTemplate": "getTemplate_uiControl0_hG9A9x"
               }
             }
           }
@@ -100,21 +100,21 @@
   "matchers": {
     "page/title": {
       "contexts": {
-        "context0_TxPzC2": [
+        "context0_DQT6TF": [
           "太力商城(tlmall.com)-提供全国最全面的通讯产品，正品行货、品类丰富、一键进货、安全支付！智享太力，聚赢天下！"
         ]
       }
     },
     "page/urls": {
       "contexts": {
-        "context0_TxPzC2": [
+        "context0_DQT6TF": [
           "192.168.220.23/login.html"
         ]
       }
     },
     "page/ids": {
       "contexts": {
-        "context0_TxPzC2": [
+        "context0_DQT6TF": [
           [
             "caLicense",
             "captchaCode",
@@ -151,7 +151,7 @@
     },
     "page/classes": {
       "contexts": {
-        "context0_TxPzC2": [
+        "context0_DQT6TF": [
           [
             "alert",
             "alert_content",
@@ -226,7 +226,7 @@
     },
     "page/tagTriplets": {
       "contexts": {
-        "context0_TxPzC2": [
+        "context0_DQT6TF": [
           [
             "-/-/DIV",
             "-/-/SCRIPT",
