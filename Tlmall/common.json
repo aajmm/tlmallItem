@@ -1,0 +1,23 @@
+{
+  "special_models": [],
+
+  "common_js": [
+    {
+      "path": "lib/base.js"
+    },
+    {
+      "path": "lib/customTemplate.js"
+    }
+  ],
+
+  "common_css": [
+    {
+      "path": "lib/base.css"
+    },
+    {
+      "path": "lib/amazeui.touch1.override.css",
+      "sourceType": "local",
+      "target": "face"
+    }
+  ]
+}
