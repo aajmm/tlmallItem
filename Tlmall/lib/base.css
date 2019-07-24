@@ -1,0 +1,167 @@
+body,
+span,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+table,
+th,
+td,
+tr {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/*    以上样式为公用样式      */
+div[data-ysp-modelid^="login"] {
+  width: 100%;
+  height: 100%;
+  background: #f3f3f3;
+  position: relative;
+}
+div[data-ysp-modelid^="login"] .login-header {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  display: flex;
+}
+div[data-ysp-modelid^="login"] .login-header i.login-header-close {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  background: url('../local/img/delete1026.jpg') no-repeat 10px 10px;
+  background-size: 30%;
+  position: absolute;
+}
+div[data-ysp-modelid^="login"] .login-header h3 {
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+}
+div[data-ysp-modelid^="login"] .login-banner {
+  width: 100%;
+  height: 200px;
+  background: url('http://111.200.200.18/image/20190221/20190221132053_551.jpg') no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="login"] .login-form-mask {
+  width: 80%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 48%;
+  right: 0;
+  margin: auto;
+}
+div[data-ysp-modelid^="login"] .login-form {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  margin-top: 15px;
+}
+div[data-ysp-modelid^="login"] .login-form p {
+  margin: 0;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  line-height: 45px;
+  background: #fff;
+}
+div[data-ysp-modelid^="login"] .login-form p input {
+  margin: 0;
+  height: 45px;
+  background: 0;
+  margin-left: 20px;
+  font-size: 14px;
+}
+div[data-ysp-modelid^="login"] .login-form p i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+div[data-ysp-modelid^="login"] .login-form p .login-form-username {
+  background: url('../local/img/name.png') no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="login"] .login-form p .login-form-password {
+  background: url('../local/img/code.png') no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="login"] .login-form p:first-child input,
+div[data-ysp-modelid^="login"] .login-form p:nth-child(3) input {
+  border: 0;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(3) {
+  border-bottom: 1px solid #ccc;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(3) img.login-form-code {
+  display: inline-block;
+  width: 75px;
+  height: 20px;
+  margin-right: 20px;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(2) {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(2) input {
+  border: 0;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(4) {
+  width: 100%;
+  height: 40px;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(4) span {
+  font-size: 12px;
+  color: #6f7070;
+  margin-right: 15px;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(5),
+div[data-ysp-modelid^="login"] .login-form p:nth-child(6) {
+  width: 100%;
+  height: 36px;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(5) button,
+div[data-ysp-modelid^="login"] .login-form p:nth-child(6) button {
+  width: 94%;
+  height: 100%;
+  border: 0;
+  border-radius: 1px;
+  outline: none;
+  font-size: 14px;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(5) button {
+  background: #3d65a4;
+  color: #fff;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(6) {
+  margin-top: 15px;
+}
+div[data-ysp-modelid^="login"] .login-form p:nth-child(6) button {
+  background: #fff;
+  color: #3d65a4;
+}

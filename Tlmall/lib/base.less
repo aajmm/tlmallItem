@@ -1,4 +1,156 @@
-// base.less 是整个工程全局的样式文件，会作用到所有的页面模板中
-// Less 的语法与 CSS 兼容，可以直接用 CSS 语法进行编写
-// 如需了解详情，请访问 http://www.lesscss.net/
-// 发布后，base.less 被编译成 base.css 文件
+
+body,span,div,h1,h2,h3,h4,h5,h6,p,li,ul,table,th,td,tr{
+  margin:0;
+  padding:0;
+  font-size: 14px; 
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+/*    以上样式为公用样式      */
+
+//登录页
+div[data-ysp-modelid^="login"]{
+   width: 100%;
+   height: 100%;
+   background: #f3f3f3;
+   position: relative;
+  .login-header{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    display: flex;
+    i.login-header-close{
+      display: inline-block;
+      width: 80px;
+      height: 40px;
+      background: url('../local/img/delete1026.jpg') no-repeat 10px 10px;
+      background-size: 30%;
+      position: absolute;
+    }
+    h3{
+      flex: 1;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+  .login-banner{
+    width: 100%;
+    height: 200px;
+    background: url('http://111.200.200.18/image/20190221/20190221132053_551.jpg') no-repeat;
+    background-size: 100%;
+  }
+  .login-form-mask{
+      width: 80%;
+      height: 50px;
+      background: rgba(0,0,0,.5);
+      text-align: center;
+      line-height: 50px;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 4px;
+      position: absolute;   
+      left: 0;   
+      top: 48%;   
+      right: 0;
+      margin: auto;
+    }
+  .login-form{
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin-top: 15px;
+    p{
+      margin: 0;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      line-height: 45px;
+      background: #fff;
+      input{
+        margin: 0;
+        height: 45px;
+        background: 0;
+        margin-left: 20px;
+        font-size: 14px;
+      }
+      i{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        margin-top: 5px;
+      }
+      .login-form-username{
+        background: url('../local/img/name.png') no-repeat;
+        background-size: 100%;
+      }
+      .login-form-password{
+        background: url('../local/img/code.png') no-repeat;
+        background-size: 100%;
+      }
+    }
+    p:first-child,p:nth-child(3){
+      input{
+        border: 0;
+      }
+    }
+    p:nth-child(3){
+      border-bottom: 1px solid #ccc;
+      img.login-form-code{
+        display: inline-block;
+        width: 75px;
+        height: 20px;
+        margin-right: 20px;
+      }
+    }
+    p:nth-child(2){
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      input{
+        border: 0;
+      }
+    }
+    p:nth-child(4){
+      width: 100%;
+      height: 40px;
+      background: #f3f3f3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      span{
+        font-size: 12px;
+        color: #6f7070;
+        margin-right: 15px;
+      }
+    }
+    p:nth-child(5),p:nth-child(6){
+      width: 100%;
+      height: 36px;
+      background: #f3f3f3;
+      display: flex;
+      justify-content: center;
+      button{
+        width: 94%;
+        height: 100%;
+        border: 0;
+        border-radius: 1px;
+        outline: none;
+        font-size: 14px;
+      }
+    }
+    p:nth-child(5){
+      button{
+        background: #3d65a4;
+        color: #fff;
+      }
+    }
+    p:nth-child(6){
+      margin-top: 15px;
+      button{
+        background: #fff;
+        color: #3d65a4; 
+      }
+    }
+  }
+}

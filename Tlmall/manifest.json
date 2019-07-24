@@ -6,16 +6,33 @@
   "description": "",
   "options": {
     "resource_intercept": {
-      "type": [],
+      "type": [
+        "image",
+        "css"
+      ],
       "ignore": []
     },
-    "resource_inject": []
+    "resource_inject": [],
+    "component_match_mode": "polling",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
   },
   "override_urls": [],
-  "adapter_urls": [],
+  "adapter_urls": [
+    {
+      "title": "login",
+      "url": "adapter://Tlmall/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/login\\.html"
+      ],
+      "demo": [
+        "http://192.168.220.23/login.html"
+      ]
+    }
+  ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
-  "start_url": "enterplorer://Tlmall/local/index.html",
-  "update_time": 1563869171755
+  "start_url": "http://192.168.220.23/login.html",
+  "update_time": 1563958912098,
+  "runtime_env": "1webview"
 }
