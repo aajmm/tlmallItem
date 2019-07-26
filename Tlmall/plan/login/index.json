@@ -3,6 +3,10 @@
   "id": "login",
   "targetURL": "http://192.168.220.23/login.html",
   "jsFile": "index.js",
+  "requires": {
+    "forgotPassword-writeAccount": "../forgotPassword-writeAccount/index.json",
+    "index": "../index/index.json"
+  },
   "chineseName": "登录",
   "description": "",
   "controls": {
@@ -192,6 +196,24 @@
       "toContexts": [
         {
           "toContextId": "context0_DQT6TF"
+        },
+        {
+          "toContextId": "context1_LifFtE",
+          "toModelId": "forgotPassword-writeAccount"
+        },
+        {
+          "toContextId": "context2_JFd3LO",
+          "toModelId": "index"
+        }
+      ]
+    },
+    "flow6_mKA9dS": {
+      "fromContextId": "context0_DQT6TF",
+      "fromAction": "doAction",
+      "fromControlId": "control3_cfaivg",
+      "toContexts": [
+        {
+          "toContextId": "context0_DQT6TF"
         }
       ]
     }
@@ -267,14 +289,16 @@
     "page/title": {
       "contexts": {
         "context0_DQT6TF": [
-          "太力商城(tlmall.com)-提供全国最全面的通讯产品，正品行货、品类丰富、一键进货、安全支付！智享太力，聚赢天下！"
+          "太力商城(tlmall.com)-提供全国最全面的通讯产品，正品行货、品类丰富、一键进货、安全支付！智享太力，聚赢天下！",
+          "普天太力"
         ]
       }
     },
     "page/urls": {
       "contexts": {
         "context0_DQT6TF": [
-          "192.168.220.23/login.html"
+          "192.168.220.23/login.html",
+          "192.168.220.23/myaccount/login.jsp"
         ]
       }
     },
@@ -343,6 +367,38 @@
             "verifyImg",
             "xiaoNengIcon",
             "xiaoNengSvcIcon"
+          ],
+          [
+            "caLicense",
+            "captchaCode",
+            "captchaCode_img",
+            "certEndDate",
+            "certExpiredPop",
+            "charUrl",
+            "currentBranchIds",
+            "currentProvinceId",
+            "downloadTopESA",
+            "frontStaticUrl",
+            "frontStoreUrl",
+            "hasCertWidget",
+            "imgVerifyCode",
+            "isLoggedIn",
+            "isSecureLoggedIn",
+            "keyStoreProvider",
+            "loginBtn",
+            "loginForm",
+            "mobileResource",
+            "needDownloadTopESA",
+            "needUpdateCertPop",
+            "password",
+            "signData",
+            "toSign",
+            "updateCertGap",
+            "updateError",
+            "updateErrorPop",
+            "updateLaterBtn",
+            "updateOkPop",
+            "username"
           ]
         ]
       }
@@ -410,6 +466,71 @@
             "tl-wrap",
             "tlmall-app",
             "tlmall-wx",
+            "triangle_r",
+            "txt_c",
+            "wb",
+            "wc",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info"
+          ],
+          [
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "bd_ra",
+            "bgm",
+            "btn",
+            "btn_bg",
+            "center_imgs",
+            "clearfix",
+            "close",
+            "contect",
+            "contect_b",
+            "contect_lists",
+            "dl_bottom",
+            "dl_btn_ac",
+            "dl_form",
+            "dl_form_c",
+            "dl_form_infos",
+            "dl_text",
+            "dlcont",
+            "dlheader",
+            "float_l",
+            "float_r",
+            "footer",
+            "footer_cc",
+            "footer_center",
+            "footer_cl",
+            "icon",
+            "icon_",
+            "icon_down",
+            "icon_psd",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "icon_user",
+            "iconfont",
+            "img_yzm",
+            "l",
+            "line",
+            "mg_r",
+            "mg_t",
+            "normal_alink",
+            "one",
+            "online",
+            "page",
+            "pd_lr",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "r",
+            "text_yzm",
+            "title",
             "triangle_r",
             "txt_c",
             "wb",
@@ -488,6 +609,41 @@
             "DIV/SPAN/A",
             "DL/DD/A",
             "FORM/DIV/DIV",
+            "SPAN/A/I"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "-/DIV/SCRIPT",
+            "-/DIV/VAR",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H3",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-password",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/P",
+            "DIV/DIV/SPAN",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/P/SPAN",
+            "DIV/SPAN/A",
+            "DL/DD/A",
+            "FORM/DIV/DIV",
+            "FORM/DIV/INPUT-hidden",
+            "FORM/DIV/INPUT-submit",
             "SPAN/A/I"
           ]
         ]
