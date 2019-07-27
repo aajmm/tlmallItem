@@ -2,8 +2,5 @@
 
   var utils = ysp.utils;
   ysp.customTemplateHelper = {};
-  utils.extend(ysp.customTemplateHelper, {
-
-  });
-
+  utils.extend(ysp.customTemplateHelper, {});
 })(window, ysp);

@@ -1,0 +1,241 @@
+{
+  "version": "0.1",
+  "id": "index",
+  "targetURL": "http://192.168.220.23/index.html",
+  "jsFile": "index.js",
+  "chineseName": "首页",
+  "description": "",
+  "controls": {},
+  "contexts": {
+    "context2_JFd3LO": {
+      "controls": [],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {},
+  "pages": {
+    "page2_HkLRpG": {
+      "contextId": "context2_JFd3LO",
+      "layout": []
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context2_JFd3LO": [
+          "太力商城(tlmall.com)-提供全国最全面的通讯产品，正品行货、品类丰富、一键进货、安全支付！智享太力，聚赢天下！"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context2_JFd3LO": [
+          "192.168.220.23/index.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context2_JFd3LO": [
+          [
+            "changeProvince",
+            "close-home-pop",
+            "custAllocQty",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "customerName",
+            "defaultKeyword",
+            "fixedscroll",
+            "floors",
+            "hesrM",
+            "home-pop",
+            "homeM",
+            "imporestAmt",
+            "infoCompletePop",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nTalk_post_hiddenElement",
+            "noProductTip",
+            "noticeBox",
+            "phoneM",
+            "provinceList",
+            "rebateAmt",
+            "scfAmt",
+            "scfLink",
+            "scfText",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "slideBanners",
+            "smartM",
+            "storeAllocQty",
+            "tl-banner-slider",
+            "tl-slider-dots",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context2_JFd3LO": [
+          [
+            "activ",
+            "active",
+            "ad-box",
+            "ad-three",
+            "alert-box",
+            "alert-btn",
+            "alert-con",
+            "alert-tit",
+            "alertClose",
+            "arrow-next",
+            "arrow-prev",
+            "arrows",
+            "attention_info",
+            "bar",
+            "btn-blue",
+            "btn-box",
+            "btn-red",
+            "center-imgs",
+            "city",
+            "city-sel",
+            "clearfix",
+            "close",
+            "dots",
+            "fl",
+            "footer-bottom",
+            "footer-cc",
+            "footer-cl",
+            "footer-last-list",
+            "fr",
+            "icon-cart",
+            "icon-close",
+            "icon-fanli",
+            "icon-jinrong",
+            "icon-kehu",
+            "icon-mendian",
+            "icon-news",
+            "icon-qianbao",
+            "icon-search",
+            "icon-user",
+            "icon-yewu",
+            "icon_down",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "icons",
+            "line",
+            "logo",
+            "menu-list",
+            "menu-search",
+            "money",
+            "notice",
+            "notice-box",
+            "notice-con",
+            "notice-wrap",
+            "number",
+            "placeholder",
+            "pop-link",
+            "pos_info",
+            "price",
+            "quit",
+            "search-box",
+            "search-btn",
+            "searchBox-infos",
+            "slide-locate",
+            "slides",
+            "switch",
+            "tl-ad-one",
+            "tl-ad-three",
+            "tl-ad-two",
+            "tl-ad-wrap",
+            "tl-alert",
+            "tl-alert-a",
+            "tl-content",
+            "tl-fixedscroll",
+            "tl-footer",
+            "tl-footer-lists",
+            "tl-home-pop",
+            "tl-locate-box",
+            "tl-main-menu",
+            "tl-pop-con",
+            "tl-pop-tit",
+            "tl-sales-slide",
+            "tl-slider",
+            "tl-top-ad",
+            "tl-top-menu",
+            "tl-wrap",
+            "tlmall-app",
+            "tlmall-wx",
+            "top-ad-img",
+            "triangle_r",
+            "txt",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context2_JFd3LO": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/SCRIPT",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/EM",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/P",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "LI/A/I",
+            "LI/A/SPAN",
+            "LI/DIV/DIV",
+            "LI/SELECT/OPTION",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/I",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}
