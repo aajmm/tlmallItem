@@ -1,0 +1,408 @@
+{
+  "version": "0.1",
+  "id": "reportAtMeSummed",
+  "targetURL": "http://192.168.1.227/pttlCrm/res/page/workTask/workAtme.html",
+  "jsFile": "index.js",
+  "requires": {
+    "reportAtMeSummendLook": "../reportAtMeSummendLook/index.json"
+  },
+  "chineseName": "汇报给我的总结",
+  "description": "汇报给我的总结",
+  "controls": {
+    "control315_PFxRaT": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control315_PFxRaT"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control316_GEAzs5": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control316_GEAzs5"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control317_q9kIBF": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control317_q9kIBF"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context83_KNsMqG": {
+      "controls": [
+        "control315_PFxRaT",
+        "control316_GEAzs5",
+        "control317_q9kIBF"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow240_h4sDar": {
+      "toContexts": [
+        {
+          "toContextId": "context83_KNsMqG"
+        }
+      ]
+    },
+    "flow241_TvRwKJ": {
+      "fromContextId": "context83_KNsMqG",
+      "fromAction": "doAction",
+      "fromControlId": "control315_PFxRaT",
+      "toContexts": [
+        {
+          "toContextId": "context83_KNsMqG"
+        },
+        {
+          "toContextId": "context84_bsgu84",
+          "toModelId": "reportAtMeSummendLook"
+        }
+      ]
+    },
+    "flow242_pd5oGt": {
+      "fromContextId": "context83_KNsMqG",
+      "fromAction": "doAction",
+      "fromControlId": "control316_GEAzs5",
+      "toContexts": [
+        {
+          "toContextId": "context83_KNsMqG"
+        }
+      ]
+    },
+    "flow243_3symMR": {
+      "fromContextId": "context83_KNsMqG",
+      "fromAction": "doAction",
+      "fromControlId": "control317_q9kIBF",
+      "toContexts": [
+        {
+          "toContextId": "context83_KNsMqG"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page83_eIneWm": {
+      "contextId": "context83_KNsMqG",
+      "layout": [
+        {
+          "id": "uiControl306_RfQZGl",
+          "controlId": "control315_PFxRaT",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl306_RfQZGl",
+                "onGetTemplate": "getTemplate_uiControl306_RfQZGl"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl307_XScNUV",
+          "controlId": "control316_GEAzs5",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl307_XScNUV",
+                "onGetTemplate": "getTemplate_uiControl307_XScNUV"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl308_Xs0S2e",
+          "controlId": "control317_q9kIBF",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl308_Xs0S2e",
+                "onGetTemplate": "getTemplate_uiControl308_Xs0S2e"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context83_KNsMqG": [
+          "汇报给我的总结"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context83_KNsMqG": [
+          "192.168.1.227/pttlCrm/res/page/workTask/workAtme.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context83_KNsMqG": [
+          [
+            "changeTab",
+            "clearBtn",
+            "endTime",
+            "exportExcel",
+            "muilSelectOption",
+            "page",
+            "queryBtnSearch",
+            "searchBtn",
+            "searchHead",
+            "searchInput",
+            "selectSearch",
+            "startTime",
+            "tbody",
+            "thead",
+            "zhanKai"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context83_KNsMqG": [
+          [
+            "act",
+            "all",
+            "atme-main",
+            "bt",
+            "btn-box",
+            "clear-btn",
+            "clearfix",
+            "commpnPage",
+            "con-table",
+            "content",
+            "crossbar",
+            "date",
+            "end",
+            "export",
+            "form-control",
+            "head-bottom",
+            "head-center",
+            "header",
+            "icon",
+            "m-body",
+            "main",
+            "mask",
+            "more",
+            "no-under",
+            "none",
+            "option-box",
+            "option-btn",
+            "option-con",
+            "option-l",
+            "option-list",
+            "option-r",
+            "option-r-c",
+            "out",
+            "outstore",
+            "search",
+            "search-btn",
+            "select",
+            "start",
+            "sure-btn",
+            "tags-table"
+          ],
+          [
+            "act",
+            "active",
+            "all",
+            "arrow-bottom",
+            "atme-main",
+            "bt",
+            "btn-box",
+            "clear-btn",
+            "clearfix",
+            "commpnPage",
+            "con-table",
+            "content",
+            "crossbar",
+            "date",
+            "end",
+            "export",
+            "form-control",
+            "head-bottom",
+            "head-center",
+            "header",
+            "icon",
+            "m-body",
+            "main",
+            "mask",
+            "more",
+            "no-under",
+            "none",
+            "option-box",
+            "option-btn",
+            "option-con",
+            "option-l",
+            "option-list",
+            "option-r",
+            "option-r-c",
+            "out",
+            "outstore",
+            "pagination",
+            "read",
+            "search",
+            "search-btn",
+            "select",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "start",
+            "sure-btn",
+            "tags-table",
+            "view"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context83_KNsMqG": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/SECTION",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/SECTION/DIV",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "SECTION/DIV/A",
+            "SECTION/DIV/DIV",
+            "SECTION/DIV/INPUT-button",
+            "SECTION/DIV/INPUT-text",
+            "SECTION/DIV/SELECT",
+            "TABLE/THEAD/TR",
+            "THEAD/TR/TD"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/IFRAME",
+            "-/DIV/SECTION",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/SECTION/DIV",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "SECTION/DIV/A",
+            "SECTION/DIV/DIV",
+            "SECTION/DIV/INPUT-button",
+            "SECTION/DIV/INPUT-text",
+            "SECTION/DIV/SELECT",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TD",
+            "TR/TD/A",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

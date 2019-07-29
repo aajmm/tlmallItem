@@ -1,0 +1,2722 @@
+{
+  "version": "0.1",
+  "id": "saleAchievement",
+  "targetURL": "http://192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDEvMjYvMjAxOCAxNTo0Mjo0MQ==",
+  "jsFile": "index.js",
+  "requires": {
+    "achievement": "../achievement/index.json"
+  },
+  "chineseName": "销售总览业绩",
+  "description": "销售总览业绩",
+  "firstPaintEnable": false,
+  "controls": {
+    "control274_87SuoT": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.body-bg"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control274_87SuoT"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control287_GUn0CG": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.body-bg DIV.g-main"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control287_GUn0CG"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control288_fFLi4R": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.g-main DIV.m-body DIV.m-box-datas.m-box-sales.clearfix"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control288_fFLi4R"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control289_v6gpoF": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-boxs.clearfix DIV.left.lefth DIV.spaceDimen"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control289_v6gpoF"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control290_UsZ1zJ": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-boxs.clearfix DIV.left.lefth DIV.timeDimen"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control290_UsZ1zJ"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control292_Qltr3M": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control292_Qltr3M"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control293_eT4uNX": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control293_eT4uNX"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control294_QhsLey": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control294_QhsLey"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control295_5r4na7": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control295_5r4na7"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control296_iZC8RV": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control296_iZC8RV"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control291_UPBTUl": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control291_UPBTUl"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control297_1IMG86": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control297_1IMG86"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control298_u9CCfI": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control298_u9CCfI"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control299_6Ow3Fz": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control299_6Ow3Fz"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control300_zQJbUV": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control300_zQJbUV"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control301_2EmTCf": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control301_2EmTCf"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control302_aKUihk": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control302_aKUihk"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control303_vV8TBO": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control303_vV8TBO"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control304_v1JR0a": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control304_v1JR0a"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control305_Szxh2c": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control305_Szxh2c"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control306_mmxX0Q": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control306_mmxX0Q"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control307_KGyTVW": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control307_KGyTVW"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control308_zMrTNa": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"projectTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control308_zMrTNa"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control309_l1dl7U": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[4]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control309_l1dl7U"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control122_QwTVfy": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"bizUnitTable\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.m-body DIV.m-boxs.clearfix DIV.right.righth"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[5]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control122_QwTVfy"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context76_9rFC8S": {
+      "controls": [
+        "control274_87SuoT",
+        "control287_GUn0CG",
+        "control288_fFLi4R",
+        "control289_v6gpoF",
+        "control290_UsZ1zJ",
+        "control292_Qltr3M",
+        "control293_eT4uNX",
+        "control294_QhsLey",
+        "control295_5r4na7",
+        "control296_iZC8RV",
+        "control291_UPBTUl",
+        "control297_1IMG86",
+        "control298_u9CCfI",
+        "control299_6Ow3Fz",
+        "control300_zQJbUV",
+        "control301_2EmTCf",
+        "control302_aKUihk",
+        "control303_vV8TBO",
+        "control304_v1JR0a",
+        "control305_Szxh2c",
+        "control306_mmxX0Q",
+        "control307_KGyTVW",
+        "control308_zMrTNa",
+        "control309_l1dl7U",
+        "control122_QwTVfy"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/192\\.168\\.1\\.227\\/ptDataShow\\/salesAll\\/salesOverview.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow228_qEhMTr": {
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        }
+      ]
+    },
+    "flow233_VvaksC": {
+      "fromContextId": "context76_9rFC8S",
+      "fromAction": "doAction",
+      "fromControlId": "control287_GUn0CG",
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        }
+      ]
+    },
+    "flow124_6en5Ie": {
+      "fromContextId": "context76_9rFC8S",
+      "fromAction": "doAction",
+      "fromControlId": "control274_87SuoT",
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        },
+        {
+          "toContextId": "context30_fLMQCM",
+          "toModelId": "achievement"
+        }
+      ]
+    },
+    "flow172_ZAkPlL": {
+      "fromContextId": "context76_9rFC8S",
+      "fromAction": "doAction",
+      "fromControlId": "control294_QhsLey",
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        }
+      ]
+    },
+    "flow112_sdaiIW": {
+      "fromContextId": "context76_9rFC8S",
+      "fromAction": "doAction",
+      "fromControlId": "control309_l1dl7U",
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        }
+      ]
+    },
+    "flow278_oOCtn1": {
+      "fromContextId": "context76_9rFC8S",
+      "fromAction": "doAction",
+      "fromControlId": "control293_eT4uNX",
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        }
+      ]
+    },
+    "flow231_8OCL35": {
+      "fromContextId": "context76_9rFC8S",
+      "fromAction": "doAction",
+      "fromControlId": "control295_5r4na7",
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        }
+      ]
+    },
+    "flow297_1ybvqT": {
+      "fromContextId": "context76_9rFC8S",
+      "fromAction": "doAction",
+      "fromControlId": "control300_zQJbUV",
+      "toContexts": [
+        {
+          "toContextId": "context76_9rFC8S"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page76_6bJihs": {
+      "contextId": "context76_9rFC8S",
+      "layout": [
+        {
+          "id": "uiControl268_dLVTD8",
+          "controlId": "control274_87SuoT",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl268_dLVTD8",
+                "onGetTemplate": "getTemplate_uiControl268_dLVTD8"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl278_2krAyF",
+          "controlId": "control287_GUn0CG",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl278_2krAyF",
+                "onGetTemplate": "getTemplate_uiControl278_2krAyF"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl279_OeJEyD",
+          "controlId": "control288_fFLi4R",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl279_OeJEyD",
+                "onGetTemplate": "getTemplate_uiControl279_OeJEyD"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl285_XJezgi",
+          "controlId": "control294_QhsLey",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl285_XJezgi",
+                "onGetTemplate": "getTemplate_uiControl285_XJezgi"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl286_3ulbUN",
+          "controlId": "control295_5r4na7",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl286_3ulbUN",
+                "onGetTemplate": "getTemplate_uiControl286_3ulbUN"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl287_uZ8k6E",
+          "controlId": "control296_iZC8RV",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl287_uZ8k6E",
+                "onGetTemplate": "getTemplate_uiControl287_uZ8k6E"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl282_fBrGyT",
+          "controlId": "control291_UPBTUl",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl282_fBrGyT",
+                "onGetTemplate": "getTemplate_uiControl282_fBrGyT"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl292_slttkZ",
+          "controlId": "control301_2EmTCf",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl292_slttkZ",
+                "onGetTemplate": "getTemplate_uiControl292_slttkZ"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl293_kyeDPS",
+          "controlId": "control302_aKUihk",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl293_kyeDPS",
+                "onGetTemplate": "getTemplate_uiControl293_kyeDPS"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl294_iNouQQ",
+          "controlId": "control303_vV8TBO",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl294_iNouQQ",
+                "onGetTemplate": "getTemplate_uiControl294_iNouQQ"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl295_gOVmcq",
+          "controlId": "control304_v1JR0a",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl295_gOVmcq",
+                "onGetTemplate": "getTemplate_uiControl295_gOVmcq"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl296_FeClUy",
+          "controlId": "control305_Szxh2c",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl296_FeClUy",
+                "onGetTemplate": "getTemplate_uiControl296_FeClUy"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl297_ToZ84m",
+          "controlId": "control306_mmxX0Q",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl297_ToZ84m",
+                "onGetTemplate": "getTemplate_uiControl297_ToZ84m"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl298_W0QHtT",
+          "controlId": "control307_KGyTVW",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl298_W0QHtT",
+                "onGetTemplate": "getTemplate_uiControl298_W0QHtT"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl299_K26ukz",
+          "controlId": "control308_zMrTNa",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl299_K26ukz",
+                "onGetTemplate": "getTemplate_uiControl299_K26ukz"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl288_bxQQop",
+          "controlId": "control297_1IMG86",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl288_bxQQop",
+                "onGetTemplate": "getTemplate_uiControl288_bxQQop"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl283_gRSgcF",
+          "controlId": "control292_Qltr3M",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl283_gRSgcF",
+                "onGetTemplate": "getTemplate_uiControl283_gRSgcF"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl300_Oac3Ox",
+          "controlId": "control309_l1dl7U",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl300_Oac3Ox",
+                "onGetTemplate": "getTemplate_uiControl300_Oac3Ox"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl284_A3eeCr",
+          "controlId": "control293_eT4uNX",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl284_A3eeCr",
+                "onGetTemplate": "getTemplate_uiControl284_A3eeCr"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl289_izkz87",
+          "controlId": "control298_u9CCfI",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl289_izkz87",
+                "onGetTemplate": "getTemplate_uiControl289_izkz87"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl120_FgcMoT",
+          "controlId": "control122_QwTVfy",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl120_FgcMoT",
+                "onGetTemplate": "getTemplate_uiControl120_FgcMoT"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl290_nSh4gF",
+          "controlId": "control299_6Ow3Fz",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl290_nSh4gF",
+                "onGetTemplate": "getTemplate_uiControl290_nSh4gF"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl291_RaewTZ",
+          "controlId": "control300_zQJbUV",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl291_RaewTZ",
+                "onGetTemplate": "getTemplate_uiControl291_RaewTZ"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl281_qTQB3k",
+          "controlId": "control290_UsZ1zJ",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl281_qTQB3k",
+                "onGetTemplate": "getTemplate_uiControl281_qTQB3k"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl280_HmOuTv",
+          "controlId": "control289_v6gpoF",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl280_HmOuTv",
+                "onGetTemplate": "getTemplate_uiControl280_HmOuTv"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context76_9rFC8S": [
+          "销售业绩总览-总部领导",
+          "销售业绩总览-办事处主任",
+          "销售业绩总览-业务人员",
+          "销售业绩总览-品牌总经理",
+          "销售业绩总览-产品经理",
+          "销售业绩总览-事业部总经理",
+          "销售业绩总览-分总"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context76_9rFC8S": [
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDEvMjYvMjAxOCAxNTo0Mjo0MQ==",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDIvNDAvMjAxOCAxMDozMzoxMg==",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDIvNDAvMjAxOCAxNDo1OToyMA==",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDIvNDAvMjAxOCAxNjoyMjozMg==",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDIvNDAvMjAxOCAxNzo1MzowMw==",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=SUNHAIMING&encoder=U1VOSEFJTUlORyswMi81My8yMDE4IDExOjExOjA2",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=SUNHAIMING&encoder=U1VOSEFJTUlORyswMi81My8yMDE4IDE0OjA1OjEy",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMDIvNTMvMjAxOCAxNzoyNDo0MQ==",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=SUNWANXIN&encoder=U1VOV0FOWElOKzAyLzUzLzIwMTggMTc6NTg6NTA=",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=YUGUOJIAN&encoder=WVVHVU9KSUFOKzAyLzUzLzIwMTggMTg6MDc6MTY=",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=LIQING&encoder=TElRSU5HKzAyLzU0LzIwMTggMTA6MjA6MDA=",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?a=1&filter_userId=ZENGJIAFU&encoder=WkVOR0pJQUZVKzAyLzU4LzIwMTggMTY6MDY6MTY=",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?filter_userId=XUNAN&encoder=WFVOQU4rMDkvMTQvMjAxOCAxODoxMzozMg==&username=XUNAN&branch=02&firstFlag",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?projectName=%E5%8D%8E%E4%B8%BA%E4%BD%93%E9%AA%8C%E5%BA%97%E4%BE%9B%E8%B4%A7%E5%B9%B3%E5%8F%B0%E5%8E%BF%E7%BA%A7%E4%BD%93%E9%AA%8C%E5%BA%97&type=07&filter_userId=XUNAN&encoder=WFVOQU4rMDkvMTQvMjAxOCAxODoxMzozMg==&date=2018-08-14&cycleType=day&orderLogic=aduit&drill=1&branchName=PTTL_OU_02_%E5%8C%97%E4%BA%AC%E5%88%86%E5%85%AC%E5%8F%B8&officeName=%E5%8C%97%E4%BA%AC%E8%A5%BF%E5%8C%BA%E5%8A%9E%E4%BA%8B%E5%A4%84&salerName=1-7I10GT",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?filter_userId=ZHAOWEILI&encoder=WkhBT1dFSUxJKzA1LzE1LzIwMTkgMTY6MzQ6NDQ=&username=ZHAOWEILI&branch=02&firstFlag",
+          "192.168.1.227/ptDataShow/salesAll/salesOverview?customerName=%E5%8C%97%E4%BA%AC%E4%BA%A8%E9%80%9A%E8%BE%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&type=07&filter_userId=WANGDONGTEST&encoder=V0FOR0RPTkdURVNUKzA1LzMwLzIwMTkgMTc6MzA6MDY=&date=2019-05-30&cycleType=year&orderLogic=aduit&branchName=PTTL_OU_02_%E5%8C%97%E4%BA%AC%E5%88%86%E5%85%AC%E5%8F%B8&officeName=%E5%8C%97%E4%BA%AC%E5%8C%97%E5%8C%BA%E5%8A%9E%E4%BA%8B%E5%A4%84&salerName=1-1HT5WN"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context76_9rFC8S": [
+          [
+            "bizUnit-table",
+            "bizUnitName",
+            "bizUnitTable",
+            "branchName",
+            "branchTable",
+            "configType",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "modelId",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "projectId",
+            "projectName",
+            "sale-table",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnit-table",
+            "bizUnitName",
+            "bizUnitTable",
+            "branchName",
+            "branchTable",
+            "configType",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "modelId",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "projectId",
+            "projectName",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnit-table",
+            "bizUnitName",
+            "bizUnitTable",
+            "branchName",
+            "branchTable",
+            "configType",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "modelId",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "projectId",
+            "projectName",
+            "sale-table",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "bizUnitTable",
+            "branchName",
+            "configType",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "model-table",
+            "modelId",
+            "modelTable",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "positionVersion",
+            "projectId",
+            "projectName",
+            "sale-table",
+            "salerMan-table",
+            "salerManTable",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "bizUnitTable",
+            "branchName",
+            "configType",
+            "cust-table",
+            "custTable",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "model-table",
+            "modelId",
+            "modelTable",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "positionVersion",
+            "projectId",
+            "projectName",
+            "sale-table",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "branchName",
+            "configType",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "modelId",
+            "monthAmt",
+            "monthQty",
+            "office-table",
+            "officeName",
+            "officeTable",
+            "orderLogic",
+            "orderLogic_hidden",
+            "projectId",
+            "projectName",
+            "projectTable",
+            "sale-table",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "branchName",
+            "branchTable",
+            "configType",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "modelId",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "project-table",
+            "projectId",
+            "projectName",
+            "projectTable",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "branchName",
+            "branchTable",
+            "configType",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "modelId",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "project-table",
+            "projectId",
+            "projectName",
+            "projectTable",
+            "sale-table",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "bizUnitTable",
+            "branch-table",
+            "branchName",
+            "branchTable",
+            "configType",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "model-table",
+            "modelId",
+            "modelTable",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "projectId",
+            "projectName",
+            "sale-table",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "bizUnitTable",
+            "branch-table",
+            "branchName",
+            "configType",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "model-table",
+            "modelId",
+            "modelTable",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "officeTable",
+            "orderLogic",
+            "orderLogic_hidden",
+            "projectId",
+            "projectName",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "bizUnitTable",
+            "branchName",
+            "configType",
+            "cust-table",
+            "custTable",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "modelId",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "positionVersion",
+            "projectId",
+            "projectName",
+            "sale-table",
+            "salerName",
+            "selDay",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "branchName",
+            "configType",
+            "currentText",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "modelId",
+            "modelName",
+            "monthAmt",
+            "monthQty",
+            "office-table",
+            "officeName",
+            "officeTable",
+            "orderLogic",
+            "orderLogic_hidden",
+            "projectId",
+            "projectName",
+            "projectTable",
+            "sale-table",
+            "salerName",
+            "searchInput",
+            "selDay",
+            "selectSearch",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ],
+          [
+            "bizUnitName",
+            "bizUnitTable",
+            "branchName",
+            "configType",
+            "currentText",
+            "cust-table",
+            "custTable",
+            "customerName",
+            "cycleType",
+            "cycleType_hidden",
+            "data_",
+            "date",
+            "dayAmt",
+            "dayQty",
+            "departmentId",
+            "dragbar",
+            "drill",
+            "encoder",
+            "lines",
+            "loginName",
+            "map",
+            "materialColor",
+            "model-table",
+            "modelId",
+            "modelName",
+            "modelTable",
+            "monthAmt",
+            "monthQty",
+            "officeName",
+            "orderLogic",
+            "orderLogic_hidden",
+            "positionVersion",
+            "projectId",
+            "projectName",
+            "sale-table",
+            "salerName",
+            "searchInput",
+            "selDay",
+            "selectSearch",
+            "store-table",
+            "storeName",
+            "storeTable",
+            "tren",
+            "type",
+            "weekAmt",
+            "weekQty",
+            "yearAmt",
+            "yearQty"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context76_9rFC8S": [
+          [
+            "a",
+            "activ",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "g-main",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "max",
+            "min",
+            "one",
+            "overview",
+            "right",
+            "righth",
+            "sel",
+            "sel-box",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title",
+            "u-visualmap"
+          ],
+          [
+            "a",
+            "activ",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "g-main",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "max",
+            "min",
+            "one",
+            "overview",
+            "right",
+            "righth",
+            "sel",
+            "sel-box",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-box-infors",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title",
+            "u-visualmap"
+          ],
+          [
+            "BMap_Marker",
+            "BMap_cpyCtrl",
+            "BMap_mask",
+            "BMap_noprint",
+            "a",
+            "activ",
+            "anchorBL",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "g-main",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "one",
+            "overview",
+            "pano_close",
+            "pano_pc_indoor_exit",
+            "right",
+            "righth",
+            "sel",
+            "sel-box",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title"
+          ],
+          [
+            "Up",
+            "a",
+            "activ",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "g-main",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "m-tooltip",
+            "mask",
+            "max",
+            "min",
+            "one",
+            "overview",
+            "right",
+            "righth",
+            "sel",
+            "sel-box",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-box-infors",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title",
+            "u-visualmap"
+          ],
+          [
+            "BMap_Marker",
+            "BMap_cpyCtrl",
+            "BMap_mask",
+            "BMap_noprint",
+            "Up",
+            "a",
+            "activ",
+            "anchorBL",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "g-main",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "one",
+            "overview",
+            "pano_close",
+            "pano_pc_indoor_exit",
+            "right",
+            "righth",
+            "sel",
+            "sel-box",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title"
+          ],
+          [
+            "Up",
+            "a",
+            "activ",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "g-main",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "max",
+            "min",
+            "one",
+            "overview",
+            "right",
+            "righth",
+            "sel",
+            "sel-box",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title",
+            "u-visualmap"
+          ],
+          [
+            "Up",
+            "a",
+            "activ",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "g-main",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "max",
+            "min",
+            "one",
+            "overview",
+            "right",
+            "righth",
+            "sel",
+            "sel-box",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-box-infors",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title",
+            "u-visualmap"
+          ],
+          [
+            "a",
+            "activ",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "current",
+            "g-main",
+            "head-center",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "max",
+            "min",
+            "one",
+            "overview",
+            "reach-center",
+            "right",
+            "righth",
+            "search",
+            "sel",
+            "sel-box",
+            "select",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title",
+            "u-visualmap"
+          ],
+          [
+            "BMap_Marker",
+            "BMap_cpyCtrl",
+            "BMap_mask",
+            "BMap_noprint",
+            "a",
+            "activ",
+            "anchorBL",
+            "autocomplete-suggestions",
+            "b",
+            "box",
+            "branch-sales",
+            "breadcrumb",
+            "btn-display",
+            "businessDimen",
+            "chart",
+            "clear-btn",
+            "clearfix",
+            "content",
+            "current",
+            "g-main",
+            "head-center",
+            "header",
+            "icon",
+            "icon-line",
+            "laydate-icon",
+            "left",
+            "lefth",
+            "m-body",
+            "m-box",
+            "m-box-datas",
+            "m-box-sales",
+            "m-boxs",
+            "m-header",
+            "mask",
+            "one",
+            "overview",
+            "pano_close",
+            "pano_pc_indoor_exit",
+            "reach-center",
+            "right",
+            "righth",
+            "search",
+            "sel",
+            "sel-box",
+            "select",
+            "spaceDimen",
+            "table",
+            "table-content",
+            "time-sel-box",
+            "timeDimen",
+            "title",
+            "trend",
+            "u-selt",
+            "u-table-b",
+            "u-time",
+            "u-title"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context76_9rFC8S": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/CANVAS",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TH/FONT",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/CANVAS",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/THEAD/TR",
+            "THEAD/TR/TH",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/B",
+            "DIV/DIV/CANVAS",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TH/FONT",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/CANVAS",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/DIV",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "SPAN/DIV/IMG",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TH/FONT",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/BR",
+            "DIV/DIV/CANVAS",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/DIV",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "SPAN/DIV/IMG",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TH/FONT",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/THEAD/TR",
+            "THEAD/TR/TH",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/DIV",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "SPAN/DIV/IMG",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TH/FONT",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TH/FONT",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/VAR",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/H1",
+            "DIV/DIV/H2",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-null",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/H1/A",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/DIV",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "SPAN/DIV/IMG",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "TR/TH/FONT",
+            "UL/LI/A"
+          ]
+        ]
+      }
+    }
+  }
+}

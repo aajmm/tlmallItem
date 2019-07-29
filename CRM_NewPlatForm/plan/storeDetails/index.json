@@ -1,0 +1,639 @@
+{
+  "version": "0.1",
+  "id": "storeDetails",
+  "targetURL": "http://192.168.1.227/pttlCrm/store/getStoreDetail",
+  "jsFile": "index.js",
+  "requires": {
+    "storeResponsibilityTeam": "../storeResponsibilityTeam/index.json",
+    "storeBrandCapacity": "../storeBrandCapacity/index.json",
+    "storeClassify": "../storeClassify/index.json",
+    "storeClerkMessage": "../storeClerkMessage/index.json",
+    "storeEndAchievement": "../storeEndAchievement/index.json",
+    "storePayVisit": "../storePayVisit/index.json",
+    "storeOrderFrom": "../storeOrderFrom/index.json",
+    "storeList": "../storeList/index.json",
+    "storeAwardMessage": "../storeAwardMessage/index.json",
+    "storePhoto": "../storePhoto/index.json",
+    "storeSalesReacheds": "../storeSalesReacheds/index.json"
+  },
+  "chineseName": "门店360详情",
+  "description": "门店360详情",
+  "controls": {
+    "control221_xcSa0P": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control221_xcSa0P"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control222_HEnUUn": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"mainContainer\"]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.mainContainer DIV.content-box"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control222_HEnUUn"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control223_JBWGJC": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control223_JBWGJC"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control224_t9VHLX": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"publicHead\"]//DIV[@id=\"clientMenu\"]",
+              "descendant::DIV[@id=\"clientMenu\"]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control224_t9VHLX"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context58_M7WVrw": {
+      "controls": [
+        "control221_xcSa0P",
+        "control222_HEnUUn",
+        "control223_JBWGJC",
+        "control224_t9VHLX"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "^http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/store\\/getStoreDetail"
+      ]
+    }
+  },
+  "flows": {
+    "flow190_ZKZ0xa": {
+      "toContexts": [
+        {
+          "toContextId": "context58_M7WVrw"
+        }
+      ]
+    },
+    "flow191_9ddqlq": {
+      "fromContextId": "context58_M7WVrw",
+      "fromAction": "doAction",
+      "fromControlId": "control224_t9VHLX",
+      "toContexts": [
+        {
+          "toContextId": "context58_M7WVrw"
+        },
+        {
+          "toContextId": "context59_y9OMEP",
+          "toModelId": "storeResponsibilityTeam"
+        },
+        {
+          "toContextId": "context60_7v6ZGI",
+          "toModelId": "storeBrandCapacity"
+        },
+        {
+          "toContextId": "context61_I2BDJ8",
+          "toModelId": "storeClassify"
+        },
+        {
+          "toContextId": "context62_hlJF5F",
+          "toModelId": "storeClerkMessage"
+        },
+        {
+          "toContextId": "context63_igq6IO",
+          "toModelId": "storeEndAchievement"
+        },
+        {
+          "toContextId": "context64_s7oROh",
+          "toModelId": "storePayVisit"
+        },
+        {
+          "toContextId": "context65_pPsNpL",
+          "toModelId": "storeOrderFrom"
+        },
+        {
+          "toContextId": "context68_KTZ2fk",
+          "toModelId": "storeAwardMessage"
+        },
+        {
+          "toContextId": "context69_5HF9PT",
+          "toModelId": "storePhoto"
+        },
+        {
+          "toContextId": "context71_UohzUF",
+          "toModelId": "storeSalesReacheds"
+        }
+      ]
+    },
+    "flow199_mT8pCQ": {
+      "fromContextId": "context58_M7WVrw",
+      "fromAction": "doAction",
+      "fromControlId": "control221_xcSa0P",
+      "toContexts": [
+        {
+          "toContextId": "context58_M7WVrw"
+        },
+        {
+          "toContextId": "context57_AibCE9",
+          "toModelId": "storeList"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page58_ogdT5T": {
+      "contextId": "context58_M7WVrw",
+      "layout": [
+        {
+          "id": "uiControl215_MC9Z9J",
+          "controlId": "control221_xcSa0P",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl215_MC9Z9J",
+                "onGetTemplate": "getTemplate_uiControl215_MC9Z9J"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl216_XgJf2k",
+          "controlId": "control222_HEnUUn",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl216_XgJf2k",
+                "onGetTemplate": "getTemplate_uiControl216_XgJf2k"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl217_fDSFF9",
+          "controlId": "control223_JBWGJC",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl217_fDSFF9",
+                "onGetTemplate": "getTemplate_uiControl217_fDSFF9"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl218_vTu1Sk",
+          "controlId": "control224_t9VHLX",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl218_vTu1Sk",
+                "onGetTemplate": "getTemplate_uiControl218_vTu1Sk"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context58_M7WVrw": [
+          "客户信息"
+        ],
+        "context70_KlELvh": [
+          "销售达成报表",
+          "客户信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context58_M7WVrw": [
+          "192.168.1.227/pttlCrm/store/getStoreDetail"
+        ],
+        "context70_KlELvh": [
+          "192.168.1.227/ptDataShow/report/reportsByPidAndEncoderNwcrm?reportPid=REPORT_NWCRM&reportId=REPORT_NWCRM_STORE_SALES&click_storeName_equ=%E4%BD%9B%E5%B1%B1%E5%B8%82%E6%B5%B7%E5%9B%BD%E5%87%A4%E5%B1%B1%E8%B7%AF%E5%8D%8E%E4%B8%BA%E4%BD%93%E9%AA%8C%E5%BA%97&filter_userId=WANGDONG&encoder=V0FOR0RPTkcrMTAvMjg0LzIwMTcgMTA6NDY6NDk=",
+          "192.168.1.227/pttlCrm/store/getStoreDetail"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context58_M7WVrw": [
+          [
+            "Close",
+            "brandHeader",
+            "city",
+            "clientInfoMenu",
+            "clientMenu",
+            "district",
+            "leftArrow",
+            "mainContainer",
+            "province",
+            "publicHead",
+            "rightArrow",
+            "storeAddr",
+            "storeCloseDate",
+            "storeCost",
+            "storeLatude",
+            "storeLevel",
+            "storeLotude",
+            "storeName",
+            "storeNumber",
+            "storeOpenDate",
+            "storeOrg",
+            "storeSoftOpendate",
+            "storeStatus",
+            "storeType",
+            "userName"
+          ],
+          [
+            "Close",
+            "brandHeader",
+            "city",
+            "clientInfoMenu",
+            "clientMenu",
+            "district",
+            "leftArrow",
+            "mainContainer",
+            "province",
+            "publicHead",
+            "rightArrow",
+            "storeAddr",
+            "storeCloseDate",
+            "storeCost",
+            "storeLatude",
+            "storeLevel",
+            "storeLotude",
+            "storeName",
+            "storeNumber",
+            "storeOpenDate",
+            "storeOrg",
+            "storeSocialCode",
+            "storeSoftOpendate",
+            "storeStatus",
+            "storeType",
+            "userName"
+          ]
+        ],
+        "context70_KlELvh": [
+          [
+            "HideFrm",
+            "aggsArea",
+            "filterArea",
+            "first_pager_list_",
+            "gbox_table_list_",
+            "gview_table_list_",
+            "input_pager_list_",
+            "jqGrid_wrapper",
+            "jqgh_table_list__brand",
+            "jqgh_table_list__department",
+            "jqgh_table_list__materialType",
+            "jqgh_table_list__modelName",
+            "jqgh_table_list__month",
+            "jqgh_table_list__projectName",
+            "jqgh_table_list__projectSeries",
+            "jqgh_table_list__realSalesAmount",
+            "jqgh_table_list__realSalesCount",
+            "jqgh_table_list__salesAmountPercent",
+            "jqgh_table_list__salesCountPercent",
+            "jqgh_table_list__targetSalesAmount",
+            "jqgh_table_list__targetSalesCount",
+            "last_pager_list_",
+            "load_table_list_",
+            "lui_table_list_",
+            "next_pager_list_",
+            "pager_list_",
+            "pager_list__center",
+            "pager_list__left",
+            "pager_list__right",
+            "pg_pager_list_",
+            "prev_pager_list_",
+            "queryForm",
+            "rs_mtable_list_",
+            "sp__pager_list_",
+            "table_list_",
+            "table_list__brand",
+            "table_list__department",
+            "table_list__materialType",
+            "table_list__modelName",
+            "table_list__month",
+            "table_list__projectName",
+            "table_list__projectSeries",
+            "table_list__realSalesAmount",
+            "table_list__realSalesCount",
+            "table_list__salesAmountPercent",
+            "table_list__salesCountPercent",
+            "table_list__targetSalesAmount",
+            "table_list__targetSalesCount"
+          ],
+          [
+            "Close",
+            "brandHeader",
+            "clientInfoMenu",
+            "clientMenu",
+            "leftArrow",
+            "mainContainer",
+            "publicHead",
+            "rightArrow"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context58_M7WVrw": [
+          [
+            "active",
+            "clearfix",
+            "content-box",
+            "fl",
+            "fr",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "mainContainer",
+            "order-con",
+            "order-tit",
+            "order-ul",
+            "right-arrow"
+          ]
+        ],
+        "context70_KlELvh": [
+          [
+            "HeaderButton",
+            "add",
+            "animated",
+            "btn",
+            "btn-rounded",
+            "btn-success",
+            "date_selected",
+            "export",
+            "fa",
+            "fa-times-circle",
+            "fadeInRight",
+            "footrow",
+            "footrow-ltr",
+            "form-control",
+            "glyphicon",
+            "glyphicon-backward",
+            "glyphicon-circle-arrow-up",
+            "glyphicon-forward",
+            "glyphicon-step-backward",
+            "glyphicon-step-forward",
+            "glyphicon-triangle-bottom",
+            "glyphicon-triangle-top",
+            "ibox",
+            "ibox-content",
+            "jqGrid_wrapper",
+            "jqgfirstrow",
+            "jqgrid-overlay",
+            "jqgrow",
+            "l-panel",
+            "l-panel-bar",
+            "loading",
+            "loading-box",
+            "pull-left",
+            "pull-right",
+            "rem",
+            "row",
+            "s-ico",
+            "select_condition",
+            "table",
+            "table-bordered",
+            "table-responsive",
+            "text_box",
+            "ui-common-table",
+            "ui-disabled",
+            "ui-grid-ico-sort",
+            "ui-icon-asc",
+            "ui-icon-desc",
+            "ui-jqgrid",
+            "ui-jqgrid-bdiv",
+            "ui-jqgrid-btable",
+            "ui-jqgrid-caption",
+            "ui-jqgrid-ftable",
+            "ui-jqgrid-hbox",
+            "ui-jqgrid-hdiv",
+            "ui-jqgrid-headlink",
+            "ui-jqgrid-htable",
+            "ui-jqgrid-labels",
+            "ui-jqgrid-pager",
+            "ui-jqgrid-resize",
+            "ui-jqgrid-resize-ltr",
+            "ui-jqgrid-resize-mark",
+            "ui-jqgrid-sdiv",
+            "ui-jqgrid-sortable",
+            "ui-jqgrid-title",
+            "ui-jqgrid-titlebar",
+            "ui-jqgrid-titlebar-close",
+            "ui-jqgrid-view",
+            "ui-overlay",
+            "ui-pager-control",
+            "ui-pager-table",
+            "ui-paging-pager",
+            "ui-pg-button",
+            "ui-pg-input",
+            "ui-pg-selbox",
+            "ui-pg-table",
+            "ui-row-ltr",
+            "ui-separator",
+            "ui-sort-ltr",
+            "ui-th-column",
+            "ui-th-ltr",
+            "wrapper",
+            "wrapper-content"
+          ],
+          [
+            "active",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "right-arrow",
+            "store",
+            "store-border"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context58_M7WVrw": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/UL",
+            "DIV/SPAN/SELECT",
+            "DIV/UL/LI",
+            "LI/DIV/SPAN",
+            "SPAN/SELECT/OPTION",
+            "UL/LI/A",
+            "UL/LI/DIV"
+          ]
+        ],
+        "context70_KlELvh": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/BUTTON",
+            "-/DIV/DIV",
+            "-/DIV/FORM",
+            "-/DIV/IMG",
+            "-/DIV/INPUT-text",
+            "DIV/A/SPAN",
+            "DIV/BUTTON/I",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "FORM/DIV/DIV",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TD/SELECT/OPTION",
+            "TD/TABLE/TBODY",
+            "TH/DIV/SPAN",
+            "THEAD/TR/TH",
+            "TR/TD/INPUT-checkbox",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "TR/TH/DIV",
+            "TR/TH/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/UL",
+            "DIV/UL/LI",
+            "UL/LI/A"
+          ]
+        ]
+      }
+    }
+  }
+}

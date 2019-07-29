@@ -1,0 +1,532 @@
+{
+  "version": "0.1",
+  "id": "creditlimit",
+  "targetURL": "http://192.168.1.227/pttlCrm/cust/customerCreditLimitAndDetial/getCustomerCreditLimit",
+  "jsFile": "index.js",
+  "requires": {},
+  "chineseName": "信用额度",
+  "description": "",
+  "controls": {
+    "control16_fTiXZX": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"publicHead\"]//DIV[@id=\"clientMenu\"]/DIV[1]",
+              "descendant::DIV[@id=\"publicHead\"]//DIV[@id=\"clientMenu\"]//DIV",
+              "descendant::DIV[@id=\"clientMenu\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.head-tab"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control16_fTiXZX"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": ""
+    },
+    "control18_V28Fky": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"mainContainer\"]//DIV[@id=\"linecredit-content\"]",
+              "descendant::DIV[@id=\"linecredit-content\"]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control18_V28Fky"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control23_w9ZF4e": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"mainContainer\"]//DIV[@id=\"linecredit-content\"]/DIV[2]",
+              "descendant::DIV[@id=\"linecredit-content\"]/DIV[2]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.linecredit-table"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control23_w9ZF4e"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control109_ctT4sX": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"mainContainer\"]//DIV[@id=\"linecredit-content\"]",
+              "descendant::DIV[@id=\"linecredit-content\"]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control109_ctT4sX"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context9_7ImllC": {
+      "controls": [
+        "control16_fTiXZX",
+        "control18_V28Fky",
+        "control23_w9ZF4e",
+        "control109_ctT4sX"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "^http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/cust\\/customerCreditLimitAndDetial\\/getCustomerCreditLimit"
+      ]
+    }
+  },
+  "flows": {
+    "flow18_SQzNhw": {
+      "toContexts": [
+        {
+          "toContextId": "context9_7ImllC"
+        }
+      ]
+    },
+    "flow22_tV3phS": {
+      "fromContextId": "context9_7ImllC",
+      "fromAction": "doAction",
+      "fromControlId": "control16_fTiXZX",
+      "toContexts": [
+        {
+          "toContextId": "context9_7ImllC"
+        }
+      ]
+    },
+    "flow33_RqZSin": {
+      "fromContextId": "context9_7ImllC",
+      "fromAction": "doAction",
+      "fromControlId": "control18_V28Fky",
+      "toContexts": [
+        {
+          "toContextId": "context9_7ImllC"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page9_ilTEwf": {
+      "contextId": "context9_7ImllC",
+      "layout": [
+        {
+          "id": "uiControl20_UTxTVW",
+          "controlId": "control16_fTiXZX",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl20_UTxTVW",
+                "onGetTemplate": "getTemplate_uiControl20_UTxTVW"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl22_Lm5hyQ",
+          "controlId": "control18_V28Fky",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl22_Lm5hyQ",
+                "onGetTemplate": "getTemplate_uiControl22_Lm5hyQ"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl26_pzTCke",
+          "controlId": "control23_w9ZF4e",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl26_pzTCke",
+                "onGetTemplate": "getTemplate_uiControl26_pzTCke"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl112_7uZOZV",
+          "controlId": "control109_ctT4sX",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl112_7uZOZV",
+                "onGetTemplate": "getTemplate_uiControl112_7uZOZV"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context9_7ImllC": [
+          "客户信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context9_7ImllC": [
+          "localhost:3000/pttlCrm/cust/customerCreditLimitAndDetial/getCustomerCreditLimit",
+          "192.168.1.227/pttlCrm/cust/customerCreditLimitAndDetial/getCustomerCreditLimit"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context9_7ImllC": [
+          [
+            "Close",
+            "__bs_script__",
+            "brandHeader",
+            "clientInfoMenu",
+            "clientMenu",
+            "credittable",
+            "detailtable",
+            "leftArrow",
+            "leftspan",
+            "linecredit-content",
+            "mainContainer",
+            "publicHead",
+            "rightArrow",
+            "rightspan",
+            "tabletitle",
+            "titleLeft",
+            "titleRight"
+          ],
+          [
+            "Close",
+            "brandHeader",
+            "clientInfoMenu",
+            "clientMenu",
+            "credittable",
+            "detailtable",
+            "leftArrow",
+            "leftspan",
+            "lineCreditPage",
+            "linecredit-content",
+            "mainContainer",
+            "publicHead",
+            "rightArrow",
+            "rightspan",
+            "tabletitle",
+            "titleLeft",
+            "titleRight"
+          ],
+          [
+            "Close",
+            "brandHeader",
+            "clientInfoMenu",
+            "clientMenu",
+            "credittable",
+            "customerCreditLimitListBody",
+            "customerCreditUseDetialListBody",
+            "detailtable",
+            "leftArrow",
+            "leftspan",
+            "lineCreditPage",
+            "linecredit-content",
+            "mainContainer",
+            "publicHead",
+            "rightArrow",
+            "rightspan",
+            "tabletitle",
+            "titleLeft",
+            "titleRight"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context9_7ImllC": [
+          [
+            "active",
+            "col-md-",
+            "col-sm-",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "linecredit-head",
+            "linecredit-money",
+            "linecredit-moneycolor",
+            "linecredit-span",
+            "linecredit-sum",
+            "linecredit-table",
+            "linecredit-tabletitle",
+            "linecredit-tabletitle-active",
+            "linecredit-tabletitle-unactive",
+            "linecredit-title",
+            "right-arrow",
+            "row",
+            "table",
+            "table-striped",
+            "usertitle"
+          ],
+          [
+            "active",
+            "col-md-",
+            "col-sm-",
+            "commpnPage",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "linecredit-head",
+            "linecredit-money",
+            "linecredit-moneycolor",
+            "linecredit-span",
+            "linecredit-sum",
+            "linecredit-table",
+            "linecredit-tabletitle",
+            "linecredit-tabletitle-active",
+            "linecredit-tabletitle-unactive",
+            "linecredit-title",
+            "pagination",
+            "right-arrow",
+            "row",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table",
+            "table-striped",
+            "usertitle"
+          ],
+          [
+            "active",
+            "col-md-",
+            "col-sm-",
+            "commpnPage",
+            "detailtable-employ",
+            "detailtable-usable",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "linecredit-head",
+            "linecredit-money",
+            "linecredit-moneycolor",
+            "linecredit-span",
+            "linecredit-sum",
+            "linecredit-table",
+            "linecredit-tablemoney",
+            "linecredit-tabletitle",
+            "linecredit-tabletitle-active",
+            "linecredit-tabletitle-unactive",
+            "linecredit-title",
+            "pagination",
+            "right-arrow",
+            "row",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table",
+            "table-striped",
+            "usertitle"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context9_7ImllC": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/THEAD/TR",
+            "THEAD/TR/TH",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/THEAD/TR",
+            "THEAD/TR/TH",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

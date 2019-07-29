@@ -1,0 +1,785 @@
+@charset "utf-8";
+.m-popBox {
+  height: 100%;
+  background: rgba(4, 57, 104, 0.8);
+}
+.m-popBox > .header .title {
+  padding: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+.m-popBox > .header .infors {
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+.m-popBox > .header .infors span {
+  margin-right: 64px;
+  font-size: 16px;
+  color: #fff;
+}
+.m-popBox > .header .infors span em {
+  margin-left: 10px;
+}
+.m-popBox > .header .m-nav {
+  padding: 0 7px;
+}
+.m-popBox > .header .m-nav > ul {
+  display: block;
+  height: 54px;
+  padding: 0 15px;
+  background: rgba(0, 16, 40, 0.8);
+  font-size: 0;
+}
+.m-popBox > .header .m-nav > ul li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 0 15px;
+  height: 48px;
+  line-height: 54px;
+}
+.m-popBox > .header .m-nav > ul li a {
+  display: block;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.m-popBox > .header .m-nav > ul li.z-act {
+  border-bottom: 6px solid #f1583e;
+}
+.m-popBox > .header .m-nav > ul li.z-act a {
+  color: #fff;
+}
+.m-popBox > .body {
+  padding: 20px;
+}
+.m-popBox > .body > .content {
+  overflow-y: auto;
+  border-radius: 10px;
+}
+.m-popBox > .body > .content > .center {
+  overflow-y: auto;
+}
+.m-popBox .m-report-infors > .content {
+  padding: 20px;
+  border-radius: 0;
+}
+.m-popBox .footer {
+  margin-top: 10px;
+}
+.m-popBox .m-btns {
+  text-align: center;
+  font-size: 0;
+  margin-right: -15px;
+}
+.m-popBox .m-btns.m-btns-rd .u-btn {
+  border-radius: 3px;
+}
+.m-popBox .m-btns .u-btn {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 80px;
+  height: 30px;
+  font-size: 14px;
+  margin-right: 15px;
+  line-height: 30px;
+}
+.m-popBox .m-btns .u-btn-success {
+  color: #fff;
+  background: #7dc35a;
+  border: 1px solid #7dc35a;
+}
+.m-popBox .m-btns .u-btn-success.disabled {
+  background: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  cursor: default;
+}
+.m-popBox .m-btns .u-btn-primary {
+  color: #fff;
+  background: #2c81ff;
+  border: 1px solid #2c81ff;
+}
+.m-popBox .m-btns .u-btn-primary.disabled {
+  background: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  cursor: default;
+}
+.m-popBox .m-btns .u-btn-default {
+  color: #999;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.m-popBox .m-btns .u-btn-default.disabled {
+  color: #bebebe;
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  cursor: default;
+}
+/*-- 拜访管理 > 拜访-报告（浮层） --*/
+/*报告内容的样式 */
+.m-report-infors {
+  position: relative;
+}
+.m-report-infors.pd {
+  padding: 14px 13px 0 13px;
+}
+.m-report-infors.mt {
+  margin-top: 10px;
+}
+.m-report-infors.mt2 {
+  margin-top: 15px;
+}
+.m-report-infors .icon-arrow {
+  position: absolute;
+  top: 2px;
+  right: 59px;
+  width: 22px;
+  height: 16px;
+  background-position: -4px -92px;
+}
+.m-report-infors > .content {
+  padding: 10px;
+  border: 1px solid #dedede;
+  background: #f7f7f7;
+  border-radius: 10px;
+}
+.m-report-infors .header {
+  padding: 0 10px 10px;
+  border-bottom: 1px solid #dedede;
+}
+.m-report-infors .header input {
+  width: 125px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-right: 60px;
+  font-size: 15px;
+}
+.m-report-infors .header select {
+  font-size: 15px;
+}
+.m-report-infors .header .inform-coll {
+  display: inline-block;
+  float: right;
+  margin-top: 10px;
+  color: #2c81fe;
+  text-decoration: underline;
+}
+.m-report-infors .body {
+  padding: 20px 0 20px 0;
+}
+.m-report-infors .body .m-uploading {
+  overflow: hidden;
+}
+.m-report-infors .body .m-uploading .title {
+  display: inline-block;
+  line-height: 50px;
+  min-width: 105px;
+  margin-right: 10px;
+  vertical-align: top;
+  text-align: right;
+  color: #333;
+  font-size: 14px;
+}
+.m-report-infors .body .lists-one {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.m-report-infors .body .lists-one h6 {
+  display: inline-block;
+  width: 105px;
+  margin: 15px 10px 0 0;
+  vertical-align: top;
+  text-align: right;
+  color: #333;
+  font-size: 14px;
+}
+.m-report-infors .body .lists-one textarea,
+.m-report-infors .body .lists-one .chatUsers {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  color: #666;
+  padding: 10px 10px;
+  min-height: 40px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  width: calc(100% - 640px);
+  border: 1px solid #dfdfdf;
+  overflow: hidden;
+}
+.m-report-infors .body .lists-one textarea:disabled {
+  background-color: #fff;
+}
+.m-report-infors .body .lists-one .textearaDiv {
+  display: inline-block;
+  min-height: 80px;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #666;
+  padding: 10px 10px;
+  line-height: 18px;
+  width: calc(100% - 640px);
+  border: 1px solid #dfdfdf;
+  resize: vertical;
+  word-wrap: break-word;
+}
+.m-report-infors .body .lists-one .tags-box {
+  float: right;
+  margin-right: 40px;
+  width: 440px;
+}
+.m-report-infors .body .lists-one .tags-box button {
+  min-width: 60px;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  margin: 0 10px 13px 0;
+  padding: 0 10px;
+  background: #fff;
+  color: #666;
+}
+.m-report-infors .body .lists-one .tags-box button.activ {
+  background: #2c81fe;
+  border: 1px solid #2c81fe;
+  color: #fff;
+}
+.m-report-infors .body .lists-one .chatUsers {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background-color: #fff;
+  height: 80px;
+  /*margin-top: 20px;*/
+}
+.m-report-infors .body .lists-one .chatUsers > .tipFont {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 14px;
+  color: #999;
+  padding: 5px;
+}
+.m-report-infors .body .lists-one .chatUsers .users {
+  overflow-y: auto;
+  height: 53px;
+}
+.m-report-infors .body .lists-one .chatUsers .user {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 4px 6px 4px 5px;
+  text-align: center;
+  font-size: 0;
+}
+.m-report-infors .body .lists-one .chatUsers .user .icon-close {
+  position: relative;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  background-position: -10px -40px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.m-report-infors .body .lists-one .chatUsers .user span {
+  font-size: 12px;
+  color: #666;
+  vertical-align: middle;
+}
+.m-report-infors .body .lists-one .chatUsers-check {
+  height: 70px;
+  padding-bottom: 10px;
+  border: 0;
+}
+.m-report-infors .body .lists-one .chatUsers-check .tipFont {
+  top: 10px;
+  left: 10px;
+  bottom: auto;
+}
+.m-report-infors .body .lists-one .chatUsers-check .names {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  text-indent: 20px;
+}
+.m-report-infors .footer {
+  position: relative;
+}
+.m-report-infors .footer .text {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 12px;
+  color: #2c81ff;
+}
+.m-report-infors .footer .text .icon {
+  position: relative;
+  top: -1px;
+  width: 9px;
+  height: 9px;
+  background-position: -45px -75px;
+  margin-left: 4px;
+}
+.m-report-infors .footer .title {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.m-report-infors .footer > .leaveWord {
+  background: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  border: 1px solid #dfdfdf;
+}
+.m-report-infors .footer > .leaveWord .chat-one {
+  padding: 15px 10px 12px 10px;
+  border-bottom: 1px dotted #dfdfdf;
+}
+.m-report-infors .footer > .leaveWord .chat-one h6 {
+  font-size: 12px;
+  color: #2c81ff;
+  margin-bottom: 7px;
+}
+.m-report-infors .footer > .leaveWord .chat-one p {
+  font-size: 12px;
+  color: #333;
+  line-height: 18px;
+}
+.m-report-infors .footer > .leaveWord .chat-one p b {
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #2c81ff;
+}
+.m-report-infors .footer > .leaveWord .chat-one.z-checked {
+  background: #f7f7f7;
+}
+.m-report-infors .footer > .leaveWord .textarea {
+  position: relative;
+  margin-top: 15px;
+}
+.m-report-infors .footer > .leaveWord .textarea > div {
+  position: relative;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+  padding: 10px;
+}
+.m-report-infors .footer > .leaveWord .textarea > div span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: #ccc;
+}
+.m-report-infors .footer > .leaveWord .textarea > div textarea {
+  width: 94%;
+  height: 40px;
+  font-size: 12px;
+  color: #333;
+  border: 0;
+  resize: none;
+}
+.m-report-infors .footer > .leaveWord .textarea .tipFont,
+.m-report-infors .footer > .leaveWord .textarea .btn {
+  position: absolute;
+  z-index: 10;
+}
+.m-report-infors .footer > .leaveWord .textarea .btn {
+  width: 44px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  right: 10px;
+  bottom: 10px;
+  background: #2c81ff;
+}
+.m-report-infors .footer > .leaveWord .textarea .tipFont {
+  right: 64px;
+  bottom: 14px;
+  font-size: 14px;
+  color: #999;
+}
+#CloseReportPopRoot {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('../images/关闭60.png') no-repeat center center;
+  background-size: 100%;
+  margin: 30px 30px 0px 0px;
+}
+.m-popBox .m-btns.m-btns-rd .u-btn {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background: #2c81fe;
+  margin: 40px 10px 0;
+}
+.m-popBox .m-btns.m-btns-rd .u-btn:first-child {
+  background: #7cc359;
+}
+.m-popBox .m-btns.m-btns-rd .u-btn:last-child {
+  background: none;
+  color: #999;
+  width: 68px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #dfdfdf;
+}
+.m-uploading > .imagesBox {
+  margin: 5px 0 20px 4px;
+}
+/* 上传组件的样式 */
+.m-uploading {
+  margin-top: 20px;
+  font-size: 0;
+}
+.m-uploading .textBtn {
+  display: none;
+  font-size: 12px;
+  color: #2c81ff;
+  margin-left: 20px;
+  line-height: 90px;
+  text-decoration: underline;
+}
+.m-uploading > .title,
+.m-uploading > .imagesBox {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+}
+.m-uploading > .title {
+  margin: 0;
+  margin-right: 30px;
+  line-height: 90px;
+  font-size: 14px;
+  color: #666;
+}
+.m-uploading > .imagesBox {
+  position: relative;
+  background: none;
+  padding: 0;
+  border: 0;
+  margin-right: -10px;
+  width: 76%;
+  height: 115px;
+  overflow: hidden;
+  font-size: 0;
+}
+.m-uploading > .imagesBox .uploadBtn,
+.m-uploading > .imagesBox .images,
+.m-uploading > .imagesBox .file-item,
+.m-uploading > .imagesBox .temp {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  margin-right: 10px;
+}
+.m-uploading > .imagesBox .uploadBtn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 88px;
+  height: 88px;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+  margin-bottom: 16px;
+}
+.m-uploading > .imagesBox .images {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.m-uploading > .imagesBox .images .temp {
+  width: 90px;
+  height: 90px;
+}
+.m-uploading > .imagesBox .file-item {
+  position: relative;
+  margin-bottom: 16px;
+}
+.m-uploading > .imagesBox .file-item img {
+  width: 90px;
+  height: 90px;
+}
+.m-uploading > .imagesBox .file-item .info {
+  width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 7px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #999;
+}
+.m-uploading > .imagesBox .file-item .file-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.m-uploading > .imagesBox .file-item .file-panel .cancel {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-top: 1px;
+  margin-right: 1px;
+  text-indent: -9999em;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icons.png) no-repeat;
+  background-position: -30px -90px;
+  cursor: pointer;
+}
+.m-uploading > .imagesBox .file-item .file-panel .cancel:hover {
+  background-position: -50px -90px;
+}
+.webuploader-container {
+  position: relative;
+}
+.webuploader-element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.webuploader-pick {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: url(../images/upload-bg.png) center no-repeat;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.webuploader-pick-disable {
+  opacity: 0.6;
+  pointer-events: none;
+}
+/* 联系人 浮层弹窗（样式类似rtx） */
+.m-contact {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -380px;
+  width: 380px;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+}
+.m-contact > .header {
+  position: relative;
+  height: 79px;
+  border-bottom: 1px solid #dfdfdf;
+  background: #f5f6f8;
+}
+.m-contact > .header .icon-back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 12px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 20px;
+  height: 30px;
+  background-position: 0 -160px;
+  cursor: pointer;
+}
+.m-contact > .header .search {
+  z-index: 10;
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 280px;
+  height: 28px;
+}
+.m-contact > .header .search label {
+  position: absolute;
+  line-height: 28px;
+  font-size: 12px;
+  color: #999;
+  text-indent: 14px;
+  cursor: text;
+}
+.m-contact > .header .search input {
+  border: 1px solid #dfdfdf;
+  width: 100%;
+  height: 100%;
+  padding-left: 14px;
+  padding-right: 28px;
+  background: #fff;
+  font-size: 12px;
+  color: #333;
+  border-radius: 50px;
+}
+.m-contact > .header .search .icon-search {
+  position: absolute;
+  right: 14px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 12px;
+  height: 13px;
+  background-position: -84px -2px;
+}
+.m-contact > .header .search .search-lists a {
+  display: block;
+  background: #fff;
+  width: 255px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 12px;
+  color: #333;
+  margin: 0 auto;
+  text-indent: 10px;
+}
+.m-contact > .header .search .search-lists a:hover {
+  background: #f5f5f5;
+}
+.m-contact > .body {
+  position: relative;
+  margin-top: 18px;
+  overflow-y: auto;
+}
+.m-contact > .body .box:first-child > .title {
+  border-top: 1px solid #dfdfdf;
+}
+.m-contact > .body .box:last-child > .title {
+  border-bottom: 1px solid #dfdfdf;
+}
+.m-contact > .body .box > .title {
+  position: relative;
+  background: #f5f6f8;
+  height: 42px;
+  line-height: 42px;
+  font-size: 0;
+  padding-left: 24px;
+}
+.m-contact > .body .box .icon-displayArrow,
+.m-contact > .body .box .img-folder,
+.m-contact > .body .box .area-name {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+}
+.m-contact > .body .box .icon-displayArrow {
+  width: 6px;
+  height: 10px;
+  background-position: -22px -40px;
+}
+.m-contact > .body .box .img-folder {
+  background: url(../images/folder.png) center no-repeat;
+  width: 22px;
+  height: 18px;
+  margin-left: 14px;
+  margin-right: 10px;
+}
+.m-contact > .body .box .area-name {
+  font-size: 12px;
+  color: #333;
+}
+.m-contact > .body .box.z-act > .title {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+}
+.m-contact > .body .box.z-act .icon-displayArrow {
+  width: 10px;
+  height: 6px;
+  background-position: -30px -42px;
+  margin-left: -4px;
+}
+.m-contact > .body .lists {
+  display: none;
+}
+.m-contact > .body .lists .lists-one {
+  height: 42px;
+  line-height: 42px;
+  padding-left: 50px;
+}
+.m-contact > .body .lists .lists-one.z-tipAct {
+  background: #dbdcdc;
+}
+.m-contact > .body .lists .lists-one .img-user,
+.m-contact > .body .lists .lists-one label span {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+}
+.m-contact > .body .lists .lists-one .img-user {
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: url(../images/usersHead.png) no-repeat;
+  background-position: -22px 0;
+}
+.m-contact > .body .lists .lists-one .checked ~ label .img-user {
+  background-position: 0 0;
+}
+.m-contact > .body .lists .lists-one label span {
+  font-size: 12px;
+  color: #000;
+}
+.m-contact > .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+}
+.m-contact > .footer .checkAll {
+  float: left;
+  margin-left: 16px;
+  margin-top: 20px;
+  font-size: 0;
+}
+.m-contact > .footer .checkAll label {
+  font-size: 14px;
+  color: #333;
+  vertical-align: middle;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.m-contact > .footer .btn {
+  display: block;
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  width: 82px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  background: #2c81ff;
+  border-radius: 3px;
+}

@@ -1,0 +1,214 @@
+{
+  "version": "0.1",
+  "id": "storeResponsibilityTeam",
+  "targetURL": "http://192.168.1.227/pttlCrm/store/getStoreFins",
+  "jsFile": "index.js",
+  "chineseName": "门店责任团队",
+  "description": "门店责任团队",
+  "controls": {
+    "control225_exIkE0": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"mainContainer\"]/DIV[1]",
+              "descendant::DIV[@id=\"mainContainer\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.store-border"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control225_exIkE0"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control226_7ufw76": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control226_7ufw76"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context59_y9OMEP": {
+      "controls": [
+        "control225_exIkE0",
+        "control226_7ufw76"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "^http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/store\\/getStoreFins"
+      ]
+    }
+  },
+  "flows": {
+    "flow192_ipqE20": {
+      "toContexts": [
+        {
+          "toContextId": "context59_y9OMEP"
+        }
+      ]
+    },
+    "flow193_EQXkWI": {
+      "fromContextId": "context59_y9OMEP",
+      "fromAction": "doAction",
+      "fromControlId": "control226_7ufw76",
+      "toContexts": [
+        {
+          "toContextId": "context59_y9OMEP"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page59_1GQNa1": {
+      "contextId": "context59_y9OMEP",
+      "layout": [
+        {
+          "id": "uiControl220_STsyyw",
+          "controlId": "control226_7ufw76",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl220_STsyyw",
+                "onGetTemplate": "getTemplate_uiControl220_STsyyw"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl219_nC6h9c",
+          "controlId": "control225_exIkE0",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl219_nC6h9c",
+                "onGetTemplate": "getTemplate_uiControl219_nC6h9c"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context59_y9OMEP": [
+          "客户信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context59_y9OMEP": [
+          "192.168.1.227/pttlCrm/store/getStoreFins"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context59_y9OMEP": [
+          [
+            "Close",
+            "brandHeader",
+            "clientInfoMenu",
+            "clientMenu",
+            "leftArrow",
+            "mainContainer",
+            "publicHead",
+            "rightArrow",
+            "tbodyContent"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context59_y9OMEP": [
+          [
+            "active",
+            "content-store",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "right-arrow",
+            "store",
+            "store-body",
+            "store-border",
+            "store-head",
+            "table"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context59_y9OMEP": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "UL/LI/A"
+          ]
+        ]
+      }
+    }
+  }
+}

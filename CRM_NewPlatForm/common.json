@@ -1,0 +1,86 @@
+{
+  "special_models": [
+    {
+      "path": "plan/login/index.json"
+    }
+  ],
+  "common_js": [
+    {
+      "path": "lib/base.js"
+    },
+    {
+      "path": "lib/customTemplate.js"
+    },
+    {
+      "path": "lib/location.init.js",
+      "target": "face"
+    },
+    {
+      "path": "lib/ysp.ext.js",
+      "target": "face"
+    },
+    {
+      "target": "face",
+      "path": "lib/echarts.min.js"
+    },
+    {
+      "path": "lib/awebuploader.js",
+      "sourceType": "local",
+      "target": "face"
+    },
+    {
+      "path": "lib/china.js",
+      "target": "face"
+    },
+    {
+      "path": "lib/ysp.compatibility.js",
+      "target": "face"
+    },
+    {
+      "path": "lib/main.js",
+      "target": "face"
+    },
+    {
+      "path": "lib/viewer.js",
+      "target": "face"
+    },
+    {
+      "path": "lib/Barrett.js",
+      "sourceType": "local",
+      "target": "back"
+    },
+    {
+      "path": "lib/BigInt.js",
+      "sourceType": "local",
+      "target": "back"
+    },
+    {
+      "path": "lib/RSA.js",
+      "sourceType": "local",
+      "target": "back"
+    },
+    {
+      "path": "lib/baidu.api.js",
+      "sourceType": "local",
+      "target": "face"
+    },
+    {
+      "path": "lib/MD5.js",
+      "sourceType": "local",
+      "target": "face"
+    }
+  ],
+  "common_css": [
+    {
+      "path": "lib/base.css"
+    },
+    {
+      "path": "lib/main.css",
+      "target": "face"
+    },
+    {
+      "path": "lib/viewer.css",
+      "target": "face"
+    }
+  ]
+}
