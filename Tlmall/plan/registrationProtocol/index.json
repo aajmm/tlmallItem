@@ -1,0 +1,185 @@
+{
+  "version": "0.1",
+  "id": "registrationProtocol",
+  "targetURL": "http://192.168.220.23/page/notify/agreement.html",
+  "jsFile": "index.js",
+  "chineseName": "注册协议",
+  "description": "",
+  "controls": {
+    "control12_vuqSWd": {
+      "location": {
+        "data": {
+          "tagName": "H4"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wc1200 DIV.zc_agreement DIV.content H4"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/H4[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control12_vuqSWd"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control13_9Li90b": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wc1200 DIV.zc_agreement DIV.content"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control13_9Li90b"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context4_6pbBN6": {
+      "controls": [
+        "control12_vuqSWd",
+        "control13_9Li90b"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow11_oGNl3d": {
+      "toContexts": [
+        {
+          "toContextId": "context4_6pbBN6"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page4_bWMD8W": {
+      "contextId": "context4_6pbBN6",
+      "layout": [
+        {
+          "id": "uiControl12_ckrmMA",
+          "controlId": "control12_vuqSWd",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl12_ckrmMA",
+                "onGetTemplate": "getTemplate_uiControl12_ckrmMA"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl13_5sKTkI",
+          "controlId": "control13_9Li90b",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl13_5sKTkI",
+                "onGetTemplate": "getTemplate_uiControl13_5sKTkI"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context4_6pbBN6": [
+          "普天太力"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context4_6pbBN6": [
+          "192.168.220.23/page/notify/agreement.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context4_6pbBN6": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context4_6pbBN6": [
+          [
+            "btn",
+            "content",
+            "wb",
+            "wc",
+            "zc_agreement",
+            "zc_logo"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context4_6pbBN6": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H4",
+            "DIV/DIV/H5",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/P",
+            "DIV/P/BR"
+          ]
+        ]
+      }
+    }
+  }
+}

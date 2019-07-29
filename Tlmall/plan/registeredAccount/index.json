@@ -1,0 +1,309 @@
+{
+  "version": "0.1",
+  "id": "registeredAccount",
+  "targetURL": "http://192.168.220.23/register.html",
+  "jsFile": "index.js",
+  "requires": {
+    "registrationProtocol": "../registrationProtocol/index.json"
+  },
+  "chineseName": "注册账号",
+  "description": "",
+  "controls": {
+    "control10_eq66PD": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control10_eq66PD"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control11_mXMeeq": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"register_content\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb100 DIV.wc1200.zc_login_content"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control11_mXMeeq"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context3_UgBsqG": {
+      "controls": [
+        "control10_eq66PD",
+        "control11_mXMeeq"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow9_ISa9i5": {
+      "toContexts": [
+        {
+          "toContextId": "context3_UgBsqG"
+        }
+      ]
+    },
+    "flow10_v1HpFw": {
+      "fromContextId": "context3_UgBsqG",
+      "fromAction": "doAction",
+      "fromControlId": "control11_mXMeeq",
+      "toContexts": [
+        {
+          "toContextId": "context3_UgBsqG"
+        },
+        {
+          "toContextId": "context4_6pbBN6",
+          "toModelId": "registrationProtocol"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page3_V26kTI": {
+      "contextId": "context3_UgBsqG",
+      "layout": [
+        {
+          "id": "uiControl10_i7M9b4",
+          "controlId": "control10_eq66PD",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl10_i7M9b4",
+                "onGetTemplate": "getTemplate_uiControl10_i7M9b4"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl11_19H7Ro",
+          "controlId": "control11_mXMeeq",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl11_19H7Ro",
+                "onGetTemplate": "getTemplate_uiControl11_19H7Ro"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context3_UgBsqG": [
+          "太力商城(tlmall.com)-提供全国最全面的通讯产品，正品行货、品类丰富、一键进货、安全支付！智享太力，聚赢天下！"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context3_UgBsqG": [
+          "192.168.220.23/register.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context3_UgBsqG": [
+          [
+            "agreement",
+            "captchaCode",
+            "captchaCodeDiv",
+            "captchaCodeTip",
+            "captchaCode_img",
+            "city",
+            "companyName",
+            "companyNameDiv",
+            "companyNameTip",
+            "confirmPassword",
+            "confirmPasswordDiv",
+            "confirmPasswordTip",
+            "contactPerson",
+            "contactPersonDiv",
+            "contactPersonTip",
+            "email",
+            "emailDiv",
+            "emailTip",
+            "errorMessage",
+            "immediately_verify",
+            "mobileCode",
+            "mobileCodeDiv",
+            "mobileCodeTip",
+            "nTalk_post_hiddenElement",
+            "password",
+            "passwordDiv",
+            "passwordTip",
+            "phoneNumber",
+            "phoneNumberDiv",
+            "phoneNumberTip",
+            "province",
+            "reg",
+            "reg-timer",
+            "register_content",
+            "tucaoIcon",
+            "userName",
+            "userNameDiv",
+            "userNameTip",
+            "wb",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context3_UgBsqG": [
+          [
+            "a",
+            "address-province",
+            "alink",
+            "alink_line",
+            "attention_info",
+            "b",
+            "btn",
+            "btns",
+            "clearfix",
+            "cr_red",
+            "errors",
+            "hint",
+            "iCheck-helper",
+            "ick_zc",
+            "icon_down",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "img_yzm",
+            "input_title",
+            "input_txt",
+            "iptActive",
+            "iradio_tlmall",
+            "itxt_title",
+            "itxt_title_bdr",
+            "line",
+            "logo-container",
+            "normal_alink",
+            "pos_info",
+            "register-title",
+            "sActive",
+            "text_yzm",
+            "tit-captch",
+            "tlmall-app",
+            "tlmall-wx",
+            "triangle_r",
+            "wb",
+            "wc",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info",
+            "zc_btn",
+            "zc_btn_big",
+            "zc_footer",
+            "zc_infos",
+            "zc_input",
+            "zc_input_s",
+            "zc_login",
+            "zc_login_content",
+            "zc_login_infos",
+            "zc_logo",
+            "zc_oblock",
+            "zc_select"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context3_UgBsqG": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/SCRIPT",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H4",
+            "DIV/DIV/H5",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-email",
+            "DIV/DIV/INPUT-password",
+            "DIV/DIV/INPUT-radio",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/INS",
+            "DIV/DIV/SPAN",
+            "DIV/FORM/DIV",
+            "DIV/H5/EM",
+            "DIV/SELECT/OPTION",
+            "FORM/DIV/A",
+            "FORM/DIV/DIV",
+            "FORM/DIV/EM",
+            "FORM/DIV/H5",
+            "FORM/DIV/IMG",
+            "FORM/DIV/INPUT-text",
+            "FORM/DIV/LABEL",
+            "FORM/DIV/SELECT",
+            "FORM/DIV/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}
