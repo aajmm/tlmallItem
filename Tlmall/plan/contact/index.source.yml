@@ -1,0 +1,124 @@
+getTemplate_uiControl11_Kri5BV: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick(e) {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.selectedIndex,\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-top\">\n        <span className=\"back\"></span>\n        企业联系人管理\n      </div>\n    )\n  }\n}"
+getData_control13_NR1TdQ: ''
+doAction_uiControl11_Kri5BV: ''
+getTemplate_uiControl12_zTrKDR: |-
+  import {Component,Fragment} from 'react'; 
+  export default class extends Component{
+    handlerClick(e) {
+     let handler=this.props.customHandler;
+      let target=e.target;
+      if(handler){
+        handler({
+          data:target.selectedIndex,
+          eventType:"click"
+        })
+      }
+    }
+    render(){
+      let data = this.props.customData;
+      let me=this;
+      return(
+        <Fragment>
+          <div className="form-box" style={{display:data.onOff}}>
+            <div className="form-li"><span>姓名</span><input type="text" value="" /></div>
+            <div className="form-li"><span>性别</span><div className="option-show"></div></div>
+            <div className="form-li"><span>联系人类型</span><div className="option-show"></div></div>
+            <div className="form-li"><span>联系电话</span><input type="text" value="" /></div>
+            <div className="form-li"><span>传真</span><input type="text" value="" /></div>
+            <div className="form-li"><span>电子邮件</span><input type="text" value="" /></div>
+            <div className="form-li"><span>户口性质</span><div className="option-show"></div></div>
+            <div className="form-li"><span>生日</span><input type="text" className="sActive" value="" /></div>
+            <div className="form-li"><span>教育背景</span><input type="text" value="" /></div>
+            <div className="form-li"><span>婚姻状况</span><div className="option-show"></div></div>
+            <div className="form-li"><span>职务</span><input type="text" value="" /></div>
+            <div className="form-li"><span>部门</span><input type="text" value="" /></div>
+            <div className="form-li"><span>备注</span><textarea></textarea></div>
+            <div className="save-box"><span>保存</span><span>取消</span></div>
+          </div>
+          <div className="ysp-selpop-box">
+            <div className="pop-mask"></div>
+            <div className="pop-con">
+              <ul className="sel-lists">
+                <li>男</li>
+                <li>女</li>
+              </ul>
+            </div>
+          </div>
+        </Fragment>
+      )
+    }
+  }
+getData_control14_smhkAT: >-
+  if(!elem){
+    return;
+  }
+
+  let data = {
+    sexs:[],
+    contacts:[],
+    residence:[],
+    marital:[]
+  };
+
+  let sexs = elem.querySelector("#contact_sex").querySelectorAll("option");
+
+  [].map.call(sexs,function(d,i){
+    data.sexs.push(d.textContent);
+  });
+
+  let contacts =
+  elem.querySelector("#contact_contact").querySelectorAll("option");
+
+  [].map.call(contacts,function(d,i){
+    data.contacts.push(d.textContent);
+  });
+
+  let residence =
+  elem.querySelector("#contact_residence").querySelectorAll("option");
+
+  [].map.call(residence,function(d,i){
+    data.residence.push(d.textContent);
+  });
+
+  let marital =
+  elem.querySelector("#contact_marital").querySelectorAll("option");
+
+  [].map.call(marital,function(d,i){
+    data.marital.push(d.textContent);
+  });
+
+  data.onOff =elem.style.display;
+
+  data.contact_name = elem.querySelector("#contact_name").value;
+
+  data.contact_sex =
+  elem.querySelector("#contact_sex").querySelector("option:checked").textContent;
+
+  data.contact_contact =
+  elem.querySelector("#contact_contact").querySelector("option:checked").textContent;
+
+  data.contact_contactPhone = elem.querySelector("#contact_contactPhone").value;
+
+  data.contact_fax = elem.querySelector("#contact_fax").value;
+
+  data.contact_email = elem.querySelector("#contact_email").value;
+
+  data.contact_residence =
+  elem.querySelector("#contact_residence").querySelector("option:checked").textContent;
+
+  data.contact_birthday = elem.querySelector("#contact_birthday").value;
+
+  data.contact_background = elem.querySelector("#contact_background").value;
+
+  data.contact_marital =
+  elem.querySelector("#contact_marital").querySelector("option:checked").textContent;
+
+  data.contact_job = elem.querySelector("#contact_job").value;
+
+  data.contact_department = elem.querySelector("#contact_department").value;
+
+  data.contact_remark = elem.querySelector("#contact_remark").value;
+
+
+  return data;
+doAction_uiControl12_zTrKDR: ''

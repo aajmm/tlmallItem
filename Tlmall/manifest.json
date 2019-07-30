@@ -27,12 +27,22 @@
       "demo": [
         "http://192.168.220.23/login.html"
       ]
+    },
+    {
+      "title": "contact",
+      "url": "adapter://Tlmall/plan/contact/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=50400"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html?code=50400"
+      ]
     }
   ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1564451179315,
+  "update_time": 1564485899007,
   "runtime_env": "1webview"
 }
