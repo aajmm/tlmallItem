@@ -5,7 +5,8 @@
   "jsFile": "index.js",
   "requires": {
     "forgotPassword-writeAccount": "../forgotPassword-writeAccount/index.json",
-    "index": "../index/index.json"
+    "index": "../index/index.json",
+    "registeredAccount": "../registeredAccount/index.json"
   },
   "chineseName": "登录",
   "description": "",
@@ -204,6 +205,10 @@
         {
           "toContextId": "context2_JFd3LO",
           "toModelId": "index"
+        },
+        {
+          "toContextId": "context3_UgBsqG",
+          "toModelId": "registeredAccount"
         }
       ]
     },
