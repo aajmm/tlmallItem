@@ -33,6 +33,6 @@
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1564111007863,
+  "update_time": 1564451179315,
   "runtime_env": "1webview"
 }
