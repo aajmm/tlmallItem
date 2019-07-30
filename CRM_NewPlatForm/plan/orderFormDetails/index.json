@@ -1,0 +1,407 @@
+{
+  "version": "0.1",
+  "id": "orderFormDetails",
+  "targetURL": "http://192.168.1.227/pttlCrm/res/page/order/orderDetail.html?orderNum=o1530438",
+  "jsFile": "index.js",
+  "requires": {
+    "clientList": "../clientList/index.json"
+  },
+  "chineseName": "订单详情",
+  "description": "订单详情",
+  "controls": {
+    "control144_B1zCvp": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control144_B1zCvp"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control146_faRdO0": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control146_faRdO0"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context39_01u4iV": {
+      "controls": [
+        "control144_B1zCvp",
+        "control146_faRdO0"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "^http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/res\\/page\\/order\\/orderDetail\\.html.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow134_55XONK": {
+      "toContexts": [
+        {
+          "toContextId": "context39_01u4iV"
+        }
+      ]
+    },
+    "flow135_3MuTPS": {
+      "fromContextId": "context39_01u4iV",
+      "fromAction": "doAction",
+      "fromControlId": "control146_faRdO0",
+      "toContexts": [
+        {
+          "toContextId": "context39_01u4iV"
+        }
+      ]
+    },
+    "flow136_5dantK": {
+      "fromContextId": "context39_01u4iV",
+      "fromAction": "doAction",
+      "fromControlId": "control144_B1zCvp",
+      "toContexts": [
+        {
+          "toContextId": "context39_01u4iV"
+        },
+        {
+          "toContextId": "context3_sTqBPp",
+          "toModelId": "clientList"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page39_qWH8Nt": {
+      "contextId": "context39_01u4iV",
+      "layout": [
+        {
+          "id": "uiControl142_ioA93K",
+          "controlId": "control144_B1zCvp",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl142_ioA93K",
+                "onGetTemplate": "getTemplate_uiControl142_ioA93K"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl145_KdWSKt",
+          "controlId": "control146_faRdO0",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl145_KdWSKt",
+                "onGetTemplate": "getTemplate_uiControl145_KdWSKt"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context39_01u4iV": [
+          "客户订单详情"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context39_01u4iV": [
+          "192.168.1.227/pttlCrm/res/page/order/orderDetail.html?orderNum=o1530438"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context39_01u4iV": [
+          [
+            "brandHeader",
+            "clientMenu",
+            "mainContainer",
+            "publicHead"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context39_01u4iV": [
+          [
+            "act",
+            "back",
+            "bar",
+            "btn",
+            "clearfix",
+            "content-box",
+            "content-top",
+            "d-box",
+            "detail-box",
+            "dui",
+            "eval-con",
+            "evaluate",
+            "export",
+            "fl",
+            "fr",
+            "header",
+            "icon",
+            "icon-arrow",
+            "last",
+            "line",
+            "mask",
+            "order-con",
+            "order-step",
+            "order-tit",
+            "order-ul",
+            "pack",
+            "pack-con",
+            "prj-table",
+            "project-tit",
+            "select",
+            "table-box",
+            "title",
+            "title-a",
+            "title-b"
+          ]
+        ],
+        "context3_sTqBPp": [
+          [
+            "active",
+            "backImage",
+            "content",
+            "content-body",
+            "content-bodytable",
+            "content_head",
+            "customerFontStyle",
+            "export-image",
+            "export-imagetitle",
+            "pagination",
+            "pointImage",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "table",
+            "table-border"
+          ],
+          [
+            "active",
+            "backImage",
+            "content",
+            "content-body",
+            "content-bodytable",
+            "content_head",
+            "customerFontStyle",
+            "export-image",
+            "export-imagetitle",
+            "information-serch",
+            "pagination",
+            "pointImage",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "table",
+            "table-border"
+          ],
+          [
+            "active",
+            "backImage",
+            "commpnPage",
+            "content",
+            "content-body",
+            "content-bodytable",
+            "content_head",
+            "customerFontStyle",
+            "export-image",
+            "export-imagetitle",
+            "information-serch",
+            "pagination",
+            "pointImage",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table",
+            "table-border"
+          ],
+          [
+            "active",
+            "clearfix",
+            "client-portrait",
+            "content-container",
+            "halving-line",
+            "head_search",
+            "icon",
+            "layui-layer-move",
+            "logo",
+            "m-head",
+            "m-settings",
+            "main-container",
+            "menu-model",
+            "nav-menu-item",
+            "nav-menu-title",
+            "nav-menu-wrapper",
+            "sidebar-container",
+            "sidebar-container-footer",
+            "sidebar-container-footer-wrapper",
+            "u-help",
+            "u-infors",
+            "u-time"
+          ],
+          [
+            "active",
+            "backImage",
+            "commpnPage",
+            "content",
+            "content-body",
+            "content-bodytable",
+            "content_head",
+            "customerFontStyle",
+            "customerList_name",
+            "customerList_search",
+            "export-image",
+            "export-imagetitle",
+            "information-serch",
+            "pagination",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table",
+            "table-border"
+          ],
+          [
+            "active",
+            "commpnPage",
+            "content",
+            "content-body",
+            "content-bodytable",
+            "content_head",
+            "customerFontStyle",
+            "customerList_name",
+            "customerList_search",
+            "export-image",
+            "export-imagetitle",
+            "icon",
+            "icon-title",
+            "information-serch",
+            "leftPart",
+            "mask",
+            "pagination",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table",
+            "table-border"
+          ],
+          [
+            "active",
+            "commpnPage",
+            "content",
+            "content-body",
+            "content-bodytable",
+            "content_head",
+            "customerFontStyle",
+            "customerList_name",
+            "customerList_search",
+            "export-imagetitle",
+            "icon",
+            "icon-title",
+            "information-serch",
+            "leftPart",
+            "mask",
+            "pagination",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table",
+            "table-border"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context39_01u4iV": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/SPAN/EM",
+            "DIV/SPAN/I",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "LI/DIV/SPAN",
+            "LI/SPAN/EM",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/EM",
+            "UL/LI/DIV",
+            "UL/LI/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

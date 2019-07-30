@@ -1,0 +1,483 @@
+{
+  "version": "0.1",
+  "id": "walketmoney",
+  "targetURL": "http://192.168.1.227/pttlCrm/cust/customer/getCustomerElectronicWalletByCustomerCode?customerCode=C104689",
+  "jsFile": "index.js",
+  "requires": {},
+  "chineseName": "电子钱包",
+  "description": "",
+  "controls": {
+    "control15_drffwW": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"publicHead\"]//DIV[@id=\"clientMenu\"]",
+              "descendant::DIV[@id=\"clientMenu\"]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control15_drffwW"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": ""
+    },
+    "control17_rxRbOL": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"mainContainer\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control17_rxRbOL"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context8_xi4ONB": {
+      "controls": [
+        "control15_drffwW",
+        "control17_rxRbOL"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/cust\\/customer\\/getCustomerElectronicWalletByCustomerCode\\?customerCode*"
+      ]
+    }
+  },
+  "flows": {
+    "flow16_DfUvb9": {
+      "toContexts": [
+        {
+          "toContextId": "context8_xi4ONB"
+        }
+      ]
+    },
+    "flow17_8EA8lM": {
+      "fromContextId": "context8_xi4ONB",
+      "fromAction": "doAction",
+      "fromControlId": "control15_drffwW",
+      "toContexts": [
+        {
+          "toContextId": "context8_xi4ONB"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page8_fb87B0": {
+      "contextId": "context8_xi4ONB",
+      "layout": [
+        {
+          "id": "uiControl19_8buIgU",
+          "controlId": "control15_drffwW",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl19_8buIgU",
+                "onGetTemplate": "getTemplate_uiControl19_8buIgU"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl21_GzBmya",
+          "controlId": "control17_rxRbOL",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl21_GzBmya",
+                "onGetTemplate": "getTemplate_uiControl21_GzBmya"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context8_xi4ONB": [
+          "客户信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context8_xi4ONB": [
+          "192.168.1.227/pttlCrm/cust/customer/getCustomerElectronicWalletByCustomerCode?customerCode=C104689",
+          "192.168.1.227/pttlCrm/cust/customer/getCustomerRebateByCustomerCode?customerCode=C104689"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context8_xi4ONB": [
+          [
+            "Close",
+            "__bs_script__",
+            "brandHeader",
+            "clientInfoMenu",
+            "clientMenu",
+            "leftArrow",
+            "mainContainer",
+            "publicHead",
+            "rightArrow",
+            "walletmoney-content"
+          ],
+          [
+            "Close",
+            "__bs_script__",
+            "brandHeader",
+            "clientInfoMenu",
+            "clientMenu",
+            "leftArrow",
+            "mainContainer",
+            "publicHead",
+            "rightArrow",
+            "salesrebate-content"
+          ],
+          [
+            "Close",
+            "brandHeader",
+            "clientInfoMenu",
+            "clientMenu",
+            "leftArrow",
+            "mainContainer",
+            "publicHead",
+            "rightArrow",
+            "valletMoneyPage",
+            "walletmoney-content"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context8_xi4ONB": [
+          [
+            "active",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "right-arrow",
+            "walleMoney-null"
+          ],
+          [
+            "active",
+            "content-salesrebate",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "right-arrow",
+            "salesrebate-contenttable",
+            "table"
+          ],
+          [
+            "active",
+            "clear_float",
+            "col-md-",
+            "col-sm-",
+            "content",
+            "contentbottom",
+            "contenttext",
+            "contenttext-bottom",
+            "contenttext-bottommiddle",
+            "contenttext-bottomright",
+            "contenttext-center",
+            "contenttext-top",
+            "contenttop",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "right-arrow",
+            "row"
+          ],
+          [
+            "active",
+            "clear_float",
+            "col-md-",
+            "col-sm-",
+            "commpnPage",
+            "content",
+            "contentbottom",
+            "contenttext",
+            "contenttext-bottom",
+            "contenttext-bottommiddle",
+            "contenttext-bottomright",
+            "contenttext-center",
+            "contenttext-top",
+            "contenttop",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "pagination",
+            "right-arrow",
+            "row",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto"
+          ]
+        ],
+        "context0_1ekenN": [
+          [
+            "active",
+            "clearfix",
+            "client-portrait",
+            "content-container",
+            "content-main-region",
+            "head_search",
+            "icon",
+            "logo",
+            "m-head",
+            "m-settings",
+            "main-container",
+            "nav-menu-item",
+            "nav-menu-switch",
+            "nav-menu-wrapper",
+            "sidebar-container",
+            "sidebar-container-footer",
+            "sidebar-container-footer-wrapper",
+            "u-help",
+            "u-infors",
+            "u-time"
+          ],
+          [
+            "active",
+            "clearfix",
+            "client-portrait",
+            "content-container",
+            "head_search",
+            "icon",
+            "logo",
+            "m-head",
+            "m-settings",
+            "main-container",
+            "nav-menu-item",
+            "nav-menu-switch",
+            "nav-menu-wrapper",
+            "sidebar-container",
+            "sidebar-container-footer",
+            "sidebar-container-footer-wrapper",
+            "u-help",
+            "u-infors",
+            "u-time"
+          ],
+          [
+            "active",
+            "clearfix",
+            "client-portrait",
+            "content-container",
+            "head_search",
+            "icon",
+            "logo",
+            "m-head",
+            "m-settings",
+            "main-container",
+            "nav-menu-item",
+            "nav-menu-wrapper",
+            "sidebar-container",
+            "sidebar-container-footer",
+            "sidebar-container-footer-wrapper",
+            "u-help",
+            "u-infors",
+            "u-time"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context8_xi4ONB": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/UL",
+            "DIV/UL/LI",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/THEAD/TR",
+            "THEAD/TR/TH",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/UL/LI",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/UL/LI",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ]
+        ],
+        "context0_1ekenN": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "A/DIV/IMG",
+            "A/DIV/SPAN",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FOOTER",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/IMG",
+            "DIV/DIV/NAV",
+            "DIV/DIV/SPAN",
+            "DIV/FOOTER/DIV",
+            "DIV/NAV/DIV",
+            "DIV/NAV/UL",
+            "DIV/SPAN/A",
+            "FOOTER/DIV/DIV",
+            "LI/A/DIV",
+            "NAV/UL/LI",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "A/DIV/IMG",
+            "A/DIV/SPAN",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FOOTER",
+            "DIV/DIV/IMG",
+            "DIV/DIV/NAV",
+            "DIV/DIV/SPAN",
+            "DIV/FOOTER/DIV",
+            "DIV/NAV/DIV",
+            "DIV/NAV/UL",
+            "DIV/SPAN/A",
+            "FOOTER/DIV/DIV",
+            "LI/A/DIV",
+            "NAV/UL/LI",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "A/DIV/IMG",
+            "A/DIV/SPAN",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FOOTER",
+            "DIV/DIV/IMG",
+            "DIV/DIV/NAV",
+            "DIV/DIV/SPAN",
+            "DIV/FOOTER/DIV",
+            "DIV/NAV/UL",
+            "DIV/SPAN/A",
+            "FOOTER/DIV/DIV",
+            "LI/A/DIV",
+            "NAV/UL/LI",
+            "UL/LI/A"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "companyName": "研究院开发测试",
+  "projectName": "普天CRM_新平台",
+  "rtVersion": "2.7.0",
+  "studioVersion": "2.2.1-beta.1",
+  "macAddress": "48:5a:b6:d4:a7:8d",
+  "isUploaded": false,
+  "menu": [
+    {
+      "name": "a",
+      "app_id": "a",
+      "icon": "local/img/OA.png",
+      "url": "http://192.168.1.227/pttlCrm/cust/customer/getCustomerByCode?customerCode=C104689"
+    }
+  ]
+}

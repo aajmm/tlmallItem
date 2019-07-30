@@ -1,0 +1,299 @@
+{
+  "version": "0.1",
+  "id": "visitLookHESReport",
+  "targetURL": "http://192.168.1.227/pttlCrm/res/page/visitManager/report/answerList.html?rowId=3293dd6f-e9dc-4b48-9f49-f8b5039a3566&storeCode=S0000238&storeName=%E5%8D%97%E4%BA%AC%E9%A9%B0%E4%BF%A1%E6%B1%9F%E5%AE%81%E4%B8%87%E8%BE%BE%E5%B9%BF%E5%9C%BA%E5%8D%8E%E4%B8%BA%E4%BD%93%E9%AA%8C%E5%BA%97&eaiId=A_1711000007951",
+  "jsFile": "index.js",
+  "requires": {
+    "visitLook": "../visitLook/index.json"
+  },
+  "chineseName": "拜访查看HES报告",
+  "description": "拜访查看HES报告",
+  "controls": {
+    "control264_5qKTB4": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control264_5qKTB4"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control265_2vDVcc": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"answerMessage\"]//DIV[@id=\"content-body\"]/DIV[1]",
+              "descendant::DIV[@id=\"answerMessage\"]//DIV[@id=\"content-body\"]//DIV",
+              "descendant::DIV[@id=\"content-body\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              10
+            ],
+            "value": "DIV.content DIV.content-body DIV"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control265_2vDVcc"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control266_tlUnFK": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"answerMessage\"]//DIV[@id=\"content-body\"]",
+              "descendant::DIV[@id=\"content-body\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.content DIV.content-body"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control266_tlUnFK"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context72_z2TxKh": {
+      "controls": [
+        "control264_5qKTB4",
+        "control265_2vDVcc",
+        "control266_tlUnFK"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "^http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/res\\/page\\/visitManager\\/report\\/answerList.html.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow220_Jbxuym": {
+      "toContexts": [
+        {
+          "toContextId": "context72_z2TxKh"
+        }
+      ]
+    },
+    "flow221_oyHTfs": {
+      "fromContextId": "context72_z2TxKh",
+      "fromAction": "doAction",
+      "fromControlId": "control264_5qKTB4",
+      "toContexts": [
+        {
+          "toContextId": "context72_z2TxKh"
+        },
+        {
+          "toContextId": "context11_SAI3xc",
+          "toModelId": "visitLook"
+        }
+      ]
+    },
+    "flow223_5Zy21s": {
+      "fromContextId": "context72_z2TxKh",
+      "fromAction": "doAction",
+      "fromControlId": "control266_tlUnFK",
+      "toContexts": [
+        {
+          "toContextId": "context72_z2TxKh"
+        },
+        {
+          "toContextId": "context11_SAI3xc",
+          "toModelId": "visitLook"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page72_dkROt5": {
+      "contextId": "context72_z2TxKh",
+      "layout": [
+        {
+          "id": "uiControl258_4EgCqa",
+          "controlId": "control264_5qKTB4",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl258_4EgCqa",
+                "onGetTemplate": "getTemplate_uiControl258_4EgCqa"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl259_wBg6Qs",
+          "controlId": "control265_2vDVcc",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl259_wBg6Qs",
+                "onGetTemplate": "getTemplate_uiControl259_wBg6Qs"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl260_7sznVr",
+          "controlId": "control266_tlUnFK",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl260_7sznVr",
+                "onGetTemplate": "getTemplate_uiControl260_7sznVr"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context72_z2TxKh": [
+          "答题试卷"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context72_z2TxKh": [
+          "192.168.1.227/pttlCrm/res/page/visitManager/report/answerList.html?rowId=3293dd6f-e9dc-4b48-9f49-f8b5039a3566&storeCode=S0000238&storeName=%E5%8D%97%E4%BA%AC%E9%A9%B0%E4%BF%A1%E6%B1%9F%E5%AE%81%E4%B8%87%E8%BE%BE%E5%B9%BF%E5%9C%BA%E5%8D%8E%E4%B8%BA%E4%BD%93%E9%AA%8C%E5%BA%97&eaiId=A_1711000007951"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context72_z2TxKh": [
+          [
+            "answerMessage",
+            "content-body",
+            "eaiId"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context72_z2TxKh": [
+          [
+            "answer",
+            "backImage",
+            "btn",
+            "buttons-tool",
+            "content",
+            "content-body",
+            "content-panel",
+            "content-panel-part",
+            "content-panel-part_list",
+            "content-panel-title",
+            "content_head",
+            "default",
+            "goBack",
+            "infors",
+            "leftPart",
+            "mask",
+            "pointImage",
+            "problem",
+            "sortNum",
+            "title",
+            "title-a",
+            "title-b"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context72_z2TxKh": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/SPAN",
+            "DIV/LABEL/I",
+            "DIV/LABEL/INPUT-radio",
+            "DIV/LABEL/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

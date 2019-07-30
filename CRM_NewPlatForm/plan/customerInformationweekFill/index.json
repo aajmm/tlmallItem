@@ -1,0 +1,515 @@
+{
+  "version": "0.1",
+  "id": "customerInformationweekFill",
+  "targetURL": "http://192.168.1.227/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11994",
+  "jsFile": "index.js",
+  "chineseName": "信息录入（周别PSI）",
+  "description": "",
+  "controls": {
+    "control200_tnASBu": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"weekPSI\"]/DIV[1]/DIV[1]/SPAN[3]",
+              "descendant::DIV[@id=\"weekPSI\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              2
+            ],
+            "value": "DIV.collectionPSIentertop DIV.header SPAN.collectionPSIentertop-text"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[3]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control200_tnASBu"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control210_r9m7Sb": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control210_r9m7Sb"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control214_cE0FUZ": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"weekPSI\"]/DIV[2]",
+              "descendant::DIV[@id=\"weekPSI\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.collectionPSIentercontent"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control214_cE0FUZ"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control188_WIE0yD": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"weekPSI\"]/DIV[2]/DIV[2]",
+              "descendant::DIV[@id=\"weekPSI\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.collectionPSIentercontent DIV.collectionPSIentercontentborder"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control188_WIE0yD"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control189_aS0Skg": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"weekPSI\"]/DIV[2]/DIV[1]",
+              "descendant::DIV[@id=\"weekPSI\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.collectionPSIentercontent DIV.m-time"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control189_aS0Skg"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context56_sDDtAM": {
+      "controls": [
+        "control200_tnASBu",
+        "control210_r9m7Sb",
+        "control214_cE0FUZ",
+        "control188_WIE0yD",
+        "control189_aS0Skg"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "^http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/res\\/page\\/psi\\/customerWeekPsi\\.html.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow178_0iyyGV": {
+      "toContexts": [
+        {
+          "toContextId": "context56_sDDtAM"
+        }
+      ]
+    },
+    "flow179_hQThJk": {
+      "fromContextId": "context56_sDDtAM",
+      "fromAction": "doAction",
+      "fromControlId": "control200_tnASBu",
+      "toContexts": [
+        {
+          "toContextId": "context56_sDDtAM"
+        }
+      ]
+    },
+    "flow181_XvtePg": {
+      "fromContextId": "context56_sDDtAM",
+      "fromAction": "doAction",
+      "fromControlId": "control210_r9m7Sb",
+      "toContexts": [
+        {
+          "toContextId": "context56_sDDtAM"
+        }
+      ]
+    },
+    "flow70_FaNCsm": {
+      "fromContextId": "context56_sDDtAM",
+      "fromAction": "doAction",
+      "fromControlId": "control214_cE0FUZ",
+      "toContexts": [
+        {
+          "toContextId": "context56_sDDtAM"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page56_soJ82i": {
+      "contextId": "context56_sDDtAM",
+      "layout": [
+        {
+          "id": "uiControl196_bTth6n",
+          "controlId": "control200_tnASBu",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl196_bTth6n",
+                "onGetTemplate": "getTemplate_uiControl196_bTth6n"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl186_EAcEwJ",
+          "controlId": "control189_aS0Skg",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl186_EAcEwJ",
+                "onGetTemplate": "getTemplate_uiControl186_EAcEwJ"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl211_v3Tmc4",
+          "controlId": "control214_cE0FUZ",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl211_v3Tmc4",
+                "onGetTemplate": "getTemplate_uiControl211_v3Tmc4"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl184_M7ihOl",
+          "controlId": "control188_WIE0yD",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl184_M7ihOl",
+                "onGetTemplate": "getTemplate_uiControl184_M7ihOl"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl204_lDy8Tv",
+          "controlId": "control210_r9m7Sb",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl204_lDy8Tv",
+                "onGetTemplate": "getTemplate_uiControl204_lDy8Tv"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context56_sDDtAM": [
+          "周别PSI"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context56_sDDtAM": [
+          "192.168.1.227/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11994",
+          "192.168.1.227/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=10263",
+          "192.168.1.227/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=1-5SKO7Q",
+          "192.168.1.227/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=1-2YNKN1",
+          "192.168.1.227/pttlCrm/res/page/psi/customerWeekPsi.html?rowId=11212"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context56_sDDtAM": [
+          [
+            "coll",
+            "psiEnterTable",
+            "rowId",
+            "savePsiSpan",
+            "search",
+            "srarch_date",
+            "srarch_date_",
+            "tbodyContent",
+            "weekPSI"
+          ],
+          [
+            "psiEnterTable",
+            "savePsiSpan",
+            "search",
+            "srarch_date",
+            "srarch_date_",
+            "tbodyContent",
+            "weekPSI"
+          ],
+          [
+            "customerName",
+            "psiEnterTable",
+            "savePsiSpan",
+            "search",
+            "srarch_date",
+            "srarch_date_",
+            "tbodyContent",
+            "weekPSI"
+          ],
+          [
+            "coll",
+            "customerName",
+            "psiEnterTable",
+            "rowId",
+            "savePsiSpan",
+            "search",
+            "srarch_date",
+            "srarch_date_",
+            "tbodyContent",
+            "weekPSI"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context56_sDDtAM": [
+          [
+            "btn",
+            "collectionPSI-table",
+            "collectionPSIentercontent",
+            "collectionPSIentercontentborder",
+            "collectionPSIentercontentbutton",
+            "collectionPSIentertdtext",
+            "collectionPSIentertop",
+            "collectionPSIentertop-icon",
+            "collectionPSIentertop-point",
+            "collectionPSIentertop-text",
+            "header",
+            "ipt-time",
+            "ipt-week",
+            "label-choice",
+            "m-time",
+            "mask",
+            "table"
+          ],
+          [
+            "btn",
+            "collectionPSI-table",
+            "collectionPSIentercontent",
+            "collectionPSIentercontentborder",
+            "collectionPSIentercontentbutton",
+            "collectionPSIentertdtext",
+            "collectionPSIentertop",
+            "collectionPSIentertop-icon",
+            "collectionPSIentertop-point",
+            "collectionPSIentertop-text",
+            "header",
+            "ipt-time",
+            "ipt-week",
+            "label-choice",
+            "m-time",
+            "mask",
+            "series",
+            "table"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context56_sDDtAM": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/SPAN",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/SPAN/INPUT-text",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-text"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/SPAN",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/SPAN/INPUT-text",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/IFRAME",
+            "-/DIV/SPAN",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/SPAN/INPUT-text",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-text"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "version": "0.1",
+  "id": "workPlanCustomStore",
+  "targetURL": "http://192.168.1.227/pttlCrm/res/page/visitManager/customerWorkspace/customerNewPlanPop.html",
+  "jsFile": "index.js",
+  "chineseName": "工作计划中的客户和门店列表(工作台)",
+  "description": "工作计划中的客户和门店列表(工作台)",
+  "controls": {
+    "control42_A9IB6L": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.overhidden"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control42_A9IB6L"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control313_lVpVUl": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.overhidden"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control313_lVpVUl"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context81_TxM4IR": {
+      "controls": [
+        "control42_A9IB6L",
+        "control313_lVpVUl"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow41_A8rWbg": {
+      "toContexts": [
+        {
+          "toContextId": "context81_TxM4IR"
+        }
+      ]
+    },
+    "flow238_I92Ora": {
+      "fromContextId": "context81_TxM4IR",
+      "fromAction": "doAction",
+      "fromControlId": "control42_A9IB6L",
+      "toContexts": [
+        {
+          "toContextId": "context81_TxM4IR"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page81_GsuFS2": {
+      "contextId": "context81_TxM4IR",
+      "layout": [
+        {
+          "id": "uiControl44_fBiQg5",
+          "controlId": "control42_A9IB6L",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl44_fBiQg5",
+                "onGetTemplate": "getTemplate_uiControl44_fBiQg5"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl304_TGm3ta",
+          "controlId": "control313_lVpVUl",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl304_TGm3ta",
+                "onGetTemplate": "getTemplate_uiControl304_TGm3ta"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context81_TxM4IR": [
+          "拜访-报告"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context81_TxM4IR": [
+          "192.168.1.227/pttlCrm/res/page/visitManager/customerWorkspace/customerNewPlanPop.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context81_TxM4IR": [
+          [
+            "addDayPlanCancleBtn",
+            "addDayPlanOkBtn",
+            "addTempDayPlanCancleBtn",
+            "addTempDayPlanOkBtn",
+            "chooseCustomerCodes",
+            "chooseStoreCodes",
+            "chooseVisitInfo",
+            "currentSelectDay",
+            "customerOrStorePopClose",
+            "customerOrStorePopList",
+            "dayPlanContent",
+            "listType",
+            "newPlanList",
+            "newPlanListSearch",
+            "newPlanListSearchText",
+            "newPlanTempListContent",
+            "newTempVisit",
+            "newTempVisitSearch",
+            "newTempVisitSearchText",
+            "planCustomerPage",
+            "planEaiId",
+            "planRowId",
+            "planTempCustomerPage",
+            "tcList_C",
+            "tcList_FB",
+            "tempCustomerOrStorePopClose",
+            "tempCustomerOrStorePopList",
+            "tempPlanOtherCustomer",
+            "tempVisitCustomerListBtn",
+            "tempVisitStoreListBtn",
+            "visitCustomerListBtn",
+            "visitStoreListBtn"
+          ],
+          [
+            "addDayPlanCancleBtn",
+            "addDayPlanOkBtn",
+            "addTempDayPlanCancleBtn",
+            "addTempDayPlanOkBtn",
+            "cList_C",
+            "cList_FB",
+            "chooseCustomerCodes",
+            "chooseStoreCodes",
+            "chooseVisitInfo",
+            "currentSelectDay",
+            "customerOrStorePopClose",
+            "customerOrStorePopList",
+            "dayPlanContent",
+            "listType",
+            "newPlanList",
+            "newPlanListContent",
+            "newPlanListSearch",
+            "newPlanListSearchText",
+            "newTempVisit",
+            "newTempVisitSearch",
+            "newTempVisitSearchText",
+            "planCustomerPage",
+            "planEaiId",
+            "planRowId",
+            "planTempCustomerPage",
+            "tempCustomerOrStorePopClose",
+            "tempCustomerOrStorePopList",
+            "tempPlanOtherCustomer",
+            "tempVisitCustomerListBtn",
+            "tempVisitStoreListBtn",
+            "visitCustomerListBtn",
+            "visitStoreListBtn"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context81_TxM4IR": [
+          [
+            "active",
+            "btn-box",
+            "cha",
+            "ck",
+            "commpnPage",
+            "day-area",
+            "head-tit",
+            "menu",
+            "other-con",
+            "pagination",
+            "plan-box",
+            "plan-con",
+            "search-box",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "sure",
+            "table",
+            "table-otherContent",
+            "work-box",
+            "work-con"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context81_TxM4IR": [
+          [
+            "-/-/DIV",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/H2",
+            "-/DIV/UL",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H3",
+            "DIV/DIV/H6",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/H2/SPAN",
+            "DIV/LABEL/I",
+            "DIV/LABEL/INPUT-checkbox",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TD/LABEL/I",
+            "TD/LABEL/INPUT-radio",
+            "THEAD/TR/TH",
+            "TR/TD/B",
+            "TR/TD/LABEL",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/H2",
+            "-/DIV/UL",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H3",
+            "DIV/DIV/H6",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/H2/SPAN",
+            "DIV/LABEL/I",
+            "DIV/LABEL/INPUT-checkbox",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TD/LABEL/I",
+            "TD/LABEL/INPUT-checkbox",
+            "THEAD/TR/TH",
+            "TR/TD/B",
+            "TR/TD/LABEL",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

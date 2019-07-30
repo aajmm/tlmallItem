@@ -1,0 +1,631 @@
+{
+  "version": "0.1",
+  "id": "clientQuery_detail",
+  "targetURL": "http://192.168.1.227/ptDataShow/reportNew/reportsByPid?isNewFlag=true&reportPid=report852&reportId=report852-1&isDateArray=true&filter_userId=SONGFEI&encoder=U09OR0ZFSSswMS8wNC8yMDE5IDE1OjU1OjE5&username=SONGFEI&a=1&branch=15&clickLi=true&click_storeId=S1079458&click_type=store",
+  "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
+  "chineseName": "库存产品明细",
+  "description": "",
+  "firstPaintEnable": false,
+  "controls": {
+    "control370_4ouOOk": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control370_4ouOOk"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control371_hORxsA": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::FORM[@id=\"queryForm\"]//DIV[@id=\"searchHead\"]",
+              "descendant::DIV[@id=\"searchHead\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.detail-box DIV.head-center"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/FORM[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control371_hORxsA"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control372_Or4HWD": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"jqGrid_wrapper\"]/DIV[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.ibox DIV.jqGrid_wrapper DIV.ui-jqgrid"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control372_Or4HWD"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control373_M4udUA": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control373_M4udUA"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control374_KCwHyR": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control374_KCwHyR"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control375_CU5ml9": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"jqGrid_wrapper\"]/DIV[1]/DIV[5]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]",
+              "descendant::DIV[@id=\"jqGrid_wrapper\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.ui-pager-control TABLE.ui-pg-table.ui-common-table.ui-pager-table TABLE.ui-pg-table.ui-common-table.ui-paging-pager TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[5]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/TABLE[1]/TBODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control375_CU5ml9"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context95_7tyRdN": {
+      "controls": [
+        "control370_4ouOOk",
+        "control371_hORxsA",
+        "control372_Or4HWD",
+        "control373_M4udUA",
+        "control374_KCwHyR",
+        "control375_CU5ml9"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/192\\.168\\.1\\.227\\/ptDataShow\\/reportNew\\/reportsByPid\\?.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow292_znSotp": {
+      "toContexts": [
+        {
+          "toContextId": "context95_7tyRdN"
+        }
+      ]
+    },
+    "flow293_mp2FbX": {
+      "fromContextId": "context95_7tyRdN",
+      "fromAction": "doAction",
+      "fromControlId": "control370_4ouOOk",
+      "toContexts": [
+        {
+          "toContextId": "context95_7tyRdN"
+        },
+        {
+          "toContextId": "context0_pD8h1P",
+          "toModelId": "index"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page95_RUZMfv": {
+      "contextId": "context95_7tyRdN",
+      "layout": [
+        {
+          "id": "uiControl356_Aqwzg7",
+          "controlId": "control370_4ouOOk",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl356_Aqwzg7",
+                "onGetTemplate": "getTemplate_uiControl356_Aqwzg7"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl357_lNu26f",
+          "controlId": "control371_hORxsA",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl357_lNu26f",
+                "onGetTemplate": "getTemplate_uiControl357_lNu26f"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl358_LgqeO0",
+          "controlId": "control372_Or4HWD",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl358_LgqeO0",
+                "onGetTemplate": "getTemplate_uiControl358_LgqeO0"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl359_s4nMb6",
+          "controlId": "control373_M4udUA",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl359_s4nMb6",
+                "onGetTemplate": "getTemplate_uiControl359_s4nMb6"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl360_zSmraa",
+          "controlId": "control374_KCwHyR",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl360_zSmraa",
+                "onGetTemplate": "getTemplate_uiControl360_zSmraa"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl361_FwXw02",
+          "controlId": "control375_CU5ml9",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl361_FwXw02",
+                "onGetTemplate": "getTemplate_uiControl361_FwXw02"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context95_7tyRdN": [
+          "报表"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context95_7tyRdN": [
+          "192.168.1.227/ptDataShow/reportNew/reportsByPid?isNewFlag=true&reportPid=report852&reportId=report852-1&isDateArray=true&filter_userId=SONGFEI&encoder=U09OR0ZFSSswMS8wNC8yMDE5IDE1OjU1OjE5&username=SONGFEI&a=1&branch=15&clickLi=true&click_storeId=S1079458&click_type=store"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context95_7tyRdN": [
+          [
+            "HideFrm",
+            "aggsArea",
+            "amountPercent",
+            "bottom",
+            "clearBtn",
+            "countPercent",
+            "customerPercent",
+            "down",
+            "filter_",
+            "first_pager_list_",
+            "gbox_table_list_",
+            "gview_table_list_",
+            "input_pager_list_",
+            "jqGrid_wrapper",
+            "jqgh_table_list__batchDate",
+            "jqgh_table_list__color",
+            "jqgh_table_list__maxBuyQty",
+            "jqgh_table_list__model",
+            "jqgh_table_list__project",
+            "jqgh_table_list__qtyAllocation",
+            "jqgh_table_list__qtyPurchased",
+            "last_pager_list_",
+            "load_table_list_",
+            "lui_table_list_",
+            "muilSelectOption",
+            "next_pager_list_",
+            "no",
+            "pager_list_",
+            "pager_list__center",
+            "pager_list__left",
+            "pager_list__right",
+            "pg_pager_list_",
+            "prev_pager_list_",
+            "queryBtnSearch",
+            "queryForm",
+            "rs_mtable_list_",
+            "searchBtn",
+            "searchHead",
+            "sel-l",
+            "sel-r",
+            "selectDate",
+            "selectInput",
+            "sp__pager_list_",
+            "tab-head",
+            "tab_box",
+            "table_list_",
+            "table_list__batchDate",
+            "table_list__color",
+            "table_list__maxBuyQty",
+            "table_list__model",
+            "table_list__project",
+            "table_list__qtyAllocation",
+            "table_list__qtyPurchased",
+            "top",
+            "up",
+            "yes",
+            "zhanKai"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context95_7tyRdN": [
+          [
+            "HeaderButton",
+            "act",
+            "add",
+            "all",
+            "animated",
+            "bottom",
+            "breadcrumb",
+            "bt",
+            "btn",
+            "btn-box",
+            "btn-success",
+            "clear-btn",
+            "clearfix",
+            "click",
+            "close-btn",
+            "crossbar",
+            "customize",
+            "customize-mask",
+            "customize-pop",
+            "da",
+            "date",
+            "dateDiv",
+            "detail-box",
+            "down",
+            "end",
+            "export",
+            "fadeInRight",
+            "filter-tag",
+            "form-control",
+            "glyphicon",
+            "glyphicon-backward",
+            "glyphicon-circle-arrow-up",
+            "glyphicon-forward",
+            "glyphicon-step-backward",
+            "glyphicon-step-forward",
+            "glyphicon-triangle-bottom",
+            "glyphicon-triangle-top",
+            "head-bottom",
+            "head-center",
+            "ibox",
+            "icon",
+            "icon-box",
+            "jqGrid_wrapper",
+            "jqgfirstrow",
+            "jqgrid-overlay",
+            "l-panel",
+            "l-panel-bar",
+            "loading",
+            "loading-box",
+            "m-body",
+            "more",
+            "no",
+            "no-under",
+            "option-box",
+            "option-btn",
+            "option-con",
+            "option-l",
+            "option-list",
+            "option-r",
+            "option-r-c",
+            "out",
+            "outstore",
+            "pop-con",
+            "pop-head",
+            "pop-table",
+            "pop-tit",
+            "rank-pop-box",
+            "rem",
+            "reset",
+            "row",
+            "s-ico",
+            "save",
+            "search",
+            "search-btn",
+            "sel",
+            "sel-all",
+            "sel-box",
+            "sel-con",
+            "sel-l",
+            "sel-r",
+            "select",
+            "single",
+            "start",
+            "sure-btn",
+            "tab-box",
+            "table",
+            "table-bordered",
+            "table-responsive",
+            "text_box",
+            "top",
+            "ui-common-table",
+            "ui-disabled",
+            "ui-grid-ico-sort",
+            "ui-icon-asc",
+            "ui-icon-desc",
+            "ui-jqgrid",
+            "ui-jqgrid-bdiv",
+            "ui-jqgrid-btable",
+            "ui-jqgrid-caption",
+            "ui-jqgrid-hbox",
+            "ui-jqgrid-hdiv",
+            "ui-jqgrid-headlink",
+            "ui-jqgrid-htable",
+            "ui-jqgrid-labels",
+            "ui-jqgrid-pager",
+            "ui-jqgrid-resize",
+            "ui-jqgrid-resize-ltr",
+            "ui-jqgrid-resize-mark",
+            "ui-jqgrid-sortable",
+            "ui-jqgrid-title",
+            "ui-jqgrid-titlebar",
+            "ui-jqgrid-titlebar-close",
+            "ui-jqgrid-view",
+            "ui-overlay",
+            "ui-pager-control",
+            "ui-pager-table",
+            "ui-paging-pager",
+            "ui-pg-button",
+            "ui-pg-input",
+            "ui-pg-selbox",
+            "ui-pg-table",
+            "ui-separator",
+            "ui-sort-ltr",
+            "ui-th-column",
+            "ui-th-ltr",
+            "up",
+            "wrapper",
+            "wrapper-content",
+            "yes"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context95_7tyRdN": [
+          [
+            "-/-/DIV",
+            "-/-/LINK",
+            "-/-/SCRIPT",
+            "-/DIV/A",
+            "-/DIV/BUTTON",
+            "-/DIV/DIV",
+            "-/DIV/FORM",
+            "-/DIV/H4",
+            "-/DIV/IMG",
+            "-/DIV/INPUT-text",
+            "-/DIV/TABLE",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/IFRAME",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/FORM/INPUT-hidden",
+            "DIV/H6/LABEL",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/SPAN",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "FORM/DIV/A",
+            "FORM/DIV/DIV",
+            "FORM/DIV/INPUT-button",
+            "FORM/DIV/INPUT-text",
+            "FORM/DIV/SELECT",
+            "FORM/DIV/TABLE",
+            "FORM/DIV/UL",
+            "H6/LABEL/I",
+            "H6/LABEL/INPUT-checkbox",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "TD/SELECT/OPTION",
+            "TD/TABLE/TBODY",
+            "TH/DIV/SPAN",
+            "THEAD/TR/TH",
+            "TR/TD/INPUT-text",
+            "TR/TD/SELECT",
+            "TR/TD/SPAN",
+            "TR/TD/TABLE",
+            "TR/TH/DIV",
+            "TR/TH/SPAN",
+            "UL/LI/A",
+            "UL/LI/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

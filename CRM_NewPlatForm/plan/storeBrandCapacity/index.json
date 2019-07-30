@@ -1,0 +1,204 @@
+{
+  "version": "0.1",
+  "id": "storeBrandCapacity",
+  "targetURL": "http://192.168.1.227/pttlCrm/store/getStoreBrand",
+  "jsFile": "index.js",
+  "chineseName": "门店品牌容量",
+  "description": "门店品牌容量",
+  "controls": {
+    "control227_4rfw4n": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control227_4rfw4n"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control228_6H9Jpo": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"mainContainer\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control228_6H9Jpo"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context60_7v6ZGI": {
+      "controls": [
+        "control227_4rfw4n",
+        "control228_6H9Jpo"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "^http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/store\\/getStoreBrand"
+      ]
+    }
+  },
+  "flows": {
+    "flow194_hlXsUS": {
+      "toContexts": [
+        {
+          "toContextId": "context60_7v6ZGI"
+        }
+      ]
+    },
+    "flow195_EgAPKh": {
+      "fromContextId": "context60_7v6ZGI",
+      "fromAction": "doAction",
+      "fromControlId": "control227_4rfw4n",
+      "toContexts": [
+        {
+          "toContextId": "context60_7v6ZGI"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page60_7uGv0V": {
+      "contextId": "context60_7v6ZGI",
+      "layout": [
+        {
+          "id": "uiControl221_RGQXh5",
+          "controlId": "control227_4rfw4n",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl221_RGQXh5",
+                "onGetTemplate": "getTemplate_uiControl221_RGQXh5"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl222_EWTZfg",
+          "controlId": "control228_6H9Jpo",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl222_EWTZfg",
+                "onGetTemplate": "getTemplate_uiControl222_EWTZfg"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context60_7v6ZGI": [
+          "客户信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context60_7v6ZGI": [
+          "192.168.1.227/pttlCrm/store/getStoreBrand"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context60_7v6ZGI": [
+          [
+            "Close",
+            "brandHeader",
+            "clientInfoMenu",
+            "clientMenu",
+            "leftArrow",
+            "mainContainer",
+            "publicHead",
+            "rightArrow",
+            "tbodyContent"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context60_7v6ZGI": [
+          [
+            "active",
+            "content-store",
+            "head",
+            "head-detile",
+            "head-tab",
+            "head-title",
+            "left-arrow",
+            "right-arrow",
+            "store",
+            "store-body",
+            "store-border",
+            "store-head",
+            "table"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context60_7v6ZGI": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H2",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/THEAD/TR",
+            "THEAD/TR/TH",
+            "UL/LI/A"
+          ]
+        ]
+      }
+    }
+  }
+}

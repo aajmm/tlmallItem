@@ -1,0 +1,869 @@
+{
+  "version": "0.1",
+  "id": "newInformationTotle",
+  "targetURL": "http://192.168.1.227/pttlCrm/res/page/home/commonMenu.html#",
+  "jsFile": "index.js",
+  "requires": {
+    "HESInformationFill": "../HESInformationFill/index.json",
+    "newInformationTotle": "../newInformationTotle/index.json"
+  },
+  "chineseName": "信息采集(new)",
+  "description": "",
+  "shouldLogin": false,
+  "shouldReturnOriginalPage": false,
+  "controls": {
+    "control174_81MqFT": {
+      "location": {
+        "data": {
+          "tagName": "H1"
+        },
+        "userData": {
+          "data": [
+            {
+              "method": "XPath",
+              "value": ""
+            }
+          ],
+          "force": true
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"menu\"]//H1[@id=\"menuName\"]",
+              "descendant::H1[@id=\"menuName\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.visit-manager-title_tool DIV.leftPart DIV.visit-manager-title_tool H1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/H1[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control174_81MqFT"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control178_WvVIne": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"menu\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.visit-manager"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control178_WvVIne"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control205_31bCSe": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "客户信息录入"
+              ],
+              "visText": [
+                "客户信息录入"
+              ]
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 3,
+            "value": {
+              "pathname": "/pttlCrm/res/page/psi/customerInfocollection.html",
+              "redirect": "SPAN[2]"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"menu\"]/UL[1]/LI[1]/A[1]/SPAN[2]",
+              "descendant::DIV[@id=\"menu\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              8
+            ],
+            "value": "UL.menu-item.clearfix LI.menu-item-list A.visit.visitinfo1 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/UL[1]/LI[1]/A[1]/SPAN[2]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              51,
+              122,
+              183
+            ]
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control206_AsPMkV": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "客户信息录入"
+              ],
+              "visText": [
+                "客户信息录入"
+              ]
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 3,
+            "value": {
+              "pathname": "/pttlCrm/res/page/psi/customerInfocollection.html",
+              "redirect": "SPAN[2]"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"menu\"]/UL[1]/LI[1]/A[1]/SPAN[2]",
+              "descendant::DIV[@id=\"menu\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              8
+            ],
+            "value": "UL.menu-item.clearfix LI.menu-item-list A.visit.visitinfo1 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/UL[1]/LI[1]/A[1]/SPAN[2]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              51,
+              122,
+              183
+            ]
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control215_qACBtF": {
+      "location": {
+        "data": {
+          "tagName": "H1"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "信息录入"
+              ],
+              "visText": [
+                "信息录入"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"menu\"]//H1[@id=\"menuName\"]",
+              "descendant::H1[@id=\"menuName\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.visit-manager-title_tool DIV.leftPart DIV.visit-manager-title_tool H1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/H1[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control216_xh5bGM": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "客户信息录入"
+              ],
+              "visText": [
+                "客户信息录入"
+              ]
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 3,
+            "value": {
+              "pathname": "/pttlCrm/res/page/psi/customerInfocollection.html",
+              "redirect": "SPAN[2]"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"menu\"]/UL[1]/LI[1]/A[1]/SPAN[2]",
+              "descendant::DIV[@id=\"menu\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              8
+            ],
+            "value": "UL.menu-item.clearfix LI.menu-item-list A.visit.visitinfo1 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/UL[1]/LI[1]/A[1]/SPAN[2]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              51,
+              122,
+              183
+            ]
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "客户信息录入",
+      "frameXPath": "",
+      "customJS": "\nif(elem.textContent.indexOf('客户信息录入') != -1){\n  return true;\n}"
+    }
+  },
+  "contexts": {
+    "context50_VkOplu": {
+      "controls": [
+        "control174_81MqFT",
+        "control178_WvVIne"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "^http:\\/\\/192\\.168\\.1\\.224:8080\\/pttlCrm\\/res\\/page\\/home\\/commonMenu\\.html.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow157_GrroqF": {
+      "toContexts": [
+        {
+          "toContextId": "context50_VkOplu"
+        },
+        {
+          "toContextId": "context50_VkOplu",
+          "toModelId": "newInformationTotle"
+        }
+      ]
+    },
+    "flow160_RRVTMl": {
+      "fromContextId": "context50_VkOplu",
+      "fromAction": "doAction",
+      "fromControlId": "control178_WvVIne",
+      "toContexts": [
+        {
+          "toContextId": "context50_VkOplu"
+        },
+        {
+          "toContextId": "context51_PhTFP3",
+          "toModelId": "customerInformationFIll"
+        },
+        {
+          "toContextId": "context52_Wg5qcG",
+          "toModelId": "HESInformationFill"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page50_bz2L3V": {
+      "contextId": "context50_VkOplu",
+      "layout": [
+        {
+          "id": "uiControl171_iPOSCv",
+          "controlId": "control174_81MqFT",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl171_iPOSCv",
+                "onGetTemplate": "getTemplate_uiControl171_iPOSCv"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl175_cTSTMl",
+          "controlId": "control178_WvVIne",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl175_cTSTMl",
+                "onGetTemplate": "getTemplate_uiControl175_cTSTMl"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context50_VkOplu": [
+          "公用三级菜单"
+        ],
+        "context21_rzW6UT": [
+          "客户其它信息采集",
+          "客户PSI采集"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context50_VkOplu": [
+          "192.168.1.227/pttlCrm/res/page/home/commonMenu.html"
+        ],
+        "context26_dJqbCV": [],
+        "context21_rzW6UT": []
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context50_VkOplu": [
+          [
+            "menu",
+            "menuName"
+          ]
+        ],
+        "context21_rzW6UT": [
+          [
+            "messagePSI"
+          ],
+          [
+            "Page",
+            "messageCustomerInformationCollection"
+          ],
+          [
+            "Page",
+            "customerName_search",
+            "messageCustomerInformationCollection",
+            "search"
+          ],
+          [
+            "Page",
+            "customerName_search",
+            "importExcel",
+            "messagePSI",
+            "psiEnterTable",
+            "search",
+            "tbodyContent"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context50_VkOplu": [
+          [
+            "clearfix",
+            "icon",
+            "icon-title",
+            "leftPart",
+            "mask",
+            "menu-item",
+            "menu-item-icon",
+            "menu-item-list",
+            "visit",
+            "visit-manager",
+            "visit-manager-title_tool",
+            "visitinfo"
+          ],
+          [
+            "clearfix",
+            "icon",
+            "icon-title",
+            "leftPart",
+            "mask",
+            "menu-item",
+            "menu-item-icon",
+            "menu-item-list",
+            "store",
+            "visit",
+            "visit-manager",
+            "visit-manager-title_tool",
+            "visitinfo"
+          ]
+        ],
+        "context26_dJqbCV": [
+          [
+            "active",
+            "btn",
+            "btnimformation",
+            "btninfor",
+            "collectionPSI-table",
+            "collectionPSIentercontent",
+            "collectionPSIentercontentborder",
+            "collectionPSIentertdtext",
+            "collectionPSIentertop",
+            "collectionPSIentertop-text",
+            "commpnPage",
+            "import-image",
+            "import-imagetitle",
+            "leftPart",
+            "pagination",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table"
+          ],
+          [
+            "active",
+            "collectionPSI-table",
+            "collectionPSIentercontent",
+            "collectionPSIentercontentborder",
+            "collectionPSIentertdtext",
+            "collectionPSIentertop",
+            "commpnPage",
+            "customerList_name",
+            "customerList_search",
+            "icon",
+            "icon-title",
+            "import-image",
+            "import-imagetitle",
+            "information-serch",
+            "leftPart",
+            "mask",
+            "pagination",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table"
+          ],
+          [
+            "PSIpre",
+            "active",
+            "collectionPSI-table",
+            "collectionPSIentercontent",
+            "collectionPSIentercontentborder",
+            "collectionPSIentertdtext",
+            "collectionPSIentertop",
+            "commpnPage",
+            "customerList_name",
+            "customerList_search",
+            "icon",
+            "icon-title",
+            "import-image",
+            "import-imagetitle",
+            "information-serch",
+            "leftPart",
+            "mask",
+            "pagination",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table"
+          ],
+          [
+            "PSIpre",
+            "active",
+            "btn",
+            "collectionPSI-table",
+            "collectionPSIentercontent",
+            "collectionPSIentercontentborder",
+            "collectionPSIentertdtext",
+            "collectionPSIentertop",
+            "collectionPSIentertop-icon",
+            "collectionPSIentertop-text",
+            "commpnPage",
+            "customerList_name",
+            "customerList_search",
+            "header",
+            "import-imagetitle",
+            "information-serch",
+            "mask",
+            "pagination",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table"
+          ]
+        ],
+        "context21_rzW6UT": [
+          [
+            "btn",
+            "col-md-",
+            "col-sm-",
+            "messagePSIcontent",
+            "messagePSIcontentborder",
+            "messagePSIcontentborder-content",
+            "messagePSIcontentborder-content-bottom",
+            "messagePSIcontentborder-content-bottom-text",
+            "messagePSIcontentborder-content-bottom-textspan",
+            "messagePSIcontentborder-content-bottom-xm-text",
+            "messagePSIcontentborder-content-top",
+            "messagePSIcontentborder-content-top-span",
+            "messagePSIcontentborder-content-top-spanlast",
+            "messagePSIcontentedit",
+            "messagePSIcontentedit-icon",
+            "messagePSItop",
+            "messagePSItop-icon",
+            "messagePSItop-point",
+            "messagePSItop-text"
+          ],
+          [
+            "active",
+            "btn",
+            "col-md-",
+            "col-sm-",
+            "commpnPage",
+            "messagePSIcontent",
+            "messagePSIcontentborder",
+            "messagePSIcontentborder-content",
+            "messagePSIcontentborder-content-bottom",
+            "messagePSIcontentborder-content-bottom-text",
+            "messagePSIcontentborder-content-bottom-textspan",
+            "messagePSIcontentborder-content-bottom-xm-text",
+            "messagePSIcontentborder-content-top",
+            "messagePSIcontentborder-content-top-span",
+            "messagePSIcontentborder-content-top-spanlast",
+            "messagePSIcontentedit",
+            "messagePSIcontentedit-icon",
+            "messagePSItop",
+            "messagePSItop-icon",
+            "messagePSItop-point",
+            "messagePSItop-text",
+            "pagination",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto"
+          ],
+          [
+            "PSIpre",
+            "active",
+            "btn",
+            "collectionPSI-table",
+            "collectionPSIentercontent",
+            "collectionPSIentercontentborder",
+            "collectionPSIentertdtext",
+            "collectionPSIentertop",
+            "collectionPSIentertop-icon",
+            "collectionPSIentertop-text",
+            "commpnPage",
+            "customerList_name",
+            "customerList_search",
+            "header",
+            "import-imagetitle",
+            "information-serch",
+            "mask",
+            "pagination",
+            "skip",
+            "skip-num",
+            "skip-right-icon",
+            "skip_count",
+            "skip_right_goto",
+            "table"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context50_VkOplu": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/UL",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/I",
+            "DIV/UL/LI",
+            "LI/A/SPAN",
+            "UL/LI/A"
+          ]
+        ],
+        "context26_dJqbCV": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ]
+        ],
+        "context21_rzW6UT": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/SPAN/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/SPAN/SPAN",
+            "DIV/UL/LI",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/A",
+            "UL/LI/A",
+            "UL/LI/INPUT-number",
+            "UL/LI/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}
