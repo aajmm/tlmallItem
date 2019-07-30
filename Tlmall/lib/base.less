@@ -384,14 +384,17 @@ div[data-ysp-modelid^="registeredAccount"]{
     overflow-y: auto;
     h3{
       width: 100%;
-      height: 45px;
-      line-height: 50px;
+      height: 40px;
+      line-height: 55px;
       color: #e7350d;
       font-weight: 200;
       padding-left: 15px;
       font-size: 15px;
     }
-    p{
+    div:nth-child(2){
+      margin: 0;
+    }
+    .text{
       display: flex;
       padding: 0 15px;
       margin-top: 15px;
@@ -414,7 +417,31 @@ div[data-ysp-modelid^="registeredAccount"]{
       input::-webkit-input-placeholder{
         font-size: 13px;
       }
-      button{
+    }
+    .prompt{
+      padding-left: 30px;
+      margin: 0;
+      color: #999;
+      font-size: 12px;
+      margin-top: -10px;
+    }
+    div:nth-child(9),div:nth-child(10){
+      display: flex;
+      align-items: center;
+      flex-shrink: 1;
+      p{
+        display: flex;
+        width: 76%;
+        span{
+          width: 4%;
+          color: #E3370A;
+          font-size: 20px;
+          float: left;
+          margin-right: 4px;
+          margin-top: 7px;
+        }
+      }
+      input[type='button']{
         width: 80px;
         height: 38px;
         background: #E7350E;
@@ -422,16 +449,7 @@ div[data-ysp-modelid^="registeredAccount"]{
         line-height: 40px;
         border: 0;
         border-radius: 3px;
-        margin-left: 5px; 
-      }
-    }
-    .registered-account-user,.registered-account-pwd{
-      margin: 0;
-      p:last-child{
-        color: #999;
-        font-size: 12px;
-        margin-top: -10px;
-        padding-left: 30px;
+        margin: 0;
       }
     }
     .registered-account-agree{
@@ -483,6 +501,8 @@ div[data-ysp-modelid^="registrationProtocol"]{
   width: 100%;
   height: 100%;
   background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
   header{
     background: #fff;
     border: 0;
@@ -491,6 +511,41 @@ div[data-ysp-modelid^="registrationProtocol"]{
       color: #3f3f3f;
     	font-size: 17px;
     	font-weight: 200;
+    }
+  }
+  .registration-protocol-con{
+    width: 92%;
+    height: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    overflow-y: auto;
+    background: #fff;
+    h5{
+      color: #6b6b6b;
+      font-weight: normal;
+    	margin-top: 0;
+      margin: 0 0 16px 0;
+    }
+    p:last-child{
+      padding-bottom: 40px;
+    }
+  }
+  .registration-protocol-btn{
+    width: 100%;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    button{
+      width: 92%;
+    	height: 40px;
+    	line-height: 40px;
+    	color: #fff;
+    	text-align: center;
+    	background: #E7350E;
+   	 	border: 0;
+    	border-radius: 3px; 
     }
   }
 }
