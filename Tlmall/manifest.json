@@ -27,12 +27,32 @@
       "demo": [
         "http://192.168.220.23/login.html"
       ]
+    },
+    {
+      "title": "forgotPassword-writeAccount",
+      "url": "adapter://Tlmall/plan/forgotPassword-writeAccount/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/passwordBack\\.html"
+      ],
+      "demo": [
+        "http://192.168.220.23/passwordBack.html"
+      ]
+    },
+    {
+      "title": "registeredAccount",
+      "url": "adapter://Tlmall/plan/registeredAccount/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/register\\.html"
+      ],
+      "demo": [
+        "http://192.168.220.23/register.html"
+      ]
     }
   ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1564451179315,
+  "update_time": 1564476673868,
   "runtime_env": "1webview"
 }

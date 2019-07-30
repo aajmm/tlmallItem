@@ -248,16 +248,6 @@ div[data-ysp-modelid^="forgotPassword-writeAccount"]{
     }
   }
   .forgotPwd-phone{
-    // h3{
-    //   width: 100%;
-    //   height: 45px;
-    //   line-height: 50px;
-    //   color: #e7350d;
-    //   font-weight: 200;
-    //   padding-left: 15px;
-    //   font-size: 15px;
-    //   border-bottom: 1px solid #ccc;
-    // }
     >p{
       color: #777;
       line-height: 24px;
@@ -356,6 +346,206 @@ div[data-ysp-modelid^="forgotPassword-writeAccount"]{
       color: #e7350d;
       margin-top: 10px;
       font-size: 16px;
+    }
+  }
+}
+div[data-ysp-modelid^="registeredAccount"]{
+  width: 100%;
+  height: 100%;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  Header{
+    width: 100%;
+    height: 44px;
+    background: #fff;
+    border:0;
+    padding: 0 15px;
+    border-bottom: 1px solid #ccc;
+    h2{
+      color: #3f3f3f;
+      font-size: 17px;
+      font-weight: 200;
+    }
+    i.registered-account-goback{
+      width: 12px;
+      height: 20px;
+      display: inline-block;
+      background: url('../local/img/goback.png') no-repeat;
+      background-size: 100%;
+    }
+    span.registered-account-gonext{
+      color: #999;
+    }
+  }
+  .registered-account-form{
+    width: 100%;
+   	height: 93%;
+    overflow-y: auto;
+    h3{
+      width: 100%;
+      height: 40px;
+      line-height: 55px;
+      color: #e7350d;
+      font-weight: 200;
+      padding-left: 15px;
+      font-size: 15px;
+    }
+    div:nth-child(2){
+      margin: 0;
+    }
+    .text{
+      display: flex;
+      padding: 0 15px;
+      margin-top: 15px;
+      span{
+        width: 4%;
+        color: #E3370A;
+        font-size: 20px;
+        float: left;
+        margin-top: 7px;
+      }
+      input{
+        width: 100%;
+        height: 40px;
+        display: inline-block;
+        border: #ccc solid 1px;
+        border-radius: 3px;
+        padding-left: 10px;
+        margin-left: 3px;
+      }
+      input::-webkit-input-placeholder{
+        font-size: 13px;
+      }
+    }
+    .prompt{
+      padding-left: 30px;
+      margin: 0;
+      color: #999;
+      font-size: 12px;
+      margin-top: -10px;
+    }
+    div:nth-child(9),div:nth-child(10){
+      display: flex;
+      align-items: center;
+      flex-shrink: 1;
+      p{
+        display: flex;
+        width: 76%;
+        span{
+          width: 4%;
+          color: #E3370A;
+          font-size: 20px;
+          float: left;
+          margin-right: 4px;
+          margin-top: 7px;
+        }
+      }
+      input[type='button']{
+        width: 80px;
+        height: 38px;
+        background: #E7350E;
+        color: #fff;
+        line-height: 40px;
+        border: 0;
+        border-radius: 3px;
+        margin: 0;
+      }
+    }
+    .registered-account-agree{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      p{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input{
+          width: 10%;
+          margin-right: 5px;
+        }
+        label{
+          height: 20px;
+          font-size: 13px;
+          line-height: 27px;
+        }
+        b{
+          color: #E7350E;
+          font-weight: 300;
+        }
+      }
+    }
+    .registered-account-nowregister{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      button{
+        width: 90%;
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        text-align: center;
+        background: #E7350E;
+        border: 0;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+div[data-ysp-modelid^="registrationProtocol"]{
+  width: 100%;
+  height: 100%;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  header{
+    background: #fff;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    h2{
+      color: #3f3f3f;
+    	font-size: 17px;
+    	font-weight: 200;
+    }
+  }
+  .registration-protocol-con{
+    width: 92%;
+    height: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    overflow-y: auto;
+    background: #fff;
+    h5{
+      color: #6b6b6b;
+      font-weight: normal;
+    	margin-top: 0;
+      margin: 0 0 16px 0;
+    }
+    p:last-child{
+      padding-bottom: 40px;
+    }
+  }
+  .registration-protocol-btn{
+    width: 100%;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    button{
+      width: 92%;
+    	height: 40px;
+    	line-height: 40px;
+    	color: #fff;
+    	text-align: center;
+    	background: #E7350E;
+   	 	border: 0;
+    	border-radius: 3px; 
     }
   }
 }
