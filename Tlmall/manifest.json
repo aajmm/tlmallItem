@@ -29,6 +29,16 @@
       ]
     },
     {
+      "title": "contact",
+      "url": "adapter://Tlmall/plan/contact/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=50400"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html?code=50400"
+      ]
+    },
+    {
       "title": "forgotPassword-writeAccount",
       "url": "adapter://Tlmall/plan/forgotPassword-writeAccount/index.json",
       "matcher": [
@@ -53,6 +63,6 @@
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1564476673868,
+  "update_time": 1564485899007,
   "runtime_env": "1webview"
 }
