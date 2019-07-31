@@ -11,6 +11,10 @@
         "data": {
           "tagName": "SPAN"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "text",
@@ -56,6 +60,10 @@
         "data": {
           "tagName": "SPAN"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -89,37 +97,38 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control14_smhkAT": {
+    "control15_0zwZ6w": {
       "location": {
         "data": {
-          "tagName": "FORM"
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
             "id": "@id/word",
-            "prob": 3,
-            "value": [
-              "descendant::DIV[@id=\"personalRight\"]//FORM[@id=\"newAddressDiv\"]",
-              "descendant::FORM[@id=\"newAddressDiv\"]"
-            ]
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]"
           },
           {
             "id": "@class/word",
             "prob": 1,
-            "value": "DIV.wc1200.clearfix DIV.wb_r DIV.ablock.pd_lr FORM"
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.wb_r"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[2]/FORM[1]"
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[3]/DIV[1]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control14_smhkAT"
+        "onGetData": "getData_control15_0zwZ6w"
       },
       "intendedRole": "custom",
-      "roles": "element,custom",
+      "roles": "element,link,custom",
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
@@ -129,7 +138,7 @@
     "context4_G4wDgT": {
       "controls": [
         "control13_NR1TdQ",
-        "control14_smhkAT"
+        "control15_0zwZ6w"
       ],
       "anchors": [
         "control12_NcLbHm"
@@ -137,7 +146,18 @@
       "urlAnchor": []
     }
   },
-  "flows": {},
+  "flows": {
+    "flow12_Ib7dkM": {
+      "fromContextId": "context4_G4wDgT",
+      "fromAction": "doAction",
+      "fromControlId": "control15_0zwZ6w",
+      "toContexts": [
+        {
+          "toContextId": "context4_G4wDgT"
+        }
+      ]
+    }
+  },
   "pages": {
     "page4_29Eoct": {
       "contextId": "context4_G4wDgT",
@@ -158,16 +178,16 @@
           }
         },
         {
-          "id": "uiControl12_zTrKDR",
-          "controlId": "control14_smhkAT",
+          "id": "uiControl15_rVvoFf",
+          "controlId": "control15_0zwZ6w",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl12_zTrKDR",
-                "onGetTemplate": "getTemplate_uiControl12_zTrKDR"
+                "onDoAction": "doAction_uiControl15_rVvoFf",
+                "onGetTemplate": "getTemplate_uiControl15_rVvoFf"
               }
             }
           }
