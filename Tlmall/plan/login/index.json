@@ -6,7 +6,8 @@
   "requires": {
     "forgotPassword-writeAccount": "../forgotPassword-writeAccount/index.json",
     "index": "../index/index.json",
-    "registeredAccount": "../registeredAccount/index.json"
+    "registeredAccount": "../registeredAccount/index.json",
+    "enterpriseInformation": "../enterpriseInformation/index.json"
   },
   "chineseName": "登录",
   "description": "",
@@ -33,7 +34,7 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "monitored": false,
+      "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
     },
@@ -187,6 +188,10 @@
       "toContexts": [
         {
           "toContextId": "context0_DQT6TF"
+        },
+        {
+          "toContextId": "context5_MEUJxb",
+          "toModelId": "enterpriseInformation"
         }
       ]
     },
