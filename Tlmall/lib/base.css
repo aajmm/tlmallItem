@@ -23,6 +23,10 @@ tr {
   margin: 0;
   padding: 0;
 }
+ul,
+li {
+  list-style: none;
+}
 /*    以上样式为公用样式      */
 div[data-ysp-modelid^="login"] {
   width: 100%;
@@ -630,7 +634,100 @@ div[data-ysp-modelid^="contact"] .ysp-top .back {
   background-size: 27%;
 }
 div[data-ysp-modelid^="contact"] .contact {
-  margin-top: 45px;
+  padding-top: 45px;
+  background: #f3f3f3;
+  padding-bottom: 100px;
+  height: 100%;
+  overflow-y: scroll;
+}
+div[data-ysp-modelid^="contact"] .contact .tit {
+  padding: 0 12px;
+  height: 47px;
+  line-height: 47px;
+  border-bottom: none;
+  background-color: #f3f3f3;
+  color: #5a5a5a;
+  font-weight: bold;
+  font-size: 16px;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list {
+  margin-bottom: 10px;
+  background: #fff;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list .list-tit {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0 12px;
+  height: 47px;
+  line-height: 47px;
+  overflow: hidden;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list .list-tit .tit-con {
+  display: inline-block;
+  font-size: 15px;
+  color: #3f3f3f;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list .list-tit .btns {
+  display: inline-block;
+  float: right;
+  text-align: right;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list .list-tit .btns span {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0 16px;
+  margin-left: 12px;
+  margin-top: 10px;
+  background-color: #4796ed;
+  color: #fff;
+  font-size: 12px;
+  line-height: 26px;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list .list-box {
+  overflow: hidden;
+  padding: 12px 0;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list .list-box li {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  font-size: 14px;
+  color: #666;
+  padding: 2px 0;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list .list-box li:nth-child(even) {
+  padding-right: 12px;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list .list-box li:nth-child(odd) {
+  padding-left: 12px;
+}
+div[data-ysp-modelid^="contact"] .contact .contact-list .list-box li:last-child {
+  width: 100%;
+  border-top: 1px solid #e1e1e1;
+  padding: 10px 12px 0;
+  margin-top: 10px;
+}
+div[data-ysp-modelid^="contact"] .add-contact {
+  position: fixed;
+  right: 0;
+  bottom: 52px;
+  left: 0;
+  height: 50px;
+  background-color: #e7350d;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+div[data-ysp-modelid^="contact"] .add-contact i.icon-add {
+  position: relative;
+  top: 2px;
+  right: 5px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(images/plus.png) no-repeat center center;
+  -webkit-background-size: 15px 15px;
+  background-size: 15px 15px;
 }
 div[data-ysp-modelid^="contact"] .form-box {
   position: fixed;
@@ -695,6 +792,7 @@ div[data-ysp-modelid^="contact"] .form-box .form-li textarea {
   box-sizing: border-box;
   font-size: 14px;
   resize: none;
+  color: #333;
 }
 div[data-ysp-modelid^="contact"] .form-box .save-box {
   margin-top: 10px;
@@ -756,7 +854,7 @@ div[data-ysp-modelid^="contact"] .ysp-selpop-box .pop-con .sel-lists {
   margin-bottom: 40px!important;
 }
 div[data-ysp-modelid^="contact"] .ysp-selpop-box .pop-con .sel-lists li {
-  border-bottom: 1px solid #f3f3f3;
+  border-bottom: 1px solid #e1e1e1;
   padding: 10px 0;
   font-size: 14px;
   color: #3f3f3f;

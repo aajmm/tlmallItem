@@ -9,6 +9,11 @@ body,span,div,h1,h2,h3,h4,h5,h6,p,li,ul,table,th,td,tr{
   margin: 0;
   padding: 0;
 }
+ul,li{
+  list-style: none;
+}
+@theme-border:1px solid #e1e1e1;
+@theme-bg:#f3f3f3;
 /*    以上样式为公用样式      */
 
 //登录页
@@ -595,7 +600,7 @@ div[data-ysp-modelid^="registrationProtocol"]{
   }
 }
 
-//我的联系人页   xxger   2019-7-30
+//我的联系人页   xxger
 div[data-ysp-modelid^="contact"] {
     .ysp-top {
         position: fixed;
@@ -606,7 +611,7 @@ div[data-ysp-modelid^="contact"] {
         overflow: hidden;
         line-height: 44px;
         text-align: center;
-        border-bottom: 1px solid #e1e1e1;
+        border-bottom: @theme-border;
         box-sizing: border-box;
         padding: 0 10px;
         background: #fff;
@@ -620,8 +625,101 @@ div[data-ysp-modelid^="contact"] {
             background-size: 27%;
         }
     }
-    .contact{
-      margin-top:45px;
+    .contact {
+        padding-top: 45px;
+        background: @theme-bg;
+        padding-bottom: 100px;
+        height:100%;
+        overflow-y: scroll;
+        .tit {
+            padding: 0 12px;
+            height: 47px;
+            line-height: 47px;
+            border-bottom: none;
+            background-color: @theme-bg;
+            color: #5a5a5a;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .contact-list {
+            margin-bottom: 10px;
+            background: #fff;
+            .list-tit {
+                border-bottom: @theme-border;
+                padding: 0 12px;
+                height: 47px;
+                line-height: 47px;
+                overflow: hidden;
+                .tit-con {
+                    display: inline-block;
+                    font-size: 15px;
+                    color: #3f3f3f;
+                }
+                .btns {
+                    display: inline-block;
+                    float: right;
+                    text-align: right;
+                    span {
+                        display: inline-block;
+                        border-radius: 3px;
+                        padding: 0 16px;
+                        margin-left: 12px;
+                      	margin-top:10px;
+                        background-color: #4796ed;
+                        color: #fff;
+                        font-size: 12px;
+                        line-height:26px;
+                    }
+                }
+            }
+            .list-box {
+                overflow: hidden;
+                padding: 12px 0;
+                li {
+                    box-sizing: border-box;
+                    width: 50%;
+                    float: left;
+                    font-size: 14px;
+                    color: #666;
+                    padding: 2px 0;
+                  &:nth-child(even){
+                    padding-right:12px;
+                  }
+                  &:nth-child(odd){
+                    padding-left:12px;
+                  }
+                  &:last-child{
+                    width:100%;
+                    border-top:@theme-border;
+                    padding:10px 12px 0;
+                    margin-top:10px;
+                  }
+                }
+            }
+        }
+    }
+    .add-contact {
+        position: fixed;
+        right: 0;
+        bottom: 52px;
+        left: 0;
+        height: 50px;
+        background-color: #e7350d;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        i.icon-add {
+            position: relative;
+            top: 2px;
+            right: 5px;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(images/plus.png) no-repeat center center;
+            -webkit-background-size: 15px 15px;
+            background-size: 15px 15px;
+        }
     }
     .form-box {
         position: fixed;
@@ -632,7 +730,7 @@ div[data-ysp-modelid^="contact"] {
         z-index: 10;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
-        background-color: #f3f3f3;
+        background-color: @theme-bg;
         .form-li {
             padding: 0 12px;
             span {
@@ -650,7 +748,7 @@ div[data-ysp-modelid^="contact"] {
                 margin: 0 2%;
                 width: 96%;
                 line-height: 40px;
-                border: 1px solid #e1e1e1;
+                border: @theme-border;
                 border-radius: 3px;
                 text-indent: 10px;
                 font-size: 14px;
@@ -665,7 +763,7 @@ div[data-ysp-modelid^="contact"] {
                 margin: 0 2%;
                 width: 96%;
                 line-height: 40px;
-                border: 1px solid #e1e1e1;
+                border: @theme-border;
                 border-radius: 3px;
                 text-indent: 10px;
                 font-size: 14px;
@@ -677,13 +775,14 @@ div[data-ysp-modelid^="contact"] {
             textarea {
                 display: block;
                 margin: 0 2%;
-                border: 1px solid #e1e1e1;
+                border: @theme-border;
                 border-radius: 3px;
                 padding: 3px 5px;
                 width: 96%;
                 box-sizing: border-box;
                 font-size: 14px;
                 resize: none;
+                color:#333;
             }
         }
         .save-box {
@@ -745,7 +844,7 @@ div[data-ysp-modelid^="contact"] {
                 background-color: #fff;
                 margin-bottom: 40px!important;
                 li {
-                    border-bottom: 1px solid #f3f3f3;
+                    border-bottom: @theme-border;
                     padding: 10px 0;
                     font-size: 14px;
                     color: #3f3f3f;

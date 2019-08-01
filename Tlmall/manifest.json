@@ -57,12 +57,22 @@
       "demo": [
         "http://192.168.220.23/register.html"
       ]
+    },
+    {
+      "title": "personal",
+      "url": "adapter://Tlmall/plan/personal/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html"
+      ]
     }
   ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1564555319234,
+  "update_time": 1564571595819,
   "runtime_env": "1webview"
 }
