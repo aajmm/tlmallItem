@@ -556,3 +556,44 @@ div[data-ysp-modelid^="registrationProtocol"] .registration-protocol-btn button 
   border: 0;
   border-radius: 3px;
 }
+div[data-ysp-modelid^="shippingAddress"] .icon-goback {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 12px;
+  height: 21px;
+  background: url(../local/img/goback.png);
+  background-size: 100%;
+}
+div[data-ysp-modelid^="shippingAddress"] .main-title {
+  height: 45px;
+  line-height: 45px;
+}
+div[data-ysp-modelid^="shippingAddress"] .main-title .navbar {
+  background-color: #fff;
+  border-bottom-color: #ccc;
+}
+div[data-ysp-modelid^="shippingAddress"] .main-title h2 {
+  font-size: 17px;
+  font-weight: normal;
+  color: #3F3F3F;
+}
+div[data-ysp-modelid^="shippingAddress"] .tab-title .btn {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+div[data-ysp-modelid^="shippingAddress"] .tab-title .btn.act,
+div[data-ysp-modelid^="shippingAddress"] .tab-title .btn:active,
+div[data-ysp-modelid^="shippingAddress"] .tab-title .btn:hover {
+  background: #fff;
+  color: #E7350D;
+  border-bottom: 2px solid #e7350d;
+}

@@ -1,0 +1,258 @@
+getData_control4_MxOvOh: ''
+doAction_uiControl4_smtNBt: |
+  if (data.eventType == 'goBack') {
+    // console.log(111);
+    ysp.appMain.back();
+  }
+getTemplate_uiControl4_smtNBt: "import { Header, HeaderLeft } from 'ysp-interior-components';\nimport { back } from 'appRenderer';\nexport default class extends React.Component{\n  constructor(props){\n    super(props);\n  }\n  goBack=()=>{\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"goBack\"\n      })\n    }\n  }\n  render() {\n    return (\n      <div className='forgotPwd-writeAccount'>\n        <Header title=\"找回登录密码\">\n          <HeaderLeft>\n            <i className='forgotPwd-writeAccount-goback'  onClick={back}></i>\n          </HeaderLeft>\n\t\t\t\t</Header>\n      </div>\n    )\n  }\n};"
+getData_control5_NxoWPT: |
+  return elem.id.indexOf('one') != -1 ? true : false;
+doAction_uiControl5_uDaKX0: |
+  if (data.eventType == 'username') {
+    elem.querySelector('#userName').value = data.dataCustom;
+    elem.querySelector('#userName').blur();
+  } else if (data.eventType == 'phone') {
+    elem.querySelector('#phone').value = data.dataCustom;
+    elem.querySelector('#phone').blur();
+  }
+getTemplate_uiControl5_uDaKX0: |-
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    username=(e)=>{
+      var target=e.target;
+      var handler=this.props.customHandler;
+      if(handler){
+        handler({
+          data:target.value,
+          eventType:"username"
+        })
+      }
+    }
+    phone=(e)=>{
+      var target=e.target;
+      var handler=this.props.customHandler;
+      if(handler){
+        handler({
+          data:target.value,
+          eventType:"phone"
+        })
+      }
+    }
+    render() {
+      return (
+        <div>{this.props.customData && <div className='forgotPwd-writeAccount-form'>
+          <h3>填写账户</h3>
+          <p><input type='text' placeholder='用户名' onBlur={this.username}/></p>
+          <p><input type='text' placeholder='已绑定手机' onBlur={this.phone}/></p>
+        </div>}</div>
+      )
+    }
+  }
+getData_control5_KoofTd: |
+  if (!elem) {
+    return;
+  }
+  var msg = elem.parentNode.style.display != 'none' ? elem.textContent : '';
+  return msg;
+doAction_uiControl5_db0Mry: ''
+getTemplate_uiControl5_db0Mry: |-
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    render() {
+      return (
+        <div>
+          {this.props.customData?
+            <div className='forgotPwd-writeAccount-form-prompt'>{this.props.customData}</div>
+        :null}</div>
+      )
+    }
+  }
+getData_control6_d3ldp6: >
+  if (!elem) {
+    return;
+  }
+
+  var btn1 = elem.ownerDocument.querySelector('#onestep') &&
+  elem.ownerDocument.querySelector('#onestep').children.length > 0 ? true :
+  false;
+
+  var btn2 = elem.ownerDocument.querySelector('#twostep') &&
+  elem.ownerDocument.querySelector('#twostep').children.length > 0 ? true :
+  false;
+
+  var btn3 = elem.ownerDocument.querySelector('#threestep') &&
+  elem.ownerDocument.querySelector('#threestep').children.length > 0 &&
+  elem.ownerDocument.querySelector('#threestep').style.display != 'none' ? true
+  : false;
+
+  var btn4 = elem.ownerDocument.querySelector('#fourstep') &&
+  elem.ownerDocument.querySelector('#fourstep').style != 'none' ? true : false;
+
+  return btn1 ? '下一步' : btn2 ? '下一步' : btn3 ? '提交' : btn4 ? '完成' : false;
+doAction_uiControl6_qawKzl: |
+  if (data.eventType == 'next') {
+    if (data.dataCustom) {
+      elem.ownerDocument.defaultView.location.href = 'http://192.168.220.23/login.html';
+    } else {
+      elem.click();
+    }
+  }
+getTemplate_uiControl6_qawKzl: |-
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    next=(e)=>{
+      var target=e.target;
+      var handler=this.props.customHandler;
+      var flag = this.props.customData == '完成'?true:false;
+    //   console.log(target.parentElement.parentElement.parentElement.nextSibling.querySelector('.forgotPwd-writeAccount-form-prompt'))
+    //   if(!target.parentElement.parentElement.parentElement.nextSibling.querySelector('.forgotPwd-writeAccount-form-prompt')){
+    // target.parentElement.parentElement.parentElement.previousSibling.style.display = 'none'
+    //   }
+      
+      if(handler){
+        handler({
+          eventType:"next",
+          data:flag
+        })
+      }
+    }
+    render() {
+      return (
+        <div className='forgotPwd-writeAccount-form-next'>
+          <button onClick={this.next}>{this.props.customData}</button>
+        </div>
+      )
+    }
+  }
+getData_control7_qNrLIx: >
+  if (!elem) {
+    return;
+  }
+
+  var data = [];
+
+  data.push(elem.querySelector('.text_s') &&
+  elem.querySelector('.text_s').querySelector('h6').textContent);
+
+  var str = elem.querySelector('.text_s') &&
+  elem.querySelector('.text_s').querySelector('p ').textContent;
+
+  var arr = str && str.split('！')[1];
+
+  data.push(str && str.split('！')[0]);
+
+  var arr1 = arr && arr.split('。');
+
+  arr1 && arr1.pop();
+
+  data.push(arr1);
+
+  var msg = {
+    data: data ? data : null,
+    flag: elem.id.indexOf('two') != -1 && elem.children.length > 0 ? true : false
+  };
+
+  return msg;
+doAction_uiControl7_ap1P9U: |
+  if (data.eventType == 'writeCode') {
+    elem.querySelector('#messageCode').value = data.dataCustom;
+    elem.querySelector('#messageCode').blur();
+  } else if (data.eventType == 'getCode') {
+    elem.querySelectorAll('.btn')[0].click();
+  }
+getTemplate_uiControl7_ap1P9U: "export default class extends React.Component{\n  constructor(props){\n    super(props);\n    this.state = {\n      num: 30,\n      status:false\n    }\n  }\n  countDown=()=>{\n    var _this = this;\n    var timer = setInterval(function(){\n      if(_this.state.num >= 0){\n          _this.setState({\n            num :_this.state.num -=1,\n            status:true\n          })\n      }\n      if(_this.state.num < 0){\n        _this.setState({\n          \tnum:30,\n            status:true\n          })\n        clearInterval(timer);\n      }\n    },1000)\n\t}\n  getCode=(e)=>{\n    this.countDown();\n    var target=e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"getCode\"\n      })\n    }\n  }\n  writeCode=(e)=>{\n    var target=e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"writeCode\"\n      })\n    }\n  }\n  render() {\n    var _this = this;\n    var {data,flag} = this.props.customData?this.props.customData : false;\n    !this.state.status && flag && this.countDown();\n    return (\n      <div>{flag && <div className='forgotPwd-phone'>\n        <h3>手机认证</h3>\n        <p>\n          {data[0]}\n          <br/>\n          {data[1]+'！'}\n          <br/>\n          <em>·</em>\n          {data[2][0].split('·')}\n          <br/>\n          <em>·</em>\n          {data[2][1].split('·')}\n        </p>\n          <div className='forgotPwd-phone-form'>\n            <p><input type='text' placeholder='请输入验证码' onBlur={this.writeCode}/><button onClick={this.getCode}>重新获取验证码</button></p>\n            <p><span>{_this.state.num}秒</span>后可重新发送验证码</p>\n          </div>\n      </div>}</div>\n    )\n  }\n}"
+getData_control8_PV9HJh: >
+  if (!elem) {
+    return;
+  }
+
+  return elem.id.indexOf('three') != -1 && elem.children.length > 0 &&
+  elem.ownerDocument.querySelector('#fourstep').style.display != 'block' ? true
+  : false;
+doAction_uiControl8_ZLIocG: |
+  if (data.eventType == 'setNewPwd') {
+    elem.querySelector('#password').value = data.dataCustom;
+    elem.querySelector('#password').blur();
+  } else if (data.eventType == 'setNewPwdNext') {
+    elem.querySelector('#confPassword').value = data.dataCustom;
+    elem.querySelector('#confPassword').blur();
+  }
+getTemplate_uiControl8_ZLIocG: |-
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    setNewPwd=(e)=>{
+      var target=e.target;
+      var handler=this.props.customHandler;
+      if(handler){
+        handler({
+          data:target.value,
+          eventType:"setNewPwd"
+        })
+      }
+    }
+    setNewPwdNext=(e)=>{
+      var target=e.target;
+      var handler=this.props.customHandler;
+      if(handler){
+        handler({
+          data:target.value,
+          eventType:"setNewPwdNext"
+        })
+      }
+    }
+    render(){
+      return (
+        <div>
+          {this.props.customData &&<div className='forgotPwd-newPwd'>
+            <h3>设置新密码</h3>
+            <p><input type='text' placeholder='填写新密码' onBlur={this.setNewPwd}/></p>
+            <p><input type='text' placeholder='再次输入新密码' onBlur={this.setNewPwdNext}/></p>
+          </div>}
+        </div>
+      )
+    }
+  }
+getData_control9_f7GPqt: >
+  if (!elem) {
+    return;
+  }
+
+  var data = elem.ownerDocument.querySelector('#fourstep') &&
+  elem.ownerDocument.querySelector('#fourstep').querySelector('.mg_t20').textContent;
+
+  var msg = {
+    data: data ? data : null,
+    flag: elem.ownerDocument.querySelector('#fourstep') && elem.ownerDocument.querySelector('#threestep').style.display == 'none' ? true : false
+  };
+
+  return msg;
+doAction_uiControl9_JzpaJa: ''
+getTemplate_uiControl9_JzpaJa: |-
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+
+    render() {
+      var data = this.props.customData;
+      return (
+        <div>
+          {data && <dl className='forgotPwd-finished'>
+            <dt className='forgotPwd-finished-icon'>
+            </dt>
+            <dd>
+              <p>{data.data}</p>
+            </dd>
+          </dl>}
+        </div>
+      )
+    }
+  }

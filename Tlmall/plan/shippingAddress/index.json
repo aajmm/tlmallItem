@@ -1,0 +1,731 @@
+{
+  "version": "0.1",
+  "id": "shippingAddress",
+  "targetURL": "http://192.168.220.23/personal.html?code=50200",
+  "jsFile": "index.js",
+  "chineseName": "收货地址",
+  "description": "",
+  "controls": {
+    "control16_QdoZw3": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.wb_r.gaManage"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[3]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control16_QdoZw3"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control19_C1K69x": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[2]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r.gaManage DIV.ablock.pd_lr DIV.tab_lists"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control19_C1K69x"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control17_q2rqfw": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]//DIV[@id=\"effective\"]",
+              "descendant::DIV[@id=\"effective\"]"
+            ]
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control17_q2rqfw"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control18_SvVOEZ": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "收货地址"
+              ],
+              "visText": [
+                "收货地址"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r.gaManage DIV.ablock.pd_lr DIV.title_main SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "收货地址",
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context5_Zd0a5Z": {
+      "controls": [
+        "control16_QdoZw3",
+        "control19_C1K69x",
+        "control17_q2rqfw"
+      ],
+      "anchors": [
+        "control18_SvVOEZ"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow8_rtKUf9": {
+      "toContexts": [
+        {
+          "toContextId": "context5_Zd0a5Z"
+        }
+      ]
+    },
+    "flow12_p2oNdV": {
+      "fromContextId": "context5_Zd0a5Z",
+      "fromAction": "doAction",
+      "fromControlId": "control19_C1K69x",
+      "toContexts": [
+        {
+          "toContextId": "context5_Zd0a5Z"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page5_AiM6zG": {
+      "contextId": "context5_Zd0a5Z",
+      "layout": [
+        {
+          "id": "uiControl16_ohrCBC",
+          "controlId": "control16_QdoZw3",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl16_ohrCBC",
+                "onGetTemplate": "getTemplate_uiControl16_ohrCBC"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl20_cgL9fW",
+          "controlId": "control19_C1K69x",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl20_cgL9fW",
+                "onGetTemplate": "getTemplate_uiControl20_cgL9fW"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl15_ETKNLR",
+          "controlId": "control17_q2rqfw",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl15_ETKNLR",
+                "onGetTemplate": "getTemplate_uiControl15_ETKNLR"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context5_Zd0a5Z": [
+          "太力商城"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context5_Zd0a5Z": [
+          "192.168.220.23/personal.html?code=50200"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context5_Zd0a5Z": [
+          [
+            "-CTUDiv",
+            "-TYRDiv",
+            "Div",
+            "RECADDDiv",
+            "aSign",
+            "addNewAddress",
+            "addressList",
+            "ashint",
+            "caLicense",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "effective",
+            "errorMessage",
+            "errorMsg",
+            "failure",
+            "fixedscroll",
+            "getGoodsSeal",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "keyStoreProvider",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "mSign",
+            "maSign",
+            "miniCartQtyValue",
+            "nTalk_post_hiddenElement",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rt_rt_dhpsmvdbhnurafhukgb",
+            "rt_rt_dhpsmvgsabaagpquvap",
+            "scfM",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "shippingAddress_authAttachmentId",
+            "shippingAddress_authEndDate",
+            "shippingAddress_authStartDate",
+            "shippingAddress_authStartDateTip",
+            "shippingAddress_city",
+            "shippingAddress_consignee",
+            "shippingAddress_consigneePhone",
+            "shippingAddress_consigneePhoneTip",
+            "shippingAddress_consigneeTip",
+            "shippingAddress_fileATip",
+            "shippingAddress_fileA_bind",
+            "shippingAddress_fileA_echo",
+            "shippingAddress_fileA_value",
+            "shippingAddress_fileBTip",
+            "shippingAddress_fileB_bind",
+            "shippingAddress_fileB_echo",
+            "shippingAddress_fileB_value",
+            "shippingAddress_idAttachmentId",
+            "shippingAddress_province",
+            "shippingAddress_receiveAddress",
+            "shippingAddress_receiveAddressTip",
+            "shippingAddress_receivePostalCode",
+            "shippingAddress_signReq",
+            "shippingAddress_signReqTip",
+            "shippingAddress_signType",
+            "shippingAddress_uploaderA",
+            "shippingAddress_uploaderB",
+            "shippingAddress_zone",
+            "smartM",
+            "titleTip",
+            "toSign",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "updateCertGap",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "-CTUDiv",
+            "-TYRDiv",
+            "Div",
+            "RECADDDiv",
+            "aSign",
+            "addNewAddress",
+            "addressList",
+            "ashint",
+            "caLicense",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "effective",
+            "errorMessage",
+            "errorMsg",
+            "failure",
+            "fixedscroll",
+            "getGoodsSeal",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "keyStoreProvider",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "mSign",
+            "maSign",
+            "miniCartQtyValue",
+            "nTalk_post_hiddenElement",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rt_rt_dhqmafiahhfea",
+            "rt_rt_dhqmenqchjmlep",
+            "scfM",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "shippingAddress_authAttachmentId",
+            "shippingAddress_authEndDate",
+            "shippingAddress_authStartDate",
+            "shippingAddress_authStartDateTip",
+            "shippingAddress_city",
+            "shippingAddress_consignee",
+            "shippingAddress_consigneePhone",
+            "shippingAddress_consigneePhoneTip",
+            "shippingAddress_consigneeTip",
+            "shippingAddress_fileATip",
+            "shippingAddress_fileA_bind",
+            "shippingAddress_fileA_echo",
+            "shippingAddress_fileA_value",
+            "shippingAddress_fileBTip",
+            "shippingAddress_fileB_bind",
+            "shippingAddress_fileB_echo",
+            "shippingAddress_fileB_value",
+            "shippingAddress_idAttachmentId",
+            "shippingAddress_province",
+            "shippingAddress_receiveAddress",
+            "shippingAddress_receiveAddressTip",
+            "shippingAddress_receivePostalCode",
+            "shippingAddress_signReq",
+            "shippingAddress_signReqTip",
+            "shippingAddress_signType",
+            "shippingAddress_uploaderA",
+            "shippingAddress_uploaderB",
+            "shippingAddress_zone",
+            "smartM",
+            "titleTip",
+            "toSign",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "updateCertGap",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "-CTUDiv",
+            "-TYRDiv",
+            "Div",
+            "RECADDDiv",
+            "aSign",
+            "addNewAddress",
+            "addressList",
+            "ashint",
+            "caLicense",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "effective",
+            "errorMessage",
+            "errorMsg",
+            "failure",
+            "fixedscroll",
+            "getGoodsSeal",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "keyStoreProvider",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "mSign",
+            "maSign",
+            "miniCartQtyValue",
+            "nTalk_post_hiddenElement",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rt_rt_dhbdglduetalhdssvthr",
+            "rt_rt_dhbdglujhivupnnt",
+            "scfM",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "shippingAddress_authAttachmentId",
+            "shippingAddress_authEndDate",
+            "shippingAddress_authStartDate",
+            "shippingAddress_authStartDateTip",
+            "shippingAddress_city",
+            "shippingAddress_consignee",
+            "shippingAddress_consigneePhone",
+            "shippingAddress_consigneePhoneTip",
+            "shippingAddress_consigneeTip",
+            "shippingAddress_fileATip",
+            "shippingAddress_fileA_bind",
+            "shippingAddress_fileA_echo",
+            "shippingAddress_fileA_value",
+            "shippingAddress_fileBTip",
+            "shippingAddress_fileB_bind",
+            "shippingAddress_fileB_echo",
+            "shippingAddress_fileB_value",
+            "shippingAddress_idAttachmentId",
+            "shippingAddress_province",
+            "shippingAddress_receiveAddress",
+            "shippingAddress_receiveAddressTip",
+            "shippingAddress_receivePostalCode",
+            "shippingAddress_signReq",
+            "shippingAddress_signReqTip",
+            "shippingAddress_signType",
+            "shippingAddress_uploaderA",
+            "shippingAddress_uploaderB",
+            "shippingAddress_zone",
+            "smartM",
+            "titleTip",
+            "toSign",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "updateCertGap",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context5_Zd0a5Z": [
+          [
+            "Wdate",
+            "ablock",
+            "act",
+            "activ",
+            "add_hw",
+            "addr_hw",
+            "address",
+            "address_ps",
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "bar",
+            "bd_b",
+            "bd_ra",
+            "bd_t",
+            "bgm",
+            "breadcrumb",
+            "btm_content",
+            "btn",
+            "btn_address",
+            "btn_bg",
+            "btns_r",
+            "center-imgs",
+            "checked",
+            "city",
+            "city-sel",
+            "clearfix",
+            "close",
+            "cr_blue",
+            "cr_red",
+            "disnone",
+            "editBar",
+            "fl",
+            "float_r",
+            "footer-bottom",
+            "footer-cc",
+            "footer-cl",
+            "footer-last-list",
+            "fr",
+            "gaManage",
+            "gaManage_ads",
+            "hint",
+            "iCheck-helper",
+            "icon",
+            "icon-cart",
+            "icon-search",
+            "icon-yewu",
+            "icon_",
+            "icon_down",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "ipt_a",
+            "ipt_b",
+            "ipt_c",
+            "iradio_tlmall",
+            "item",
+            "line",
+            "logo",
+            "menu-list",
+            "menu-search",
+            "mg",
+            "mg_l",
+            "mg_r",
+            "mg_t",
+            "nav_sidebar",
+            "nav_sidebar_s",
+            "nav_sidebar_sul",
+            "newAddress_lists",
+            "number",
+            "ok",
+            "one",
+            "otable",
+            "pd_lr",
+            "pd_tb",
+            "placeholder",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "quit",
+            "sActive",
+            "search-box",
+            "search-btn",
+            "searchBox-infos",
+            "signInfo",
+            "signSta",
+            "states",
+            "stop",
+            "switch",
+            "tab_lists",
+            "title_address",
+            "title_e",
+            "title_f",
+            "title_main",
+            "tl-content",
+            "tl-fixedscroll",
+            "tl-footer",
+            "tl-footer-lists",
+            "tl-main-menu",
+            "tl-sales-slide",
+            "tl-top-ad",
+            "tl-top-menu",
+            "tl-wrap",
+            "tlmall-app",
+            "tlmall-wx",
+            "top-ad-img",
+            "top_title",
+            "triangle_r",
+            "txt_c",
+            "txtarea",
+            "upload_d",
+            "uploader",
+            "uploader-list",
+            "warning",
+            "wb",
+            "wb_r",
+            "wc",
+            "webuploader-container",
+            "webuploader-element-invisible",
+            "webuploader-pick",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context5_Zd0a5Z": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/INPUT-hidden",
+            "-/DIV/SCRIPT",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/EM",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H4",
+            "DIV/DIV/H5",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-file",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/P",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/H5/EM",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/A",
+            "DIV/SPAN/BR",
+            "DIV/TABLE/COLGROUP",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "FORM/DIV/DIV",
+            "LI/A/B",
+            "LI/A/I",
+            "LI/DIV/INPUT-radio",
+            "LI/DIV/INS",
+            "LI/H5/I",
+            "LI/SELECT/OPTION",
+            "LI/UL/LI",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TD/SPAN/INPUT-button",
+            "TR/TD/DIV",
+            "TR/TD/SPAN",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/H5",
+            "UL/LI/LABEL",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN",
+            "UL/LI/UL"
+          ]
+        ]
+      }
+    }
+  }
+}
