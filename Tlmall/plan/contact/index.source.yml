@@ -122,10 +122,162 @@ getData_control14_smhkAT: >-
 
   return data;
 doAction_uiControl12_zTrKDR: ''
-getTemplate_uiControl15_rVvoFf: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  constructor(props){\n    super(props);\n  }\n  //编辑\n  editbtn=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"editbtn\"\n      })\n    }\n  }\n  editDelete=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"editDelete\"\n      })\n    }\n  }\n  editName=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editName\"\n      })\n    }\n  }\n  editContactPhone=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editContactPhone\"\n      })\n    }\n  }\n  editFax=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editFax\"\n      })\n    }\n  }\n  editEmail=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editEmail\"\n      })\n    }\n  }\n  editBirthday=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editBirthday\"\n      })\n    }\n  }\n  editBackground=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editBackground\"\n      })\n    }\n  }\n  editJob=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editJob\"\n      })\n    }\n  }\n  editDepartment=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editDepartment\"\n      })\n    }\n  }\n  editRemark=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editRemark\"\n      })\n    }\n  }\n  editSave=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"editSave\"\n      })\n    }\n  }\n  editCancel=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"editCancel\"\n      })\n    }\n  }\n  //新增\n  addBtn=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"addBtn\"\n      })\n    }\n  }\n  addSave=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"addSave\"\n      })\n    }\n  }\n  addCancel=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"addCancel\"\n      })\n    }\n  }\n  addName=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addName\"\n      })\n    }\n  }\n  addContactPhone=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addContactPhone\"\n      })\n    }\n  }\n  addFax=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addFax\"\n      })\n    }\n  }\n  addEmail=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addEmail\"\n      })\n    }\n  }\n  addBirthday=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addBirthday\"\n      })\n    }\n  }\n  addBackground=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addBackground\"\n      })\n    }\n  }\n  addJob=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addJob\"\n      })\n    }\n  }\n  addDepartment=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addDepartment\"\n      })\n    }\n  }\n  addRemark=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addRemark\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"contact\">\n      \t<h3 className=\"tit\">我的联系人</h3>{\n          data.contacts.map(function(d,i){\n            return(\n            \t<div className=\"contact-list\">\n                <div className=\"list-tit\"><div className=\"tit-con\">企业联系人</div><div className=\"btns\"><span onClick={me.editbtn.bind(me)} data-index={i}>编辑</span><span onClick={me.editDelete.bind(me)} data-index={i}>删除</span></div></div>\n                <ul className=\"list-box\">\n                  <li>{d[0]}</li>\n                  <li>{d[6]}</li>\n                  <li>{d[1]}</li>\n                  <li>{d[7]}</li>\n                  <li>{d[2]}</li>\n                  <li>{d[8]}</li>\n                  <li>{d[3]}</li>\n                  <li>{d[9]}</li>\n                  <li>{d[4]}</li>\n                  <li>{d[10]}</li>\n                  <li>{d[5]}</li>\n                  <li>{d[12]}</li>\n                  <li>{d[11]}</li>\n                </ul>\n                <div className=\"form-box\" style={{display:data.edits[i].ifShow}}>\n                  <div className=\"form-li\"><span>姓名</span><AInput type=\"text\"  data-index={i} value={data.edits[i].name} onBlur={me.editName.bind(me)}/></div>\n                  <div className=\"form-li\"><span>性别</span>\n                    <div className=\"option-show\">{data.edits[i].sex}</div>\n                  </div>\n                  <div className=\"form-li\"><span>联系人类型</span>\n                    <div className=\"option-show\">{data.edits[i].contact}</div>\n                  </div>\n                  <div className=\"form-li\"><span>联系电话</span><AInput type=\"text\" value={data.edits[i].contactPhone} onBlur={me.editContactPhone.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>传真</span><AInput type=\"text\" value={data.edits[i].fax} onBlur={me.editFax.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>电子邮件</span><AInput type=\"text\" value={data.edits[i].email} onBlur={me.editEmail.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>户口性质</span>\n                    <div className=\"option-show\">{data.edits[i].residence}</div>\n                  </div>\n                  <div className=\"form-li\"><span>生日</span><AInput type=\"date\" class=\"sActive\" value={data.edits[i].birthday} onChange={me.editBirthday.bind(me)} data-index={i}/></div>\n                  <div className=\"form-li\"><span>教育背景</span><AInput type=\"text\" value={data.edits[i].background} onBlur={me.editBackground.bind(me)} data-index={i}/></div>\n                  <div className=\"form-li\"><span>婚姻状况</span>\n                    <div className=\"option-show\">{data.edits[i].matirial}</div>\n                  </div>\n                  <div className=\"form-li\"><span>职务</span><AInput type=\"text\" value={data.edits[i].job} onBlur={me.editJob.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>部门</span><AInput type=\"text\" value={data.edits[i].department} onBlur={me.editDepartment.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>备注</span><ATextarea onBlur={me.editRemark.bind(me)} value={data.edits[i].remark} data-index={i}></ATextarea></div>\n                  <div className=\"save-box\"><span onClick={me.editSave.bind(me)} data-index={i}>保存</span><span onClick={me.editCancel.bind(me)} data-index={i}>取消</span></div>\n                </div>\n              </div>\n            )\n          })\n        }\n        <div className=\"add-contact\" onClick={me.addBtn.bind(me)}><i className=\"icon-add\"></i>新增企业联系人</div>\n        <div className=\"form-box\" style={{display:data.add.ifShow}}>\n          <div className=\"form-li\"><span>姓名</span><AInput type=\"text\" onBlur={me.addName.bind(me)} value={data.add.name} /></div>\n          <div className=\"form-li\"><span>性别</span>\n            <div className=\"option-show\">{data.add.sex}</div>\n          </div>\n          <div className=\"form-li\"><span>联系人类型</span>\n            <div className=\"option-show\">{data.add.contact}</div>\n          </div>\n          <div className=\"form-li\"><span>联系电话</span><AInput onBlur={me.addContactPhone.bind(me)} type=\"text\" value={data.add.contactPhone} /></div>\n          <div className=\"form-li\"><span>传真</span><AInput onBlur={me.addFax.bind(me)} type=\"text\" value={data.add.fax} /></div>\n          <div className=\"form-li\"><span>电子邮件</span><AInput onBlur={me.addEmail.bind(me)} type=\"text\" value={data.add.email} /></div>\n          <div className=\"form-li\"><span>户口性质</span>\n            <div className=\"option-show\">{data.add.residence}</div>\n          </div>\n          <div className=\"form-li\"><span>生日</span><AInput type=\"date\" onChange={me.addBirthday.bind(me)} className=\"sActive\" value={data.add.birthday} /></div>\n          <div className=\"form-li\"><span>教育背景</span><AInput type=\"text\" onBlur={me.addBackground.bind(me)} value={data.add.background} /></div>\n          <div className=\"form-li\"><span>婚姻状况</span>\n            <div className=\"option-show\">{data.add.matirial}</div>\n          </div>\n          <div className=\"form-li\"><span>职务</span><AInput type=\"text\" onBlur={me.addJob.bind(me)} value={data.add.job} /></div>\n          <div className=\"form-li\"><span>部门</span><AInput type=\"text\" onBlur={me.addDepartment.bind(me)} value={data.add.department} /></div>\n          <div className=\"form-li\"><span>备注</span><ATextarea onBlur={me.addRemark.bind(me)} value={data.add.remark}></ATextarea></div>\n          <div className=\"save-box\"><span onClick={me.addSave.bind(me)}>保存</span><span onClick={me.addCancel.bind(me)}>取消</span></div>\n        </div>\n      </div>\n    )\n  }\n}"
-getData_control15_0zwZ6w: "if(!elem){\n  return;\n}\nlet data = {\n  contacts:[],\n  edits:[],\n  sexSels:[],\n  contactSels:[],\n  residenceSels:[],\n  maritalSels:[],\n  add:{\n    ifShow:\"\",\n    name:\"\",\n    sex:\"\",\n    contact:\"\",\n    contactPhone:\"\",\n    fax:\"\",\n    email:\"\",\n    residence:\"\",\n    birthday:\"\",\n    background:\"\",\n    marital:\"\",\n    job:\"\",\n    department:\"\",\n    remark:\"\"\n  }\n};\n//联系人列表\nlet tables = elem.querySelectorAll(\".table_datas\");\n[].map.call(tables,function(d,i){\n  let table = [];\n  data.contacts.push(table);\n  let tds = d.querySelectorAll(\"td\");\n  [].map.call(tds,function(m,n){\n      data.contacts[i].push(m.textContent);\n  });\n});\n//联系人编辑\nlet edits = elem.querySelector(\"#eidtContactList\").querySelectorAll(\".newAddress\");\n[].map.call(edits,function(d,i){\n  let edit= {\n        ifShow:\"\",\n        name:\"\",\n        sex:\"\",\n        contact:\"\",\n        contactPhone:\"\",\n        fax:\"\",\n        email:\"\",\n        residence:\"\",\n        birthday:\"\",\n        background:\"\",\n        marital:\"\",\n        job:\"\",\n        department:\"\",\n        remark:\"\"\n  \t};\n  edit.ifShow = d.parentNode.style.display;\n  edit.name = d.querySelectorAll(\"input\")[0].value;\n  edit.sex = d.querySelectorAll(\"select\")[0].querySelector(\"option:checked\").textContent;\n  edit.contact = d.querySelectorAll(\"select\")[1].querySelector(\"option:checked\").textContent;\n  edit.contactPhone = d.querySelectorAll(\"input\")[1].value;\n  edit.fax = d.querySelectorAll(\"input\")[2].value;\n  edit.email = d.querySelectorAll(\"input\")[3].value;\n  edit.residence = d.querySelectorAll(\"select\")[2].querySelector(\"option:checked\").textContent;\n  edit.birthday = d.querySelectorAll(\"input\")[4].value;\n  edit.background = d.querySelectorAll(\"input\")[5].value;\n  edit.marital = d.querySelectorAll(\"select\")[3].querySelector(\"option:checked\").textContent;\n  edit.job = d.querySelectorAll(\"input\")[6].value;\n  edit.department = d.querySelectorAll(\"input\")[7].value;\n  edit.remark = d.querySelector(\"textarea\").value;\n  data.edits.push(edit);\n});\n\n//新增联系人\ndata.add.ifShow =elem.querySelector(\"#newAddressDiv\").style.display;\ndata.add.name = elem.querySelector(\"#contact_name\").value;\ndata.add.sex = elem.querySelector(\"#contact_sex\").querySelector(\"option:checked\").textContent;\ndata.add.contact = elem.querySelector(\"#contact_contact\").querySelector(\"option:checked\").textContent;\ndata.add.contactPhone = elem.querySelector(\"#contact_contactPhone\").value;\ndata.add.fax = elem.querySelector(\"#contact_fax\").value;\ndata.add.email = elem.querySelector(\"#contact_email\").value;\ndata.add.residence = elem.querySelector(\"#contact_residence\").querySelector(\"option:checked\").textContent;\ndata.add.birthday = elem.querySelector(\"#contact_birthday\").value;\ndata.add.background = elem.querySelector(\"#contact_background\").value;\ndata.add.marital = elem.querySelector(\"#contact_marital\").querySelector(\"option:checked\").textContent;\ndata.add.job = elem.querySelector(\"#contact_job\").value;\ndata.add.department = elem.querySelector(\"#contact_department\").value;\ndata.add.remark = elem.querySelector(\"#contact_remark\").value;\n//select弹窗\nlet sexSels = elem.querySelector(\"#contact_sex\").querySelectorAll(\"option\");\n[].map.call(sexSels,function(d,i){\n  data.sexSels.push(d.textContent);\n});\nlet contactSels = elem.querySelector(\"#contact_contact\").querySelectorAll(\"option\");\n[].map.call(contactSels,function(d,i){\n  data.contactSels.push(d.textContent);\n});\nlet residenceSels = elem.querySelector(\"#contact_residence\").querySelectorAll(\"option\");\n[].map.call(residenceSels,function(d,i){\n  data.residenceSels.push(d.textContent);\n});\nlet maritalSels = elem.querySelector(\"#contact_marital\").querySelectorAll(\"option\");\n[].map.call(maritalSels,function(d,i){\n  data.maritalSels.push(d.textContent);\n});\n\nreturn data;"
+getTemplate_uiControl15_rVvoFf: "import {Component,Fragment} from 'react'; \nimport {CustomHeader,SelectPop} from 'ysp-custom-components';\n\nexport default class extends Component{\n  \t\teditSelSex=(e)=>{\n        let target = e.target;\n        let handler = this.props.customHandler;\n       if (handler) {\n        handler({\n        data:target.dataset.index,\n        eventType: \"editSelSex\"\n        });\n       }\n      }\n     selSex=(e)=>{\n        let target = e.target;\n        let handler = this.props.customHandler;\n       if (handler) {\n        handler({\n        data:target.dataset.index,\n        eventType: \"selSex\"\n        });\n       }\n      }\n     selContact=(e)=>{\n        let target = e.target;\n        let handler = this.props.customHandler;\n       if (handler) {\n        handler({\n        data:target.dataset.index,\n        eventType: \"selContact\"\n        });\n       }\n      }\n  //返回\n  back=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'back'\n    });\n   }\n  }\n  //编辑\n  editbtn=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"editbtn\"\n      })\n    }\n  }\n  editDelete=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"editDelete\"\n      })\n    }\n  }\n  editName=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editName\"\n      })\n    }\n  }\n  editContactPhone=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editContactPhone\"\n      })\n    }\n  }\n  editFax=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editFax\"\n      })\n    }\n  }\n  editEmail=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editEmail\"\n      })\n    }\n  }\n  editBirthday=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editBirthday\"\n      })\n    }\n  }\n  editBackground=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editBackground\"\n      })\n    }\n  }\n  editJob=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editJob\"\n      })\n    }\n  }\n  editDepartment=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editDepartment\"\n      })\n    }\n  }\n  editRemark=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:[target.value,target.dataset.index],\n        eventType:\"editRemark\"\n      })\n    }\n  }\n  editSave=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"editSave\"\n      })\n    }\n  }\n  editCancel=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"editCancel\"\n      })\n    }\n  }\n  //新增\n  addBtn=(e)=>{\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"addBtn\"\n      })\n    }\n  }\n  addSave=(e)=>{\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"addSave\"\n      })\n    }\n  }\n  addCancel=(e)=>{\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"addCancel\"\n      })\n    }\n  }\n  addName=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addName\"\n      })\n    }\n  }\n  addContactPhone=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addContactPhone\"\n      })\n    }\n  }\n  addFax=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addFax\"\n      })\n    }\n  }\n  addEmail=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addEmail\"\n      })\n    }\n  }\n  addBirthday=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addBirthday\"\n      })\n    }\n  }\n  addBackground=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addBackground\"\n      })\n    }\n  }\n  addJob=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addJob\"\n      })\n    }\n  }\n  addDepartment=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addDepartment\"\n      })\n    }\n  }\n  addRemark=(e)=>{\n    var target = e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"addRemark\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"contact\">\n        \t<CustomHeader \n           data={{centerText:\"企业联系人管理\"}} \n           backIsShow={true} \n           filterIsShow={false}\n        \t editIsShow={false}\n           back={me.back.bind(me)}\n        />\n      \t<h3 className=\"tit\">我的联系人</h3>{\n          data.contacts.map(function(d,i){\n            return(\n            \t<div className=\"contact-list\">\n                <div className=\"list-tit\"><div className=\"tit-con\">企业联系人</div><div className=\"btns\"><span onClick={me.editbtn.bind(me)} data-index={i}>编辑</span><span onClick={me.editDelete.bind(me)} data-index={i}>删除</span></div></div>\n                <ul className=\"list-box\">\n                  <li>{d[0]}</li>\n                  <li>{d[6]}</li>\n                  <li>{d[1]}</li>\n                  <li>{d[7]}</li>\n                  <li>{d[2]}</li>\n                  <li>{d[8]}</li>\n                  <li>{d[3]}</li>\n                  <li>{d[9]}</li>\n                  <li>{d[4]}</li>\n                  <li>{d[10]}</li>\n                  <li>{d[5]}</li>\n                  <li>{d[12]}</li>\n                  <li>{d[11]}</li>\n                </ul>\n                <div className=\"form-box\" style={{display:data.edits[i].ifShow}}>\n                  <div className=\"form-li\"><span>姓名</span><AInput type=\"text\"  data-index={i} value={data.edits[i].name} onBlur={me.editName.bind(me)}/></div>\n                  <div className=\"form-li\"><span>性别</span><SelectPop dataN={i} selChecked={data.edits[i].sex} optionList={data.sexSels} sels={me.editSelSex.bind(me)}/>\n                  </div>\n                  <div className=\"form-li\"><span>联系人类型</span>\n                    <div className=\"option-show\">{data.edits[i].contact}</div>\n                  </div>\n                  <div className=\"form-li\"><span>联系电话</span><AInput type=\"text\" value={data.edits[i].contactPhone} onBlur={me.editContactPhone.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>传真</span><AInput type=\"text\" value={data.edits[i].fax} onBlur={me.editFax.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>电子邮件</span><AInput type=\"text\" value={data.edits[i].email} onBlur={me.editEmail.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>户口性质</span>\n                    <div className=\"option-show\">{data.edits[i].residence}</div>\n                  </div>\n                  <div className=\"form-li\"><span>生日</span><AInput type=\"date\" class=\"sActive\" value={data.edits[i].birthday} onChange={me.editBirthday.bind(me)} data-index={i}/></div>\n                  <div className=\"form-li\"><span>教育背景</span><AInput type=\"text\" value={data.edits[i].background} onBlur={me.editBackground.bind(me)} data-index={i}/></div>\n                  <div className=\"form-li\"><span>婚姻状况</span>\n                    <div className=\"option-show\">{data.edits[i].matirial}</div>\n                  </div>\n                  <div className=\"form-li\"><span>职务</span><AInput type=\"text\" value={data.edits[i].job} onBlur={me.editJob.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>部门</span><AInput type=\"text\" value={data.edits[i].department} onBlur={me.editDepartment.bind(me)} data-index={i} /></div>\n                  <div className=\"form-li\"><span>备注</span><ATextarea onBlur={me.editRemark.bind(me)} value={data.edits[i].remark} data-index={i}></ATextarea></div>\n                  <div className=\"save-box\"><span onClick={me.editSave.bind(me)} data-index={i}>保存</span><span onClick={me.editCancel.bind(me)} data-index={i}>取消</span></div>\n                </div>\n              </div>\n            )\n          })\n        }\n        <div className=\"add-contact\" onClick={me.addBtn.bind(me)}><i className=\"icon-add\"></i>新增企业联系人</div>\n        <div className=\"form-box\" style={{display:data.add.ifShow}}>\n          <div className=\"form-li\"><span>姓名</span><AInput type=\"text\" onBlur={me.addName.bind(me)} value={data.add.name} /></div>\n          <div className=\"form-li\"><span>性别</span><SelectPop selChecked={data.add.sex} optionList={data.sexSels} sels={me.selSex.bind(me)}/>\n          </div>\n          <div className=\"form-li\"><span>联系人类型</span><SelectPop selChecked={data.add.contact} optionList={data.contactSels} sels={me.selContact.bind(me)}/></div>\n          <div className=\"form-li\"><span>联系电话</span><AInput onBlur={me.addContactPhone.bind(me)} type=\"text\" value={data.add.contactPhone} /></div>\n          <div className=\"form-li\"><span>传真</span><AInput onBlur={me.addFax.bind(me)} type=\"text\" value={data.add.fax} /></div>\n          <div className=\"form-li\"><span>电子邮件</span><AInput onBlur={me.addEmail.bind(me)} type=\"text\" value={data.add.email} /></div>\n          <div className=\"form-li\"><span>户口性质</span>\n            <div className=\"option-show\">{data.add.residence}</div>\n          </div>\n          <div className=\"form-li\"><span>生日</span><AInput type=\"date\" onChange={me.addBirthday.bind(me)} className=\"sActive\" value={data.add.birthday} /></div>\n          <div className=\"form-li\"><span>教育背景</span><AInput type=\"text\" onBlur={me.addBackground.bind(me)} value={data.add.background} /></div>\n          <div className=\"form-li\"><span>婚姻状况</span>\n            <div className=\"option-show\">{data.add.matirial}</div>\n          </div>\n          <div className=\"form-li\"><span>职务</span><AInput type=\"text\" onBlur={me.addJob.bind(me)} value={data.add.job} /></div>\n          <div className=\"form-li\"><span>部门</span><AInput type=\"text\" onBlur={me.addDepartment.bind(me)} value={data.add.department} /></div>\n          <div className=\"form-li\"><span>备注</span><ATextarea onBlur={me.addRemark.bind(me)} value={data.add.remark}></ATextarea></div>\n          <div className=\"save-box\"><span onClick={me.addSave.bind(me)}>保存</span><span onClick={me.addCancel.bind(me)}>取消</span></div>\n        </div>\n      </div>\n    )\n  }\n}"
+getData_control15_0zwZ6w: >-
+  if (!elem) {
+    return;
+  }
+
+  let data = {
+    contacts: [],
+    edits: [],
+    sexSels: [],
+    contactSels: [],
+    residenceSels: [],
+    maritalSels: [],
+    add: {
+      ifShow: "",
+      name: "",
+      sex: "",
+      contact: "",
+      contactPhone: "",
+      fax: "",
+      email: "",
+      residence: "",
+      birthday: "",
+      background: "",
+      marital: "",
+      job: "",
+      department: "",
+      remark: ""
+    }
+  };
+
+  //联系人列表
+
+  let tables = elem.querySelectorAll(".table_datas");
+
+  [].map.call(tables, function(d, i) {
+    let table = [];
+    data.contacts.push(table);
+    let tds = d.querySelectorAll("td");
+    [].map.call(tds, function(m, n) {
+      data.contacts[i].push(m.textContent);
+    });
+  });
+
+  //联系人编辑
+
+  let edits =
+  elem.querySelector("#eidtContactList").querySelectorAll(".newAddress");
+
+  [].map.call(edits, function(d, i) {
+    let edit = {
+      ifShow: "",
+      name: "",
+      sex: "",
+      contact: "",
+      contactPhone: "",
+      fax: "",
+      email: "",
+      residence: "",
+      birthday: "",
+      background: "",
+      marital: "",
+      job: "",
+      department: "",
+      remark: ""
+    };
+    edit.ifShow = d.parentNode.style.display;
+    edit.name = d.querySelectorAll("input")[0].value;
+    edit.sex = d.querySelectorAll("select")[0].querySelector("option:checked").textContent;
+    edit.contact = d.querySelectorAll("select")[1].querySelector("option:checked").textContent;
+    edit.contactPhone = d.querySelectorAll("input")[1].value;
+    edit.fax = d.querySelectorAll("input")[2].value;
+    edit.email = d.querySelectorAll("input")[3].value;
+    edit.residence = d.querySelectorAll("select")[2].querySelector("option:checked").textContent;
+    edit.birthday = d.querySelectorAll("input")[4].value;
+    edit.birthday == "NaN-NaN-NaN" ? "1970-01-01" : edit.birthday;
+    edit.background = d.querySelectorAll("input")[5].value;
+    edit.marital = d.querySelectorAll("select")[3].querySelector("option:checked").textContent;
+    edit.job = d.querySelectorAll("input")[6].value;
+    edit.department = d.querySelectorAll("input")[7].value;
+    edit.remark = d.querySelector("textarea").value;
+    data.edits.push(edit);
+  });
+
+
+  //新增联系人
+
+  data.add.ifShow = elem.querySelector("#newAddressDiv").style.display;
+
+  data.add.name = elem.querySelector("#contact_name").value;
+
+  data.add.sex =
+  elem.querySelector("#contact_sex").querySelector("option:checked").textContent;
+
+  data.add.contact =
+  elem.querySelector("#contact_contact").querySelector("option:checked").textContent;
+
+  data.add.contactPhone = elem.querySelector("#contact_contactPhone").value;
+
+  data.add.fax = elem.querySelector("#contact_fax").value;
+
+  data.add.email = elem.querySelector("#contact_email").value;
+
+  data.add.residence =
+  elem.querySelector("#contact_residence").querySelector("option:checked").textContent;
+
+  data.add.birthday = elem.querySelector("#contact_birthday").value;
+
+  data.add.birthday == "NaN-NaN-NaN" ? "1970-01-01" : data.add.birthday;
+
+  data.add.background = elem.querySelector("#contact_background").value;
+
+  data.add.marital =
+  elem.querySelector("#contact_marital").querySelector("option:checked").textContent;
+
+  data.add.job = elem.querySelector("#contact_job").value;
+
+  data.add.department = elem.querySelector("#contact_department").value;
+
+  data.add.remark = elem.querySelector("#contact_remark").value;
+
+  //select弹窗
+
+  let sexSels = elem.querySelector("#contact_sex").querySelectorAll("option");
+
+  [].map.call(sexSels, function(d, i) {
+    data.sexSels.push(d.textContent);
+  });
+
+  let contactSels =
+  elem.querySelector("#contact_contact").querySelectorAll("option");
+
+  [].map.call(contactSels, function(d, i) {
+    data.contactSels.push(d.textContent);
+  });
+
+  let residenceSels =
+  elem.querySelector("#contact_residence").querySelectorAll("option");
+
+  [].map.call(residenceSels, function(d, i) {
+    data.residenceSels.push(d.textContent);
+  });
+
+  let maritalSels =
+  elem.querySelector("#contact_marital").querySelectorAll("option");
+
+  [].map.call(maritalSels, function(d, i) {
+    data.maritalSels.push(d.textContent);
+  });
+
+
+  return data;
 doAction_uiControl15_rVvoFf: |-
-  if(data.eventType == "editbtn"){
+  if(data.eventType == "back"){
+     ysp.appMain.back();
+  }else if(data.eventType == "editbtn"){
     let d = data.dataCustom;
     let btn = elem.querySelector("#eidtContactList").querySelectorAll(".float_r")[d].querySelector("input[value='编辑']");
     btn.click();
@@ -209,7 +361,7 @@ doAction_uiControl15_rVvoFf: |-
   }else if(data.eventType == "editSave"){
     let d = data.dataCustom;
     let btn = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[d].querySelector("input[value='保存']");
-    btn.click();
+    //btn.click();
     btn.dispatchEvent(new Event("click"));
   }else if(data.eventType == "editCancel"){
     let d = data.dataCustom;
@@ -222,7 +374,7 @@ doAction_uiControl15_rVvoFf: |-
     btn.dispatchEvent(new Event("click"));
   }else if(data.eventType == "addSave"){
     let btn = elem.querySelector("#newAddressDiv").querySelector("input[value='保存']");
-    btn.click();
+    //btn.click();
     btn.dispatchEvent(new Event("click"));
   }else if(data.eventType == "addCancel"){
     let btn = elem.querySelector("#newAddressDiv").querySelector("input[value='取消']");
@@ -282,4 +434,20 @@ doAction_uiControl15_rVvoFf: |-
     ipt.value = d;
     ipt.blur();
     ipt.dispatchEvent(new Event("change"));
+  }else if(data.eventType == "selSex"){
+    let Num = data.dataCustom;
+    let d = Num.indexOf("-");
+    let Num2 = parseInt(Num.substr(d+1,Num.length));
+    elem.querySelector("#contact_sex").querySelectorAll("option")[Num2].selected = true;
+  }else if(data.eventType == "selContact"){
+    let Num = data.dataCustom;
+    let d = Num.indexOf("-");
+    let Num2 = parseInt(Num.substr(d+1,Num.length));
+    elem.querySelector("#contact_contact").querySelectorAll("option")[Num2].selected = true;
+  }else if(data.eventType == "editSelSex"){
+    let Num = data.dataCustom;
+    let d = Num.indexOf("-");
+    let Num1 = parseInt(Num.substr(0,d));
+    let Num2 = parseInt(Num.substr(d+1,Num.length));
+    elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[Num1].querySelectorAll("select")[0].querySelectorAll("option")[Num2].selected = true;
   }

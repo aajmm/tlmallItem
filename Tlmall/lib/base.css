@@ -28,6 +28,78 @@ li {
   list-style: none;
 }
 /*    以上样式为公用样式      */
+.ysp-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  overflow: hidden;
+  line-height: 44px;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  padding: 0 10px;
+  background: #fff;
+}
+.ysp-top .back {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 18px;
+  margin-top: 13px;
+  background: url(images/arrows.png) no-repeat left center;
+  background-size: 27%;
+}
+.ysp-selpop-box {
+  display: none;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 600;
+}
+.ysp-selpop-box .pop-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.ysp-selpop-box .selpop-con {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 60%;
+  margin-left: 20%;
+  padding: 0;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+.ysp-selpop-box .selpop-con li {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #3f3f3f;
+}
+.ysp-selpop-box .selpop-con li:first-child {
+  border-radius: 3px 3px 0 0;
+}
+.ysp-selpop-box .selpop-con li:last-child {
+  border-radius: 0 0 3px 3px;
+  border-bottom: none;
+}
+.ysp-selpop-box .selpop-con li.active {
+  background-color: #e7350d;
+  color: #fff;
+}
 div[data-ysp-modelid^="login"] {
   width: 100%;
   height: 100%;
@@ -610,29 +682,6 @@ div[data-ysp-modelid^="registrationProtocol"] .registration-protocol-btn button 
   border: 0;
   border-radius: 3px;
 }
-div[data-ysp-modelid^="contact"] .ysp-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 44px;
-  overflow: hidden;
-  line-height: 44px;
-  text-align: center;
-  border-bottom: 1px solid #e1e1e1;
-  box-sizing: border-box;
-  padding: 0 10px;
-  background: #fff;
-}
-div[data-ysp-modelid^="contact"] .ysp-top .back {
-  display: block;
-  float: left;
-  width: 30px;
-  height: 18px;
-  margin-top: 13px;
-  background: url(images/arrows.png) no-repeat left center;
-  background-size: 27%;
-}
 div[data-ysp-modelid^="contact"] .contact {
   padding-top: 45px;
   background: #f3f3f3;
@@ -818,51 +867,4 @@ div[data-ysp-modelid^="contact"] .form-box .save-box span:last-child {
 div[data-ysp-modelid^="contact"] .form-box .save-box span:first-child {
   margin-top: 30px;
   margin-bottom: 20px;
-}
-div[data-ysp-modelid^="contact"] .ysp-selpop-box {
-  display: none;
-  position: fixed;
-  overflow-y: scroll;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 600;
-}
-div[data-ysp-modelid^="contact"] .ysp-selpop-box .pop-mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-div[data-ysp-modelid^="contact"] .ysp-selpop-box .pop-con {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 60%;
-  margin-left: 20%;
-  padding: 0;
-}
-div[data-ysp-modelid^="contact"] .ysp-selpop-box .pop-con .sel-lists {
-  border-radius: 3px;
-  text-align: center;
-  background-color: #fff;
-  margin-bottom: 40px!important;
-}
-div[data-ysp-modelid^="contact"] .ysp-selpop-box .pop-con .sel-lists li {
-  border-bottom: 1px solid #e1e1e1;
-  padding: 10px 0;
-  font-size: 14px;
-  color: #3f3f3f;
-}
-div[data-ysp-modelid^="contact"] .ysp-selpop-box .pop-con .sel-lists li:first-child {
-  border-radius: 3px 3px 0 0;
-}
-div[data-ysp-modelid^="contact"] .ysp-selpop-box .pop-con .sel-lists li.active {
-  background-color: #e7350d;
-  color: #fff;
 }
