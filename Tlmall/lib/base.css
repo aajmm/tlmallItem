@@ -208,18 +208,22 @@ div[data-ysp-modelid^="enterpriseInformation"] Header i {
   background: url('../local/img/goback.png') no-repeat;
   background-size: 100%;
 }
+div[data-ysp-modelid^="forgotPassword-writeAccount"] h3,
+div[data-ysp-modelid^="registeredAccount"] h3,
+div[data-ysp-modelid^="enterpriseInformation"] h3 {
+  width: 100%;
+  height: 44px;
+  color: #e7350d;
+  font-weight: 200;
+  padding-left: 15px;
+  font-size: 15px;
+}
 div[data-ysp-modelid^="forgotPassword-writeAccount"] .forgotPwd-writeAccount-form {
   width: 100%;
   height: 150px;
 }
 div[data-ysp-modelid^="forgotPassword-writeAccount"] .forgotPwd-writeAccount-form h3 {
-  width: 100%;
-  height: 45px;
   line-height: 50px;
-  color: #e7350d;
-  font-weight: 200;
-  padding-left: 15px;
-  font-size: 15px;
 }
 div[data-ysp-modelid^="forgotPassword-writeAccount"] .forgotPwd-writeAccount-form p {
   width: 100%;
@@ -378,13 +382,7 @@ div[data-ysp-modelid^="registeredAccount"] .registered-account-form {
   overflow-y: auto;
 }
 div[data-ysp-modelid^="registeredAccount"] .registered-account-form h3 {
-  width: 100%;
-  height: 40px;
   line-height: 55px;
-  color: #e7350d;
-  font-weight: 200;
-  padding-left: 15px;
-  font-size: 15px;
 }
 div[data-ysp-modelid^="registeredAccount"] .registered-account-form div:nth-child(2) {
   margin: 0;
@@ -605,4 +603,219 @@ div[data-ysp-modelid^="registrationProtocol"] .registration-protocol-btn button 
   background: #E7350E;
   border: 0;
   border-radius: 3px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation h3 {
+  line-height: 50px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-name,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-address,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .detail-address,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .legal-name,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-number,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-card,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license-number,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-name,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-phone,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-name,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-phone {
+  padding: 0 15px;
+  display: flex;
+  margin-top: 15px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-name i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-address i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .detail-address i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .legal-name i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-number i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-card i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license-number i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-name i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-phone i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-name i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-phone i {
+  width: 4%;
+  color: #E3370A;
+  font-size: 20px;
+  float: left;
+  margin-top: 7px;
+  font-style: normal;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-name select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-address select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .detail-address select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .legal-name select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-number select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-card select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license-number select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-name select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-phone select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-name select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-phone select {
+  height: 44px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 3px;
+  font-size: 13px;
+  border: #ccc solid 1px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-name input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-address input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .detail-address input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .legal-name input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-number input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-card input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license-number input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-name input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-phone input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-name input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-phone input {
+  width: 100%;
+  height: 44px;
+  display: inline-block;
+  border: #ccc solid 1px;
+  padding-left: 10px;
+  background: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form {
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .enterprise-type {
+  width: 100%;
+  padding: 0 15px 0 30px;
+  margin: 0;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .enterprise-type select {
+  border: #ccc solid 1px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .enterprise-type label {
+  margin: 0;
+  font-size: 12px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .enterprise-address i {
+  margin-right: 3px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .enterprise-address select {
+  width: 30%;
+  margin-right: 20px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .enterprise-address input {
+  width: 30%;
+  margin-left: 3px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address {
+  display: block;
+  margin-bottom: 40px;
+  position: relative;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address p {
+  display: flex;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address .enterpriseInformation-downmenu {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../local/img/down-menu.png') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: -36px;
+  right: 15px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address .enterpriseInformation-list {
+  width: 40%;
+  height: 116px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  position: absolute;
+  right: 15px;
+  bottom: -157px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address .enterpriseInformation-list .enterpriseInformation-choose {
+  width: 100%;
+  height: 100%;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address .enterpriseInformation-list .enterpriseInformation-choose p {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address .enterpriseInformation-list .enterpriseInformation-choose p span {
+  padding: 0 36px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #6f6f6f;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address .enterpriseInformation-list .enterpriseInformation-choose p span.active {
+  color: #e7350d;
+  border: 1px solid #e7350d;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address .enterpriseInformation-list:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  top: -10px;
+  right: 1;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license {
+  display: block;
+  padding: 0 15px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card p,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license p {
+  display: flex;
+  height: 40px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card p input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license p input {
+  width: 65%;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card p button,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license p button {
+  width: 30%;
+  height: 44px;
+  margin-left: 5%;
+  border: 0;
+  background: #e7350d;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  position: relative;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card p button input[type='file'],
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license p button input[type='file'] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card span,
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license span {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 8px;
+  padding-left: 4%;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-information {
+  border-bottom: 1px solid #ccc;
 }
