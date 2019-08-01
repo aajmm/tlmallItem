@@ -169,22 +169,39 @@ div[data-ysp-modelid^="login"] .login-form p:nth-child(6) button {
   background: #fff;
   color: #3065a9;
 }
-div[data-ysp-modelid^="forgotPassword-writeAccount"] {
+div[data-ysp-modelid^="forgotPassword-writeAccount"],
+div[data-ysp-modelid^="registeredAccount"],
+div[data-ysp-modelid^="registrationProtocol"],
+div[data-ysp-modelid^="enterpriseInformation"] {
   width: 100%;
   height: 100%;
   background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
 }
-div[data-ysp-modelid^="forgotPassword-writeAccount"] Header {
+div[data-ysp-modelid^="forgotPassword-writeAccount"] Header,
+div[data-ysp-modelid^="registeredAccount"] Header,
+div[data-ysp-modelid^="registrationProtocol"] Header,
+div[data-ysp-modelid^="enterpriseInformation"] Header {
+  width: 100%;
+  height: 44px;
   background: #fff;
   border: 0;
   padding: 0 15px;
+  border-bottom: 1px solid #ccc;
 }
-div[data-ysp-modelid^="forgotPassword-writeAccount"] Header h2 {
+div[data-ysp-modelid^="forgotPassword-writeAccount"] Header h2,
+div[data-ysp-modelid^="registeredAccount"] Header h2,
+div[data-ysp-modelid^="registrationProtocol"] Header h2,
+div[data-ysp-modelid^="enterpriseInformation"] Header h2 {
   color: #3f3f3f;
   font-size: 17px;
   font-weight: 200;
 }
-div[data-ysp-modelid^="forgotPassword-writeAccount"] Header i.forgotPwd-writeAccount-goback {
+div[data-ysp-modelid^="forgotPassword-writeAccount"] Header i,
+div[data-ysp-modelid^="registeredAccount"] Header i,
+div[data-ysp-modelid^="registrationProtocol"] Header i,
+div[data-ysp-modelid^="enterpriseInformation"] Header i {
   width: 12px;
   height: 20px;
   display: inline-block;
@@ -352,34 +369,7 @@ div[data-ysp-modelid^="forgotPassword-writeAccount"] .forgotPwd-finished p {
   margin-top: 10px;
   font-size: 16px;
 }
-div[data-ysp-modelid^="registeredAccount"] {
-  width: 100%;
-  height: 100%;
-  background: #f3f3f3;
-  display: flex;
-  flex-direction: column;
-}
-div[data-ysp-modelid^="registeredAccount"] Header {
-  width: 100%;
-  height: 44px;
-  background: #fff;
-  border: 0;
-  padding: 0 15px;
-  border-bottom: 1px solid #ccc;
-}
-div[data-ysp-modelid^="registeredAccount"] Header h2 {
-  color: #3f3f3f;
-  font-size: 17px;
-  font-weight: 200;
-}
-div[data-ysp-modelid^="registeredAccount"] Header i.registered-account-goback {
-  width: 12px;
-  height: 20px;
-  display: inline-block;
-  background: url('../local/img/goback.png') no-repeat;
-  background-size: 100%;
-}
-div[data-ysp-modelid^="registeredAccount"] Header span.registered-account-gonext {
+div[data-ysp-modelid^="registeredAccount"] span.registered-account-gonext {
   color: #999;
 }
 div[data-ysp-modelid^="registeredAccount"] .registered-account-form {
@@ -403,6 +393,7 @@ div[data-ysp-modelid^="registeredAccount"] .registered-account-form .text {
   display: flex;
   padding: 0 15px;
   margin-top: 15px;
+  position: relative;
 }
 div[data-ysp-modelid^="registeredAccount"] .registered-account-form .text span {
   width: 4%;
@@ -422,6 +413,54 @@ div[data-ysp-modelid^="registeredAccount"] .registered-account-form .text input 
 }
 div[data-ysp-modelid^="registeredAccount"] .registered-account-form .text input::-webkit-input-placeholder {
   font-size: 13px;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form .text input + b {
+  display: none;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form .text b.errorIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: red;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 16px;
+  text-align: center;
+  position: absolute;
+  top: 3px;
+  right: 18px;
+  color: #fff;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form .address {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: 15px;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form .address span {
+  width: 4%;
+  color: #E3370A;
+  font-size: 20px;
+  float: left;
+  margin-top: 7px;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form .address i {
+  color: #ccc;
+  font-size: 14px;
+  font-style: normal;
+  color: #999;
+  margin-right: 15px;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form .address .province,
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form .address .city {
+  width: 22%;
+  height: 40px;
+  font-size: 12px;
+  margin: 0 15px;
+  border-radius: 3px;
+  color: #999;
 }
 div[data-ysp-modelid^="registeredAccount"] .registered-account-form .prompt {
   padding-left: 30px;
@@ -461,6 +500,30 @@ div[data-ysp-modelid^="registeredAccount"] .registered-account-form div:nth-chil
   border-radius: 3px;
   margin: 0;
 }
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form div:nth-child(8) {
+  display: flex;
+  align-items: center;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form div:nth-child(8) p {
+  display: flex;
+  width: 76%;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form div:nth-child(8) p span {
+  width: 4%;
+  color: #E3370A;
+  font-size: 20px;
+  float: left;
+  margin-right: 4px;
+  margin-top: 7px;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form div:nth-child(8) > div {
+  width: 80px;
+  height: 38px;
+}
+div[data-ysp-modelid^="registeredAccount"] .registered-account-form div:nth-child(8) > div img {
+  width: 100%;
+  height: 100%;
+}
 div[data-ysp-modelid^="registeredAccount"] .registered-account-form .registered-account-agree {
   width: 100%;
   display: flex;
@@ -492,7 +555,6 @@ div[data-ysp-modelid^="registeredAccount"] .registered-account-form .registered-
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
 }
 div[data-ysp-modelid^="registeredAccount"] .registered-account-form .registered-account-nowregister button {
   width: 90%;
@@ -504,22 +566,10 @@ div[data-ysp-modelid^="registeredAccount"] .registered-account-form .registered-
   border: 0;
   border-radius: 3px;
 }
-div[data-ysp-modelid^="registrationProtocol"] {
+div[data-ysp-modelid^="registeredAccount"] .registered-account-promptwords {
   width: 100%;
-  height: 100%;
-  background: #f3f3f3;
-  display: flex;
-  flex-direction: column;
-}
-div[data-ysp-modelid^="registrationProtocol"] header {
-  background: #fff;
-  border: 0;
-  border-bottom: 1px solid #eee;
-}
-div[data-ysp-modelid^="registrationProtocol"] header h2 {
-  color: #3f3f3f;
-  font-size: 17px;
-  font-weight: 200;
+  text-align: center;
+  color: #e7350d;
 }
 div[data-ysp-modelid^="registrationProtocol"] .registration-protocol-con {
   width: 92%;

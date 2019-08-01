@@ -6,7 +6,8 @@
   "requires": {
     "forgotPassword-writeAccount": "../forgotPassword-writeAccount/index.json",
     "index": "../index/index.json",
-    "registeredAccount": "../registeredAccount/index.json"
+    "registeredAccount": "../registeredAccount/index.json",
+    "enterpriseInformation": "../enterpriseInformation/index.json"
   },
   "chineseName": "登录",
   "description": "",
@@ -33,7 +34,7 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "monitored": false,
+      "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
     },
@@ -187,6 +188,10 @@
       "toContexts": [
         {
           "toContextId": "context0_DQT6TF"
+        },
+        {
+          "toContextId": "context5_MEUJxb",
+          "toModelId": "enterpriseInformation"
         }
       ]
     },
@@ -404,6 +409,36 @@
             "updateLaterBtn",
             "updateOkPop",
             "username"
+          ],
+          [
+            "caLicense",
+            "captchaCode",
+            "certEndDate",
+            "certExpiredPop",
+            "dl_error",
+            "error_msg",
+            "hasCertWidget",
+            "imageToPath",
+            "imgVerifyCode",
+            "indexImg",
+            "isCa",
+            "keyStoreProvider",
+            "loginButton",
+            "loginSuccessPop",
+            "needUpdateCertPop",
+            "password",
+            "signData",
+            "toSign",
+            "tucaoIcon",
+            "updateCertGap",
+            "updateError",
+            "updateErrorPop",
+            "updateLaterBtn",
+            "updateOkPop",
+            "username",
+            "verifyImg",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
           ]
         ]
       }
@@ -649,6 +684,36 @@
             "FORM/DIV/DIV",
             "FORM/DIV/INPUT-hidden",
             "FORM/DIV/INPUT-submit",
+            "SPAN/A/I"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H3",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-password",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/P",
+            "DIV/DIV/SAPN",
+            "DIV/DIV/SPAN",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/P/SPAN",
+            "DIV/SPAN/A",
+            "DL/DD/A",
+            "FORM/DIV/DIV",
             "SPAN/A/I"
           ]
         ]
