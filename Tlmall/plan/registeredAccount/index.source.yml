@@ -1,0 +1,171 @@
+getData_control10_eq66PD: ''
+doAction_uiControl10_i7M9b4: ''
+getTemplate_uiControl10_i7M9b4: |-
+  import { Header, HeaderLeft, HeaderRight } from 'ysp-interior-components';
+  import { back } from 'appRenderer';
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    render() {
+      return (
+        <div>
+          <Header title="注册我的账号">
+    <HeaderLeft>
+      <i className='registered-account-goback'  onClick={back}></i>
+    </HeaderLeft>
+    <HeaderRight>
+      <span className='registered-account-gonext'>下一步</span>
+    </HeaderRight>
+  </Header>
+        </div>
+      )
+    }
+  }
+getData_control11_mXMeeq: >
+  var data = [];
+
+  var arr = [];
+
+  var ipts = elem.querySelectorAll('input');
+
+  var statusAll = [];
+
+  var province = elem.querySelector('#province') &&
+  elem.querySelector('#province').querySelectorAll('option'); //省
+
+  var city = elem.querySelector('#city') &&
+  elem.querySelector('#city').querySelectorAll('option'); //市
+
+  var provinceAll = [];
+
+  var cityAll = [];
+
+  for (var i = 0; i < province.length; i++) {
+    provinceAll.push(province[i] && province[i].textContent);
+  }
+
+  for (var i = 0; i < city.length; i++) {
+    cityAll.push(city[i] && city[i].textContent);
+  }
+
+  for (var i = 0; i < ipts.length; i++) {
+    var flag = {};
+
+    if (ipts[i].getAttribute('placeholder') != '' && (ipts[i].getAttribute('type') == 'text' || ipts[i].getAttribute('type') == 'email' || ipts[i].getAttribute('type') == 'password')) {
+      if (ipts[i].getAttribute('placeholder') == '建议常用手机') {
+        ipts[i].setAttribute('placeholder', '请输入手机号');
+      }
+
+      arr.push(ipts[i].getAttribute('placeholder'));
+    }
+
+    if (ipts[i].parentNode.querySelector('.errors') && ipts[i].parentNode.querySelector('.errors').children.length > 0 && (ipts[i].getAttribute('type') == 'text' || ipts[i].getAttribute('type') == 'email' || ipts[i].getAttribute('type') == 'password')) {
+      flag.status = true;
+      flag.className = 'errorIcon';
+      flag.id = ipts[i].id;
+      statusAll.push(flag);
+    } else if (ipts[i].getAttribute('type') == 'text' || ipts[i].getAttribute('type') == 'email' || ipts[i].getAttribute('type') == 'password') {
+      flag.status = false;
+      flag.className = '';
+      flag.id = ipts[i].id;
+      statusAll.push(flag);
+    }
+  }
+
+  arr.splice(5, 0, '请输入企业地址');
+
+  for (var i = 0; i < arr.length; i++) {
+    var obj = {};
+    obj.title = arr[i];
+
+    if (obj.title == '请输入企业地址') {
+      statusAll.splice(i, 0, {
+        'status': false,
+        'className': '',
+        'type': 'text',
+        'id': '',
+        'data': {
+          'province': provinceAll,
+          'city': cityAll
+        }
+      });
+      obj.data = statusAll[i] && statusAll[i].data;
+    }
+
+    obj.status = statusAll[i] && statusAll[i].status;
+    obj.class = statusAll[i] && statusAll[i].className;
+    obj.id = statusAll[i] && statusAll[i].id;
+    obj.type = statusAll[i] && statusAll[i].type;
+
+    if (obj.title.indexOf('用户名') != -1) {
+      obj.marke = '至少包含一个小写字母和数字，不允许包含中文，在8-16个字符内';
+    }
+
+    if (obj.title == '请输入密码') {
+      obj.marke = '不可与账户名相同，至少包含一个小写字母和数字，不允许包含中文，在8-16个字符内';
+    }
+
+    if (obj.title == '请输入手机号') {
+      obj.button = '获取验证码';
+    }
+
+    if (obj.title == '请输入手机验证码') {
+      obj.button = '立即验证';
+    }
+
+    if (obj.title == '请输入验证码') {
+      obj.src = 'http://192.168.220.23' + elem.querySelector('#captchaCode_img').getAttribute('src');
+    }
+
+    data.push(obj);
+  }
+
+  ;
+
+  return data;
+doAction_uiControl11_19H7Ro: |
+  if (data.eventType == 'userName') {
+    elem.querySelector('#userName').value = data.dataCustom;
+    elem.querySelector('#userName').blur();
+  } else if (data.eventType == 'password') {
+    elem.querySelector('#password').value = data.dataCustom;
+    elem.querySelector('#password').blur();
+  } else if (data.eventType == 'confirmPassword') {
+    elem.querySelector('#confirmPassword').value = data.dataCustom;
+    elem.querySelector('#confirmPassword').blur();
+  } else if (data.eventType == 'contactPerson') {
+    elem.querySelector('#contactPerson').value = data.dataCustom;
+    elem.querySelector('#contactPerson').blur();
+  } else if (data.eventType == 'companyName') {
+    elem.querySelector('#companyName').value = data.dataCustom;
+    elem.querySelector('#companyName').blur();
+  } else if (data.eventType == 'province') {
+    console.log(elem.querySelector('#province'));
+    elem.querySelector('#province').value = data.dataCustom;
+    elem.querySelector('#province').blur();
+  } else if (data.eventType == 'phoneNumber') {
+    elem.querySelector('#phoneNumber').value = data.dataCustom;
+    elem.querySelector('#phoneNumber').blur();
+  } else if (data.eventType == 'getCode') {
+    elem.querySelector('#reg-timer').click();
+  } else if (data.eventType == 'nowVerify') {
+    elem.querySelector('#immediately_verify').click();
+  } else if (data.eventType == 'mobileCode') {
+    elem.querySelector('#mobileCode').value = data.dataCustom;
+    elem.querySelector('#mobileCode').blur();
+  } else if (data.eventType == 'email') {
+    elem.querySelector('#email').value = data.dataCustom;
+    elem.querySelector('#email').blur();
+  } else if (data.eventType == 'choose') {
+    if (data.dataCustom) {
+      elem.querySelector('.iradio_tlmall').className += " checked";
+    } else {
+      elem.querySelector('.iradio_tlmall').className = 'iradio_tlmall';
+    }
+  } else if (data.eventType == 'registrationProtocol') {
+    elem.querySelector('.alink_line').click();
+  } else if (data.eventType == 'nowRegister') {
+    elem.querySelector('.zc_btn_big').click();
+  }
+getTemplate_uiControl11_19H7Ro: "export default class extends React.Component{\n  constructor(props){\n    super(props);\n  }\n  sumIpt=(e)=>{\n    var target=e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data: target.value,\n        eventType: target.id\n      })\n    }\n  }\n  choose=(e)=>{\n    var target=e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data: target.checked,\n        eventType:\"choose\"\n      })\n    }\n  }\n  registrationProtocol=(e)=>{\n    var target=e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"registrationProtocol\"\n      })\n    }\n  }\n  nowRegister=(e)=>{\n    var target=e.target;\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"nowRegister\"\n      })\n    }\n  }\n  render() {\n    var data=this.props.customData;\n    return (\n      <div className='registered-account-form'>\n        <h3>登录信息</h3>\n        {\n          data && data.map((item,index)=>{\n            return (\n            \t<div onClick={this.sumIpt}>\n              \t{item.title && <p className='text'><span>*</span><input type='text' placeholder={item.title} className={item.class+' aaa'} id={item.id}/></p>}\n                {item.marke && <p className='prompt'>{item.marke}</p>}\n                {item.button && <input type='button' value ={item.button}/>}\n                {item.src && <div><img src={item.src}/></div>}\n                {item.data && <div><select>{item.data.province && item.data.province.map((item,index)=>{\n                      return (\n                      \t<option>{item}</option>\n                      )\n                    })}</select><select>{item.data.city && item.data.city.map((item,index)=>{\n                      return (\n                      \t<option>{item}</option>\n                      )\n                    })}</select></div>}\n              </div>\n            )\n          })\n        }\n        <div className='registered-account-agree'><p><input type='checkbox' onChange={this.choose}/><label>我已阅读并同意<b onClick={this.registrationProtocol}>《会员注册协议》</b></label></p></div>\n        <div className='registered-account-nowregister'><button onClick={this.nowRegister}>立即注册</button></div>\n      </div>\n    )\n  }\n};"

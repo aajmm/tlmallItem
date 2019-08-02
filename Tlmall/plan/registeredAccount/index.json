@@ -4,7 +4,8 @@
   "targetURL": "http://192.168.220.23/register.html",
   "jsFile": "index.js",
   "requires": {
-    "registrationProtocol": "../registrationProtocol/index.json"
+    "registrationProtocol": "../registrationProtocol/index.json",
+    "personal": "../personal/index.json"
   },
   "chineseName": "注册账号",
   "description": "",
@@ -141,6 +142,10 @@
       "toContexts": [
         {
           "toContextId": "context3_UgBsqG"
+        },
+        {
+          "toContextId": "context3_IigyoX",
+          "toModelId": "personal"
         }
       ]
     },

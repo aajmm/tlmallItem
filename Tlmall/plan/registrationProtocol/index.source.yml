@@ -1,0 +1,103 @@
+getData_control12_vuqSWd: |
+  return elem.textContent;
+doAction_uiControl12_ckrmMA: ''
+getTemplate_uiControl12_ckrmMA: |-
+  import { Header } from 'ysp-interior-components';
+
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    render() {
+      var data=this.props.customData;
+      return (
+        <div>
+          <Header title={data} />
+        </div>
+      )
+    }
+  }
+getData_control13_9Li90b: |
+  var arr = [];
+  var arr1 = [];
+  var data = [];
+  var tits = elem.querySelectorAll('h5');
+  for (var i = 0; i < tits.length; i++) {
+    arr.push(tits[i].textContent);
+  }
+  var cons = elem.querySelectorAll('p');
+  for (var i = 0; i < cons.length; i++) {
+    arr1.push(cons[i].textContent);
+  }
+  for (var i = 0; i < arr.length; i++) {
+    var obj = {};
+
+    for (var j = 0; j < arr1.length; j++) {
+      if (i == j) {
+        obj.title = arr[i];
+        obj.con = arr1[j];
+        data.push(obj);
+      }
+    }
+  }
+  return data;
+doAction_uiControl13_5sKTkI: ''
+getTemplate_uiControl13_5sKTkI: |-
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    render() {
+      var data=this.props.customData;
+      var aa = data[1].con.split('\n\t\t\t\t\t\t');
+      aa.shift();
+      var bb = data[2].con.split('\n\t\t\t\t\t\t');
+      bb.shift();
+      return (
+        <div className='registration-protocol-con'>
+          <h5>{data[0].title}</h5>
+          <p>{data[0].con}</p>
+          <h5>{data[1].title}</h5>
+          {
+            aa.map((item,i)=>(
+              <p>{aa[i]}</p>
+            ))
+          }
+          <h5>{data[2].title}</h5>
+          {
+            bb.map((item,i)=>(
+              <p>{bb[i]}</p>
+            ))
+          }
+        </div>
+      )
+    }
+  }
+getData_control14_FRZnre: |
+  return elem.value;
+doAction_uiControl14_TQBUKw: |
+  if (data.eventType == 'agreeNext') {
+    elem.click();
+  }
+getTemplate_uiControl14_TQBUKw: |-
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    agreeNext=()=>{
+      var handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"agreeNext"
+        })
+      }
+    }
+    render() {
+      var data=this.props.customData;
+      return (
+        <div className='registration-protocol-btn'>
+          <button onClick={this.agreeNext}>{data}</button>
+        </div>
+      )
+    }
+  }
