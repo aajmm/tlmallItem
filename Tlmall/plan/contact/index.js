@@ -2,7 +2,6 @@
   ysp.runtime.Model.extendLoadingModel({
     getData_control15_0zwZ6w: function (elem) {
       "use strict";
-
       if (!elem) {
         return;
       }var data = { contacts: [], edits: [], sexSels: [], contactSels: [], residenceSels: [], maritalSels: [], add: { ifShow: "", name: "", sex: "", contact: "", contactPhone: "", fax: "", email: "", residence: "", birthday: "", background: "", marital: "", job: "", department: "", remark: "" } }; //联系人列表
@@ -12,9 +11,7 @@
         });
       }); //联系人编辑
       var edits = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress");[].map.call(edits, function (d, i) {
-        var edit = { ifShow: "", name: "", sex: "", contact: "", contactPhone: "", fax: "", email: "", residence: "", birthday: "",
-          background: "", marital: "", job: "", department: "", remark: "" };edit.ifShow = d.parentNode.style.display;edit.name = d.querySelectorAll("input")[0].value;edit.sex = d.querySelectorAll("select")[0].querySelector("option:checked").textContent;edit.contact = d.querySelectorAll("select")[1].querySelector("option:checked").textContent;edit.contactPhone = d.querySelectorAll("input")[1].value;edit.fax = d.querySelectorAll("input")[2].value;edit.email = d.querySelectorAll("input")[3].value;edit.residence = d.querySelectorAll("select")[2].querySelector("option:checked").textContent;edit.birthday = d.querySelectorAll("input")[4].value;edit.birthday == "NaN-NaN-NaN" ? "1970-01-01" : edit.birthday;edit.background = d.querySelectorAll("input")[5].value;edit.marital = d.querySelectorAll("select")[3].querySelector("option:checked").textContent;edit.job = d.querySelectorAll("input")[6].value;edit.department = d.querySelectorAll("input")[7].value;edit.remark = d.querySelector("textarea").value;
-        data.edits.push(edit);
+        var edit = { ifShow: "", name: "", sex: "", contact: "", contactPhone: "", fax: "", email: "", residence: "", birthday: "", background: "", marital: "", job: "", department: "", remark: "" };edit.ifShow = d.parentNode.style.display;edit.name = d.querySelectorAll("input")[0].value;edit.sex = d.querySelectorAll("select")[0].querySelector("option:checked").textContent;edit.contact = d.querySelectorAll("select")[1].querySelector("option:checked").textContent;edit.contactPhone = d.querySelectorAll("input")[1].value;edit.fax = d.querySelectorAll("input")[2].value;edit.email = d.querySelectorAll("input")[3].value;edit.residence = d.querySelectorAll("select")[2].querySelector("option:checked").textContent;edit.birthday = d.querySelectorAll("input")[4].value;edit.birthday == "NaN-NaN-NaN" ? "1970-01-01" : edit.birthday;edit.background = d.querySelectorAll("input")[5].value;edit.marital = d.querySelectorAll("select")[3].querySelector("option:checked").textContent;edit.job = d.querySelectorAll("input")[6].value;edit.department = d.querySelectorAll("input")[7].value;edit.remark = d.querySelector("textarea").value;data.edits.push(edit);
       }); //新增联系人
       data.add.ifShow = elem.querySelector("#newAddressDiv").style.display;data.add.name = elem.querySelector("#contact_name").value;data.add.sex = elem.querySelector("#contact_sex").querySelector("option:checked").textContent;data.add.contact = elem.querySelector("#contact_contact").querySelector("option:checked").textContent;data.add.contactPhone = elem.querySelector("#contact_contactPhone").value;data.add.fax = elem.querySelector("#contact_fax").value;data.add.email = elem.querySelector("#contact_email").value;data.add.residence = elem.querySelector("#contact_residence").querySelector("option:checked").textContent;data.add.birthday = elem.querySelector("#contact_birthday").value;data.add.birthday == "NaN-NaN-NaN" ? "1970-01-01" : data.add.birthday;data.add.background = elem.querySelector("#contact_background").value;data.add.marital = elem.querySelector("#contact_marital").querySelector("option:checked").textContent;data.add.job = elem.querySelector("#contact_job").value;data.add.department = elem.querySelector("#contact_department").value;data.add.remark = elem.querySelector("#contact_remark").value; //select弹窗
       var sexSels = elem.querySelector("#contact_sex").querySelectorAll("option");[].map.call(sexSels, function (d, i) {
@@ -29,7 +26,6 @@
     },
     doAction_uiControl15_rVvoFf: function (data, elem) {
       "use strict";
-
       if (data.eventType == "back") {
         ysp.appMain.back();
       } else if (data.eventType == "editbtn") {
@@ -45,14 +41,14 @@
       } else if (data.eventType == "editEmail") {
         var _iptData3 = data.dataCustom;var _d5 = _iptData3[0];var _i3 = _iptData3[1];var _ipt4 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i3].querySelectorAll("input")[3];_ipt4.value = _d5;_ipt4.blur();_ipt4.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editBirthday") {
-        var _iptData4 = data.dataCustom;var _d6 = _iptData4[0];var _i4 = _iptData4[1];var _ipt5 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i4].querySelectorAll("input")[4];_ipt5.value = _d6;_ipt5.dispatchEvent(new Event('change'));
+        var _iptData4 = data.dataCustom;var _d6 = _iptData4[0];
+        var _i4 = _iptData4[1];var _ipt5 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i4].querySelectorAll("input")[4];_ipt5.value = _d6;_ipt5.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editBackground") {
         var _iptData5 = data.dataCustom;var _d7 = _iptData5[0];var _i5 = _iptData5[1];var _ipt6 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i5].querySelectorAll("input")[5];_ipt6.value = _d7;_ipt6.blur();_ipt6.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editJob") {
         var _iptData6 = data.dataCustom;var _d8 = _iptData6[0];var _i6 = _iptData6[1];var _ipt7 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i6].querySelectorAll("input")[6];_ipt7.value = _d8;_ipt7.blur();_ipt7.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editDepartment") {
-        var _iptData7 = data.dataCustom;var _d9 = _iptData7[0];var _i7 = _iptData7[1];var _ipt8 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i7].querySelectorAll("input")[7];_ipt8.value = _d9;_ipt8.blur();
-        _ipt8.dispatchEvent(new Event('change'));
+        var _iptData7 = data.dataCustom;var _d9 = _iptData7[0];var _i7 = _iptData7[1];var _ipt8 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i7].querySelectorAll("input")[7];_ipt8.value = _d9;_ipt8.blur();_ipt8.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editRemark") {
         var _iptData8 = data.dataCustom;var _d10 = _iptData8[0];var _i8 = _iptData8[1];var txtArea = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i8].querySelector("textarea");txtArea.value = _d10;ipt.blur();txtArea.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editSave") {
@@ -72,20 +68,17 @@
       } else if (data.eventType == "addContactPhone") {
         var _d14 = data.dataCustom;var _ipt10 = elem.querySelector("#contact_contactPhone");_ipt10.value = _d14;_ipt10.blur();_ipt10.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addFax") {
-        var _d15 = data.dataCustom;var _ipt11 = elem.querySelector("#contact_fax");_ipt11.value = _d15;_ipt11.blur();
-        _ipt11.dispatchEvent(new Event("change"));
+        var _d15 = data.dataCustom;var _ipt11 = elem.querySelector("#contact_fax");_ipt11.value = _d15;_ipt11.blur();_ipt11.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addEmail") {
         var _d16 = data.dataCustom;var _ipt12 = elem.querySelector("#contact_email");_ipt12.value = _d16;_ipt12.blur();_ipt12.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addBirthday") {
-        var _d17 = data.dataCustom;
-        var _ipt13 = elem.querySelector("#contact_birthday");_ipt13.value = _d17;_ipt13.blur();_ipt13.dispatchEvent(new Event("change"));
+        var _d17 = data.dataCustom;var _ipt13 = elem.querySelector("#contact_birthday");_ipt13.value = _d17;_ipt13.blur();_ipt13.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addBackground") {
         var _d18 = data.dataCustom;var _ipt14 = elem.querySelector("#contact_background");_ipt14.value = _d18;_ipt14.blur();_ipt14.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addJob") {
         var _d19 = data.dataCustom;var _ipt15 = elem.querySelector("#contact_job");_ipt15.value = _d19;_ipt15.blur();_ipt15.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addDepartment") {
-        var _d20 = data.dataCustom;
-        var _ipt16 = elem.querySelector("#contact_department");_ipt16.value = _d20;_ipt16.blur();_ipt16.dispatchEvent(new Event("change"));
+        var _d20 = data.dataCustom;var _ipt16 = elem.querySelector("#contact_department");_ipt16.value = _d20;_ipt16.blur();_ipt16.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addRemark") {
         var _d21 = data.dataCustom;var _ipt17 = elem.querySelector("#contact_remark");_ipt17.value = _d21;_ipt17.blur();_ipt17.dispatchEvent(new Event("change"));
       } else if (data.eventType == "selSex") {
@@ -103,8 +96,8 @@
       } else if (data.eventType == "editSelResidence") {
         var _Num12 = data.dataCustom;var _d28 = _Num12.indexOf("-");var _Num13 = parseInt(_Num12.substr(0, _d28));var _Num14 = parseInt(_Num12.substr(_d28 + 1, _Num12.length));elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_Num13].querySelectorAll("select")[2].querySelectorAll("option")[_Num14].selected = true;
       } else if (data.eventType == "editSelMarital") {
-        var _Num15 = data.dataCustom;var _d29 = _Num15.indexOf("-");
-        var _Num16 = parseInt(_Num15.substr(0, _d29));var _Num17 = parseInt(_Num15.substr(_d29 + 1, _Num15.length));elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_Num16].querySelectorAll("select")[3].querySelectorAll("option")[_Num17].selected = true;
+        var _Num15 = data.dataCustom;
+        var _d29 = _Num15.indexOf("-");var _Num16 = parseInt(_Num15.substr(0, _d29));var _Num17 = parseInt(_Num15.substr(_d29 + 1, _Num15.length));elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_Num16].querySelectorAll("select")[3].querySelectorAll("option")[_Num17].selected = true;
       }
     },
     getTemplate_uiControl15_rVvoFf: function () {
@@ -114,12 +107,14 @@
 
     getData_control19_IMMJ3T: function (elem) {
       "use strict";
+
       if (!elem) {
         return;
       }var data = [];var ifShow = elem.querySelector("#errorMsg").style.display;data[0] = ifShow;data[1] = elem.querySelector("#errorMessage").textContent;return data;
     },
     doAction_uiControl19_5Vt4SH: function (data, elem) {
       "use strict";
+
       if (data.eventType == "click") {
         var btn = elem.querySelector("#errorMsg").querySelector(".alert").querySelector(".close");btn.dispatchEvent(new Event("click"));
       }

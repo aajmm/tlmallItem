@@ -67,12 +67,22 @@
       "demo": [
         "http://192.168.220.23/personal.html"
       ]
+    },
+    {
+      "title": "rebateConfirMation",
+      "url": "adapter://Tlmall/plan/rebateConfirMation/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=10400"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html?code=10400"
+      ]
     }
   ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1564723273141,
+  "update_time": 1564725713909,
   "runtime_env": "1webview"
 }
