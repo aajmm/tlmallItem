@@ -1,0 +1,152 @@
+getData_control16_KUe5Uq: ''
+doAction_uiControl16_KPuEvG: ''
+getTemplate_uiControl16_KPuEvG: |-
+  import { Header, HeaderLeft } from 'ysp-interior-components';
+  import { back } from 'appRenderer';
+  export default class extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    render() {
+      return (
+        <div>
+          <Header title="完善我的账号">
+    <HeaderLeft>
+      <i onClick={back}></i>
+    </HeaderLeft>
+  </Header>
+        </div>
+      )
+    }
+  }
+getData_control17_b85ysT: >
+  if (!elem) {
+    return;
+  }
+
+  var data = {};
+
+  var enterpriseNatureAll = []; //企业性质
+
+  var enterpriseNatureChecked = ''; //企业性质默认
+
+  var enterpriseName = ''; //公司名称
+
+  var provinceAll = []; //所有省
+
+  var provinceVal = []; //所有省的val
+
+  var cityAll = []; //所有市
+
+  var cityVal = []; //所有市的val
+
+  var zone = ''; //区/县
+
+  var detailedAddress = ''; //详细地址
+
+  var corporateIdInformationAll = []; //企业证件信息
+
+  var isOne = {}; //是否三证合一
+
+  var legalName = ''; //法人姓名
+
+  var contactInformation = {}; // 联系人信息
+
+  var salesStaff = {}; //销售人员
+
+  var enterpriseNatures =
+  elem.querySelector('#enterpriseType').querySelectorAll('option');
+
+  for (var i = 0; i < enterpriseNatures.length; i++) {
+    enterpriseNatureAll.push(enterpriseNatures[i].textContent);
+  }
+
+  enterpriseNatureChecked =
+  elem.querySelector('#enterpriseType').querySelectorAll('option')[elem.querySelector('#enterpriseType').options.selectedIndex].value;
+
+  enterpriseName = elem.querySelector('#enterpriseName').value;
+
+  var province = elem.querySelector('#province').querySelectorAll('option');
+
+  for (var i = 0; i < province.length; i++) {
+    provinceAll.push(province[i].textContent);
+    provinceVal.push(province[i].value);
+  }
+
+  var city = elem.querySelector('#city').querySelectorAll('option');
+
+  for (var i = 0; i < city.length; i++) {
+    cityAll.push(city[i].textContent);
+    cityVal.push(city[i].value);
+  }
+
+  var zone = elem.querySelector('#zone').value;
+
+  detailedAddress = elem.querySelector('#address').value;
+
+  var corporateInformation =
+  elem.querySelector('.tab_zc_radios').querySelectorAll('label');
+
+  var checkedStatus =
+  elem.querySelector('.tab_zc_radios').querySelectorAll('.iradio_tlmall');
+
+  for (var i = 0; i < corporateInformation.length; i++) {
+    var corporateIdInformation = {};
+
+    for (var j = 0; j < corporateInformation.length; j++) {
+      corporateIdInformation.text = corporateInformation[i].textContent;
+      corporateIdInformation.status = checkedStatus[i].classList.contains('checked') ? true : false;
+    }
+
+    corporateIdInformationAll.push(corporateIdInformation);
+  }
+
+  isOne = {
+    tit: elem.querySelector('.ck_tip').querySelector('label').textContent,
+    flag: elem.querySelector('.icheckbox_red').classList.contains('checked') ? true : false
+  };
+
+  legalName = elem.querySelector('#legalName').value;
+
+  contactInformation = {
+    contactName: elem.querySelector('#contactPersonName').value,
+    contactPhone: elem.querySelector('#contactPhone').value
+  };
+
+  salesStaff = {
+    salesmanName: elem.querySelector('#salesmanName').placeholder,
+    salesmanPhone: elem.querySelector('#salesmanPhone').placeholder
+  };
+
+  data = {
+    enterpriseNatureAll: enterpriseNatureAll,
+    enterpriseNatureChecked: enterpriseNatureChecked,
+    enterpriseName: enterpriseName,
+    provinceAll: provinceAll,
+    provinceVal: provinceVal,
+    cityAll: cityAll,
+    cityVal: cityVal,
+    zone: zone,
+    detailedAddress: detailedAddress,
+    corporateIdInformationAll: corporateIdInformationAll,
+    legalName: legalName,
+    isOne: isOne,
+    contactInformation: contactInformation,
+    salesStaff: salesStaff
+  };
+
+  return data;
+doAction_uiControl17_xTlhrw: ''
+getTemplate_uiControl17_xTlhrw: "export default class extends React.Component{\n  constructor(props){\n    super(props);\n    this.state = {\n      licenseStatus: true,\n      idStatus: false\n    }\n  }\n  chooseType=(e)=>{\n    var target=e.target;\n    console.log(target)\n    var handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"chooseType\"\n      })\n    }\n  }\n  render() {\n    var data = this.props.customData;\n    return (\n      <div className='enterpriseInformation'>\n        <h3>企业信息</h3>\n        <div className='enterpriseInformation-form'>\t\t\n          <p className='enterprise-type'>\n            <select>\n              {data.enterpriseNatureAll && data.enterpriseNatureAll.map((item,i)=>(\n                <option value={i} selected={data.enterpriseNatureChecked==i?'selected':null}>{item}</option> \n              ))}\n            </select>\n        \t\t<label>(与企业营业执照一致)</label>\n        \t</p>\n          <p className='enterprise-name'><i>*</i><input type='text' value={data.enterpriseName} placeholder='请输入公司名称'/></p>\n          <p className='enterprise-address'>\n            <i>*</i>\n            <select>\n              {\n                data.provinceAll && data.provinceAll.map((item,i)=>(\n                  <option value={data.provinceVal[i]}>{item}</option>\n                ))\n              }\n            </select>\n            <select>\n              {\n                data.cityAll && data.cityAll.map((item,i)=>(\n                  <option value={data.cityVal[i]}>{item}</option>\n                ))\n              }\n            </select>\n            <input type='text' value={data.zone && data.zone}/>\n          </p>\n          <div className='detail-address'>\n            <p>\n              <i>*</i>\n            \t<input value={data.detailedAddress && data.detailedAddress} placeholder='请输入详细经营地址' />\n            </p>\n            <b className='enterpriseInformation-downmenu'></b>\n            <div className='enterpriseInformation-list'>\n            <div className='enterpriseInformation-choose' onClick={this.chooseType}>\n              {\n                data.corporateIdInformationAll && data.corporateIdInformationAll.map((item,i)=>(\n                  <p>\n                    <span>{item.text}</span>\n                  </p>\n                ))\n              }\n          \t</div>\n          </div>\n          </div>\n          <div className='legal-information'>\n            <p className='legal-name'>\n              <i>*</i>\n              <input type='text' value={data.legalName && data.legalName} placeholder='请输入法人姓名'/>\n          \t</p>\n            <p className='id-number'>\n              <i>*</i>\n              <input type='text' placeholder='请输入法人身份证号'/>\n          \t</p>\n            <div className='id-card'>\n              <p>\n                <i>*</i>\n            \t\t<input type='text' placeholder='请输入身份证'/>\n            \t\t<button><input type='file'/>拍照或扫描上传</button>\n              </p>\n              <span>如填写法人姓名和身份证号,则无需填写营业执照号</span>\n          \t</div>\n          </div>\n          <div className='license-information'>\n            <p className='business-license-number'>\n              <i>*</i>\n              <input type='text' placeholder='请输入营业执照注册号'/>\n          \t</p>\n            <div className='business-license'>\n              <p>\n                <i>*</i>\n                <input type='text' placeholder='请输入营业执照'/>\n            \t\t<button><input type='file'/>拍照或扫描上传</button>\n              </p>\n              <span>如填写法人姓名和身份证号,则无需填写营业执照号</span>\n          \t</div>\n          </div>\n        </div>\n        <h3>联系人信息</h3>\n        <div className='contact-information'>\n          <p className='contact-name'>\n            <i>*</i>\n            <input type='text' value={data.contactInformation && data.contactInformation.contactName} placeholder='请输入联系人姓名'/>\n          </p>\n          <p className='contact-phone'>\n            <i>*</i>\n            <input type='text' value={data.contactInformation && data.contactInformation.contactPhone} placeholder='请输入联系人电话'/>\n          </p>\n        </div>\n        <h3>普天太力联系人</h3>\n        <div className='PTTL-contact-information'>\n          <p className='PTTL-contact-name'><i>*</i><input type='text' placeholder={data.salesStaff && data.salesStaff.salesmanName}/></p>\n          <p className='PTTL-contact-phone'><i>*</i><input type='text' placeholder={data.salesStaff && data.salesStaff.salesmanPhone}/></p>\n        </div>\n      </div>\n    )\n  }\n}"
+getData_undefined: ''
+doAction_: ''
+getTemplate_: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });

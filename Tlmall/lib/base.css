@@ -100,6 +100,53 @@ li {
   background-color: #e7350d;
   color: #fff;
 }
+.ysp-tip-pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+}
+.ysp-tip-pop .mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.ysp-tip-pop .pop-con {
+  box-sizing: border-box;
+  width: 84%;
+  position: absolute;
+  top: 50%;
+  left: 11%;
+  transform: translate(0, -50%);
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+}
+.ysp-tip-pop .pop-con p.tip-con {
+  padding: 15px 0;
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+}
+.ysp-tip-pop .pop-con .tip-btn {
+  text-align: center;
+}
+.ysp-tip-pop .pop-con .tip-btn span {
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 50px;
+  margin: 0 5px;
+  border-radius: 22px;
+  font-size: 16px;
+}
+.ysp-tip-pop .pop-con .tip-btn span.red-btn {
+  background: #E7350D;
+  color: #fff;
+}
 div[data-ysp-modelid^="login"] {
   width: 100%;
   height: 100%;
@@ -894,29 +941,6 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpris
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-information {
   border-bottom: 1px solid #ccc;
-}
-div[data-ysp-modelid^="contact"] .ysp-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 44px;
-  overflow: hidden;
-  line-height: 44px;
-  text-align: center;
-  border-bottom: 1px solid #e1e1e1;
-  box-sizing: border-box;
-  padding: 0 10px;
-  background: #fff;
-}
-div[data-ysp-modelid^="contact"] .ysp-top .back {
-  display: block;
-  float: left;
-  width: 30px;
-  height: 18px;
-  margin-top: 13px;
-  background: url(images/arrows.png) no-repeat left center;
-  background-size: 27%;
 }
 div[data-ysp-modelid^="contact"] .contact {
   padding-top: 45px;
