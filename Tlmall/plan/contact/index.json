@@ -55,48 +55,6 @@
       "text": "我的联系人",
       "frameXPath": ""
     },
-    "control13_NR1TdQ": {
-      "location": {
-        "data": {
-          "tagName": "SPAN"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main SPAN"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control13_NR1TdQ"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": "",
-      "componentType": "custom"
-    },
     "control15_0zwZ6w": {
       "location": {
         "data": {
@@ -137,7 +95,6 @@
   "contexts": {
     "context4_G4wDgT": {
       "controls": [
-        "control13_NR1TdQ",
         "control15_0zwZ6w"
       ],
       "anchors": [
@@ -162,21 +119,6 @@
     "page4_29Eoct": {
       "contextId": "context4_G4wDgT",
       "layout": [
-        {
-          "id": "uiControl11_Kri5BV",
-          "controlId": "control13_NR1TdQ",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl11_Kri5BV",
-                "onGetTemplate": "getTemplate_uiControl11_Kri5BV"
-              }
-            }
-          }
-        },
         {
           "id": "uiControl15_rVvoFf",
           "controlId": "control15_0zwZ6w",
