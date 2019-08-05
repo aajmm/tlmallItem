@@ -1,7 +1,147 @@
-getTemplate_uiControl20_qwcopo: "import {Component,Fragment} from 'react'; \nimport {CustomHeader} from 'ysp-custom-components';\nexport default class extends Component{\n  //返回\n  back=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'back'\n    });\n   }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<Fragment>\n      <CustomHeader \n           data={{centerText:\"待确认返利\"}} \n           backIsShow={true} \n           filterIsShow={false}\n        \t editIsShow={false}\n           back={me.back.bind(me)}\n        />\n        <div className=\"ysp-rebateConfirMation\">\n          <div className=\"filter-box\">\n            <h4>返利信息</h4>\n            <ul>\n              <li><div className=\"num1\"><strong>{data.rc_pengdingConfirmAmount}</strong>元</div><p>未确认返利金额</p></li>\n              <li><div className=\"num2\"><strong>{data.rc_pendingConfirmCount}</strong>笔</div><p>未确认返利笔数</p></li>\n            </ul>\n            <div className=\"filter\"><span>筛选条件</span></div>\n            <div className=\"filter\"><span>开始时间</span><AInput type=\"date\" value={data.rc_startTime}/></div>\n            <div className=\"filter\"><span>截止时间</span><AInput type=\"date\" value={data.rc_endTime}/></div>\n            <div className=\"btn-box\"><span>返利明细导出</span><span>查询</span></div>\n          </div>\n          <div className=\"table-list\">\n            {\n              data.tableLists.map(function(d,i){\n                return(\n                \t<ul className=\"list\">\n                    <li className=\"tit\"><span>序号：</span>{d[0]}</li>\n                    <li><span>所属分公司：</span>{d[2]}</li>\n                    <li><span>返利金额：</span>{d[1]}</li>\n                    <li><span>税率：</span>{d[5]}</li>\n                    <li><span>状态：</span>{d[6]}<div className=\"date-box\"><span>生效日期：{d[3]}</span><span>失效日期：{d[4]}</span></div></li>\n                    <li className=\"btn-box\"><span data-index={i}>查看</span><span data-index={i}>确认</span></li>\n                  </ul>\n                )\n              })\n            }\n          </div>\n          {\n            data.selLists.map(function(d,i){\n              return(\n                <div className=\"sel-list-box\">\n                {\n                   d.map(function(m,n){\n                     return(\n                     \t<ul className=\"sel-list\">\n                         <li className=\"tit\"><span>物料编码：</span></li>\n                      </ul>\n                     )\n                   }) \n                }\n                </div>\n              )\n            }) \n          }\n        </div>\n      </Fragment>\n    )\n  }\n}"
-getData_control31_eCGGQi: "if(!elem){\n  return;\n}\nlet data={\n  rc_pengdingConfirmAmount:\"\",\n  rc_pendingConfirmCount:\"\",\n  rc_startTime:\"\",\n  rc_endTime:\"\",\n  tableLists:[],\n  selLists:[],\n  pages:[]\n};\ndata.rc_pengdingConfirmAmount = elem.querySelector(\"#rc_pengdingConfirmAmount\").textContent;\ndata.rc_pendingConfirmCount = elem.querySelector(\"#rc_pendingConfirmCount\").textContent;\ndata.rc_startTime = elem.querySelector(\"#rc_startTime\").textContent;\ndata.rc_endTime = elem.querySelector(\"#rc_endTime\").textContent;\nlet trs = elem.querySelector(\"#rc_tbodyList\").childNodes;\n[].map.call(trs,function(d,i){\n  if(i%2!=0 && d.getAttribute(\"class\")!=\"check_c\"){\n    let tds1 = d.querySelectorAll(\"td\");\n    let tableList1 = [];\n    [].map.call(tds1,function(m,n){\n      tableList1.push(m.textContent);\n    });\n    data.tableLists.push(tableList1);\n  }else if(i%2!=0 && d.getAttribute(\"class\")==\"check_c\"){\n    //查看列表\n  \tlet trs2 = d.querySelector(\"tbody\").querySelectorAll(\"tr\"); \n    let selBox=[];\n    [].map.call(trs2,function(m,n){\n      let tds2 = m.querySelectorAll(\"td\");\n      let selLest = [];\n      [].map.call(tds2,function(item,index){\n        selLest.push(item.textContent);\n      });\n      selBox.push(selLest);\n    });\n    data.selLists.push(selBox);\n  }\n});\nreturn data;"
+getTemplate_uiControl20_qwcopo: "import {Component,Fragment} from 'react'; \nimport {CustomHeader} from 'ysp-custom-components';\nexport default class extends Component{\n  constructor(props){\n    super(props);\n  }\n  //返回\n  back=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'back'\n    });\n   }\n  }\n  startTime=(e)=>{\n  var target = e.target;\n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    data:target.value,\n    eventType: 'startTime'\n    });\n   }\n  }\n  endTime=(e)=>{\n  var target = e.target;\n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    data:target.value,\n    eventType: 'endTime'\n    });\n   }\n  }\n  selClick=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'selClick'\n    });\n   }\n  }\n  exportClick=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'exportClick'\n    });\n   }\n  }\n  selsClick=(e)=>{ \n   let target = e.target;\n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    data:target.dataset.index,\n    eventType: 'selsClick'\n    });\n   }\n  }\n  sureClick=(e)=>{ \n   let target = e.target;\n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    data:target.dataset.index,\n    eventType: 'sureClick'\n    });\n   }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<Fragment>\n      <CustomHeader \n           data={{centerText:\"待确认返利\"}} \n           backIsShow={true} \n           filterIsShow={false}\n        \t editIsShow={false}\n           back={me.back.bind(me)}\n        />\n        <div className=\"ysp-rebateConfirMation\">\n          <div className=\"filter-box\">\n            <h4>返利信息</h4>\n            <ul>\n              <li><div className=\"num1\"><strong>{data.rc_pengdingConfirmAmount}</strong>元</div><p>未确认返利金额</p></li>\n              <li><div className=\"num2\"><strong>{data.rc_pendingConfirmCount}</strong>笔</div><p>未确认返利笔数</p></li>\n            </ul>\n            <div className=\"filter\"><span>筛选条件</span></div>\n            <div className=\"filter\"><span>开始时间</span><AInput type=\"date\" onChange={me.startTime.bind(me)} value={data.rc_startTime}/></div>\n            <div className=\"filter\"><span>截止时间</span><AInput type=\"date\" onChange={me.endTime.bind(me)} value={data.rc_endTime}/></div>\n            <div className=\"btn-box\"><span onClick={me.exportClick.bind(me)}>返利明细导出</span><span onClick={me.selClick.bind(me)}>查询</span></div>\n          </div>\n          <div className=\"table-list\">\n            <h4>返利明细</h4>\n            {\n              data.tableLists.length<1 ? <div className=\"no-data\">暂无待确认返利</div> :\n              data.tableLists.map(function(d,i){\n                return(\n                \t<ul className=\"list-box\">\n                    <li className=\"tit\"><span>序号：</span>{d[0]}</li>\n                    <li><span>所属分公司：</span>{d[2]}</li>\n                    <li><span>返利金额：</span><strong>{d[1]}</strong></li>\n                    <li><span>税率：</span>{d[5]}</li>\n                    <li><span>状态：</span>{d[6]}<div className=\"date-box\"><span>生效日期：{d[3]}</span><span>失效日期：{d[4]}</span></div></li>\n                    <li className=\"btn-box\"><span data-index={i} onClick={me.selsClick.bind(me)}>查看</span>{d[6]==\"未确认\" ? <span data-index={i} onClic={me.sureClick.bind(me)}>确认</span> : <span className=\"no-click\">确认</span>}</li>\n                  </ul>\n                )\n              })\n            }\n          </div>\n          {\n            data.selLists.map(function(d,i){\n              return(\n                <div className=\"sel-list-box\" style={{display:d.isShow}}>\n                  <div className=\"ysp-top\"><span className=\"back\" data-index={i} onClick={me.selsClick.bind(me)}></span>返利明细</div>\n                {\n                   d.selList.length>0 && d.selList.map(function(m,n){\n                     return(\n                     \t<ul className=\"sel-list\">\n                         <li className=\"tit\">物料编码：{d[7]}</li>\n                         <li><span>品牌：{m[0]}</span><span>数量：{m[4]}</span></li>\n                         <li><span>物料名称：{m[1]}</span><span>折扣金额：{m[5]}</span></li>\n                         <li><span>备注：{m[3]}</span><span>单价：{m[6]}</span></li>\n                         <li>折扣类型：{m[2]}</li>\n                      </ul>\n                     )\n                   }) \n                }\n                </div>\n              )\n            }) \n          }\n        </div>\n      </Fragment>\n    )\n  }\n}"
+getData_control31_eCGGQi: "if(!elem){\n  return;\n}\nlet data={\n  rc_pengdingConfirmAmount:\"\",\n  rc_pendingConfirmCount:\"\",\n  rc_startTime:\"\",\n  rc_endTime:\"\",\n  tableLists:[],\n  selLists:[],\n  pages:[]\n};\ndata.rc_pengdingConfirmAmount = elem.querySelector(\"#rc_pengdingConfirmAmount\").textContent;\ndata.rc_pendingConfirmCount = elem.querySelector(\"#rc_pendingConfirmCount\").textContent;\ndata.rc_startTime = elem.querySelector(\"#rc_startTime\").value;\ndata.rc_endTime = elem.querySelector(\"#rc_endTime\").value;\nlet trs = elem.querySelector(\"#rc_tbodyList\").children;\n[].map.call(trs,function(d,i){\n  if(i%2==0){\n    let tds1 = d.querySelectorAll(\"td\");\n    let tableList1 = [];\n    [].map.call(tds1,function(m,n){\n      tableList1.push(m.textContent);\n    });\n    data.tableLists.push(tableList1);\n  }else{\n    //查看列表\n  \tlet trs2 = d.querySelector(\"tbody\").querySelectorAll(\"tr\"); \n    let selBox={\n      isShow:\"none\",\n      selList:[]\n    };\n    trs2 && [].map.call(trs2,function(m,n){\n      let tds2 = m.querySelectorAll(\"td\");\n      let selLest = [];\n      [].map.call(tds2,function(item,index){\n        selLest.push(item.textContent);\n      });\n      selBox.isShow = d.style.display == \"table-row\" ? \"block\" : \"none\";\n      selBox.selLest.push(d.getAttribute(\"data_materialcode\"));\n      selBox.selList.push(selLest);\n    });\n    data.selLists.push(selBox);\n  }\n});\nreturn data;"
 doAction_uiControl20_qwcopo: |-
   var type = data.eventType;
   if(type == "back") {
     ysp.appMain.back();
+  }else if(type == "startTime") {
+    let d = data.dataCustom;
+    elem.querySelector("#rc_startTime").value = d;
+  }else if(type == "endTime") {
+    let d = data.dataCustom;
+    elem.querySelector("#rc_endTime").value = d;
+  }else if(type == "selClick") {
+    let btn = elem.querySelector(".yetRebate_infos").querySelector(".btns_r_a").querySelectorAll(".btn")[1];
+    btn.dispatchEvent(new Event("click"));
+  }else if(type == "exportClick") {
+    let btn = elem.querySelector(".yetRebate_infos").querySelector(".btns_r_a").querySelectorAll(".btn")[0];
+    btn.dispatchEvent(new Event("click"));
+  }else if(type == "selsClick") {
+    let d = data.dataCustom * 2;
+    let btn = elem.querySelector("#rc_tbodyList").children[d].querySelector(".check");
+    btn.dispatchEvent(new Event("click"));
+  }else if(type == "sureClick") {
+    let d = data.dataCustom * 2;
+    let btn = elem.querySelector("#rc_tbodyList").children[d].querySelector("input");
+    btn.dispatchEvent(new Event("click"));
+  }
+getTemplate_uiControl21_EaNkHN: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });
+getData_control32_pJ64qs: |-
+  if(!elem){
+    return;
+  }
+  let data=[];
+  let ifShow = elem.querySelector("#errorMsg").style.display;
+  data[0] = ifShow;
+  data[1] = elem.querySelector("#errorMessage").textContent;
+  return data;
+doAction_uiControl21_EaNkHN: ''
+getTemplate_uiControl21_1yNw0f: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });
+getData_control32_OX5ss4: |-
+  if(!elem){
+    return;
+  }
+  let data=[];
+  let ifShow = elem.querySelector("#errorMsg").style.display;
+  data[0] = ifShow;
+  data[1] = elem.querySelector("#errorMessage").textContent;
+  return data;
+doAction_uiControl21_1yNw0f: ''
+getTemplate_uiControl21_MNBvAm: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });
+getData_control32_uCNDZm: |-
+
+  if(!elem){
+    return;
+  }
+  let data=[];
+  let ifShow = elem.querySelector("#errorMsg").style.display;
+  data[0] = ifShow;
+  data[1] = elem.querySelector("#errorMessage").textContent;
+  return data;
+doAction_uiControl21_MNBvAm: ''
+getTemplate_uiControl22_TTPLcU: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });
+getData_control33_VpDLC7: |-
+  if(!elem){
+    return;
+  }
+  console.log(elem);
+  let data=[];
+  let ifShow = elem.querySelector("#errorMsg").style.display;
+  data[0] = ifShow;
+  data[1] = elem.querySelector("#errorMessage").textContent;
+  return data;
+doAction_uiControl22_TTPLcU: ''
+getTemplate_uiControl22_XBVOF0: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick(e) {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-tip-pop\" style={{display:data[0]}}>\n        <div className=\"mask\"></div>\n        <div className=\"pop-con\">\n          <p className=\"tip-con\">{data[1]}</p>\n          <div class=\"tip-btn\"><span className=\"red-btn\" onClick={me.handlerClick.bind(me)}>确认</span></div>\n        </div>\n      </div>\n    )\n  }\n}"
+getData_control33_P4iFS8: |-
+  if(!elem){
+    return;
+  }
+  let data=[];
+  let ifShow = elem.querySelector("#errorMsg").style.display;
+  data[0] = ifShow;
+  data[1] = elem.querySelector("#errorMessage").textContent;
+  return data;
+doAction_uiControl22_XBVOF0: |-
+  if(data.eventType == "click"){
+    let btn = elem.querySelector("#errorMsg").querySelector(".alert").querySelector(".close");
+    btn.dispatchEvent(new Event("click"));
+  }
+getTemplate_uiControl23_aExU0w: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  nextsClick = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"nextsClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-page-box\">\n        <ul>\n          <li className=\"firstPage\"><i></i></li>\n          <li className=\"prev\"><i></i></li>\n          <li className=\"now-page\"><em>{data[0]}</em><span>&#47;</span>{data[1]}<input style={{display:data[2]}} type=\"text\" className=\"page-ipt\" /></li>\n          <li className=\"next\"><i></i></li>\n          <li className=\"lastPage\" onClick={me.nextsClick.bind(me)}><i></i></li>\n          <li className=\"sure-btn\">确认</li>\n        </ul>\n      </div>\n    )\n  }\n}"
+getData_control34_f56u2G: >-
+  if(!elem){
+    return;
+  }
+
+  let data=[];
+
+  data.push(elem.querySelector(".nowPage").textContent);
+
+  data.push(elem.querySelector(".allPages").textContent);
+
+  let iptShow =
+  elem.querySelector(".J-paginationjs-go-pagenumber").style.display;
+
+  data.push(iptShow);
+
+  return data;
+doAction_uiControl23_aExU0w: |-
+  let type = data.eventType;
+  if(type == "nextsClick"){
+    elem.querySelectorAll("li")[4].querySelector("a").dispatchEvent(new Event("click"));
   }
