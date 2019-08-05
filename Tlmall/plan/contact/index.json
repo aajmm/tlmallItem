@@ -90,12 +90,35 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control19_IMMJ3T": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control19_IMMJ3T"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context4_G4wDgT": {
       "controls": [
-        "control15_0zwZ6w"
+        "control15_0zwZ6w",
+        "control19_IMMJ3T"
       ],
       "anchors": [
         "control12_NcLbHm"
@@ -108,6 +131,16 @@
       "fromContextId": "context4_G4wDgT",
       "fromAction": "doAction",
       "fromControlId": "control15_0zwZ6w",
+      "toContexts": [
+        {
+          "toContextId": "context4_G4wDgT"
+        }
+      ]
+    },
+    "flow13_TdX05u": {
+      "fromContextId": "context4_G4wDgT",
+      "fromAction": "doAction",
+      "fromControlId": "control19_IMMJ3T",
       "toContexts": [
         {
           "toContextId": "context4_G4wDgT"
@@ -130,6 +163,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl15_rVvoFf",
                 "onGetTemplate": "getTemplate_uiControl15_rVvoFf"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl19_5Vt4SH",
+          "controlId": "control19_IMMJ3T",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl19_5Vt4SH",
+                "onGetTemplate": "getTemplate_uiControl19_5Vt4SH"
               }
             }
           }
@@ -212,6 +260,60 @@
             "typeAheadInfo",
             "typeAheadInfoList",
             "updateCertGap",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "changeProvince",
+            "contact_background",
+            "contact_birthday",
+            "contact_contact",
+            "contact_contactPhone",
+            "contact_department",
+            "contact_email",
+            "contact_fax",
+            "contact_job",
+            "contact_marital",
+            "contact_name",
+            "contact_remark",
+            "contact_residence",
+            "contact_sex",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "eidtContactList",
+            "errorMessage",
+            "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "newAddressDiv",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
             "xiaoNengIcon",
             "xiaoNengSvcIcon"
           ]
@@ -328,6 +430,49 @@
             "-/DIV/DIV",
             "-/DIV/INPUT-hidden",
             "-/DIV/SCRIPT",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/P",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/FORM/DIV",
+            "DIV/SELECT/OPTION",
+            "DIV/TABLE/TBODY",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "FORM/DIV/DIV",
+            "LI/A/B",
+            "LI/A/I",
+            "LI/H5/I",
+            "LI/SELECT/OPTION",
+            "LI/UL/LI",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "UL/LI/A",
+            "UL/LI/H5",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
             "DIV/A/DIV",
             "DIV/A/I",
             "DIV/A/IMG",

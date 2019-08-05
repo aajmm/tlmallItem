@@ -16,7 +16,7 @@ ul,li{
 @theme-bg:#f3f3f3;
 /*    以上样式为公用样式      */
 
-//页面顶部样式
+//页面顶部样式  xxger
 .ysp-top {
     position: fixed;
     top: 0;
@@ -41,7 +41,7 @@ ul,li{
     }
 }
 
-//模拟select弹框
+//模拟select弹框  xxger
 .ysp-selpop-box {
     display: none;
     position: fixed;
@@ -91,6 +91,56 @@ ul,li{
         }
     }
 }
+
+//提示框  xxger
+.ysp-tip-pop{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:500;
+  .mask{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.2);
+  }
+  .pop-con{
+    box-sizing: border-box;
+    width:84%;
+    position: absolute;
+    top:50%;
+    left:11%;
+    transform: translate(0,-50%);
+    background:#fff;
+    border-radius: 8px;
+    padding:15px;
+    p.tip-con{
+      padding:15px 0;
+      color:#666;
+      text-align: center;
+      font-size:14px;
+      line-height:22px;
+    }
+    .tip-btn{
+      text-align: center;
+      span{
+        display: inline-block;
+        height:44px;
+        line-height: 44px;
+        padding:0 50px;
+        margin:0 5px;
+        border-radius: 22px;
+        font-size:16px;
+        &.red-btn{
+          background:#E7350D;
+          color:#fff;
+        }
+      }
+    }
+  }
+}
+
 
 //登录页
 div[data-ysp-modelid^="login"]{
@@ -843,7 +893,7 @@ div[data-ysp-modelid^="enterpriseInformation"]{
     }
   }
 }
-//我的联系人页   xxger   2019-7-30
+//我的联系人页   xxger  
 div[data-ysp-modelid^="contact"] {
     .contact {
         padding-top: 45px;
@@ -1031,4 +1081,8 @@ div[data-ysp-modelid^="contact"] {
             }
         }
     }
+}
+//待确认返利   xxger
+div[data-ysp-modelid^="rebateConfirMation"]{
+  
 }
