@@ -1,0 +1,1025 @@
+{
+  "version": "0.1",
+  "id": "personal",
+  "targetURL": "http://192.168.220.23/personal.html",
+  "jsFile": "index.js",
+  "requires": {
+    "contact": "../contact/index.json",
+    "rebateConfirMation": "../rebateConfirMation/index.json"
+  },
+  "chineseName": "业务中心",
+  "description": "",
+  "controls": {
+    "control10_CwVfTa": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "首页"
+              ],
+              "visText": [
+                "首页"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"titleTip\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.breadcrumb"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "roles": "element,link",
+      "text": "首页",
+      "frameXPath": ""
+    },
+    "control11_ewt36D": {
+      "location": {
+        "data": {
+          "tagName": "A"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "我的联系人"
+              ],
+              "visText": [
+                "我的联系人"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "我的联系人"
+              ],
+              "visText": [
+                "我的联系人"
+              ]
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 1,
+            "ordinal": [
+              23,
+              32
+            ],
+            "value": {
+              "funcName": "void"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"nav_sidebar\"]/UL[5]/LI[4]/A[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              30,
+              42
+            ],
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.nav_sidebar UL LI A"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[2]/UL[5]/LI[4]/A[1]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              231,
+              53,
+              13
+            ]
+          }
+        ]
+      },
+      "intendedRole": "button",
+      "roles": "element,button,link",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "button"
+    },
+    "control18_7lKlGo": {
+      "location": {
+        "data": {
+          "tagName": "A"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 1,
+            "ordinal": [
+              0,
+              26
+            ],
+            "value": {
+              "funcName": "void"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"nav_sidebar\"]/UL[1]/LI[4]/A[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              4,
+              34
+            ],
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.nav_sidebar UL LI A"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[2]/UL[1]/LI[4]/A[1]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              231,
+              53,
+              13
+            ]
+          }
+        ]
+      },
+      "intendedRole": "button",
+      "roles": "element,button,link",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "button"
+    },
+    "control20_6LMQBD": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control21_ubrfQH": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control22_AcLcMe": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control23_z40dHT": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control24_P5gwlb": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control25_aH2ZzZ": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control26_aHnoLP": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control27_Zqa3HI": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control28_3PQwKL": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control29_2delXC": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context3_IigyoX": {
+      "controls": [
+        "control11_ewt36D",
+        "control18_7lKlGo"
+      ],
+      "anchors": [
+        "control10_CwVfTa"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow8_SXlzJW": {
+      "toContexts": [
+        {
+          "toContextId": "context3_IigyoX"
+        }
+      ]
+    },
+    "flow9_5gbtek": {
+      "fromContextId": "context3_IigyoX",
+      "fromAction": "click",
+      "fromControlId": "control11_ewt36D",
+      "toContexts": [
+        {
+          "toContextId": "context3_IigyoX"
+        },
+        {
+          "toContextId": "context4_G4wDgT",
+          "toModelId": "contact"
+        }
+      ]
+    },
+    "flow14_JEBo0R": {
+      "fromContextId": "context3_IigyoX",
+      "fromAction": "click",
+      "fromControlId": "control18_7lKlGo",
+      "toContexts": [
+        {
+          "toContextId": "context3_IigyoX"
+        },
+        {
+          "toContextId": "context6_SiWwA5",
+          "toModelId": "rebateConfirMation"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page3_hNPclF": {
+      "contextId": "context3_IigyoX",
+      "layout": [
+        {
+          "id": "uiControl18_gTdWvv",
+          "controlId": "control18_7lKlGo",
+          "display": {
+            "adapterId": "clickable",
+            "type": "button",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl10_aTkCZW",
+          "controlId": "control11_ewt36D",
+          "display": {
+            "adapterId": "clickable",
+            "type": "button",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context3_IigyoX": [
+          "太力商城"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context3_IigyoX": [
+          "192.168.220.23/personal.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context3_IigyoX": [
+          [
+            "caLicense",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "errorMessage",
+            "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "keyStoreProvider",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nTalk_post_hiddenElement",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "scfM",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "titleTip",
+            "toSign",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "updateCertGap",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "errorMessage",
+            "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context3_IigyoX": [
+          [
+            "activ",
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "bar",
+            "bd_ra",
+            "bgm",
+            "breadcrumb",
+            "btm_content",
+            "btn",
+            "btn_bg",
+            "center-imgs",
+            "city",
+            "city-sel",
+            "clearfix",
+            "close",
+            "fl",
+            "footer-bottom",
+            "footer-cc",
+            "footer-cl",
+            "footer-last-list",
+            "fr",
+            "icon",
+            "icon-cart",
+            "icon-search",
+            "icon-yewu",
+            "icon_",
+            "icon_down",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "line",
+            "logo",
+            "menu-list",
+            "menu-search",
+            "mg_r",
+            "mg_t",
+            "nav_sidebar",
+            "nav_sidebar_s",
+            "nav_sidebar_sul",
+            "number",
+            "pd_lr",
+            "placeholder",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "quit",
+            "search-box",
+            "search-btn",
+            "searchBox-infos",
+            "switch",
+            "tl-content",
+            "tl-fixedscroll",
+            "tl-footer",
+            "tl-footer-lists",
+            "tl-main-menu",
+            "tl-sales-slide",
+            "tl-top-ad",
+            "tl-top-menu",
+            "tl-wrap",
+            "tlmall-app",
+            "tlmall-wx",
+            "top-ad-img",
+            "top_title",
+            "triangle_r",
+            "txt_c",
+            "wb",
+            "wc",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context3_IigyoX": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/INPUT-hidden",
+            "-/DIV/SCRIPT",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/P",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "LI/A/B",
+            "LI/A/I",
+            "LI/H5/I",
+            "LI/SELECT/OPTION",
+            "LI/UL/LI",
+            "UL/LI/A",
+            "UL/LI/H5",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/P",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "LI/A/B",
+            "LI/A/I",
+            "LI/H5/I",
+            "LI/SELECT/OPTION",
+            "LI/UL/LI",
+            "UL/LI/A",
+            "UL/LI/H5",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN",
+            "UL/LI/UL"
+          ]
+        ]
+      }
+    }
+  }
+}

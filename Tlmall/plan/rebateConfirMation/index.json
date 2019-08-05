@@ -1,0 +1,379 @@
+{
+  "version": "0.1",
+  "id": "rebateConfirMation",
+  "targetURL": "http://192.168.220.23/personal.html?code=10400",
+  "jsFile": "index.js",
+  "chineseName": "待确认返利",
+  "description": "",
+  "controls": {
+    "control30_8iTKTM": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待确认返利"
+              ],
+              "visText": [
+                "待确认返利"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "待确认返利",
+      "frameXPath": ""
+    },
+    "control31_eCGGQi": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.wb_r"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control31_eCGGQi"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context6_SiWwA5": {
+      "controls": [
+        "control31_eCGGQi"
+      ],
+      "anchors": [
+        "control30_8iTKTM"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow15_EzVLaA": {
+      "toContexts": [
+        {
+          "toContextId": "context6_SiWwA5"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page6_vuac2P": {
+      "contextId": "context6_SiWwA5",
+      "layout": [
+        {
+          "id": "uiControl20_qwcopo",
+          "controlId": "control31_eCGGQi",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl20_qwcopo",
+                "onGetTemplate": "getTemplate_uiControl20_qwcopo"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context6_SiWwA5": [
+          "太力商城"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context6_SiWwA5": [
+          "192.168.220.23/personal.html?code=10400"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context6_SiWwA5": [
+          [
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "errorMessage",
+            "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rc_endTime",
+            "rc_pagination",
+            "rc_pendingConfirmCount",
+            "rc_pengdingConfirmAmount",
+            "rc_startTime",
+            "rc_tbodyList",
+            "rebateConfirMationTemplate",
+            "rebateDetailTemplate",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context6_SiWwA5": [
+          [
+            "J-paginationjs-go-button",
+            "J-paginationjs-go-pagenumber",
+            "J-paginationjs-nav",
+            "Wdate",
+            "a",
+            "ablock",
+            "act",
+            "activ",
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "allNext",
+            "allPages",
+            "allPrev",
+            "attention_info",
+            "b",
+            "bar",
+            "bd_b",
+            "bd_ra",
+            "bgm",
+            "block_l",
+            "breadcrumb",
+            "btm_content",
+            "btn",
+            "btn_bg",
+            "btns_r_a",
+            "center-imgs",
+            "city",
+            "city-sel",
+            "clearfix",
+            "close",
+            "disabled",
+            "filter",
+            "fl",
+            "float_l",
+            "footer-bottom",
+            "footer-cc",
+            "footer-cl",
+            "footer-last-list",
+            "fr",
+            "icon",
+            "icon-cart",
+            "icon-search",
+            "icon-yewu",
+            "icon_",
+            "icon_down",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "limit_m",
+            "limit_title",
+            "line",
+            "logo",
+            "menu-list",
+            "menu-search",
+            "mg_r",
+            "mg_t",
+            "nav_sidebar",
+            "nav_sidebar_s",
+            "nav_sidebar_sul",
+            "next",
+            "nowPage",
+            "number",
+            "nums_infos",
+            "one",
+            "pagination",
+            "paginationjs",
+            "paginationjs-go-button",
+            "paginationjs-go-input",
+            "paginationjs-nav",
+            "paginationjs-next",
+            "paginationjs-pages",
+            "paginationjs-prev",
+            "pd_lr",
+            "placeholder",
+            "pop_mask",
+            "pos_info",
+            "prev",
+            "ptxt",
+            "quit",
+            "search-box",
+            "search-btn",
+            "searchBox-infos",
+            "switch",
+            "table",
+            "table_a",
+            "tb_l",
+            "th",
+            "title_a",
+            "title_main",
+            "tl-content",
+            "tl-fixedscroll",
+            "tl-footer",
+            "tl-footer-lists",
+            "tl-main-menu",
+            "tl-sales-slide",
+            "tl-top-ad",
+            "tl-top-menu",
+            "tl-wrap",
+            "tlmall-app",
+            "tlmall-wx",
+            "top-ad-img",
+            "top_title",
+            "triangle_r",
+            "txt",
+            "txt_c",
+            "wb",
+            "wb_r",
+            "wc",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info",
+            "yetRebate_infos",
+            "yetRebate_table"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context6_SiWwA5": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/B",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/H3",
+            "DIV/DIV/H4",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/P",
+            "DIV/DIV/SCRIPT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "LI/A/B",
+            "LI/A/I",
+            "LI/H5/I",
+            "LI/SELECT/OPTION",
+            "LI/SPAN/B",
+            "LI/UL/LI",
+            "TABLE/THEAD/TR",
+            "THEAD/TR/TH",
+            "UL/LI/A",
+            "UL/LI/EM",
+            "UL/LI/H5",
+            "UL/LI/INPUT-button",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN",
+            "UL/LI/UL"
+          ]
+        ]
+      }
+    }
+  }
+}

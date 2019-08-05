@@ -4,7 +4,8 @@
   "targetURL": "http://192.168.220.23/register.html",
   "jsFile": "index.js",
   "requires": {
-    "registrationProtocol": "../registrationProtocol/index.json"
+    "registrationProtocol": "../registrationProtocol/index.json",
+    "personal": "../personal/index.json"
   },
   "chineseName": "注册账号",
   "description": "",
@@ -31,7 +32,7 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "monitored": false,
+      "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
     },
@@ -70,13 +71,67 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control15_fc9etn": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::DIV[@id=\"register_content\"]//DIV[@id=\"errorMessage\"]",
+              "descendant::DIV[@id=\"errorMessage\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wc1200.zc_login_content DIV.btns DIV.hint.cr_red01"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[2]/DIV[2]/DIV[1]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              231,
+              53,
+              13
+            ]
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control15_fc9etn"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context3_UgBsqG": {
       "controls": [
         "control10_eq66PD",
-        "control11_mXMeeq"
+        "control11_mXMeeq",
+        "control15_fc9etn"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -87,6 +142,10 @@
       "toContexts": [
         {
           "toContextId": "context3_UgBsqG"
+        },
+        {
+          "toContextId": "context3_IigyoX",
+          "toModelId": "personal"
         }
       ]
     },
@@ -138,6 +197,21 @@
               }
             }
           }
+        },
+        {
+          "id": "uiControl15_7DFDTx",
+          "controlId": "control15_fc9etn",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl15_7DFDTx",
+                "onGetTemplate": "getTemplate_uiControl15_7DFDTx"
+              }
+            }
+          }
         }
       ]
     }
@@ -146,7 +220,8 @@
     "page/title": {
       "contexts": {
         "context3_UgBsqG": [
-          "太力商城(tlmall.com)-提供全国最全面的通讯产品，正品行货、品类丰富、一键进货、安全支付！智享太力，聚赢天下！"
+          "太力商城(tlmall.com)-提供全国最全面的通讯产品，正品行货、品类丰富、一键进货、安全支付！智享太力，聚赢天下！",
+          "太力商城"
         ]
       }
     },
@@ -266,6 +341,67 @@
             "zc_logo",
             "zc_oblock",
             "zc_select"
+          ],
+          [
+            "a",
+            "address-province",
+            "alink",
+            "alink_line",
+            "attention_info",
+            "b",
+            "btn",
+            "btns",
+            "clearfix",
+            "cr_red",
+            "error",
+            "errors",
+            "hint",
+            "iCheck-helper",
+            "ick_zc",
+            "icon_down",
+            "icon_error",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "img_yzm",
+            "input_error",
+            "input_title",
+            "input_txt",
+            "iptActive",
+            "iradio_tlmall",
+            "itxt_title",
+            "itxt_title_bdr",
+            "line",
+            "logo-container",
+            "normal_alink",
+            "pos_info",
+            "register-title",
+            "sActive",
+            "text_yzm",
+            "tit-captch",
+            "tlmall-app",
+            "tlmall-wx",
+            "triangle_r",
+            "wb",
+            "wc",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info",
+            "zc_btn",
+            "zc_btn_big",
+            "zc_footer",
+            "zc_infos",
+            "zc_input",
+            "zc_input_s",
+            "zc_login",
+            "zc_login_content",
+            "zc_login_infos",
+            "zc_logo",
+            "zc_oblock",
+            "zc_select"
           ]
         ]
       }
@@ -296,6 +432,40 @@
             "DIV/FORM/DIV",
             "DIV/H5/EM",
             "DIV/SELECT/OPTION",
+            "FORM/DIV/A",
+            "FORM/DIV/DIV",
+            "FORM/DIV/EM",
+            "FORM/DIV/H5",
+            "FORM/DIV/IMG",
+            "FORM/DIV/INPUT-text",
+            "FORM/DIV/LABEL",
+            "FORM/DIV/SELECT",
+            "FORM/DIV/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/SCRIPT",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H4",
+            "DIV/DIV/H5",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-email",
+            "DIV/DIV/INPUT-password",
+            "DIV/DIV/INPUT-radio",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/INS",
+            "DIV/DIV/SPAN",
+            "DIV/FORM/DIV",
+            "DIV/H5/EM",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/I",
             "FORM/DIV/A",
             "FORM/DIV/DIV",
             "FORM/DIV/EM",

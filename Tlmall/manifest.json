@@ -29,6 +29,16 @@
       ]
     },
     {
+      "title": "contact",
+      "url": "adapter://Tlmall/plan/contact/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=50400"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html?code=50400"
+      ]
+    },
+    {
       "title": "forgotPassword-writeAccount",
       "url": "adapter://Tlmall/plan/forgotPassword-writeAccount/index.json",
       "matcher": [
@@ -47,12 +57,32 @@
       "demo": [
         "http://192.168.220.23/register.html"
       ]
+    },
+    {
+      "title": "personal",
+      "url": "adapter://Tlmall/plan/personal/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html"
+      ]
+    },
+    {
+      "title": "rebateConfirMation",
+      "url": "adapter://Tlmall/plan/rebateConfirMation/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=10400"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html?code=10400"
+      ]
     }
   ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1564987531690,
+  "update_time": 1564725713909,
   "runtime_env": "1webview"
 }
