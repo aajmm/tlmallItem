@@ -18,6 +18,7 @@ tr {
   padding: 0;
   font-size: 14px;
   font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+  color: #3f3f3f;
 }
 * {
   margin: 0;
@@ -26,6 +27,20 @@ tr {
 ul,
 li {
   list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: normal;
+}
+strong,
+i,
+em {
+  font-style: normal;
 }
 /*    以上样式为公用样式      */
 .ysp-top {
@@ -37,6 +52,7 @@ li {
   overflow: hidden;
   line-height: 44px;
   text-align: center;
+  font-size: 17px;
   border-bottom: 1px solid #e1e1e1;
   box-sizing: border-box;
   padding: 0 10px;
@@ -48,7 +64,7 @@ li {
   width: 30px;
   height: 18px;
   margin-top: 13px;
-  background: url(images/arrows.png) no-repeat left center;
+  background: url(../local/img/arrows.png) no-repeat left center;
   background-size: 27%;
 }
 .ysp-selpop-box {
@@ -146,6 +162,79 @@ li {
 .ysp-tip-pop .pop-con .tip-btn span.red-btn {
   background: #E7350D;
   color: #fff;
+}
+.ysp-page-box {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+}
+.ysp-page-box ul {
+  overflow: hidden;
+  display: inline-block;
+}
+.ysp-page-box ul li {
+  width: 24px;
+  height: 26px;
+  float: left;
+  margin: 0 5px;
+}
+.ysp-page-box ul li i {
+  display: inline-block;
+  width: 12px;
+  height: 15px;
+  margin-top: 4px;
+  background: url(../local/img/pageTurn.png) no-repeat;
+}
+.ysp-page-box ul .firstPage i {
+  background-position: 0 -15px;
+}
+.ysp-page-box ul .prev i {
+  background-position: -14px -15px;
+}
+.ysp-page-box ul .next i {
+  background-position: -26px -15px;
+}
+.ysp-page-box ul .lastPage i {
+  background-position: -40px -15px;
+}
+.ysp-page-box ul .now-page {
+  position: relative;
+  width: 80px;
+  height: 26px;
+  border: 1px solid #e5e5e5;
+  border-radius: 13px;
+  line-height: 24px;
+  font-size: 12px;
+  overflow: hidden;
+}
+.ysp-page-box ul .now-page em {
+  color: #e7350d;
+}
+.ysp-page-box ul .now-page span {
+  padding: 0 3px;
+}
+.ysp-page-box ul .now-page input {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+.ysp-page-box ul .sure-btn {
+  width: 54px;
+  height: 26px;
+  line-height: 24px;
+  border: 1px solid #e5e5e5;
+  border-radius: 13px;
+  background: #fafafa;
+  color: #666;
+  font-size: 12px;
 }
 div[data-ysp-modelid^="login"] {
   width: 100%;
@@ -1037,7 +1126,7 @@ div[data-ysp-modelid^="contact"] .add-contact i.icon-add {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url(images/plus.png) no-repeat center center;
+  background: url(../local/img/plus.png) no-repeat center center;
   -webkit-background-size: 15px 15px;
   background-size: 15px 15px;
 }
@@ -1076,7 +1165,7 @@ div[data-ysp-modelid^="contact"] .form-box .form-li input {
   font-size: 14px;
 }
 div[data-ysp-modelid^="contact"] .form-box .form-li input.sActive {
-  background: #fff url(images/date.png) 96% center no-repeat;
+  background: #fff url(../local/img/date.png) 96% center no-repeat;
   background-size: 18px 18px;
   height: 40px;
 }
@@ -1090,7 +1179,7 @@ div[data-ysp-modelid^="contact"] .form-box .form-li .option-show {
   text-indent: 10px;
   font-size: 14px;
   height: 40px;
-  background: #fff url(images/arrows-updown.png) no-repeat right 10px center;
+  background: #fff url(../local/img/arrows-updown.png) no-repeat right 10px center;
   -webkit-background-size: 10px;
   background-size: 10px;
 }
@@ -1130,4 +1219,182 @@ div[data-ysp-modelid^="contact"] .form-box .save-box span:last-child {
 div[data-ysp-modelid^="contact"] .form-box .save-box span:first-child {
   margin-top: 30px;
   margin-bottom: 20px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] {
+  background: #f3f3f3;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation {
+  padding-top: 55px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box {
+  background: #fff;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box h4 {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 16px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box ul {
+  overflow: hidden;
+  padding: 15px 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box ul li {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box ul li strong {
+  padding-right: 5px;
+  font-weight: bold;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box ul li .num1 strong {
+  color: #e7350d;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box ul li .num2 strong {
+  color: #4996ee;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box ul li p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box ul li:first-child {
+  border-right: 1px solid #e1e1e1;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box .filter {
+  margin: 0 10px;
+  border-bottom: 1px solid #e1e1e1;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box .filter span {
+  font-size: 16px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box .filter input {
+  float: right;
+  border: none;
+  width: 72%;
+  height: 100%;
+  line-height: 40px;
+  font-size: 14px;
+  background: #fff url(../local/img/date.png) 96% center no-repeat;
+  background-size: 18px 18px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box .btn-box {
+  text-align: right;
+  height: 50px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .filter-box .btn-box span {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+  background: #E7360D;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list h4 {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .no-data {
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box {
+  background: #fff;
+  margin: 0 10px 10px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box li {
+  padding: 0 10px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box li strong {
+  color: #e7350d;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box li .date-box {
+  float: right;
+  margin-top: -16px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box li .date-box span {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box li:nth-child(2) {
+  padding-top: 10px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box li:nth-child(5) {
+  height: 30px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box li.btn-box {
+  text-align: right;
+  padding-bottom: 10px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box li.btn-box span {
+  display: inline-block;
+  width: 80px;
+  color: #ef785e;
+  font-size: 12px;
+  text-align: center;
+  border: solid 1px #ef785e;
+  line-height: 22px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box li.btn-box span.no-click {
+  border-color: #999;
+  color: #999;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .table-list .list-box .tit {
+  line-height: 36px;
+  color: #4796ed;
+  border-bottom: 1px solid #f3f3f3;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .sel-list-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #f3f3f3;
+  padding-top: 45px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .sel-list-box .sel-list {
+  background: #fff;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .sel-list-box .sel-list li {
+  padding: 0 10px;
+  overflow: hidden;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .sel-list-box .sel-list li span {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  font-size: 12px;
+  color: #4c4c4c;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .sel-list-box .sel-list li span:last-child {
+  padding-left: 10px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .sel-list-box .sel-list li:nth-child(2) {
+  padding-top: 10px;
+}
+div[data-ysp-modelid^="rebateConfirMation"] .ysp-rebateConfirMation .sel-list-box .sel-list .tit {
+  border-bottom: solid 1px #f3f3f3;
+  font-size: 14px;
+  color: #4796ed;
+  line-height: 36px;
 }

@@ -4,6 +4,7 @@ body,span,div,h1,h2,h3,h4,h5,h6,p,li,ul,table,th,td,tr{
   padding:0;
   font-size: 14px; 
   font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","FontAwesome",sans-serif;
+  color:#3f3f3f;
 }
 *{
   margin: 0;
@@ -12,6 +13,8 @@ body,span,div,h1,h2,h3,h4,h5,h6,p,li,ul,table,th,td,tr{
 ul,li{
   list-style: none;
 }
+h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
+strong,i,em{font-style: normal;}
 @theme-border:1px solid #e1e1e1;
 @theme-bg:#f3f3f3;
 /*    以上样式为公用样式      */
@@ -26,6 +29,7 @@ ul,li{
     overflow: hidden;
     line-height: 44px;
     text-align: center;
+    font-size:17px;
     border-bottom: @theme-border;
     box-sizing: border-box;
     padding: 0 10px;
@@ -36,7 +40,7 @@ ul,li{
         width: 30px;
         height: 18px;
         margin-top: 13px;
-        background: url(images/arrows.png) no-repeat left center;
+        background: url(../local/img/arrows.png) no-repeat left center;
         background-size: 27%;
     }
 }
@@ -141,6 +145,80 @@ ul,li{
   }
 }
 
+//分页  xxger
+.ysp-page-box{
+  background:#fff;
+  margin:10px 0;
+  padding:10px;
+  text-align: center;
+  ul{
+    overflow: hidden;
+    display: inline-block;
+    li{
+      width:24px;
+      height:26px;
+      float:left;
+      margin:0 5px;
+      i{
+        display: inline-block;
+        width:12px;
+        height:15px;
+        margin-top:4px;
+        background:url(../local/img/pageTurn.png) no-repeat;
+      }
+  	}
+    .firstPage i{
+      background-position: 0 -15px;
+    }
+    .prev i{
+      background-position: -14px -15px;
+    }
+    .next i{
+      background-position: -26px -15px;
+    }
+    .lastPage i{
+      background-position: -40px -15px;
+    }
+    .now-page{
+      position: relative;
+      width:80px;
+      height:26px;
+      border:1px solid #e5e5e5;
+      border-radius: 13px;
+      line-height: 24px;
+      font-size:12px;
+      overflow: hidden;
+      em{
+        color:#e7350d;
+      }
+      span{
+        padding:0 3px;
+      }
+      input{
+        display: none;
+        position: absolute;
+        top:0;
+        left:0;
+        border:none;
+        width:100%;
+        height:100%;
+        text-align: center;
+        font-size:12px;
+        color:#333;
+      }
+    }
+    .sure-btn{
+      width:54px;
+      height:26px;
+      line-height: 24px;
+      border:1px solid #e5e5e5;
+      border-radius: 13px;
+      background:#fafafa;
+      color:#666;
+      font-size:12px;
+    }
+  }
+}
 
 //登录页
 div[data-ysp-modelid^="login"]{
@@ -989,7 +1067,7 @@ div[data-ysp-modelid^="contact"] {
             display: inline-block;
             width: 16px;
             height: 16px;
-            background: url(images/plus.png) no-repeat center center;
+            background: url(../local/img/plus.png) no-repeat center center;
             -webkit-background-size: 15px 15px;
             background-size: 15px 15px;
         }
@@ -1026,7 +1104,7 @@ div[data-ysp-modelid^="contact"] {
                 text-indent: 10px;
                 font-size: 14px;
                 &.sActive {
-                    background: #fff url(images/date.png) 96% center no-repeat;
+                    background: #fff url(../local/img/date.png) 96% center no-repeat;
                     background-size: 18px 18px;
                     height: 40px;
                 }
@@ -1041,7 +1119,7 @@ div[data-ysp-modelid^="contact"] {
                 text-indent: 10px;
                 font-size: 14px;
                 height: 40px;
-                background: #fff url(images/arrows-updown.png) no-repeat right 10px center;
+                background: #fff url(../local/img/arrows-updown.png) no-repeat right 10px center;
                 -webkit-background-size: 10px;
                 background-size: 10px;
             }
@@ -1086,6 +1164,183 @@ div[data-ysp-modelid^="contact"] {
     }
 }
 //待确认返利   xxger
-div[data-ysp-modelid^="rebateConfirMation"]{
-  
+div[data-ysp-modelid^="rebateConfirMation"] {
+    background: @theme-bg;
+    .ysp-rebateConfirMation {
+        padding-top: 55px;
+        .filter-box {
+            background: #fff;
+            h4 {
+                height: 40px;
+                line-height: 40px;
+                padding: 0 10px;
+                border-bottom: @theme-border;
+                font-size: 16px;
+            }
+            ul {
+                overflow: hidden;
+                padding: 15px 0;
+                border-bottom: @theme-border;
+                li {
+                    width: 50%;
+                    float: left;
+                    text-align: center;
+                    strong {
+                        padding-right: 5px;
+                        font-weight: bold;
+                    }
+                    .num1 strong {
+                        color: #e7350d;
+                    }
+                    .num2 strong {
+                        color: #4996ee;
+                    }
+                    p {
+                        margin-top: 5px;
+                        font-size: 16px;
+                    }
+                    &:first-child {
+                        border-right: @theme-border;
+                    }
+                }
+            }
+            .filter {
+                margin: 0 10px;
+                border-bottom: @theme-border;
+                height: 40px;
+                line-height: 40px;
+                overflow: hidden;
+                span {
+                    font-size: 16px;
+                }
+                input {
+                    float: right;
+                    border: none;
+                    width: 72%;
+                    height: 100%;
+                    line-height: 40px;
+                    font-size: 14px;
+                    background: #fff url(../local/img/date.png) 96% center no-repeat;
+                    background-size: 18px 18px;
+                }
+            }
+            .btn-box {
+                text-align: right;
+                height: 50px;
+                span {
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                    background: #E7360D;
+                    border-radius: 3px;
+                    color: #fff;
+                    font-size: 16px;
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0 20px;
+                }
+            }
+        }
+        .table-list {
+            h4 {
+                padding: 10px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            .no-data {
+                text-align: center;
+                background: #fff;
+                padding: 10px;
+                font-size: 14px;
+            }
+            .list-box {
+                background: #fff;
+                margin: 0 10px 10px;
+                li {
+                    padding: 0 10px;
+                    strong {
+                        color: #e7350d;
+                    }
+                    .date-box {
+                        float: right;
+                        margin-top: -16px;
+                        span {
+                            display: block;
+                            font-size: 12px;
+                            color: #999;
+                        }
+                    }
+                    &:nth-child(2) {
+                        padding-top: 10px;
+                    }
+                    &:nth-child(5) {
+                        height: 30px;
+                    }
+                    &.btn-box {
+                        text-align: right;
+                        padding-bottom: 10px;
+                        span {
+                            display: inline-block;
+                            width: 80px;
+                            color: #ef785e;
+                            font-size: 12px;
+                            text-align: center;
+                            border: solid 1px #ef785e;
+                            line-height: 22px;
+                            margin-left: 10px;
+                            border-radius: 3px;
+                            &.no-click {
+                                border-color: #999;
+                                color: #999;
+                            }
+                        }
+                    }
+                }
+                .tit {
+                    line-height: 36px;
+                    color: #4796ed;
+                    border-bottom: 1px solid #f3f3f3;
+                }
+            }
+        }
+        .sel-list-box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            background: @theme-bg;
+            padding-top: 45px;
+            .sel-list {
+                background: #fff;
+                margin-top: 10px;
+                padding-bottom: 10px;
+                li {
+                    padding: 0 10px;
+                    overflow: hidden;
+                    span {
+                        display: block;
+                        float: left;
+                        box-sizing: border-box;
+                        width: 50%;
+                        font-size: 12px;
+                        color: #4c4c4c;
+                        &:last-child {
+                            padding-left: 10px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        padding-top: 10px;
+                    }
+                }
+                .tit {
+                    border-bottom: solid 1px #f3f3f3;
+                    font-size: 14px;
+                    color: #4796ed;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
 }
