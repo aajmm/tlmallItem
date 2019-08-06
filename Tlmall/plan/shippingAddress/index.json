@@ -78,40 +78,6 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control17_q2rqfw": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 3,
-            "value": [
-              "descendant::DIV[@id=\"personalRight\"]//DIV[@id=\"effective\"]",
-              "descendant::DIV[@id=\"effective\"]"
-            ]
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[2]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control17_q2rqfw"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": false,
-      "frameXPath": "",
-      "componentType": "custom"
-    },
     "control18_SvVOEZ": {
       "location": {
         "data": {
@@ -230,7 +196,7 @@
       "frameXPath": "",
       "componentType": "button"
     },
-    "control20_TgeEQO": {
+    "control32_CyT8MD": {
       "location": {
         "data": {
           "tagName": "DIV"
@@ -242,31 +208,21 @@
         "locators": [
           {
             "id": "@id/word",
-            "prob": 2,
+            "prob": 3,
             "value": [
-              "descendant::DIV[@id=\"personalRight\"]//DIV[@id=\"failure\"]/DIV[1]",
-              "descendant::DIV[@id=\"personalRight\"]//DIV[@id=\"failure\"]//DIV",
-              "descendant::DIV[@id=\"failure\"]//DIV"
+              "descendant::DIV[@id=\"personalRight\"]//DIV[@id=\"effective\"]",
+              "descendant::DIV[@id=\"effective\"]"
             ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              2,
-              5
-            ],
-            "value": "DIV.wc1200.clearfix DIV.wb_r.gaManage DIV.ablock.pd_lr"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[3]/DIV[1]"
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[2]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control20_TgeEQO"
+        "onGetData": "getData_control32_CyT8MD"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -274,7 +230,7 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control21_liKv2V": {
+    "control35_VKMkfT": {
       "location": {
         "data": {
           "tagName": "DIV"
@@ -296,7 +252,7 @@
         ]
       },
       "events": {
-        "onGetData": "getData_control21_liKv2V"
+        "onGetData": "getData_control35_VKMkfT"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -310,10 +266,9 @@
       "controls": [
         "control16_QdoZw3",
         "control19_C1K69x",
-        "control17_q2rqfw",
         "control15_0uO5sr",
-        "control20_TgeEQO",
-        "control21_liKv2V"
+        "control32_CyT8MD",
+        "control35_VKMkfT"
       ],
       "anchors": [
         "control18_SvVOEZ"
@@ -385,36 +340,6 @@
           }
         },
         {
-          "id": "uiControl15_ETKNLR",
-          "controlId": "control17_q2rqfw",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl15_ETKNLR",
-                "onGetTemplate": "getTemplate_uiControl15_ETKNLR"
-              }
-            }
-          }
-        },
-        {
-          "id": "uiControl18_uJ67Be",
-          "controlId": "control20_TgeEQO",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl18_uJ67Be",
-                "onGetTemplate": "getTemplate_uiControl18_uJ67Be"
-              }
-            }
-          }
-        },
-        {
           "id": "uiControl17_iz1NMp",
           "controlId": "control15_0uO5sr",
           "display": {
@@ -428,16 +353,31 @@
           }
         },
         {
-          "id": "uiControl19_HKxvlv",
-          "controlId": "control21_liKv2V",
+          "id": "uiControl24_zda7Ed",
+          "controlId": "control35_VKMkfT",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl19_HKxvlv",
-                "onGetTemplate": "getTemplate_uiControl19_HKxvlv"
+                "onDoAction": "doAction_uiControl24_zda7Ed",
+                "onGetTemplate": "getTemplate_uiControl24_zda7Ed"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl21_MXLiIk",
+          "controlId": "control32_CyT8MD",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl21_MXLiIk",
+                "onGetTemplate": "getTemplate_uiControl21_MXLiIk"
               }
             }
           }
@@ -919,6 +859,245 @@
             "provinceList",
             "rt_rt_dhgqttpanokqn",
             "rt_rt_dhgutimeoch",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "shippingAddress_authAttachmentId",
+            "shippingAddress_authEndDate",
+            "shippingAddress_authStartDate",
+            "shippingAddress_authStartDateTip",
+            "shippingAddress_city",
+            "shippingAddress_consignee",
+            "shippingAddress_consigneePhone",
+            "shippingAddress_consigneePhoneTip",
+            "shippingAddress_consigneeTip",
+            "shippingAddress_fileATip",
+            "shippingAddress_fileA_bind",
+            "shippingAddress_fileA_echo",
+            "shippingAddress_fileA_value",
+            "shippingAddress_fileBTip",
+            "shippingAddress_fileB_bind",
+            "shippingAddress_fileB_echo",
+            "shippingAddress_fileB_value",
+            "shippingAddress_idAttachmentId",
+            "shippingAddress_province",
+            "shippingAddress_receiveAddress",
+            "shippingAddress_receiveAddressTip",
+            "shippingAddress_receivePostalCode",
+            "shippingAddress_signReq",
+            "shippingAddress_signReqTip",
+            "shippingAddress_signType",
+            "shippingAddress_uploaderA",
+            "shippingAddress_uploaderB",
+            "shippingAddress_zone",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "-PAJHDiv",
+            "RECADDDiv",
+            "aSign",
+            "addNewAddress",
+            "addressList",
+            "ashint",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "effective",
+            "errorMessage",
+            "errorMsg",
+            "failure",
+            "fixedscroll",
+            "getGoodsSeal",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "mSign",
+            "maSign",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rt_rt_dhgafpafhfmdpuikamjdb",
+            "rt_rt_dhgafpclejidvpvvce",
+            "scfM",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "shippingAddress_authAttachmentId",
+            "shippingAddress_authEndDate",
+            "shippingAddress_authStartDate",
+            "shippingAddress_authStartDateTip",
+            "shippingAddress_city",
+            "shippingAddress_consignee",
+            "shippingAddress_consigneePhone",
+            "shippingAddress_consigneePhoneTip",
+            "shippingAddress_consigneeTip",
+            "shippingAddress_fileATip",
+            "shippingAddress_fileA_bind",
+            "shippingAddress_fileA_echo",
+            "shippingAddress_fileA_value",
+            "shippingAddress_fileBTip",
+            "shippingAddress_fileB_bind",
+            "shippingAddress_fileB_echo",
+            "shippingAddress_fileB_value",
+            "shippingAddress_idAttachmentId",
+            "shippingAddress_province",
+            "shippingAddress_receiveAddress",
+            "shippingAddress_receiveAddressTip",
+            "shippingAddress_receivePostalCode",
+            "shippingAddress_signReq",
+            "shippingAddress_signReqTip",
+            "shippingAddress_signType",
+            "shippingAddress_uploaderA",
+            "shippingAddress_uploaderB",
+            "shippingAddress_zone",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "RECADDDiv",
+            "aSign",
+            "addNewAddress",
+            "addressList",
+            "ashint",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "effective",
+            "errorMessage",
+            "errorMsg",
+            "failure",
+            "fixedscroll",
+            "getGoodsSeal",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "mSign",
+            "maSign",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rt_rt_dhgaqiqpjgjosev",
+            "rt_rt_dhgaqiqupdjuofekmmp",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "shippingAddress_authAttachmentId",
+            "shippingAddress_authEndDate",
+            "shippingAddress_authStartDate",
+            "shippingAddress_authStartDateTip",
+            "shippingAddress_city",
+            "shippingAddress_consignee",
+            "shippingAddress_consigneePhone",
+            "shippingAddress_consigneePhoneTip",
+            "shippingAddress_consigneeTip",
+            "shippingAddress_fileATip",
+            "shippingAddress_fileA_bind",
+            "shippingAddress_fileA_echo",
+            "shippingAddress_fileA_value",
+            "shippingAddress_fileBTip",
+            "shippingAddress_fileB_bind",
+            "shippingAddress_fileB_echo",
+            "shippingAddress_fileB_value",
+            "shippingAddress_idAttachmentId",
+            "shippingAddress_province",
+            "shippingAddress_receiveAddress",
+            "shippingAddress_receiveAddressTip",
+            "shippingAddress_receivePostalCode",
+            "shippingAddress_signReq",
+            "shippingAddress_signReqTip",
+            "shippingAddress_signType",
+            "shippingAddress_uploaderA",
+            "shippingAddress_uploaderB",
+            "shippingAddress_zone",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "RECADDDiv",
+            "aSign",
+            "addNewAddress",
+            "addressList",
+            "ashint",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "effective",
+            "errorMessage",
+            "errorMsg",
+            "failure",
+            "fixedscroll",
+            "getGoodsSeal",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "mSign",
+            "maSign",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rt_rt_dhgcvsrqedad",
+            "rt_rt_dhgcvsvqsvmnktvgh",
             "sealHint",
             "searchBox",
             "searchBtn",

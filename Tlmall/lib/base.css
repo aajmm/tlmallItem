@@ -817,6 +817,9 @@ div[data-ysp-modelid^="shippingAddress"] .address-list .list {
   margin: 0;
   padding: 10px 10px 0 10px;
 }
+div[data-ysp-modelid^="shippingAddress"] .address-list .list table {
+  width: 100%;
+}
 div[data-ysp-modelid^="shippingAddress"] .address-list .list .main td {
   color: #3f3f3f;
 }
@@ -853,7 +856,7 @@ div[data-ysp-modelid^="shippingAddress"] .address-list .list .listBtn .listBtn-g
 div[data-ysp-modelid^="shippingAddress"] .address-list .list .listBtn .listBtn-group input[type='button'] + input[type='button'] {
   margin-left: 3px;
 }
-div[data-ysp-modelid^="shippingAddress"] .address-list .list .btm-btnGroup {
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar {
   margin-left: -10px;
   margin-right: -10px;
   margin-top: 10px;
@@ -861,7 +864,7 @@ div[data-ysp-modelid^="shippingAddress"] .address-list .list .btm-btnGroup {
   padding: 10px;
   text-align: right;
 }
-div[data-ysp-modelid^="shippingAddress"] .address-list .list .btm-btnGroup .btn-link {
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link {
   display: inline-block;
   vertical-align: middle;
   padding: 0 10px;
@@ -869,8 +872,8 @@ div[data-ysp-modelid^="shippingAddress"] .address-list .list .btm-btnGroup .btn-
   font-size: 14px;
   color: #e6350d;
 }
-div[data-ysp-modelid^="shippingAddress"] .address-list .list .btm-btnGroup .btn-link:nth-child(2):before,
-div[data-ysp-modelid^="shippingAddress"] .address-list .list .btm-btnGroup .btn-link:nth-child(3):before {
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link:nth-child(2):before,
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link:nth-child(3):before {
   content: "";
   position: relative;
   top: -3px;
@@ -880,12 +883,23 @@ div[data-ysp-modelid^="shippingAddress"] .address-list .list .btm-btnGroup .btn-
   height: 20px;
   margin-right: 8px;
 }
-div[data-ysp-modelid^="shippingAddress"] .address-list .list .btm-btnGroup .btn-link:nth-child(2):before {
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link:nth-child(2):before {
   background: url("../local/img/icon-edit-act.png") left center no-repeat;
   background-size: 100%;
 }
-div[data-ysp-modelid^="shippingAddress"] .address-list .list .btm-btnGroup .btn-link:nth-child(3):before {
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link:nth-child(3):before {
   background: url("../local/img/icon-delete-act.png") left center no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar.stop .btn-link {
+  color: #999;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar.stop .btn-link:nth-child(2):before {
+  background: url("../local/img/icon-edit.png") left center no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar.stop .btn-link:nth-child(3):before {
+  background: url("../local/img/icon-delete.png") left center no-repeat;
   background-size: 100%;
 }
 div[data-ysp-modelid^="shippingAddress"] .btn_address {

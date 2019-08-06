@@ -816,6 +816,9 @@ div[data-ysp-modelid^="shippingAddress"]{
     .list{
       margin: 0;
       padding: 10px 10px 0 10px;
+      table{
+        width: 100%;
+      }
       .main{
         td{
         	color: #3f3f3f;
@@ -854,7 +857,7 @@ div[data-ysp-modelid^="shippingAddress"]{
           }
         }
       }
-      .btm-btnGroup{
+      .editBar{
         margin-left: -10px;
         margin-right: -10px;
         margin-top: 10px;
@@ -886,6 +889,19 @@ div[data-ysp-modelid^="shippingAddress"]{
           &:nth-child(3):before{
             background: url("../local/img/icon-delete-act.png") left center no-repeat;
             background-size: 100%;
+          }
+        }
+        &.stop{
+          .btn-link{
+            color: #999;
+            &:nth-child(2):before{
+              background: url("../local/img/icon-edit.png") left center no-repeat;
+            	background-size: 100%;
+            }
+            &:nth-child(3):before{
+              background: url("../local/img/icon-delete.png") left center no-repeat;
+            	background-size: 100%;
+            }
           }
         }
       }
