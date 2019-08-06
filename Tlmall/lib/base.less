@@ -153,46 +153,39 @@ strong,i,em{font-style: normal;}
   text-align: center;
   ul{
     overflow: hidden;
-    display: inline-block;
     li{
-      width:24px;
-      height:26px;
-      float:left;
-      margin:0 5px;
-      i{
-        display: inline-block;
-        width:12px;
-        height:15px;
-        margin-top:4px;
-        background:url(../local/img/pageTurn.png) no-repeat;
-      }
+      display: inline-block;
+      width:36px;
+      height:36px;
+      vertical-align: top;
+      margin-right:5px;
+      border:1px solid #e5e5e5;
+      border-radius: 3px;
+      line-height: 36px;
+      font-size:12px;
+      color:#999;
   	}
-    .firstPage i{
-      background-position: 0 -15px;
+    .firstPage{
+      background: url(../local/img/firstPage.png) no-repeat center center;
     }
-    .prev i{
-      background-position: -14px -15px;
+    .prev{
+      background: url(../local/img/prevPage.png) no-repeat center center;
     }
-    .next i{
-      background-position: -26px -15px;
+    .next{
+      background: url(../local/img/nextPage.png) no-repeat center center;
     }
-    .lastPage i{
-      background-position: -40px -15px;
+    .lastPage{
+      background: url(../local/img/lastPage.png) no-repeat center center;
     }
     .now-page{
       position: relative;
-      width:80px;
-      height:26px;
-      border:1px solid #e5e5e5;
-      border-radius: 13px;
-      line-height: 24px;
-      font-size:12px;
-      overflow: hidden;
+      width:48px;
+      border-radius: 0;
       em{
         color:#e7350d;
       }
       span{
-        padding:0 3px;
+        padding:0 2px;
       }
       input{
         display: none;
@@ -204,18 +197,11 @@ strong,i,em{font-style: normal;}
         height:100%;
         text-align: center;
         font-size:12px;
-        color:#333;
+        color:#999;
       }
     }
     .sure-btn{
-      width:54px;
-      height:26px;
-      line-height: 24px;
-      border:1px solid #e5e5e5;
-      border-radius: 13px;
-      background:#fafafa;
-      color:#666;
-      font-size:12px;
+      width:46px;
     }
   }
 }
