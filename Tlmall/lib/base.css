@@ -912,6 +912,8 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpris
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .enterprise-type select {
   border: #ccc solid 1px;
+  border-radius: 3px;
+  margin: 0;
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .enterprise-type label {
   margin: 0;
@@ -948,13 +950,14 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpris
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address .enterpriseInformation-list {
   width: 40%;
-  height: 116px;
+  height: 118px;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 2px;
   position: absolute;
   right: 15px;
   bottom: -157px;
+  z-index: 9;
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .detail-address .enterpriseInformation-list .enterpriseInformation-choose {
   width: 100%;
