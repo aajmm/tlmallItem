@@ -1332,7 +1332,7 @@ div[data-ysp-modelid^="rebateConfirMation"] {
 }
 //首页  xxger
 div[data-ysp-modelid^="index"]{
-  background:#fff;
+  background:@theme-bg;
   .ysp-index-top{
     display: flex;
     justify-content: space-between;
@@ -1426,14 +1426,108 @@ div[data-ysp-modelid^="index"]{
     }
   }
   .ysp-swiper{
-    width:100%;
-    a{
-      display: block;
-      width:100%;
-      float:left;
+    height:auto;
+    .swiper-slide{
+      height:auto;
+      img{
+        display: block;
+        width:100%;
+    	}
+    }
+    .swiper-pagination span.swiper-pagination-bullet{
+      width:12px;
+      height:4px;
+      border-radius: 30%;
+      background:#ccc;
+      &.swiper-pagination-bullet-active{
+        background:#fff;
+      }
+    }
+  }
+  .ysp-menu{
+    background:#fff;
+    padding:10px 0 0 0;
+    border-radius: 8px;
+    margin:0;
+    li{
+      display: inline-block;
+      width: 32%;
+      height:97px;
       background-repeat: no-repeat;
-      background-size:contain;
-      background-position: center center;
+      background-position: center top;
+      background-size: 55px 55px;
+      span.bar{
+        display: block;
+        margin-top:65px;
+        text-align: center;
+      }
+    }
+    .phoneM{
+      background-image: url(../local/img/1shoujizhuanqu.png);
+    }
+    .smartM{
+      background-image: url(../local/img/2zhinengzhongduan.png);
+    }
+    .allocM{
+      background-image: url(../local/img/3fenhuofuwu.png);
+    }
+    .scfM{
+      background-image: url(../local/img/4jinrongzhuanqu.png);
+    }
+    .hesrM{
+      background-image: url(../local/img/5tiyandianzhuanqu.png);
+    }
+    .infoM{
+      background-image: url(../local/img/6tailitoutiao.png);
+    }
+  }
+  .floor{
+    padding:10px;
+    li img{
+        box-sizing: border-box;
+        padding:5px 0;
+        border-radius: 8px;
+        width:100%;
+        vertical-align: top;
+    }
+    .ad2 img:first-child{
+      width:50%;
+      padding-right:5px;
+    }
+    .ad2 img:last-child{
+      width:50%;
+      padding-left:5px;
+    }
+    .ad3 img:first-child{
+      width:33%;
+      padding:5px 5px 5px 0;
+    }
+    .ad3 img:nth-child(2){
+      width:34%;
+      padding:5px;
+    }
+    .ad3 img:last-child{
+      width:33%;
+      padding:5px 0 5px 5px;
+    }
+  }
+  .ysp-footer{
+    text-align: center;
+    padding:10px 20px 20px;
+    .shop-btn{
+      display: inline-block;
+      margin-bottom:15px;
+      width:60%;
+      background:#fff;
+      border-radius: 20px;
+      padding:7px 0;
+      color:#666;
+      font-size:16px;
+    }
+    p{
+      padding:3px 0;
+      color:#999;
+      font-size:12px;
     }
   }
 }
