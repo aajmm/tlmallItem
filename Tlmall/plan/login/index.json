@@ -125,7 +125,7 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control3_cfaivg": {
+    "control3_cucagU": {
       "location": {
         "data": {
           "tagName": "DIV"
@@ -136,32 +136,19 @@
         },
         "locators": [
           {
-            "id": "@id/word",
-            "prob": 3,
-            "value": "descendant::DIV[@id=\"dl_error\"]"
-          },
-          {
             "id": "@class/word",
             "prob": 1,
-            "value": "DIV.dl_form_c DIV.dl_form_infos DIV.hint.cr_red01"
+            "value": "DIV.wb100 DIV.dlcont.clearfix DIV.dl_form.float_r"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[2]/DIV[1]/FORM[1]/DIV[1]/DIV[1]/DIV[1]/DIV[4]"
-          },
-          {
-            "id": "style/color",
-            "value": [
-              231,
-              53,
-              13
-            ]
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control3_cfaivg"
+        "onGetData": "getData_control3_cucagU"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -177,7 +164,7 @@
         "control0_vwVCIl",
         "control1_zswafT",
         "control2_R8kIwU",
-        "control3_cfaivg"
+        "control3_cucagU"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -217,10 +204,10 @@
         }
       ]
     },
-    "flow6_mKA9dS": {
+    "flow6_FUPliy": {
       "fromContextId": "context0_DQT6TF",
       "fromAction": "doAction",
-      "fromControlId": "control3_cfaivg",
+      "fromControlId": "control3_cucagU",
       "toContexts": [
         {
           "toContextId": "context0_DQT6TF"
@@ -278,16 +265,16 @@
           }
         },
         {
-          "id": "uiControl3_V3UQWw",
-          "controlId": "control3_cfaivg",
+          "id": "uiControl3_keRfbC",
+          "controlId": "control3_cucagU",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl3_V3UQWw",
-                "onGetTemplate": "getTemplate_uiControl3_V3UQWw"
+                "onDoAction": "doAction_uiControl3_keRfbC",
+                "onGetTemplate": "getTemplate_uiControl3_keRfbC"
               }
             }
           }
@@ -308,7 +295,8 @@
       "contexts": {
         "context0_DQT6TF": [
           "192.168.220.23/login.html",
-          "192.168.220.23/myaccount/login.jsp"
+          "192.168.220.23/myaccount/login.jsp",
+          "192.168.220.23/myaccount/login.jsp?DPSLogout=true"
         ]
       }
     },

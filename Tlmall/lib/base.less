@@ -796,6 +796,24 @@ div[data-ysp-modelid^="enterpriseInformation"]{
     h3{
       line-height: 50px;
     }
+    .errorIcon{
+      position: relative;
+      em{
+        display: block!important;
+        width: 16px;
+        height: 16px;
+        background: red;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 14px;
+        text-align: center;
+        position: absolute;
+        top: 14px;
+        right: 22px;
+        color:#fff;
+      }
+    }
     .enterprise-name,.enterprise-address,.detail-address,.legal-name,.id-number,.id-card,.business-license-number,.business-license,.contact-name,.contact-phone,.PTTL-contact-name,.PTTL-contact-phone{
         padding: 0 15px;
         display: flex;
@@ -826,12 +844,17 @@ div[data-ysp-modelid^="enterpriseInformation"]{
           border-radius: 3px;
           font-size: 13px;
         }
+        input+em{
+          display: none;
+        }
+        
       }
     .enterpriseInformation-form{
       width: 100%;
       height: auto;
       padding: 15px 0;
       border-bottom: 1px solid #ccc;
+      padding-bottom: 30px;
       .enterprise-type{
         width: 100%;
         padding: 0 15px 0 30px;
@@ -957,6 +980,36 @@ div[data-ysp-modelid^="enterpriseInformation"]{
     }
     .contact-information{
       border-bottom: 1px solid #ccc;
+      padding-bottom: 30px;
+    }
+    .enterprise-next{
+      width: 100%;
+      background: #f3f3f3;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+      margin-top: 10px;
+      button{
+        width: 92%;
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        text-align: center;
+        background: #E7350E;
+        border: 0;
+        border-radius: 3px; 
+      }
+    }
+  }
+  .enterprise-error-msg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    p{
+      width: 92%;
+      color: #E7350E;
+      font-size: 12px;
+      text-align: center;
     }
   }
 }
