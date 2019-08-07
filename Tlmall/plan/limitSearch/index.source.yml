@@ -1,0 +1,121 @@
+getTemplate_uiControl29_vTrrKv: "import {Component,Fragment} from 'react'; \nimport {CustomHeader} from 'ysp-custom-components';\nexport default class extends Component{\n  //返回\n  back=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'back'\n    });\n   }\n  }\n  //回到首页\n  home=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'home'\n    });\n   }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<CustomHeader \n           data={{centerText:\"额度查询\"}} \n           backIsShow={true} \n           homeIsShow={true}\n           back={me.back.bind(me)}\n           home={me.home.bind(me)}\n        />\n    )\n  }\n}"
+getData_control43_UnakJm: ''
+doAction_uiControl29_vTrrKv: |-
+  if(data.eventType == "back"){
+     ysp.appMain.back();
+  }else if(data.eventType == "home"){
+     elem.querySelector(".tl-main-menu").querySelector(".logo").click();
+  }
+getTemplate_uiControl30_Ul1T7s: "import {Component,Fragment} from 'react'; \nimport {SelectPop,CustomPage} from 'ysp-custom-components';\nexport default class extends Component{\n  companySel = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"companySel\"\n      })\n    }\n  }\n  stateSel = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"stateSel\"\n      })\n    }\n  }\n\tsearchClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"searchClick1\"\n      })\n    }\n  }\n  searchChange1 = (e) => {\n    let target = e.target;\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"searchClick1\"\n      })\n    }\n  }\n  firstClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"firstClick1\"\n      })\n    }\n  }\n  prevClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"prevClick1\"\n      })\n    }\n  }\n  nextClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"nextClick1\"\n      })\n    }\n  }\n  lastClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"lastClick1\"\n      })\n    }\n  }\n  sureClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sureClick1\"\n      })\n    }\n  }\n\tsearchClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"searchClick2\"\n      })\n    }\n  }\n  searchChange2 = (e) => {\n    let target = e.target;\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"searchClick2\"\n      })\n    }\n  }\n  firstClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"firstClick2\"\n      })\n    }\n  }\n  prevClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"prevClick2\"\n      })\n    }\n  }\n  nextClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"nextClick2\"\n      })\n    }\n  }\n  lastClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"lastClick2\"\n      })\n    }\n  }\n  sureClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sureClick2\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-limitSearch\">\n        <ul className=\"num-box\">\n          <li>额度已使用金额：<p><em>{data.creditAmount}</em>元</p></li>\n          <li>额度未还款金额：<p><em>{data.receiveAmount}</em>元</p></li>\n        </ul>\n        <div className=\"filter-box\">\n          <div className=\"filter\">您当前有<em>{data.overSoonNum}</em>笔订单将在3天内到期</div>\n          <div className=\"filter\">您当前有<em>{data.overDueNum}</em>笔订单已过期</div>\n          <div className=\"filter\"><span>订&nbsp;单&nbsp;号</span></div>\n          <div className=\"filter\"><span>申请编号</span><AInput type=\"text\" value={data.orderId} /></div>\n          <div className=\"filter\"><span>开始时间</span><AInput type=\"date\" value={data.createDate} /></div>\n          <div className=\"filter\"><span>截止时间</span><AInput type=\"date\" value={data.completedDate} /></div>\n          <div className=\"filter\"><span>合作分公司</span><SelectPop selChecked={data.apCompany} optionList={data.apCompanies} sels={me.companySel.bind(me)}/></div>\n          <div className=\"filter\"><span>还款状态</span><SelectPop selChecked={data.orderState} optionList={data.orderStates} sels={me.stateSel.bind(me)}/></div>\n          <div className=\"btn-box\"><span>额度查询</span><span>还款查询</span></div>\n        </div>\n        <div className=\"tab-box\"><span>额度订单明细</span><span>额度还款明细</span></div>\n        <p className=\"tip\">请您在<strong>24</strong>个小时内完成支付，否则还款申请会自动取消</p>\n        <div className=\"list-box\" className={data.orderLists.isShow}>\n          {\n            data.orderLists.lists.length == 0 ? \n              <div className=\"no-data\">未查询到明细！</div> : \n              <div className=\"lists\">\n              {\n                data.orderLists.lists.map(function(d,i){\n                  return(\n                  \t<ul>\n                      <li className=\"tit\"><i className=\"checked\"></i>订单号：o22520129<span>未还款</span></li>\n                      <li>合作分公司：PTTL_OU_15_南京分公司</li>\n                      <li>订单金额：154.00</li>\n                    </ul>\n                  )\n                })\n              }\n              </div>\n          }\n          <CustomPage \n            pageData={data.page1} \n            searchClick={me.searchClick1.bind(me)}       \n            searchChange={me.searchChange1.bind(me)} \n            firstClick={me.firstClick1.bind(me)} \n            prevClick={me.prevClick1.bind(me)} \n            nextClick={me.nextClick1.bind(me)} \n            lastClick={me.lastClick1.bind(me)} \n            sureClick={me.sureClick1.bind(me)} />\n        </div>\n        <div className=\"list-box\" className={data.repayLists.isShow}>\n          {\n            data.repayLists.lists.length == 0 ? \n              <div className=\"no-data\">未查询到明细！</div> : \n              <div className=\"lists\">\n              {\n                data.repayLists.lists.map(function(d,i){\n                  return(\n                  \t<ul>\n                      <li>{d}</li>\n                    </ul>\n                  )\n                })\n              }\n              </div>\n          }\n          <CustomPage \n            pageData={data.page2} \n            searchClick={me.searchClick2.bind(me)}       \n            searchChange={me.searchChange2.bind(me)} \n            firstClick={me.firstClick2.bind(me)} \n            prevClick={me.prevClick2.bind(me)} \n            nextClick={me.nextClick2.bind(me)} \n            lastClick={me.lastClick2.bind(me)} \n            sureClick={me.sureClick2.bind(me)} />\n        </div>\n      </div>\n    )\n  }\n}"
+getData_control44_R2pKt2: >-
+  if(!elem){
+    return;
+  }
+
+  let data={
+    creditAmount:"",
+    receiveAmount:"",
+    overSoonNum:"",
+    overDueNum:"",
+    orderId:"",
+    createDate:"",
+    completedDate:"",
+    apCompany:"",
+    orderState:"",
+    apCompanies:[],
+    orderStates:[],
+    orderLists:{
+      isShow:"",
+      lists:[]
+    },
+    repayLists:{
+      isShow:"",
+      lists:[]
+    },
+    page1:[],
+    page2:[]
+  };
+
+  data.creditAmount = elem.querySelector("#creditAmount").textContent;
+
+  data.receiveAmount = elem.querySelector("#receiveAmount").textContent;
+
+  data.overSoonNum = elem.querySelector("#overSoonNum").textContent;
+
+  data.overDueNum = elem.querySelector("#overDueNum").textContent;
+
+  data.orderId = elem.querySelector("#orderId").value;
+
+  data.createDate = elem.querySelector("#createDate").value;
+
+  data.completedDate = elem.querySelector("#completedDate").value;
+
+  data.apCompany =
+  elem.querySelector("#apCompany").querySelector("option:checked").textContent;
+
+  data.orderState =
+  elem.querySelector("#orderState").querySelector("option:checked").textContent;
+
+  let company = elem.querySelector("#apCompany").querySelectorAll("option");
+
+  [].map.call(company,function(d,i){
+    data.apCompanies.push(d.textContent);
+  });
+
+  let states = elem.querySelector("#orderState").querySelectorAll("option");
+
+  [].map.call(states,function(d,i){
+    data.orderStates.push(d.textContent);
+  });
+
+  data.orderLists.isShow = elem.querySelector("#AcLists").children[0].className;
+
+  data.repayLists.isShow = elem.querySelector("#AcLists").children[1].className;
+
+  let List1 = elem.querySelector("#tBody_pay").querySelectorAll("tr");
+
+  [].map.call(List1,function(d,i){
+    let tds = d.querySelectorAll("td");
+    [].map.call(tds,function(m,n){
+      data.orderLists.lists.push(m.textContent);
+    });
+  });
+
+  let List2 = elem.querySelector("#tbody_repay").querySelectorAll("tr");
+
+  if(List2){
+
+  [].map.call(List2,function(d,i){
+    let tds2 = d.querySelectorAll("td");
+    [].map.call(tds2,function(m,n){
+      data.repayLists.lists.push(m.textContent);
+    });
+  });
+
+  }
+
+  data.page1.push(elem.querySelector("#pagination").querySelector(".nowPage").textContent);
+
+  data.page1.push(elem.querySelector("#pagination").querySelector(".allPages").textContent);
+
+  let iptShow1 =
+  elem.querySelector("#pagination").querySelector(".J-paginationjs-go-pagenumber").style.display;
+
+  data.page1.push(iptShow1);
+
+  data.page1.push(elem.querySelector("#pagination").querySelector(".J-paginationjs-go-pagenumber").value);
+
+
+  data.page2.push(elem.querySelector("#pagination2").querySelector(".nowPage").textContent);
+
+  data.page2.push(elem.querySelector("#pagination2").querySelector(".allPages").textContent);
+
+  let iptShow2 =
+  elem.querySelector("#pagination2").querySelector(".J-paginationjs-go-pagenumber").style.display;
+
+  data.page2.push(iptShow2);
+
+  data.page2.push(elem.querySelector("#pagination2").querySelector(".J-paginationjs-go-pagenumber").value);
+
+  return data;
+doAction_uiControl30_Ul1T7s: ''

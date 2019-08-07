@@ -67,6 +67,14 @@ em {
   background: url(../local/img/arrows.png) no-repeat left center;
   background-size: 27%;
 }
+.ysp-top .home {
+  display: block;
+  float: right;
+  width: 44px;
+  height: 44px;
+  background: url(../local/img/icon-home.png) no-repeat right center;
+  background-size: 24px 37px;
+}
 .ysp-selpop-box {
   display: none;
   position: fixed;
@@ -1647,4 +1655,7 @@ div[data-ysp-modelid^="index"] .ysp-footer p {
   padding: 3px 0;
   color: #999;
   font-size: 12px;
+}
+div[data-ysp-modelid^="limitSearch"] {
+  background: #f3f3f3;
 }

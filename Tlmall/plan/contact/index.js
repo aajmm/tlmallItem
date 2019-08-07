@@ -1,11 +1,10 @@
 (function (win, ysp) {
   ysp.runtime.Model.extendLoadingModel({
     getData_control15_0zwZ6w: function (elem) {
+      "use strict";
       if (!elem) {
         return;
-      }var data = { contacts: [], edits: [],
-        sexSels: [], contactSels: [], residenceSels: [],
-        maritalSels: [], add: { ifShow: "", name: "", sex: "", contact: "", contactPhone: "", fax: "", email: "", residence: "", birthday: "", background: "", marital: "", job: "", department: "", remark: "" } }; //联系人列表
+      }var data = { contacts: [], edits: [], sexSels: [], contactSels: [], residenceSels: [], maritalSels: [], add: { ifShow: "", name: "", sex: "", contact: "", contactPhone: "", fax: "", email: "", residence: "", birthday: "", background: "", marital: "", job: "", department: "", remark: "" } }; //联系人列表
       var tables = elem.querySelectorAll(".table_datas");[].map.call(tables, function (d, i) {
         var table = [];data.contacts.push(table);var tds = d.querySelectorAll("td");[].map.call(tds, function (m, n) {
           data.contacts[i].push(m.textContent);
@@ -26,6 +25,7 @@
       });return data;
     },
     doAction_uiControl15_rVvoFf: function (data, elem) {
+      "use strict";
       if (data.eventType == "back") {
         ysp.appMain.back();
       } else if (data.eventType == "editbtn") {
@@ -85,7 +85,8 @@
       } else if (data.eventType == "selContact") {
         var _Num = data.dataCustom;var _d23 = _Num.indexOf("-");var _Num2 = parseInt(_Num.substr(_d23 + 1, _Num.length));elem.querySelector("#contact_contact").querySelectorAll("option")[_Num2].selected = true;
       } else if (data.eventType == "selResidence") {
-        var _Num3 = data.dataCustom;var _d24 = _Num3.indexOf("-");var _Num4 = parseInt(_Num3.substr(_d24 + 1, _Num3.length));elem.querySelector("#contact_residence").querySelectorAll("option")[_Num4].selected = true;
+        var _Num3 = data.dataCustom;
+        var _d24 = _Num3.indexOf("-");var _Num4 = parseInt(_Num3.substr(_d24 + 1, _Num3.length));elem.querySelector("#contact_residence").querySelectorAll("option")[_Num4].selected = true;
       } else if (data.eventType == "selMarital") {
         var _Num5 = data.dataCustom;var _d25 = _Num5.indexOf("-");var _Num6 = parseInt(_Num5.substr(_d25 + 1, _Num5.length));elem.querySelector("#contact_marital").querySelectorAll("option")[_Num6].selected = true;
       } else if (data.eventType == "editSelSex") {
