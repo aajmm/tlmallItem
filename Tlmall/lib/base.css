@@ -1806,6 +1806,7 @@ div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li {
   padding: 0 12px;
   line-height: 24px;
   font-size: 13px;
+  word-break: break-all;
 }
 div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.tit {
   padding: 5px 12px;
