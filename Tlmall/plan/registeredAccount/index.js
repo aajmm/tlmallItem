@@ -79,9 +79,9 @@
       } else if (data.eventType == 'choose') {
         //选择-我已阅读并同意
         if (data.dataCustom) {
-          elem.querySelector('.iradio_tlmall').className += " checked";
+          elem.querySelector('#agreement').checked = true;elem.querySelector('.iradio_tlmall').className += " checked";
         } else {
-          elem.querySelector('.iradio_tlmall').className = 'iradio_tlmall';
+          elem.querySelector('#agreement').checked = false;elem.querySelector('.iradio_tlmall').className = 'iradio_tlmall';
         }
       } else if (data.eventType == 'registrationProtocol') {
         //会员注册协议

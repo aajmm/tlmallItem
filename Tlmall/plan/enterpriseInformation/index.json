@@ -3,6 +3,9 @@
   "id": "enterpriseInformation",
   "targetURL": "http://192.168.220.23//page/register/registerBus.html",
   "jsFile": "index.js",
+  "requires": {
+    "receivingInformation": "../receivingInformation/index.json"
+  },
   "chineseName": "企业信息",
   "description": "",
   "controls": {
@@ -114,7 +117,7 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "monitored": false,
+      "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
     }
@@ -145,6 +148,10 @@
       "toContexts": [
         {
           "toContextId": "context5_MEUJxb"
+        },
+        {
+          "toContextId": "context7_gGBe79",
+          "toModelId": "receivingInformation"
         }
       ]
     }

@@ -384,7 +384,8 @@ div[data-ysp-modelid^="login"] .login-form p:nth-child(6) button {
 div[data-ysp-modelid^="forgotPassword-writeAccount"],
 div[data-ysp-modelid^="registeredAccount"],
 div[data-ysp-modelid^="registrationProtocol"],
-div[data-ysp-modelid^="enterpriseInformation"] {
+div[data-ysp-modelid^="enterpriseInformation"],
+div[data-ysp-modelid^="receivingInformation"] {
   width: 100%;
   height: 100%;
   background: #f3f3f3;
@@ -394,7 +395,8 @@ div[data-ysp-modelid^="enterpriseInformation"] {
 div[data-ysp-modelid^="forgotPassword-writeAccount"] Header,
 div[data-ysp-modelid^="registeredAccount"] Header,
 div[data-ysp-modelid^="registrationProtocol"] Header,
-div[data-ysp-modelid^="enterpriseInformation"] Header {
+div[data-ysp-modelid^="enterpriseInformation"] Header,
+div[data-ysp-modelid^="receivingInformation"] Header {
   width: 100%;
   height: 44px;
   background: #fff;
@@ -405,7 +407,8 @@ div[data-ysp-modelid^="enterpriseInformation"] Header {
 div[data-ysp-modelid^="forgotPassword-writeAccount"] Header h2,
 div[data-ysp-modelid^="registeredAccount"] Header h2,
 div[data-ysp-modelid^="registrationProtocol"] Header h2,
-div[data-ysp-modelid^="enterpriseInformation"] Header h2 {
+div[data-ysp-modelid^="enterpriseInformation"] Header h2,
+div[data-ysp-modelid^="receivingInformation"] Header h2 {
   color: #3f3f3f;
   font-size: 17px;
   font-weight: 200;
@@ -413,7 +416,8 @@ div[data-ysp-modelid^="enterpriseInformation"] Header h2 {
 div[data-ysp-modelid^="forgotPassword-writeAccount"] Header i,
 div[data-ysp-modelid^="registeredAccount"] Header i,
 div[data-ysp-modelid^="registrationProtocol"] Header i,
-div[data-ysp-modelid^="enterpriseInformation"] Header i {
+div[data-ysp-modelid^="enterpriseInformation"] Header i,
+div[data-ysp-modelid^="receivingInformation"] Header i {
   width: 12px;
   height: 20px;
   display: inline-block;
@@ -816,6 +820,165 @@ div[data-ysp-modelid^="registrationProtocol"] .registration-protocol-btn button 
   border: 0;
   border-radius: 3px;
 }
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-name,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-name,
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-address,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-address,
+div[data-ysp-modelid^="enterpriseInformation"] .detail-address,
+div[data-ysp-modelid^="receivingInformation"] .detail-address,
+div[data-ysp-modelid^="enterpriseInformation"] .legal-name,
+div[data-ysp-modelid^="receivingInformation"] .legal-name,
+div[data-ysp-modelid^="enterpriseInformation"] .id-type,
+div[data-ysp-modelid^="receivingInformation"] .id-type,
+div[data-ysp-modelid^="enterpriseInformation"] .id-number,
+div[data-ysp-modelid^="receivingInformation"] .id-number,
+div[data-ysp-modelid^="enterpriseInformation"] .id-card,
+div[data-ysp-modelid^="receivingInformation"] .id-card,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license-number,
+div[data-ysp-modelid^="receivingInformation"] .business-license-number,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license,
+div[data-ysp-modelid^="receivingInformation"] .business-license,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-name,
+div[data-ysp-modelid^="receivingInformation"] .contact-name,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-phone,
+div[data-ysp-modelid^="receivingInformation"] .contact-phone,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-name,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-name,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-phone,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-phone {
+  padding: 0 15px;
+  display: flex;
+  margin-top: 15px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-name i,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-name i,
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-address i,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-address i,
+div[data-ysp-modelid^="enterpriseInformation"] .detail-address i,
+div[data-ysp-modelid^="receivingInformation"] .detail-address i,
+div[data-ysp-modelid^="enterpriseInformation"] .legal-name i,
+div[data-ysp-modelid^="receivingInformation"] .legal-name i,
+div[data-ysp-modelid^="enterpriseInformation"] .id-type i,
+div[data-ysp-modelid^="receivingInformation"] .id-type i,
+div[data-ysp-modelid^="enterpriseInformation"] .id-number i,
+div[data-ysp-modelid^="receivingInformation"] .id-number i,
+div[data-ysp-modelid^="enterpriseInformation"] .id-card i,
+div[data-ysp-modelid^="receivingInformation"] .id-card i,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license-number i,
+div[data-ysp-modelid^="receivingInformation"] .business-license-number i,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license i,
+div[data-ysp-modelid^="receivingInformation"] .business-license i,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-name i,
+div[data-ysp-modelid^="receivingInformation"] .contact-name i,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-phone i,
+div[data-ysp-modelid^="receivingInformation"] .contact-phone i,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-name i,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-name i,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-phone i,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-phone i {
+  width: 4%;
+  color: #E3370A;
+  font-size: 20px;
+  float: left;
+  margin-top: 7px;
+  font-style: normal;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-name select,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-name select,
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-address select,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-address select,
+div[data-ysp-modelid^="enterpriseInformation"] .detail-address select,
+div[data-ysp-modelid^="receivingInformation"] .detail-address select,
+div[data-ysp-modelid^="enterpriseInformation"] .legal-name select,
+div[data-ysp-modelid^="receivingInformation"] .legal-name select,
+div[data-ysp-modelid^="enterpriseInformation"] .id-type select,
+div[data-ysp-modelid^="receivingInformation"] .id-type select,
+div[data-ysp-modelid^="enterpriseInformation"] .id-number select,
+div[data-ysp-modelid^="receivingInformation"] .id-number select,
+div[data-ysp-modelid^="enterpriseInformation"] .id-card select,
+div[data-ysp-modelid^="receivingInformation"] .id-card select,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license-number select,
+div[data-ysp-modelid^="receivingInformation"] .business-license-number select,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license select,
+div[data-ysp-modelid^="receivingInformation"] .business-license select,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-name select,
+div[data-ysp-modelid^="receivingInformation"] .contact-name select,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-phone select,
+div[data-ysp-modelid^="receivingInformation"] .contact-phone select,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-name select,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-name select,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-phone select,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-phone select {
+  height: 44px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 3px;
+  font-size: 13px;
+  border: #ccc solid 1px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-name input,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-name input,
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-address input,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-address input,
+div[data-ysp-modelid^="enterpriseInformation"] .detail-address input,
+div[data-ysp-modelid^="receivingInformation"] .detail-address input,
+div[data-ysp-modelid^="enterpriseInformation"] .legal-name input,
+div[data-ysp-modelid^="receivingInformation"] .legal-name input,
+div[data-ysp-modelid^="enterpriseInformation"] .id-type input,
+div[data-ysp-modelid^="receivingInformation"] .id-type input,
+div[data-ysp-modelid^="enterpriseInformation"] .id-number input,
+div[data-ysp-modelid^="receivingInformation"] .id-number input,
+div[data-ysp-modelid^="enterpriseInformation"] .id-card input,
+div[data-ysp-modelid^="receivingInformation"] .id-card input,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license-number input,
+div[data-ysp-modelid^="receivingInformation"] .business-license-number input,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license input,
+div[data-ysp-modelid^="receivingInformation"] .business-license input,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-name input,
+div[data-ysp-modelid^="receivingInformation"] .contact-name input,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-phone input,
+div[data-ysp-modelid^="receivingInformation"] .contact-phone input,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-name input,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-name input,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-phone input,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-phone input {
+  width: 100%;
+  height: 44px;
+  display: inline-block;
+  border: #ccc solid 1px;
+  padding-left: 10px;
+  background: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-name em,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-name em,
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-address em,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-address em,
+div[data-ysp-modelid^="enterpriseInformation"] .detail-address em,
+div[data-ysp-modelid^="receivingInformation"] .detail-address em,
+div[data-ysp-modelid^="enterpriseInformation"] .legal-name em,
+div[data-ysp-modelid^="receivingInformation"] .legal-name em,
+div[data-ysp-modelid^="enterpriseInformation"] .id-type em,
+div[data-ysp-modelid^="receivingInformation"] .id-type em,
+div[data-ysp-modelid^="enterpriseInformation"] .id-number em,
+div[data-ysp-modelid^="receivingInformation"] .id-number em,
+div[data-ysp-modelid^="enterpriseInformation"] .id-card em,
+div[data-ysp-modelid^="receivingInformation"] .id-card em,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license-number em,
+div[data-ysp-modelid^="receivingInformation"] .business-license-number em,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license em,
+div[data-ysp-modelid^="receivingInformation"] .business-license em,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-name em,
+div[data-ysp-modelid^="receivingInformation"] .contact-name em,
+div[data-ysp-modelid^="enterpriseInformation"] .contact-phone em,
+div[data-ysp-modelid^="receivingInformation"] .contact-phone em,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-name em,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-name em,
+div[data-ysp-modelid^="enterpriseInformation"] .PTTL-contact-phone em,
+div[data-ysp-modelid^="receivingInformation"] .PTTL-contact-phone em {
+  display: none;
+}
 div[data-ysp-modelid^="enterpriseInformation"] {
   width: 100%;
   height: 100%;
@@ -841,100 +1004,6 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .errorIcon
   top: 14px;
   right: 22px;
   color: #fff;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-name,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-address,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .detail-address,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .legal-name,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-type,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-number,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-card,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license-number,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-name,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-phone,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-name,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-phone {
-  padding: 0 15px;
-  display: flex;
-  margin-top: 15px;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-name i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-address i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .detail-address i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .legal-name i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-type i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-number i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-card i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license-number i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-name i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-phone i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-name i,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-phone i {
-  width: 4%;
-  color: #E3370A;
-  font-size: 20px;
-  float: left;
-  margin-top: 7px;
-  font-style: normal;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-name select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-address select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .detail-address select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .legal-name select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-type select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-number select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-card select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license-number select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-name select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-phone select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-name select,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-phone select {
-  height: 44px;
-  padding-top: 0;
-  padding-bottom: 0;
-  border-radius: 3px;
-  font-size: 13px;
-  border: #ccc solid 1px;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-name input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-address input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .detail-address input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .legal-name input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-type input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-number input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-card input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license-number input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-name input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-phone input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-name input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-phone input {
-  width: 100%;
-  height: 44px;
-  display: inline-block;
-  border: #ccc solid 1px;
-  padding-left: 10px;
-  background: #fff;
-  border-radius: 3px;
-  font-size: 13px;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-name em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterprise-address em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .detail-address em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .legal-name em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-type em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-number em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .id-card em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license-number em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .business-license em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-name em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-phone em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-name em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .PTTL-contact-phone em {
-  display: none;
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form {
   width: 100%;
@@ -1139,6 +1208,62 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterprise-error-msg p {
   color: #E7350E;
   font-size: 12px;
   text-align: center;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form {
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .download-template p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div[data-ysp-modelid^="registeredSuccessfully"] div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 50px;
+}
+div[data-ysp-modelid^="registeredSuccessfully"] div i {
+  width: 80px;
+  height: 80px;
+  display: block;
+  background: url('../local/img/flows.png') no-repeat 40px 0;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 34.5%;
+}
+div[data-ysp-modelid^="registeredSuccessfully"] div h3 {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+  color: #8cc63f;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+div[data-ysp-modelid^="registeredSuccessfully"] div p {
+  margin: 0;
+  font-size: 16px;
+}
+div[data-ysp-modelid^="registeredSuccessfully"] div button {
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  color: #fff;
+  background: #4796ed;
+  border-radius: 23px;
+  border: 0;
+  outline: none;
+  margin-top: 30px;
 }
 div[data-ysp-modelid^="contact"] .contact {
   padding-top: 45px;
