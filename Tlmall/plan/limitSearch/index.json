@@ -61,37 +61,6 @@
       "text": "额度查询",
       "frameXPath": ""
     },
-    "control43_UnakJm": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.tl-wrap"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control43_UnakJm"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": true,
-      "frameXPath": "",
-      "componentType": "custom"
-    },
     "control44_R2pKt2": {
       "location": {
         "data": {
@@ -132,7 +101,6 @@
   "contexts": {
     "context7_gua0Tw": {
       "controls": [
-        "control43_UnakJm",
         "control44_R2pKt2"
       ],
       "anchors": [
@@ -149,17 +117,13 @@
         }
       ]
     },
-    "flow22_fWux5D": {
+    "flow22_u0zyFg": {
       "fromContextId": "context7_gua0Tw",
       "fromAction": "doAction",
-      "fromControlId": "control43_UnakJm",
+      "fromControlId": "control44_R2pKt2",
       "toContexts": [
         {
           "toContextId": "context7_gua0Tw"
-        },
-        {
-          "toContextId": "context2_JFd3LO",
-          "toModelId": "index"
         }
       ]
     }
@@ -168,21 +132,6 @@
     "page7_VJVbrl": {
       "contextId": "context7_gua0Tw",
       "layout": [
-        {
-          "id": "uiControl29_vTrrKv",
-          "controlId": "control43_UnakJm",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl29_vTrrKv",
-                "onGetTemplate": "getTemplate_uiControl29_vTrrKv"
-              }
-            }
-          }
-        },
         {
           "id": "uiControl30_Ul1T7s",
           "controlId": "control44_R2pKt2",

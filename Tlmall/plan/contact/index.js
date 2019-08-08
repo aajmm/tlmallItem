@@ -49,7 +49,8 @@
       } else if (data.eventType == "editDepartment") {
         var _iptData7 = data.dataCustom;var _d9 = _iptData7[0];var _i7 = _iptData7[1];var _ipt8 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i7].querySelectorAll("input")[7];_ipt8.value = _d9;_ipt8.blur();_ipt8.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editRemark") {
-        var _iptData8 = data.dataCustom;var _d10 = _iptData8[0];var _i8 = _iptData8[1];var txtArea = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i8].querySelector("textarea");txtArea.value = _d10;ipt.blur();txtArea.dispatchEvent(new Event('change'));
+        var _iptData8 = data.dataCustom;var _d10 = _iptData8[0];var _i8 = _iptData8[1];var txtArea = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i8].querySelector("textarea");txtArea.value = _d10;ipt.blur();
+        txtArea.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editSave") {
         var _d11 = data.dataCustom;var _btn2 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_d11].querySelector("input[value='保存']"); //btn.click();
         _btn2.dispatchEvent(new Event("click"));
@@ -73,7 +74,8 @@
       } else if (data.eventType == "addBirthday") {
         var _d17 = data.dataCustom;var _ipt13 = elem.querySelector("#contact_birthday");_ipt13.value = _d17;_ipt13.blur();_ipt13.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addBackground") {
-        var _d18 = data.dataCustom;var _ipt14 = elem.querySelector("#contact_background");_ipt14.value = _d18;_ipt14.blur();_ipt14.dispatchEvent(new Event("change"));
+        var _d18 = data.dataCustom;var _ipt14 = elem.querySelector("#contact_background");_ipt14.value = _d18;_ipt14.blur();
+        _ipt14.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addJob") {
         var _d19 = data.dataCustom;var _ipt15 = elem.querySelector("#contact_job");_ipt15.value = _d19;_ipt15.blur();_ipt15.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addDepartment") {
@@ -85,10 +87,10 @@
       } else if (data.eventType == "selContact") {
         var _Num = data.dataCustom;var _d23 = _Num.indexOf("-");var _Num2 = parseInt(_Num.substr(_d23 + 1, _Num.length));elem.querySelector("#contact_contact").querySelectorAll("option")[_Num2].selected = true;
       } else if (data.eventType == "selResidence") {
-        var _Num3 = data.dataCustom;
-        var _d24 = _Num3.indexOf("-");var _Num4 = parseInt(_Num3.substr(_d24 + 1, _Num3.length));elem.querySelector("#contact_residence").querySelectorAll("option")[_Num4].selected = true;
+        var _Num3 = data.dataCustom;var _d24 = _Num3.indexOf("-");var _Num4 = parseInt(_Num3.substr(_d24 + 1, _Num3.length));elem.querySelector("#contact_residence").querySelectorAll("option")[_Num4].selected = true;
       } else if (data.eventType == "selMarital") {
-        var _Num5 = data.dataCustom;var _d25 = _Num5.indexOf("-");var _Num6 = parseInt(_Num5.substr(_d25 + 1, _Num5.length));elem.querySelector("#contact_marital").querySelectorAll("option")[_Num6].selected = true;
+        var _Num5 = data.dataCustom;var _d25 = _Num5.indexOf("-");var _Num6 = parseInt(_Num5.substr(_d25 + 1, _Num5.length));
+        elem.querySelector("#contact_marital").querySelectorAll("option")[_Num6].selected = true;
       } else if (data.eventType == "editSelSex") {
         var _Num7 = data.dataCustom;var _d26 = _Num7.indexOf("-");var Num1 = parseInt(_Num7.substr(0, _d26));var _Num8 = parseInt(_Num7.substr(_d26 + 1, _Num7.length));elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[Num1].querySelectorAll("select")[0].querySelectorAll("option")[_Num8].selected = true;
       } else if (data.eventType == "editSelContact") {

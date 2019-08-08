@@ -17,6 +17,8 @@ h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
 strong,i,em{font-style: normal;}
 @theme-border:1px solid #e1e1e1;
 @theme-bg:#f3f3f3;
+@theme-red:#e7350d;
+@theme-blue:#4796ed;
 /*    以上样式为公用样式      */
 
 //页面顶部样式  xxger
@@ -1063,7 +1065,7 @@ div[data-ysp-modelid^="contact"] {
                         padding: 0 16px;
                         margin-left: 12px;
                       	margin-top:10px;
-                        background-color: #4796ed;
+                        background-color: @theme-blue;
                         color: #fff;
                         font-size: 12px;
                         line-height:26px;
@@ -1193,14 +1195,14 @@ div[data-ysp-modelid^="contact"] {
                 height: 36px;
                 line-height: 36px;
                 font-size: 13px;
-                background-color: #e7350d;
+                background-color: @theme-red;
                 color: #fff;
                 margin: 0 5%;
                 width: 90%;
                 text-align: center;
                 &:last-child {
                     margin-bottom: 30px;
-                    background-color: #4796ed;
+                    background-color: @theme-blue;
                 }
                 &:first-child {
                     margin-top: 30px;
@@ -1237,7 +1239,7 @@ div[data-ysp-modelid^="rebateConfirMation"] {
                         font-weight: bold;
                     }
                     .num1 strong {
-                        color: #e7350d;
+                        color:@theme-red;
                     }
                     .num2 strong {
                         color: #4996ee;
@@ -1306,7 +1308,7 @@ div[data-ysp-modelid^="rebateConfirMation"] {
                 li {
                     padding: 0 10px;
                     strong {
-                        color: #e7350d;
+                        color: @theme-red;
                     }
                     .date-box {
                         float: right;
@@ -1345,7 +1347,7 @@ div[data-ysp-modelid^="rebateConfirMation"] {
                 }
                 .tit {
                     line-height: 36px;
-                    color: #4796ed;
+                    color: @theme-blue;
                     border-bottom: 1px solid #f3f3f3;
                 }
             }
@@ -1384,7 +1386,7 @@ div[data-ysp-modelid^="rebateConfirMation"] {
                 .tit {
                     border-bottom: solid 1px #f3f3f3;
                     font-size: 14px;
-                    color: #4796ed;
+                    color: @theme-blue;
                     line-height: 36px;
                 }
             }
@@ -1597,4 +1599,221 @@ div[data-ysp-modelid^="index"]{
 //额度查询  xxger
 div[data-ysp-modelid^="limitSearch"]{
   background:@theme-bg;
+  .ysp-limitSearch{
+    padding-top:54px;
+  }
+  .num-box{
+    display: flex;
+    background:#fff;
+    padding:20px 0;
+    li{
+      width:50%;
+      text-align: center;
+      &:first-child{
+        border-right: @theme-border;
+        color:@theme-blue;
+        p{
+          color:@theme-blue;
+        }
+      }
+      &:last-child{
+        color:@theme-red;
+        p{
+          color:@theme-red;
+        }
+      }
+    }
+  }
+  .filter-box{
+    margin-top:10px;
+    background:#fff;
+    .filter{
+      height:40px;
+      line-height: 40px;
+      padding:0 12px;
+      border-bottom: @theme-border;
+      overflow: hidden;
+      &:first-child{
+        color:@theme-blue;
+      }
+      &:nth-child(2){
+        color:@theme-red;
+      }
+      input{
+        width:70%;
+        height:100%;
+        float:right;
+        border: none;
+        padding:0;
+        color:#333;
+        font-size:14px;
+      }
+      input[type="date"]{
+        background:#fff url(../local/img/date.png) no-repeat right center;
+        background-size: 16px 16px;
+      }
+      .option-show {
+          float:right;
+          width: 70%;
+          line-height: 40px;
+          height: 40px;
+          background: #fff url(../local/img/arrows-updown.png) no-repeat right center;
+          -webkit-background-size: 10px;
+          background-size: 10px;
+          font-size:14px;
+          color:#999;
+      }
+    }
+    .btn-box{
+      text-align: right;
+      padding:10px 0;
+      span{
+        display: inline-block;
+        margin-right:12px;
+      	border-radius: 3px;
+        padding: 4px 8px;
+        background-color:@theme-blue;
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+  }
+  .tab-box{
+    display: flex;
+    li{
+      width:50%;
+      margin:5%;
+      border-radius: 3px;
+      line-height: 30px;
+      text-align: center;
+      background:#e1e1e1;
+      &.act{
+        background:@theme-red;
+        color:#fff;
+      }
+    }
+  }
+  .tip{
+    padding:0 12px;
+    font-size:12px;
+    strong{
+      color:@theme-red;
+    }
+  }
+  .list-box{
+    margin:12px;
+    padding-bottom:90px;
+    .no-data{
+      background:#fff;
+      height:100px;
+      line-height: 100px;
+      text-align: center;
+      color:@theme-red;
+    }
+    .ckeck-label{
+      position: relative;
+      display: inline-block;
+      padding-left: 25px;
+      vertical-align: top;
+      input{
+        display: none;
+      }
+      i{
+				position: absolute;
+        top: 3px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border-radius: 100%;
+        background:url(../local/img/round-gray.png) no-repeat center center;
+        background-size: cover;
+      }
+    }
+    .ckeck-label input:checked + i{
+      background:url(../local/img/round-red.png) no-repeat center center;
+      background-size: cover;
+    }
+    .ckeck-label input:disabled + i{
+      background:url(../local/img/round-flat-disabled.png) no-repeat center center;
+      background-size: cover;
+    }
+    .lists ul{
+      background:#fff;
+      margin-bottom:10px;
+      li{
+        padding:0 12px;
+        line-height: 24px;
+        font-size: 13px;
+        &.tit{
+          padding:5px 12px;
+          margin-bottom: 5px;
+          color:@theme-red;
+          border-bottom: @theme-border;
+          overflow: hidden;
+          span{
+            display: inline-block;
+            float: right;
+            color:@theme-red;
+            font-size: 13px;
+          }
+        }
+        &.date-box{
+          border-top:@theme-border;
+          margin-top:5px;
+          padding:5px 12px;
+          color:#999;
+          display:flex;
+          p{
+            width:50%;
+            color:#999;
+            font-size:12px;
+            span{
+              display: block;
+              font-size:12px;
+              color:#999;
+            }
+          }
+        }
+        &.btm{
+          border-top: @theme-border;
+          margin-top:1px;
+          padding:5px 12px;
+          color:#999;
+        }
+      }
+    }
+    .sel-all-box{
+      position: fixed;
+      left:0;
+      bottom:52px;
+      z-index:200;
+      width:100%;
+      height:50px;
+      line-height:50px;
+      background:#fff;
+      border-top: @theme-border;
+      .ckeck-label{
+        width:45%;
+        color:#333;
+        font-size:14px;
+        padding-left: 35px;
+        i{
+          top:15px;
+          left:10px;
+          background-size:100%;
+        }
+      }
+      span{
+        display: inline-block;
+        width:55%;
+        height:100%;
+        text-align: center;
+        background:@theme-red;
+        color:#fff;
+      }
+    }
+  }
+  .disnone{
+    display: none;
+  }
 }
