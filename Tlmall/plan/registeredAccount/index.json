@@ -5,7 +5,8 @@
   "jsFile": "index.js",
   "requires": {
     "registrationProtocol": "../registrationProtocol/index.json",
-    "personal": "../personal/index.json"
+    "personal": "../personal/index.json",
+    "registeredSuccessfully": "../registeredSuccessfully/index.json"
   },
   "chineseName": "注册账号",
   "description": "",
@@ -160,6 +161,10 @@
         {
           "toContextId": "context4_6pbBN6",
           "toModelId": "registrationProtocol"
+        },
+        {
+          "toContextId": "context8_h9Qb0H",
+          "toModelId": "registeredSuccessfully"
         }
       ]
     }
