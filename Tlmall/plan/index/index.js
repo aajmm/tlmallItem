@@ -32,6 +32,7 @@
     },
     getData_control35_ReksFv: function (elem) {
       "use strict";
+
       if (!elem) {
         return;
       }var data = { url: [], img: [] };var lists = elem.querySelector("#slideBanners").querySelectorAll("a");[].map.call(lists, function (d, i) {
