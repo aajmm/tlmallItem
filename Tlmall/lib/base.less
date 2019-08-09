@@ -1881,9 +1881,29 @@ div[data-ysp-modelid^="limitSearch"]{
         }
         &.btm{
           border-top: @theme-border;
-          margin-top:1px;
-          padding:5px 12px;
+          padding:5px 0;
+          margin:5px 12px 0;
           color:#999;
+        }
+        &.btn-box{
+          padding:10px 12px;
+          text-align: right;
+          border-top: @theme-border;
+          span{
+            display: inline-block;
+            text-align: center;
+            font-size:14px;
+            height:25px;
+            padding:0 10px;
+            border:1px solid #666;
+            border-radius: 3px;
+            margin-left:12px;
+            color:#3f3f3f;
+            &:last-child{
+              color:@theme-red;
+              border:1px solid @theme-red;
+            }
+          }
         }
       }
     }

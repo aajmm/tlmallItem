@@ -2,6 +2,7 @@
   ysp.runtime.Model.extendLoadingModel({
     getData_control15_0zwZ6w: function (elem) {
       "use strict";
+
       if (!elem) {
         return;
       }var data = { contacts: [], edits: [], sexSels: [], contactSels: [], residenceSels: [], maritalSels: [], add: { ifShow: "", name: "", sex: "", contact: "", contactPhone: "", fax: "", email: "", residence: "", birthday: "", background: "", marital: "", job: "", department: "", remark: "" } }; //联系人列表
@@ -26,6 +27,7 @@
     },
     doAction_uiControl15_rVvoFf: function (data, elem) {
       "use strict";
+
       if (data.eventType == "back") {
         ysp.appMain.back();
       } else if (data.eventType == "editbtn") {

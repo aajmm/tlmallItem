@@ -161,3 +161,6 @@ doAction_uiControl28_Byxrut: |-
   if(data.eventType == "handlerClick"){
     elem.querySelector(".tl-footer-lists").querySelectorAll("dl")[5].querySelectorAll("dd")[1].querySelector("a").click();
   }
+getTemplate_uiControl29_S4niH0: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.selectedIndex,\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-navbar\">\n        <ul>\n          <li><a href=\"\"><span>首页</span></a></li>\n        </ul>\n      </div>\n    )\n  }\n}"
+getData_control43_IMz3GE: ''
+doAction_uiControl29_S4niH0: ''

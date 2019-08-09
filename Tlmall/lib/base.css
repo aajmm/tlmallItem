@@ -2008,9 +2008,29 @@ div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.date-box p span {
 }
 div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.btm {
   border-top: 1px solid #e1e1e1;
-  margin-top: 1px;
-  padding: 5px 12px;
+  padding: 5px 0;
+  margin: 5px 12px 0;
   color: #999;
+}
+div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.btn-box {
+  padding: 10px 12px;
+  text-align: right;
+  border-top: 1px solid #e1e1e1;
+}
+div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.btn-box span {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  height: 25px;
+  padding: 0 10px;
+  border: 1px solid #666;
+  border-radius: 3px;
+  margin-left: 12px;
+  color: #3f3f3f;
+}
+div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.btn-box span:last-child {
+  color: #e7350d;
+  border: 1px solid #e7350d;
 }
 div[data-ysp-modelid^="limitSearch"] .list-box .sel-all-box {
   position: fixed;
