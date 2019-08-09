@@ -355,7 +355,7 @@ div[data-ysp-modelid^="login"]{
     }
   }
 }
-div[data-ysp-modelid^="forgotPassword-writeAccount"],div[data-ysp-modelid^="registeredAccount"],div[data-ysp-modelid^="registrationProtocol"],div[data-ysp-modelid^="enterpriseInformation"]{
+div[data-ysp-modelid^="forgotPassword-writeAccount"],div[data-ysp-modelid^="registeredAccount"],div[data-ysp-modelid^="registrationProtocol"],div[data-ysp-modelid^="enterpriseInformation"],div[data-ysp-modelid^="receivingInformation"]{
   width: 100%;
   height: 100%;
   background: #f3f3f3;
@@ -601,11 +601,11 @@ div[data-ysp-modelid^="registeredAccount"]{
         display: block;
         width: 16px;
         height: 16px;
-        background: red;
+        background: #E7350E;
         border-radius: 50%;
         font-size: 12px;
         font-weight: 200;
-        line-height: 16px;
+        line-height: 14px;
         text-align: center;
         position: absolute;
         top: 3px;
@@ -787,34 +787,8 @@ div[data-ysp-modelid^="registrationProtocol"]{
     }
   }
 }
-//企业信息
-div[data-ysp-modelid^="enterpriseInformation"]{
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  .enterpriseInformation{
-    h3{
-      line-height: 50px;
-    }
-    .errorIcon{
-      position: relative;
-      em{
-        display: block!important;
-        width: 16px;
-        height: 16px;
-        background: red;
-        border-radius: 50%;
-        font-size: 12px;
-        font-weight: 200;
-        line-height: 14px;
-        text-align: center;
-        position: absolute;
-        top: 14px;
-        right: 22px;
-        color:#fff;
-      }
-    }
-    .enterprise-name,.enterprise-address,.detail-address,.legal-name,.id-number,.id-card,.business-license-number,.business-license,.contact-name,.contact-phone,.PTTL-contact-name,.PTTL-contact-phone{
+div[data-ysp-modelid^="enterpriseInformation"],div[data-ysp-modelid^="receivingInformation"]{
+  .enterprise-name,.enterprise-address,.detail-address,.legal-name,.id-type,.id-number,.id-card,.business-license-number,.business-license,.contact-name,.contact-phone,.PTTL-contact-name,.PTTL-contact-phone{
         padding: 0 15px;
         display: flex;
         margin-top: 15px;
@@ -844,11 +818,39 @@ div[data-ysp-modelid^="enterpriseInformation"]{
           border-radius: 3px;
           font-size: 13px;
         }
-        input+em{
+        em{
           display: none;
         }
         
       }
+}
+//企业信息
+div[data-ysp-modelid^="enterpriseInformation"]{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  .enterpriseInformation{
+    h3{
+      line-height: 50px;
+    }
+    .errorIcon{
+      position: relative;
+      em{
+        display: block!important;
+        width: 16px;
+        height: 16px;
+        background: #E7350E;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 14px;
+        text-align: center;
+        position: absolute;
+        top: 14px;
+        right: 22px;
+        color:#fff;
+      }
+    }
     .enterpriseInformation-form{
       width: 100%;
       height: auto;
@@ -891,12 +893,12 @@ div[data-ysp-modelid^="enterpriseInformation"]{
         }
         .enterpriseInformation-downmenu{
           display: inline-block;
-          width: 20px;
-          height: 20px;
-          background: url('../local/img/down-menu.png') no-repeat;
+          width: 28px;
+          height: 28px;
+          background: url('../local/img/up-down.png') no-repeat 0 14px;
           background-size: 100%;
           position: absolute;
-          bottom: -36px;
+          bottom: -28px;
           right: 15px;
         }
         .enterpriseInformation-list{
@@ -976,7 +978,45 @@ div[data-ysp-modelid^="enterpriseInformation"]{
           margin-top: 8px;
           padding-left: 4%;
         }
+        .errorIcon{
+          position: relative;
+          em{
+            display: block!important;
+            width: 16px;
+            height: 16px;
+            background: #E7350E;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 200;
+            line-height: 14px;
+            text-align: center;
+            position: absolute;
+            top: 14px;
+            right: 130px;
+            color:#fff;
+          }
+        }
       } 
+      .id-type{
+        .errorIcon{
+          position: relative;
+          em{
+            display: block!important;
+            width: 16px;
+            height: 16px;
+            background: #E7350E;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 200;
+            line-height: 14px;
+            text-align: center;
+            position: absolute;
+            top: 14px;
+            right: 130px;
+            color:#fff;
+          }
+        }
+      }
     }
     .contact-information{
       border-bottom: 1px solid #ccc;
@@ -1010,6 +1050,70 @@ div[data-ysp-modelid^="enterpriseInformation"]{
       color: #E7350E;
       font-size: 12px;
       text-align: center;
+    }
+  }
+}
+//收货信息
+div[data-ysp-modelid^="receivingInformation"]{
+  .receive-iformation-form{
+    	width: 100%;
+      height: auto;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 30px;
+    .download-template{
+      p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
+//注册成功
+div[data-ysp-modelid^="registeredSuccessfully"]{
+  div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  	padding-top: 50px;
+    i{
+      width: 80px;
+      height: 80px;
+      display: block;
+      background: url('../local/img/flows.png') no-repeat 40px 0;
+      background-size: 100%;
+      position: absolute;
+      top: 0;
+      left: 34.5%;
+    }	
+    h3{
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 18px;
+      color: #8cc63f;
+      margin-top: 10px;
+      margin-bottom: 20px;
+		}
+    p{
+      margin: 0;
+      font-size: 16px;
+    }
+    button{
+      width: 100px;
+      height: 36px;
+      line-height: 36px;
+      font-size: 14px;
+      color: #fff;
+      background: #4796ed;
+      border-radius: 23px;
+      border:0;
+      outline: none;
+      margin-top: 30px;
     }
   }
 }

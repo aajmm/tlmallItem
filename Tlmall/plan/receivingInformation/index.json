@@ -1,0 +1,468 @@
+{
+  "version": "0.1",
+  "id": "receivingInformation",
+  "targetURL": "http://192.168.220.23/page/register/registerAddress.html",
+  "jsFile": "index.js",
+  "chineseName": "收货信息",
+  "description": "",
+  "controls": {
+    "control35_cEpinS": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb100 DIV.wc1200 DIV.zc_title"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control35_cEpinS"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control36_DZGyD3": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb100 DIV.wc1200"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control36_DZGyD3"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context7_gGBe79": {
+      "controls": [
+        "control35_cEpinS",
+        "control36_DZGyD3"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow19_7N3Qym": {
+      "toContexts": [
+        {
+          "toContextId": "context7_gGBe79"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page7_XT4MBV": {
+      "contextId": "context7_gGBe79",
+      "layout": [
+        {
+          "id": "uiControl24_UIzUwZ",
+          "controlId": "control35_cEpinS",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl24_UIzUwZ",
+                "onGetTemplate": "getTemplate_uiControl24_UIzUwZ"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl25_ViyfWT",
+          "controlId": "control36_DZGyD3",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl25_ViyfWT",
+                "onGetTemplate": "getTemplate_uiControl25_ViyfWT"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context7_gGBe79": [
+          "太力商城"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context7_gGBe79": [
+          "192.168.220.23/page/register/registerAddress.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context7_gGBe79": [
+          [
+            "aSign",
+            "aSign_s",
+            "alertInvoice",
+            "ashint",
+            "collect_address",
+            "collect_addressDiv",
+            "collect_addressTip",
+            "collect_city",
+            "collect_contact",
+            "collect_contactDiv",
+            "collect_contactTip",
+            "collect_email",
+            "collect_emailDiv",
+            "collect_emailTip",
+            "collect_phone",
+            "collect_phoneTip",
+            "collect_poneDiv",
+            "collect_postcode",
+            "collect_postcodeDiv",
+            "collect_postcodeTip",
+            "collect_province",
+            "collect_zone",
+            "errorMessage",
+            "fileADiv",
+            "fileATip",
+            "fileA_bind",
+            "fileA_echo",
+            "fileA_value",
+            "fileBDiv",
+            "fileBTip",
+            "fileB_bind",
+            "fileB_echo",
+            "fileB_value",
+            "fileCDiv",
+            "fileCTip",
+            "fileC_bind",
+            "fileC_echo",
+            "fileC_value",
+            "getGoodsSeal",
+            "invoice",
+            "invoice_Address",
+            "invoice_AddressDiv",
+            "invoice_AddressTip",
+            "invoice_openBank",
+            "invoice_openBankDiv",
+            "invoice_openBankID",
+            "invoice_openBankIDDiv",
+            "invoice_openBankIDTip",
+            "invoice_openBankTip",
+            "invoice_phone",
+            "invoice_phoneDiv",
+            "invoice_phoneTip",
+            "invoice_taxNum",
+            "invoice_taxNumDiv",
+            "invoice_taxNumTip",
+            "mInvoiceInfos",
+            "mRule",
+            "mRuleDiv",
+            "mRuleTip",
+            "mSign",
+            "mSign_s",
+            "maSign",
+            "receive_address",
+            "receive_addressDiv",
+            "receive_addressTip",
+            "receive_city",
+            "receive_man",
+            "receive_manDiv",
+            "receive_manTip",
+            "receive_phone",
+            "receive_phoneDiv",
+            "receive_phoneTip",
+            "receive_postcode",
+            "receive_province",
+            "receive_timeEnd",
+            "receive_timeStart",
+            "receive_timeStartDiv",
+            "receive_timeStartTip",
+            "receive_zone",
+            "rt_rt_dhnvvfrrlirgdbgmq",
+            "rt_rt_dhnvvfvrtsjkrfrtst",
+            "rt_rt_dhnvvgjhagjeihgirc",
+            "sealHint",
+            "sign",
+            "tabkeGoods",
+            "tucaoIcon",
+            "uploaderA",
+            "uploaderB",
+            "uploaderC",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "aSign",
+            "aSign_s",
+            "alertInvoice",
+            "ashint",
+            "collect_address",
+            "collect_addressDiv",
+            "collect_addressTip",
+            "collect_city",
+            "collect_contact",
+            "collect_contactDiv",
+            "collect_contactTip",
+            "collect_email",
+            "collect_emailDiv",
+            "collect_emailTip",
+            "collect_phone",
+            "collect_phoneTip",
+            "collect_poneDiv",
+            "collect_postcode",
+            "collect_postcodeDiv",
+            "collect_postcodeTip",
+            "collect_province",
+            "collect_zone",
+            "errorMessage",
+            "fileADiv",
+            "fileATip",
+            "fileA_bind",
+            "fileA_echo",
+            "fileA_value",
+            "fileBDiv",
+            "fileBTip",
+            "fileB_bind",
+            "fileB_echo",
+            "fileB_value",
+            "fileCDiv",
+            "fileCTip",
+            "fileC_bind",
+            "fileC_echo",
+            "fileC_value",
+            "getGoodsSeal",
+            "invoice",
+            "invoice_Address",
+            "invoice_AddressDiv",
+            "invoice_AddressTip",
+            "invoice_openBank",
+            "invoice_openBankDiv",
+            "invoice_openBankID",
+            "invoice_openBankIDDiv",
+            "invoice_openBankIDTip",
+            "invoice_openBankTip",
+            "invoice_phone",
+            "invoice_phoneDiv",
+            "invoice_phoneTip",
+            "invoice_taxNum",
+            "invoice_taxNumDiv",
+            "invoice_taxNumTip",
+            "mInvoiceInfos",
+            "mRule",
+            "mRuleDiv",
+            "mRuleTip",
+            "mSign",
+            "mSign_s",
+            "maSign",
+            "receive_address",
+            "receive_addressDiv",
+            "receive_addressTip",
+            "receive_city",
+            "receive_man",
+            "receive_manDiv",
+            "receive_manTip",
+            "receive_phone",
+            "receive_phoneDiv",
+            "receive_phoneTip",
+            "receive_postcode",
+            "receive_province",
+            "receive_timeEnd",
+            "receive_timeStart",
+            "receive_timeStartDiv",
+            "receive_timeStartTip",
+            "receive_zone",
+            "rt_rt_dhnvhtcnpavobnttlknts",
+            "rt_rt_dhnvhtehjictbdmgi",
+            "rt_rt_dhnvhtgkeettsgosf",
+            "sealHint",
+            "sign",
+            "tabkeGoods",
+            "tucaoIcon",
+            "uploaderA",
+            "uploaderB",
+            "uploaderC",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context7_gGBe79": [
+          [
+            "Wdate",
+            "a",
+            "address-province",
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "b",
+            "bd_ra",
+            "bgm",
+            "btm_content",
+            "btn",
+            "btn_bg",
+            "checked",
+            "clearfix",
+            "close",
+            "date-hook",
+            "downTemp",
+            "errors",
+            "fl",
+            "float_l",
+            "iCheck-helper",
+            "icon",
+            "icon_",
+            "icon_down",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "ipts",
+            "iradio_tlmall",
+            "itxt",
+            "itxt_s",
+            "line",
+            "mg_r",
+            "mg_t",
+            "ml",
+            "one",
+            "pd_lr",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "reg-bus-btns",
+            "reg-bus-form",
+            "sActive",
+            "threeAndOne",
+            "tlmall-app",
+            "tlmall-wx",
+            "top_title",
+            "triangle_r",
+            "txt",
+            "txt_c",
+            "upload-error",
+            "uploader",
+            "uploader-list",
+            "uploader_s",
+            "wb",
+            "wc",
+            "webuploader-container",
+            "webuploader-element-invisible",
+            "webuploader-pick",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info",
+            "zc-container",
+            "zcInvoice",
+            "zc_btn_small",
+            "zc_count_signs",
+            "zc_footer",
+            "zc_infos_s",
+            "zc_infos_title",
+            "zc_inputs",
+            "zc_logo",
+            "zc_radios",
+            "zc_title",
+            "zc_title_s",
+            "zcaddress_tip"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context7_gGBe79": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H4",
+            "DIV/DIV/H5",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-file",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-radio",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/INS",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/P",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/FORM/DIV",
+            "DIV/H4/A",
+            "DIV/H5/EM",
+            "DIV/P/A",
+            "DIV/P/BR",
+            "DIV/SELECT/OPTION",
+            "FORM/DIV/DIV"
+          ]
+        ]
+      }
+    }
+  }
+}
