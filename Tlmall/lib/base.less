@@ -797,8 +797,9 @@ div[data-ysp-modelid^="registrationProtocol"]{
     }
   }
 }
+// 企业信息和收货信息页面的公共样式
 div[data-ysp-modelid^="enterpriseInformation"],div[data-ysp-modelid^="receivingInformation"]{
-  .enterprise-name,.enterprise-address,.detail-address,.legal-name,.id-type,.id-number,.id-card,.business-license-number,.business-license,.contact-name,.contact-phone,.PTTL-contact-name,.PTTL-contact-phone{
+  .enterprise-name,.enterprise-address,.detail-address,.legal-name,.id-type,.id-number,.id-card,.business-license-number,.business-license,.contact-name,.contact-phone,.PTTL-contact-name,.PTTL-contact-phone,.shipping-address,.consignee,.receive-phone,.choose-type,.sign-standard,.update-file,.update-idCard,.period-validity{
         padding: 0 15px;
         display: flex;
         margin-top: 15px;
@@ -833,6 +834,24 @@ div[data-ysp-modelid^="enterpriseInformation"],div[data-ysp-modelid^="receivingI
         }
         
       }
+   .enterprise-next,.submit-immediately{
+      width: 100%;
+      background: #f3f3f3;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+      margin-top: 10px;
+      button{
+        width: 92%;
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        text-align: center;
+        background: #E7350E;
+        border: 0;
+        border-radius: 3px; 
+      }
+    }
 }
 //企业信息
 div[data-ysp-modelid^="enterpriseInformation"]{
@@ -1032,24 +1051,6 @@ div[data-ysp-modelid^="enterpriseInformation"]{
       border-bottom: 1px solid #ccc;
       padding-bottom: 30px;
     }
-    .enterprise-next{
-      width: 100%;
-      background: #f3f3f3;
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-      margin-top: 10px;
-      button{
-        width: 92%;
-        height: 40px;
-        line-height: 40px;
-        color: #fff;
-        text-align: center;
-        background: #E7350E;
-        border: 0;
-        border-radius: 3px; 
-      }
-    }
   }
   .enterprise-error-msg{
     width: 100%;
@@ -1065,6 +1066,9 @@ div[data-ysp-modelid^="enterpriseInformation"]{
 }
 //收货信息
 div[data-ysp-modelid^="receivingInformation"]{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   .receive-iformation-form{
     	width: 100%;
       height: auto;
@@ -1076,8 +1080,193 @@ div[data-ysp-modelid^="receivingInformation"]{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 15px;
+        span{
+          font-size: 16px;
+        }
+        button{
+          width: 32%;
+          height: 45px;
+          background: #E7350E;
+          border: 0;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 14px;
+        }
+      }
+      p:last-child{
+        font-size: 12px;
+        padding-left: 26px;
       }
     }
+    .shipping-address{
+      i{
+        margin-right: 3px;
+      }
+      select{
+        width: 30%;
+        margin-right: 20px;
+      }
+    }
+    .zip-code{
+      padding: 0 15px 0 30px;
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      input{
+        width: 100%;
+        height: 44px;
+        display: inline-block;
+        border: #ccc solid 1px;
+        padding-left: 10px;
+        background: #fff;
+        border-radius: 3px;
+        font-size: 13px;
+      }
+    }
+    .choose-type{
+      width: 100%;
+      align-items: center;
+      .sign-type{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        b{
+          display: block;
+          width: 15px;
+          height: 15px;
+        }
+        span{
+          font-size: 11px;
+          margin-left: 5px;
+        }
+        .sign-checked{
+          background: url('../local/img/round-red.png') no-repeat;
+          background-size: 100%;
+        }
+        .sign-nochecked{
+          border-radius: 50%;
+          border: 1px solid #ccc;
+          background: #fff;
+        }
+      }
+      p:last-child{
+        width: 40%;
+      }
+    }
+    .sign-standard{
+      display: flex;
+      align-items: center;
+      span{
+        width: 24%;
+        margin-left: 3px;
+      }
+      input{
+        border:0;
+        background: none;
+        margin: 0;
+      }
+    }
+    .update-file,.update-idCard{
+      input{
+        width: 65%;
+      }
+      button{
+        width: 30%;
+        height: 44px;
+        margin-left: 5%;
+        border: 0;
+        background: #e7350d;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 13px;
+        position: relative;
+        input[type='file']{
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0;
+        }
+      }
+      span{
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 8px;
+        padding-left: 4%;
+      }
+    }
+    .period-validity{
+      width: 100%;
+      div{
+        width: 100%;
+        p{
+          width: 100%;
+        	display: flex;
+        	align-items: center;
+        	justify-content: space-between;
+          span{
+            display: inline-block;
+            text-align: center;
+          }
+          input{
+            margin: 0;
+            width: 45%;
+          }
+        }
+        label{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .invoice-type{
+    width: 100%;
+    padding: 15px;
+    h3{
+      width: 100%;
+      height: 44px;
+      line-height: 44px;
+      color: @theme-red;
+    }
+    div{
+      width: 100%;
+      p{
+        width: 100%;
+        display: flex;
+        height: 44px;
+        line-height: 44px;
+        align-items: center;
+        position: relative;
+        border-bottom: 1px solid #eee;
+        b{
+          display: block;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 1px solid #ccc;
+          background: #fff;
+          margin-right: 10px;
+        }
+        .invoice-checked{
+          border: 0;
+          background: url('../local/img/round-red.png') no-repeat;
+          background-size: 100%;
+        }
+        i{
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          background: url('../local/img/right.png') no-repeat;
+          background-size: 60%;
+          position: absolute;
+          right: 0;
+          top: 45%;
+        }
+      }
+    }
+  }
+  .submit-immediately{
+    margin: 30px 0 40px;
   }
 }
 //注册成功
@@ -1097,7 +1286,7 @@ div[data-ysp-modelid^="registeredSuccessfully"]{
       background-size: 100%;
       position: absolute;
       top: 0;
-      left: 34.5%;
+      left: 34%;
     }	
     h3{
       width: 100px;
