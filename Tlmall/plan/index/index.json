@@ -47,6 +47,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/partialWord",
@@ -79,13 +83,122 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control36_1Ht6sa": {
+      "location": {
+        "data": {
+          "tagName": "UL"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"fixedscroll\"]/DIV[2]/DIV[1]/UL[1]",
+              "descendant::DIV[@id=\"fixedscroll\"]//UL"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.tl-main-menu DIV.tl-content.clearfix UL.menu-list.clearfix"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[3]/DIV[2]/DIV[1]/UL[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control36_1Ht6sa"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control37_7w0gLr": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"floors\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.tl-wrap DIV.tl-ad-wrap DIV.tl-content"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[5]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control37_7w0gLr"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control39_CVGfUQ": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.tl-wrap DIV.tl-footer"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[6]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control39_CVGfUQ"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context2_JFd3LO": {
       "controls": [
         "control32_WMwJBg",
-        "control35_ReksFv"
+        "control35_ReksFv",
+        "control36_1Ht6sa",
+        "control37_7w0gLr",
+        "control39_CVGfUQ"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -96,6 +209,13 @@
       "fromContextId": "context2_JFd3LO",
       "fromAction": "doAction",
       "fromControlId": "control32_WMwJBg",
+      "toContexts": [
+        {
+          "toContextId": "context2_JFd3LO"
+        }
+      ]
+    },
+    "flow19_MEyehW": {
       "toContexts": [
         {
           "toContextId": "context2_JFd3LO"
@@ -136,6 +256,51 @@
               }
             }
           }
+        },
+        {
+          "id": "uiControl25_TLlxuH",
+          "controlId": "control36_1Ht6sa",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl25_TLlxuH",
+                "onGetTemplate": "getTemplate_uiControl25_TLlxuH"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl26_cLezAI",
+          "controlId": "control37_7w0gLr",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl26_cLezAI",
+                "onGetTemplate": "getTemplate_uiControl26_cLezAI"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl28_Byxrut",
+          "controlId": "control39_CVGfUQ",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl28_Byxrut",
+                "onGetTemplate": "getTemplate_uiControl28_Byxrut"
+              }
+            }
+          }
         }
       ]
     }
@@ -152,7 +317,12 @@
     "page/urls": {
       "contexts": {
         "context2_JFd3LO": [
-          "192.168.220.23/index.html"
+          "192.168.220.23/index.html",
+          "192.168.220.23/?_requestid=271",
+          "192.168.220.23/?_requestid=2377",
+          "192.168.220.23/?_requestid=3698",
+          "192.168.220.23/?_requestid=4200",
+          "192.168.220.23/"
         ]
       }
     },
@@ -583,6 +753,37 @@
             "LI/A/SPAN",
             "LI/DIV/DIV",
             "LI/SELECT/OPTION",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/I",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/P",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "LI/A/I",
+            "LI/A/SPAN",
+            "LI/DIV/DIV",
             "UL/LI/A",
             "UL/LI/DIV",
             "UL/LI/I",

@@ -179,6 +179,10 @@
         {
           "toContextId": "context5_MEUJxb",
           "toModelId": "enterpriseInformation"
+        },
+        {
+          "toContextId": "context2_JFd3LO",
+          "toModelId": "index"
         }
       ]
     },

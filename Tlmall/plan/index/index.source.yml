@@ -1,4 +1,4 @@
-getTemplate_uiControl21_TJE6Sz: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  constructor(props){\n    super(props);\n    this.state={\n      onOff:true,\n      open:\"none\"\n    }\n  }\n  logoClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"logoClick\"\n      })\n    }\n  }\n  searchClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"searchClick\"\n      })\n    }\n  }\n  iptChange = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"iptChange\"\n      })\n    }\n  }\n  addrListClick = (e) => {\n   let handler=this.props.customHandler;\n   let target=e.target;\n    this.setState(prevState => ({\n      onOff:!prevState.onOff,\n      open:prevState.onOff ? \"block\" : \"none\"\n    }));\n    if(handler){\n      handler({\n        data:target.selectedIndex,\n        eventType:\"addrListClick\"\n      })\n    }\n  }\n  addressClick = (e) => {\n   let handler=this.props.customHandler;\n    this.setState(prevState => ({\n      onOff:!prevState.onOff,\n      open:prevState.onOff ? \"block\" : \"none\"\n    }));\n    if(handler){\n      handler({\n        eventType:\"addressClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-index-top\">\n        <div className=\"logo-img\" onClick={me.logoClick.bind(me)}></div>\n        <div className=\"search-box\"><span className=\"search\" onClick={me.searchClick.bind(me)}></span><AInput placeholder={data.place} type=\"text\" value={data.value} onChange={me.iptChange.bind(me)}/></div>\n        <div className=\"address-box\" onClick={me.addressClick.bind(me)}><span className=\"address\"></span>{data.city}</div>\n        <div className=\"address-pop\" style={{display:me.state.open}}>\n          <div className=\"mask\"></div>\n          <div className=\"address-con\">\n            <p>请您选择分公司</p>\n            <ul>\n            \t{data.cities.map(function(d,i){\n                return(\n                \t<li data-index={i} onClick={me.addrListClick.bind(me)}>{d}</li>\n                )\n              })}\n            </ul>\n          </div>\n        </div>\n      </div>\n    )\n  }\n}"
+getTemplate_uiControl21_TJE6Sz: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  constructor(props){\n    super(props);\n    this.state={\n      onOff:true,\n      open:\"none\"\n    }\n  }\n  logoClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"logoClick\"\n      })\n    }\n  }\n  searchClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"searchClick\"\n      })\n    }\n  }\n  iptChange = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"iptChange\"\n      })\n    }\n  }\n  addrListClick = (e) => {\n   let handler=this.props.customHandler;\n   let target=e.target;\n    this.setState(prevState => ({\n      onOff:!prevState.onOff,\n      open:prevState.onOff ? \"block\" : \"none\"\n    }));\n    if(handler){\n      handler({\n        data:target.selectedIndex,\n        eventType:\"addrListClick\"\n      })\n    }\n  }\n  addressClick = (e) => {\n   let handler=this.props.customHandler;\n    this.setState(prevState => ({\n      onOff:!prevState.onOff,\n      open:prevState.onOff ? \"block\" : \"none\"\n    }));\n    if(handler){\n      handler({\n        eventType:\"addressClick\"\n      })\n    }\n  }\n  maskClick = (e) =>{\n    this.setState(prevState => ({\n      onOff:!prevState.onOff,\n      open:prevState.onOff ? \"block\" : \"none\"\n    })); \n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-index-top\">\n        <div className=\"logo-img\" onClick={me.logoClick.bind(me)}></div>\n        <div className=\"search-box\"><span className=\"search\" onClick={me.searchClick.bind(me)}></span><AInput placeholder={data.place} type=\"text\" value={data.value} onChange={me.iptChange.bind(me)}/></div>\n        <div className=\"address-box\" onClick={me.addressClick.bind(me)}><span className=\"address\"></span>{data.city}</div>\n        <div className=\"address-pop\" style={{display:me.state.open}}>\n          <div className=\"mask\" onClick={me.maskClick.bind(me)}></div>\n          <div className=\"address-con\">\n            <p>请您选择分公司</p>\n            <ul>\n            \t{data.cities.map(function(d,i){\n                return(\n                \t<li data-index={i} onClick={me.addrListClick.bind(me)}>{d}</li>\n                )\n              })}\n            </ul>\n          </div>\n        </div>\n      </div>\n    )\n  }\n}"
 getData_control32_WMwJBg: >-
   if(!elem){
     return;
@@ -53,7 +53,7 @@ doAction_uiControl21_TJE6Sz: >-
   elem.querySelector("#searchBtn").click();
 
   }
-getTemplate_uiControl24_tnes6R: "import {Component,Fragment} from 'react'; \nimport '../lib/swiper.min.js'\nexport default class extends Component{\n\ncomponentDidMount () {\n\tvar mySwiper = new Swiper('.swiper-container', {\n      autoplay: true,\n      loop: true,\n      pagination : {\n          el: '.swiper-pagination',\n      }\n    });\n}\n\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n\n        <div className=\"ysp-swiper swiper-container\">\n        <div className=\"swiper-wrapper\">\n          {\n            data.img.map(function(d,i){\n              return(\n              <a className=\"swiper-slide\" style={{backgroundImage:data.img[i]}} href={data.url[i]}>slide {i}</a>\n              )\n            })\n          }\n        </div>\n        <div className='swiper-pagination'></div>\n</div>\n    )\n  }\n}"
+getTemplate_uiControl24_tnes6R: "import {Component,Fragment} from 'react'; \nimport '../lib/swiper.min.js';\nimport '../lib/swiper.min.css';\nexport default class extends Component{\ncomponentDidMount(){\n    let swiperElem=document.querySelector(\".ysp-swiper\");\n    swiperElem.style.height = swiperElem.offsetWidth * 0.413;\n}\ncomponentDidUpdate() {\n\tlet mySwiper = new Swiper('.swiper-container', {\n      speed:500,\n      loop:true,\n      autoplay: true,\n      pagination:{\n        el:'.swiper-pagination',\n        clickable:true\n      }\n    });\n}\n\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n        <div className=\"ysp-swiper swiper-container\">\n        <div className=\"swiper-wrapper\">\n          {\n            data.img.map(function(d,i){\n              return(\n              <div className=\"swiper-slide\"><a href={data.url[i]}><img src={data.img[i]} /></a></div>\n              )\n            })\n          }\n        </div>\n        <div className=\"swiper-pagination\"></div>\n</div>\n    )\n  }\n}\n"
 getData_control35_ReksFv: |-
   if(!elem){
     return;
@@ -69,3 +69,95 @@ getData_control35_ReksFv: |-
   });
   return data;
 doAction_uiControl24_tnes6R: ''
+getTemplate_uiControl25_TLlxuH: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  menuClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"menuClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<ul className=\"ysp-menu\">\n      {data.menus.map(function(d,i){\n          return(\n            <li className={data.names[i]} data-index={i} onClick={me.menuClick.bind(me)}><span className=\"bar\">{d}</span></li>\n          )\n        })\n      }\n      </ul>\n    )\n  }\n}"
+getData_control36_1Ht6sa: |-
+  if(!elem){
+    return;
+  }
+  let data={
+    menus:[],
+    names:[]
+  };
+
+  let menus = elem.querySelectorAll("li");
+  [].map.call(menus,function(d,i){
+    if(i!==0){
+      data.menus.push(d.textContent);
+      data.names.push(d.id);
+    }
+  })
+  return data;
+doAction_uiControl25_TLlxuH: |-
+  if(data.eventType =="menuClick"){
+    let d = parseInt(data.dataCustom) + 1;
+    console.log(d);
+    elem.querySelectorAll("li")[d].querySelector("a").click();
+  }
+getTemplate_uiControl26_cLezAI: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  imgClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"imgClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<ul className=\"floor\">\n      {\n        data.map(function(d,i){\n          return(\n          <li className={\"ad\"+d.imgs.length}>\n          {\n          \td.imgs.map(function(m,n){\n              return(\n              <img src={m} data-index={i+\"-\"+n} onClick={me.imgClick.bind(me)}/>\n              )\n            })      \n          }\n          </li>\n          )\n        })  \n      }\n      </ul>\n    )\n  }\n}"
+getData_control37_7w0gLr: |-
+  if(!elem){
+    return;
+  }
+  let data=[];
+  let box1 = elem.querySelectorAll(".ad-box");
+  [].map.call(box1,function(d,i){
+    let ads = {
+      imgs:[],
+      links:[]
+    };
+    let box2 = d.querySelectorAll("a");
+    [].map.call(box2,function(m,n){
+      ads.imgs.push(m.querySelector("img").getAttribute("data"));
+      ads.links.push(m.href);
+    });
+    data.push(ads);
+  });
+  return data;
+doAction_uiControl26_cLezAI: |-
+  if(data.eventType == "imgClick"){
+    let Num = data.dataCustom;
+    let d = Num.indexOf("-");
+    let Num1 = parseInt(Num.substr(0,d));
+    let Num2 = parseInt(Num.substr(d+1,Num.length));
+    elem.querySelectorAll(".ad-box")[Num1].querySelectorAll("a")[Num2].click();
+  }
+getTemplate_uiControl27_4hN0rx: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"handlerClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me = this;\n    return(\n    \t<div className=\"ysp-footer\">\n        <span className=\"shop-btn\" onClick={me.handlerClick.bind(me)}>营业执照</span>\n        <p>{data[2]}</p>\n        <p>{data[3]}</p>\n      </div>\n    )\n  }\n}"
+getData_control38_CQD14f: |-
+  if(!elem){
+    return;
+  }
+  let data=[];
+  let ps = elem.querySelectorAll("p");
+  [].map.call(ps,function(d,i){
+    data.push(d.textContent);
+  });
+  return data;
+doAction_uiControl27_4hN0rx: |-
+  if(data.eventType == "handlerClick"){
+    
+  }
+getTemplate_uiControl28_zabxcu: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.selectedIndex,\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div></div>\n    )\n  }\n}"
+getData_control39_rrtmtm: |-
+  if(!elem){
+    return;
+  }
+  let data=[];
+  let notice = elem.querySelectorAll(".notice");
+  notice 
+  return data;
+doAction_uiControl28_zabxcu: ''
+getTemplate_uiControl28_Byxrut: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"handlerClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-footer\">\n        <span className=\"shop-btn\" onClick={me.handlerClick.bind(me)}>营业执照</span>\n        <p>{data[2]}</p>\n        <p>{data[3]}</p>\n      </div>\n    )\n  }\n}"
+getData_control39_CVGfUQ: |-
+  if(!elem){
+    return;
+  }
+  let data=[];
+  let ps = elem.querySelectorAll("p");
+  [].map.call(ps,function(d,i){
+    data.push(d.textContent);
+  });
+  return data;
+doAction_uiControl28_Byxrut: |-
+  if(data.eventType == "handlerClick"){
+    elem.querySelector(".tl-footer-lists").querySelectorAll("dl")[5].querySelectorAll("dd")[1].querySelector("a").click();
+  }
