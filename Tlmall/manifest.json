@@ -77,6 +77,16 @@
       "demo": [
         "http://192.168.220.23/personal.html?code=10400"
       ]
+    },
+    {
+      "title": "index",
+      "url": "adapter://Tlmall/plan/index/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/(index\\.)?(html|htm|aspx|asp|php|jsp)?(\\?|$)"
+      ],
+      "demo": [
+        "http://192.168.220.23/index.html"
+      ]
     }
   ],
   "name": "太力商城",
