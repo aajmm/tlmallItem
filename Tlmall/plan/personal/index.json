@@ -5,8 +5,7 @@
   "jsFile": "index.js",
   "requires": {
     "contact": "../contact/index.json",
-    "rebateConfirMation": "../rebateConfirMation/index.json",
-    "limitSearch": "../limitSearch/index.json"
+    "rebateConfirMation": "../rebateConfirMation/index.json"
   },
   "chineseName": "业务中心",
   "description": "",
@@ -723,176 +722,13 @@
       },
       "roles": "element",
       "frameXPath": ""
-    },
-    "control38_wI77bv": {
-      "location": {
-        "data": {
-          "tagName": "A"
-        },
-        "locators": [
-          {
-            "id": "button/text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "额度查询"
-              ],
-              "visText": [
-                "额度查询"
-              ]
-            }
-          },
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "额度查询"
-              ],
-              "visText": [
-                "额度查询"
-              ]
-            }
-          },
-          {
-            "id": "a/@href",
-            "prob": 1,
-            "ordinal": [
-              14,
-              25
-            ],
-            "value": {
-              "funcName": "void"
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 2,
-            "value": "descendant::DIV[@id=\"nav_sidebar\"]/UL[3]/LI[4]/A[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              20,
-              33
-            ],
-            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.nav_sidebar UL LI A"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[2]/UL[3]/LI[4]/A[1]"
-          }
-        ]
-      },
-      "intendedRole": "button",
-      "roles": "element,button,link",
-      "monitored": false,
-      "frameXPath": "",
-      "componentType": "button"
-    },
-    "control40_ITfLX6": {
-      "location": {
-        "data": {
-          "tagName": "SPAN"
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "额度查询"
-              ],
-              "visText": [
-                "额度查询"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": [
-              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
-              "descendant::DIV[@id=\"personalRight\"]//SPAN"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "frameXPath": ""
-    },
-    "control41_XuRKwC": {
-      "location": {
-        "data": {
-          "tagName": "SPAN"
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "额度查询"
-              ],
-              "visText": [
-                "额度查询"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": [
-              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
-              "descendant::DIV[@id=\"personalRight\"]//SPAN"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "frameXPath": ""
     }
   },
   "contexts": {
     "context3_IigyoX": {
       "controls": [
         "control11_ewt36D",
-        "control18_7lKlGo",
-        "control38_wI77bv"
+        "control18_7lKlGo"
       ],
       "anchors": [
         "control10_CwVfTa"
@@ -935,20 +771,6 @@
           "toModelId": "rebateConfirMation"
         }
       ]
-    },
-    "flow20_h3KdC9": {
-      "fromContextId": "context3_IigyoX",
-      "fromAction": "click",
-      "fromControlId": "control38_wI77bv",
-      "toContexts": [
-        {
-          "toContextId": "context3_IigyoX"
-        },
-        {
-          "toContextId": "context7_gua0Tw",
-          "toModelId": "limitSearch"
-        }
-      ]
     }
   },
   "pages": {
@@ -958,17 +780,6 @@
         {
           "id": "uiControl18_gTdWvv",
           "controlId": "control18_7lKlGo",
-          "display": {
-            "adapterId": "clickable",
-            "type": "button",
-            "adapter": {
-              "templateType": ""
-            }
-          }
-        },
-        {
-          "id": "uiControl27_dZaT6v",
-          "controlId": "control38_wI77bv",
           "display": {
             "adapterId": "clickable",
             "type": "button",

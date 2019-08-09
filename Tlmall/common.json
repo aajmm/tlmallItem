@@ -10,21 +10,11 @@
     },
     {
       "path": "lib/customTemplate.js"
-    },
-    {
-      "path": "lib/swiper.min.js",
-      "sourceType": "local",
-      "target": "face"
     }
   ],
   "common_css": [
     {
       "path": "lib/base.css"
-    },
-    {
-      "path": "lib/swiper.min.css",
-      "sourceType": "local",
-      "target": "face"
     },
     {
       "path": "lib/amazeui.touch1.override.css",

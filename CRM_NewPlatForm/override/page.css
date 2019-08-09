@@ -1,0 +1,73 @@
+/*分页*/
+.commpnPage {
+  margin-bottom: 20px;
+}
+.commpnPage ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.commpnPage ul li {
+  list-style-type: none;
+  display: inline-block;
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.commpnPage ul li a {
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  color: #333;
+  margin-bottom: -5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.commpnPage ul li.active {
+  background: #2980F9;
+}
+.commpnPage ul li.active a {
+  color: #fff;
+}
+.commpnPage ul .left-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../images/point_icon.png') no-repeat center center;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background-size: 45%;
+}
+.commpnPage ul .right-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../images/point_icon.png') no-repeat center center;
+  background-size: 45%;
+}
+.commpnPage .skip .skip-num {
+  width: 32px;
+  height: 20px;
+  margin-right: 5px;
+}
+.commpnPage .skip span:nth-child(1) {
+  margin-right: 10px;
+}
+.commpnPage .skip span {
+  margin-right: 5px;
+}
+.commpnPage .skip-right-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../images/上一页.png') no-repeat center center;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background-size: 100%;
+  border-radius: 50%;
+  color: #fff;
+  margin-left: 0;
+}

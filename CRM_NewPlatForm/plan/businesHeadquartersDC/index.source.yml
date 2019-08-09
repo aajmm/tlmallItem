@@ -1,0 +1,426 @@
+getData_control98_UOORsI: >
+  if (!elem) {
+    return {
+      value: '',
+      len: '',
+      title: '销售达成'
+    };
+  }
+
+  var dataMonth = elem.ownerDocument.querySelector('#searchHead') &&
+  elem.ownerDocument.querySelector('#searchHead').querySelector('input[name="filter_month"]');
+
+  var dataYear = elem.ownerDocument.querySelector('#searchHead') &&
+  elem.ownerDocument.querySelector('#searchHead').querySelector('input[name="filter_year"]');
+
+  if (dataMonth) {
+    data = dataMonth.value;
+    flag = true;
+  } else {
+    data = dataYear.value;
+    flag = false;
+  }
+
+  var len = data.length;
+
+  data = data.slice(0, len);
+
+  var title;
+
+  var u_title = elem.ownerDocument.querySelector('#tab-head');
+
+  if (u_title) {
+    var links = u_title.querySelectorAll('li');
+
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].className.indexOf('act') != -1) {
+        title = links[i].textContent;
+      }
+    }
+  } else {
+    title = '销售达成';
+  }
+
+  var moreLength =
+  elem.ownerDocument.querySelector('#searchHead').querySelectorAll('li').length
+  == 1 ? false : true;
+
+  var titleLength =
+  elem.ownerDocument.querySelector("#tab_box").querySelectorAll("li").length > 1
+  ? true : false;
+
+  var titleName =
+  elem.ownerDocument.querySelector("#tab_box").querySelectorAll("li")[0].textContent;
+
+  return {
+    value: data,
+    len: len,
+    title: title,
+    moreLength: moreLength,
+    flag: flag,
+    titleLength: titleLength,
+    titleName: titleName
+  };
+doAction_uiControl99_ZsT49M: >
+  // if (data.eventType === 'back') {
+
+  //   var li = elem &&
+  elem.ownerDocument.querySelector('#searchHead').querySelectorAll('li').length;
+
+  //   li > 1 ?
+  elem.ownerDocument.querySelector('#searchHead').querySelectorAll('li')[li -
+  2].querySelector('a').click() : ysp.appMain.back();
+
+  // }
+
+  if (data.eventType == 'AndroidBack') {
+    ysp.customHelper.AndroidBackFlag = 'reachBigData';
+  }
+
+  if (data.eventType === 'back') {
+    if (!top.EAPI.isAndroid()) {
+      var li = elem && elem.ownerDocument.querySelector('#searchHead').querySelectorAll('li').length;
+      li > 1 ? elem.ownerDocument.querySelector('#searchHead').querySelectorAll('li')[li - 2].querySelector('a').click() : elem.ownerDocument.defaultView.close();
+    } else {
+      ysp.customHelper.AndroidBackFn();
+    }
+  } // if (data.eventType == 'close') {
+
+  //   ysp.appMain.back();
+
+  // }
+
+  // if (data.eventType == 'time') {
+
+  // }
+
+  // if (data.eventType == 'change') {
+
+  //   var datetime = data.dataCustom.value;
+
+  //   var len = data.dataCustom.len;
+
+  //   datetime = datetime.slice(0, len);
+
+  //   console.log(datetime);
+
+  //  
+  elem.ownerDocument.querySelector('#filterArea').querySelector('.input-group-addon').click();
+
+  //   var time =
+  elem.ownerDocument.querySelector('#filterArea').querySelector('input[placeholder="选择日期"]');
+
+  //   time.focus();
+
+  //   time.value = datetime;
+
+  //   time.blur();
+
+  //   elem.ownerDocument.querySelector('#queryBtn').click();
+
+  // }
+getTemplate_uiControl99_ZsT49M: "import {Component} from 'react'; \nimport {ComplexHeader} from 'ysp-custom-components';\nexport default class extends Component{\n  constructor(props){\n  \tsuper(props);\n    this.state = {\n    \tcenterText: \"销售达成\",\n      moreLength:props.customData.moreLength,\n      flag:props.customData.flag,\n      titleLength:props.customData.titleLength,\n      titleName:props.customData.titleName\n    }\n  }\n  // componentDidMount(){\n  //   var _this = this;\n  //   ysp.customHelper.AndroidBackFlag = 'SaleBigData';\n  //   var handler = _this.props.customHandler;\n  //   if (handler) {\n  //     handler({\n  //       eventType: 'AndroidBack'\n  //     });\n  //   }\n  // }\n  componentWillReceiveProps(nextProps){\n    this.setState({\n      moreLength:nextProps.customData.moreLength,\n      flag:nextProps.customData.flag,\n      titleLength:nextProps.customData.titleLength,\n      titleName:nextProps.customData.titleName\n    })\n  }\n  componentDidMount(){\n  \twindow.addEventListener('ysp-change-title', this.changeTitle.bind(this), false);\n    this.setState({\n    \tcenterText: this.props.customData.title\n    })\n    //android物理返回键\n    ysp.customHelper.AndroidBackFlag = 'reachBigData';\n    var handler = this.props.customHandler;\n    if (handler) {\n      handler({\n        eventType: 'AndroidBack'\n      });\n    }\n  }\n  componentDidUpdate(){\n  \tvar sTitle = this.state.centerText;\n    var rTitle = this.props.customData.title;\n    if(sTitle != rTitle){\n    \tthis.setState({\n      \tcenterText: rTitle\n      })\n    }\n  }\n  changeTitle(e){\n  \tvar title = e.title;\n    this.setState({\n    \tcenterText: title\n    });\n  }\n   render = () => {\n       var _this = this;\n       return (\n         <div>\n         <ComplexHeader \n           data={{centerText: this.state.centerText,rightText:\"时间\"}} \n           backIsShow={true} \n           back={()=>{\n              var handler = _this.props.customHandler;\n              if (handler) {\n                handler({\n                  eventType: 'back'\n                });\n              }\n           }}\n           centerTime={this.props.customData && this.props.customData.value}\n           closeIsShow={false} \n           close={()=>{\n           \tvar handler = _this.props.customHandler;\n             if(handler){\n             \thandler({\n              \teventType : 'close'\n              })\n             }\n           }}\n           timeChange={(e)=>{\n               console.log('change',EAPI.isIOS());\n               if(EAPI.isIOS()){\n                 return;\n               }\n             \tvar handler = this.props.customHandler;\n               if(handler){\n               \thandler({\n                  data:{\n                  \tvalue: e.target.value,\n                    len: this.props.customData && this.props.customData.len\n                  },\n                \teventType : 'change'\n                })\n               }\n             }}\n           timeBlur={(e)=>{\n               console.log('blur',EAPI.isIOS());\n               if(!EAPI.isIOS()){\n                 return;\n               }\n             \tvar handler = this.props.customHandler;\n               if(handler){\n               \thandler({\n                  data:{\n                  \tvalue: e.target.value,\n                    len: this.props.customData && this.props.customData.len\n                  },\n                \teventType : 'change'\n                })\n               }\n             }}\n           moreIsShow={this.state.titleName == \"年度事业部达成\" ? true : this.state.moreLength ? this.state.titleLength : false}\n           hander={()=>{\n           \tvar evt = new Event('ysp-dialog-close');\n             evt.value='成了';\n             window.dispatchEvent(evt);\n           }}\n           filterIsShow={true} \n           filter={()=>{\n             \tvar handler = this.props.customHandler;\n               if(handler){\n               \thandler({\n                \teventType:'time'\n                })\n               }\n             }}\n           time={(e)=>{\n               var evt = new Event('ysp-time-show')\n               window.dispatchEvent(evt)\n             }}\n           />\n         </div>\n       );\n   }\n}"
+getData_control89_EwPocV: |
+  if (!elem) {
+    return;
+  }
+  var data = [];
+  var ths = elem.querySelectorAll("th");
+  for (var i = 0; i < ths.length; i++) {
+    var obj = {};
+    var title = ths[i].querySelector(".ui-jqgrid-sortable").textContent;
+
+    if ("实际销量" == title || "实际销售额" == title || "销量达成率" == title || "销售额达成率" == title || "实际销量总计" == title || "实际销售总计" == title) {
+      obj.title = title;
+      data.push(obj);
+    }
+  }
+  return data;
+doAction_uiControl65_OItCfI: |
+  var eventType = data.eventType;
+  var customData = data.customData;
+  var index = +customData;
+  if (eventType == 'click') {
+    var titleBtns = elem.querySelectorAll("th");
+
+    if (0 == index) {
+      for (var i = 0; i < titleBtns.length; i++) {
+        var title = titleBtns[i].querySelector(".ui-jqgrid-sortable").textContent;
+
+        if ("实际销量" == title || "实际销量总计" == title) {
+          titleBtns[i].querySelector(".ui-jqgrid-sortable").click();
+        }
+      }
+    }
+
+    if (1 == index) {
+      for (var i = 0; i < titleBtns.length; i++) {
+        var title = titleBtns[i].querySelector(".ui-jqgrid-sortable").textContent;
+
+        if ("实际销售额" == title || "实际销售总计" == title) {
+          titleBtns[i].querySelector(".ui-jqgrid-sortable").click();
+        }
+      }
+    }
+
+    if (2 == index) {
+      for (var i = 0; i < titleBtns.length; i++) {
+        var title = titleBtns[i].querySelector(".ui-jqgrid-sortable").textContent;
+
+        if ("销量达成率" == title) {
+          titleBtns[i].querySelector(".ui-jqgrid-sortable").click();
+        }
+      }
+    }
+
+    if (3 == index) {
+      for (var i = 0; i < titleBtns.length; i++) {
+        var title = titleBtns[i].querySelector(".ui-jqgrid-sortable").textContent;
+
+        if ("销售额达成率" == title) {
+          titleBtns[i].querySelector(".ui-jqgrid-sortable").click();
+        }
+      }
+    }
+  }
+getTemplate_uiControl65_OItCfI: "module.exports = React.createClass({\n  handleClick: function(e) {\n    var handler = this.props.customHandler;\n    var target = e.target;\n    var index = target.dataset.index;\n    if (handler) {\n      handler({\n        eventType: 'click',\n        data:index\n      });\n    }\n    \n    target.classList.add(\"active\");\n  \tvar _broNode = target.parentNode.childNodes;\n    var _broNodeLen = _broNode.length;\n    \n    for(var i=0; i<_broNodeLen; i++){\n      var _asc = _broNode[i].querySelector(\".ui-asc\");\n      var _desc = _broNode[i].querySelector(\".ui-desc\");\n      \n      if(i == index){\n        if(_asc.classList.contains('ui-disabled')==true){\n　　　　\t\t_asc.classList.remove(\"ui-disabled\");\n      \t\t _desc.classList.add(\"ui-disabled\");\n      \t}else{\n        \t_asc.classList.add(\"ui-disabled\");\n      \t\t_desc.classList.remove(\"ui-disabled\");\n        }\n      }else{\n        _broNode[i].classList.remove(\"active\");\n      \t_asc.classList.add(\"ui-disabled\");\n      \t_desc.classList.add(\"ui-disabled\");\n      }\n    }\n  },\n  componentDidUpdate(){\n    var elem=this.refs.toTop.ownerDocument.querySelector(\".view-wrapper\");\n    setTimeout(function(){\n      elem.scrollTop=0;\n    },500)\n  },\n  render: function() {\n    var _this = this;\n    var data = this.props.data.customData;\n    var titleBtn = data.map(function(d,i){\n      return (\n        <div className=\"ysp-table-titleItem\" \n          onClick={_this.handleClick.bind(_this)} data-index={i}>\n          {data[i].title == \"实际销量总计\" ? \"实际销量\" : data[i].title == \"实际销售总计\" ? \"实际销售额\" : data[i].title}\n          <span className=\"ysp-s-ico\">\n            <span className=\"ui-asc ui-disabled\"></span>\n            <span className=\"ui-desc ui-disabled\"></span>\n          </span>\n        </div>\n      )\n    });\n    \n    return (\n      <div className=\"ysp-table-titles\" ref=\"toTop\">\n        {titleBtn}\n      </div>\n    )\n  }\n})"
+getData_control124_1ZAE1L: |
+  if (!elem) {
+    return;
+  }
+  var data = [];
+  var tds = elem.querySelectorAll("td");
+  var obj = {};
+  for (var i = 0; i < tds.length; i++) {
+    var _string = tds[i].getAttribute("aria-describedby");
+
+    var _index = _string.lastIndexOf('_');
+
+    var _str = _string.substring(_index + 1);
+
+    var _textContent = tds[i].textContent;
+
+    switch (_str) {
+      case "targetSalesCount":
+        obj.targetSalesCount = _textContent.trim();
+        break;
+
+      case "realSalesCount":
+        obj.realSalesCount = _textContent.trim();
+        break;
+
+      case "targetSalesAmount":
+        obj.targetSalesAmount = _textContent.trim();
+        break;
+
+      case "realSalesAmount":
+        obj.realSalesAmount = _textContent.trim();
+        break;
+
+      case "salesCountPercent":
+        obj.salesCountPercent = _textContent.trim();
+        break;
+
+      case "salesAmountPercent":
+        obj.salesAmountPercent = _textContent.trim();
+        break;
+    }
+  }
+  data.push(obj);
+  return data;
+doAction_uiControl114_XrbJwG: ''
+getTemplate_uiControl114_XrbJwG: |-
+  module.exports = React.createClass({
+    render: function() {
+      var data = this.props.customData;
+      var lists = data && data.map(function(d,i){
+        return (
+          <div>
+            <h5 className="title"><i class="icon"></i><span>总计</span></h5>
+            <ul>
+              <li><span>目标销量</span><b>{data&&data[i]&&data[i].targetSalesCount}</b></li>
+              <li><span>目标销售额</span><b>{data&&data[i]&&data[i].targetSalesAmount}</b></li>
+              <li><span>实际销量</span><b>{data&&data[i]&&data[i].realSalesCount}</b></li>
+              <li><span>实际销售额</span><b>{data&&data[i]&&data[i].realSalesAmount}</b></li>
+              <li><span>销量达成率</span><b>{data&&data[i]&&data[i].salesCountPercent}</b></li>
+              <li><span>销售额达成率</span><b>{data&&data[i]&&data[i].salesAmountPercent}</b></li>
+            </ul>
+          </div>
+        )
+      });
+      
+      return (
+        <div className="ysp-tableList-boxSum">
+          {lists}
+        </div>
+      )
+    }
+  });
+getData_control275_2EgUIJ: |
+  if (elem) {
+    var data = {
+      dataLabel: [],
+      flag: [],
+      flags: []
+    };
+    if($(elem).length>0 && $(elem).find("#tab-head").length>0 && $(elem).find("#tab-head").children("li").length>0){
+      var a_s = $(elem).find("#tab-head").children("li");
+      for (var i = 0; i < a_s.length; i++) {
+        var asText = a_s.eq(i)[0].textContent;
+
+        if (asText != '年度项目达成') {
+          if (asText.indexOf("销售报表") == -1) {
+            data.dataLabel.push({
+              idx: a_s.eq(i).index(),
+              content: a_s.eq(i).text().trim()
+            });
+          }
+        }
+      }
+    }
+
+    return data;
+  }
+  return [];
+doAction_uiControl248_nQhTnd: |-
+  if (data.eventType == 'click') {
+    var index = +data.dataCustom.index;
+    var lis = $(elem).find("#tab-head").children("li");
+   if(lis){
+      lis.eq(index)[0].click();
+    }
+    // if (index == 1) {
+    //   lis[2].click();
+    // } else {
+    //   lis[index].click();
+    // }
+  }
+getTemplate_uiControl248_nQhTnd: |-
+  import {Component} from 'react';
+  import {Overlay} from 'ysp-custom-components';
+  export default class extends Component{
+    constructor(){
+      super();
+      this.state={
+       open:false
+      }
+        window.addEventListener('ysp-dialog-close',this.toogleSwitch.bind(this),false)
+    }
+    componentWillUnmount(){
+      window.removeEventListener('ysp-dialog-close',this.toogleSwitch.bind(this),false)
+    }
+    
+    toogleSwitch(){
+     this.setState({
+       open:!this.state.open
+      })
+    }
+    render=()=>{
+      var data = this.props.customData && this.props.customData.dataLabel;
+      var flag = this.props.customData && this.props.customData.flag;
+      var flags = this.props.customData && this.props.customData.flags;
+      var _this = this;
+     return (
+        <div className='.ysp-dialog-hander-op'  style={{display:this.state.open ? 'block':'none'}}>
+          <Overlay/>
+          <div className= 'ysp-dialog-hander'>
+             <ul>
+            {data && data.map((d,i)=>{  
+              return(
+                  <li data-index={d.idx} onClick={(e)=>{
+                    var target = e.target;
+                    var index = target.dataset.index;
+                    var handler = this.props.customHandler;
+                    if(handler){
+                      handler({
+                        data:{
+                          index : index,
+                          flag : flag,
+                          flags : flags
+                        },
+                        eventType:'click'
+                      });
+                    }
+                    _this.toogleSwitch();
+                    var evt = new Event('ysp-change-title');
+                    evt.title = e.target.textContent;
+                    window.dispatchEvent(evt);
+                  }}>{d.content}</li>
+              )})}
+              </ul>
+            <button onClick={()=>{
+                _this.toogleSwitch();
+                }
+              }>取消</button>
+          </div>
+        </div>
+      )
+    }
+  }
+getData_control253_wPBgTz: >
+  if (!elem) {
+    return;
+  }
+
+  var dataMonth = elem.ownerDocument.querySelector('#searchHead') &&
+  elem.ownerDocument.querySelector('#searchHead').querySelector('input[name="filter_month"]');
+
+  if (dataMonth) {
+    return true;
+  } else {
+    return false;
+  }
+doAction_uiControl173_btOVow: |
+  if (data.eventType == 'upValue') {
+    var val = data.dataCustom;
+    var valLength = val.length;
+    if (4 != valLength) {
+      //月度销售达成
+      // var monthLength = +val.substr(5);
+      // var inputMonth = elem.querySelector("#searchHead").querySelector('input[name="filter_month"]');
+      // inputMonth.focus();
+      // elem.querySelector('div[class="datepicker-months"]').querySelector("tbody").querySelectorAll("span")[monthLength - 1].click();
+      var inputYear = elem.querySelector("#searchHead").querySelector('input[name="filter_month"]');
+      // inputYear.focus();
+      inputYear.value = data.dataCustom;
+      elem.ownerDocument.defaultView.sessionStorage.setItem("myMonth",data.dataCustom);
+      var queryBtnSearch = elem.ownerDocument.querySelector("#queryBtnSearch");
+      queryBtnSearch.click();
+    } else {
+      //年度销售达成
+      var inputYear = elem.querySelector("#searchHead").querySelector('input[name="filter_year"]');
+      // inputYear.focus();
+      inputYear.value = data.dataCustom;
+      elem.ownerDocument.defaultView.sessionStorage.setItem("myYear",data.dataCustom);
+      var queryBtnSearch = elem.ownerDocument.querySelector("#queryBtnSearch");
+      queryBtnSearch.click();
+    } //inputMonth.value = data.dataCustom;
+    //var queryBtnSearch = elem.ownerDocument.querySelector("#queryBtnSearch");
+    //queryBtnSearch.click();
+
+  }
+getTemplate_uiControl173_btOVow: "import {Component} from 'react';\nimport {SaleReachCalendar} from 'ysp-custom-components';\nexport default class extends Component{\n  constructor(props){\n    super(props);\n    this.state={\n      mouth : true,\n      day : false,\n      show : false,\n      data : props.customData\n    }\n    window.addEventListener('ysp-time-show',this.toggle.bind(this),false)\n  }\n  componentDidMount(){\n    if(this.props.customData){\n      this.state.show ? this.styleId(): console.log('日历还没打开呢');\n    }else{\n      this.state.show ? this.stylesId(): console.log('日历还没打开呢');\n    }\n  }\n  componentDidUpdate(){\n    if(this.props.customData){\n      this.state.show ? this.styleId(): console.log('日历还没打开呢');\n    }else{\n      this.state.show ? this.stylesId(): console.log('日历还没打开呢');\n    }\n  }\n  styleId(){\n    var doc = this.refs.time;\n    if(doc){\n      doc.querySelector('#year').style.width = '50%';\n      doc.querySelector('#mouth').style.width = '50%';\n      \n      // if(this.state.data && !this.state.day  && !!this.state.mouth){\n      // \tdoc.querySelector('#year').style.width = '50%';\n      // \tdoc.querySelector('#mouth').style.width = '50%';\n      // }\n      // if(!this.state.data){\n      //   doc.querySelector('#year').style.width = '50%';\n      // \tdoc.querySelector('#mouth').style.width = '50%';\n      // }\n      // if(this.state.data && !this.state.mouth && !this.state.day){\n      //   doc.querySelector('#year').style.width = '100%';\n      // }\n      // if(!this.state.data){\n      //   doc.querySelector('#mouth').removeAttribute('style');\n      //   doc.querySelector('#year').style.width = '100%';\n      // }\n    }\n  }\n  stylesId(){\n    var doc = this.refs.time;\n    if(doc){\n      doc.querySelector('#year').style.width = '100%';\n    }\n  }\n  \n  toggle(){\n    this.setState({\n      show : !this.state.show\n    })\n  }\n  activeValue(even){\n    var doc = even.parentElement.nextElementSibling;\n    if(this.props.customData){\n      var year = doc.querySelector('#year').querySelector('.active').textContent;\n    var mouth = this.state.mouth && doc.querySelector('#mouth').querySelector('.active').textContent;\n    var day = this.state.day && doc.querySelector('#day').querySelector('.active').textContent;\n\t\tmouth = mouth < 10 ? '0' + mouth : mouth; \n  \tday = day && day < 10 ? '0' + day : day;\n    var time = day ? (year + '-' + mouth + '-' + day ) :( mouth ? year + '-' + mouth : year);\n      return time;\n    }else{\n      return doc.querySelector('#year').querySelector('.active').textContent;\n    }\n    \n  }\n  upValue(e){\n    var handler = this.props.customHandler;\n    var value = this.activeValue(e.target);\n    if(handler){\n      handler({\n        data : value,\n        eventType : 'upValue'\n      })\n    }\n    this.setState({\n      show : false\n    })\n  }\n  render(){\n    var _this = this;\n    return(\n      <div>{this.state.show && \n        <div className='moudle-time' ref='time'>\n          <div className = 'date-time'>\n            <SaleReachCalendar \n              mouth = {_this.state.mouth}\n              day = {_this.state.day}\n              upValue = {_this.upValue.bind(_this)}\n              show = {(e)=>{\n                _this.toggle();\n              }}\n              y = {this.props.customData}\n            />\n          </div>\n        </div>}\n      </div>\n    )\n  }\n}"
+getData_control116_kIDcZ0: "if (!elem) {\n  return [];\n}\nif (elem) {\n  var data = [];\n  var trs = elem.querySelector(\"#table_list_1\").querySelectorAll(\"tr\");\n  var reportId = elem.querySelector('input[name=\"reportId\"]').value;\n  var titleIdx = null;\n  var deepFlag = true;\n\n  var strFuc = function (_obj) {\n    var _string = _obj.getAttribute(\"aria-describedby\");\n\n    var _index = _string.lastIndexOf('_');\n\n    var _str = _string.substring(_index + 1);\n\n    return _str;\n  };\n  if (!titleIdx) {\n    var _tds = trs[1] && trs[1].querySelectorAll(\"td\");\n    var a, b, c, d, e, f, g, h, l;\n\n    if (_tds) {\n      if (\"report34-2\" == reportId || \"report34-1\" == reportId || \"report49\" == reportId) {\n        //销售代表（客户与门店达成）、（产品销售达成）\n        if (\"report34-2\" == reportId || \"report34-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"customerName\" == _str) {\n              a = n;\n            }\n          }\n        } else if (\"report49\" == reportId) {\n          var numTemp = new Array(4);\n          for (var n = 0; n < _tds.length; n++) { //把4种可能得标题都取出来存在数组里\n            var _str = strFuc(_tds[n]);\n\n            if (\"modelName\" == _str) {\n              numTemp[0] = n;\n            }else if(\"projectSeries\" == _str) {\n              numTemp[1] = n;\n            }else if(\"projectName\" == _str) {\n              numTemp[2] = n;\n            }else if(\"department\" == _str) {\n              numTemp[3] = n;\n            }\n          }\n          if(numTemp[0]!==undefined){\n            a = numTemp[0];\n          }else if(numTemp[1]!==undefined){\n            a = numTemp[1];\n          }else if(numTemp[2]!==undefined){\n            a = numTemp[2];\n          }else if(numTemp[3]!==undefined){\n            a = numTemp[3];\n          }else{\n            a = 0;\n          }\n        }\n      } else if (\"report34\" == reportId || \"report33\" == reportId || \"report33-1\" == reportId || \"report33-1-1\" == reportId || \"report48\" == reportId) {\n        //办事处主任 （分公司销售人员达成）、（办事处事业部达成）\n        if (\"report34\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"salerName\" == _str) {\n              b = n;\n            }\n          }\n        } else if (\"report33\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"department\" == _str) {\n              b = n;\n            }\n          }\n        } else if (\"report33-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"projectName\" == _str) {\n              b = n;\n            }\n          }\n        } else if (\"report33-1-1\" == reportId || \"report48\" == reportId) {\n          var numTemp = new Array(4);\n          for (var n = 0; n < _tds.length; n++) { //把4种可能得标题都取出来存在数组里\n            var _str = strFuc(_tds[n]);\n\n            if (\"modelName\" == _str) {\n              numTemp[0] = n;\n            }else if(\"projectSeries\" == _str) {\n              numTemp[1] = n;\n            }else if(\"projectName\" == _str) {\n              numTemp[2] = n;\n            }else if(\"department\" == _str) {\n              numTemp[3] = n;\n            }\n          }\n          if(numTemp[0]!==undefined){\n            b = numTemp[0];\n          }else if(numTemp[1]!==undefined){\n            b = numTemp[1];\n          }else if(numTemp[2]!==undefined){\n            b = numTemp[2];\n          }else if(numTemp[3]!==undefined){\n            b = numTemp[3];\n          }else{\n            b = 0;\n          }\n        }\n      } else if (\"report15\" == reportId || \"report16\" == reportId || \"report16-1\" == reportId) {\n        //分总 分公司事业部达成 \n        if (\"report15\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"department\" == _str) {\n              e = n;\n            }\n          }\n        } else if (\"report16\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"projectName\" == _str) {\n              e = n;\n            }\n          }\n        } else if (\"report16-1\" == reportId) {\n          var numTemp = new Array(4);\n          for (var n = 0; n < _tds.length; n++) { //把4种可能得标题都取出来存在数组里\n            var _str = strFuc(_tds[n]);\n\n            if (\"modelName\" == _str) {\n              numTemp[0] = n;\n            }else if(\"projectSeries\" == _str) {\n              numTemp[1] = n;\n            }else if(\"projectName\" == _str) {\n              numTemp[2] = n;\n            }else if(\"department\" == _str) {\n              numTemp[3] = n;\n            }\n          }\n          if(numTemp[0]!==undefined){\n            e = numTemp[0];\n          }else if(numTemp[1]!==undefined){\n            e = numTemp[1];\n          }else if(numTemp[2]!==undefined){\n            e = numTemp[2];\n          }else if(numTemp[3]!==undefined){\n            e = numTemp[3];\n          }else{\n            e = 0;\n          }\n        }\n      } else if (\"report20\" == reportId || \"report46\" == reportId) {\n        //分总 分公司项目达成、产品销售达成\n        if (\"report20\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"projectName\" == _str) {\n              f = n;\n            }\n          }\n        } else if (\"report46\" == reportId) {\n          var numTemp = new Array(4);\n          for (var n = 0; n < _tds.length; n++) { //把4种可能得标题都取出来存在数组里\n            var _str = strFuc(_tds[n]);\n\n            if (\"modelName\" == _str) {\n              numTemp[0] = n;\n            }else if(\"projectSeries\" == _str) {\n              numTemp[1] = n;\n            }else if(\"projectName\" == _str) {\n              numTemp[2] = n;\n            }else if(\"department\" == _str) {\n              numTemp[3] = n;\n            }\n          }\n          if(numTemp[0]!==undefined){\n            f = numTemp[0];\n          }else if(numTemp[1]!==undefined){\n            f = numTemp[1];\n          }else if(numTemp[2]!==undefined){\n            f = numTemp[2];\n          }else if(numTemp[3]!==undefined){\n            f = numTemp[3];\n          }else{\n            f = 0;\n          }\n        }\n      } else if (\"report17\" == reportId || \"report18\" == reportId || \"report18-1\" == reportId || \"report19\" == reportId) {\n        //分总 分公司办事处销售达成\n        if (\"report17\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"officeName\" == _str) {\n              g = n;\n            }\n          }\n        } else if (\"report18\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"salerName\" == _str) {\n              g = n;\n            }\n          }\n        } else if (\"report18-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"customerName\" == _str) {\n              g = n;\n            }\n          }\n        } else if (\"report19\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"salerName\" == _str) {\n              g = n;\n            }\n          }\n        }\n      } else if (\"report29\" == reportId || \"report29-1\" == reportId || \"report45\" == reportId) {\n        //产品经理 事业部分项目达成、产品销售达成\n        if (\"report29\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"projectName\" == _str) {\n              h = n;\n            }\n          }\n        } else if (\"report29-1\" == reportId) {\n          var numTemp = new Array(4);\n          for (var n = 0; n < _tds.length; n++) { //把4种可能得标题都取出来存在数组里\n            var _str = strFuc(_tds[n]);\n\n            if (\"modelName\" == _str) {\n              numTemp[0] = n;\n            }else if(\"projectSeries\" == _str) {\n              numTemp[1] = n;\n            }else if(\"projectName\" == _str) {\n              numTemp[2] = n;\n            }else if(\"department\" == _str) {\n              numTemp[3] = n;\n            }\n          }\n          if(numTemp[0]!==undefined){\n            h = numTemp[0];\n          }else if(numTemp[1]!==undefined){\n            h = numTemp[1];\n          }else if(numTemp[2]!==undefined){\n            h = numTemp[2];\n          }else if(numTemp[3]!==undefined){\n            h = numTemp[3];\n          }else{\n            h = 0;\n          }\n        } else if (\"report45\" == reportId) {\n          var numTemp = new Array(4);\n          for (var n = 0; n < _tds.length; n++) { //把4种可能得标题都取出来存在数组里\n            var _str = strFuc(_tds[n]);\n\n            if (\"modelName\" == _str) {\n              numTemp[0] = n;\n            }else if(\"projectSeries\" == _str) {\n              numTemp[1] = n;\n            }else if(\"projectName\" == _str) {\n              numTemp[2] = n;\n            }else if(\"department\" == _str) {\n              numTemp[3] = n;\n            }\n          }\n          if(numTemp[0]!==undefined){\n            h = numTemp[0];\n          }else if(numTemp[1]!==undefined){\n            h = numTemp[1];\n          }else if(numTemp[2]!==undefined){\n            h = numTemp[2];\n          }else if(numTemp[3]!==undefined){\n            h = numTemp[3];\n          }else{\n            h = 0;\n          }\n        }\n      } else if (\"report31\" == reportId || \"report31-1\" == reportId || \"report31-1-1\" == reportId || \"report31-1-1-1\" == reportId) {\n        //产品经理 分公司项目达成\n        if (\"report31\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"branchName\" == _str) {\n              h = n;\n            }\n          }\n        } else if (\"report31-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"officeName\" == _str) {\n              h = n;\n            }\n          }\n        } else if (\"report31-1-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"salerName\" == _str) {\n              h = n;\n            }\n          }\n        } else if (\"report31-1-1-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"customerName\" == _str) {\n              h = n;\n            }\n          }\n        }\n      } else if (\"report1\" == reportId || \"report1-1\" == reportId || \"report1-1-1\" == reportId || \"report1-2\" == reportId || \"report1-2-1\" == reportId || \"report1-2-1-1\" == reportId || \"report1-2-1-1-1\" == reportId || \"report4\" == reportId || \"report4-1\" == reportId || \"report43\" == reportId || \"report2\" == reportId || \"report2-1\" == reportId || \"report2-1-1\" == reportId || \"report2-1-1-1\" == reportId || \"report2-2\" == reportId || \"report2-2-1\" == reportId || \"report2-2-1-1\" == reportId) {\n        //总部领导 事业部销售计划总体达成 、事业部销售计划分项目达成、事业部销售计划分渠道达成、分公司销售计划达成\n        if (\"report1\" == reportId || \"report2-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"department\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report1-1\" == reportId || \"report4\" == reportId || \"report2-1-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"projectName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report1-1-1\" == reportId || \"report4-1\" == reportId || \"report43\" == reportId || \"report2-1-1-1\" == reportId) {\n          var numTemp = new Array(4);\n          for (var n = 0; n < _tds.length; n++) { //把4种可能得标题都取出来存在数组里\n            var _str = strFuc(_tds[n]);\n\n            if (\"modelName\" == _str) {\n              numTemp[0] = n;\n            }else if(\"projectSeries\" == _str) {\n              numTemp[1] = n;\n            }else if(\"projectName\" == _str) {\n              numTemp[2] = n;\n            }else if(\"department\" == _str) {\n              numTemp[3] = n;\n            }\n          }\n          if(numTemp[0]!==undefined){\n            l = numTemp[0];\n          }else if(numTemp[1]!==undefined){\n            l = numTemp[1];\n          }else if(numTemp[2]!==undefined){\n            l = numTemp[2];\n          }else if(numTemp[3]!==undefined){\n            l = numTemp[3];\n          }else{\n            l = 0;\n          }\n        } else if (\"report1-2\" == reportId || \"report2\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"branchName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report1-2-1\" == reportId || \"report2-2\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"officeName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report1-2-1-1\" == reportId || \"report2-2-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"salerName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report1-2-1-1-1\" == reportId || \"report2-2-1-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"customerName\" == _str) {\n              l = n;\n            }\n          }\n        }\n      } else if (\"report7\" == reportId || \"report8\" == reportId || \"report44\" == reportId || \"report9\" == reportId || \"report10\" == reportId || \"report10-1\" == reportId || \"report9-1\" == reportId || \"report9-1-1\" == reportId || \"report9-1-1-1\" == reportId) {\n        //事业部总经理 事业部分项目达成、产品销售达成、分公司事业部达成\n        //大客户业务部总经理和客户经理 事业部分项目达成、产品销售达成、分公司事业部达成\n        if (\"report7\" == reportId || \"report10\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"projectName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report8\" == reportId || \"report44\" == reportId || \"report10-1\" == reportId) {\n          var numTemp = new Array(4);\n          for (var n = 0; n < _tds.length; n++) { //把4种可能得标题都取出来存在数组里\n            var _str = strFuc(_tds[n]);\n\n            if (\"modelName\" == _str) {\n              numTemp[0] = n;\n            }else if(\"projectSeries\" == _str) {\n              numTemp[1] = n;\n            }else if(\"projectName\" == _str) {\n              numTemp[2] = n;\n            }else if(\"department\" == _str) {\n              numTemp[3] = n;\n            }\n          }\n          if(numTemp[0]!==undefined){\n            l = numTemp[0];\n          }else if(numTemp[1]!==undefined){\n            l = numTemp[1];\n          }else if(numTemp[2]!==undefined){\n            l = numTemp[2];\n          }else if(numTemp[3]!==undefined){\n            l = numTemp[3];\n          }else{\n            l = 0;\n          }\n        } else if (\"report9\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"branchName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report9-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"officeName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report9-1-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"salerName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report9-1-1-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"customerName\" == _str) {\n              l = n;\n            }\n          }\n        }\n      } else if (\"report23\" == reportId || \"report23-1\" == reportId || \"report23-1-1\" == reportId || \"report27\" == reportId || \"report24\" == reportId || \"report22\" == reportId || \"report22-1\" == reportId || \"report47\" == reportId) {\n        //品牌经理 办事处项目达成、分公司销售人员达成、分公司分项目达成、产品销售达成\n        if (\"report23\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"officeName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report23-1\" == reportId || \"report24\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"salerName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report23-1-1\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"customerName\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report27\" == reportId || \"report22-1\" == reportId || \"report47\" == reportId) {\n          var numTemp = new Array(4);\n          for (var n = 0; n < _tds.length; n++) { //把4种可能得标题都取出来存在数组里\n            var _str = strFuc(_tds[n]);\n\n            if (\"modelName\" == _str) {\n              numTemp[0] = n;\n            }else if(\"projectSeries\" == _str) {\n              numTemp[1] = n;\n            }else if(\"projectName\" == _str) {\n              numTemp[2] = n;\n            }else if(\"department\" == _str) {\n              numTemp[3] = n;\n            }\n          }\n          if(numTemp[0]!==undefined){\n            l = numTemp[0];\n          }else if(numTemp[1]!==undefined){\n            l = numTemp[1];\n          }else if(numTemp[2]!==undefined){\n            l = numTemp[2];\n          }else if(numTemp[3]!==undefined){\n            l = numTemp[3];\n          }else{\n            l = 0;\n          }\n        } else if (\"report22\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"projectName\" == _str) {\n              l = n;\n            }\n          }\n        }\n      } else if (\"report5\" == reportId || \"report5-1\" == reportId || \"report6\" == reportId || \"report21\" == reportId || \"report32\" == reportId || \"report11\" == reportId || \"report28\" == reportId) {\n        // 总部领导 年度事业部达成、年度事业部达成\n        // 分总 年度分公司事业部达成\n        // 产品经理 年度分公司事业部达成\n        // 品牌经理 事业部分公司达成\n        // 事业部总经理 年度分公司事业部达成\n        // 销售代表没有年度达成\n        // 办事处主任没有年度达成\n        // 大客户业务部总经理和客户经理年度销售达成\n        if (\"report5\" == reportId || \"report21\" == reportId || \"report28\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"department\" == _str) {\n              l = n;\n            }\n          }\n        } else if (\"report5-1\" == reportId || \"report6\" == reportId || \"report32\" == reportId || \"report11\" == reportId) {\n          for (var n = 0; n < _tds.length; n++) {\n            var _str = strFuc(_tds[n]);\n\n            if (\"branchName\" == _str) {\n              l = n;\n            }\n          }\n        }\n      } else {//       for (var n = 0; n < _tds.length; n++) {\n        //         var _str = strFuc(_tds[n]);\n        //         switch (_str) {\n        //           case \"projectSeries\":\n        //             a = n;\n        //             break;\n        //           case \"modelName\":\n        //             b = n;\n        //             break;\n        //           case \"projectName\":\n        //             c = n;\n        //             break;\n        //           case \"department\":\n        //             d = n;\n        //             break;\n        //           case \"branchName\":\n        //             e = n;\n        //             break;\n        //         }\n        //       }\n      }\n\n      if (a >= 0) {\n        titleIdx = a;\n      } else if (b >= 0) {\n        titleIdx = b;\n      } else if (c >= 0) {\n        titleIdx = c;\n      } else if (d >= 0) {\n        titleIdx = d;\n      } else if (e >= 0) {\n        titleIdx = e;\n      } else if (f >= 0) {\n        titleIdx = f;\n      } else if (g >= 0) {\n        titleIdx = g;\n      } else if (h >= 0) {\n        titleIdx = h;\n      } else if (l >= 0) {\n        titleIdx = l;\n      }\n\n      if (!_tds[titleIdx].querySelector(\"a\")) {\n        deepFlag = false;\n        /**当无法下钻的时候，标题按照机型，机型编码，任务产品系列，项目的优先级依次往下找，\n        \t titleSite存标题的指针，按照指针位置往下找标题\n           （逻辑为机型没数据，标题就找机型编码，以此类推） yue add*/\n        var titleSite = new Array(4);\n        for (var n = 0; n < _tds.length; n++) {\n          var _str = strFuc(_tds[n]);\n\n          if (\"modelName\" == _str) {\n            titleSite[0] = n;\n          }else if(\"projectSeries\" == _str) {\n            titleSite[1] = n;\n          }else if(\"projectName\" == _str) {\n            titleSite[2] = n;\n          }else if(\"department\" == _str) {\n            titleSite[3] = n;\n          }\n        }\n      }\n    }\n  }\n  for (var i = 1; i < trs.length; i++) {\n    var tds = trs[i].querySelectorAll(\"td\");\n    var obj = {};\n\n    if (!trs[i].querySelectorAll('a')) {\n      obj.deepFlag = false;\n    } else {\n      obj.deepFlag = deepFlag;\n    }\n    obj.reportIds = reportId;\n    for (var j = 0; j < tds.length; j++) {\n      var _str = strFuc(tds[j]);\n\n      var _textContent = tds[j].textContent.trim();\n\n      if (\"report34-2\" == reportId || \"report34-1\" == reportId || \"report18-1\" == reportId || \"report31-1-1-1\" == reportId || \"report1-2-1-1-1\" == reportId || \"report23-1-1\" == reportId || \"report2-2-1-1\" == reportId || \"report9-1-1-1\" == reportId) {\n        debugger\n        var titles = tds[titleIdx].textContent.trim();\n\t\t\t\tif(\"\" == titles){\n          if(titleSite[0]!==undefined){\n            titles = tds[titleSite[0]].textContent.trim();\n          }\n          if (\"\" == titles) {\n            if(titleSite[1]!==undefined){\n              titles = tds[titleSite[1]].textContent.trim();\n            }\n            if (\"\" == titles) {\n              if(titleSite[2]!==undefined){\n                titles = tds[titleSite[2]].textContent.trim();\n              }\n              if (\"\" == titles) {\n                if(titleSite[3]!==undefined){\n                  titles = tds[titleSite[3]].textContent.trim();            \n                }\n              }\n            }\n          }\n        }\n        \n\n        obj.title = titles;\n      } else if (\"report49\" == reportId || \"report33-1-1\" == reportId || \"report48\" == reportId || \"report16-1\" == reportId || \"report46\" == reportId || \"report29-1\" == reportId || \"report45\" == reportId || \"report1-1-1\" == reportId || \"report4-1\" == reportId || \"report43\" == reportId || \"report44\" == reportId || \"report47\" == reportId) {\n        var titles = tds[titleIdx].textContent.trim();\n\t\t\t\tdebugger\n        if(\"\" == titles){\n          if(titleSite[0]!==undefined){\n            titles = tds[titleSite[0]].textContent.trim();\n          }\n          if (\"\" == titles) {\n            if(titleSite[1]!==undefined){\n              titles = tds[titleSite[1]].textContent.trim();\n            }\n            if (\"\" == titles) {\n              if(titleSite[2]!==undefined){\n                titles = tds[titleSite[2]].textContent.trim();\n              }\n              if (\"\" == titles) {\n                if(titleSite[3]!==undefined){\n                  titles = tds[titleSite[3]].textContent.trim();\n                  if (\"\" == titles) {\n                    titles = tds[0].textContent.trim();\n                  }\n                }\n              }\n            }\n          }\n        }\n\n        obj.title = titles;\n      } else if (\"report2-1-1-1\" == reportId || \"report8\" == reportId || \"report10-1\" == reportId || \"report27\" == reportId || \"report22-1\" == reportId) {\n        var titles = tds[titleIdx].textContent.trim();\n\t\t\t\tdebugger\n        if(\"\" == titles){\n          if(titleSite[0]!==undefined){\n            titles = tds[titleSite[0]].textContent.trim();\n          }\n          if (\"\" == titles) {\n            if(titleSite[1]!==undefined){\n              titles = tds[titleSite[1]].textContent.trim();\n            }\n            if (\"\" == titles) {\n              if(titleSite[2]!==undefined){\n                titles = tds[titleSite[2]].textContent.trim();\n              }\n              if (\"\" == titles) {\n                if(titleSite[3]!==undefined){\n                  titles = tds[titleSite[3]].textContent.trim();\n                  if (\"\" == titles) {\n                    titles = tds[0].textContent.trim();\n                  }\n                }\n              }\n            }\n          }\n        }\n\n        obj.title = titles;\n      } else if (\"report31\" == reportId || \"report23\" == reportId) {\n        //产品经理 分公司项目达成（分别取分公司和项目字段）、品牌经理 办事处项目达成（分别取办事处和项目字段）\n        var titles = tds[titleIdx].textContent.trim();\n        var titles1 = tds[titleIdx - 1].textContent.trim();\n        obj.title = titles;\n        obj.titles = titles1;\n      } else {\n        obj.title = tds[titleIdx].textContent.trim();\n      }\n\n      switch (_str) {\n        case \"targetSalesCount\":\n          obj.targetSalesCount = _textContent;\n          break;\n\n        case \"realSalesCount\":\n          obj.realSalesCount = _textContent;\n          break;\n\n        case \"targetSalesAmount\":\n          obj.targetSalesAmount = _textContent;\n          break;\n\n        case \"realSalesAmount\":\n          obj.realSalesAmount = _textContent;\n          break;\n\n        case \"salesCountPercent\":\n          obj.salesCountPercent = _textContent.substr(0, _textContent.length - 1);\n          break;\n\n        case \"salesAmountPercent\":\n          obj.salesAmountPercent = _textContent.substr(0, _textContent.length - 1);\n          break;\n\n        case \"salesCountBigCustomer\":\n          obj.salesCountBigCustomer = _textContent;\n          break;\n\n        case \"salesCountHead\":\n          obj.salesCountBigCustomer = _textContent;\n          break;\n\n        case \"salesAmountBigCustomer\":\n          obj.salesAmountBigCustomer = _textContent;\n          break;\n\n        case \"salesAmountHead\":\n          obj.salesAmountBigCustomer = _textContent;\n          break;\n\n        case \"rank\":\n          var rank_a = tds[j].querySelector(\"a\");\n          obj.rank = {};\n\n          if (rank_a) {\n            obj.rank.rankFlag = true;\n            obj.rank.reportId = reportId; // var tempData = rank_a.getAttribute(\"onmouseover\");\n            // var tempStart = tempData.indexOf(\"[{\");\n            // var tempEnd = tempData.indexOf(\"}]\");\n            // var dataArray = JSON.parse(tempData.substring(tempStart, tempEnd + 2));\n\n            var aa = [];\n            var cc = [];\n            var rankTrs = elem.ownerDocument.querySelector(\".rank-pop-box\").querySelector(\".pop-table\").querySelector(\"tbody\").querySelectorAll(\"tr\");\n\n            if (rankTrs.length > 0) {\n              for (var z = 0; z < rankTrs.length; z++) {\n                //所有的排名数据\n                var bb = {};\n                var rankTds = rankTrs[z].querySelectorAll(\"td\");\n\n                for (var w = 0; w < rankTds.length; w++) {\n                  if (\"report15\" == reportId || \"report2-1\" == reportId || \"report21\" == reportId) {\n                    bb.branchName = rankTds[1].textContent;\n                    bb.salesAmountPercent = rankTds[4].textContent.substr(0, rankTds[4].textContent.length - 1);\n                    bb.rank = rankTds[5].textContent;\n                  } else if (\"report18\" == reportId || \"report34\" == reportId || \"report23-1\" == reportId) {\n                    bb.salerName = rankTds[3].textContent;\n                    bb.salesAmountPercent = rankTds[5].textContent.substr(0, rankTds[5].textContent.length - 1);\n                    bb.rank = rankTds[6].textContent;\n                  } else if (\"report16\" == reportId || \"report20\" == reportId || \"report22\" == reportId || \"report2-1-1\" == reportId) {\n                    bb.branchName = rankTds[1].textContent;\n                    bb.salesAmountPercent = rankTds[5].textContent.substr(0, rankTds[5].textContent.length - 1);\n                    bb.rank = rankTds[6].textContent;\n                  } else if (\"report33\" == reportId) {\n                    bb.officeName = rankTds[2].textContent;\n                    bb.salesAmountPercent = rankTds[5].textContent.substr(0, rankTds[5].textContent.length - 1);\n                    bb.rank = rankTds[6].textContent;\n                  } else if (\"report33-1\" == reportId) {\n                    bb.officeName = rankTds[2].textContent;\n                    bb.salesAmountPercent = rankTds[6].textContent.substr(0, rankTds[6].textContent.length - 1);\n                    bb.rank = rankTds[7].textContent;\n                  } else if (\"report31-1-1\" == reportId || \"report9-1-1\" == reportId) {\n                    bb.salerName = rankTds[4].textContent;\n                    bb.salesAmountPercent = rankTds[6].textContent.substr(0, rankTds[6].textContent.length - 1);\n                    bb.rank = rankTds[7].textContent;\n                  } else if (\"report10\" == reportId) {\n                    bb.branchName = rankTds[2].textContent;\n                    bb.salesAmountPercent = rankTds[5].textContent.substr(0, rankTds[5].textContent.length - 1);\n                    bb.rank = rankTds[6].textContent;\n                  } else if (\"report2-2-1\" == reportId) {\n                    bb.salerName = rankTds[2].textContent;\n                    bb.salesAmountPercent = rankTds[4].textContent.substr(0, rankTds[4].textContent.length - 1);\n                    bb.rank = rankTds[5].textContent;\n                  } else if (\"report1-2-1-1\") {\n                    bb.salerName = rankTds[2].textContent;\n                    bb.salesAmountPercent = rankTds[3].textContent.substr(0, rankTds[3].textContent.length - 1);\n                    bb.rank = rankTds[4].textContent;\n                  }\n                }\n\n                aa.push(bb);\n              }\n            }\n\n            if (rankTrs.length > 0) {\n              //选中的排名数据\n              for (var z1 = 0; z1 < rankTrs.length; z1++) {\n                var dd = {};\n\n                if (rankTrs[z1].getAttribute(\"class\") == \"activ\") {\n                  var rankTds = rankTrs[z1].querySelectorAll(\"td\");\n\n                  for (var w1 = 0; w1 < rankTds.length; w1++) {\n                    if (\"report15\" == reportId || \"report2-1\" == reportId || \"report21\" == reportId) {\n                      dd.branchName = rankTds[1].textContent;\n                      dd.salesAmountPercent = rankTds[4].textContent.substr(0, rankTds[4].textContent.length - 1);\n                      dd.rank = rankTds[5].textContent;\n                    } else if (\"report18\" == reportId || \"report34\" == reportId || \"report23-1\" == reportId) {\n                      dd.salerName = rankTds[3].textContent;\n                      dd.salesAmountPercent = rankTds[5].textContent.substr(0, rankTds[5].textContent.length - 1);\n                      dd.rank = rankTds[6].textContent;\n                    } else if (\"report16\" == reportId || \"report20\" == reportId || \"report22\" == reportId || \"report2-1-1\" == reportId) {\n                      dd.branchName = rankTds[1].textContent;\n                      dd.salesAmountPercent = rankTds[5].textContent.substr(0, rankTds[5].textContent.length - 1);\n                      dd.rank = rankTds[6].textContent;\n                    } else if (\"report33\" == reportId) {\n                      dd.officeName = rankTds[2].textContent;\n                      dd.salesAmountPercent = rankTds[5].textContent.substr(0, rankTds[5].textContent.length - 1);\n                      dd.rank = rankTds[6].textContent;\n                    } else if (\"report33-1\" == reportId) {\n                      dd.officeName = rankTds[2].textContent;\n                      dd.salesAmountPercent = rankTds[6].textContent.substr(0, rankTds[6].textContent.length - 1);\n                      dd.rank = rankTds[7].textContent;\n                    } else if (\"report31-1-1\" == reportId || \"report9-1-1\" == reportId) {\n                      dd.salerName = rankTds[4].textContent;\n                      dd.salesAmountPercent = rankTds[6].textContent.substr(0, rankTds[6].textContent.length - 1);\n                      dd.rank = rankTds[7].textContent;\n                    } else if (\"report10\" == reportId) {\n                      dd.branchName = rankTds[2].textContent;\n                      dd.salesAmountPercent = rankTds[5].textContent.substr(0, rankTds[5].textContent.length - 1);\n                      dd.rank = rankTds[6].textContent;\n                    } else if (\"report2-2-1\" == reportId) {\n                      dd.salerName = rankTds[2].textContent;\n                      dd.salesAmountPercent = rankTds[4].textContent.substr(0, rankTds[4].textContent.length - 1);\n                      dd.rank = rankTds[5].textContent;\n                    } else if (\"report1-2-1-1\" == reportId) {\n                      dd.salerName = rankTds[2].textContent;\n                      dd.salesAmountPercent = rankTds[3].textContent.substr(0, rankTds[3].textContent.length - 1);\n                      dd.rank = rankTds[4].textContent;\n                    }\n                  }\n\n                  cc.push(dd);\n                }\n              }\n            }\n\n            obj.rank.data = aa;\n            obj.rank.chooseData = cc;\n          } else {\n            obj.rank.rankFlag = false;\n          }\n\n          if (rank_a) {\n            //判断排名是否可以点击，可点击的显示 不可点击的不显示\n            obj.rank.num = parseInt(_textContent);\n          } else {\n            obj.rank.num = \"\";\n          }\n\n          break;\n      }\n    }\n\n    data.push(obj);\n  }\n\n  return data;\n}\n"
+doAction_uiControl113_KRsmxE: |
+  if (!elem) {
+    return;
+  }
+  var trs = elem.querySelector("#table_list_1").querySelectorAll("tr");
+  if (data.eventType === 'click') {
+    var index = +data.customData + 1;
+
+    if (!trs[index].querySelector('a')) {
+      console.warn('到最底层了，不能在钻取了！'); // alert('已无法钻取');
+
+      return;
+    }
+
+    var btn = trs[index].querySelector('a');
+    btn.click();
+  }
+  if ('clickRank' == data.eventType) {
+    var index = +data.customData + 1;
+    var dos = trs[index].querySelector('a[class="susp-a"]');
+    dos.dispatchEvent(new Event("mouseover"));
+  }
+getTemplate_uiControl113_KRsmxE: "import {\n  Component\n} from 'react';\nimport {\n  Dialog,\n  ComplexHeader,\n  CustomHeader\n} from 'ysp-custom-components';\n\nexport default class extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n    \tclose: true,\n      idx: null\n    } \n  }\n  \n  handleClick(e) {\n    var handler = this.props.customHandler;\n    var target = e.currentTarget;\n    var index = target.dataset.index;\n    if (handler) {\n      handler({\n        eventType: 'click',\n        data: index\n      });\n    }\n  }\n  \n  handleRank(e){\n    var handler = this.props.customHandler;\n    var target = e.target;\n    var index = target.dataset.index;\n    if(handler){\n      handler({\n        eventType:'clickRank',\n        data: index\n      })\n    }\n    this.setState({\n      close: !this.state.close,\n      idx: e.target.dataset.index\n    });\n  }\n  \n  render() {\n    var data = this.props.customData;\n    var reportIds = data && data.length >0 && data[0].reportIds;\n    var _this = this;\n    var lists;\n    var a = 0;\n    \t{data && data.length > 0 ?\n      lists = data.map(function(d,i){\n        return (\n            <div className=\"item\">\n              <div className={d.deepFlag?\"left\":\"left wd\"}>\n                <h5 className=\"title\">\n                  {\n                    d.rank && d.rank.num !=\"\" ? \n                      <i className={d.rank.num>3?'rank-else':'rank-top'} onClick={d.rank.rankFlag ?_this.handleRank.bind(_this) : ''} data-index={i}>\n                        {d.rank.num}\n                      </i> : ''\n                  }\n                  {d.title?d.title:d.projectSeries}</h5>\n                {\n                  d.titles ? <h5 className=\"titlesXM\">{d.titles}</h5> : ''\n                }\n                <ul>\n                  <li><span>目标销量</span><b>{d.targetSalesCount}</b></li>\n                  <li><span>实际销量</span><b>{d.realSalesCount}</b>\n                    {\n                      d.salesCountBigCustomer !=null || d.salesCountBigCustomer !=undefined ? \n                        <span>\n                          {\n                            \"report43\" == reportIds || \"report44\" == reportIds \n                            || \"report45\" == reportIds ? \n                              <span style={{marginRight:0}}>\n                                (总部：\n                              </span>\n                              :\n                            \t<span style={{marginRight:0}}>\n                                (大客户：\n                              </span>\n                          }\n                        \t\n                          <b>\n                            {d.salesCountBigCustomer})\n                          </b>\n                        </span> : ''\n                    }\n                    </li>\n                  <li><span>目标销售额</span><b>{d.targetSalesAmount}</b></li>\n                  <li><span>实际销售额</span><b>{d.realSalesAmount}</b>\n                    {\n                      d.salesAmountBigCustomer!=null || d.salesAmountBigCustomer!=undefined ?\n                        <span>\n                          {\n                            \"report43\" == reportIds || \"report44\" == reportIds \n                            || \"report45\" == reportIds ?\n                              <span style={{marginRight:0}}>\n                               (总部：\n                              </span>\n                               :\n                              <span style={{marginRight:0}}>\n                               (大客户：\n                              </span>\n                          }\n                        \t\n                          <b> \n                            {d.salesAmountBigCustomer})\n                          </b>\n                        </span>\n                         : ''\n                    }\n                    \n                    \n                  </li>\n                </ul>\n              </div>\n              <div className={d.deepFlag?\"right\":\"right mg0\"}>\n                  <div className=\"top\">\n                    <div><em>{d.salesCountPercent}</em>%</div>\n                    <h5>销量达成率</h5>\n                  </div>\n                  <div className=\"btm\">\n                      <div><em>{d.salesAmountPercent}</em>%</div>\n                      <h5>销售额达成率</h5>\n                    </div>\n              </div>\n               { d.deepFlag?<i class=\"ysp-cardlist-icon\" onClick={_this.handleClick.bind(_this)} data-index={i}></i>:\"\" }\n\n           \t\t { d.rank && d.rank.data && d.rank.data.length > 0 ?\n              \t<DialogRank \n                  dataIndex = {i} \n                  customData = {d.rank} \n                  close = {_this.state.close} \n                  openIndex = {_this.state.idx}\n                  handleRank = {_this.handleRank.bind(_this)}\n                />:''}\n            </div>\n        )  \n      })\n      :\n \_ \_ \_lists = <div className=\"ysp-no-datass\" \n                style={{'marginLeft':'-15px','background':'#F0EFF5'}}>\n                <div></div>\n                <div>暂时没有数据~</div>\n              </div>\n      }\n\n    return (\n      <div className=\"ysp-tableLists-box\">\n        {lists}\n      </div>\n    )\n  }\n};\n\n// DialogRank 排名页面\nclass DialogRank extends React.Component {\n  constructor(props) {\n    super(props);\n  }\n  render() {\n    var data = this.props.customData;\n    var dataLists = data.data;\n    var index = data.num;\n    //var dataMain = data.data[index-1];\n    var dataMain = data.chooseData && data.chooseData[0];\n    var rankReportId = data && data.reportId;\n    var _this = this;\n    var _close = true;\n    if(_this.props.dataIndex == _this.props.openIndex){\n      _close = false;\n    }else{\n      _close = true;\n    }\n    \n    // console.log(data);\n    return (\n      <Dialog close={_close} dataId={_this.props.dataIndex}>\n        <CustomHeader \n \_ \_ \_ \_ \_ data={{centerText:\"销售达成排名\",rightText:\"筛选\"}} \n           backIsShow={true} \n           back={_this.props.handleRank} \n           filterIsShow={false} \n           filter={()=>{console.info(\"header filter ...\")}}/>\n        <div className=\"ysp-rank-lists\">\n          <div className=\"main\">\n            <i className=\"rank-main\">{dataMain.rank}</i>\n            <span className=\"title\">\n              {\"report15\" == rankReportId || \"report16\" == rankReportId \n               || \"report20\" == rankReportId || \"report22\" == rankReportId \n               || \"report10\" == rankReportId || \"report2-1\" == rankReportId \n               || \"report2-1-1\" == rankReportId || \"report21\" == rankReportId\n                ? dataMain.branchName : \"report33\" == rankReportId \n               || \"report33-1\" == rankReportId ? dataMain.officeName : \n              \t\"report34\" == rankReportId || \"report18\" == rankReportId \n               || \"report31-1-1\" == rankReportId || \"report9-1-1\" == rankReportId \n               || \"report2-2-1\" == rankReportId || \"report23-1\" == rankReportId \n               || \"report1-2-1-1\" == rankReportId\n                ? dataMain.salerName : \"\"\n              }\n            </span>\n            <div className=\"infos\">\n              \t<div><b>{dataMain.salesAmountPercent}</b>%</div>\n              \t<h5>销售额达成率</h5>\n            </div>\n          </div>\n          \n          <div className=\"itemLists\">\n            {\n              dataLists.map(function(d,i){\n                return (\n                \t<div className={i==index-1?'item item-main':'item'}>\n                    {\n                      <i className={i!=index-1?(d.rank>3?'rank-else':'rank-top'):'rank-main'}>{d.rank}</i>\n                    }\n                    <span className=\"title\">\n                      {\"report15\" == rankReportId || \"report16\" == rankReportId \n                       || \"report20\" == rankReportId || \"report22\" == rankReportId \n                       || \"report10\" == rankReportId || \"report2-1\" == rankReportId \n                       || \"report2-1-1\" == rankReportId || \"report21\" == rankReportId\n                        ? d.branchName : \"report33\" == rankReportId \n                       || \"report33-1\" == rankReportId ? d.officeName : \n                      \t\"report34\" == rankReportId || \"report18\" == rankReportId \n                       || \"report31-1-1\" == rankReportId || \"report9-1-1\" == rankReportId \n                       || \"report2-2-1\" == rankReportId || \"report23-1\" == rankReportId \n                       || \"report1-2-1-1\" == rankReportId\n                        ? d.salerName : \"\"\n                      }\n                    </span>\n                    <div className=\"infos\">\n                        <div><b>{d.salesAmountPercent}</b>%</div>\n                        <h5>销售额达成率</h5>\n                    </div>\n                  </div>  \n                )\n              })\n            }\n          </div>\n          \n        </div>\n      </Dialog>\n    )\n  }\n}"

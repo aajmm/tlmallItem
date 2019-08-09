@@ -1,0 +1,573 @@
+{
+  "version": "0.1",
+  "id": "forecastPSI",
+  "targetURL": "http://192.168.1.227/pttlCrm/res/page/customerInfomation/customerPSIpre2.html?userId=11994",
+  "jsFile": "index.js",
+  "chineseName": "预测PSI",
+  "description": "",
+  "controls": {
+    "control197_qhm3H1": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.content DIV.content-body"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control197_qhm3H1"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control198_QaVMqZ": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.content DIV.content-body DIV.main"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control198_QaVMqZ"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control259_NNMLiq": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.content-body DIV.main DIV.main-header"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control259_NNMLiq"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    }
+  },
+  "contexts": {
+    "context56_VUl6Pd": {
+      "controls": [
+        "control197_qhm3H1",
+        "control198_QaVMqZ",
+        "control259_NNMLiq"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/res\\/page\\/customerInfomation\\/customerPSIpre\\.html.*",
+        "http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/res\\/page\\/customerInfomation\\/customerPSIpre2\\.html.*"
+      ]
+    }
+  },
+  "flows": {
+    "flow175_FdcAKp": {
+      "toContexts": [
+        {
+          "toContextId": "context56_VUl6Pd"
+        }
+      ]
+    },
+    "flow182_O52Jlb": {
+      "fromContextId": "context56_VUl6Pd",
+      "fromAction": "doAction",
+      "fromControlId": "control198_QaVMqZ",
+      "toContexts": [
+        {
+          "toContextId": "context56_VUl6Pd"
+        }
+      ]
+    },
+    "flow183_H4IrhL": {
+      "fromContextId": "context56_VUl6Pd",
+      "fromAction": "doAction",
+      "fromControlId": "control197_qhm3H1",
+      "toContexts": [
+        {
+          "toContextId": "context56_VUl6Pd"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page56_A3iV2T": {
+      "contextId": "context56_VUl6Pd",
+      "layout": [
+        {
+          "id": "uiControl194_lb7fU4",
+          "controlId": "control197_qhm3H1",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl194_lb7fU4",
+                "onGetTemplate": "getTemplate_uiControl194_lb7fU4"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl253_4HUcbA",
+          "controlId": "control259_NNMLiq",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl253_4HUcbA",
+                "onGetTemplate": "getTemplate_uiControl253_4HUcbA"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl195_ALtU9N",
+          "controlId": "control198_QaVMqZ",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl195_ALtU9N",
+                "onGetTemplate": "getTemplate_uiControl195_ALtU9N"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context56_VUl6Pd": [
+          "预测PSI"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context56_VUl6Pd": [
+          "192.168.1.227/pttlCrm/res/page/customerInfomation/customerPSIpre2.html?userId=11994",
+          "192.168.1.227/pttlCrm/res/page/customerInfomation/customerPSIpre2.html?userId=1-HP70"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context56_VUl6Pd": [
+          [
+            "dI_-SIU",
+            "dSO_-SIU",
+            "dST_-SIU",
+            "dwos_-SIU",
+            "realI_-SIU",
+            "realSO_-SIU",
+            "realST_-SIU",
+            "realwos_-SIU",
+            "startTime",
+            "userName",
+            "wI_-SIU",
+            "wSO_-SIU",
+            "wST_-SIU",
+            "wwos_-SIU"
+          ],
+          [
+            "d_EBCCABEFACAC",
+            "d_EBCCBBEFACAC",
+            "d_EBCCBEFACAC",
+            "d_EBCCCBEFACAC",
+            "d_EBCCDBEFACAC",
+            "d_EBCCEBEFACAC",
+            "d_EBCCFBEFACAC",
+            "d_EBCDBEFACAC",
+            "real_EBCCABEFACAC",
+            "real_EBCCBBEFACAC",
+            "real_EBCCBEFACAC",
+            "real_EBCCCBEFACAC",
+            "real_EBCCDBEFACAC",
+            "real_EBCCEBEFACAC",
+            "real_EBCCFBEFACAC",
+            "real_EBCDBEFACAC",
+            "startTime",
+            "userName",
+            "w_EBCCABEFACAC",
+            "w_EBCCBBEFACAC",
+            "w_EBCCBEFACAC",
+            "w_EBCCCBEFACAC",
+            "w_EBCCDBEFACAC",
+            "w_EBCCEBEFACAC",
+            "w_EBCCFBEFACAC",
+            "w_EBCDBEFACAC"
+          ],
+          [
+            "IID_-KNZ",
+            "IID_-PE",
+            "IID_-QL",
+            "IID_-SIU",
+            "SOID_-KNZ",
+            "SOID_-PE",
+            "SOID_-QL",
+            "SOID_-SIU",
+            "STID_-KNZ",
+            "STID_-PE",
+            "STID_-QL",
+            "STID_-SIU",
+            "dI_-KNZ",
+            "dI_-PE",
+            "dI_-QL",
+            "dI_-SIU",
+            "dSO_-KNZ",
+            "dSO_-PE",
+            "dSO_-QL",
+            "dSO_-SIU",
+            "dST_-KNZ",
+            "dST_-PE",
+            "dST_-QL",
+            "dST_-SIU",
+            "dwos_-KNZ",
+            "dwos_-PE",
+            "dwos_-QL",
+            "dwos_-SIU",
+            "realI_-KNZ",
+            "realI_-PE",
+            "realI_-QL",
+            "realI_-SIU",
+            "realSO_-KNZ",
+            "realSO_-PE",
+            "realSO_-QL",
+            "realSO_-SIU",
+            "realST_-KNZ",
+            "realST_-PE",
+            "realST_-QL",
+            "realST_-SIU",
+            "realwos_-KNZ",
+            "realwos_-PE",
+            "realwos_-QL",
+            "realwos_-SIU",
+            "userName",
+            "wI_-KNZ",
+            "wI_-PE",
+            "wI_-QL",
+            "wI_-SIU",
+            "wSO_-KNZ",
+            "wSO_-PE",
+            "wSO_-QL",
+            "wSO_-SIU",
+            "wST_-KNZ",
+            "wST_-PE",
+            "wST_-QL",
+            "wST_-SIU",
+            "wosID_-KNZ",
+            "wosID_-PE",
+            "wosID_-QL",
+            "wosID_-SIU",
+            "wwos_-KNZ",
+            "wwos_-PE",
+            "wwos_-QL",
+            "wwos_-SIU"
+          ],
+          [
+            "IID_-LWI",
+            "IID_-PBZ",
+            "IID_-QKT",
+            "IID_-QL",
+            "IID_-QO",
+            "SOID_-LWI",
+            "SOID_-PBZ",
+            "SOID_-QKT",
+            "SOID_-QL",
+            "SOID_-QO",
+            "STID_-LWI",
+            "STID_-PBZ",
+            "STID_-QKT",
+            "STID_-QL",
+            "STID_-QO",
+            "dI_-LWI",
+            "dI_-PBZ",
+            "dI_-QKT",
+            "dI_-QL",
+            "dI_-QO",
+            "dSO_-LWI",
+            "dSO_-PBZ",
+            "dSO_-QKT",
+            "dSO_-QL",
+            "dSO_-QO",
+            "dST_-LWI",
+            "dST_-PBZ",
+            "dST_-QKT",
+            "dST_-QL",
+            "dST_-QO",
+            "duihao_img",
+            "dwos_-LWI",
+            "dwos_-PBZ",
+            "dwos_-QKT",
+            "dwos_-QL",
+            "dwos_-QO",
+            "realI_-LWI",
+            "realI_-PBZ",
+            "realI_-QKT",
+            "realI_-QL",
+            "realI_-QO",
+            "realSO_-LWI",
+            "realSO_-PBZ",
+            "realSO_-QKT",
+            "realSO_-QL",
+            "realSO_-QO",
+            "realST_-LWI",
+            "realST_-PBZ",
+            "realST_-QKT",
+            "realST_-QL",
+            "realST_-QO",
+            "realwos_-LWI",
+            "realwos_-PBZ",
+            "realwos_-QKT",
+            "realwos_-QL",
+            "realwos_-QO",
+            "userName",
+            "wI_-LWI",
+            "wI_-PBZ",
+            "wI_-QKT",
+            "wI_-QL",
+            "wI_-QO",
+            "wSO_-LWI",
+            "wSO_-PBZ",
+            "wSO_-QKT",
+            "wSO_-QL",
+            "wSO_-QO",
+            "wST_-LWI",
+            "wST_-PBZ",
+            "wST_-QKT",
+            "wST_-QL",
+            "wST_-QO",
+            "wl_td",
+            "wosID_-LWI",
+            "wosID_-PBZ",
+            "wosID_-QKT",
+            "wosID_-QL",
+            "wosID_-QO",
+            "wwos_-LWI",
+            "wwos_-PBZ",
+            "wwos_-QKT",
+            "wwos_-QL",
+            "wwos_-QO"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context56_VUl6Pd": [
+          [
+            "backImage",
+            "btn",
+            "btnno",
+            "btnok",
+            "button",
+            "content",
+            "content-body",
+            "content_head",
+            "h",
+            "main",
+            "main-body",
+            "main-header",
+            "pointImage",
+            "table-bordered",
+            "tbody",
+            "time"
+          ],
+          [
+            "I_-LWI",
+            "I_-PBZ",
+            "I_-QKT",
+            "I_-QO",
+            "SO_-LWI",
+            "SO_-PBZ",
+            "SO_-QKT",
+            "SO_-QO",
+            "ST_-LWI",
+            "ST_-PBZ",
+            "ST_-QKT",
+            "ST_-QO",
+            "WOS_-LWI",
+            "WOS_-PBZ",
+            "WOS_-QKT",
+            "WOS_-QO",
+            "backImage",
+            "btn",
+            "btnno",
+            "btnok",
+            "button",
+            "content",
+            "content-body",
+            "content_head",
+            "d",
+            "h",
+            "main",
+            "main-body",
+            "main-header",
+            "pointImage",
+            "real",
+            "table-bordered",
+            "tbody",
+            "time",
+            "w"
+          ],
+          [
+            "I_",
+            "SO_",
+            "ST_",
+            "WOS_",
+            "backImage",
+            "btn",
+            "btnSave",
+            "btnno",
+            "btnok",
+            "button",
+            "content",
+            "content-body",
+            "content_head",
+            "h",
+            "main",
+            "main-body",
+            "main-header",
+            "pointImage",
+            "table-bordered",
+            "tbody"
+          ],
+          [
+            "I_",
+            "SO_",
+            "ST_",
+            "WOS_",
+            "backImage",
+            "btn",
+            "btnSave",
+            "btnno",
+            "btnok",
+            "button",
+            "canFill_input",
+            "content",
+            "content-body",
+            "content_head",
+            "h",
+            "main",
+            "main-body",
+            "main-header",
+            "pointImage",
+            "table-bordered",
+            "tbody"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context56_VUl6Pd": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TR/TD/FONT",
+            "TR/TD/INPUT-text"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TR/TD/FONT",
+            "TR/TD/INPUT-text"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TR/TD/FONT",
+            "TR/TD/IMG",
+            "TR/TD/INPUT-text"
+          ]
+        ]
+      }
+    }
+  }
+}

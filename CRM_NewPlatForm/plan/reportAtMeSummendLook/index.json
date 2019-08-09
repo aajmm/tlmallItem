@@ -1,0 +1,442 @@
+{
+  "version": "0.1",
+  "id": "reportAtMeSummendLook",
+  "targetURL": "http://192.168.1.227/pttlCrm/res/page/workTask/workAtmeView.html",
+  "jsFile": "index.js",
+  "requires": {
+    "reportAtMeSummendLook": "../reportAtMeSummendLook/index.json"
+  },
+  "chineseName": "汇报给我的总结查看",
+  "description": "汇报给我的总结查看",
+  "controls": {
+    "control318_nWgrHk": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.work-box"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control318_nWgrHk"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control319_VQqGyy": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control319_VQqGyy"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control126_PSL1un": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control126_PSL1un"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context84_bsgu84": {
+      "controls": [
+        "control318_nWgrHk",
+        "control319_VQqGyy",
+        "control126_PSL1un"
+      ],
+      "anchors": [],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow244_9cuukc": {
+      "toContexts": [
+        {
+          "toContextId": "context84_bsgu84"
+        },
+        {
+          "toContextId": "context84_bsgu84",
+          "toModelId": "reportAtMeSummendLook"
+        }
+      ]
+    },
+    "flow245_nL7zLP": {
+      "fromContextId": "context84_bsgu84",
+      "fromAction": "doAction",
+      "fromControlId": "control318_nWgrHk",
+      "toContexts": [
+        {
+          "toContextId": "context84_bsgu84"
+        }
+      ]
+    },
+    "flow116_FtCQvS": {
+      "fromContextId": "context84_bsgu84",
+      "fromAction": "doAction",
+      "fromControlId": "control319_VQqGyy",
+      "toContexts": [
+        {
+          "toContextId": "context84_bsgu84"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page84_TkGtfB": {
+      "contextId": "context84_bsgu84",
+      "layout": [
+        {
+          "id": "uiControl309_GSUcPO",
+          "controlId": "control318_nWgrHk",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl309_GSUcPO",
+                "onGetTemplate": "getTemplate_uiControl309_GSUcPO"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl310_dbGLHF",
+          "controlId": "control319_VQqGyy",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl310_dbGLHF",
+                "onGetTemplate": "getTemplate_uiControl310_dbGLHF"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl122_KnOXQ8",
+          "controlId": "control126_PSL1un",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl122_KnOXQ8",
+                "onGetTemplate": "getTemplate_uiControl122_KnOXQ8"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context84_bsgu84": [
+          "工作总结填写"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context84_bsgu84": [
+          "192.168.1.227/pttlCrm/res/page/workTask/workAtmeView.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context84_bsgu84": [
+          [
+            "ContactUsers",
+            "DisplayContact",
+            "close",
+            "closeIfram",
+            "imgsDiv",
+            "lableTabs",
+            "textareaDivs",
+            "workSummaryId"
+          ],
+          [
+            "ChatIpt",
+            "ChatOnline",
+            "ContactAlert",
+            "ContactClose",
+            "ContactSure",
+            "ContactUsers",
+            "DisplayContact",
+            "chats_content",
+            "close",
+            "closeIfram",
+            "contactSearch",
+            "contentBody",
+            "icon-search",
+            "imgsDiv",
+            "lableTabs",
+            "search-lists",
+            "sendBtn",
+            "textareaDivs",
+            "workSummaryId"
+          ],
+          [
+            "ChatIpt",
+            "ChatOnline",
+            "ContactAlert",
+            "ContactClose",
+            "ContactUsers",
+            "DisplayContact",
+            "chats_content",
+            "close",
+            "closeIfram",
+            "contactSearch",
+            "contentBody",
+            "dragbottom",
+            "dragleft",
+            "dragright",
+            "dragtop",
+            "icon-search",
+            "imgsDiv",
+            "lableTabs",
+            "search-lists",
+            "sendBtn",
+            "textareaDivs",
+            "viewId",
+            "workSummaryId"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context84_bsgu84": [
+          [
+            "btn-box",
+            "chatUsers",
+            "con",
+            "con-box",
+            "distribution",
+            "head-tit",
+            "huaweiFD",
+            "huaweiPJ",
+            "huaweiSB",
+            "huaweiStore",
+            "icon",
+            "icon-close",
+            "img-box",
+            "lists-one",
+            "others",
+            "problem-con",
+            "problem-item",
+            "problem-r-box",
+            "samsung",
+            "tabs",
+            "tipFont",
+            "user",
+            "users",
+            "work-box",
+            "work-con",
+            "work-tit"
+          ],
+          [
+            "body",
+            "btn",
+            "btn-box",
+            "chatUsers",
+            "chats",
+            "clearfix",
+            "con",
+            "con-box",
+            "content",
+            "footer",
+            "head-tit",
+            "header",
+            "icon",
+            "icon-back",
+            "icon-close",
+            "icon-search",
+            "img-box",
+            "leaveWord",
+            "lists-one",
+            "m-contact",
+            "problem-con",
+            "problem-item",
+            "problem-r-box",
+            "search",
+            "search-lists",
+            "tabs",
+            "text",
+            "textarea",
+            "textareaDiv",
+            "textearaDiv",
+            "tipFont",
+            "title",
+            "user",
+            "users",
+            "work-box",
+            "work-con",
+            "work-tit"
+          ],
+          [
+            "body",
+            "btn",
+            "btn-box",
+            "chat-one",
+            "chat-reply",
+            "chatUsers",
+            "clearfix",
+            "con",
+            "con-box",
+            "content",
+            "footer",
+            "head-tit",
+            "header",
+            "huaweiPJ",
+            "icon",
+            "icon-back",
+            "icon-close",
+            "icon-search",
+            "img-box",
+            "leaveWord",
+            "lists-one",
+            "m-contact",
+            "problem-con",
+            "problem-item",
+            "problem-r-box",
+            "replyChat",
+            "search",
+            "search-lists",
+            "sel-chat",
+            "tabs",
+            "textarea",
+            "textareaDiv",
+            "textearaDiv",
+            "title",
+            "user",
+            "users",
+            "work-box",
+            "work-con",
+            "work-tit"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context84_bsgu84": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/H2",
+            "-/DIV/INPUT-hidden",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/H2",
+            "-/DIV/INPUT-hidden",
+            "DIV/A/EM",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H4",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/XMP"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "-/DIV/H2",
+            "-/DIV/INPUT-hidden",
+            "DIV/A/EM",
+            "DIV/DIV/A",
+            "DIV/DIV/BUTTON",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H4",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/P",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/H6/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,806 @@
+{
+  "version": "0.1",
+  "id": "vistiSign",
+  "targetURL": "http://192.168.1.227/pttlCrm/res/page/visitManager/visitLook/customerSign.html",
+  "jsFile": "index.js",
+  "requires": {
+    "vistiSign": "../vistiSign/index.json"
+  },
+  "chineseName": "拜访签到",
+  "description": "",
+  "controls": {
+    "control30_ApZCXy": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"customersign-content\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control30_ApZCXy"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control31_CyMkLp": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [
+            {
+              "method": "selector",
+              "value": "HTML"
+            }
+          ],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"customersign-content\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control31_CyMkLp"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control58_ykkZTt": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "签到时间 2017-06-23 10:11:04"
+              ],
+              "visText": [
+                "签到时间 2017-06-23 10:11:04"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"body\"]//DIV[@id=\"customersign-content\"]/DIV[2]/DIV[1]/DIV[1]",
+              "descendant::DIV[@id=\"customersign-content\"]/DIV[2]/DIV[1]/DIV[1]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.customersign-mapcontent DIV.customersign-mapcontent-text DIV.customersign-mapcontent-textdiv"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "roles": "element",
+      "frameXPath": ""
+    },
+    "control92_xairM3": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"body\"]//DIV[@id=\"customersign-content\"]/DIV[4]",
+              "descendant::DIV[@id=\"customersign-content\"]/DIV[4]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.body DIV.content DIV.customersigin-mapbutton"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[4]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control92_xairM3"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control140_OHTT9h": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"header\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.overhidden DIV.g-doc.m-popBox DIV.header"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control140_OHTT9h"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "ignoreVisibility": true,
+      "monitored": true,
+      "frameXPath": ""
+    },
+    "control350_R3ZwTb": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"body\"]//DIV[@id=\"customersign-content\"]//DIV[@id=\"allmap\"]/DIV[1]/DIV[1]",
+              "descendant::DIV[@id=\"customersign-content\"]//DIV[@id=\"allmap\"]/DIV[1]/DIV[1]",
+              "descendant::DIV[@id=\"allmap\"]/DIV[1]/DIV[1]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.content DIV.customersign-map DIV.BMap_mask"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "image"
+    }
+  },
+  "contexts": {
+    "context12_6KpKeA": {
+      "controls": [
+        "control30_ApZCXy",
+        "control31_CyMkLp",
+        "control92_xairM3",
+        "control140_OHTT9h",
+        "control350_R3ZwTb"
+      ],
+      "anchors": [],
+      "urlAnchor": [
+        "^http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/res\\/customerSign.html",
+        "^http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/visit\\/customerVisitPlan\\/addCustomerSignIn",
+        "http:\\/\\/192\\.168\\.1\\.227\\/pttlCrm\\/res\\/page\\/visitManager\\/visitLook\\/customerSign.html"
+      ]
+    }
+  },
+  "flows": {
+    "flow29_eldm2C": {
+      "toContexts": [
+        {
+          "toContextId": "context12_6KpKeA"
+        },
+        {
+          "toContextId": "context12_6KpKeA",
+          "toModelId": "vistiSign"
+        }
+      ]
+    },
+    "flow31_NSJVe9": {
+      "fromContextId": "context12_6KpKeA",
+      "fromAction": "doAction",
+      "fromControlId": "control30_ApZCXy",
+      "toContexts": [
+        {
+          "toContextId": "context12_6KpKeA"
+        }
+      ]
+    },
+    "flow82_VrgPFL": {
+      "fromContextId": "context12_6KpKeA",
+      "fromAction": "doAction",
+      "fromControlId": "control31_CyMkLp",
+      "toContexts": [
+        {
+          "toContextId": "context12_6KpKeA"
+        }
+      ]
+    },
+    "flow91_ORBMR5": {
+      "fromContextId": "context12_6KpKeA",
+      "fromAction": "doAction",
+      "fromControlId": "control92_xairM3",
+      "toContexts": [
+        {
+          "toContextId": "context12_6KpKeA"
+        }
+      ]
+    },
+    "flow122_ThkdCr": {
+      "fromContextId": "context12_6KpKeA",
+      "fromAction": "doAction",
+      "fromControlId": "control140_OHTT9h",
+      "toContexts": [
+        {
+          "toContextId": "context12_6KpKeA"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page12_viBUSs": {
+      "contextId": "context12_6KpKeA",
+      "layout": [
+        {
+          "id": "uiControl34_5PKNHW",
+          "controlId": "control30_ApZCXy",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl34_5PKNHW",
+                "onGetTemplate": "getTemplate_uiControl34_5PKNHW"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl139_yJKCH7",
+          "controlId": "control140_OHTT9h",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl139_yJKCH7",
+                "onGetTemplate": "getTemplate_uiControl139_yJKCH7"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl35_oF8tC3",
+          "controlId": "control31_CyMkLp",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl35_oF8tC3",
+                "onGetTemplate": "getTemplate_uiControl35_oF8tC3"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl93_skgmMy",
+          "controlId": "control92_xairM3",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl93_skgmMy",
+                "onGetTemplate": "getTemplate_uiControl93_skgmMy"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context12_6KpKeA": [
+          "客户签到",
+          "拜访-报告"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context12_6KpKeA": [
+          "192.168.1.227/pttlCrm/res/customerSign.html",
+          "192.168.1.227/pttlCrm/res/customerReportPop.html",
+          "192.168.1.227/pttlCrm/visit/customerVisitPlan/addCustomerSignIn",
+          "192.168.1.227/pttlCrm/res/page/visitManager/visitLook/customerSign.html",
+          "192.168.1.227/pttlCrm/res/page/visitManager/customerWorkspace/customerReportPop.html"
+        ],
+        "context0_1ekenN": [
+          "localhost:3000/",
+          "192.168.1.227/pttlCrm/res/index.html"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context12_6KpKeA": [
+          [
+            "address",
+            "allmap",
+            "customersign-content",
+            "latitude",
+            "longitude",
+            "remarktextname",
+            "signTime",
+            "zoomer"
+          ],
+          [
+            "CloseReportPopRoot",
+            "address",
+            "allmap",
+            "close",
+            "customersign-content",
+            "headCustomer",
+            "latitude",
+            "longitude",
+            "planCreateDate",
+            "planDate",
+            "remarktextname",
+            "signTime",
+            "zoomer"
+          ],
+          [
+            "CloseReportPopRoot",
+            "address",
+            "allmap",
+            "body",
+            "customersign-content",
+            "headCustomer",
+            "header",
+            "latitude",
+            "longitude",
+            "planCreateDate",
+            "planDate",
+            "remarktextname",
+            "signTime",
+            "zoomer"
+          ],
+          [
+            "CloseReportPopRoot",
+            "ContactAlert",
+            "ContactUsers",
+            "CustomerRisk",
+            "DisplayContact",
+            "FenXiaoDivison",
+            "OtherInfor",
+            "SamsungDivison",
+            "body",
+            "businessInformation",
+            "contentCustomer",
+            "customerReportPopBack",
+            "customerReportPopBtnPrimary",
+            "customerReportPopBtnSuccess",
+            "fileList",
+            "filePicker",
+            "financialInformation",
+            "goodsInformation",
+            "headCustomer",
+            "header",
+            "huaweiFD",
+            "huaweiPJ",
+            "planCreateDate",
+            "planDate",
+            "reportImportContent",
+            "signInDateTime"
+          ],
+          [
+            "CloseReportPopRoot",
+            "address",
+            "allmap",
+            "body",
+            "csAddress",
+            "csLatitude",
+            "csLongitude",
+            "customersign-content",
+            "headCustomer",
+            "header",
+            "latitude",
+            "longitude",
+            "planCreateDate",
+            "planDate",
+            "remarktextname",
+            "signTime"
+          ],
+          [
+            "CloseReportPopRoot",
+            "address",
+            "allmap",
+            "body",
+            "csAddress",
+            "csLatitude",
+            "csLongitude",
+            "customersign-content",
+            "headCustomer",
+            "header",
+            "latitude",
+            "longitude",
+            "planCreateDate",
+            "planDate",
+            "remarktextname",
+            "signOrReportPop",
+            "signTime"
+          ]
+        ],
+        "context0_1ekenN": [
+          [
+            "__bs_script__",
+            "brandHeader",
+            "contentContainer",
+            "menu"
+          ],
+          [
+            "brandHeader",
+            "contentContainer",
+            "logout",
+            "menu"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context12_6KpKeA": [
+          [
+            "BMapLabel",
+            "BMap_Marker",
+            "BMap_cpyCtrl",
+            "BMap_mask",
+            "BMap_noprint",
+            "BMap_zoomer",
+            "anchorBL",
+            "customersigin-mapbutton",
+            "customersign-active",
+            "customersign-map",
+            "customersign-mapcontent",
+            "customersign-mapcontent-text",
+            "customersign-mapcontent-textbottomspan",
+            "customersign-mapcontent-textdiv",
+            "customersign-mapcontent-texttopspan",
+            "customersign-remark",
+            "customersign-remarktext",
+            "customersign-remarktextarea",
+            "customersign-unactive",
+            "pano_close",
+            "pano_pc_indoor_exit",
+            "remarktextimg"
+          ],
+          [
+            "BMapLabel",
+            "BMap_Marker",
+            "BMap_cpyCtrl",
+            "BMap_mask",
+            "BMap_noprint",
+            "BMap_zoomer",
+            "anchorBL",
+            "body",
+            "content",
+            "customersigin-mapbutton",
+            "customersign-active",
+            "customersign-map",
+            "customersign-mapcontent",
+            "customersign-mapcontent-text",
+            "customersign-mapcontent-textbottomspan",
+            "customersign-mapcontent-textdiv",
+            "customersign-mapcontent-texttopspan",
+            "customersign-remark",
+            "customersign-remarktext",
+            "customersign-remarktextarea",
+            "customersign-unactive",
+            "g-doc",
+            "header",
+            "infors",
+            "m-nav",
+            "m-popBox",
+            "pano_close",
+            "pano_pc_indoor_exit",
+            "remarktextimg",
+            "sign",
+            "title",
+            "z-act"
+          ],
+          [
+            "BMapLabel",
+            "BMap_Marker",
+            "BMap_cpyCtrl",
+            "BMap_mask",
+            "BMap_noprint",
+            "BMap_zoomer",
+            "anchorBL",
+            "body",
+            "content",
+            "customersigin-mapbutton",
+            "customersign-map",
+            "customersign-mapcontent",
+            "customersign-mapcontent-text",
+            "customersign-mapcontent-textbottomspan",
+            "customersign-mapcontent-textdiv",
+            "customersign-mapcontent-texttopspan",
+            "customersign-remark",
+            "customersign-remarktext",
+            "customersign-remarktextarea",
+            "customersign-unactive",
+            "g-doc",
+            "header",
+            "infors",
+            "m-nav",
+            "m-popBox",
+            "pano_close",
+            "pano_pc_indoor_exit",
+            "remarktextimg",
+            "sign",
+            "title",
+            "z-act"
+          ],
+          [
+            "body",
+            "center",
+            "chatUsers",
+            "clearfix",
+            "content",
+            "footer",
+            "g-doc",
+            "header",
+            "images",
+            "imagesBox",
+            "infors",
+            "lists-one",
+            "m-btns",
+            "m-btns-rd",
+            "m-contact",
+            "m-nav",
+            "m-popBox",
+            "m-report-infors",
+            "m-uploading",
+            "sign",
+            "temp",
+            "textBtn",
+            "tipFont",
+            "title",
+            "u-btn",
+            "u-btn-default",
+            "u-btn-primary",
+            "u-btn-success",
+            "uploadBtn",
+            "users"
+          ],
+          [
+            "BMapLabel",
+            "BMap_Marker",
+            "BMap_cpyCtrl",
+            "BMap_mask",
+            "BMap_noprint",
+            "anchorBL",
+            "body",
+            "content",
+            "customersigin-mapbutton",
+            "customersign-map",
+            "customersign-mapcontent",
+            "customersign-mapcontent-text",
+            "customersign-mapcontent-textbottomspan",
+            "customersign-mapcontent-textdiv",
+            "customersign-mapcontent-texttopspan",
+            "customersign-remark",
+            "customersign-remarktext",
+            "customersign-remarktextarea",
+            "customersign-unactive",
+            "g-doc",
+            "header",
+            "infors",
+            "iw",
+            "iw_bg",
+            "iw_c",
+            "iw_cc",
+            "iw_l",
+            "iw_r",
+            "iw_s",
+            "m-nav",
+            "m-popBox",
+            "pano_close",
+            "pano_pc_indoor_exit",
+            "sign",
+            "title",
+            "z-act"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context12_6KpKeA": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/IMG",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/SPAN/DIV",
+            "DIV/SPAN/SPAN",
+            "SPAN/DIV/IMG"
+          ],
+          [
+            "-/-/A",
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/A/SPAN",
+            "-/DIV/DIV",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/SPAN/DIV",
+            "DIV/SPAN/EM",
+            "DIV/SPAN/SPAN",
+            "DIV/UL/LI",
+            "SPAN/DIV/IMG",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/SPAN/DIV",
+            "DIV/SPAN/EM",
+            "DIV/SPAN/SPAN",
+            "DIV/UL/LI",
+            "SPAN/DIV/IMG",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/H6/FONT",
+            "DIV/SPAN/EM",
+            "DIV/UL/LI",
+            "UL/LI/A"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/DIV",
+            "DIV/A/IMG",
+            "DIV/A/SPAN",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/H1",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/SPAN/DIV",
+            "DIV/SPAN/EM",
+            "DIV/UL/LI",
+            "SPAN/DIV/IMG",
+            "UL/LI/A"
+          ]
+        ]
+      }
+    }
+  }
+}
