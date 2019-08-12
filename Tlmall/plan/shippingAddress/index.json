@@ -6,42 +6,6 @@
   "chineseName": "收货地址",
   "description": "",
   "controls": {
-    "control16_QdoZw3": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "@id/word",
-            "prob": 2,
-            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.wb_r.gaManage"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[3]/DIV[1]"
-          }
-        ]
-      },
-      "events": {
-        "onGetData": "getData_control16_QdoZw3"
-      },
-      "intendedRole": "custom",
-      "roles": "element,custom",
-      "monitored": false,
-      "frameXPath": "",
-      "componentType": "custom"
-    },
     "control19_C1K69x": {
       "location": {
         "data": {
@@ -127,75 +91,6 @@
       "text": "收货地址",
       "frameXPath": ""
     },
-    "control15_0uO5sr": {
-      "location": {
-        "data": {
-          "tagName": "A"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "button/text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "新增收货地址"
-              ],
-              "visText": [
-                "新增收货地址"
-              ]
-            }
-          },
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "新增收货地址"
-              ],
-              "visText": [
-                "新增收货地址"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 3,
-            "value": [
-              "descendant::DIV[@id=\"personalRight\"]//A[@id=\"addNewAddress\"]",
-              "descendant::A[@id=\"addNewAddress\"]"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.ablock.pd_lr DIV.title_address A.btn.btn20.btn_address"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[4]/DIV[1]/A[1]"
-          },
-          {
-            "id": "style/color",
-            "value": [
-              231,
-              53,
-              13
-            ]
-          }
-        ]
-      },
-      "intendedRole": "button",
-      "roles": "element,button,link",
-      "ignoreVisibility": false,
-      "monitored": true,
-      "frameXPath": "",
-      "componentType": "button"
-    },
     "control32_CyT8MD": {
       "location": {
         "data": {
@@ -235,6 +130,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -264,9 +163,7 @@
   "contexts": {
     "context5_Zd0a5Z": {
       "controls": [
-        "control16_QdoZw3",
         "control19_C1K69x",
-        "control15_0uO5sr",
         "control32_CyT8MD",
         "control35_VKMkfT"
       ],
@@ -293,37 +190,12 @@
           "toContextId": "context5_Zd0a5Z"
         }
       ]
-    },
-    "flow13_JARuwi": {
-      "fromContextId": "context5_Zd0a5Z",
-      "fromAction": "click",
-      "fromControlId": "control15_0uO5sr",
-      "toContexts": [
-        {
-          "toContextId": "context5_Zd0a5Z"
-        }
-      ]
     }
   },
   "pages": {
     "page5_AiM6zG": {
       "contextId": "context5_Zd0a5Z",
       "layout": [
-        {
-          "id": "uiControl16_ohrCBC",
-          "controlId": "control16_QdoZw3",
-          "display": {
-            "adapterId": "custom",
-            "type": "custom",
-            "adapter": {
-              "templateType": "react",
-              "events": {
-                "onDoAction": "doAction_uiControl16_ohrCBC",
-                "onGetTemplate": "getTemplate_uiControl16_ohrCBC"
-              }
-            }
-          }
-        },
         {
           "id": "uiControl20_cgL9fW",
           "controlId": "control19_C1K69x",
@@ -336,19 +208,6 @@
                 "onDoAction": "doAction_uiControl20_cgL9fW",
                 "onGetTemplate": "getTemplate_uiControl20_cgL9fW"
               }
-            }
-          }
-        },
-        {
-          "id": "uiControl17_iz1NMp",
-          "controlId": "control15_0uO5sr",
-          "display": {
-            "adapterId": "clickable",
-            "type": "button",
-            "class": "btn_address",
-            "hollow": false,
-            "adapter": {
-              "templateType": ""
             }
           }
         },

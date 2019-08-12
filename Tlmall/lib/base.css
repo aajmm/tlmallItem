@@ -2065,3 +2065,181 @@ div[data-ysp-modelid^="limitSearch"] .list-box .sel-all-box span {
 div[data-ysp-modelid^="limitSearch"] .disnone {
   display: none;
 }
+div[data-ysp-modelid^="shippingAddress"] {
+  position: relative;
+  height: 100%;
+  background-color: #f3f3f3;
+}
+div[data-ysp-modelid^="shippingAddress"] .tab-title {
+  margin-top: 38px;
+}
+div[data-ysp-modelid^="shippingAddress"] .tab-title .btn {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+div[data-ysp-modelid^="shippingAddress"] .tab-title .btn.act,
+div[data-ysp-modelid^="shippingAddress"] .tab-title .btn:active,
+div[data-ysp-modelid^="shippingAddress"] .tab-title .btn:hover {
+  background: #fff;
+  color: #E7350D;
+  border-bottom: 2px solid #e7350d;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list {
+  position: absolute;
+  bottom: 110px;
+  top: 85px;
+  width: 100%;
+  overflow-y: auto;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .item-list {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .item-list .content .title {
+  padding: 10px 10px 0 10px;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .item-list .content .title span {
+  font-size: 14px;
+  color: #3f3f3f;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .item-list .content .title em {
+  display: none;
+  font-size: 14px;
+  color: #4a91cc;
+  font-style: normal;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .item-list .content .states {
+  overflow: hidden;
+  border-bottom: 1px solid #f3f3f3;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .item-list .content .states .item {
+  float: left;
+  padding: 2px 10px 10px 10px;
+  margin: 0;
+  border: 0;
+  min-height: auto;
+  font-size: 14px;
+  color: #333;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .item-list .content .states .item:last-child {
+  float: right;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list {
+  margin: 0;
+  padding: 10px 10px 0 10px;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list table {
+  width: 100%;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .main td {
+  color: #3f3f3f;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list td {
+  font-size: 14px;
+  color: #999;
+  line-height: 24px;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list td input[type='button'] {
+  border: 0;
+  outline: none;
+  border-radius: 3px;
+  background-color: #4796ed;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 10px;
+  line-height: 20px;
+  margin-right: 5px;
+  vertical-align: top;
+  margin-top: 2px;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .listBtn {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .listBtn .listBtn-group {
+  display: inline-block;
+  vertical-align: top;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .listBtn .listBtn-group input[type='button'] {
+  margin-left: 10px;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .listBtn .listBtn-group input[type='button'] + input[type='button'] {
+  margin-left: 3px;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: 10px;
+  border-top: 1px solid #f3f3f3;
+  padding: 10px;
+  text-align: right;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+  margin-left: 8px;
+  font-size: 14px;
+  color: #e6350d;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link:nth-child(2):before,
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link:nth-child(3):before {
+  content: "";
+  position: relative;
+  top: -3px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link:nth-child(2):before {
+  background: url("../local/img/icon-edit-act.png") left center no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link:nth-child(3):before {
+  background: url("../local/img/icon-delete-act.png") left center no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar.stop .btn-link {
+  color: #999;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar.stop .btn-link:nth-child(2):before {
+  background: url("../local/img/icon-edit.png") left center no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar.stop .btn-link:nth-child(3):before {
+  background: url("../local/img/icon-delete.png") left center no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="shippingAddress"] .btn_address {
+  position: fixed;
+  bottom: 51px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: #e7350d;
+  color: #fff;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 16px;
+}
+div[data-ysp-modelid^="shippingAddress"] .btn_address:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  background: url("../local/img/icon-add.png") no- repeat;
+  background-size: 100%;
+  margin-right: 5px;
+}
