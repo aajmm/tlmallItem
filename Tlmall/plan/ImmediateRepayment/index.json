@@ -1,15 +1,23 @@
 {
   "version": "0.1",
-  "id": "ImmediateRepayment",
+  "id": "immediateRepayment",
   "targetURL": "http://192.168.220.23/personal.html?code=40400",
   "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json",
+    "checkstand": "../checkstand/index.json"
+  },
   "chineseName": "立即还款",
   "description": "",
   "controls": {
-    "control43_XnLHFQ": {
+    "control43_0gH0xw": {
       "location": {
         "data": {
           "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -51,37 +59,25 @@
       "text": "立即还款",
       "frameXPath": ""
     },
-    "control45_AOrs6C": {
+    "control47_XM1bCT": {
       "location": {
         "data": {
-          "tagName": "SPAN"
+          "tagName": "HTML"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
-          },
-          {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
+            "value": "/HTML[1]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control45_AOrs6C"
+        "onGetData": "getData_control47_XM1bCT"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -91,40 +87,58 @@
     }
   },
   "contexts": {
-    "context9_qIzWB9": {
+    "context9_7rHIAz": {
       "controls": [
-        "control45_AOrs6C"
+        "control47_XM1bCT"
       ],
       "anchors": [
-        "control43_XnLHFQ"
+        "control43_0gH0xw"
       ],
       "urlAnchor": []
     }
   },
   "flows": {
-    "flow24_7k4sA7": {
+    "flow24_N5d86r": {
       "toContexts": [
         {
-          "toContextId": "context9_qIzWB9"
+          "toContextId": "context9_7rHIAz"
+        }
+      ]
+    },
+    "flow25_h3x4yH": {
+      "fromContextId": "context9_7rHIAz",
+      "fromAction": "doAction",
+      "fromControlId": "control47_XM1bCT",
+      "toContexts": [
+        {
+          "toContextId": "context9_7rHIAz"
+        },
+        {
+          "toContextId": "context2_JFd3LO",
+          "toModelId": "index"
+        },
+        {
+          "toContextId": "context10_c2V9mL",
+          "toModelId": "checkstand"
         }
       ]
     }
   },
   "pages": {
-    "page9_sa4Nis": {
-      "contextId": "context9_qIzWB9",
+    "page9_H23LXt": {
+      "contextId": "context9_7rHIAz",
       "layout": [
         {
-          "id": "uiControl29_N5DE8t",
-          "controlId": "control45_AOrs6C",
+          "id": "uiControl32_5tuUv6",
+          "controlId": "control47_XM1bCT",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl29_N5DE8t",
-                "onGetTemplate": "getTemplate_uiControl29_N5DE8t"
+                "onDoAction": "doAction_uiControl32_5tuUv6",
+                "onGetTemplate": "getTemplate_uiControl32_5tuUv6"
               }
             }
           }
@@ -135,21 +149,21 @@
   "matchers": {
     "page/title": {
       "contexts": {
-        "context9_qIzWB9": [
+        "context9_7rHIAz": [
           "太力商城"
         ]
       }
     },
     "page/urls": {
       "contexts": {
-        "context9_qIzWB9": [
+        "context9_7rHIAz": [
           "192.168.220.23/personal.html?code=40400"
         ]
       }
     },
     "page/ids": {
       "contexts": {
-        "context9_qIzWB9": [
+        "context9_7rHIAz": [
           [
             "NoUseElcW",
             "RepayCompany",
@@ -214,7 +228,7 @@
     },
     "page/classes": {
       "contexts": {
-        "context9_qIzWB9": [
+        "context9_7rHIAz": [
           [
             "a",
             "ablock",
@@ -332,7 +346,62 @@
     },
     "page/tagTriplets": {
       "contexts": {
-        "context9_qIzWB9": [
+        "context9_7rHIAz": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/B",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/EM",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-radio",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/INS",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/P",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/LABEL/INPUT-password",
+            "DIV/LABEL/INPUT-text",
+            "DIV/LABEL/SPAN",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/B",
+            "DIV/SPAN/EM",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "LI/A/B",
+            "LI/A/I",
+            "LI/H5/I",
+            "LI/SELECT/OPTION",
+            "LI/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-text",
+            "UL/LI/A",
+            "UL/LI/H5",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN",
+            "UL/LI/UL"
+          ],
           [
             "-/-/DIV",
             "-/-/SCRIPT",

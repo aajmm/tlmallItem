@@ -3,6 +3,9 @@
   "id": "index",
   "targetURL": "http://192.168.220.23/index.html",
   "jsFile": "index.js",
+  "requires": {
+    "personal": "../personal/index.json"
+  },
   "chineseName": "首页",
   "description": "",
   "controls": {
@@ -219,6 +222,10 @@
       "toContexts": [
         {
           "toContextId": "context2_JFd3LO"
+        },
+        {
+          "toContextId": "context3_IigyoX",
+          "toModelId": "personal"
         }
       ]
     }
