@@ -77,12 +77,32 @@
       "demo": [
         "http://192.168.220.23/personal.html?code=10400"
       ]
+    },
+    {
+      "title": "index",
+      "url": "adapter://Tlmall/plan/index/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/(index\\.)?(html|htm|aspx|asp|php|jsp)?(\\?|$)"
+      ],
+      "demo": [
+        "http://192.168.220.23/index.html"
+      ]
+    },
+    {
+      "title": "limitSearch",
+      "url": "adapter://Tlmall/plan/limitSearch/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=40400"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html?code=40400"
+      ]
     }
   ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/login.html",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1565576088326,
+  "update_time": 1565330783187,
   "runtime_env": "1webview"
 }

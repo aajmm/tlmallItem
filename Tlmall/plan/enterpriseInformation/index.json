@@ -3,6 +3,9 @@
   "id": "enterpriseInformation",
   "targetURL": "http://192.168.220.23//page/register/registerBus.html",
   "jsFile": "index.js",
+  "requires": {
+    "receivingInformation": "../receivingInformation/index.json"
+  },
   "chineseName": "企业信息",
   "description": "",
   "controls": {
@@ -42,6 +45,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@class/word",
@@ -60,7 +67,57 @@
       },
       "intendedRole": "custom",
       "roles": "element,custom",
-      "monitored": false,
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    },
+    "control32_aVUCQg": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"errorMessage\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wc1200 DIV.reg-bus-btns DIV.errors"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              231,
+              53,
+              13
+            ]
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control32_aVUCQg"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
     }
@@ -69,7 +126,8 @@
     "context5_MEUJxb": {
       "controls": [
         "control16_KUe5Uq",
-        "control17_b85ysT"
+        "control17_b85ysT",
+        "control32_aVUCQg"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -80,6 +138,20 @@
       "toContexts": [
         {
           "toContextId": "context5_MEUJxb"
+        }
+      ]
+    },
+    "flow18_0Ust6z": {
+      "fromContextId": "context5_MEUJxb",
+      "fromAction": "doAction",
+      "fromControlId": "control17_b85ysT",
+      "toContexts": [
+        {
+          "toContextId": "context5_MEUJxb"
+        },
+        {
+          "toContextId": "context7_gGBe79",
+          "toModelId": "receivingInformation"
         }
       ]
     }
@@ -114,6 +186,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl17_xTlhrw",
                 "onGetTemplate": "getTemplate_uiControl17_xTlhrw"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl21_0JqKai",
+          "controlId": "control32_aVUCQg",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl21_0JqKai",
+                "onGetTemplate": "getTemplate_uiControl21_0JqKai"
               }
             }
           }
@@ -238,6 +325,61 @@
             "zone",
             "zoneDiv",
             "zoneTip"
+          ],
+          [
+            "IDtype-a",
+            "IDtype-b",
+            "address",
+            "addressDiv",
+            "addressTip",
+            "city",
+            "clientInfo",
+            "contactPersonName",
+            "contactPersonNameDiv",
+            "contactPersonNameTop",
+            "contactPhone",
+            "contactPhoneDiv",
+            "contactPhoneTip",
+            "enterpriseName",
+            "enterpriseNameDiv",
+            "enterpriseNameTip",
+            "enterpriseType",
+            "errorMessage",
+            "fileADiv",
+            "fileATip",
+            "fileA_bind",
+            "fileA_echo",
+            "fileA_value",
+            "fileBEm",
+            "fileBTip",
+            "fileB_bind",
+            "fileB_echo",
+            "fileB_value",
+            "idTypt",
+            "idTyptEm",
+            "legalName",
+            "legalNameDiv",
+            "legalNameTip",
+            "licenseNumber",
+            "licenseNumberDiv",
+            "licenseNumberTip",
+            "province",
+            "rt_rt_dhienluviloqhkdh",
+            "rt_rt_dhienoqmqjiscsue",
+            "salesmanName",
+            "salesmanPhone",
+            "tucaoIcon",
+            "uploaderA",
+            "uploaderB",
+            "userID",
+            "userIDEm",
+            "userIDTip",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon",
+            "zc_ck",
+            "zone",
+            "zoneDiv",
+            "zoneTip"
           ]
         ]
       }
@@ -268,6 +410,81 @@
             "icon_tucao",
             "icon_twoCodes",
             "iconfont",
+            "input_title",
+            "input_txt",
+            "iptActive",
+            "iradio_tlmall",
+            "itxt_title",
+            "itxt_title_bdr",
+            "line",
+            "model_selt",
+            "model_title",
+            "model_ul",
+            "pos_info",
+            "radio_title",
+            "reg-bus-btns",
+            "reg-bus-form",
+            "sActive",
+            "tab",
+            "tab_lists",
+            "tab_zc_radios",
+            "textarea_title",
+            "tlmall-app",
+            "tlmall-wx",
+            "triangle_r",
+            "upload-error",
+            "uploader",
+            "uploader-list",
+            "uploader_s",
+            "wb",
+            "wc",
+            "webuploader-container",
+            "webuploader-element-invisible",
+            "webuploader-pick",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info",
+            "zc-container",
+            "zcRadios_infos",
+            "zc_btn_big",
+            "zc_ckBox",
+            "zc_footer",
+            "zc_infos",
+            "zc_infos_title",
+            "zc_input",
+            "zc_inputs",
+            "zc_iptselt",
+            "zc_logo",
+            "zc_radios_types",
+            "zc_title"
+          ],
+          [
+            "a",
+            "act",
+            "address-province",
+            "attention_info",
+            "b",
+            "btn",
+            "checked",
+            "ck",
+            "ck_tip",
+            "clearfix",
+            "country",
+            "error",
+            "errors",
+            "fl",
+            "iCheck-helper",
+            "icheckbox_red",
+            "icon_arrow",
+            "icon_down",
+            "icon_error",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "input_error",
             "input_title",
             "input_txt",
             "iptActive",
@@ -353,6 +570,45 @@
             "DIV/H5/EM",
             "DIV/H5/LABEL",
             "DIV/SELECT/OPTION",
+            "DIV/UL/LI",
+            "FORM/DIV/DIV",
+            "H4/DIV/INPUT-radio",
+            "H4/DIV/INS",
+            "LI/DIV/DIV",
+            "LI/DIV/H5",
+            "UL/LI/DIV"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H4",
+            "DIV/DIV/H5",
+            "DIV/DIV/H6",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-checkbox",
+            "DIV/DIV/INPUT-file",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/INS",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/FORM/DIV",
+            "DIV/H4/DIV",
+            "DIV/H4/LABEL",
+            "DIV/H5/EM",
+            "DIV/H5/LABEL",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/I",
             "DIV/UL/LI",
             "FORM/DIV/DIV",
             "H4/DIV/INPUT-radio",
