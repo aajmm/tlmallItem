@@ -1,7 +1,6 @@
 (function (win, ysp) {
   ysp.runtime.Model.extendLoadingModel({
     getData_control44_R2pKt2: function (elem) {
-      "use strict";
       if (!elem) {
         return;
       }var data = { creditAmount: "", receiveAmount: "", overSoonNum: "", overDueNum: "", orderId: "", createDate: "", completedDate: "", apCompany: "", orderState: "", apCompanies: [], orderStates: [], tab1: "", tab2: "", orderLists: { isShow: "", selAll: [], lists: [] }, repayLists: { isShow: "", lists: [] }, page1: [], page2: [] };data.creditAmount = elem.querySelector("#creditAmount").textContent;data.receiveAmount = elem.querySelector("#receiveAmount").textContent;data.overSoonNum = elem.querySelector("#overSoonNum").textContent;data.overDueNum = elem.querySelector("#overDueNum").textContent;data.orderId = elem.querySelector("#orderId").value;data.createDate = elem.querySelector("#createDate").value;data.completedDate = elem.querySelector("#completedDate").value;data.apCompany = elem.querySelector("#apCompany").querySelector("option:checked").textContent;data.orderState = elem.querySelector("#orderState").querySelector("option:checked").textContent;var company = elem.querySelector("#apCompany").querySelectorAll("option");[].map.call(company, function (d, i) {
@@ -23,7 +22,6 @@
       });data.page1.push(elem.querySelector("#pagination").querySelector(".nowPage").textContent);data.page1.push(elem.querySelector("#pagination").querySelector(".allPages").textContent);var iptShow1 = elem.querySelector("#pagination").querySelector(".J-paginationjs-go-pagenumber").style.display;data.page1.push(iptShow1);data.page1.push(elem.querySelector("#pagination").querySelector(".J-paginationjs-go-pagenumber").value);var pageShow2 = elem.querySelector("#pagination2").querySelector(".nowPage");pageShow2 && data.page2.push(elem.querySelector("#pagination2").querySelector(".nowPage").textContent);pageShow2 && data.page2.push(elem.querySelector("#pagination2").querySelector(".allPages").textContent);var iptShow2 = pageShow2 && elem.querySelector("#pagination2").querySelector(".J-paginationjs-go-pagenumber").style.display;data.page2.push(iptShow2);pageShow2 && data.page2.push(elem.querySelector("#pagination2").querySelector(".J-paginationjs-go-pagenumber").value);return data;
     },
     doAction_uiControl30_Ul1T7s: function (data, elem) {
-      "use strict";
       var type = data.eventType;if (type == "back") {
         ysp.appMain.back();
       } else if (type == "home") {
@@ -43,7 +41,8 @@
       } else if (type == "companySel") {
         var Num = data.dataCustom;var _d3 = Num.indexOf("-");var Num2 = parseInt(Num.substr(_d3 + 1, Num.length));elem.querySelector("#apCompany").querySelectorAll("option")[Num2].selected = true;
       } else if (type == "stateSel1") {
-        var _Num = data.dataCustom;var _d4 = _Num.indexOf("-");var _Num2 = parseInt(_Num.substr(_d4 + 1, _Num.length));elem.querySelector("#orderState").querySelectorAll("option")[_Num2].selected = true;
+        var _Num = data.dataCustom;var _d4 = _Num.indexOf("-");var _Num2 = parseInt(_Num.substr(_d4 + 1, _Num.length));
+        elem.querySelector("#orderState").querySelectorAll("option")[_Num2].selected = true;
       } else if (type == "firstClick1") {
         elem.querySelector("#pagination").querySelectorAll("li")[0].click();
       } else if (type == "prevClick1") {
@@ -78,7 +77,8 @@
         var _d8 = data.dataCustom;var _ipt4 = elem.querySelector("#tbody_repay").querySelectorAll("tr")[_d8].querySelector(".btn_bg01");_ipt4.click();_ipt4.dispatchEvent(new Event("click"));
       } else if (type == "checkClick") {
         var _d9 = data.dataCustom;var num = _d9[1];var td = elem.querySelector("#tBody_pay").querySelectorAll("tr")[num].querySelectorAll("td")[0];td.querySelector("input").checked = _d9[0];if (_d9[0] == true) {
-          td.querySelector(".icheckbox_tlmall").classList.add("checked");debugger;elem.ownerDocument.defaultView.ea.putAndRemoveParam('input-checkbox', 'payTable', true, td.querySelector("input").getAttribute("data-params"), []);
+          debugger;td.querySelector(".icheckbox_tlmall").classList.add("checked");$('.input-checkbox').iCheck(); // debugger;
+          // elem.ownerDocument.defaultView.ea.putAndRemoveParam('input-checkbox', 'payTable', true, td.querySelector("input").getAttribute("data-params"), []);
         } else {
           td.querySelector(".icheckbox_tlmall").classList.remove("checked");
         }
