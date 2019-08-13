@@ -2,7 +2,6 @@
   ysp.runtime.Model.extendLoadingModel({
     getData_control31_eCGGQi: function (elem) {
       "use strict";
-
       if (!elem) {
         return;
       }var data = { rc_pengdingConfirmAmount: "", rc_pendingConfirmCount: "", rc_startTime: "", rc_endTime: "", tableLists: [], selLists: [], pages: [] };data.rc_pengdingConfirmAmount = elem.querySelector("#rc_pengdingConfirmAmount").textContent;data.rc_pendingConfirmCount = elem.querySelector("#rc_pendingConfirmCount").textContent;data.rc_startTime = elem.querySelector("#rc_startTime").value;data.rc_endTime = elem.querySelector("#rc_endTime").value;var trs = elem.querySelector("#rc_tbodyList").children;[].map.call(trs, function (d, i) {
@@ -12,7 +11,8 @@
           });data.tableLists.push(tableList1);
         } else {
           //查看列表
-          var trs2 = d.querySelector("tbody").querySelectorAll("tr");var selBox = { isShow: "none", selList: [] };trs2 && [].map.call(trs2, function (m, n) {
+          var trs2 = d.querySelector("tbody").querySelectorAll("tr");var selBox = { isShow: "none",
+            selList: [] };trs2 && [].map.call(trs2, function (m, n) {
             var tds2 = m.querySelectorAll("td");var selLest = [];[].map.call(tds2, function (item, index) {
               selLest.push(item.textContent);
             });selBox.isShow = d.style.display == "table-row" ? "block" : "none"; // selBox.selLest.push(m);
@@ -23,7 +23,6 @@
     },
     doAction_uiControl20_qwcopo: function (data, elem) {
       "use strict";
-
       var type = data.eventType;if (type == "back") {
         ysp.appMain.back();
       } else if (type == "startTime") {
@@ -64,12 +63,14 @@
     },
     getData_control34_f56u2G: function (elem) {
       "use strict";
+
       if (!elem) {
         return;
       }var data = [];data.push(elem.querySelector(".nowPage").textContent);data.push(elem.querySelector(".allPages").textContent);var iptShow = elem.querySelector(".J-paginationjs-go-pagenumber").style.display;data.push(iptShow);data.push(elem.querySelector(".J-paginationjs-go-pagenumber").value);return data;
     },
     doAction_uiControl23_aExU0w: function (data, elem) {
       "use strict";
+
       var type = data.eventType;if (type == "firstClick") {
         elem.querySelectorAll("li")[0].click();
       } else if (type == "prevClick") {
