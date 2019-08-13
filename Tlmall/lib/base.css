@@ -2100,50 +2100,176 @@ div[data-ysp-modelid^="index"] .ysp-footer p {
   color: #999;
   font-size: 12px;
 }
-div[data-ysp-modelid^="limitSearch"] {
-  background: #f3f3f3;
-}
-div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch {
+.ysp-limitSearch {
   padding-top: 54px;
 }
-div[data-ysp-modelid^="limitSearch"] .num-box {
+.ysp-limitSearch .num-box {
   display: flex;
   background: #fff;
   padding: 20px 0;
 }
-div[data-ysp-modelid^="limitSearch"] .num-box li {
+.ysp-limitSearch .num-box li {
   width: 50%;
   text-align: center;
 }
-div[data-ysp-modelid^="limitSearch"] .num-box li:first-child {
+.ysp-limitSearch .num-box li:first-child {
   border-right: 1px solid #e1e1e1;
   color: #4796ed;
 }
-div[data-ysp-modelid^="limitSearch"] .num-box li:first-child p {
+.ysp-limitSearch .num-box li:first-child p {
   color: #4796ed;
 }
-div[data-ysp-modelid^="limitSearch"] .num-box li:last-child {
+.ysp-limitSearch .num-box li:last-child {
   color: #e7350d;
 }
-div[data-ysp-modelid^="limitSearch"] .num-box li:last-child p {
+.ysp-limitSearch .num-box li:last-child p {
   color: #e7350d;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box {
+.ysp-limitSearch .filter-box {
   margin-top: 10px;
   background: #fff;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .filter {
+.ysp-limitSearch .filter-box .filter {
   height: 40px;
   line-height: 40px;
   padding: 0 12px;
   border-bottom: 1px solid #e1e1e1;
   overflow: hidden;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .filter:first-child {
+.ysp-limitSearch .filter-box .filter:first-child {
   color: #4796ed;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .filter:nth-child(2) {
+.ysp-limitSearch .filter-box .filter:nth-child(2) {
   color: #e7350d;
+}
+.ysp-limitSearch .tip {
+  padding: 0 12px;
+  font-size: 12px;
+}
+.ysp-limitSearch .tip strong {
+  color: #e7350d;
+}
+.ysp-limitSearch .list-box {
+  margin: 12px;
+  padding-bottom: 90px;
+}
+.ysp-limitSearch .list-box .no-data {
+  background: #fff;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #e7350d;
+}
+.ysp-limitSearch .list-box .ckeck-label {
+  position: relative;
+  display: inline-block;
+  padding-left: 25px;
+  vertical-align: top;
+}
+.ysp-limitSearch .list-box .ckeck-label input {
+  display: none;
+}
+.ysp-limitSearch .list-box .ckeck-label i {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background: url(../local/img/round-gray.png) no-repeat center center;
+  background-size: cover;
+}
+.ysp-limitSearch .list-box .ckeck-label input:checked + i {
+  background: url(../local/img/round-red.png) no-repeat center center;
+  background-size: cover;
+}
+.ysp-limitSearch .list-box .ckeck-label input:disabled + i {
+  background: url(../local/img/round-flat-disabled.png) no-repeat center center;
+  background-size: cover;
+}
+.ysp-limitSearch .list-box .lists ul {
+  background: #fff;
+  margin-bottom: 10px;
+}
+.ysp-limitSearch .list-box .lists ul li {
+  padding: 0 12px;
+  line-height: 24px;
+  font-size: 13px;
+  word-break: break-all;
+}
+.ysp-limitSearch .list-box .lists ul li.tit {
+  padding: 5px 12px;
+  margin-bottom: 5px;
+  color: #e7350d;
+  border-bottom: 1px solid #e1e1e1;
+  overflow: hidden;
+}
+.ysp-limitSearch .list-box .lists ul li.tit span {
+  display: inline-block;
+  float: right;
+  color: #e7350d;
+  font-size: 13px;
+}
+.ysp-limitSearch .list-box .lists ul li.date-box {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 5px;
+  padding: 5px 12px;
+  color: #999;
+  display: flex;
+}
+.ysp-limitSearch .list-box .lists ul li.date-box p {
+  width: 50%;
+  color: #999;
+  font-size: 12px;
+}
+.ysp-limitSearch .list-box .lists ul li.date-box p span {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+.ysp-limitSearch .list-box .lists ul li.btm {
+  border-top: 1px solid #e1e1e1;
+  padding: 5px 0;
+  margin: 5px 12px 0;
+  color: #999;
+}
+.ysp-limitSearch .list-box .lists ul li.btn-box {
+  padding: 10px 12px;
+  text-align: right;
+  border-top: 1px solid #e1e1e1;
+}
+.ysp-limitSearch .list-box .lists ul li.btn-box span {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  height: 25px;
+  padding: 0 10px;
+  border: 1px solid #666;
+  border-radius: 3px;
+  margin-left: 12px;
+  color: #3f3f3f;
+}
+.ysp-limitSearch .list-box .lists ul li.btn-box span:last-child {
+  color: #e7350d;
+  border: 1px solid #e7350d;
+}
+div[data-ysp-modelid^="limitSearch"] {
+  background: #f3f3f3;
+}
+div[data-ysp-modelid^="limitSearch"] .tab-box {
+  display: flex;
+}
+div[data-ysp-modelid^="limitSearch"] .tab-box li {
+  width: 50%;
+  margin: 5%;
+  border-radius: 3px;
+  line-height: 30px;
+  text-align: center;
+  background: #e1e1e1;
+}
+div[data-ysp-modelid^="limitSearch"] .tab-box li.act {
+  background: #e7350d;
+  color: #fff;
 }
 div[data-ysp-modelid^="limitSearch"] .filter-box .filter input {
   width: 70%;
@@ -2181,132 +2307,6 @@ div[data-ysp-modelid^="limitSearch"] .filter-box .btn-box span {
   background-color: #4796ed;
   color: #fff;
   font-size: 12px;
-}
-div[data-ysp-modelid^="limitSearch"] .tab-box {
-  display: flex;
-}
-div[data-ysp-modelid^="limitSearch"] .tab-box li {
-  width: 50%;
-  margin: 5%;
-  border-radius: 3px;
-  line-height: 30px;
-  text-align: center;
-  background: #e1e1e1;
-}
-div[data-ysp-modelid^="limitSearch"] .tab-box li.act {
-  background: #e7350d;
-  color: #fff;
-}
-div[data-ysp-modelid^="limitSearch"] .tip {
-  padding: 0 12px;
-  font-size: 12px;
-}
-div[data-ysp-modelid^="limitSearch"] .tip strong {
-  color: #e7350d;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box {
-  margin: 12px;
-  padding-bottom: 90px;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .no-data {
-  background: #fff;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  color: #e7350d;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .ckeck-label {
-  position: relative;
-  display: inline-block;
-  padding-left: 25px;
-  vertical-align: top;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .ckeck-label input {
-  display: none;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .ckeck-label i {
-  position: absolute;
-  top: 3px;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  background: url(../local/img/round-gray.png) no-repeat center center;
-  background-size: cover;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .ckeck-label input:checked + i {
-  background: url(../local/img/round-red.png) no-repeat center center;
-  background-size: cover;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .ckeck-label input:disabled + i {
-  background: url(../local/img/round-flat-disabled.png) no-repeat center center;
-  background-size: cover;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul {
-  background: #fff;
-  margin-bottom: 10px;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li {
-  padding: 0 12px;
-  line-height: 24px;
-  font-size: 13px;
-  word-break: break-all;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.tit {
-  padding: 5px 12px;
-  margin-bottom: 5px;
-  color: #e7350d;
-  border-bottom: 1px solid #e1e1e1;
-  overflow: hidden;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.tit span {
-  display: inline-block;
-  float: right;
-  color: #e7350d;
-  font-size: 13px;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.date-box {
-  border-top: 1px solid #e1e1e1;
-  margin-top: 5px;
-  padding: 5px 12px;
-  color: #999;
-  display: flex;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.date-box p {
-  width: 50%;
-  color: #999;
-  font-size: 12px;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.date-box p span {
-  display: block;
-  font-size: 12px;
-  color: #999;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.btm {
-  border-top: 1px solid #e1e1e1;
-  padding: 5px 0;
-  margin: 5px 12px 0;
-  color: #999;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.btn-box {
-  padding: 10px 12px;
-  text-align: right;
-  border-top: 1px solid #e1e1e1;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.btn-box span {
-  display: inline-block;
-  text-align: center;
-  font-size: 14px;
-  height: 25px;
-  padding: 0 10px;
-  border: 1px solid #666;
-  border-radius: 3px;
-  margin-left: 12px;
-  color: #3f3f3f;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .lists ul li.btn-box span:last-child {
-  color: #e7350d;
-  border: 1px solid #e7350d;
 }
 div[data-ysp-modelid^="limitSearch"] .list-box .sel-all-box {
   position: fixed;
@@ -2512,6 +2512,15 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .num-box .immediate-pay 
 }
 div[data-ysp-modelid^="immediateRepayment"] .detail-box .disnone {
   display: none;
+}
+div[data-ysp-modelid^="queryCreditedPaymentHistory"] {
+  background: #f3f3f3;
+}
+div[data-ysp-modelid^="queryCreditedPaymentHistory"] .ysp-limitSearch .tip {
+  padding-top: 10px;
+}
+div[data-ysp-modelid^="queryCreditedPaymentHistory"] .filter-box .filter:nth-child(2) {
+  border-bottom: none;
 }
 div[data-ysp-modelid^="checkstand"] .ysp-checkstand {
   margin-top: 55px;

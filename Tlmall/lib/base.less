@@ -1889,247 +1889,253 @@ div[data-ysp-modelid^="index"]{
   }
 }
 
-//额度查询  xxger
-div[data-ysp-modelid^="limitSearch"]{
-  background:@theme-bg;
-  .ysp-limitSearch{
-    padding-top:54px;
-  }
-  .num-box{
-    display: flex;
-    background:#fff;
-    padding:20px 0;
-    li{
-      width:50%;
-      text-align: center;
-      &:first-child{
-        border-right: @theme-border;
-        color:@theme-blue;
-        p{
-          color:@theme-blue;
-        }
-      }
-      &:last-child{
-        color:@theme-red;
-        p{
-          color:@theme-red;
-        }
-      }
-    }
-  }
-  .filter-box{
-    margin-top:10px;
-    background:#fff;
-    .filter{
-      height:40px;
-      line-height: 40px;
-      padding:0 12px;
-      border-bottom: @theme-border;
-      overflow: hidden;
-      &:first-child{
-        color:@theme-blue;
-      }
-      &:nth-child(2){
-        color:@theme-red;
-      }
-      input{
-        width:70%;
-        height:100%;
-        float:right;
-        border: none;
-        padding:0;
-        color:#333;
-        font-size:14px;
-      }
-      input[type="date"]{
-        background:#fff url(../local/img/date.png) no-repeat right center;
-        background-size: 16px 16px;
-      }
-      .option-show {
-          float:right;
-          width: 70%;
-          line-height: 40px;
-          height: 40px;
-          background: #fff url(../local/img/arrows-updown.png) no-repeat right center;
-          -webkit-background-size: 10px;
-          background-size: 10px;
-          font-size:14px;
-          color:#999;
-      }
-    }
-    .btn-box{
-      text-align: right;
-      padding:10px 0;
-      span{
-        display: inline-block;
-        margin-right:12px;
-      	border-radius: 3px;
-        padding: 4px 8px;
-        background-color:@theme-blue;
-        color: #fff;
-        font-size: 12px;
-      }
-    }
-  }
-  .tab-box{
-    display: flex;
-    li{
-      width:50%;
-      margin:5%;
-      border-radius: 3px;
-      line-height: 30px;
-      text-align: center;
-      background:#e1e1e1;
-      &.act{
-        background:@theme-red;
-        color:#fff;
-      }
-    }
-  }
-  .tip{
-    padding:0 12px;
-    font-size:12px;
-    strong{
-      color:@theme-red;
-    }
-  }
-  .list-box{
-    margin:12px;
-    padding-bottom:90px;
-    .no-data{
-      background:#fff;
-      height:100px;
-      line-height: 100px;
-      text-align: center;
-      color:@theme-red;
-    }
-    .ckeck-label{
-      position: relative;
-      display: inline-block;
-      padding-left: 25px;
-      vertical-align: top;
-      input{
-        display: none;
-      }
-      i{
-				position: absolute;
-        top: 3px;
-        left: 0;
-        width: 18px;
-        height: 18px;
-        border-radius: 100%;
-        background:url(../local/img/round-gray.png) no-repeat center center;
-        background-size: cover;
-      }
-    }
-    .ckeck-label input:checked + i{
-      background:url(../local/img/round-red.png) no-repeat center center;
-      background-size: cover;
-    }
-    .ckeck-label input:disabled + i{
-      background:url(../local/img/round-flat-disabled.png) no-repeat center center;
-      background-size: cover;
-    }
-    .lists ul{
-      background:#fff;
-      margin-bottom:10px;
-      li{
-        padding:0 12px;
-        line-height: 24px;
-        font-size: 13px;
-        word-break:break-all;
-        &.tit{
-          padding:5px 12px;
-          margin-bottom: 5px;
-          color:@theme-red;
-          border-bottom: @theme-border;
-          overflow: hidden;
-          span{
-            display: inline-block;
-            float: right;
-            color:@theme-red;
-            font-size: 13px;
-          }
-        }
-        &.date-box{
-          border-top:@theme-border;
-          margin-top:5px;
-          padding:5px 12px;
-          color:#999;
-          display:flex;
-          p{
-            width:50%;
-            color:#999;
-            font-size:12px;
-            span{
-              display: block;
-              font-size:12px;
-              color:#999;
-            }
-          }
-        }
-        &.btm{
-          border-top: @theme-border;
-          padding:5px 0;
-          margin:5px 12px 0;
-          color:#999;
-        }
-        &.btn-box{
-          padding:10px 12px;
-          text-align: right;
-          border-top: @theme-border;
-          span{
-            display: inline-block;
+//额度查询、待还款额度 公共样式  xxger
+.ysp-limitSearch {
+    padding-top: 54px;
+    .num-box {
+        display: flex;
+        background: #fff;
+        padding: 20px 0;
+        li {
+            width: 50%;
             text-align: center;
-            font-size:14px;
-            height:25px;
-            padding:0 10px;
-            border:1px solid #666;
-            border-radius: 3px;
-            margin-left:12px;
-            color:#3f3f3f;
-            &:last-child{
-              color:@theme-red;
-              border:1px solid @theme-red;
+            &:first-child {
+                border-right: @theme-border;
+                color: @theme-blue;
+                p {
+                    color: @theme-blue;
+                }
             }
-          }
+            &:last-child {
+                color: @theme-red;
+                p {
+                    color: @theme-red;
+                }
+            }
         }
-      }
     }
-    .sel-all-box{
-      position: fixed;
-      left:0;
-      bottom:52px;
-      z-index:200;
-      width:100%;
-      height:50px;
-      line-height:50px;
-      background:#fff;
-      border-top: @theme-border;
-      .ckeck-label{
-        width:45%;
-        color:#333;
-        font-size:14px;
-        padding-left: 35px;
-        i{
-          top:15px;
-          left:10px;
-          background-size:100%;
+    .filter-box {
+        margin-top: 10px;
+        background: #fff;
+        .filter {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 12px;
+            border-bottom: @theme-border;
+            overflow: hidden;
+            &:first-child {
+                color: @theme-blue;
+            }
+            &:nth-child(2) {
+                color: @theme-red;
+            }
         }
-      }
-      span{
-        display: inline-block;
-        width:55%;
-        height:100%;
-        text-align: center;
-        background:@theme-red;
-        color:#fff;
-      }
     }
-  }
-  .disnone{
-    display: none;
-  }
+    .tip {
+        padding: 0 12px;
+        font-size: 12px;
+        strong {
+            color: @theme-red;
+        }
+    }
+    .list-box {
+        margin: 12px;
+        padding-bottom: 90px;
+        .no-data {
+            background: #fff;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: @theme-red;
+        }
+        .ckeck-label {
+            position: relative;
+            display: inline-block;
+            padding-left: 25px;
+            vertical-align: top;
+            input {
+                display: none;
+            }
+            i {
+                position: absolute;
+                top: 3px;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 100%;
+                background: url(../local/img/round-gray.png) no-repeat center center;
+                background-size: cover;
+            }
+        }
+        .ckeck-label input:checked+i {
+            background: url(../local/img/round-red.png) no-repeat center center;
+            background-size: cover;
+        }
+        .ckeck-label input:disabled+i {
+            background: url(../local/img/round-flat-disabled.png) no-repeat center center;
+            background-size: cover;
+        }
+        .lists ul {
+            background: #fff;
+            margin-bottom: 10px;
+            li {
+                padding: 0 12px;
+                line-height: 24px;
+                font-size: 13px;
+                word-break: break-all;
+                &.tit {
+                    padding: 5px 12px;
+                    margin-bottom: 5px;
+                    color: @theme-red;
+                    border-bottom: @theme-border;
+                    overflow: hidden;
+                    span {
+                        display: inline-block;
+                        float: right;
+                        color: @theme-red;
+                        font-size: 13px;
+                    }
+                }
+                &.date-box {
+                    border-top: @theme-border;
+                    margin-top: 5px;
+                    padding: 5px 12px;
+                    color: #999;
+                    display: flex;
+                    p {
+                        width: 50%;
+                        color: #999;
+                        font-size: 12px;
+                        span {
+                            display: block;
+                            font-size: 12px;
+                            color: #999;
+                        }
+                    }
+                }
+                &.btm {
+                    border-top: @theme-border;
+                    padding: 5px 0;
+                    margin: 5px 12px 0;
+                    color: #999;
+                }
+                &.btn-box {
+                    padding: 10px 12px;
+                    text-align: right;
+                    border-top: @theme-border;
+                    span {
+                        display: inline-block;
+                        text-align: center;
+                        font-size: 14px;
+                        height: 25px;
+                        padding: 0 10px;
+                        border: 1px solid #666;
+                        border-radius: 3px;
+                        margin-left: 12px;
+                        color: #3f3f3f;
+                        &:last-child {
+                            color: @theme-red;
+                            border: 1px solid @theme-red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//额度查询  xxger
+div[data-ysp-modelid^="limitSearch"] {
+    background: @theme-bg;
+    .tab-box {
+        display: flex;
+        li {
+            width: 50%;
+            margin: 5%;
+            border-radius: 3px;
+            line-height: 30px;
+            text-align: center;
+            background: #e1e1e1;
+            &.act {
+                background: @theme-red;
+                color: #fff;
+            }
+        }
+    }
+    .filter-box {
+        .filter {
+            input {
+                width: 70%;
+                height: 100%;
+                float: right;
+                border: none;
+                padding: 0;
+                color: #333;
+                font-size: 14px;
+            }
+            input[type="date"] {
+                background: #fff url(../local/img/date.png) no-repeat right center;
+                background-size: 16px 16px;
+            }
+            .option-show {
+                float: right;
+                width: 70%;
+                line-height: 40px;
+                height: 40px;
+                background: #fff url(../local/img/arrows-updown.png) no-repeat right center;
+                -webkit-background-size: 10px;
+                background-size: 10px;
+                font-size: 14px;
+                color: #999;
+            }
+        }
+        .btn-box {
+            text-align: right;
+            padding: 10px 0;
+            span {
+                display: inline-block;
+                margin-right: 12px;
+                border-radius: 3px;
+                padding: 4px 8px;
+                background-color: @theme-blue;
+                color: #fff;
+                font-size: 12px;
+            }
+        }
+    }
+    .list-box .sel-all-box {
+        position: fixed;
+        left: 0;
+        bottom: 52px;
+        z-index: 200;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: #fff;
+        border-top: @theme-border;
+        .ckeck-label {
+            width: 45%;
+            color: #333;
+            font-size: 14px;
+            padding-left: 35px;
+            i {
+                top: 15px;
+                left: 10px;
+                background-size: 100%;
+            }
+        }
+        span {
+            display: inline-block;
+            width: 55%;
+            height: 100%;
+            text-align: center;
+            background: @theme-red;
+            color: #fff;
+        }
+    }
+    .disnone {
+        display: none;
+    }
 }
 
 //立即还款 xxger
@@ -2306,6 +2312,16 @@ div[data-ysp-modelid^="immediateRepayment"]{
   }
 }
 
+//待还款额度  xxger
+div[data-ysp-modelid^="queryCreditedPaymentHistory"]{
+  background:@theme-bg;
+  .ysp-limitSearch .tip{
+    padding-top:10px;
+  }
+  .filter-box .filter:nth-child(2){
+    border-bottom: none;
+	}
+}
 //收银台 xxger
 div[data-ysp-modelid^="checkstand"]{
   .ysp-checkstand{

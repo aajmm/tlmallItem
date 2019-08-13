@@ -6,7 +6,8 @@
   "requires": {
     "contact": "../contact/index.json",
     "rebateConfirMation": "../rebateConfirMation/index.json",
-    "limitSearch": "../limitSearch/index.json"
+    "limitSearch": "../limitSearch/index.json",
+    "queryCreditedPaymentHistory": "../queryCreditedPaymentHistory/index.json"
   },
   "chineseName": "业务中心",
   "description": "",
@@ -897,6 +898,74 @@
       },
       "roles": "element",
       "frameXPath": ""
+    },
+    "control48_x77onb": {
+      "location": {
+        "data": {
+          "tagName": "A"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待还款额度"
+              ],
+              "visText": [
+                "待还款额度"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "待还款额度"
+              ],
+              "visText": [
+                "待还款额度"
+              ]
+            }
+          },
+          {
+            "id": "a/@href",
+            "prob": 1,
+            "ordinal": [
+              0,
+              26
+            ],
+            "value": {
+              "funcName": "void"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"nav_sidebar\"]/UL[1]/LI[3]/A[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              3,
+              33
+            ],
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.nav_sidebar UL LI A"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[2]/UL[1]/LI[3]/A[1]"
+          }
+        ]
+      },
+      "intendedRole": "button",
+      "roles": "element,button,link",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "button"
     }
   },
   "contexts": {
@@ -904,7 +973,8 @@
       "controls": [
         "control11_ewt36D",
         "control18_7lKlGo",
-        "control38_wI77bv"
+        "control38_wI77bv",
+        "control48_x77onb"
       ],
       "anchors": [
         "control10_CwVfTa"
@@ -961,12 +1031,37 @@
           "toModelId": "limitSearch"
         }
       ]
+    },
+    "flow28_1R7GnO": {
+      "fromContextId": "context3_IigyoX",
+      "fromAction": "click",
+      "fromControlId": "control48_x77onb",
+      "toContexts": [
+        {
+          "toContextId": "context3_IigyoX"
+        },
+        {
+          "toContextId": "context11_e5mv1u",
+          "toModelId": "queryCreditedPaymentHistory"
+        }
+      ]
     }
   },
   "pages": {
     "page3_hNPclF": {
       "contextId": "context3_IigyoX",
       "layout": [
+        {
+          "id": "uiControl33_gdbsgv",
+          "controlId": "control48_x77onb",
+          "display": {
+            "adapterId": "clickable",
+            "type": "button",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
         {
           "id": "uiControl18_gTdWvv",
           "controlId": "control18_7lKlGo",
