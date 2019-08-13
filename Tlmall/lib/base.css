@@ -2515,7 +2515,7 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .disnone {
 }
 div[data-ysp-modelid^="checkstand"] .ysp-checkstand {
   margin-top: 55px;
-=======
+}
 div[data-ysp-modelid^="shippingAddress"] {
   position: relative;
   height: 100%;
