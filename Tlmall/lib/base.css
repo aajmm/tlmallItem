@@ -2703,3 +2703,52 @@ div[data-ysp-modelid^="shippingAddress"] .btn_address:before {
   background-size: 100%;
   margin-right: 5px;
 }
+div[data-ysp-modelid^="personal"] {
+  background: #f3f3f3;
+}
+div[data-ysp-modelid^="personal"] .yewu {
+  background: #fff;
+  margin-bottom: 10px;
+}
+div[data-ysp-modelid^="personal"] .yewu h4 {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 10px;
+}
+div[data-ysp-modelid^="personal"] .yewu h4[data-index="10000"] {
+  color: #f9971d;
+}
+div[data-ysp-modelid^="personal"] .yewu h4[data-index="20000"] {
+  color: #1cb9f5;
+}
+div[data-ysp-modelid^="personal"] .yewu h4[data-index="30000"] {
+  color: #73a9f3;
+}
+div[data-ysp-modelid^="personal"] .yewu h4[data-index="40000"] {
+  color: #63cc31;
+}
+div[data-ysp-modelid^="personal"] .yewu h4[data-index="50000"] {
+  color: #ed6a17;
+}
+div[data-ysp-modelid^="personal"] .yewu h4[data-index="60000"] {
+  color: #51bfaf;
+}
+div[data-ysp-modelid^="personal"] .yewu h4[data-index="70000"] {
+  color: #1cb9f5;
+}
+div[data-ysp-modelid^="personal"] .yewu h4[data-index="80000"] {
+  color: #F4AE3F;
+}
+div[data-ysp-modelid^="personal"] .yewu ul {
+  overflow: hidden;
+}
+div[data-ysp-modelid^="personal"] .yewu ul li {
+  float: left;
+  padding-top: 35px;
+  padding-bottom: 5px;
+  width: 25%;
+  text-align: center;
+}
+div[data-ysp-modelid^="personal"] .yewu ul[data-index="30000"] li,
+div[data-ysp-modelid^="personal"] .yewu ul[data-index="70000"] li {
+  width: 33.3%;
+}

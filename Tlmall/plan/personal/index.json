@@ -55,166 +55,6 @@
       "text": "首页",
       "frameXPath": ""
     },
-    "control11_ewt36D": {
-      "location": {
-        "data": {
-          "tagName": "A"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "button/text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "我的联系人"
-              ],
-              "visText": [
-                "我的联系人"
-              ]
-            }
-          },
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "我的联系人"
-              ],
-              "visText": [
-                "我的联系人"
-              ]
-            }
-          },
-          {
-            "id": "a/@href",
-            "prob": 1,
-            "ordinal": [
-              23,
-              32
-            ],
-            "value": {
-              "funcName": "void"
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 2,
-            "value": "descendant::DIV[@id=\"nav_sidebar\"]/UL[5]/LI[4]/A[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              30,
-              42
-            ],
-            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.nav_sidebar UL LI A"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[2]/UL[5]/LI[4]/A[1]"
-          },
-          {
-            "id": "style/color",
-            "value": [
-              231,
-              53,
-              13
-            ]
-          }
-        ]
-      },
-      "intendedRole": "button",
-      "roles": "element,button,link",
-      "monitored": false,
-      "frameXPath": "",
-      "componentType": "button"
-    },
-    "control18_7lKlGo": {
-      "location": {
-        "data": {
-          "tagName": "A"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "button/text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "待确认返利"
-              ],
-              "visText": [
-                "待确认返利"
-              ]
-            }
-          },
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "待确认返利"
-              ],
-              "visText": [
-                "待确认返利"
-              ]
-            }
-          },
-          {
-            "id": "a/@href",
-            "prob": 1,
-            "ordinal": [
-              0,
-              26
-            ],
-            "value": {
-              "funcName": "void"
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 2,
-            "value": "descendant::DIV[@id=\"nav_sidebar\"]/UL[1]/LI[4]/A[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              4,
-              34
-            ],
-            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.nav_sidebar UL LI A"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[2]/UL[1]/LI[4]/A[1]"
-          },
-          {
-            "id": "style/color",
-            "value": [
-              231,
-              53,
-              13
-            ]
-          }
-        ]
-      },
-      "intendedRole": "button",
-      "roles": "element,button,link",
-      "monitored": false,
-      "frameXPath": "",
-      "componentType": "button"
-    },
     "control20_6LMQBD": {
       "location": {
         "data": {
@@ -725,78 +565,6 @@
       "roles": "element",
       "frameXPath": ""
     },
-    "control38_wI77bv": {
-      "location": {
-        "data": {
-          "tagName": "A"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "button/text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "额度查询"
-              ],
-              "visText": [
-                "额度查询"
-              ]
-            }
-          },
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "额度查询"
-              ],
-              "visText": [
-                "额度查询"
-              ]
-            }
-          },
-          {
-            "id": "a/@href",
-            "prob": 1,
-            "ordinal": [
-              14,
-              25
-            ],
-            "value": {
-              "funcName": "void"
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 2,
-            "value": "descendant::DIV[@id=\"nav_sidebar\"]/UL[3]/LI[4]/A[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "ordinal": [
-              20,
-              33
-            ],
-            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.nav_sidebar UL LI A"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[2]/UL[3]/LI[4]/A[1]"
-          }
-        ]
-      },
-      "intendedRole": "button",
-      "roles": "element,button,link",
-      "monitored": false,
-      "frameXPath": "",
-      "componentType": "button"
-    },
     "control40_ITfLX6": {
       "location": {
         "data": {
@@ -899,82 +667,47 @@
       "roles": "element",
       "frameXPath": ""
     },
-    "control48_x77onb": {
+    "control51_sKrB96": {
       "location": {
         "data": {
-          "tagName": "A"
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
-            "id": "button/text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "待还款额度"
-              ],
-              "visText": [
-                "待还款额度"
-              ]
-            }
-          },
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "待还款额度"
-              ],
-              "visText": [
-                "待还款额度"
-              ]
-            }
-          },
-          {
-            "id": "a/@href",
-            "prob": 1,
-            "ordinal": [
-              0,
-              26
-            ],
-            "value": {
-              "funcName": "void"
-            }
-          },
-          {
             "id": "@id/word",
-            "prob": 2,
-            "value": "descendant::DIV[@id=\"nav_sidebar\"]/UL[1]/LI[3]/A[1]"
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"nav_sidebar\"]"
           },
           {
             "id": "@class/word",
             "prob": 1,
-            "ordinal": [
-              3,
-              33
-            ],
-            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.nav_sidebar UL LI A"
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.nav_sidebar"
           },
           {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[2]/UL[1]/LI[3]/A[1]"
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[2]"
           }
         ]
       },
-      "intendedRole": "button",
-      "roles": "element,button,link",
-      "monitored": false,
+      "events": {
+        "onGetData": "getData_control51_sKrB96"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
       "frameXPath": "",
-      "componentType": "button"
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context3_IigyoX": {
       "controls": [
-        "control11_ewt36D",
-        "control18_7lKlGo",
-        "control38_wI77bv",
-        "control48_x77onb"
+        "control51_sKrB96"
       ],
       "anchors": [
         "control10_CwVfTa"
@@ -989,62 +722,6 @@
           "toContextId": "context3_IigyoX"
         }
       ]
-    },
-    "flow9_5gbtek": {
-      "fromContextId": "context3_IigyoX",
-      "fromAction": "click",
-      "fromControlId": "control11_ewt36D",
-      "toContexts": [
-        {
-          "toContextId": "context3_IigyoX"
-        },
-        {
-          "toContextId": "context4_G4wDgT",
-          "toModelId": "contact"
-        }
-      ]
-    },
-    "flow14_JEBo0R": {
-      "fromContextId": "context3_IigyoX",
-      "fromAction": "click",
-      "fromControlId": "control18_7lKlGo",
-      "toContexts": [
-        {
-          "toContextId": "context3_IigyoX"
-        },
-        {
-          "toContextId": "context6_SiWwA5",
-          "toModelId": "rebateConfirMation"
-        }
-      ]
-    },
-    "flow20_h3KdC9": {
-      "fromContextId": "context3_IigyoX",
-      "fromAction": "click",
-      "fromControlId": "control38_wI77bv",
-      "toContexts": [
-        {
-          "toContextId": "context3_IigyoX"
-        },
-        {
-          "toContextId": "context7_gua0Tw",
-          "toModelId": "limitSearch"
-        }
-      ]
-    },
-    "flow28_1R7GnO": {
-      "fromContextId": "context3_IigyoX",
-      "fromAction": "click",
-      "fromControlId": "control48_x77onb",
-      "toContexts": [
-        {
-          "toContextId": "context3_IigyoX"
-        },
-        {
-          "toContextId": "context11_e5mv1u",
-          "toModelId": "queryCreditedPaymentHistory"
-        }
-      ]
     }
   },
   "pages": {
@@ -1052,46 +729,17 @@
       "contextId": "context3_IigyoX",
       "layout": [
         {
-          "id": "uiControl33_gdbsgv",
-          "controlId": "control48_x77onb",
+          "id": "uiControl35_0qM4HA",
+          "controlId": "control51_sKrB96",
           "display": {
-            "adapterId": "clickable",
-            "type": "button",
+            "adapterId": "custom",
+            "type": "custom",
             "adapter": {
-              "templateType": ""
-            }
-          }
-        },
-        {
-          "id": "uiControl18_gTdWvv",
-          "controlId": "control18_7lKlGo",
-          "display": {
-            "adapterId": "clickable",
-            "type": "button",
-            "adapter": {
-              "templateType": ""
-            }
-          }
-        },
-        {
-          "id": "uiControl27_dZaT6v",
-          "controlId": "control38_wI77bv",
-          "display": {
-            "adapterId": "clickable",
-            "type": "button",
-            "adapter": {
-              "templateType": ""
-            }
-          }
-        },
-        {
-          "id": "uiControl10_aTkCZW",
-          "controlId": "control11_ewt36D",
-          "display": {
-            "adapterId": "clickable",
-            "type": "button",
-            "adapter": {
-              "templateType": ""
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl35_0qM4HA",
+                "onGetTemplate": "getTemplate_uiControl35_0qM4HA"
+              }
             }
           }
         }

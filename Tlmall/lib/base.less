@@ -2523,3 +2523,53 @@ repeat;
     }
   }
 }
+
+//个人中心  xxger
+div[data-ysp-modelid^="personal"]{
+  background:@theme-bg;
+  .yewu{
+    background:#fff;
+    margin-bottom:10px;
+    h4{
+      border-bottom: @theme-border;
+      padding:10px;
+    }
+    h4[data-index="10000"]{
+      color:#f9971d;
+    }
+    h4[data-index="20000"]{
+      color:#1cb9f5;
+    }
+    h4[data-index="30000"]{
+      color:#73a9f3;
+    }
+    h4[data-index="40000"]{
+      color:#63cc31;
+    }
+    h4[data-index="50000"]{
+      color:#ed6a17;
+    }
+    h4[data-index="60000"]{
+      color:#51bfaf;
+    }
+    h4[data-index="70000"]{
+      color:#1cb9f5;
+    }
+    h4[data-index="80000"]{
+      color:#F4AE3F;
+    }
+    ul{
+      overflow: hidden;
+      li{
+        float:left;
+        padding-top:35px;
+        padding-bottom:5px;
+        width:25%;
+        text-align: center;
+      }
+    }
+    ul[data-index="30000"] li,ul[data-index="70000"] li{
+      width:33.3%;
+    }
+  }
+}
