@@ -93,7 +93,7 @@ doAction_uiControl25_TLlxuH: |-
     console.log(d);
     elem.querySelectorAll("li")[d].querySelector("a").click();
   }
-getTemplate_uiControl26_cLezAI: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  imgClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"imgClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<ul className=\"floor\">\n      {\n        data && data.map(function(d,i){\n          return(\n          <li className={\"ad\"+d.imgs.length}>\n          {\n          \td.imgs.map(function(m,n){\n              return(\n              <img src={m} data-index={i+\"-\"+n} onClick={me.imgClick.bind(me)}/>\n              )\n            })      \n          }\n          </li>\n          )\n        })  \n      }\n      </ul>\n    )\n  }\n}"
+getTemplate_uiControl26_cLezAI: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  imgClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"imgClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<ul className=\"floor\">\n      {\n        data.map(function(d,i){\n          return(\n          <li className={\"ad\"+d.imgs.length}>\n          {\n          \td.imgs.map(function(m,n){\n              return(\n              <img src={m} data-index={i+\"-\"+n} onClick={me.imgClick.bind(me)}/>\n              )\n            })      \n          }\n          </li>\n          )\n        })  \n      }\n      </ul>\n    )\n  }\n}"
 getData_control37_7w0gLr: |-
   if(!elem){
     return;
@@ -161,6 +161,3 @@ doAction_uiControl28_Byxrut: |-
   if(data.eventType == "handlerClick"){
     elem.querySelector(".tl-footer-lists").querySelectorAll("dl")[5].querySelectorAll("dd")[1].querySelector("a").click();
   }
-getTemplate_uiControl29_S4niH0: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.selectedIndex,\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-navbar\">\n        <ul>\n          <li><a href=\"\"><span>首页</span></a></li>\n        </ul>\n      </div>\n    )\n  }\n}"
-getData_control43_IMz3GE: ''
-doAction_uiControl29_S4niH0: ''

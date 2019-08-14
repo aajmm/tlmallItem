@@ -15,11 +15,6 @@
       "path": "lib/swiper.min.js",
       "sourceType": "local",
       "target": "face"
-    },
-    {
-      "path": "lib/jquery.icheck.js",
-      "sourceType": "local",
-      "target": "back"
     }
   ],
   "common_css": [

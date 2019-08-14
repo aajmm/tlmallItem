@@ -73,13 +73,60 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control43_41ZpBM": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"errorMessage\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wc1200 DIV.reg-bus-btns DIV.errors"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              231,
+              53,
+              13
+            ]
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control43_41ZpBM"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context7_gGBe79": {
       "controls": [
         "control35_cEpinS",
-        "control36_DZGyD3"
+        "control36_DZGyD3",
+        "control43_41ZpBM"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -87,6 +134,16 @@
   },
   "flows": {
     "flow19_7N3Qym": {
+      "toContexts": [
+        {
+          "toContextId": "context7_gGBe79"
+        }
+      ]
+    },
+    "flow23_Dbrh0W": {
+      "fromContextId": "context7_gGBe79",
+      "fromAction": "doAction",
+      "fromControlId": "control36_DZGyD3",
       "toContexts": [
         {
           "toContextId": "context7_gGBe79"
@@ -124,6 +181,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl25_ViyfWT",
                 "onGetTemplate": "getTemplate_uiControl25_ViyfWT"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl29_ZbSudW",
+          "controlId": "control43_41ZpBM",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl29_ZbSudW",
+                "onGetTemplate": "getTemplate_uiControl29_ZbSudW"
               }
             }
           }
@@ -334,6 +406,100 @@
             "uploaderC",
             "xiaoNengIcon",
             "xiaoNengSvcIcon"
+          ],
+          [
+            "aSign",
+            "aSign_s",
+            "alertInvoice",
+            "ashint",
+            "collect_address",
+            "collect_addressDiv",
+            "collect_addressTip",
+            "collect_city",
+            "collect_contact",
+            "collect_contactDiv",
+            "collect_contactTip",
+            "collect_email",
+            "collect_emailDiv",
+            "collect_emailTip",
+            "collect_phone",
+            "collect_phoneTip",
+            "collect_poneDiv",
+            "collect_postcode",
+            "collect_postcodeDiv",
+            "collect_postcodeTip",
+            "collect_province",
+            "collect_zone",
+            "errorMessage",
+            "fileADiv",
+            "fileATip",
+            "fileA_bind",
+            "fileA_echo",
+            "fileA_value",
+            "fileBDiv",
+            "fileBTip",
+            "fileB_bind",
+            "fileB_echo",
+            "fileB_value",
+            "fileCDiv",
+            "fileCTip",
+            "fileC_bind",
+            "fileC_echo",
+            "fileC_value",
+            "getGoodsSeal",
+            "invoice",
+            "invoice_Address",
+            "invoice_AddressDiv",
+            "invoice_AddressTip",
+            "invoice_openBank",
+            "invoice_openBankDiv",
+            "invoice_openBankID",
+            "invoice_openBankIDDiv",
+            "invoice_openBankIDTip",
+            "invoice_openBankTip",
+            "invoice_phone",
+            "invoice_phoneDiv",
+            "invoice_phoneTip",
+            "invoice_taxNum",
+            "invoice_taxNumDiv",
+            "invoice_taxNumTip",
+            "mInvoiceInfos",
+            "mRule",
+            "mRuleDiv",
+            "mRuleTip",
+            "mSign",
+            "mSign_s",
+            "maSign",
+            "receive_address",
+            "receive_addressDiv",
+            "receive_addressTip",
+            "receive_city",
+            "receive_man",
+            "receive_manDiv",
+            "receive_manTip",
+            "receive_phone",
+            "receive_phoneDiv",
+            "receive_phoneTip",
+            "receive_postcode",
+            "receive_province",
+            "receive_timeEnd",
+            "receive_timeStart",
+            "receive_timeStartDiv",
+            "receive_timeStartTip",
+            "receive_zone",
+            "rt_rt_diqacotppfccv",
+            "rt_rt_diqokrucngdomapf",
+            "rt_rt_diqqrflhonstlcrg",
+            "sealHint",
+            "sign",
+            "tabkeGoods",
+            "tucaoIcon",
+            "uploaderA",
+            "uploaderB",
+            "uploaderC",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon",
+            "zcLimitNums"
           ]
         ]
       }
@@ -422,6 +588,92 @@
             "zc_title",
             "zc_title_s",
             "zcaddress_tip"
+          ],
+          [
+            "Wdate",
+            "a",
+            "address-province",
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "b",
+            "bd_ra",
+            "bgm",
+            "btm_content",
+            "btn",
+            "btn_bg",
+            "checked",
+            "clearfix",
+            "close",
+            "date-hook",
+            "downTemp",
+            "error",
+            "errors",
+            "fl",
+            "float_l",
+            "iCheck-helper",
+            "icon",
+            "icon_",
+            "icon_down",
+            "icon_error",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "input_error",
+            "ipts",
+            "iradio_tlmall",
+            "itxt",
+            "itxt_s",
+            "limit_nums",
+            "line",
+            "mg_r",
+            "mg_t",
+            "ml",
+            "one",
+            "pd_lr",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "reg-bus-btns",
+            "reg-bus-form",
+            "sActive",
+            "threeAndOne",
+            "tlmall-app",
+            "tlmall-wx",
+            "top_title",
+            "triangle_r",
+            "txt",
+            "txt_c",
+            "upload-error",
+            "uploader",
+            "uploader-list",
+            "uploader_s",
+            "wb",
+            "wc",
+            "webuploader-container",
+            "webuploader-element-invisible",
+            "webuploader-pick",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info",
+            "zc-container",
+            "zcInvoice",
+            "zc_btn_small",
+            "zc_count_signs",
+            "zc_footer",
+            "zc_infos_s",
+            "zc_infos_title",
+            "zc_inputs",
+            "zc_logo",
+            "zc_radios",
+            "zc_title",
+            "zc_title_s",
+            "zcaddress_tip"
           ]
         ]
       }
@@ -459,6 +711,40 @@
             "DIV/P/A",
             "DIV/P/BR",
             "DIV/SELECT/OPTION",
+            "FORM/DIV/DIV"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/I",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/EM",
+            "DIV/DIV/FORM",
+            "DIV/DIV/H4",
+            "DIV/DIV/H5",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-file",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-radio",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/INS",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/P",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/FORM/DIV",
+            "DIV/H4/A",
+            "DIV/H5/EM",
+            "DIV/P/A",
+            "DIV/P/BR",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/B",
+            "DIV/SPAN/I",
             "FORM/DIV/DIV"
           ]
         ]
