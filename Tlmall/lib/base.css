@@ -2785,3 +2785,71 @@ div[data-ysp-modelid^="billngAddress"] .status .btn-apply.done {
   color: #999;
   text-decoration: none;
 }
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title {
+  overflow: hidden;
+  padding: 16px 16px 8px 16px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title h6,
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title .fr {
+  line-height: 1;
+  font-size: 14px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title h6 {
+  float: left;
+  color: #333;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title .fr {
+  color: #4796ED;
+  text-decoration: underline;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list {
+  background-color: #fff;
+  padding-left: 16px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list {
+  height: 51px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list h5,
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list input,
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list .btnText {
+  line-height: 51px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list h5 {
+  float: left;
+  font-size: 16px;
+  color: #333;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list input {
+  float: right;
+  font-size: 14px;
+  color: #333;
+  border: 0;
+  outline: none;
+  text-align: right;
+  width: 60%;
+  background: transparent;
+  padding: 0 16px 0 0;
+  margin: 0;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list input:disabled {
+  color: #999;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list .btnText {
+  float: right;
+  font-size: 14px;
+  color: #333;
+  padding-right: 16px;
+  padding-left: 50px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list .btnText .icon-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 8px;
+  height: 15px;
+  background: url(../local/img/icon-arrow-r.png) no-repeat;
+  background-size: 100%;
+  margin-left: 9px;
+}
