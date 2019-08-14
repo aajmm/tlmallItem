@@ -160,7 +160,7 @@
     }
   ],
   "name": "太力商城",
-  "default_url": "http://111.200.200.30/login.html",
+  "default_url": "http://192.168.220.23/myaccount/login.jsp",
   "scope": "Tlmall",
   "start_url": "http://111.200.200.30/login.html",
   "update_time": 1565771945545,
