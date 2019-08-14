@@ -1,0 +1,35 @@
+getTemplate_uiControl34_tveGHD: "import {Component,Fragment} from 'react'; \nimport {CustomHeader} from 'ysp-custom-components';\nexport default class extends React.Component{\n  constructor(props){\n    super(props);\n  }\n  \n  //返回\n  back=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'back'\n    });\n   }\n  }\n  \n  render() {\n    var data = this.props.customData;\n    var me = this;\n    var tabTitles = data.tabtitles;\n    var status = data.status;\n    return (\n      <Fragment>\n        <CustomHeader \n             data={{centerText:\"税务登记类型\"}} \n             backIsShow={true} \n             filterIsShow={false}\n             editIsShow={false}\n             back={me.back.bind(me)}\n          />\n        <div class=\"tab-title\">\n\t\t\t\t\t{tabTitles.map((tabItem, tabIndex)=>{\n            return (\n              <div className=\"tab-item\">\n                <span className={tabItem.className} >\n                \t<input type=\"button\" value={tabItem.text} disabled={tabItem.disabled}/>\n                </span>\n              </div>\n            )\n          })}\n        </div>\n        <div className=\"status\">\n          <div className=\"content\">\n            <span>{status.text}</span>\n            <em className={status.statusClass}>{status.value}</em>\n          </div>\n          <a href=\"javascript:;\" className=\"btn-apply\">申请修改</a>\n        </div>\n      </Fragment>\n    )\n  }\n}"
+getData_control50_yKKOys: |-
+  if(!elem){
+    return;
+  }
+
+  var tabTitles = [];
+  var dom_tabTitles = elem.querySelectorAll("#InvoiceRadios li");
+
+  for(var i=0; i<dom_tabTitles.length; i++){
+    var label = dom_tabTitles[i].querySelector("label");
+    var cls = dom_tabTitles[i].querySelector("div");
+    var disabledStatus = dom_tabTitles[i].querySelector("input[type='radio']");
+    tabTitles.push({
+      text: label.innerText,
+      className: cls.getAttribute("class"),
+      disabled: disabledStatus.getAttribute("disabled")
+    });
+  }
+
+  var dom_status = elem.querySelector(".invoice_c");
+  var status = {
+    text: dom_status.querySelector(".float_l>span:first-child").innerText,
+    value: dom_status.querySelector("#billngAdress_auditStatus").innerText,
+    statusClass: dom_status.querySelector("#billngAdress_auditStatus em").getAttribute("class")
+  };
+
+
+  var data = {
+    tabtitles: tabTitles,
+    status: status
+  };
+
+  return data;
+doAction_uiControl34_tveGHD: ''

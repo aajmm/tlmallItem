@@ -1,0 +1,413 @@
+{
+  "version": "0.1",
+  "id": "billngAddress",
+  "targetURL": "http://192.168.220.23/personal.html?code=50300",
+  "jsFile": "index.js",
+  "chineseName": "开票地址",
+  "description": "",
+  "controls": {
+    "control49_EbOEgT": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "开票管理"
+              ],
+              "visText": [
+                "开票管理"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 1,
+            "value": [
+              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
+              "descendant::DIV[@id=\"personalRight\"]//SPAN"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb_r.page-bill-address DIV.ablock.pd_lr.address-title DIV.title_main.bd_b01 SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "text": "开票管理",
+      "frameXPath": ""
+    },
+    "control50_yKKOys": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.wb_r.page-bill-address"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control50_yKKOys"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
+    }
+  },
+  "contexts": {
+    "context11_0gmexs": {
+      "controls": [
+        "control50_yKKOys"
+      ],
+      "anchors": [
+        "control49_EbOEgT"
+      ],
+      "urlAnchor": []
+    }
+  },
+  "flows": {
+    "flow29_c6eC3F": {
+      "toContexts": [
+        {
+          "toContextId": "context11_0gmexs"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page11_HvIq3J": {
+      "contextId": "context11_0gmexs",
+      "layout": [
+        {
+          "id": "uiControl34_tveGHD",
+          "controlId": "control50_yKKOys",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl34_tveGHD",
+                "onGetTemplate": "getTemplate_uiControl34_tveGHD"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context11_0gmexs": [
+          "太力商城"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context11_0gmexs": [
+          "192.168.220.23/personal.html?code=50300"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context11_0gmexs": [
+          [
+            "InvoiceRadios",
+            "allocM",
+            "billngAddress_fileATip",
+            "billngAddress_fileA_bind",
+            "billngAddress_fileA_echo",
+            "billngAddress_fileA_value",
+            "billngAddress_taxAttachmentId",
+            "billngAddress_uploaderA",
+            "billngAdressTip",
+            "billngAdress_address",
+            "billngAdress_addressTip",
+            "billngAdress_auditStatus",
+            "billngAdress_bank",
+            "billngAdress_bankAccount",
+            "billngAdress_bankAccountTip",
+            "billngAdress_bankTip",
+            "billngAdress_city",
+            "billngAdress_contact",
+            "billngAdress_contactPhone",
+            "billngAdress_contactPhoneTip",
+            "billngAdress_contactTip",
+            "billngAdress_email",
+            "billngAdress_emailTip",
+            "billngAdress_invoiceAddress",
+            "billngAdress_invoiceAddressTip",
+            "billngAdress_postalCode",
+            "billngAdress_postalCodeTip",
+            "billngAdress_province",
+            "billngAdress_taxNum",
+            "billngAdress_taxNumTip",
+            "billngAdress_taxPath",
+            "billngAdress_taxPhone",
+            "billngAdress_taxPhoneTip",
+            "billngAdress_zone",
+            "billngAdress_zoneTip",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "errorMessage",
+            "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "invoiceRaidosA",
+            "invoiceRaidosB",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rt_rt_direklvkqugriiun",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context11_0gmexs": [
+          [
+            "ablock",
+            "act",
+            "activ",
+            "address-infor",
+            "address-province",
+            "address-title",
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "bar",
+            "bd_b",
+            "bd_ra",
+            "bgm",
+            "breadcrumb",
+            "btm_content",
+            "btn",
+            "btn-view",
+            "btn_bg",
+            "btns_r",
+            "center-imgs",
+            "checked",
+            "city",
+            "city-sel",
+            "clearfix",
+            "close",
+            "cr_green",
+            "disabled",
+            "file_pos",
+            "fl",
+            "float_l",
+            "float_r",
+            "footer-bottom",
+            "footer-cc",
+            "footer-cl",
+            "footer-last-list",
+            "fr",
+            "iCheck-helper",
+            "icon",
+            "icon-cart",
+            "icon-search",
+            "icon-yewu",
+            "icon_",
+            "icon_down",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "invoce_show",
+            "invoce_showA",
+            "invoice_c",
+            "invoice_type",
+            "ipt_b",
+            "iradio_tlmall",
+            "line",
+            "logo",
+            "menu-list",
+            "menu-search",
+            "mg_b",
+            "mg_r",
+            "mg_t",
+            "nav_sidebar",
+            "nav_sidebar_s",
+            "nav_sidebar_sul",
+            "number",
+            "one",
+            "page-bill-address",
+            "pd_lr",
+            "pd_tb",
+            "placeholder",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "quit",
+            "radios",
+            "search-box",
+            "search-btn",
+            "searchBox-infos",
+            "show_c",
+            "switch",
+            "threeAndOne",
+            "threeAndOneTax",
+            "title",
+            "title_main",
+            "tl-content",
+            "tl-fixedscroll",
+            "tl-footer",
+            "tl-footer-lists",
+            "tl-main-menu",
+            "tl-sales-slide",
+            "tl-top-ad",
+            "tl-top-menu",
+            "tl-wrap",
+            "tlmall-app",
+            "tlmall-wx",
+            "top-ad-img",
+            "top_title",
+            "triangle_r",
+            "txt_c",
+            "uploader",
+            "uploader-list",
+            "wb",
+            "wb_r",
+            "wc",
+            "webuploader-container",
+            "webuploader-element-invisible",
+            "webuploader-pick",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info",
+            "zcInvoice"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context11_0gmexs": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/H4",
+            "DIV/DIV/H5",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-file",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/P",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TEXTAREA",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/LABEL/EM",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/EM",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "LI/A/B",
+            "LI/A/I",
+            "LI/DIV/INPUT-radio",
+            "LI/DIV/INS",
+            "LI/H5/I",
+            "LI/SELECT/OPTION",
+            "LI/UL/LI",
+            "UL/LI/A",
+            "UL/LI/DIV",
+            "UL/LI/H5",
+            "UL/LI/LABEL",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN",
+            "UL/LI/UL"
+          ]
+        ]
+      }
+    }
+  }
+}

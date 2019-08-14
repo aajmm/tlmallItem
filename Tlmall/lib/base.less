@@ -2513,3 +2513,82 @@ div[data-ysp-modelid^="shippingAddress"]{
     }
   }
 }
+
+// 开票地址
+div[data-ysp-modelid^="billngAddress"]{
+  background-color: #F5F5F5;
+  .tab-title{
+    background-color: #fff;
+    margin-top: 38px;
+    height: 49px;
+    line-height: 49px;
+    overflow: hidden;
+    .tab-item{
+      float: left;
+      height: 100%;
+      width: 50%;
+      text-align: center;
+    }
+    span{
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      height: 100%;
+      &.checked{
+        input{
+        	color: #E7350D;
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: url(../local/img/tab-btm-line.png) no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+    input{
+      border: 0;
+      height: 100%;
+      outline: none;
+      font-size: 14px;
+      color: #666;
+      background-color: transparent;
+      font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;      
+    }
+  }
+  .status{
+    margin-top: 10px;
+    height: 49px;
+    line-height: 49px;
+    padding: 0 16px;
+    background-color: #fff;
+    overflow: hidden;
+    .content{
+      float: left;
+      span{
+      	font-size: 12px;
+        color: #999;
+        margin-right: 5px;
+      }
+      em{
+      	font-size: 12px;
+        color: #333;
+      }
+    }
+    .btn-apply{
+      float: right;
+      font-size: 13px;
+      color: #327BCF;
+      text-decoration: underline;
+      &.done{
+        cursor: default;
+        color: #999;
+        text-decoration: none;
+      }
+    }
+  }
+}
