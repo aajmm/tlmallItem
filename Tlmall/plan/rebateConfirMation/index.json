@@ -5,59 +5,8 @@
   "jsFile": "index.js",
   "chineseName": "待确认返利",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
-    "control30_8iTKTM": {
-      "location": {
-        "data": {
-          "tagName": "SPAN"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "待确认返利"
-              ],
-              "visText": [
-                "待确认返利"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": [
-              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
-              "descendant::DIV[@id=\"personalRight\"]//SPAN"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "text": "待确认返利",
-      "frameXPath": ""
-    },
     "control31_eCGGQi": {
       "location": {
         "data": {
@@ -167,10 +116,10 @@
         "control33_P4iFS8",
         "control34_f56u2G"
       ],
-      "anchors": [
-        "control30_8iTKTM"
-      ],
-      "urlAnchor": []
+      "anchors": [],
+      "urlAnchor": [
+        "code=10400"
+      ]
     }
   },
   "flows": {
