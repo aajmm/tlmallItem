@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "personal",
-  "targetURL": "http://192.168.220.23/personal.html",
+  "targetURL": "http://111.200.200.30/personal.html",
   "jsFile": "index.js",
   "requires": {
     "contact": "../contact/index.json",

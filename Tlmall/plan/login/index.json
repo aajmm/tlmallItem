@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "login",
-  "targetURL": "http://192.168.220.23/login.html",
+  "targetURL": "http://111.200.200.30/login.html",
   "jsFile": "index.js",
   "requires": {
     "forgotPassword-writeAccount": "../forgotPassword-writeAccount/index.json",
@@ -304,7 +304,8 @@
         "context0_DQT6TF": [
           "192.168.220.23/login.html",
           "192.168.220.23/myaccount/login.jsp",
-          "192.168.220.23/myaccount/login.jsp?DPSLogout=true"
+          "192.168.220.23/myaccount/login.jsp?DPSLogout=true",
+          "111.200.200.30/login.html"
         ]
       }
     },

@@ -37,7 +37,7 @@
         }if (obj.title == '请输入手机验证码') {
           obj.button = { tit: '立即验证', id: 'immediately_verify' };
         }if (obj.title == '请输入验证码') {
-          obj.src = 'http://192.168.220.23' + elem.querySelector('#captchaCode_img').getAttribute('src');
+          obj.src = 'http://111.200.200.30' + elem.querySelector('#captchaCode_img').getAttribute('src');
         }data.push(obj);
       }; //我已阅读并同意框的状态
       var checkedStatus = elem.querySelector('#agreement').parentNode.classList.contains('checked') ? true : false;return { 'checked': checkedStatus, 'data': data };

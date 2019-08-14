@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "enterpriseInformation",
-  "targetURL": "http://192.168.220.23//page/register/registerBus.html",
+  "targetURL": "http://111.200.200.30//page/register/registerBus.html",
   "jsFile": "index.js",
   "requires": {
     "receivingInformation": "../receivingInformation/index.json"

@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "registeredAccount",
-  "targetURL": "http://192.168.220.23/register.html",
+  "targetURL": "http://111.200.200.30/register.html",
   "jsFile": "index.js",
   "requires": {
     "registrationProtocol": "../registrationProtocol/index.json",

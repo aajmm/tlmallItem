@@ -22,147 +22,147 @@
       "title": "login",
       "url": "adapter://Tlmall/plan/login/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/login\\.html"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/login\\.html"
       ],
       "demo": [
-        "http://192.168.220.23/login.html"
+        "http://111.200.200.30/login.html"
       ]
     },
     {
       "title": "contact",
       "url": "adapter://Tlmall/plan/contact/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=50400"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html\\?code=50400"
       ],
       "demo": [
-        "http://192.168.220.23/personal.html?code=50400"
+        "http://111.200.200.30/personal.html?code=50400"
       ]
     },
     {
       "title": "forgotPassword-writeAccount",
       "url": "adapter://Tlmall/plan/forgotPassword-writeAccount/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/passwordBack\\.html"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/passwordBack\\.html"
       ],
       "demo": [
-        "http://192.168.220.23/passwordBack.html"
+        "http://111.200.200.30/passwordBack.html"
       ]
     },
     {
       "title": "registeredAccount",
       "url": "adapter://Tlmall/plan/registeredAccount/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/register\\.html"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/register\\.html"
       ],
       "demo": [
-        "http://192.168.220.23/register.html"
+        "http://111.200.200.30/register.html"
       ]
     },
     {
       "title": "personal",
       "url": "adapter://Tlmall/plan/personal/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html"
       ],
       "demo": [
-        "http://192.168.220.23/personal.html"
+        "http://111.200.200.30/personal.html"
       ]
     },
     {
       "title": "rebateConfirMation",
       "url": "adapter://Tlmall/plan/rebateConfirMation/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=10400"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html\\?code=10400"
       ],
       "demo": [
-        "http://192.168.220.23/personal.html?code=10400"
+        "http://111.200.200.30/personal.html?code=10400"
       ]
     },
     {
       "title": "index",
       "url": "adapter://Tlmall/plan/index/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/(index\\.)?(html|htm|aspx|asp|php|jsp)?(\\?|$)"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/(index\\.)?(html|htm|aspx|asp|php|jsp)?(\\?|$)"
       ],
       "demo": [
-        "http://192.168.220.23/index.html"
+        "http://111.200.200.30/index.html"
       ]
     },
     {
       "title": "limitSearch",
       "url": "adapter://Tlmall/plan/limitSearch/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=40400"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html\\?code=40400"
       ],
       "demo": [
-        "http://192.168.220.23/personal.html?code=40400"
+        "http://111.200.200.30/personal.html?code=40400"
       ]
     },
     {
       "title": "immediateRepayment",
       "url": "adapter://Tlmall/plan/immediateRepayment/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=40400"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html\\?code=40400"
       ],
       "demo": [
-        "http://192.168.220.23/personal.html?code=40400"
+        "http://111.200.200.30/personal.html?code=40400"
       ]
     },
     {
       "title": "checkstand",
       "url": "adapter://Tlmall/plan/checkstand/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/page\\/checkout\\/checkstand\\.html\\?reqInfo=ckpV3v4U2N\\+9e3KNePhp1Fa7ymUmnG1TF9\\/Zj3D1Pdk30qf5adP\\+uv1DaOVgjhrd0IIKExAj5PBxE8OA77\\/dzhI2wlzv1vlPN9Kn\\+WnT\\/rq5sp4aXZY3\\+OjucupLX\\/XvfEjPvFqvV\\/77XQdDZ1KIuiQq\\+n4A8pPFZo0d2bcs2ZKnaJLVxLcJmluctaBcho\\+TG3LqKxuZBxtNuhaBdSDLwxshW2sL61nDMpzD2Eb2hnKd7mG31Yt4nTuXIn9wbtrOkrC\\+\\/MKdvY11VddYrWXqdsW9fIKfTNzGtszXtxXlI1w6CnuOAPAVM1ujgAPqgIfjtCDYzW30vZlSwiDkJ4SfXEK9i93BY4YkZyRlmnFdcCR397xWQN0LfCn8L9VUlWB0djpX2LSO0winQVjB3vLt0OBSVhYMW\\/Pe&sign=0G667hd009bf8EA489563796d859197d"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/page\\/checkout\\/checkstand\\.html\\?reqInfo=ckpV3v4U2N\\+9e3KNePhp1Fa7ymUmnG1TF9\\/Zj3D1Pdk30qf5adP\\+uv1DaOVgjhrd0IIKExAj5PBxE8OA77\\/dzhI2wlzv1vlPN9Kn\\+WnT\\/rq5sp4aXZY3\\+OjucupLX\\/XvfEjPvFqvV\\/77XQdDZ1KIuiQq\\+n4A8pPFZo0d2bcs2ZKnaJLVxLcJmluctaBcho\\+TG3LqKxuZBxtNuhaBdSDLwxshW2sL61nDMpzD2Eb2hnKd7mG31Yt4nTuXIn9wbtrOkrC\\+\\/MKdvY11VddYrWXqdsW9fIKfTNzGtszXtxXlI1w6CnuOAPAVM1ujgAPqgIfjtCDYzW30vZlSwiDkJ4SfXEK9i93BY4YkZyRlmnFdcCR397xWQN0LfCn8L9VUlWB0djpX2LSO0winQVjB3vLt0OBSVhYMW\\/Pe&sign=0G667hd009bf8EA489563796d859197d"
       ],
       "demo": [
-        "http://192.168.220.23/page/checkout/checkstand.html?reqInfo=ckpV3v4U2N+9e3KNePhp1Fa7ymUmnG1TF9/Zj3D1Pdk30qf5adP+uv1DaOVgjhrd0IIKExAj5PBxE8OA77/dzhI2wlzv1vlPN9Kn+WnT/rq5sp4aXZY3+OjucupLX/XvfEjPvFqvV/77XQdDZ1KIuiQq+n4A8pPFZo0d2bcs2ZKnaJLVxLcJmluctaBcho+TG3LqKxuZBxtNuhaBdSDLwxshW2sL61nDMpzD2Eb2hnKd7mG31Yt4nTuXIn9wbtrOkrC+/MKdvY11VddYrWXqdsW9fIKfTNzGtszXtxXlI1w6CnuOAPAVM1ujgAPqgIfjtCDYzW30vZlSwiDkJ4SfXEK9i93BY4YkZyRlmnFdcCR397xWQN0LfCn8L9VUlWB0djpX2LSO0winQVjB3vLt0OBSVhYMW/Pe&sign=0G667hd009bf8EA489563796d859197d"
+        "http://111.200.200.30/page/checkout/checkstand.html?reqInfo=ckpV3v4U2N+9e3KNePhp1Fa7ymUmnG1TF9/Zj3D1Pdk30qf5adP+uv1DaOVgjhrd0IIKExAj5PBxE8OA77/dzhI2wlzv1vlPN9Kn+WnT/rq5sp4aXZY3+OjucupLX/XvfEjPvFqvV/77XQdDZ1KIuiQq+n4A8pPFZo0d2bcs2ZKnaJLVxLcJmluctaBcho+TG3LqKxuZBxtNuhaBdSDLwxshW2sL61nDMpzD2Eb2hnKd7mG31Yt4nTuXIn9wbtrOkrC+/MKdvY11VddYrWXqdsW9fIKfTNzGtszXtxXlI1w6CnuOAPAVM1ujgAPqgIfjtCDYzW30vZlSwiDkJ4SfXEK9i93BY4YkZyRlmnFdcCR397xWQN0LfCn8L9VUlWB0djpX2LSO0winQVjB3vLt0OBSVhYMW/Pe&sign=0G667hd009bf8EA489563796d859197d"
       ]
     },
     {
       "title": "enterpriseInformation",
       "url": "adapter://Tlmall/plan/enterpriseInformation/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/\\/page\\/register\\/registerBus\\.html"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/\\/page\\/register\\/registerBus\\.html"
       ],
       "demo": [
-        "http://192.168.220.23//page/register/registerBus.html"
+        "http://111.200.200.30//page/register/registerBus.html"
       ]
     },
     {
       "title": "receivingInformation",
       "url": "adapter://Tlmall/plan/receivingInformation/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/page\\/register\\/registerAddress\\.html"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/page\\/register\\/registerAddress\\.html"
       ],
       "demo": [
-        "http://192.168.220.23/page/register/registerAddress.html"
+        "http://111.200.200.30/page/register/registerAddress.html"
       ]
     },
     {
       "title": "registrationProtocol",
       "url": "adapter://Tlmall/plan/registrationProtocol/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/page\\/notify\\/agreement\\.html"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/page\\/notify\\/agreement\\.html"
       ],
       "demo": [
-        "http://192.168.220.23/page/notify/agreement.html"
+        "http://111.200.200.30/page/notify/agreement.html"
       ]
     },
     {
       "title": "queryCreditedPaymentHistory",
       "url": "adapter://Tlmall/plan/queryCreditedPaymentHistory/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=10300"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html\\?code=10300"
       ],
       "demo": [
-        "http://192.168.220.23/personal.html?code=10300"
+        "http://111.200.200.30/personal.html?code=10300"
       ]
     }
   ],
   "name": "太力商城",
-  "default_url": "http://192.168.220.23/login.html",
+  "default_url": "http://111.200.200.30/login.html",
   "scope": "Tlmall",
-  "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1565760590890,
+  "start_url": "http://111.200.200.30/login.html",
+  "update_time": 1565771945545,
   "runtime_env": "1webview"
 }

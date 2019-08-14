@@ -45,7 +45,7 @@
     doAction_uiControl6_qawKzl: function (data, elem) {
       if (data.eventType == 'next') {
         if (data.dataCustom) {
-          elem.ownerDocument.defaultView.location.href = 'http://192.168.220.23/login.html';
+          elem.ownerDocument.defaultView.location.href = 'http://111.200.200.30/login.html';
         } else {
           elem.click();
         }

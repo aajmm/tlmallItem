@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "checkstand",
-  "targetURL": "http://192.168.220.23/page/checkout/checkstand.html?reqInfo=ckpV3v4U2N+9e3KNePhp1Fa7ymUmnG1TF9/Zj3D1Pdk30qf5adP+uv1DaOVgjhrd0IIKExAj5PBxE8OA77/dzhI2wlzv1vlPN9Kn+WnT/rq5sp4aXZY3+OjucupLX/XvfEjPvFqvV/77XQdDZ1KIuiQq+n4A8pPFZo0d2bcs2ZKnaJLVxLcJmluctaBcho+TG3LqKxuZBxtNuhaBdSDLwxshW2sL61nDMpzD2Eb2hnKd7mG31Yt4nTuXIn9wbtrOkrC+/MKdvY11VddYrWXqdsW9fIKfTNzGtszXtxXlI1w6CnuOAPAVM1ujgAPqgIfjtCDYzW30vZlSwiDkJ4SfXEK9i93BY4YkZyRlmnFdcCR397xWQN0LfCn8L9VUlWB0djpX2LSO0winQVjB3vLt0OBSVhYMW/Pe&sign=0G667hd009bf8EA489563796d859197d",
+  "targetURL": "http://111.200.200.30/page/checkout/checkstand.html?reqInfo=ckpV3v4U2N+9e3KNePhp1Fa7ymUmnG1TF9/Zj3D1Pdk30qf5adP+uv1DaOVgjhrd0IIKExAj5PBxE8OA77/dzhI2wlzv1vlPN9Kn+WnT/rq5sp4aXZY3+OjucupLX/XvfEjPvFqvV/77XQdDZ1KIuiQq+n4A8pPFZo0d2bcs2ZKnaJLVxLcJmluctaBcho+TG3LqKxuZBxtNuhaBdSDLwxshW2sL61nDMpzD2Eb2hnKd7mG31Yt4nTuXIn9wbtrOkrC+/MKdvY11VddYrWXqdsW9fIKfTNzGtszXtxXlI1w6CnuOAPAVM1ujgAPqgIfjtCDYzW30vZlSwiDkJ4SfXEK9i93BY4YkZyRlmnFdcCR397xWQN0LfCn8L9VUlWB0djpX2LSO0winQVjB3vLt0OBSVhYMW/Pe&sign=0G667hd009bf8EA489563796d859197d",
   "jsFile": "index.js",
   "requires": {
     "limitSearch": "../limitSearch/index.json"
