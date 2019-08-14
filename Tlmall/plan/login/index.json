@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "login",
-  "targetURL": "http://192.168.220.23/myaccount/login.jsp",
+  "targetURL": "http://111.200.200.30/myaccount/login.jsp",
   "jsFile": "index.js",
   "requires": {
     "forgotPassword-writeAccount": "../forgotPassword-writeAccount/index.json",
@@ -169,7 +169,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "http://192.168.220.23/myaccount/login.jsp"
+        "http://111.200.200.30/myaccount/login.jsp"
       ]
     }
   },
@@ -308,7 +308,8 @@
           "192.168.220.23/login.html",
           "192.168.220.23/myaccount/login.jsp",
           "192.168.220.23/myaccount/login.jsp?DPSLogout=true",
-          "111.200.200.30/login.html"
+          "111.200.200.30/login.html",
+          "111.200.200.30/myaccount/login.jsp"
         ]
       }
     },

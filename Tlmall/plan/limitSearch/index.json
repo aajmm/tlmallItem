@@ -8,59 +8,8 @@
   },
   "chineseName": "额度查询",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
-    "control42_48WTty": {
-      "location": {
-        "data": {
-          "tagName": "SPAN"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "额度查询"
-              ],
-              "visText": [
-                "额度查询"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": [
-              "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]",
-              "descendant::DIV[@id=\"personalRight\"]//SPAN"
-            ]
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main.bd_b01 SPAN"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "text": "额度查询",
-      "frameXPath": ""
-    },
     "control44_R2pKt2": {
       "location": {
         "data": {
@@ -102,6 +51,10 @@
         "data": {
           "tagName": "BODY"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "path/ordinal",
@@ -126,10 +79,10 @@
         "control44_R2pKt2",
         "control38_OLBoGl"
       ],
-      "anchors": [
-        "control42_48WTty"
-      ],
-      "urlAnchor": []
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html\\?code=40400"
+      ]
     }
   },
   "flows": {
@@ -199,7 +152,8 @@
     "page/urls": {
       "contexts": {
         "context7_gua0Tw": [
-          "192.168.220.23/personal.html?code=40400"
+          "192.168.220.23/personal.html?code=40400",
+          "111.200.200.30/personal.html?code=40400"
         ]
       }
     },

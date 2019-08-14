@@ -62,11 +62,9 @@
       "title": "personal",
       "url": "adapter://Tlmall/plan/personal/index.json",
       "matcher": [
-        "^http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html"
+        "^http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html(?!\\?)"
       ],
-      "demo": [
-        "http://111.200.200.30/personal.html"
-      ]
+      "demo": []
     },
     {
       "title": "rebateConfirMation",
@@ -76,16 +74,6 @@
       ],
       "demo": [
         "http://111.200.200.30/personal.html?code=10400"
-      ]
-    },
-    {
-      "title": "index",
-      "url": "adapter://Tlmall/plan/index/index.json",
-      "matcher": [
-        "^http:\\/\\/111\\.200\\.200\\.30\\/(index\\.)?(html|htm|aspx|asp|php|jsp)?(\\?|$)"
-      ],
-      "demo": [
-        "http://111.200.200.30/index.html"
       ]
     },
     {
@@ -157,12 +145,22 @@
       "demo": [
         "http://111.200.200.30/personal.html?code=10300"
       ]
+    },
+    {
+      "title": "index",
+      "url": "adapter://Tlmall/plan/index/index.json",
+      "matcher": [
+        "^http:\\/\\/111\\.200\\.200\\.30\\/index\\.html.*"
+      ],
+      "demo": [
+        "http://111.200.200.30/index.html"
+      ]
     }
   ],
   "name": "太力商城",
-  "default_url": "http://192.168.220.23/myaccount/login.jsp",
+  "default_url": "http://111.200.200.30/myaccount/login.jsp",
   "scope": "Tlmall",
   "start_url": "http://111.200.200.30/login.html",
-  "update_time": 1565771945545,
+  "update_time": 1565773065270,
   "runtime_env": "1webview"
 }

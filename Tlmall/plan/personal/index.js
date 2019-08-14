@@ -5,19 +5,18 @@
       if (!elem) {
         return;
       }var data = [];var navTits = elem.querySelectorAll("h4");[].map.call(navTits, function (d, i) {
-        var nav = { navName: [], list: [], codeList: [] };nav.navName[0] = d.textContent;nav.navName[1] = d.getAttribute("code");if (nav.navName[1] != "60000" && nav.navName[1] != "80000") {
-          var navLis = d.nextElementSibling.querySelectorAll("a");[].map.call(navLis, function (m, n) {
-            var code = m.getAttribute("code");if (code != "10600" && code != "10700" && code != "30203" && code != "30204" && code != "40300" && code != "40700") {
-              nav.list.push(m.textContent);nav.codeList.push(code);
-            }
-          });data.push(nav);
-        }
+        var nav = { navName: [], list: [], codeList: [] };nav.navName[0] = d.textContent;nav.navName[1] = d.getAttribute("code"); //if(nav.navName[1]!="60000" && nav.navName[1]!="80000" ){
+        var navLis = d.nextElementSibling.querySelectorAll("a");[].map.call(navLis, function (m, n) {
+          var code = m.getAttribute("code"); // if(code != "10600" && code != "10700" && code != "30203" && code != "30204" && code != "40300" && code != "40700" ){
+          nav.list.push(m.textContent);nav.codeList.push(code); // }
+        });data.push(nav); // }
       });return data;
     },
     doAction_uiControl35_0qM4HA: function (data, elem) {
-      "use strict";
+      'use strict';
       var type = data.eventType;if (type == "click") {
-        var Num = data.dataCustom;var d = Num.indexOf("-");var Num2 = parseInt(Num.substr(d + 1, Num.length));elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].click();
+        var Num = data.dataCustom;var d = parseInt(Num.split('-')[0]); //let Num2 = parseInt(Num.substr(d+1,Num.length));
+        var Num2 = parseInt(Num.split('-')[1]);var code = elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].getAttribute('code');elem.ownerDocument.defaultView.location.href = 'http://111.200.200.30/personal.html?code=' + code;elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].click();
       }
     },
     getTemplate_uiControl35_0qM4HA: function () {

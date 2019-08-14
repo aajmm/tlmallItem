@@ -11,8 +11,7 @@
           });data.tableLists.push(tableList1);
         } else {
           //查看列表
-          var trs2 = d.querySelector("tbody").querySelectorAll("tr");var selBox = { isShow: "none",
-            selList: [] };trs2 && [].map.call(trs2, function (m, n) {
+          var trs2 = d.querySelector("tbody").querySelectorAll("tr");var selBox = { isShow: "none", selList: [] };trs2 && [].map.call(trs2, function (m, n) {
             var tds2 = m.querySelectorAll("td");var selLest = [];[].map.call(tds2, function (item, index) {
               selLest.push(item.textContent);
             });selBox.isShow = d.style.display == "table-row" ? "block" : "none"; // selBox.selLest.push(m);
@@ -24,7 +23,8 @@
     doAction_uiControl20_qwcopo: function (data, elem) {
       "use strict";
       var type = data.eventType;if (type == "back") {
-        ysp.appMain.back();
+        //ysp.appMain.back();
+        elem.ownerDocument.defaultView.location.href = elem.ownerDocument.defaultView.location.href.split('?')[0];
       } else if (type == "startTime") {
         var d = data.dataCustom;elem.querySelector("#rc_startTime").value = d;
       } else if (type == "endTime") {

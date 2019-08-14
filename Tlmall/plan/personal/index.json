@@ -660,49 +660,6 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
-    },
-    "control30_lQVoD8": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "首页"
-              ],
-              "visText": [
-                "首页"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 3,
-            "value": "descendant::DIV[@id=\"titleTip\"]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.breadcrumb"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[1]"
-          }
-        ]
-      },
-      "roles": "element,link",
-      "text": "首页",
-      "frameXPath": ""
     }
   },
   "contexts": {
@@ -710,10 +667,10 @@
       "controls": [
         "control51_sKrB96"
       ],
-      "anchors": [
-        "control30_lQVoD8"
-      ],
-      "urlAnchor": []
+      "anchors": [],
+      "urlAnchor": [
+        "http:\\/\\/111\\.200\\.200\\.30\\/personal\\.html(?!\\?)"
+      ]
     }
   },
   "flows": {
@@ -731,6 +688,10 @@
       "toContexts": [
         {
           "toContextId": "context3_IigyoX"
+        },
+        {
+          "toContextId": "context6_SiWwA5",
+          "toModelId": "rebateConfirMation"
         }
       ]
     }
@@ -768,7 +729,8 @@
     "page/urls": {
       "contexts": {
         "context3_IigyoX": [
-          "192.168.220.23/personal.html"
+          "192.168.220.23/personal.html",
+          "111.200.200.30/personal.html"
         ]
       }
     },
