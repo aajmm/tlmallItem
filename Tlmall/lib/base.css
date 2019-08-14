@@ -2562,7 +2562,7 @@ div[data-ysp-modelid^="shippingAddress"] .tab-title .btn:hover {
 }
 div[data-ysp-modelid^="shippingAddress"] .address-list {
   position: absolute;
-  bottom: 110px;
+  bottom: 100px;
   top: 85px;
   width: 100%;
   overflow-y: auto;
@@ -2680,6 +2680,7 @@ div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar .btn-link:
 }
 div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar.stop .btn-link {
   color: #999;
+  cursor: not-allowed;
 }
 div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar.stop .btn-link:nth-child(2):before {
   background: url("../local/img/icon-edit.png") left center no-repeat;
@@ -2689,11 +2690,25 @@ div[data-ysp-modelid^="shippingAddress"] .address-list .list .editBar.stop .btn-
   background: url("../local/img/icon-delete.png") left center no-repeat;
   background-size: 100%;
 }
-div[data-ysp-modelid^="shippingAddress"] .btn_address {
-  position: fixed;
+div[data-ysp-modelid^="shippingAddress"] .form-list {
+  position: absolute;
+  top: 38px;
+  bottom: 0;
+  width: 100%;
+  overflow-y: auto;
+  background-color: #f3f3f3;
+}
+div[data-ysp-modelid^="shippingAddress"] .addNewAddress {
+  position: absolute;
+  left: 0;
   bottom: 51px;
   width: 100%;
+}
+div[data-ysp-modelid^="shippingAddress"] .addNewAddress .btn-addNewAddress {
+  display: block;
+  width: 100%;
   height: 50px;
+  line-height: 50px;
   text-align: center;
   background-color: #e7350d;
   color: #fff;
@@ -2701,13 +2716,14 @@ div[data-ysp-modelid^="shippingAddress"] .btn_address {
   padding: 0;
   font-size: 16px;
 }
-div[data-ysp-modelid^="shippingAddress"] .btn_address:before {
-  content: '';
+div[data-ysp-modelid^="shippingAddress"] .addNewAddress .btn-addNewAddress .icon-add {
+  position: relative;
+  top: -2px;
   display: inline-block;
   vertical-align: middle;
   width: 15px;
   height: 15px;
-  background: url("../local/img/icon-add.png") no- repeat;
+  background: url("../local/img/icon-add.png") no-repeat;
   background-size: 100%;
   margin-right: 5px;
 }

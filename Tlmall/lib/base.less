@@ -2363,9 +2363,9 @@ div[data-ysp-modelid^="shippingAddress"]{
       }
     }
   }
-  .address-list{
+  .address-list{ 
     position: absolute;
-    bottom: 110px;
+    bottom: 100px;
     top: 85px;
     width: 100%;
     overflow-y: auto;
@@ -2474,31 +2474,24 @@ div[data-ysp-modelid^="shippingAddress"]{
             margin-right: 8px;
           }
           &:nth-child(2):before{
-            background: url("../local/img/icon-edit-act.png") 
-
-left center no-repeat;
+            background: url("../local/img/icon-edit-act.png") left center no-repeat;
             background-size: 100%;
           }
           &:nth-child(3):before{
-            background: url("../local/img/icon-delete-act.png") 
-
-left center no-repeat;
+            background: url("../local/img/icon-delete-act.png") left center no-repeat;
             background-size: 100%;
           }
         }
         &.stop{
           .btn-link{
             color: #999;
+            cursor: not-allowed;
             &:nth-child(2):before{
-              background: url("../local/img/icon-edit.png") left 
-
-center no-repeat;
+              background: url("../local/img/icon-edit.png") left center no-repeat;
             	background-size: 100%;
             }
             &:nth-child(3):before{
-              background: url("../local/img/icon-delete.png") 
-
-left center no-repeat;
+              background: url("../local/img/icon-delete.png") left center no-repeat;
             	background-size: 100%;
             }
           }
@@ -2506,28 +2499,41 @@ left center no-repeat;
       }
     }
   }
-  .btn_address{
-    position: fixed;
+  .form-list{
+    position: absolute;
+    top: 38px;
+    bottom: 0;
+    width: 100%;
+    overflow-y: auto;
+    background-color: #f3f3f3;
+	}
+  .addNewAddress{
+    position: absolute;
+    left: 0;
     bottom: 51px;
     width: 100%;
-    height: 50px;
-    text-align: center;
-    background-color: #e7350d;
-    color:#fff;
-    margin-bottom: 0;
-    padding: 0;
-    font-size: 16px;
-    &:before{
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      width: 15px;
-      height: 15px;
-      background: url("../local/img/icon-add.png") no-
-
-repeat;
-      background-size: 100%;
-      margin-right: 5px;
+    .btn-addNewAddress{
+      display: block;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background-color: #e7350d;
+      color:#fff;
+      margin-bottom: 0;
+      padding: 0;
+      font-size: 16px;
+      .icon-add{
+        position: relative;
+        top: -2px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 15px;
+        height: 15px;
+        background: url("../local/img/icon-add.png") no-repeat;
+        background-size: 100%;
+        margin-right: 5px;
+      }
     }
   }
 }
