@@ -76,11 +76,11 @@
       } else if (type == "payClick") {
         var _d8 = data.dataCustom;var _ipt4 = elem.querySelector("#tbody_repay").querySelectorAll("tr")[_d8].querySelector(".btn_bg01");_ipt4.click();_ipt4.dispatchEvent(new Event("click"));
       } else if (type == "checkClick") {
-        var _d9 = data.dataCustom;var num = _d9[1];var td = elem.querySelector("#tBody_pay").querySelectorAll("tr")[num].querySelectorAll("td")[0];td.querySelector("input").checked = _d9[0];if (_d9[0] == true) {
-          debugger;td.querySelector(".icheckbox_tlmall").classList.add("checked");$('.input-checkbox').iCheck(); // debugger;
-          // elem.ownerDocument.defaultView.ea.putAndRemoveParam('input-checkbox', 'payTable', true, td.querySelector("input").getAttribute("data-params"), []);
-        } else {
-          td.querySelector(".icheckbox_tlmall").classList.remove("checked");
+        var _d9 = data.dataCustom;var num = _d9[1];var td = elem.querySelector("#tBody_pay").querySelectorAll("tr")[num].querySelectorAll("td")[0]; //td.querySelector("input").checked = _d9[0];
+        if (_d9[0] == true) {
+          //td.querySelector(".icheckbox_tlmall").classList.add("checked"); //$('.input-checkbox').iCheck(); // debugger;
+          debugger;elem.ownerDocument.defaultView.$('.input-checkbox').eq(2).iCheck('check');
+        } else {//td.querySelector(".icheckbox_tlmall").classList.remove("checked");
         }
       } else if (type == "selAllClick") {
         var _d10 = data.dataCustom;var _ipt5 = elem.querySelector("#AcLists").querySelector("thead");_ipt5.querySelector("input").checked = _d10;if (_d10 == true) {
