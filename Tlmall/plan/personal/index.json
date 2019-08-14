@@ -11,50 +11,8 @@
   },
   "chineseName": "业务中心",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
-    "control10_CwVfTa": {
-      "location": {
-        "data": {
-          "tagName": "DIV"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "首页"
-              ],
-              "visText": [
-                "首页"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 3,
-            "value": "descendant::DIV[@id=\"titleTip\"]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.breadcrumb"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[1]"
-          }
-        ]
-      },
-      "roles": "element,link",
-      "text": "首页",
-      "frameXPath": ""
-    },
     "control20_6LMQBD": {
       "location": {
         "data": {
@@ -702,6 +660,49 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control30_lQVoD8": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "首页"
+              ],
+              "visText": [
+                "首页"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"titleTip\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.wb01 DIV.wc1200.clearfix DIV.breadcrumb"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[4]/DIV[1]/DIV[1]"
+          }
+        ]
+      },
+      "roles": "element,link",
+      "text": "首页",
+      "frameXPath": ""
     }
   },
   "contexts": {
@@ -710,13 +711,23 @@
         "control51_sKrB96"
       ],
       "anchors": [
-        "control10_CwVfTa"
+        "control30_lQVoD8"
       ],
       "urlAnchor": []
     }
   },
   "flows": {
     "flow8_SXlzJW": {
+      "toContexts": [
+        {
+          "toContextId": "context3_IigyoX"
+        }
+      ]
+    },
+    "flow28_unrZVR": {
+      "fromContextId": "context3_IigyoX",
+      "fromAction": "doAction",
+      "fromControlId": "control51_sKrB96",
       "toContexts": [
         {
           "toContextId": "context3_IigyoX"
