@@ -20,13 +20,13 @@
           }
           addressInforContent.push({ display: _display, text: _text, value: _value, disabled: _disabled, tip: _tip });
         }
-      }var addressInfor = { title: elem.querySelector(".address-infor h5").innerText, content: addressInforContent };var billingAddressFileDown = { text: elem.querySelector(".address-infor a").innerText, href: elem.querySelector(".address-infor a").getAttribute("href") }; // var dom_addressInforContent2 = elem.querySelectorAll(".address-infor+.invoce_show .one");
-      // var AddressInforContent2 = [];
-      // var receivingAddressInfor = {
-      //   title: elem.querySelector(".address-infor2 h5").innerText,
-      //   content: AddressInforContent2
-      // };
-      var data = { tabtitles: tabTitles, status: status, billingAddressFileDown: billingAddressFileDown, addressInfor: addressInfor };return data;
+      }var addressInfor = { title: elem.querySelector(".address-infor h5").innerText, content: addressInforContent };var billingAddressFileDown = { text: elem.querySelector(".address-infor a").innerText, href: elem.querySelector(".address-infor a").getAttribute("href") };var dom_addressInforContent2 = elem.querySelectorAll(".address-infor02+.invoce_show .one");var addressInforContent2 = [];for (var i = 0; i < dom_addressInforContent2.length; i++) {
+        var _text = dom_addressInforContent2[i].querySelector("label").innerText.split("*")[1].split(":")[0];var _display = dom_addressInforContent2[i].style.display;var _tip = dom_addressInforContent[i].querySelector("div").innerText;var _value = null,
+            _disabled = null;if (i == 0) {
+          _disabled = elem.querySelector("#billngAdress_province").getAttribute("disabled");var provinceVal = elem.querySelector("#billngAdress_province").value;var provinceText = elem.querySelector("#billngAdress_province option[value='" + provinceVal + "']").innerText;var cityVal = elem.querySelector("#billngAdress_city").value;var cityText = elem.querySelector("#billngAdress_city option[value='" + cityVal + "']").innerText;var countyVal = elem.querySelector("#billngAdress_zone").value;addressInforContent2.push({ display: _display, text: _text, value: { province: { text: provinceText, value: provinceVal }, city: { text: cityText, value: cityVal }, county: { text: countyVal, value: countyVal } }, disabled: _disabled, tip: _tip });
+        } else {}
+      }var addressInfor2 = { title: elem.querySelector(".address-infor02 h5").innerText, content: addressInforContent2 };var data = { tabtitles: tabTitles, status: status,
+        billingAddressFileDown: billingAddressFileDown, addressInfor: addressInfor, addressInfor2: addressInfor2 };return data;
     }, doAction_uiControl34_tveGHD: function (data, elem) {
       "use strict";
     }, getTemplate_uiControl34_tveGHD: function () {

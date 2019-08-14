@@ -17,9 +17,9 @@
       "target": "face"
     },
     {
-      "path": "lib/jquery.icheck.js",
-      "sourceType": "local",
-      "target": "back"
+      "path": "https://code.jquery.com/jquery-3.2.1.min.js",
+      "sourceType": "online",
+      "target": "face"
     }
   ],
   "common_css": [

@@ -1,5 +1,28 @@
-(function(win, ysp) {
+(function (win, ysp) {
   ysp.runtime.Model.extendLoadingModel({
-
-  });
+    getData_control51_sKrB96: function (elem) {
+      "use strict";
+      if (!elem) {
+        return;
+      }var data = [];var navTits = elem.querySelectorAll("h4");[].map.call(navTits, function (d, i) {
+        var nav = { navName: [], list: [], codeList: [] };nav.navName[0] = d.textContent;nav.navName[1] = d.getAttribute("code");if (nav.navName[1] != "60000" && nav.navName[1] != "80000") {
+          var navLis = d.nextElementSibling.querySelectorAll("a");[].map.call(navLis, function (m, n) {
+            var code = m.getAttribute("code");if (code != "10600" && code != "10700" && code != "30203" && code != "30204" && code != "40300" && code != "40700") {
+              nav.list.push(m.textContent);nav.codeList.push(code);
+            }
+          });data.push(nav);
+        }
+      });return data;
+    },
+    doAction_uiControl35_0qM4HA: function (data, elem) {
+      "use strict";
+      var type = data.eventType;if (type == "click") {
+        var Num = data.dataCustom;var d = Num.indexOf("-");var Num2 = parseInt(Num.substr(d + 1, Num.length));elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].click();
+      }
+    },
+    getTemplate_uiControl35_0qM4HA: function () {
+      var selfTemplate = "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-personal\">\n      {data.map(function(d,i){\n          return(\n          \t<div className=\"yewu\">\n              <h4 code={d.navName[1]}>{d.navName[0]}</h4>\n              <ul>\n              {d.list.map(function(m,n){\n                  return(\n                    <li data-index={i+\"-\"+n} code={d.codeList[n]} onClick={me.handlerClick.bind(me)}>{m}</li>\n                  )\n                })\n              }\n              </ul>\n            </div>\n          )\n        })\n      }\n      </div>\n    )\n  }\n}";
+      return "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require(\"react\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar _class = function (_Component) {\n  _inherits(_class, _Component);\n\n  function _class() {\n    var _ref;\n\n    var _temp, _this, _ret;\n\n    _classCallCheck(this, _class);\n\n    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _class.__proto__ || Object.getPrototypeOf(_class)).call.apply(_ref, [this].concat(args))), _this), _this.handlerClick = function (e) {\n      var handler = _this.props.customHandler;\n      var target = e.target;\n      if (handler) {\n        handler({\n          data: target.dataset.index,\n          eventType: \"click\"\n        });\n      }\n    }, _temp), _possibleConstructorReturn(_this, _ret);\n  }\n\n  _createClass(_class, [{\n    key: \"render\",\n    value: function render() {\n      var data = this.props.customData;\n      var me = this;\n      return React.createElement(\n        \"div\",\n        { className: \"ysp-personal\" },\n        data.map(function (d, i) {\n          return React.createElement(\n            \"div\",\n            { className: \"yewu\" },\n            React.createElement(\n              \"h4\",\n              { code: d.navName[1] },\n              d.navName[0]\n            ),\n            React.createElement(\n              \"ul\",\n              null,\n              d.list.map(function (m, n) {\n                return React.createElement(\n                  \"li\",\n                  { \"data-index\": i + \"-\" + n, code: d.codeList[n], onClick: me.handlerClick.bind(me) },\n                  m\n                );\n              })\n            )\n          );\n        })\n      );\n    }\n  }]);\n\n  return _class;\n}(_react.Component);\n\nexports.default = _class;";
+    }
+  }, "personal");
 })(window, ysp);
