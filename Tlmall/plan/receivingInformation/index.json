@@ -3,6 +3,9 @@
   "id": "receivingInformation",
   "targetURL": "http://192.168.220.23/page/register/registerAddress.html",
   "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
   "chineseName": "收货信息",
   "description": "",
   "controls": {
@@ -90,6 +93,10 @@
       "toContexts": [
         {
           "toContextId": "context7_gGBe79"
+        },
+        {
+          "toContextId": "context2_JFd3LO",
+          "toModelId": "index"
         }
       ]
     }

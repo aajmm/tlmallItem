@@ -147,12 +147,22 @@
       "demo": [
         "http://192.168.220.23/page/notify/agreement.html"
       ]
+    },
+    {
+      "title": "queryCreditedPaymentHistory",
+      "url": "adapter://Tlmall/plan/queryCreditedPaymentHistory/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=10300"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html?code=10300"
+      ]
     }
   ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/myaccount/login.jsp",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1565679708045,
+  "update_time": 1565760590890,
   "runtime_env": "1webview"
 }
