@@ -2803,6 +2803,7 @@ div[data-ysp-modelid^="billngAddress"]{
     }
   }
   .address-content{
+    margin-bottom: 80px;
     .item-infor{
       .title{
         overflow: hidden;
@@ -2867,6 +2868,32 @@ div[data-ysp-modelid^="billngAddress"]{
             background-size: 100%;
             margin-left: 9px;
           }
+        }
+      }
+    }
+    .footBtns{
+      text-align: center;
+      padding-top: 32px;
+      input[disabled]{
+        display: none;
+      }
+      input{
+        margin: 0 10px;
+        width: 130px;
+        height: 44px;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 16px;
+        font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","FontAwesome",sans-serif;
+        &.btn_bg02{
+          border: 1px solid #ccc;
+          color: #333;
+          background-color: #fff;
+        }
+        &.btn_bg01{
+          border: 0;
+          color: #fff;
+          background:linear-gradient(268deg,rgba(245,101,34,1) 0%,rgba(231,53,14,1) 100%);
         }
       }
     }

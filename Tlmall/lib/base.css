@@ -2934,6 +2934,9 @@ div[data-ysp-modelid^="billngAddress"] .status .btn-apply.done {
   color: #999;
   text-decoration: none;
 }
+div[data-ysp-modelid^="billngAddress"] .address-content {
+  margin-bottom: 80px;
+}
 div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title {
   overflow: hidden;
   padding: 16px 16px 8px 16px;
@@ -3001,4 +3004,30 @@ div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list
   background: url(../local/img/icon-arrow-r.png) no-repeat;
   background-size: 100%;
   margin-left: 9px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns {
+  text-align: center;
+  padding-top: 32px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns input[disabled] {
+  display: none;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns input {
+  margin: 0 10px;
+  width: 130px;
+  height: 44px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns input.btn_bg02 {
+  border: 1px solid #ccc;
+  color: #333;
+  background-color: #fff;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns input.btn_bg01 {
+  border: 0;
+  color: #fff;
+  background: linear-gradient(268deg, #f56522 0%, #e7350e 100%);
 }
