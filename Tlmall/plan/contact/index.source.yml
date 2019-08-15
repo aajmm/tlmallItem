@@ -509,15 +509,3 @@ doAction_uiControl19_5Vt4SH: |-
     let btn = elem.querySelector("#errorMsg").querySelector(".alert").querySelector(".close");
     btn.dispatchEvent(new Event("click"));
   }
-getTemplate_uiControl29_CZic6t: |-
-  module.exports = React.createClass({
-    render: function() {
-      return (
-        <div>
-          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
-        </div>
-      )
-    }
-  });
-getData_control43_WgDV38: ''
-doAction_uiControl29_CZic6t: ''

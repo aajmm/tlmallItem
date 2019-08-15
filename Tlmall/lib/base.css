@@ -856,8 +856,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type,
 div[data-ysp-modelid^="receivingInformation"] .choose-type,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file,
 div[data-ysp-modelid^="receivingInformation"] .update-file,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard,
@@ -902,8 +904,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone i,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone i,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type i,
 div[data-ysp-modelid^="receivingInformation"] .choose-type i,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard i,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard i,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one i,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one i,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two i,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two i,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file i,
 div[data-ysp-modelid^="receivingInformation"] .update-file i,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard i,
@@ -951,8 +955,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone select,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone select,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type select,
 div[data-ysp-modelid^="receivingInformation"] .choose-type select,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard select,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard select,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one select,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one select,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two select,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two select,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file select,
 div[data-ysp-modelid^="receivingInformation"] .update-file select,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard select,
@@ -1000,8 +1006,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone input,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone input,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type input,
 div[data-ysp-modelid^="receivingInformation"] .choose-type input,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard input,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard input,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one input,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one input,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two input,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two input,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file input,
 div[data-ysp-modelid^="receivingInformation"] .update-file input,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard input,
@@ -1051,8 +1059,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone em,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone em,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type em,
 div[data-ysp-modelid^="receivingInformation"] .choose-type em,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard em,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard em,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one em,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one em,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two em,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two em,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file em,
 div[data-ysp-modelid^="receivingInformation"] .update-file em,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard em,
@@ -1085,18 +1095,29 @@ div[data-ysp-modelid^="receivingInformation"] .submit-immediately button {
   border: 0;
   border-radius: 3px;
 }
-div[data-ysp-modelid^="enterpriseInformation"] {
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-error-msg,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-error-msg,
+div[data-ysp-modelid^="enterpriseInformation"] .receive-error-msg,
+div[data-ysp-modelid^="receivingInformation"] .receive-error-msg {
   width: 100%;
-  height: 100%;
-  overflow: auto;
+  display: flex;
+  justify-content: center;
 }
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation h3 {
-  line-height: 50px;
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-error-msg p,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-error-msg p,
+div[data-ysp-modelid^="enterpriseInformation"] .receive-error-msg p,
+div[data-ysp-modelid^="receivingInformation"] .receive-error-msg p {
+  width: 92%;
+  color: #E7350E;
+  font-size: 12px;
+  text-align: center;
 }
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .errorIcon {
+div[data-ysp-modelid^="enterpriseInformation"] .errorIcon,
+div[data-ysp-modelid^="receivingInformation"] .errorIcon {
   position: relative;
 }
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .errorIcon em {
+div[data-ysp-modelid^="enterpriseInformation"] .errorIcon em,
+div[data-ysp-modelid^="receivingInformation"] .errorIcon em {
   display: block!important;
   width: 16px;
   height: 16px;
@@ -1110,6 +1131,14 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .errorIcon
   top: 14px;
   right: 22px;
   color: #fff;
+}
+div[data-ysp-modelid^="enterpriseInformation"] {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation h3 {
+  line-height: 50px;
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form {
   width: 100%;
@@ -1286,17 +1315,6 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-i
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
 }
-div[data-ysp-modelid^="enterpriseInformation"] .enterprise-error-msg {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterprise-error-msg p {
-  width: 92%;
-  color: #E7350E;
-  font-size: 12px;
-  text-align: center;
-}
 div[data-ysp-modelid^="receivingInformation"] {
   width: 100%;
   height: 100%;
@@ -1384,17 +1402,38 @@ div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-t
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-type p:last-child {
   width: 40%;
 }
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard {
-  display: flex;
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard-one {
   align-items: center;
 }
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard span {
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard-one span {
   width: 24%;
   margin-left: 3px;
 }
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard input {
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard-one input {
   border: 0;
   background: none;
+  margin: 0;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard p:first-child {
+  padding: 0 15px;
+  font-size: 12px;
+  color: #e7350d;
+  margin: 0;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard p:first-child a {
+  color: #e7350d;
+  font-size: 12px;
+  text-decoration: underline;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard .sign-standard-two {
+  align-items: center;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard .sign-standard-two span {
+  width: 24%;
+  margin-left: 3px;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard .sign-standard-two input {
+  border-radius: 1px solid #ccc;
   margin: 0;
 }
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-file input,
@@ -1497,7 +1536,7 @@ div[data-ysp-modelid^="receivingInformation"] .invoice-type div p i {
   top: 45%;
 }
 div[data-ysp-modelid^="receivingInformation"] .submit-immediately {
-  margin: 30px 0 40px;
+  margin-top: 30px;
 }
 div[data-ysp-modelid^="registeredSuccessfully"] div {
   width: 100%;
@@ -2316,37 +2355,13 @@ div[data-ysp-modelid^="limitSearch"] .filter-box .btn-box span {
   color: #fff;
   font-size: 12px;
 }
-div[data-ysp-modelid^="limitSearch"] .list-box .sel-all-box {
-  position: fixed;
-  left: 0;
-  bottom: 52px;
-  z-index: 200;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  background: #fff;
+div[data-ysp-modelid^="limitSearch"] .filter-box.btm {
   border-top: 1px solid #e1e1e1;
+  margin-top: 1px;
+  padding: 5px 12px;
+  color: #999;
 }
-div[data-ysp-modelid^="limitSearch"] .list-box .sel-all-box .ckeck-label {
-  width: 45%;
-  color: #333;
-  font-size: 14px;
-  padding-left: 35px;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .sel-all-box .ckeck-label i {
-  top: 15px;
-  left: 10px;
-  background-size: 100%;
-}
-div[data-ysp-modelid^="limitSearch"] .list-box .sel-all-box span {
-  display: inline-block;
-  width: 55%;
-  height: 100%;
-  text-align: center;
-  background: #e7350d;
-  color: #fff;
-}
-div[data-ysp-modelid^="limitSearch"] .disnone {
+.disnone {
   display: none;
 }
 div[data-ysp-modelid^="immediateRepayment"] {

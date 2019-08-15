@@ -3,9 +3,6 @@
   "id": "index",
   "targetURL": "http://192.168.220.23/index.html",
   "jsFile": "index.js",
-  "requires": {
-    "personal": "../personal/index.json"
-  },
   "chineseName": "首页",
   "description": "",
   "controls": {
@@ -262,10 +259,6 @@
       "toContexts": [
         {
           "toContextId": "context2_JFd3LO"
-        },
-        {
-          "toContextId": "context3_IigyoX",
-          "toModelId": "personal"
         }
       ]
     },
@@ -508,59 +501,6 @@
             "xiaoNengSvcIcon"
           ],
           [
-            "changeProvince",
-            "close-home-pop",
-            "custAllocQty",
-            "custNameAndUserName",
-            "custNameAndUserNameValue",
-            "customerName",
-            "defaultKeyword",
-            "fixedscroll",
-            "floors",
-            "hesrM",
-            "home-pop",
-            "homeM",
-            "imporestAmt",
-            "infoCompletePop",
-            "infoM",
-            "lastLoginTime",
-            "lastLoginTimeValue",
-            "loginLinkWhenNoSecureLogin",
-            "miniCartQtyValue",
-            "noProductTip",
-            "noticeBox",
-            "phoneM",
-            "provinceList",
-            "rebateAmt",
-            "scfAmt",
-            "scfLink",
-            "scfText",
-            "searchBox",
-            "searchBtn",
-            "searchContainer",
-            "selectedProvince",
-            "slideBanners",
-            "smartM",
-            "storeAllocQty",
-            "tl-banner-slider",
-            "tl-slider-dots",
-            "topBanner",
-            "topBannerBg",
-            "topBannerLink",
-            "topBannerPop",
-            "topBannerPopImg",
-            "topLogin",
-            "topNotLogin",
-            "tucaoIcon",
-            "typeAheadInfo",
-            "typeAheadInfoList",
-            "unSignedFiles",
-            "unSignedFilesTemplate",
-            "xiaoNengIcon",
-            "xiaoNengSvcIcon"
-          ],
-          [
-            "allocM",
             "changeProvince",
             "close-home-pop",
             "custAllocQty",
