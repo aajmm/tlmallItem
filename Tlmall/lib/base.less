@@ -807,7 +807,7 @@ div[data-ysp-modelid^="registrationProtocol"]{
 }
 // 企业信息和收货信息页面的公共样式
 div[data-ysp-modelid^="enterpriseInformation"],div[data-ysp-modelid^="receivingInformation"]{
-  .enterprise-name,.enterprise-address,.detail-address,.legal-name,.id-type,.id-number,.id-card,.business-license-number,.business-license,.contact-name,.contact-phone,.PTTL-contact-name,.PTTL-contact-phone,.shipping-address,.consignee,.receive-phone,.choose-type,.sign-standard,.update-file,.update-idCard,.period-validity{
+  .enterprise-name,.enterprise-address,.detail-address,.legal-name,.id-type,.id-number,.id-card,.business-license-number,.business-license,.contact-name,.contact-phone,.PTTL-contact-name,.PTTL-contact-phone,.shipping-address,.consignee,.receive-phone,.choose-type,.sign-standard-one,.sign-standard-two,.update-file,.update-idCard,.period-validity{
         padding: 0 15px;
         display: flex;
         margin-top: 15px;
@@ -860,17 +860,18 @@ div[data-ysp-modelid^="enterpriseInformation"],div[data-ysp-modelid^="receivingI
         border-radius: 3px; 
       }
     }
-}
-//企业信息
-div[data-ysp-modelid^="enterpriseInformation"]{
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  .enterpriseInformation{
-    h3{
-      line-height: 50px;
+  .enterprise-error-msg,.receive-error-msg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    p{
+      width: 92%;
+      color: #E7350E;
+      font-size: 12px;
+      text-align: center;
     }
-    .errorIcon{
+  }
+  .errorIcon{
       position: relative;
       em{
         display: block!important;
@@ -887,6 +888,17 @@ div[data-ysp-modelid^="enterpriseInformation"]{
         right: 22px;
         color:#fff;
       }
+    }
+  
+}
+//企业信息
+div[data-ysp-modelid^="enterpriseInformation"]{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  .enterpriseInformation{
+    h3{
+      line-height: 50px;
     }
     .enterpriseInformation-form{
       width: 100%;
@@ -1060,17 +1072,6 @@ div[data-ysp-modelid^="enterpriseInformation"]{
       padding-bottom: 30px;
     }
   }
-  .enterprise-error-msg{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    p{
-      width: 92%;
-      color: #E7350E;
-      font-size: 12px;
-      text-align: center;
-    }
-  }
 }
 //收货信息
 div[data-ysp-modelid^="receivingInformation"]{
@@ -1162,8 +1163,7 @@ div[data-ysp-modelid^="receivingInformation"]{
         width: 40%;
       }
     }
-    .sign-standard{
-      display: flex;
+    .sign-standard-one{
       align-items: center;
       span{
         width: 24%;
@@ -1173,6 +1173,31 @@ div[data-ysp-modelid^="receivingInformation"]{
         border:0;
         background: none;
         margin: 0;
+      }
+    }
+    .sign-standard{
+      p:first-child{
+        padding: 0 15px;
+        font-size: 12px;
+        color: @theme-red;
+        margin: 0;
+        a{
+          color: @theme-red;
+          font-size: 12px;
+          text-decoration:underline;
+        }
+      }
+      .sign-standard-two{
+        // display: flex;
+        align-items: center;
+        span{
+          width: 24%;
+          margin-left: 3px;
+        }
+        input{
+          border-radius: 1px solid #ccc;
+          margin: 0;
+        }
       }
     }
     .update-file,.update-idCard{
@@ -1274,7 +1299,7 @@ div[data-ysp-modelid^="receivingInformation"]{
     }
   }
   .submit-immediately{
-    margin: 30px 0 40px;
+    margin-top: 30px;
   }
 }
 //注册成功
@@ -2110,42 +2135,17 @@ div[data-ysp-modelid^="limitSearch"] {
                 font-size: 12px;
             }
         }
-    }
-    .list-box .sel-all-box {
-        position: fixed;
-        left: 0;
-        bottom: 52px;
-        z-index: 200;
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        background: #fff;
-        border-top: @theme-border;
-        .ckeck-label {
-            width: 45%;
-            color: #333;
-            font-size: 14px;
-            padding-left: 35px;
-            i {
-                top: 15px;
-                left: 10px;
-                background-size: 100%;
-            }
+        &.btm{
+          border-top: @theme-border;
+          margin-top:1px;
+          padding:5px 12px;
+          color:#999;
         }
-        span {
-            display: inline-block;
-            width: 55%;
-            height: 100%;
-            text-align: center;
-            background: @theme-red;
-            color: #fff;
-        }
+      }
     }
     .disnone {
         display: none;
     }
-}
-
 //立即还款 xxger
 div[data-ysp-modelid^="immediateRepayment"]{
   background:@theme-bg;

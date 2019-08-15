@@ -95,6 +95,46 @@
       "demo": [
         "http://192.168.220.23/personal.html?code=40400"
       ]
+    },
+    {
+      "title": "enterpriseInformation",
+      "url": "adapter://Tlmall/plan/enterpriseInformation/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/\\/page\\/register\\/registerBus\\.html"
+      ],
+      "demo": [
+        "http://192.168.220.23//page/register/registerBus.html"
+      ]
+    },
+    {
+      "title": "receivingInformation",
+      "url": "adapter://Tlmall/plan/receivingInformation/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/page\\/register\\/registerAddress\\.html"
+      ],
+      "demo": [
+        "http://192.168.220.23/page/register/registerAddress.html"
+      ]
+    },
+    {
+      "title": "registrationProtocol",
+      "url": "adapter://Tlmall/plan/registrationProtocol/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/page\\/notify\\/agreement\\.html"
+      ],
+      "demo": [
+        "http://192.168.220.23/page/notify/agreement.html"
+      ]
+    },
+    {
+      "title": "queryCreditedPaymentHistory",
+      "url": "adapter://Tlmall/plan/queryCreditedPaymentHistory/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=10300"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html?code=10300"
+      ]
     }
   ],
   "name": "太力商城",

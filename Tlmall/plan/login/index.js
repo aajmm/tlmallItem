@@ -19,14 +19,11 @@
     },
     doAction_uiControl2_9GZSwX: function (data, elem) {
       if (data.eventType == 'enterUsername') {
-        elem.querySelector('#username').value = data.dataCustom; // elem.querySelector('#username').dispatchEvent(new Event('change'));
-        elem.querySelector('#username').blur();
+        elem.querySelector('#username').value = data.dataCustom;elem.querySelector('#username').blur();
       } else if (data.eventType == 'enterPassword') {
-        elem.querySelector('#password').value = data.dataCustom; // elem.querySelector('#password').change();
-        elem.querySelector('#password').blur();
+        elem.querySelector('#password').value = data.dataCustom;elem.querySelector('#password').blur();
       } else if (data.eventType == 'enterCode') {
-        elem.querySelector('#captchaCode').value = data.dataCustom; // elem.querySelector('#captchaCode').change();
-        elem.querySelector('#captchaCode').blur();
+        elem.querySelector('#captchaCode').value = data.dataCustom;elem.querySelector('#captchaCode').blur();
       } else if (data.eventType == 'changeCode') {
         elem.querySelectorAll('a')[0].click();
       } else if (data.eventType == 'forgotPassword') {
