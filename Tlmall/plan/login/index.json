@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "login",
-  "targetURL": "http://192.168.220.23/login.html",
+  "targetURL": "http://192.168.220.23/myaccount/login.jsp",
   "jsFile": "index.js",
   "requires": {
     "forgotPassword-writeAccount": "../forgotPassword-writeAccount/index.json",
@@ -11,6 +11,7 @@
   },
   "chineseName": "登录",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
     "control0_vwVCIl": {
       "location": {
@@ -167,7 +168,9 @@
         "control3_cucagU"
       ],
       "anchors": [],
-      "urlAnchor": []
+      "urlAnchor": [
+        "http://192.168.220.23/myaccount/login.jsp"
+      ]
     }
   },
   "flows": {

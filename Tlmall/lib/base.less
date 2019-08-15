@@ -142,7 +142,8 @@ strong,i,em{font-style: normal;}
         display: inline-block;
         height:44px;
         line-height: 44px;
-        padding:0 50px;
+        width:60%;
+        text-align: center;
         margin:0 5px;
         border-radius: 22px;
         font-size:16px;
@@ -150,7 +151,14 @@ strong,i,em{font-style: normal;}
           background:#E7350D;
           color:#fff;
         }
+        &.blue-btn{
+          background:#327BCF;
+          color:#fff;
+        }
       }
+    }
+    .tip-btn-two span{
+      width:40%;
     }
   }
 }
@@ -1914,184 +1922,218 @@ div[data-ysp-modelid^="index"]{
   }
 }
 
-//额度查询  xxger
-div[data-ysp-modelid^="limitSearch"]{
-  background:@theme-bg;
-  .ysp-limitSearch{
-    padding-top:54px;
-  }
-  .num-box{
-    display: flex;
-    background:#fff;
-    padding:20px 0;
-    li{
-      width:50%;
-      text-align: center;
-      &:first-child{
-        border-right: @theme-border;
-        color:@theme-blue;
-        p{
-          color:@theme-blue;
-        }
-      }
-      &:last-child{
-        color:@theme-red;
-        p{
-          color:@theme-red;
-        }
-      }
-    }
-  }
-  .filter-box{
-    margin-top:10px;
-    background:#fff;
-    .filter{
-      height:40px;
-      line-height: 40px;
-      padding:0 12px;
-      border-bottom: @theme-border;
-      overflow: hidden;
-      &:first-child{
-        color:@theme-blue;
-      }
-      &:nth-child(2){
-        color:@theme-red;
-      }
-      input{
-        width:70%;
-        height:100%;
-        float:right;
-        border: none;
-        padding:0;
-        color:#333;
-        font-size:14px;
-      }
-      input[type="date"]{
-        background:#fff url(../local/img/date.png) no-repeat right center;
-        background-size: 16px 16px;
-      }
-      .option-show {
-          float:right;
-          width: 70%;
-          line-height: 40px;
-          height: 40px;
-          background: #fff url(../local/img/arrows-updown.png) no-repeat right center;
-          -webkit-background-size: 10px;
-          background-size: 10px;
-          font-size:14px;
-          color:#999;
-      }
-    }
-    .btn-box{
-      text-align: right;
-      padding:10px 0;
-      span{
-        display: inline-block;
-        margin-right:12px;
-      	border-radius: 3px;
-        padding: 4px 8px;
-        background-color:@theme-blue;
-        color: #fff;
-        font-size: 12px;
-      }
-    }
-  }
-  .tab-box{
-    display: flex;
-    li{
-      width:50%;
-      margin:5%;
-      border-radius: 3px;
-      line-height: 30px;
-      text-align: center;
-      background:#e1e1e1;
-      &.act{
-        background:@theme-red;
-        color:#fff;
-      }
-    }
-  }
-  .tip{
-    padding:0 12px;
-    font-size:12px;
-    strong{
-      color:@theme-red;
-    }
-  }
-  .list-box{
-    margin:12px;
-    padding-bottom:90px;
-    .no-data{
-      background:#fff;
-      height:100px;
-      line-height: 100px;
-      text-align: center;
-      color:@theme-red;
-    }
-    .ckeck-label{
-      position: relative;
-      display: inline-block;
-      padding-left: 25px;
-      vertical-align: top;
-      input{
-        display: none;
-      }
-      i{
-				position: absolute;
-        top: 3px;
-        left: 0;
-        width: 18px;
-        height: 18px;
-        border-radius: 100%;
-        background:url(../local/img/round-gray.png) no-repeat center center;
-        background-size: cover;
-      }
-    }
-    .ckeck-label input:checked + i{
-      background:url(../local/img/round-red.png) no-repeat center center;
-      background-size: cover;
-    }
-    .ckeck-label input:disabled + i{
-      background:url(../local/img/round-flat-disabled.png) no-repeat center center;
-      background-size: cover;
-    }
-    .lists ul{
-      background:#fff;
-      margin-bottom:10px;
-      li{
-        padding:0 12px;
-        line-height: 24px;
-        font-size: 13px;
-        word-break:break-all;
-        &.tit{
-          padding:5px 12px;
-          margin-bottom: 5px;
-          color:@theme-red;
-          border-bottom: @theme-border;
-          overflow: hidden;
-          span{
-            display: inline-block;
-            float: right;
-            color:@theme-red;
-            font-size: 13px;
-          }
-        }
-        &.date-box{
-          border-top:@theme-border;
-          margin-top:5px;
-          padding:5px 12px;
-          color:#999;
-          display:flex;
-          p{
-            width:50%;
-            color:#999;
-            font-size:12px;
-            span{
-              display: block;
-              font-size:12px;
-              color:#999;
+//额度查询、待还款额度 公共样式  xxger
+.ysp-limitSearch {
+    padding-top: 54px;
+    .num-box {
+        display: flex;
+        background: #fff;
+        padding: 20px 0;
+        li {
+            width: 50%;
+            text-align: center;
+            &:first-child {
+                border-right: @theme-border;
+                color: @theme-blue;
+                p {
+                    color: @theme-blue;
+                }
             }
-          }
+            &:last-child {
+                color: @theme-red;
+                p {
+                    color: @theme-red;
+                }
+            }
+        }
+    }
+    .filter-box {
+        margin-top: 10px;
+        background: #fff;
+        .filter {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 12px;
+            border-bottom: @theme-border;
+            overflow: hidden;
+            &:first-child {
+                color: @theme-blue;
+            }
+            &:nth-child(2) {
+                color: @theme-red;
+            }
+        }
+    }
+    .tip {
+        padding: 0 12px;
+        font-size: 12px;
+        strong {
+            color: @theme-red;
+        }
+    }
+    .list-box {
+        margin: 12px;
+        padding-bottom: 90px;
+        .no-data {
+            background: #fff;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: @theme-red;
+        }
+        .ckeck-label {
+            position: relative;
+            display: inline-block;
+            padding-left: 25px;
+            vertical-align: top;
+            input {
+                display: none;
+            }
+            i {
+                position: absolute;
+                top: 3px;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 100%;
+                background: url(../local/img/round-gray.png) no-repeat center center;
+                background-size: cover;
+            }
+        }
+        .ckeck-label input:checked+i {
+            background: url(../local/img/round-red.png) no-repeat center center;
+            background-size: cover;
+        }
+        .ckeck-label input:disabled+i {
+            background: url(../local/img/round-flat-disabled.png) no-repeat center center;
+            background-size: cover;
+        }
+        .lists ul {
+            background: #fff;
+            margin-bottom: 10px;
+            li {
+                padding: 0 12px;
+                line-height: 24px;
+                font-size: 13px;
+                word-break: break-all;
+                &.tit {
+                    padding: 5px 12px;
+                    margin-bottom: 5px;
+                    color: @theme-red;
+                    border-bottom: @theme-border;
+                    overflow: hidden;
+                    span {
+                        display: inline-block;
+                        float: right;
+                        color: @theme-red;
+                        font-size: 13px;
+                    }
+                }
+                &.date-box {
+                    border-top: @theme-border;
+                    margin-top: 5px;
+                    padding: 5px 12px;
+                    color: #999;
+                    display: flex;
+                    p {
+                        width: 50%;
+                        color: #999;
+                        font-size: 12px;
+                        span {
+                            display: block;
+                            font-size: 12px;
+                            color: #999;
+                        }
+                    }
+                }
+                &.btm {
+                    border-top: @theme-border;
+                    padding: 5px 0;
+                    margin: 5px 12px 0;
+                    color: #999;
+                }
+                &.btn-box {
+                    padding: 10px 12px;
+                    text-align: right;
+                    border-top: @theme-border;
+                    span {
+                        display: inline-block;
+                        text-align: center;
+                        font-size: 14px;
+                        height: 25px;
+                        padding: 0 10px;
+                        border: 1px solid #666;
+                        border-radius: 3px;
+                        margin-left: 12px;
+                        color: #3f3f3f;
+                        &:last-child {
+                            color: @theme-red;
+                            border: 1px solid @theme-red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//额度查询  xxger
+div[data-ysp-modelid^="limitSearch"] {
+    background: @theme-bg;
+    .tab-box {
+        display: flex;
+        li {
+            width: 50%;
+            margin: 5%;
+            border-radius: 3px;
+            line-height: 30px;
+            text-align: center;
+            background: #e1e1e1;
+            &.act {
+                background: @theme-red;
+                color: #fff;
+            }
+        }
+    }
+    .filter-box {
+        .filter {
+            input {
+                width: 70%;
+                height: 100%;
+                float: right;
+                border: none;
+                padding: 0;
+                color: #333;
+                font-size: 14px;
+            }
+            input[type="date"] {
+                background: #fff url(../local/img/date.png) no-repeat right center;
+                background-size: 16px 16px;
+            }
+            .option-show {
+                float: right;
+                width: 70%;
+                line-height: 40px;
+                height: 40px;
+                background: #fff url(../local/img/arrows-updown.png) no-repeat right center;
+                -webkit-background-size: 10px;
+                background-size: 10px;
+                font-size: 14px;
+                color: #999;
+            }
+        }
+        .btn-box {
+            text-align: right;
+            padding: 10px 0;
+            span {
+                display: inline-block;
+                margin-right: 12px;
+                border-radius: 3px;
+                padding: 4px 8px;
+                background-color: @theme-blue;
+                color: #fff;
+                font-size: 12px;
+            }
         }
         &.btm{
           border-top: @theme-border;
@@ -2101,38 +2143,584 @@ div[data-ysp-modelid^="limitSearch"]{
         }
       }
     }
-    .sel-all-box{
-      position: fixed;
-      left:0;
-      bottom:52px;
-      z-index:200;
-      width:100%;
-      height:50px;
-      line-height:50px;
-      background:#fff;
-      border-top: @theme-border;
-      .ckeck-label{
-        width:45%;
-        color:#333;
-        font-size:14px;
-        padding-left: 35px;
-        i{
-          top:15px;
-          left:10px;
-          background-size:100%;
+    .disnone {
+        display: none;
+    }
+//立即还款 xxger
+div[data-ysp-modelid^="immediateRepayment"]{
+  background:@theme-bg;
+  .tip{
+    margin-top:55px;
+    background:#fff;
+    padding:10px;
+    font-size:12px;
+  }
+  .detail-box{
+    background:#fff;
+    margin-top:10px;
+    padding-bottom: 10px;
+    .tit{
+      height:40px;
+      line-height: 40px;
+      padding:0 10px;
+      color:@theme-red;
+      border-bottom: @theme-border;
+    }
+    .branch{
+      height:40px;
+      line-height: 40px;
+      border-bottom: @theme-border;
+      padding:0 12px;
+      .option-show {
+          float:right;
+          width: 70%;
+          height:100%;
+          background: #fff url(../local/img/arrows-updown.png) no-repeat right 10px center;
+          -webkit-background-size: 10px;
+          background-size: 10px;
+          color:#666;
+      }
+    }
+    .order{
+      margin:10px 12px 0;
+      background:@theme-bg;
+      .tit2{
+        height:34px;
+        line-height:34px;
+        padding:0 10px;
+        color:@theme-blue;
+        font-size:12px;
+        border-bottom:1px solid #fff;
+      }
+      ul{
+        display: flex;
+        padding:10px 0;
+        border-bottom: 1px solid #fff;
+        li{
+          width:33.3%;
+          text-align: center;
+          font-size:12px;
+          span{
+            display: block;
+            font-size:12px;
+          }
+          input{
+            border:solid 1px #e2e2e2;
+            border-radius: 3px;
+            background:#fff;
+            width:60px;
+            height:20px;
+            padding:0;
+            font-size:12px;
+            text-align: center;
+            color:#333;
+            margin:0 auto;
+          }
         }
       }
-      span{
-        display: inline-block;
-        width:55%;
-        height:100%;
+      .bottom{
+        height:34px;
+        line-height:34px;
+        padding:0 10px;
+        color:#999;
+        font-size:12px;
+      }
+    }
+    .tit3{
+      height:40px;
+      line-height: 40px;
+      margin:0 10px;
+      padding:0 10px;
+      border-bottom: @theme-border;
+    }
+    .tab{
+      display: flex;
+      margin:0 10px;
+      .tab1{
+        width:50%;
+        padding:10px 0;
+        label{
+          position: relative;
+          display: inline-block;
+          padding-left: 30px;
+          vertical-align: top;
+          margin-bottom: 0;
+          font-size:14px;
+          input{
+            display: none;
+          }
+          i{
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+            background:url(../local/img/round-gray.png) no-repeat center center;
+            background-size: cover;
+          }
+        }
+        label input:checked + i{
+          background:url(../local/img/round-red.png) no-repeat center center;
+          background-size: cover;
+        }
+      }
+    }
+    .sblock{
+      background:@theme-bg;
+      padding:10px 10px 0;
+      display: flex;
+      .wallet{
+        width:50%;
+        padding:10px;
+        background:#fff;
         text-align: center;
-        background:@theme-red;
-        color:#fff;
+        p{
+          margin-bottom:3px;
+        }
+        span{
+          color:@theme-red;
+        }
+        input{
+          display: inline-block;
+          width:80px;
+          height:20px;
+          padding:0;
+          border:@theme-border;
+          border-radius: 3px;
+          color:@theme-red;
+          margin:0 11px;
+          text-align: center;
+          font-size:12px;
+        }
+      }
+      .wallet:first-child{
+        border-right:@theme-border;
+      }
+    }
+    .num-box{
+      border-top:10px solid @theme-bg;
+      padding:10px;
+      text-align: right;
+      span{
+        color:@theme-red;
+      }
+      .immediate-pay{
+        margin-top:10px;
+        text-align: center;
+        line-height: 32px;
+        color:#fff; 
+        background: @theme-red;
+        border-radius: 3px;
+      }
+    }
+    .disnone{
+      display: none;
+    }
+  }
+}
+
+//待还款额度  xxger
+div[data-ysp-modelid^="queryCreditedPaymentHistory"]{
+  background:@theme-bg;
+  .ysp-limitSearch .tip{
+    padding-top:10px;
+  }
+  .filter-box .filter:nth-child(2){
+    border-bottom: none;
+	}
+}
+//收银台 xxger
+div[data-ysp-modelid^="checkstand"]{
+  .ysp-checkstand{
+    margin-top:55px;
+  }
+}
+// 收货地址管理
+div[data-ysp-modelid^="shippingAddress"]{
+  position: relative;
+  height: 100%;
+  background-color: #f3f3f3;
+  .tab-title{
+    margin-top: 38px;
+    .btn{
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      border: 0;
+      width: 50%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      &.act,
+      &:active,
+      &:hover{
+        background: #fff;
+        color: #E7350D;
+        border-bottom: 2px solid #e7350d;
       }
     }
   }
-  .disnone{
-    display: none;
+  .address-list{ 
+    position: absolute;
+    bottom: 100px;
+    top: 85px;
+    width: 100%;
+    overflow-y: auto;
+    .item-list{
+      background-color: #fff;
+      margin-bottom: 10px;
+      .content{
+        .title{
+          padding: 10px 10px 0 10px;
+          span{
+            font-size: 14px;
+          	color: #3f3f3f;
+          }
+          em{
+            display: none;
+            font-size: 14px;
+            color:#4a91cc;
+            font-style: normal;
+          }
+        }
+        .states{
+          overflow: hidden;
+          border-bottom: 1px solid #f3f3f3;
+          .item{
+            float: left;
+            padding: 2px 10px 10px 10px;
+            margin: 0;
+            border: 0;
+            min-height: auto;
+            font-size: 14px;
+            color: #333;
+            &:last-child{
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    .list{
+      margin: 0;
+      padding: 10px 10px 0 10px;
+      table{
+        width: 100%;
+      }
+      .main{
+        td{
+        	color: #3f3f3f;
+        }
+      }
+      td{
+        font-size: 14px;
+        color: #999;
+        line-height: 24px;
+        input[type='button']{
+          border: 0;
+          outline: none;
+          border-radius: 3px;
+          background-color: #4796ed;
+          color: #fff;
+          font-size: 12px;
+          padding: 0 10px;
+          line-height: 20px;
+          margin-right: 5px;
+          vertical-align: top;
+          margin-top: 2px;
+        }
+      }
+      .listBtn{
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        .listBtn-group{
+          display: inline-block;
+        	vertical-align: top;
+          input[type='button']{
+            margin-left: 10px;
+            &+input[type='button']{
+              margin-left: 3px;
+            }
+          }
+        }
+      }
+      .editBar{
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-top: 10px;
+        border-top: 1px solid #f3f3f3;
+        padding: 10px;
+        text-align: right;
+        .btn-link{
+          display: inline-block;
+          vertical-align: middle;
+          padding: 0 10px;
+          margin-left: 8px;
+          font-size: 14px;
+          color: #e6350d;
+          &:nth-child(2):before,
+          &:nth-child(3):before{
+            content: "";
+            position: relative;
+            top: -3px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+          }
+          &:nth-child(2):before{
+            background: url("../local/img/icon-edit-act.png") left center no-repeat;
+            background-size: 100%;
+          }
+          &:nth-child(3):before{
+            background: url("../local/img/icon-delete-act.png") left center no-repeat;
+            background-size: 100%;
+          }
+        }
+        &.stop{
+          .btn-link{
+            color: #999;
+            cursor: not-allowed;
+            &:nth-child(2):before{
+              background: url("../local/img/icon-edit.png") left center no-repeat;
+            	background-size: 100%;
+            }
+            &:nth-child(3):before{
+              background: url("../local/img/icon-delete.png") left center no-repeat;
+            	background-size: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .form-list{
+    position: absolute;
+    top: 38px;
+    bottom: 0;
+    width: 100%;
+    overflow-y: auto;
+    background-color: #f3f3f3;
+	}
+  .addNewAddress{
+    position: absolute;
+    left: 0;
+    bottom: 51px;
+    width: 100%;
+    .btn-addNewAddress{
+      display: block;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background-color: #e7350d;
+      color:#fff;
+      margin-bottom: 0;
+      padding: 0;
+      font-size: 16px;
+      .icon-add{
+        position: relative;
+        top: -2px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 15px;
+        height: 15px;
+        background: url("../local/img/icon-add.png") no-repeat;
+        background-size: 100%;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+//个人中心  xxger
+div[data-ysp-modelid^="personal"]{
+  background:@theme-bg;
+  .yewu{
+    background:#fff;
+    margin-bottom:10px;
+    h4{
+      border-bottom: @theme-border;
+      padding:10px;
+    }
+    h4[code="10000"]{
+      color:#f9971d;
+    }
+    h4[code="20000"]{
+      color:#1cb9f5;
+    }
+    h4[code="30000"]{
+      color:#73a9f3;
+    }
+    h4[code="40000"]{
+      color:#63cc31;
+    }
+    h4[code="50000"]{
+      color:#ed6a17;
+    }
+    h4[code="60000"]{
+      color:#51bfaf;
+    }
+    h4[code="70000"]{
+      color:#1cb9f5;
+    }
+    h4[code="80000"]{
+      color:#F4AE3F;
+    }
+    ul{
+      overflow: hidden;
+      padding:15px 0;
+      li{
+        float:left;
+        padding-top:35px;
+        padding-bottom:5px;
+        width:25%;
+        text-align: center;
+        font-size:12px;
+        background-size:auto 25px;
+        background-repeat: no-repeat;
+        background-position: center 8px;
+      }
+      //待支付订单
+      li[code="10100"]{
+        background-image:url(../local/img/DDGL.png);
+      }
+      //客户分货
+      li[code="10201"]{
+        background-image:url(../local/img/KHFH.png);
+      }
+      //门店分货
+      li[code="10202"]{
+        background-image:url(../local/img/MDFH.png);
+      }
+      //待还款额度
+      li[code="10300"]{
+        background-image:url(../local/img/DHKED.png);
+      }
+      //待确认返利
+      li[code="10400"]{
+        background-image:url(../local/img/FLQR.png);
+      }
+      //待确认账单
+      li[code="10500"]{
+        background-image:url(../local/img/ZDQR.png);
+      }
+      //待签收信息
+      li[code="10600"]{
+        //background-image:url(../local/img/DDGL.png);
+      }
+      //待确认发票
+      li[code="10700"]{
+       // background-image:url(../local/img/DDGL.png);
+      }
+      //我要打款
+      li[code="30100"]{
+        background-image:url(../local/img/CZ.png);
+      }
+      //电子钱包交易查询
+      li[code="30201"]{
+        background-image:url(../local/img/JYCX.png);
+      }
+      //贷款证明查询
+      li[code="30202"]{
+        background-image:url(../local/img/CZCX.png);
+      }
+      //转账业务
+      li[code="30203"]{
+        //background-image:url(../local/img/DDGL.png);
+      }
+      //退款业务
+      li[code="30204"]{
+        //background-image:url(../local/img/DDGL.png);
+      }
+      //电子钱包密码设置
+      li[code="30205"]{
+        background-image:url(../local/img/DZQBMM.png);
+      }
+      //线上支付流水明细
+      li[code="30301"]{
+        background-image:url(../local/img/LSMX.png);
+      }
+      //银行交易状态查询
+      li[code="30302"]{
+        background-image:url(../local/img/ZTCX.png);
+      }
+      //我要对账
+      li[code="40100"]{
+        background-image:url(../local/img/WYDZ.png);
+      }
+      //订单查询
+      li[code="40200"]{
+        background-image:url(../local/img/DDCX.png);
+      }
+      //收款查询
+      li[code="40300"]{
+        //background-image:url(../local/img/DDGL.png);
+      }
+      //额度查询
+      li[code="40400"]{
+        background-image:url(../local/img/EDCX.png);
+      }
+      //返利查询
+      li[code="40500"]{
+        background-image:url(../local/img/FLCX.png);
+      }
+      //我的收藏
+      li[code="40600"]{
+        background-image:url(../local/img/WDSC.png);
+      }
+      //我的消息
+      li[code="40700"]{
+       // background-image:url(../local/img/DDGL.png);
+      }
+      //企业信息
+      li[code="50100"]{
+        background-image:url(../local/img/QYXX.png);
+      }
+      //收货地址
+      li[code="50200"]{
+        background-image:url(../local/img/SHDZ.png);
+      }
+      //开票地址
+      li[code="50300"]{
+        background-image:url(../local/img/KPDZ.png);
+      }
+      //我的联系人
+      li[code="50400"]{
+        background-image:url(../local/img/QYLXR.png);
+      }
+      //用户管理
+      li[code="50500"]{
+        background-image:url(../local/img/dyhgl.png);
+      }
+      //安全设置
+      li[code="50600"]{
+        background-image:url(../local/img/AQSZ.png);
+      }
+      //售后服务开通
+      li[code="60100"]{
+        //background-image:url(../local/img/DDGL.png);
+      }
+      //模板下载
+      li[code="70100"]{
+        background-image:url(../local/img/muban1127.png);
+      }
+      //已确认文件下载
+      li[code="70202"]{
+        background-image:url(../local/img/wenjianxiazai1127.png);
+      }
+      //联系我们
+      li[code="80100"]{
+        background-image:url(../local/img/LXKF.png);
+      }
+    }
+    ul[code="30000"] li,ul[code="70000"] li{
+      width:33.3%;
+    }
   }
 }

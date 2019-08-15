@@ -189,6 +189,45 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control52_d30rnc": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"infoCompletePop\"]/DIV[1]",
+              "descendant::DIV[@id=\"infoCompletePop\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.tl-alert DIV.alert-box.tl-alert-a"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control52_d30rnc"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -198,7 +237,8 @@
         "control35_ReksFv",
         "control36_1Ht6sa",
         "control37_7w0gLr",
-        "control39_CVGfUQ"
+        "control39_CVGfUQ",
+        "control52_d30rnc"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -216,6 +256,16 @@
       ]
     },
     "flow19_MEyehW": {
+      "toContexts": [
+        {
+          "toContextId": "context2_JFd3LO"
+        }
+      ]
+    },
+    "flow14_KNsuO2": {
+      "fromContextId": "context2_JFd3LO",
+      "fromAction": "doAction",
+      "fromControlId": "control52_d30rnc",
       "toContexts": [
         {
           "toContextId": "context2_JFd3LO"
@@ -301,6 +351,21 @@
               }
             }
           }
+        },
+        {
+          "id": "uiControl33_TDQe7s",
+          "controlId": "control52_d30rnc",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl33_TDQe7s",
+                "onGetTemplate": "getTemplate_uiControl33_TDQe7s"
+              }
+            }
+          }
         }
       ]
     }
@@ -322,7 +387,9 @@
           "192.168.220.23/?_requestid=2377",
           "192.168.220.23/?_requestid=3698",
           "192.168.220.23/?_requestid=4200",
-          "192.168.220.23/"
+          "192.168.220.23/",
+          "192.168.220.23/index.html?_requestid=23087",
+          "192.168.220.23/index.html?_requestid=23813"
         ]
       }
     },

@@ -161,3 +161,89 @@ doAction_uiControl28_Byxrut: |-
   if(data.eventType == "handlerClick"){
     elem.querySelector(".tl-footer-lists").querySelectorAll("dl")[5].querySelectorAll("dd")[1].querySelector("a").click();
   }
+getTemplate_uiControl29_S4niH0: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.selectedIndex,\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-navbar\">\n        <ul>\n          <li><a href=\"\"><span>首页</span></a></li>\n        </ul>\n      </div>\n    )\n  }\n}"
+getData_control43_IMz3GE: ''
+doAction_uiControl29_S4niH0: ''
+getTemplate_uiControl27_E5TPLf: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });
+getData_control48_5i5oev: |-
+  if(!elem){
+    return;
+  }
+  let data=elem.innerHTML;
+  //console.log(elem);
+  return;
+doAction_uiControl27_E5TPLf: console.log(elem);
+getTemplate_uiControl33_DEVCih: |-
+  module.exports = React.createClass({
+    render: function() {
+      return (
+        <div>
+          自定义组件用来适配基本组件无法适配的页面元素，您可以通过右键打开该自定义组件编辑器进行编辑
+        </div>
+      )
+    }
+  });
+getData_control52_dINODn: |-
+  let data=elem.innerHTML;
+  return data;
+doAction_uiControl33_DEVCih: ''
+getTemplate_uiControl33_TDQe7s: |-
+  import {Component,Fragment} from 'react'; 
+  export default class extends Component{
+    handlerClick1(e) {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"click1"
+        })
+      }
+    }
+    handlerClick2(e) {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"click2"
+        })
+      }
+    }
+    render(){
+      let data = this.props.customData;
+      let me=this;
+      return(
+        <Fragment>
+        {data ?
+         <div className="ysp-tip-pop">
+          <div className="mask"></div>
+          <div className="pop-con">
+            <p className="tip-con">如需要下单购买，请进一步完善您的资料。</p>
+            <div class="tip-btn tip-btn-two"><span className="red-btn" onClick={me.handlerClick1.bind(me)}>完善资料</span><span className="blue-btn" onClick={me.handlerClick2.bind(me)}>下次填写</span></div>
+          </div>
+        </div>
+        : ""
+        }
+        </Fragment>
+      )
+    }
+  }
+getData_control52_d30rnc: |-
+  if(!elem){
+    return;
+  }
+  let data="";
+  data = elem;
+  return data;
+doAction_uiControl33_TDQe7s: |-
+  if(data.eventType == "click1"){
+    let btn = elem.querySelector("input[value='完善资料']").dispatchEvent(new Event("click"));
+  }else if(data.eventType == "click2"){
+    let btn = elem.querySelector("input[value='下次填写']").dispatchEvent(new Event("click"));
+  }

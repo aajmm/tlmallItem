@@ -15,6 +15,11 @@
       "path": "lib/swiper.min.js",
       "sourceType": "local",
       "target": "face"
+    },
+    {
+      "path": "https://code.jquery.com/jquery-3.2.1.min.js",
+      "sourceType": "online",
+      "target": "face"
     }
   ],
   "common_css": [

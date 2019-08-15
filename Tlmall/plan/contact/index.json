@@ -3,8 +3,12 @@
   "id": "contact",
   "targetURL": "http://192.168.220.23/personal.html?code=50400",
   "jsFile": "index.js",
+  "requires": {
+    "personal": "../personal/index.json"
+  },
   "chineseName": "我的联系人",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
     "control12_NcLbHm": {
       "location": {
@@ -123,7 +127,9 @@
       "anchors": [
         "control12_NcLbHm"
       ],
-      "urlAnchor": []
+      "urlAnchor": [
+        "code=50400"
+      ]
     }
   },
   "flows": {
@@ -144,6 +150,17 @@
       "toContexts": [
         {
           "toContextId": "context4_G4wDgT"
+        }
+      ]
+    },
+    "flow23_W3vbRJ": {
+      "toContexts": [
+        {
+          "toContextId": "context4_G4wDgT"
+        },
+        {
+          "toContextId": "context3_IigyoX",
+          "toModelId": "personal"
         }
       ]
     }
