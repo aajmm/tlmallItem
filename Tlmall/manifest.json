@@ -22,11 +22,9 @@
       "title": "login",
       "url": "adapter://Tlmall/plan/login/index.json",
       "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/login\\.html"
+        "^http:\\/\\/192\\.168\\.220\\.23\\/myaccount\\/login\\.jsp"
       ],
-      "demo": [
-        "http://192.168.220.23/login.html"
-      ]
+      "demo": []
     },
     {
       "title": "contact",
@@ -100,9 +98,9 @@
     }
   ],
   "name": "太力商城",
-  "default_url": "http://192.168.220.23/login.html",
+  "default_url": "http://192.168.220.23/myaccount/login.jsp",
   "scope": "Tlmall",
-  "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1565770266500,
+  "start_url": "http://192.168.220.23/myaccount/login.jsp",
+  "update_time": 1565833970520,
   "runtime_env": "1webview"
 }
