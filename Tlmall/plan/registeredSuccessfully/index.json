@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "registeredSuccessfully",
-  "targetURL": "http://111.200.200.30/page/register/registerOk.html",
+  "targetURL": "http://192.168.220.23/page/register/registerOk.html",
   "jsFile": "index.js",
   "chineseName": "注册成功",
   "description": "",

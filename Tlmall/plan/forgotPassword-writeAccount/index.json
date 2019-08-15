@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "forgotPassword-writeAccount",
-  "targetURL": "http://111.200.200.30/passwordBack.html",
+  "targetURL": "http://192.168.220.23/passwordBack.html",
   "jsFile": "index.js",
   "requires": {},
   "chineseName": "忘记密码-填写账户",

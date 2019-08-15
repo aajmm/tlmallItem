@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "queryCreditedPaymentHistory",
-  "targetURL": "http://111.200.200.30/personal.html?code=10300",
+  "targetURL": "http://192.168.220.23/personal.html?code=10300",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"

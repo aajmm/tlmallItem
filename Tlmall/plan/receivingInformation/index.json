@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "receivingInformation",
-  "targetURL": "http://111.200.200.30/page/register/registerAddress.html",
+  "targetURL": "http://192.168.220.23/page/register/registerAddress.html",
   "jsFile": "index.js",
   "requires": {
     "index": "../index/index.json"

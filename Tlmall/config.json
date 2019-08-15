@@ -5,7 +5,7 @@
     "studioVersion": "2.2.1-beta.1",
     "macAddress": "30:9c:23:2f:6f:12",
     "isUploaded": false,
-    "current_environ": 0,
+    "current_environ": 1,
     "environments": [
         {
             "name": "环境1",

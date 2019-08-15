@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "id": "shippingAddress",
-  "targetURL": "http://111.200.200.30/personal.html?code=50200",
+  "targetURL": "http://192.168.220.23/personal.html?code=50200",
   "jsFile": "index.js",
   "chineseName": "收货地址",
   "description": "",

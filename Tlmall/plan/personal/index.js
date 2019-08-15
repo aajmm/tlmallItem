@@ -16,7 +16,7 @@
       'use strict';
       var type = data.eventType;if (type == "click") {
         var Num = data.dataCustom;var d = parseInt(Num.split('-')[0]); //let Num2 = parseInt(Num.substr(d+1,Num.length));
-        var Num2 = parseInt(Num.split('-')[1]);var code = elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].getAttribute('code');elem.ownerDocument.defaultView.location.href = 'http://111.200.200.30/personal.html?code=' + code;elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].click();
+        var Num2 = parseInt(Num.split('-')[1]);var code = elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].getAttribute('code');elem.ownerDocument.defaultView.location.href = 'http://192.168.220.23/personal.html?code=' + code;elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].click();
       }
     },
     getTemplate_uiControl35_0qM4HA: function () {
