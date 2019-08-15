@@ -19,16 +19,6 @@
   "override_urls": [],
   "adapter_urls": [
     {
-      "title": "login",
-      "url": "adapter://Tlmall/plan/login/index.json",
-      "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/login\\.html"
-      ],
-      "demo": [
-        "http://192.168.220.23/login.html"
-      ]
-    },
-    {
       "title": "contact",
       "url": "adapter://Tlmall/plan/contact/index.json",
       "matcher": [
@@ -79,16 +69,6 @@
     {
       "title": "limitSearch",
       "url": "adapter://Tlmall/plan/limitSearch/index.json",
-      "matcher": [
-        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=40400"
-      ],
-      "demo": [
-        "http://192.168.220.23/personal.html?code=40400"
-      ]
-    },
-    {
-      "title": "immediateRepayment",
-      "url": "adapter://Tlmall/plan/immediateRepayment/index.json",
       "matcher": [
         "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=40400"
       ],
@@ -155,12 +135,22 @@
       "demo": [
         "http://192.168.220.23/index.html"
       ]
+    },
+    {
+      "title": "login",
+      "url": "adapter://Tlmall/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/myaccount\\/login\\.jsp"
+      ],
+      "demo": [
+        "http://192.168.220.23/myaccount/login.jsp"
+      ]
     }
   ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/myaccount/login.jsp",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1565834523622,
+  "update_time": 1565857158408,
   "runtime_env": "1webview"
 }

@@ -168,9 +168,7 @@
         "control3_cucagU"
       ],
       "anchors": [],
-      "urlAnchor": [
-        "http://192.168.220.23/myaccount/login.jsp"
-      ]
+      "urlAnchor": []
     }
   },
   "flows": {

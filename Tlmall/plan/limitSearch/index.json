@@ -4,7 +4,9 @@
   "targetURL": "http://192.168.220.23/personal.html?code=40400",
   "jsFile": "index.js",
   "requires": {
-    "index": "../index/index.json"
+    "index": "../index/index.json",
+    "limitSearch": "../limitSearch/index.json",
+    "personal": "../personal/index.json"
   },
   "chineseName": "额度查询",
   "description": "",
@@ -71,13 +73,36 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control30_7WdTGr": {
+      "location": {
+        "data": {
+          "tagName": "HTML"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control30_7WdTGr"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context7_gua0Tw": {
       "controls": [
         "control44_R2pKt2",
-        "control38_OLBoGl"
+        "control38_OLBoGl",
+        "control30_7WdTGr"
       ],
       "anchors": [],
       "urlAnchor": [
@@ -90,6 +115,10 @@
       "toContexts": [
         {
           "toContextId": "context7_gua0Tw"
+        },
+        {
+          "toContextId": "context7_gua0Tw",
+          "toModelId": "limitSearch"
         }
       ]
     },
@@ -100,6 +129,20 @@
       "toContexts": [
         {
           "toContextId": "context7_gua0Tw"
+        }
+      ]
+    },
+    "flow24_TMT8kN": {
+      "fromContextId": "context7_gua0Tw",
+      "fromAction": "doAction",
+      "fromControlId": "control30_7WdTGr",
+      "toContexts": [
+        {
+          "toContextId": "context7_gua0Tw"
+        },
+        {
+          "toContextId": "context3_IigyoX",
+          "toModelId": "personal"
         }
       ]
     }
@@ -134,6 +177,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl18_MOgu9U",
                 "onGetTemplate": "getTemplate_uiControl18_MOgu9U"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl27_GIMbTR",
+          "controlId": "control30_7WdTGr",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl27_GIMbTR",
+                "onGetTemplate": "getTemplate_uiControl27_GIMbTR"
               }
             }
           }
@@ -276,6 +334,65 @@
             "tucaoIcon",
             "typeAheadInfo",
             "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "NoUseElcW",
+            "RepayCompany",
+            "UseElcW",
+            "accountLimit",
+            "allocM",
+            "canUseEPay",
+            "canUseEPayInput",
+            "changeProvince",
+            "countOrder",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "ePayPackage",
+            "errorMessage",
+            "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "immediatelyRepayTableId",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "offlinePay",
+            "onlinePay",
+            "payPassword",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "shouldPayMoney",
+            "showPasswordError",
+            "showPasswordErrorFreeze",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "totalMoney",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "useEPay",
+            "useElcWBlock",
+            "usePassowrdValidate",
             "xiaoNengIcon",
             "xiaoNengSvcIcon"
           ]
@@ -960,6 +1077,118 @@
             "xf_r",
             "xf_right",
             "xfr_info"
+          ],
+          [
+            "a",
+            "ablock",
+            "act",
+            "activ",
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "b",
+            "bar",
+            "bd_b",
+            "bd_ra",
+            "bgm",
+            "breadcrumb",
+            "btm_content",
+            "btn",
+            "btn_bg",
+            "btns_r",
+            "center-imgs",
+            "checked",
+            "city",
+            "city-sel",
+            "ck_radios",
+            "clearfix",
+            "close",
+            "cr_bk",
+            "cr_red",
+            "disnone",
+            "elcWalletBK",
+            "fl",
+            "float_l",
+            "float_r",
+            "footer-bottom",
+            "footer-cc",
+            "footer-cl",
+            "footer-last-list",
+            "fr",
+            "fr_m",
+            "hint",
+            "iCheck-helper",
+            "icon",
+            "icon-cart",
+            "icon-search",
+            "icon-yewu",
+            "icon_",
+            "icon_down",
+            "icon_mg",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "ipt",
+            "iradio_tlmall",
+            "line",
+            "logo",
+            "menu-list",
+            "menu-search",
+            "mg_b",
+            "mg_r",
+            "mg_t",
+            "nav_sidebar",
+            "nav_sidebar_s",
+            "nav_sidebar_sul",
+            "number",
+            "one",
+            "pd_lr",
+            "pd_tb",
+            "placeholder",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "quit",
+            "rePayTotalClass",
+            "rePayTrOrderClass",
+            "repayment_hint",
+            "sblock",
+            "search-box",
+            "search-btn",
+            "searchBox-infos",
+            "selt_a",
+            "switch",
+            "table",
+            "table_a_s",
+            "table_ipt",
+            "title_a",
+            "title_main",
+            "tl-content",
+            "tl-fixedscroll",
+            "tl-footer",
+            "tl-footer-lists",
+            "tl-main-menu",
+            "tl-sales-slide",
+            "tl-top-ad",
+            "tl-top-menu",
+            "tl-wrap",
+            "tlmall-app",
+            "tlmall-wx",
+            "top-ad-img",
+            "top_title",
+            "triangle_r",
+            "txt_c",
+            "wb",
+            "wb_r",
+            "wc",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info"
           ]
         ]
       }
@@ -1141,6 +1370,61 @@
             "UL/LI/SELECT",
             "UL/LI/SPAN",
             "UL/LI/TABLE",
+            "UL/LI/UL"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/A/DIV",
+            "DIV/A/I",
+            "DIV/A/IMG",
+            "DIV/DIV/A",
+            "DIV/DIV/B",
+            "DIV/DIV/DIV",
+            "DIV/DIV/DL",
+            "DIV/DIV/EM",
+            "DIV/DIV/H4",
+            "DIV/DIV/I",
+            "DIV/DIV/IMG",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/INPUT-hidden",
+            "DIV/DIV/INPUT-radio",
+            "DIV/DIV/INPUT-text",
+            "DIV/DIV/INS",
+            "DIV/DIV/LABEL",
+            "DIV/DIV/P",
+            "DIV/DIV/SELECT",
+            "DIV/DIV/SPAN",
+            "DIV/DIV/TABLE",
+            "DIV/DIV/UL",
+            "DIV/DL/DD",
+            "DIV/DL/DT",
+            "DIV/LABEL/INPUT-password",
+            "DIV/LABEL/INPUT-text",
+            "DIV/LABEL/SPAN",
+            "DIV/SELECT/OPTION",
+            "DIV/SPAN/B",
+            "DIV/SPAN/EM",
+            "DIV/TABLE/TBODY",
+            "DIV/TABLE/THEAD",
+            "DIV/UL/LI",
+            "DL/DD/A",
+            "LI/A/B",
+            "LI/A/I",
+            "LI/H5/I",
+            "LI/SELECT/OPTION",
+            "LI/UL/LI",
+            "TABLE/TBODY/TR",
+            "TABLE/THEAD/TR",
+            "TBODY/TR/TD",
+            "THEAD/TR/TH",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/INPUT-text",
+            "UL/LI/A",
+            "UL/LI/H5",
+            "UL/LI/SELECT",
+            "UL/LI/SPAN",
             "UL/LI/UL"
           ]
         ]
