@@ -907,7 +907,9 @@ div[data-ysp-modelid^="receivingInformation"] .collect-contact,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-phone,
 div[data-ysp-modelid^="receivingInformation"] .collect-phone,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-code,
-div[data-ysp-modelid^="receivingInformation"] .collect-code {
+div[data-ysp-modelid^="receivingInformation"] .collect-code,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-email,
+div[data-ysp-modelid^="receivingInformation"] .collect-email {
   padding: 0 15px;
   display: flex;
   margin-top: 15px;
@@ -979,7 +981,9 @@ div[data-ysp-modelid^="receivingInformation"] .collect-contact i,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-phone i,
 div[data-ysp-modelid^="receivingInformation"] .collect-phone i,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-code i,
-div[data-ysp-modelid^="receivingInformation"] .collect-code i {
+div[data-ysp-modelid^="receivingInformation"] .collect-code i,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-email i,
+div[data-ysp-modelid^="receivingInformation"] .collect-email i {
   width: 4%;
   color: #E3370A;
   font-size: 20px;
@@ -1054,7 +1058,9 @@ div[data-ysp-modelid^="receivingInformation"] .collect-contact select,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-phone select,
 div[data-ysp-modelid^="receivingInformation"] .collect-phone select,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-code select,
-div[data-ysp-modelid^="receivingInformation"] .collect-code select {
+div[data-ysp-modelid^="receivingInformation"] .collect-code select,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-email select,
+div[data-ysp-modelid^="receivingInformation"] .collect-email select {
   height: 44px;
   padding-top: 0;
   padding-bottom: 0;
@@ -1129,7 +1135,9 @@ div[data-ysp-modelid^="receivingInformation"] .collect-contact input,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-phone input,
 div[data-ysp-modelid^="receivingInformation"] .collect-phone input,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-code input,
-div[data-ysp-modelid^="receivingInformation"] .collect-code input {
+div[data-ysp-modelid^="receivingInformation"] .collect-code input,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-email input,
+div[data-ysp-modelid^="receivingInformation"] .collect-email input {
   width: 100%;
   height: 44px;
   display: inline-block;
@@ -1206,7 +1214,9 @@ div[data-ysp-modelid^="receivingInformation"] .collect-contact em,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-phone em,
 div[data-ysp-modelid^="receivingInformation"] .collect-phone em,
 div[data-ysp-modelid^="enterpriseInformation"] .collect-code em,
-div[data-ysp-modelid^="receivingInformation"] .collect-code em {
+div[data-ysp-modelid^="receivingInformation"] .collect-code em,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-email em,
+div[data-ysp-modelid^="receivingInformation"] .collect-email em {
   display: none;
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterprise-next,
@@ -1350,6 +1360,130 @@ div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .tax-type .sign-
   border: 1px solid #ccc;
   background: #fff;
 }
+div[data-ysp-modelid^="enterpriseInformation"] .id-card,
+div[data-ysp-modelid^="receivingInformation"] .id-card,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license,
+div[data-ysp-modelid^="receivingInformation"] .business-license,
+div[data-ysp-modelid^="enterpriseInformation"] .update-file,
+div[data-ysp-modelid^="receivingInformation"] .update-file,
+div[data-ysp-modelid^="enterpriseInformation"] .update-idCard,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate {
+  display: block;
+  padding: 0 15px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .id-card p,
+div[data-ysp-modelid^="receivingInformation"] .id-card p,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license p,
+div[data-ysp-modelid^="receivingInformation"] .business-license p,
+div[data-ysp-modelid^="enterpriseInformation"] .update-file p,
+div[data-ysp-modelid^="receivingInformation"] .update-file p,
+div[data-ysp-modelid^="enterpriseInformation"] .update-idCard p,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard p,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate p,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate p {
+  display: flex;
+  height: 40px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .id-card p input,
+div[data-ysp-modelid^="receivingInformation"] .id-card p input,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license p input,
+div[data-ysp-modelid^="receivingInformation"] .business-license p input,
+div[data-ysp-modelid^="enterpriseInformation"] .update-file p input,
+div[data-ysp-modelid^="receivingInformation"] .update-file p input,
+div[data-ysp-modelid^="enterpriseInformation"] .update-idCard p input,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard p input,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate p input,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate p input {
+  width: 65%;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .id-card p button,
+div[data-ysp-modelid^="receivingInformation"] .id-card p button,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license p button,
+div[data-ysp-modelid^="receivingInformation"] .business-license p button,
+div[data-ysp-modelid^="enterpriseInformation"] .update-file p button,
+div[data-ysp-modelid^="receivingInformation"] .update-file p button,
+div[data-ysp-modelid^="enterpriseInformation"] .update-idCard p button,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard p button,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate p button,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate p button {
+  width: 30%;
+  height: 44px;
+  margin-left: 5%;
+  border: 0;
+  background: #e7350d;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  position: relative;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .id-card p button input[type='file'],
+div[data-ysp-modelid^="receivingInformation"] .id-card p button input[type='file'],
+div[data-ysp-modelid^="enterpriseInformation"] .business-license p button input[type='file'],
+div[data-ysp-modelid^="receivingInformation"] .business-license p button input[type='file'],
+div[data-ysp-modelid^="enterpriseInformation"] .update-file p button input[type='file'],
+div[data-ysp-modelid^="receivingInformation"] .update-file p button input[type='file'],
+div[data-ysp-modelid^="enterpriseInformation"] .update-idCard p button input[type='file'],
+div[data-ysp-modelid^="receivingInformation"] .update-idCard p button input[type='file'],
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate p button input[type='file'],
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate p button input[type='file'] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .id-card span,
+div[data-ysp-modelid^="receivingInformation"] .id-card span,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license span,
+div[data-ysp-modelid^="receivingInformation"] .business-license span,
+div[data-ysp-modelid^="enterpriseInformation"] .update-file span,
+div[data-ysp-modelid^="receivingInformation"] .update-file span,
+div[data-ysp-modelid^="enterpriseInformation"] .update-idCard span,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard span,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate span,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate span {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 8px;
+  padding-left: 4%;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .id-card .errorIcon,
+div[data-ysp-modelid^="receivingInformation"] .id-card .errorIcon,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license .errorIcon,
+div[data-ysp-modelid^="receivingInformation"] .business-license .errorIcon,
+div[data-ysp-modelid^="enterpriseInformation"] .update-file .errorIcon,
+div[data-ysp-modelid^="receivingInformation"] .update-file .errorIcon,
+div[data-ysp-modelid^="enterpriseInformation"] .update-idCard .errorIcon,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard .errorIcon,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate .errorIcon,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate .errorIcon {
+  position: relative;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .id-card .errorIcon em,
+div[data-ysp-modelid^="receivingInformation"] .id-card .errorIcon em,
+div[data-ysp-modelid^="enterpriseInformation"] .business-license .errorIcon em,
+div[data-ysp-modelid^="receivingInformation"] .business-license .errorIcon em,
+div[data-ysp-modelid^="enterpriseInformation"] .update-file .errorIcon em,
+div[data-ysp-modelid^="receivingInformation"] .update-file .errorIcon em,
+div[data-ysp-modelid^="enterpriseInformation"] .update-idCard .errorIcon em,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard .errorIcon em,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate .errorIcon em,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate .errorIcon em {
+  display: block!important;
+  width: 16px;
+  height: 16px;
+  background: #E7350E;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 14px;
+  text-align: center;
+  position: absolute;
+  top: 14px;
+  right: 130px;
+  color: #fff;
+}
 div[data-ysp-modelid^="enterpriseInformation"] {
   width: 100%;
   height: 100%;
@@ -1451,84 +1585,6 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpris
   top: -10px;
   right: 1;
 }
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license {
-  display: block;
-  padding: 0 15px;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card p,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license p {
-  display: flex;
-  height: 40px;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card p input,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license p input {
-  width: 65%;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card p button,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license p button {
-  width: 30%;
-  height: 44px;
-  margin-left: 5%;
-  border: 0;
-  background: #e7350d;
-  border-radius: 3px;
-  color: #fff;
-  font-size: 13px;
-  position: relative;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card p button input[type='file'],
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license p button input[type='file'] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card span,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license span {
-  display: inline-block;
-  font-size: 12px;
-  margin-top: 8px;
-  padding-left: 4%;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card .errorIcon,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license .errorIcon {
-  position: relative;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-card .errorIcon em,
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .business-license .errorIcon em {
-  display: block!important;
-  width: 16px;
-  height: 16px;
-  background: #E7350E;
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: 200;
-  line-height: 14px;
-  text-align: center;
-  position: absolute;
-  top: 14px;
-  right: 130px;
-  color: #fff;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-type .errorIcon {
-  position: relative;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form .id-type .errorIcon em {
-  display: block!important;
-  width: 16px;
-  height: 16px;
-  background: #E7350E;
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: 200;
-  line-height: 14px;
-  text-align: center;
-  position: absolute;
-  top: 14px;
-  right: 130px;
-  color: #fff;
-}
 div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-information {
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
@@ -1553,7 +1609,6 @@ div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form {
   width: 100%;
   height: auto;
   padding: 15px 0;
-  border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
 }
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .download-template p {
@@ -1651,42 +1706,18 @@ div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .period-v
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .period-validity div label {
   font-size: 12px;
 }
-div[data-ysp-modelid^="receivingInformation"] .update-file input,
-div[data-ysp-modelid^="receivingInformation"] .update-idCard input,
-div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate input {
-  width: 65%;
-}
-div[data-ysp-modelid^="receivingInformation"] .update-file button,
-div[data-ysp-modelid^="receivingInformation"] .update-idCard button,
-div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate button {
-  width: 30%;
-  height: 44px;
-  margin-left: 5%;
-  border: 0;
-  background: #e7350d;
-  border-radius: 3px;
-  color: #fff;
-  font-size: 13px;
-  position: relative;
-}
-div[data-ysp-modelid^="receivingInformation"] .update-file button input[type='file'],
-div[data-ysp-modelid^="receivingInformation"] .update-idCard button input[type='file'],
-div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate button input[type='file'] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-div[data-ysp-modelid^="receivingInformation"] .update-file span,
-div[data-ysp-modelid^="receivingInformation"] .update-idCard span,
-div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate span {
-  display: inline-block;
-  font-size: 12px;
-  margin-top: 8px;
-  padding-left: 4%;
+div[data-ysp-modelid^="receivingInformation"] .invoice-iformation-form {
+  padding: 15px 0;
+  padding-bottom: 30px;
 }
 div[data-ysp-modelid^="receivingInformation"] .submit-immediately {
   margin-top: 30px;
+}
+div[data-ysp-modelid^="receivingInformation"] .authorization-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 div[data-ysp-modelid^="registeredSuccessfully"] div {
   width: 100%;
