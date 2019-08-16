@@ -195,6 +195,10 @@
         "data": {
           "tagName": "DIV"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "@id/word",
@@ -389,7 +393,8 @@
           "192.168.220.23/?_requestid=4200",
           "192.168.220.23/",
           "192.168.220.23/index.html?_requestid=23087",
-          "192.168.220.23/index.html?_requestid=23813"
+          "192.168.220.23/index.html?_requestid=23813",
+          "192.168.220.23/index.html?_requestid=30902"
         ]
       }
     },
@@ -501,6 +506,59 @@
             "xiaoNengSvcIcon"
           ],
           [
+            "changeProvince",
+            "close-home-pop",
+            "custAllocQty",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "customerName",
+            "defaultKeyword",
+            "fixedscroll",
+            "floors",
+            "hesrM",
+            "home-pop",
+            "homeM",
+            "imporestAmt",
+            "infoCompletePop",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "noProductTip",
+            "noticeBox",
+            "phoneM",
+            "provinceList",
+            "rebateAmt",
+            "scfAmt",
+            "scfLink",
+            "scfText",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "slideBanners",
+            "smartM",
+            "storeAllocQty",
+            "tl-banner-slider",
+            "tl-slider-dots",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "unSignedFiles",
+            "unSignedFilesTemplate",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "allocM",
             "changeProvince",
             "close-home-pop",
             "custAllocQty",
