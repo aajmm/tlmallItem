@@ -3,6 +3,9 @@
   "id": "rebateConfirMation",
   "targetURL": "http://192.168.220.23/personal.html?code=10400",
   "jsFile": "index.js",
+  "requires": {
+    "personal": "../personal/index.json"
+  },
   "chineseName": "待确认返利",
   "description": "",
   "firstPaintEnable": false,
@@ -118,7 +121,7 @@
       ],
       "anchors": [],
       "urlAnchor": [
-        "code=10400"
+        "http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=10400"
       ]
     }
   },
@@ -137,6 +140,10 @@
       "toContexts": [
         {
           "toContextId": "context6_SiWwA5"
+        },
+        {
+          "toContextId": "context3_IigyoX",
+          "toModelId": "personal"
         }
       ]
     },
@@ -214,7 +221,8 @@
     "page/urls": {
       "contexts": {
         "context6_SiWwA5": [
-          "192.168.220.23/personal.html?code=10400"
+          "192.168.220.23/personal.html?code=10400",
+          "111.200.200.30/personal.html?code=10400"
         ]
       }
     },
@@ -393,6 +401,55 @@
             "rebateConfirMationTemplate",
             "rebateDetailTemplate",
             "scfM",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "TD_",
+            "allocM",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "errorMessage",
+            "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rc_endTime",
+            "rc_pagination",
+            "rc_pendingConfirmCount",
+            "rc_pengdingConfirmAmount",
+            "rc_startTime",
+            "rc_tbodyList",
+            "rebateConfirMationTemplate",
+            "rebateDetailTemplate",
             "sealHint",
             "searchBox",
             "searchBtn",
