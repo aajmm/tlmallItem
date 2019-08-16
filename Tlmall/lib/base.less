@@ -2687,3 +2687,178 @@ div[data-ysp-modelid^="personal"]{
     }
   }
 }
+
+// 开票地址
+div[data-ysp-modelid^="billngAddress"]{
+  background-color: #F5F5F5;
+  .tab-title{
+    background-color: #fff;
+    margin-top: 38px;
+    height: 49px;
+    line-height: 49px;
+    overflow: hidden;
+    .tab-item{
+      float: left;
+      height: 100%;
+      width: 50%;
+      text-align: center;
+    }
+    span{
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      height: 100%;
+      &.checked{
+        input{
+        	color: #E7350D;
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: url(../local/img/tab-btm-line.png) no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+    input{
+      border: 0;
+      height: 100%;
+      outline: none;
+      font-size: 14px;
+      color: #666;
+      background-color: transparent;
+      font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;      
+    }
+  }
+  .status{
+    margin-top: 10px;
+    height: 49px;
+    line-height: 49px;
+    padding: 0 16px;
+    background-color: #fff;
+    overflow: hidden;
+    .content{
+      float: left;
+      span{
+      	font-size: 12px;
+        color: #999;
+        margin-right: 5px;
+      }
+      em{
+      	font-size: 12px;
+        color: #333;
+      }
+    }
+    .btn-apply{
+      float: right;
+      font-size: 13px;
+      color: #327BCF;
+      text-decoration: underline;
+      &.done{
+        cursor: default;
+        color: #999;
+        text-decoration: none;
+      }
+    }
+  }
+  .address-content{
+    margin-bottom: 80px;
+    .item-infor{
+      .title{
+        overflow: hidden;
+        padding: 16px 16px 8px 16px;
+        h6, .fr{
+          line-height: 1;
+          font-size: 14px;
+        }
+        h6{
+          float: left;
+          color: #333;
+        }
+        .fr{
+          color: #4796ED;
+          text-decoration: underline;
+        }
+      }
+    }
+    .content-list{
+      background-color: #fff;
+      padding-left: 16px;
+      .item-list{
+        height: 51px;
+        border-bottom: 1px solid #eee;
+        overflow: hidden;
+        h5, input, .btnText{
+        	line-height: 51px;
+        }
+        h5{
+          float: left;
+          font-size: 16px;
+          color: #333;
+        }
+        input{
+          float: right;
+          font-size: 14px;
+          color: #333;
+          border: 0;
+          outline: none;
+          text-align: right;
+          width: 60%;
+          background: transparent;
+          padding: 0 16px 0 0;
+          margin: 0;
+          font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;     
+          &:disabled{
+            color: #999;
+          }
+        }
+        .btnText{
+          float: right;
+          font-size: 14px;
+          color: #333;
+          padding-right: 16px;
+          padding-left: 50px;
+          .icon-arrow{
+            display: inline-block;
+            vertical-align: middle;
+            width: 8px;
+            height: 15px;
+            background: url(../local/img/icon-arrow-r.png) no-repeat;
+            background-size: 100%;
+            margin-left: 9px;
+          }
+        }
+      }
+    }
+    .footBtns{
+      text-align: center;
+      padding-top: 32px;
+      input[disabled]{
+        display: none;
+      }
+      input{
+        margin: 0 10px;
+        width: 130px;
+        height: 44px;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 16px;
+        font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","FontAwesome",sans-serif;
+        &.btn_bg02{
+          border: 1px solid #ccc;
+          color: #333;
+          background-color: #fff;
+        }
+        &.btn_bg01{
+          border: 0;
+          color: #fff;
+          background:linear-gradient(268deg,rgba(245,101,34,1) 0%,rgba(231,53,14,1) 100%);
+        }
+      }
+    }
+  }
+}
