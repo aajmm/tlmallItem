@@ -10,55 +10,6 @@
   "description": "",
   "firstPaintEnable": false,
   "controls": {
-    "control12_NcLbHm": {
-      "location": {
-        "data": {
-          "tagName": "SPAN"
-        },
-        "userData": {
-          "data": [],
-          "force": false
-        },
-        "locators": [
-          {
-            "id": "text",
-            "prob": 3,
-            "value": {
-              "text": [
-                "我的联系人"
-              ],
-              "visText": [
-                "我的联系人"
-              ]
-            }
-          },
-          {
-            "id": "@id/word",
-            "prob": 1,
-            "value": "descendant::DIV[@id=\"personalRight\"]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "@class/word",
-            "prob": 1,
-            "value": "DIV.wb_r DIV.ablock.pd_lr DIV.title_main SPAN"
-          },
-          {
-            "id": "path/ordinal",
-            "prob": 1,
-            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[4]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]"
-          },
-          {
-            "id": "elderLevel",
-            "value": {
-              "level": 0
-            }
-          }
-        ]
-      },
-      "roles": "element",
-      "text": "我的联系人",
-      "frameXPath": ""
-    },
     "control15_0zwZ6w": {
       "location": {
         "data": {
@@ -95,21 +46,34 @@
       "frameXPath": "",
       "componentType": "custom"
     },
-    "control19_IMMJ3T": {
+    "control19_gpIMOV": {
       "location": {
         "data": {
-          "tagName": "BODY"
+          "tagName": "DIV"
         },
         "locators": [
           {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"errorMsg\"]/DIV[2]",
+              "descendant::DIV[@id=\"errorMsg\"]//DIV"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.pop_mask DIV.alert.alert_d.bd_ra5"
+          },
+          {
             "id": "path/ordinal",
             "prob": 1,
-            "value": "/HTML[1]/BODY[1]"
+            "value": "/HTML[1]/BODY[1]/DIV[2]/DIV[2]"
           }
         ]
       },
       "events": {
-        "onGetData": "getData_control19_IMMJ3T"
+        "onGetData": "getData_control19_gpIMOV"
       },
       "intendedRole": "custom",
       "roles": "element,custom",
@@ -122,13 +86,11 @@
     "context4_G4wDgT": {
       "controls": [
         "control15_0zwZ6w",
-        "control19_IMMJ3T"
+        "control19_gpIMOV"
       ],
-      "anchors": [
-        "control12_NcLbHm"
-      ],
+      "anchors": [],
       "urlAnchor": [
-        "code=50400"
+        "http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=50400"
       ]
     }
   },
@@ -143,16 +105,6 @@
         }
       ]
     },
-    "flow13_TdX05u": {
-      "fromContextId": "context4_G4wDgT",
-      "fromAction": "doAction",
-      "fromControlId": "control19_IMMJ3T",
-      "toContexts": [
-        {
-          "toContextId": "context4_G4wDgT"
-        }
-      ]
-    },
     "flow23_W3vbRJ": {
       "toContexts": [
         {
@@ -161,6 +113,16 @@
         {
           "toContextId": "context3_IigyoX",
           "toModelId": "personal"
+        }
+      ]
+    },
+    "flow13_vsK8Qk": {
+      "fromContextId": "context4_G4wDgT",
+      "fromAction": "doAction",
+      "fromControlId": "control19_gpIMOV",
+      "toContexts": [
+        {
+          "toContextId": "context4_G4wDgT"
         }
       ]
     }
@@ -185,16 +147,16 @@
           }
         },
         {
-          "id": "uiControl19_5Vt4SH",
-          "controlId": "control19_IMMJ3T",
+          "id": "uiControl19_9TG9lv",
+          "controlId": "control19_gpIMOV",
           "display": {
             "adapterId": "custom",
             "type": "custom",
             "adapter": {
               "templateType": "react",
               "events": {
-                "onDoAction": "doAction_uiControl19_5Vt4SH",
-                "onGetTemplate": "getTemplate_uiControl19_5Vt4SH"
+                "onDoAction": "doAction_uiControl19_9TG9lv",
+                "onGetTemplate": "getTemplate_uiControl19_9TG9lv"
               }
             }
           }
@@ -213,7 +175,8 @@
     "page/urls": {
       "contexts": {
         "context4_G4wDgT": [
-          "192.168.220.23/personal.html?code=50400"
+          "192.168.220.23/personal.html?code=50400",
+          "111.200.200.30/personal.html?code=50400"
         ]
       }
     },
@@ -372,6 +335,196 @@
             "footer-cl",
             "footer-last-list",
             "fr",
+            "icon",
+            "icon-cart",
+            "icon-search",
+            "icon-yewu",
+            "icon_",
+            "icon_down",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "input_a",
+            "ipt_c",
+            "line",
+            "logo",
+            "menu-list",
+            "menu-search",
+            "mg_r",
+            "mg_t",
+            "nav_sidebar",
+            "nav_sidebar_s",
+            "nav_sidebar_sul",
+            "newAddress",
+            "newAddress_c",
+            "number",
+            "pd_lr",
+            "pd_tb",
+            "placeholder",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "quit",
+            "sActive",
+            "search-box",
+            "search-btn",
+            "searchBox-infos",
+            "switch",
+            "table_datas",
+            "title_main",
+            "title_sp",
+            "tl-content",
+            "tl-fixedscroll",
+            "tl-footer",
+            "tl-footer-lists",
+            "tl-main-menu",
+            "tl-sales-slide",
+            "tl-top-ad",
+            "tl-top-menu",
+            "tl-wrap",
+            "tlmall-app",
+            "tlmall-wx",
+            "top-ad-img",
+            "top_title",
+            "triangle_r",
+            "txt_c",
+            "wb",
+            "wb_r",
+            "wc",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info"
+          ],
+          [
+            "Wdate",
+            "a",
+            "ablock",
+            "act",
+            "activ",
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "bar",
+            "bd_ra",
+            "bgm",
+            "breadcrumb",
+            "btm_content",
+            "btn",
+            "btn_bg",
+            "btns_r",
+            "center-imgs",
+            "city",
+            "city-sel",
+            "clearfix",
+            "close",
+            "cr_red",
+            "fl",
+            "footer-bottom",
+            "footer-cc",
+            "footer-cl",
+            "footer-last-list",
+            "fr",
+            "hint",
+            "icon",
+            "icon-cart",
+            "icon-search",
+            "icon-yewu",
+            "icon_",
+            "icon_down",
+            "icon_service",
+            "icon_top",
+            "icon_tucao",
+            "icon_twoCodes",
+            "iconfont",
+            "input_a",
+            "ipt_c",
+            "line",
+            "logo",
+            "menu-list",
+            "menu-search",
+            "mg_r",
+            "mg_t",
+            "nav_sidebar",
+            "nav_sidebar_s",
+            "nav_sidebar_sul",
+            "newAddress",
+            "newAddress_c",
+            "number",
+            "pd_lr",
+            "pd_tb",
+            "placeholder",
+            "pop_mask",
+            "pos_info",
+            "ptxt",
+            "quit",
+            "sActive",
+            "search-box",
+            "search-btn",
+            "searchBox-infos",
+            "switch",
+            "title_main",
+            "tl-content",
+            "tl-fixedscroll",
+            "tl-footer",
+            "tl-footer-lists",
+            "tl-main-menu",
+            "tl-sales-slide",
+            "tl-top-ad",
+            "tl-top-menu",
+            "tl-wrap",
+            "tlmall-app",
+            "tlmall-wx",
+            "top-ad-img",
+            "top_title",
+            "triangle_r",
+            "txt_c",
+            "wb",
+            "wb_r",
+            "wc",
+            "xf_alink",
+            "xf_r",
+            "xf_right",
+            "xfr_info"
+          ],
+          [
+            "Wdate",
+            "a",
+            "ablock",
+            "act",
+            "activ",
+            "alert",
+            "alert_content",
+            "alert_d",
+            "alert_title",
+            "attention_info",
+            "bar",
+            "bd_b",
+            "bd_ra",
+            "bgm",
+            "breadcrumb",
+            "btm_content",
+            "btn",
+            "btn_bg",
+            "btns_r",
+            "center-imgs",
+            "city",
+            "city-sel",
+            "clearfix",
+            "close",
+            "cr_red",
+            "fl",
+            "float_r",
+            "footer-bottom",
+            "footer-cc",
+            "footer-cl",
+            "footer-last-list",
+            "fr",
+            "hint",
             "icon",
             "icon-cart",
             "icon-search",

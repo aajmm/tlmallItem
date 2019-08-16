@@ -42,6 +42,9 @@ i,
 em {
   font-style: normal;
 }
+.disnone {
+  display: none;
+}
 /*    以上样式为公用样式      */
 .ysp-top {
   position: fixed;
@@ -178,6 +181,21 @@ em {
 }
 .ysp-tip-pop .pop-con .tip-btn-two span {
   width: 40%;
+}
+.ysp-tips {
+  position: fixed;
+  top: 50%;
+  left: 15%;
+  z-index: 500;
+  width: 70%;
+  padding: 10px 0;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateY(-50%);
+}
+.ysp-tips p {
+  color: #fff;
+  text-align: center;
 }
 .ysp-page-box {
   background: #fff;
@@ -854,8 +872,8 @@ div[data-ysp-modelid^="enterpriseInformation"] .consignee,
 div[data-ysp-modelid^="receivingInformation"] .consignee,
 div[data-ysp-modelid^="enterpriseInformation"] .receive-phone,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone,
-div[data-ysp-modelid^="enterpriseInformation"] .choose-type,
-div[data-ysp-modelid^="receivingInformation"] .choose-type,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one,
 div[data-ysp-modelid^="receivingInformation"] .sign-standard-one,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two,
@@ -865,7 +883,31 @@ div[data-ysp-modelid^="receivingInformation"] .update-file,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard,
 div[data-ysp-modelid^="receivingInformation"] .update-idCard,
 div[data-ysp-modelid^="enterpriseInformation"] .period-validity,
-div[data-ysp-modelid^="receivingInformation"] .period-validity {
+div[data-ysp-modelid^="receivingInformation"] .period-validity,
+div[data-ysp-modelid^="enterpriseInformation"] .bill-address,
+div[data-ysp-modelid^="receivingInformation"] .bill-address,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-payer-number,
+div[data-ysp-modelid^="receivingInformation"] .tax-payer-number,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-address,
+div[data-ysp-modelid^="receivingInformation"] .invoice-address,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-phone,
+div[data-ysp-modelid^="receivingInformation"] .invoice-phone,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank-id,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank-id,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-detail-address,
+div[data-ysp-modelid^="receivingInformation"] .collect-detail-address,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-contact,
+div[data-ysp-modelid^="receivingInformation"] .collect-contact,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-phone,
+div[data-ysp-modelid^="receivingInformation"] .collect-phone,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-code,
+div[data-ysp-modelid^="receivingInformation"] .collect-code {
   padding: 0 15px;
   display: flex;
   margin-top: 15px;
@@ -902,8 +944,8 @@ div[data-ysp-modelid^="enterpriseInformation"] .consignee i,
 div[data-ysp-modelid^="receivingInformation"] .consignee i,
 div[data-ysp-modelid^="enterpriseInformation"] .receive-phone i,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone i,
-div[data-ysp-modelid^="enterpriseInformation"] .choose-type i,
-div[data-ysp-modelid^="receivingInformation"] .choose-type i,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type i,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type i,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one i,
 div[data-ysp-modelid^="receivingInformation"] .sign-standard-one i,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two i,
@@ -913,7 +955,31 @@ div[data-ysp-modelid^="receivingInformation"] .update-file i,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard i,
 div[data-ysp-modelid^="receivingInformation"] .update-idCard i,
 div[data-ysp-modelid^="enterpriseInformation"] .period-validity i,
-div[data-ysp-modelid^="receivingInformation"] .period-validity i {
+div[data-ysp-modelid^="receivingInformation"] .period-validity i,
+div[data-ysp-modelid^="enterpriseInformation"] .bill-address i,
+div[data-ysp-modelid^="receivingInformation"] .bill-address i,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type i,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type i,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-payer-number i,
+div[data-ysp-modelid^="receivingInformation"] .tax-payer-number i,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-address i,
+div[data-ysp-modelid^="receivingInformation"] .invoice-address i,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-phone i,
+div[data-ysp-modelid^="receivingInformation"] .invoice-phone i,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank i,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank i,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank-id i,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank-id i,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate i,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate i,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-detail-address i,
+div[data-ysp-modelid^="receivingInformation"] .collect-detail-address i,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-contact i,
+div[data-ysp-modelid^="receivingInformation"] .collect-contact i,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-phone i,
+div[data-ysp-modelid^="receivingInformation"] .collect-phone i,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-code i,
+div[data-ysp-modelid^="receivingInformation"] .collect-code i {
   width: 4%;
   color: #E3370A;
   font-size: 20px;
@@ -953,8 +1019,8 @@ div[data-ysp-modelid^="enterpriseInformation"] .consignee select,
 div[data-ysp-modelid^="receivingInformation"] .consignee select,
 div[data-ysp-modelid^="enterpriseInformation"] .receive-phone select,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone select,
-div[data-ysp-modelid^="enterpriseInformation"] .choose-type select,
-div[data-ysp-modelid^="receivingInformation"] .choose-type select,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type select,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type select,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one select,
 div[data-ysp-modelid^="receivingInformation"] .sign-standard-one select,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two select,
@@ -964,7 +1030,31 @@ div[data-ysp-modelid^="receivingInformation"] .update-file select,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard select,
 div[data-ysp-modelid^="receivingInformation"] .update-idCard select,
 div[data-ysp-modelid^="enterpriseInformation"] .period-validity select,
-div[data-ysp-modelid^="receivingInformation"] .period-validity select {
+div[data-ysp-modelid^="receivingInformation"] .period-validity select,
+div[data-ysp-modelid^="enterpriseInformation"] .bill-address select,
+div[data-ysp-modelid^="receivingInformation"] .bill-address select,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type select,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type select,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-payer-number select,
+div[data-ysp-modelid^="receivingInformation"] .tax-payer-number select,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-address select,
+div[data-ysp-modelid^="receivingInformation"] .invoice-address select,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-phone select,
+div[data-ysp-modelid^="receivingInformation"] .invoice-phone select,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank select,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank select,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank-id select,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank-id select,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate select,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate select,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-detail-address select,
+div[data-ysp-modelid^="receivingInformation"] .collect-detail-address select,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-contact select,
+div[data-ysp-modelid^="receivingInformation"] .collect-contact select,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-phone select,
+div[data-ysp-modelid^="receivingInformation"] .collect-phone select,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-code select,
+div[data-ysp-modelid^="receivingInformation"] .collect-code select {
   height: 44px;
   padding-top: 0;
   padding-bottom: 0;
@@ -1004,8 +1094,8 @@ div[data-ysp-modelid^="enterpriseInformation"] .consignee input,
 div[data-ysp-modelid^="receivingInformation"] .consignee input,
 div[data-ysp-modelid^="enterpriseInformation"] .receive-phone input,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone input,
-div[data-ysp-modelid^="enterpriseInformation"] .choose-type input,
-div[data-ysp-modelid^="receivingInformation"] .choose-type input,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type input,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type input,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one input,
 div[data-ysp-modelid^="receivingInformation"] .sign-standard-one input,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two input,
@@ -1015,7 +1105,31 @@ div[data-ysp-modelid^="receivingInformation"] .update-file input,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard input,
 div[data-ysp-modelid^="receivingInformation"] .update-idCard input,
 div[data-ysp-modelid^="enterpriseInformation"] .period-validity input,
-div[data-ysp-modelid^="receivingInformation"] .period-validity input {
+div[data-ysp-modelid^="receivingInformation"] .period-validity input,
+div[data-ysp-modelid^="enterpriseInformation"] .bill-address input,
+div[data-ysp-modelid^="receivingInformation"] .bill-address input,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type input,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type input,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-payer-number input,
+div[data-ysp-modelid^="receivingInformation"] .tax-payer-number input,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-address input,
+div[data-ysp-modelid^="receivingInformation"] .invoice-address input,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-phone input,
+div[data-ysp-modelid^="receivingInformation"] .invoice-phone input,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank input,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank input,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank-id input,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank-id input,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate input,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate input,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-detail-address input,
+div[data-ysp-modelid^="receivingInformation"] .collect-detail-address input,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-contact input,
+div[data-ysp-modelid^="receivingInformation"] .collect-contact input,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-phone input,
+div[data-ysp-modelid^="receivingInformation"] .collect-phone input,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-code input,
+div[data-ysp-modelid^="receivingInformation"] .collect-code input {
   width: 100%;
   height: 44px;
   display: inline-block;
@@ -1057,8 +1171,8 @@ div[data-ysp-modelid^="enterpriseInformation"] .consignee em,
 div[data-ysp-modelid^="receivingInformation"] .consignee em,
 div[data-ysp-modelid^="enterpriseInformation"] .receive-phone em,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone em,
-div[data-ysp-modelid^="enterpriseInformation"] .choose-type em,
-div[data-ysp-modelid^="receivingInformation"] .choose-type em,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type em,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type em,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one em,
 div[data-ysp-modelid^="receivingInformation"] .sign-standard-one em,
 div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two em,
@@ -1068,7 +1182,31 @@ div[data-ysp-modelid^="receivingInformation"] .update-file em,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard em,
 div[data-ysp-modelid^="receivingInformation"] .update-idCard em,
 div[data-ysp-modelid^="enterpriseInformation"] .period-validity em,
-div[data-ysp-modelid^="receivingInformation"] .period-validity em {
+div[data-ysp-modelid^="receivingInformation"] .period-validity em,
+div[data-ysp-modelid^="enterpriseInformation"] .bill-address em,
+div[data-ysp-modelid^="receivingInformation"] .bill-address em,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type em,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type em,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-payer-number em,
+div[data-ysp-modelid^="receivingInformation"] .tax-payer-number em,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-address em,
+div[data-ysp-modelid^="receivingInformation"] .invoice-address em,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-phone em,
+div[data-ysp-modelid^="receivingInformation"] .invoice-phone em,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank em,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank em,
+div[data-ysp-modelid^="enterpriseInformation"] .invoice-bank-id em,
+div[data-ysp-modelid^="receivingInformation"] .invoice-bank-id em,
+div[data-ysp-modelid^="enterpriseInformation"] .tax-registration-certificate em,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate em,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-detail-address em,
+div[data-ysp-modelid^="receivingInformation"] .collect-detail-address em,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-contact em,
+div[data-ysp-modelid^="receivingInformation"] .collect-contact em,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-phone em,
+div[data-ysp-modelid^="receivingInformation"] .collect-phone em,
+div[data-ysp-modelid^="enterpriseInformation"] .collect-code em,
+div[data-ysp-modelid^="receivingInformation"] .collect-code em {
   display: none;
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterprise-next,
@@ -1131,6 +1269,86 @@ div[data-ysp-modelid^="receivingInformation"] .errorIcon em {
   top: 14px;
   right: 22px;
   color: #fff;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .shipping-address i,
+div[data-ysp-modelid^="receivingInformation"] .shipping-address i,
+div[data-ysp-modelid^="enterpriseInformation"] .bill-address i,
+div[data-ysp-modelid^="receivingInformation"] .bill-address i {
+  margin-right: 3px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .shipping-address select,
+div[data-ysp-modelid^="receivingInformation"] .shipping-address select,
+div[data-ysp-modelid^="enterpriseInformation"] .bill-address select,
+div[data-ysp-modelid^="receivingInformation"] .bill-address select {
+  width: 30%;
+  margin-right: 20px;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type {
+  width: 100%;
+  align-items: center;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .sign-type,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .sign-type,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .sign-type,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .sign-type,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .tax-type,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .tax-type,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .tax-type,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .tax-type {
+  width: 33%;
+  display: flex;
+  align-items: center;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .sign-type b,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .sign-type b,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .sign-type b,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .sign-type b,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .tax-type b,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .tax-type b,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .tax-type b,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .tax-type b {
+  display: block;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .sign-type span,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .sign-type span,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .sign-type span,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .sign-type span,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .tax-type span,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .tax-type span,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .tax-type span,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .tax-type span {
+  font-size: 10px;
+  margin-left: 2px;
+  flex-shrink: 0;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .sign-type .sign-checked,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .sign-type .sign-checked,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .sign-type .sign-checked,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .sign-type .sign-checked,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .tax-type .sign-checked,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .tax-type .sign-checked,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .tax-type .sign-checked,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .tax-type .sign-checked {
+  background: url('../local/img/round-red.png') no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .sign-type .sign-nochecked,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .sign-type .sign-nochecked,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .sign-type .sign-nochecked,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .sign-type .sign-nochecked,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-tax-type .tax-type .sign-nochecked,
+div[data-ysp-modelid^="receivingInformation"] .choose-tax-type .tax-type .sign-nochecked,
+div[data-ysp-modelid^="enterpriseInformation"] .choose-sign-type .tax-type .sign-nochecked,
+div[data-ysp-modelid^="receivingInformation"] .choose-sign-type .tax-type .sign-nochecked {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
 }
 div[data-ysp-modelid^="enterpriseInformation"] {
   width: 100%;
@@ -1320,6 +1538,17 @@ div[data-ysp-modelid^="receivingInformation"] {
   height: 100%;
   overflow: auto;
 }
+div[data-ysp-modelid^="receivingInformation"] h3 {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  color: #e7350d;
+  font-size: 16px;
+}
+div[data-ysp-modelid^="receivingInformation"] h3 a {
+  margin-left: 10px;
+  text-decoration: underline;
+}
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form {
   width: 100%;
   height: auto;
@@ -1349,13 +1578,6 @@ div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .download
   font-size: 12px;
   padding-left: 26px;
 }
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .shipping-address i {
-  margin-right: 3px;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .shipping-address select {
-  width: 30%;
-  margin-right: 20px;
-}
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .zip-code {
   padding: 0 15px 0 30px;
   display: flex;
@@ -1371,36 +1593,6 @@ div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .zip-code
   background: #fff;
   border-radius: 3px;
   font-size: 13px;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-type {
-  width: 100%;
-  align-items: center;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-type .sign-type {
-  width: 30%;
-  display: flex;
-  align-items: center;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-type .sign-type b {
-  display: block;
-  width: 15px;
-  height: 15px;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-type .sign-type span {
-  font-size: 11px;
-  margin-left: 5px;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-type .sign-type .sign-checked {
-  background: url('../local/img/round-red.png') no-repeat;
-  background-size: 100%;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-type .sign-type .sign-nochecked {
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  background: #fff;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-type p:last-child {
-  width: 40%;
 }
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard-one {
   align-items: center;
@@ -1436,36 +1628,6 @@ div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-sta
   border-radius: 1px solid #ccc;
   margin: 0;
 }
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-file input,
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-idCard input {
-  width: 65%;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-file button,
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-idCard button {
-  width: 30%;
-  height: 44px;
-  margin-left: 5%;
-  border: 0;
-  background: #e7350d;
-  border-radius: 3px;
-  color: #fff;
-  font-size: 13px;
-  position: relative;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-file button input[type='file'],
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-idCard button input[type='file'] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-file span,
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-idCard span {
-  display: inline-block;
-  font-size: 12px;
-  margin-top: 8px;
-  padding-left: 4%;
-}
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .period-validity {
   width: 100%;
 }
@@ -1489,51 +1651,39 @@ div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .period-v
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .period-validity div label {
   font-size: 12px;
 }
-div[data-ysp-modelid^="receivingInformation"] .invoice-type {
-  width: 100%;
-  padding: 15px;
+div[data-ysp-modelid^="receivingInformation"] .update-file input,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard input,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate input {
+  width: 65%;
 }
-div[data-ysp-modelid^="receivingInformation"] .invoice-type h3 {
-  width: 100%;
+div[data-ysp-modelid^="receivingInformation"] .update-file button,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard button,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate button {
+  width: 30%;
   height: 44px;
-  line-height: 44px;
-  color: #e7350d;
-}
-div[data-ysp-modelid^="receivingInformation"] .invoice-type div {
-  width: 100%;
-}
-div[data-ysp-modelid^="receivingInformation"] .invoice-type div p {
-  width: 100%;
-  display: flex;
-  height: 44px;
-  line-height: 44px;
-  align-items: center;
-  position: relative;
-  border-bottom: 1px solid #eee;
-}
-div[data-ysp-modelid^="receivingInformation"] .invoice-type div p b {
-  display: block;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  background: #fff;
-  margin-right: 10px;
-}
-div[data-ysp-modelid^="receivingInformation"] .invoice-type div p .invoice-checked {
+  margin-left: 5%;
   border: 0;
-  background: url('../local/img/round-red.png') no-repeat;
-  background-size: 100%;
+  background: #e7350d;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  position: relative;
 }
-div[data-ysp-modelid^="receivingInformation"] .invoice-type div p i {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background: url('../local/img/right.png') no-repeat;
-  background-size: 60%;
+div[data-ysp-modelid^="receivingInformation"] .update-file button input[type='file'],
+div[data-ysp-modelid^="receivingInformation"] .update-idCard button input[type='file'],
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate button input[type='file'] {
   position: absolute;
-  right: 0;
-  top: 45%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+div[data-ysp-modelid^="receivingInformation"] .update-file span,
+div[data-ysp-modelid^="receivingInformation"] .update-idCard span,
+div[data-ysp-modelid^="receivingInformation"] .tax-registration-certificate span {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 8px;
+  padding-left: 4%;
 }
 div[data-ysp-modelid^="receivingInformation"] .submit-immediately {
   margin-top: 30px;
@@ -1743,8 +1893,18 @@ div[data-ysp-modelid^="contact"] .form-box .form-li textarea {
   resize: none;
   color: #333;
 }
+div[data-ysp-modelid^="contact"] .form-box .edit-tip {
+  width: 90%;
+  height: 20px;
+  margin: 10px auto 0;
+  line-height: 20px;
+  color: #e7350d;
+  font-size: 12px;
+}
+div[data-ysp-modelid^="contact"] .form-box .visible-hide {
+  opacity: 0;
+}
 div[data-ysp-modelid^="contact"] .form-box .save-box {
-  margin-top: 10px;
   margin-bottom: 44px;
 }
 div[data-ysp-modelid^="contact"] .form-box .save-box span {
@@ -1765,7 +1925,7 @@ div[data-ysp-modelid^="contact"] .form-box .save-box span:last-child {
   background-color: #4796ed;
 }
 div[data-ysp-modelid^="contact"] .form-box .save-box span:first-child {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 div[data-ysp-modelid^="rebateConfirMation"] {
@@ -2303,10 +2463,10 @@ div[data-ysp-modelid^="index"] .ysp-footer p {
 div[data-ysp-modelid^="limitSearch"] {
   background: #f3f3f3;
 }
-div[data-ysp-modelid^="limitSearch"] .tab-box {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .tab-box {
   display: flex;
 }
-div[data-ysp-modelid^="limitSearch"] .tab-box li {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .tab-box li {
   width: 50%;
   margin: 5%;
   border-radius: 3px;
@@ -2314,11 +2474,11 @@ div[data-ysp-modelid^="limitSearch"] .tab-box li {
   text-align: center;
   background: #e1e1e1;
 }
-div[data-ysp-modelid^="limitSearch"] .tab-box li.act {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .tab-box li.act {
   background: #e7350d;
   color: #fff;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .filter input {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .filter input {
   width: 70%;
   height: 100%;
   float: right;
@@ -2327,11 +2487,11 @@ div[data-ysp-modelid^="limitSearch"] .filter-box .filter input {
   color: #333;
   font-size: 14px;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .filter input[type="date"] {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .filter input[type="date"] {
   background: #fff url(../local/img/date.png) no-repeat right center;
   background-size: 16px 16px;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .filter .option-show {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .filter .option-show {
   float: right;
   width: 70%;
   line-height: 40px;
@@ -2342,11 +2502,11 @@ div[data-ysp-modelid^="limitSearch"] .filter-box .filter .option-show {
   font-size: 14px;
   color: #999;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .btn-box {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .btn-box {
   text-align: right;
   padding: 10px 0;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .btn-box span {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .btn-box span {
   display: inline-block;
   margin-right: 12px;
   border-radius: 3px;
@@ -2355,43 +2515,70 @@ div[data-ysp-modelid^="limitSearch"] .filter-box .btn-box span {
   color: #fff;
   font-size: 12px;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box.btm {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .checked i {
+  background: url(../local/img/round-red.png) no-repeat center center;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .checked input:disabled + i {
+  background: url(../local/img/round-flat-disabled.png) no-repeat center center;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .sel-all-box {
+  position: fixed;
+  left: 0;
+  bottom: 52px;
+  z-index: 200;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
   border-top: 1px solid #e1e1e1;
-  margin-top: 1px;
-  padding: 5px 12px;
-  color: #999;
 }
-.disnone {
-  display: none;
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .sel-all-box .ckeck-label {
+  width: 45%;
+  color: #333;
+  font-size: 14px;
+  padding-left: 35px;
 }
-div[data-ysp-modelid^="immediateRepayment"] {
-  background: #f3f3f3;
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .sel-all-box .ckeck-label i {
+  top: 15px;
+  left: 10px;
+  background-size: 100%;
 }
-div[data-ysp-modelid^="immediateRepayment"] .tip {
-  margin-top: 55px;
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .sel-all-box span {
+  display: inline-block;
+  width: 55%;
+  height: 100%;
+  text-align: center;
+  background: #e7350d;
+  color: #fff;
+}
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .tip {
+  margin-top: 44px;
   background: #fff;
   padding: 10px;
+  border-top: 10px solid #f3f3f3;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box {
   background: #fff;
   margin-top: 10px;
   padding-bottom: 10px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tit {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tit {
   height: 40px;
   line-height: 40px;
   padding: 0 10px;
   color: #e7350d;
   border-bottom: 1px solid #e1e1e1;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .branch {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .branch {
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid #e1e1e1;
   padding: 0 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .branch .option-show {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .branch .option-show {
   float: right;
   width: 70%;
   height: 100%;
@@ -2400,11 +2587,11 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .branch .option-show {
   background-size: 10px;
   color: #666;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order {
   margin: 10px 12px 0;
   background: #f3f3f3;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order .tit2 {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order .tit2 {
   height: 34px;
   line-height: 34px;
   padding: 0 10px;
@@ -2412,21 +2599,21 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .order .tit2 {
   font-size: 12px;
   border-bottom: 1px solid #fff;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order ul {
   display: flex;
   padding: 10px 0;
   border-bottom: 1px solid #fff;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul li {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order ul li {
   width: 33.3%;
   text-align: center;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul li span {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order ul li span {
   display: block;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul li input {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order ul li input {
   border: solid 1px #e2e2e2;
   border-radius: 3px;
   background: #fff;
@@ -2438,29 +2625,29 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul li input {
   color: #333;
   margin: 0 auto;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order .bottom {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order .bottom {
   height: 34px;
   line-height: 34px;
   padding: 0 10px;
   color: #999;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tit3 {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tit3 {
   height: 40px;
   line-height: 40px;
   margin: 0 10px;
   padding: 0 10px;
   border-bottom: 1px solid #e1e1e1;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab {
   display: flex;
   margin: 0 10px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 {
   width: 50%;
   padding: 10px 0;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 label {
   position: relative;
   display: inline-block;
   padding-left: 30px;
@@ -2468,10 +2655,10 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label {
   margin-bottom: 0;
   font-size: 14px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label input {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 label input {
   display: none;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label i {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 label i {
   position: absolute;
   top: 2px;
   left: 0;
@@ -2481,28 +2668,28 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label i {
   background: url(../local/img/round-gray.png) no-repeat center center;
   background-size: cover;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label input:checked + i {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 label input:checked + i {
   background: url(../local/img/round-red.png) no-repeat center center;
   background-size: cover;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock {
   background: #f3f3f3;
   padding: 10px 10px 0;
   display: flex;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet {
   width: 50%;
   padding: 10px;
   background: #fff;
   text-align: center;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet p {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet p {
   margin-bottom: 3px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet span {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet span {
   color: #e7350d;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet input {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet input {
   display: inline-block;
   width: 80px;
   height: 20px;
@@ -2514,27 +2701,24 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet input {
   text-align: center;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet:first-child {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet:first-child {
   border-right: 1px solid #e1e1e1;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .num-box {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .num-box {
   border-top: 10px solid #f3f3f3;
   padding: 10px;
   text-align: right;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .num-box span {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .num-box span {
   color: #e7350d;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .num-box .immediate-pay {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .num-box .immediate-pay {
   margin-top: 10px;
   text-align: center;
   line-height: 32px;
   color: #fff;
   background: #e7350d;
   border-radius: 3px;
-}
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .disnone {
-  display: none;
 }
 div[data-ysp-modelid^="queryCreditedPaymentHistory"] {
   background: #f3f3f3;
@@ -2792,6 +2976,9 @@ div[data-ysp-modelid^="personal"] .yewu ul li {
   background-repeat: no-repeat;
   background-position: center 8px;
 }
+div[data-ysp-modelid^="personal"] .yewu ul .disnone {
+  display: none;
+}
 div[data-ysp-modelid^="personal"] .yewu ul li[code="10100"] {
   background-image: url(../local/img/DDGL.png);
 }
@@ -2863,6 +3050,9 @@ div[data-ysp-modelid^="personal"] .yewu ul li[code="50600"] {
 }
 div[data-ysp-modelid^="personal"] .yewu ul li[code="70100"] {
   background-image: url(../local/img/muban1127.png);
+}
+div[data-ysp-modelid^="personal"] .yewu ul li[code="70201"] {
+  background-image: url(../local/img/qianzhang1127.png);
 }
 div[data-ysp-modelid^="personal"] .yewu ul li[code="70202"] {
   background-image: url(../local/img/wenjianxiazai1127.png);

@@ -25,7 +25,8 @@
       "use strict";
 
       var type = data.eventType;if (type == "back") {
-        ysp.appMain.back();
+        //ysp.appMain.back();
+        elem.ownerDocument.defaultView.location.href = elem.ownerDocument.defaultView.location.href.split('?')[0];
       } else if (type == "startTime") {
         var d = data.dataCustom;elem.querySelector("#rc_startTime").value = d;
       } else if (type == "endTime") {

@@ -168,9 +168,7 @@
         "control3_cucagU"
       ],
       "anchors": [],
-      "urlAnchor": [
-        "http://192.168.220.23/myaccount/login.jsp"
-      ]
+      "urlAnchor": []
     }
   },
   "flows": {
@@ -303,7 +301,9 @@
         "context0_DQT6TF": [
           "192.168.220.23/login.html",
           "192.168.220.23/myaccount/login.jsp",
-          "192.168.220.23/myaccount/login.jsp?DPSLogout=true"
+          "192.168.220.23/myaccount/login.jsp?DPSLogout=true",
+          "111.200.200.30/login.html",
+          "111.200.200.30/myaccount/login.jsp"
         ]
       }
     },

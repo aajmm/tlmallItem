@@ -19,6 +19,9 @@ strong,i,em{font-style: normal;}
 @theme-bg:#f3f3f3;
 @theme-red:#e7350d;
 @theme-blue:#4796ed;
+.disnone{
+  display: none;
+}
 /*    以上样式为公用样式      */
 
 //页面顶部样式  xxger
@@ -106,7 +109,7 @@ strong,i,em{font-style: normal;}
     }
 }
 
-//提示框  xxger
+//弹框  xxger
 .ysp-tip-pop{
   position:fixed;
   top:0;
@@ -160,6 +163,22 @@ strong,i,em{font-style: normal;}
     .tip-btn-two span{
       width:40%;
     }
+  }
+}
+//提示框
+.ysp-tips{
+  position:fixed;
+  top:50%;
+  left:15%;
+  z-index:500;
+  width:70%;
+  padding:10px 0;
+  border-radius: 10px;
+  background:rgba(0,0,0,0.4);
+  transform: translateY(-50%);
+  p{
+    color:#fff;
+    text-align: center;
   }
 }
 
@@ -807,7 +826,7 @@ div[data-ysp-modelid^="registrationProtocol"]{
 }
 // 企业信息和收货信息页面的公共样式
 div[data-ysp-modelid^="enterpriseInformation"],div[data-ysp-modelid^="receivingInformation"]{
-  .enterprise-name,.enterprise-address,.detail-address,.legal-name,.id-type,.id-number,.id-card,.business-license-number,.business-license,.contact-name,.contact-phone,.PTTL-contact-name,.PTTL-contact-phone,.shipping-address,.consignee,.receive-phone,.choose-type,.sign-standard-one,.sign-standard-two,.update-file,.update-idCard,.period-validity{
+  .enterprise-name,.enterprise-address,.detail-address,.legal-name,.id-type,.id-number,.id-card,.business-license-number,.business-license,.contact-name,.contact-phone,.PTTL-contact-name,.PTTL-contact-phone,.shipping-address,.consignee,.receive-phone,.choose-sign-type,.sign-standard-one,.sign-standard-two,.update-file,.update-idCard,.period-validity,.bill-address,.choose-tax-type,.tax-payer-number,.invoice-address,.invoice-phone,.invoice-bank,.invoice-bank-id,.tax-registration-certificate,.collect-detail-address,.collect-contact,.collect-phone,.collect-code{
         padding: 0 15px;
         display: flex;
         margin-top: 15px;
@@ -889,7 +908,44 @@ div[data-ysp-modelid^="enterpriseInformation"],div[data-ysp-modelid^="receivingI
         color:#fff;
       }
     }
-  
+  .shipping-address,.bill-address{
+      i{
+        margin-right: 3px;
+      }
+      select{
+        width: 30%;
+        margin-right: 20px;
+      }
+    }
+  .choose-tax-type,.choose-sign-type{
+    width: 100%;
+    align-items: center;
+    .sign-type,.tax-type{
+      width: 33%;
+      display: flex;
+      align-items: center;
+      b{
+        display: block;
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+      }
+      span{
+        font-size: 10px;
+        margin-left: 2px;
+        flex-shrink: 0;
+      }
+      .sign-checked{
+        background: url('../local/img/round-red.png') no-repeat;
+        background-size: 100%;
+      }
+      .sign-nochecked{
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        background: #fff;
+      }
+    }
+  }
 }
 //企业信息
 div[data-ysp-modelid^="enterpriseInformation"]{
@@ -1078,6 +1134,17 @@ div[data-ysp-modelid^="receivingInformation"]{
   width: 100%;
   height: 100%;
   overflow: auto;
+  h3{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    color:@theme-red;
+    font-size: 16px;
+    a{
+      margin-left: 10px;
+      text-decoration: underline;
+    }
+  }
   .receive-iformation-form{
     	width: 100%;
       height: auto;
@@ -1108,15 +1175,6 @@ div[data-ysp-modelid^="receivingInformation"]{
         padding-left: 26px;
       }
     }
-    .shipping-address{
-      i{
-        margin-right: 3px;
-      }
-      select{
-        width: 30%;
-        margin-right: 20px;
-      }
-    }
     .zip-code{
       padding: 0 15px 0 30px;
       display: flex;
@@ -1131,36 +1189,6 @@ div[data-ysp-modelid^="receivingInformation"]{
         background: #fff;
         border-radius: 3px;
         font-size: 13px;
-      }
-    }
-    .choose-type{
-      width: 100%;
-      align-items: center;
-      .sign-type{
-        width: 30%;
-        display: flex;
-        align-items: center;
-        b{
-          display: block;
-          width: 15px;
-          height: 15px;
-        }
-        span{
-          font-size: 11px;
-          margin-left: 5px;
-        }
-        .sign-checked{
-          background: url('../local/img/round-red.png') no-repeat;
-          background-size: 100%;
-        }
-        .sign-nochecked{
-          border-radius: 50%;
-          border: 1px solid #ccc;
-          background: #fff;
-        }
-      }
-      p:last-child{
-        width: 40%;
       }
     }
     .sign-standard-one{
@@ -1200,7 +1228,31 @@ div[data-ysp-modelid^="receivingInformation"]{
         }
       }
     }
-    .update-file,.update-idCard{
+    .period-validity{
+      width: 100%;
+      div{
+        width: 100%;
+        p{
+          width: 100%;
+        	display: flex;
+        	align-items: center;
+        	justify-content: space-between;
+          span{
+            display: inline-block;
+            text-align: center;
+          }
+          input{
+            margin: 0;
+            width: 45%;
+          }
+        }
+        label{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .update-file,.update-idCard,.tax-registration-certificate{
       input{
         width: 65%;
       }
@@ -1228,76 +1280,6 @@ div[data-ysp-modelid^="receivingInformation"]{
         padding-left: 4%;
       }
     }
-    .period-validity{
-      width: 100%;
-      div{
-        width: 100%;
-        p{
-          width: 100%;
-        	display: flex;
-        	align-items: center;
-        	justify-content: space-between;
-          span{
-            display: inline-block;
-            text-align: center;
-          }
-          input{
-            margin: 0;
-            width: 45%;
-          }
-        }
-        label{
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  .invoice-type{
-    width: 100%;
-    padding: 15px;
-    h3{
-      width: 100%;
-      height: 44px;
-      line-height: 44px;
-      color: @theme-red;
-    }
-    div{
-      width: 100%;
-      p{
-        width: 100%;
-        display: flex;
-        height: 44px;
-        line-height: 44px;
-        align-items: center;
-        position: relative;
-        border-bottom: 1px solid #eee;
-        b{
-          display: block;
-          width: 18px;
-          height: 18px;
-          border-radius: 50%;
-          border: 1px solid #ccc;
-          background: #fff;
-          margin-right: 10px;
-        }
-        .invoice-checked{
-          border: 0;
-          background: url('../local/img/round-red.png') no-repeat;
-          background-size: 100%;
-        }
-        i{
-          display: inline-block;
-          width: 15px;
-          height: 15px;
-          background: url('../local/img/right.png') no-repeat;
-          background-size: 60%;
-          position: absolute;
-          right: 0;
-          top: 45%;
-        }
-      }
-    }
-  }
   .submit-immediately{
     margin-top: 30px;
   }
@@ -1511,8 +1493,18 @@ div[data-ysp-modelid^="contact"] {
                 color:#333;
             }
         }
+        .edit-tip{
+            width:90%;
+            height:20px;
+            margin:10px auto 0;
+            line-height:20px;
+            color:@theme-red;
+            font-size:12px;
+        }
+        .visible-hide{
+					  opacity: 0;
+        }
         .save-box {
-            margin-top: 10px;
             margin-bottom: 44px;
             span {
                 display: inline-block;
@@ -1531,7 +1523,7 @@ div[data-ysp-modelid^="contact"] {
                     background-color: @theme-blue;
                 }
                 &:first-child {
-                    margin-top: 30px;
+                    margin-top: 10px;
                     margin-bottom: 20px;
                 }
             }
@@ -2077,248 +2069,278 @@ div[data-ysp-modelid^="index"]{
     }
 }
 
-//额度查询  xxger
+//额度查询-立即还款  xxger
 div[data-ysp-modelid^="limitSearch"] {
     background: @theme-bg;
-    .tab-box {
-        display: flex;
-        li {
-            width: 50%;
-            margin: 5%;
-            border-radius: 3px;
-            line-height: 30px;
-            text-align: center;
-            background: #e1e1e1;
-            &.act {
+    //额度查询
+    .ysp-limitSearch {
+        .tab-box {
+            display: flex;
+            li {
+                width: 50%;
+                margin: 5%;
+                border-radius: 3px;
+                line-height: 30px;
+                text-align: center;
+                background: #e1e1e1;
+                &.act {
+                    background: @theme-red;
+                    color: #fff;
+                }
+            }
+        }
+        .filter-box {
+            .filter {
+                input {
+                    width: 70%;
+                    height: 100%;
+                    float: right;
+                    border: none;
+                    padding: 0;
+                    color: #333;
+                    font-size: 14px;
+                }
+                input[type="date"] {
+                    background: #fff url(../local/img/date.png) no-repeat right center;
+                    background-size: 16px 16px;
+                }
+                .option-show {
+                    float: right;
+                    width: 70%;
+                    line-height: 40px;
+                    height: 40px;
+                    background: #fff url(../local/img/arrows-updown.png) no-repeat right center;
+                    -webkit-background-size: 10px;
+                    background-size: 10px;
+                    font-size: 14px;
+                    color: #999;
+                }
+            }
+            .btn-box {
+                text-align: right;
+                padding: 10px 0;
+                span {
+                    display: inline-block;
+                    margin-right: 12px;
+                    border-radius: 3px;
+                    padding: 4px 8px;
+                    background-color: @theme-blue;
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+        }
+        .list-box .checked i{
+    				background: url(../local/img/round-red.png) no-repeat center center;
+            background-size:100%;
+        }
+      .list-box .checked input:disabled + i{
+    				background: url(../local/img/round-flat-disabled.png) no-repeat center center;
+            background-size:100%;
+        }
+        .list-box .sel-all-box {
+            position: fixed;
+            left: 0;
+            bottom: 52px;
+            z-index: 200;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: #fff;
+            border-top: @theme-border;
+            .ckeck-label {
+                width: 45%;
+                color: #333;
+                font-size: 14px;
+                padding-left: 35px;
+                i {
+                    top: 15px;
+                    left: 10px;
+                    background-size: 100%;
+                }
+            }
+            span {
+                display: inline-block;
+                width: 55%;
+                height: 100%;
+                text-align: center;
                 background: @theme-red;
                 color: #fff;
             }
         }
-    }
-    .filter-box {
-        .filter {
-            input {
-                width: 70%;
-                height: 100%;
-                float: right;
-                border: none;
-                padding: 0;
-                color: #333;
-                font-size: 14px;
-            }
-            input[type="date"] {
-                background: #fff url(../local/img/date.png) no-repeat right center;
-                background-size: 16px 16px;
-            }
-            .option-show {
-                float: right;
-                width: 70%;
-                line-height: 40px;
+      }
+    //立即还款
+    .ysp-immediateRepay {
+        .tip {
+            margin-top: 44px;
+            background: #fff;
+            padding: 10px;
+            border-top:10px solid @theme-bg;
+            font-size: 12px;
+        }
+        .detail-box {
+            background: #fff;
+            margin-top: 10px;
+            padding-bottom: 10px;
+            .tit {
                 height: 40px;
-                background: #fff url(../local/img/arrows-updown.png) no-repeat right center;
-                -webkit-background-size: 10px;
-                background-size: 10px;
-                font-size: 14px;
-                color: #999;
+                line-height: 40px;
+                padding: 0 10px;
+                color: @theme-red;
+                border-bottom: @theme-border;
             }
-        }
-        .btn-box {
-            text-align: right;
-            padding: 10px 0;
-            span {
-                display: inline-block;
-                margin-right: 12px;
-                border-radius: 3px;
-                padding: 4px 8px;
-                background-color: @theme-blue;
-                color: #fff;
-                font-size: 12px;
+            .branch {
+                height: 40px;
+                line-height: 40px;
+                border-bottom: @theme-border;
+                padding: 0 12px;
+                .option-show {
+                    float: right;
+                    width: 70%;
+                    height: 100%;
+                    background: #fff url(../local/img/arrows-updown.png) no-repeat right 10px center;
+                    -webkit-background-size: 10px;
+                    background-size: 10px;
+                    color: #666;
+                }
             }
-        }
-        &.btm{
-          border-top: @theme-border;
-          margin-top:1px;
-          padding:5px 12px;
-          color:#999;
-        }
+            .order {
+                margin: 10px 12px 0;
+                background: @theme-bg;
+                .tit2 {
+                    height: 34px;
+                    line-height: 34px;
+                    padding: 0 10px;
+                    color: @theme-blue;
+                    font-size: 12px;
+                    border-bottom: 1px solid #fff;
+                }
+                ul {
+                    display: flex;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #fff;
+                    li {
+                        width: 33.3%;
+                        text-align: center;
+                        font-size: 12px;
+                        span {
+                            display: block;
+                            font-size: 12px;
+                        }
+                        input {
+                            border: solid 1px #e2e2e2;
+                            border-radius: 3px;
+                            background: #fff;
+                            width: 60px;
+                            height: 20px;
+                            padding: 0;
+                            font-size: 12px;
+                            text-align: center;
+                            color: #333;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                .bottom {
+                    height: 34px;
+                    line-height: 34px;
+                    padding: 0 10px;
+                    color: #999;
+                    font-size: 12px;
+                }
+            }
+            .tit3 {
+                height: 40px;
+                line-height: 40px;
+                margin: 0 10px;
+                padding: 0 10px;
+                border-bottom: @theme-border;
+            }
+            .tab {
+                display: flex;
+                margin: 0 10px;
+                .tab1 {
+                    width: 50%;
+                    padding: 10px 0;
+                    label {
+                        position: relative;
+                        display: inline-block;
+                        padding-left: 30px;
+                        vertical-align: top;
+                        margin-bottom: 0;
+                        font-size: 14px;
+                        input {
+                            display: none;
+                        }
+                        i {
+                            position: absolute;
+                            top: 2px;
+                            left: 0;
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 100%;
+                            background: url(../local/img/round-gray.png) no-repeat center center;
+                            background-size: cover;
+                        }
+                    }
+                    label input:checked+i {
+                        background: url(../local/img/round-red.png) no-repeat center center;
+                        background-size: cover;
+                    }
+                }
+            }
+            .sblock {
+                background: @theme-bg;
+                padding: 10px 10px 0;
+                display: flex;
+                .wallet {
+                    width: 50%;
+                    padding: 10px;
+                    background: #fff;
+                    text-align: center;
+                    p {
+                        margin-bottom: 3px;
+                    }
+                    span {
+                        color: @theme-red;
+                    }
+                    input {
+                        display: inline-block;
+                        width: 80px;
+                        height: 20px;
+                        padding: 0;
+                        border: @theme-border;
+                        border-radius: 3px;
+                        color: @theme-red;
+                        margin: 0 11px;
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                }
+                .wallet:first-child {
+                    border-right: @theme-border;
+                }
+            }
+            .num-box {
+                border-top: 10px solid @theme-bg;
+                padding: 10px;
+                text-align: right;
+                span {
+                    color: @theme-red;
+                }
+                .immediate-pay {
+                    margin-top: 10px;
+                    text-align: center;
+                    line-height: 32px;
+                    color: #fff;
+                    background: @theme-red;
+                    border-radius: 3px;
+                }
+            }
       }
     }
-    .disnone {
-        display: none;
-    }
-//立即还款 xxger
-div[data-ysp-modelid^="immediateRepayment"]{
-  background:@theme-bg;
-  .tip{
-    margin-top:55px;
-    background:#fff;
-    padding:10px;
-    font-size:12px;
-  }
-  .detail-box{
-    background:#fff;
-    margin-top:10px;
-    padding-bottom: 10px;
-    .tit{
-      height:40px;
-      line-height: 40px;
-      padding:0 10px;
-      color:@theme-red;
-      border-bottom: @theme-border;
-    }
-    .branch{
-      height:40px;
-      line-height: 40px;
-      border-bottom: @theme-border;
-      padding:0 12px;
-      .option-show {
-          float:right;
-          width: 70%;
-          height:100%;
-          background: #fff url(../local/img/arrows-updown.png) no-repeat right 10px center;
-          -webkit-background-size: 10px;
-          background-size: 10px;
-          color:#666;
-      }
-    }
-    .order{
-      margin:10px 12px 0;
-      background:@theme-bg;
-      .tit2{
-        height:34px;
-        line-height:34px;
-        padding:0 10px;
-        color:@theme-blue;
-        font-size:12px;
-        border-bottom:1px solid #fff;
-      }
-      ul{
-        display: flex;
-        padding:10px 0;
-        border-bottom: 1px solid #fff;
-        li{
-          width:33.3%;
-          text-align: center;
-          font-size:12px;
-          span{
-            display: block;
-            font-size:12px;
-          }
-          input{
-            border:solid 1px #e2e2e2;
-            border-radius: 3px;
-            background:#fff;
-            width:60px;
-            height:20px;
-            padding:0;
-            font-size:12px;
-            text-align: center;
-            color:#333;
-            margin:0 auto;
-          }
-        }
-      }
-      .bottom{
-        height:34px;
-        line-height:34px;
-        padding:0 10px;
-        color:#999;
-        font-size:12px;
-      }
-    }
-    .tit3{
-      height:40px;
-      line-height: 40px;
-      margin:0 10px;
-      padding:0 10px;
-      border-bottom: @theme-border;
-    }
-    .tab{
-      display: flex;
-      margin:0 10px;
-      .tab1{
-        width:50%;
-        padding:10px 0;
-        label{
-          position: relative;
-          display: inline-block;
-          padding-left: 30px;
-          vertical-align: top;
-          margin-bottom: 0;
-          font-size:14px;
-          input{
-            display: none;
-          }
-          i{
-            position: absolute;
-            top: 2px;
-            left: 0;
-            width: 18px;
-            height: 18px;
-            border-radius: 100%;
-            background:url(../local/img/round-gray.png) no-repeat center center;
-            background-size: cover;
-          }
-        }
-        label input:checked + i{
-          background:url(../local/img/round-red.png) no-repeat center center;
-          background-size: cover;
-        }
-      }
-    }
-    .sblock{
-      background:@theme-bg;
-      padding:10px 10px 0;
-      display: flex;
-      .wallet{
-        width:50%;
-        padding:10px;
-        background:#fff;
-        text-align: center;
-        p{
-          margin-bottom:3px;
-        }
-        span{
-          color:@theme-red;
-        }
-        input{
-          display: inline-block;
-          width:80px;
-          height:20px;
-          padding:0;
-          border:@theme-border;
-          border-radius: 3px;
-          color:@theme-red;
-          margin:0 11px;
-          text-align: center;
-          font-size:12px;
-        }
-      }
-      .wallet:first-child{
-        border-right:@theme-border;
-      }
-    }
-    .num-box{
-      border-top:10px solid @theme-bg;
-      padding:10px;
-      text-align: right;
-      span{
-        color:@theme-red;
-      }
-      .immediate-pay{
-        margin-top:10px;
-        text-align: center;
-        line-height: 32px;
-        color:#fff; 
-        background: @theme-red;
-        border-radius: 3px;
-      }
-    }
-    .disnone{
-      display: none;
-    }
-  }
 }
+
 
 //待还款额度  xxger
 div[data-ysp-modelid^="queryCreditedPaymentHistory"]{
@@ -2586,6 +2608,9 @@ div[data-ysp-modelid^="personal"]{
         background-repeat: no-repeat;
         background-position: center 8px;
       }
+      .disnone{
+        display: none;
+      }
       //待支付订单
       li[code="10100"]{
         background-image:url(../local/img/DDGL.png);
@@ -2710,6 +2735,10 @@ div[data-ysp-modelid^="personal"]{
       li[code="70100"]{
         background-image:url(../local/img/muban1127.png);
       }
+      //已签章文件下载
+      li[code="70201"]{
+        background-image:url(../local/img/qianzhang1127.png);
+      }
       //已确认文件下载
       li[code="70202"]{
         background-image:url(../local/img/wenjianxiazai1127.png);
@@ -2724,7 +2753,6 @@ div[data-ysp-modelid^="personal"]{
     }
   }
 }
-
 // 开票地址
 div[data-ysp-modelid^="billngAddress"]{
   background-color: #F5F5F5;

@@ -1,4 +1,4 @@
-getTemplate_uiControl35_0qM4HA: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-personal\">\n      {data.map(function(d,i){\n          return(\n          \t<div className=\"yewu\">\n              <h4 code={d.navName[1]}>{d.navName[0]}</h4>\n              <ul>\n              {d.list.map(function(m,n){\n                  return(\n                    <li data-index={i+\"-\"+n} code={d.codeList[n]} onClick={me.handlerClick.bind(me)}>{m}</li>\n                  )\n                })\n              }\n              </ul>\n            </div>\n          )\n        })\n      }\n      </div>\n    )\n  }\n}"
+getTemplate_uiControl35_0qM4HA: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-personal\">\n      {data.map(function(d,i){\n          return(\n          \t<div className={d.navName[0]==\"功能未放开\" ? \"yewu disnone\" : \"yewu\"}>\n              <h4 code={d.navName[1]}>{d.navName[0]}</h4>\n              <ul code={d.navName[1]}>\n              {d.list.map(function(m,n){\n                  return(\n                    <li className={m==\"功能未放开\" ? \"disnone\" : \"\"} data-index={i+\"-\"+n} code={d.codeList[n]} onClick={me.handlerClick.bind(me)}>{m}</li>\n                  )\n                })\n              }\n              </ul>\n            </div>\n          )\n        })\n      }\n      </div>\n    )\n  }\n}"
 getData_control51_sKrB96: |-
   if(!elem){
     return;
@@ -17,13 +17,18 @@ getData_control51_sKrB96: |-
       let navLis = d.nextElementSibling.querySelectorAll("a");
       [].map.call(navLis,function(m,n){
         let code = m.getAttribute("code");
-        if(code != "10600" && code != "10700" && code != "30203" && code != "30204" && code != "40300" && code != "40700" ){
+         if(code != "10600" && code != "10700" && code != "10800" && code != "30203" && code != "30204" && code != "40300" && code != "40700" ){
           nav.list.push(m.textContent);
           nav.codeList.push(code);
-        }
+         }else{
+          nav.list.push("功能未放开");
+           nav.codeList.push("");
+         }
       });
-      data.push(nav);
+    }else{
+      nav.navName = ["功能未放开",""];
     }
+    data.push(nav);
   });
 
   return data;
@@ -31,7 +36,9 @@ doAction_uiControl35_0qM4HA: |-
   let type = data.eventType;
   if(type=="click"){
     let Num = data.dataCustom;
-    let d = Num.indexOf("-");
-    let Num2 = parseInt(Num.substr(d+1,Num.length));
+    let d = parseInt(Num.split('-')[0]);
+    let Num2 = parseInt(Num.split('-')[1]);
+    var code = elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].getAttribute('code');
+    elem.ownerDocument.defaultView.location.href = 'http://192.168.220.23/personal.html?code='+code;
     elem.querySelectorAll("h4")[d].nextElementSibling.querySelectorAll("a")[Num2].click();
   }
