@@ -7,7 +7,8 @@
     "contact": "../contact/index.json",
     "rebateConfirMation": "../rebateConfirMation/index.json",
     "limitSearch": "../limitSearch/index.json",
-    "queryCreditedPaymentHistory": "../queryCreditedPaymentHistory/index.json"
+    "queryCreditedPaymentHistory": "../queryCreditedPaymentHistory/index.json",
+    "myScfAccountCheck": "../myScfAccountCheck/index.json"
   },
   "chineseName": "业务中心",
   "description": "",
@@ -528,6 +529,10 @@
         "data": {
           "tagName": "SPAN"
         },
+        "userData": {
+          "data": [],
+          "force": false
+        },
         "locators": [
           {
             "id": "text",
@@ -574,6 +579,10 @@
       "location": {
         "data": {
           "tagName": "SPAN"
+        },
+        "userData": {
+          "data": [],
+          "force": false
         },
         "locators": [
           {
@@ -692,6 +701,10 @@
         {
           "toContextId": "context4_G4wDgT",
           "toModelId": "contact"
+        },
+        {
+          "toContextId": "context9_M9vbQz",
+          "toModelId": "myScfAccountCheck"
         }
       ]
     }

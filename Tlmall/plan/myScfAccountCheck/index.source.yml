@@ -1,0 +1,88 @@
+getTemplate_uiControl31_1FMGPo: "import {Component,Fragment} from 'react'; \nimport {CustomHeader,SelectPop,CustomPage} from 'ysp-custom-components';\nexport default class extends Component{\n  //返回\n  back=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'back'\n    });\n   }\n  }\n  //分页事件\n\tsearchClick = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"searchClick\"\n      })\n    }\n  }\n  searchChange = (e) => {\n    let target = e.target;\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"searchClick\"\n      })\n    }\n  }\n  firstClick = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"firstClick\"\n      })\n    }\n  }\n  prevClick = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"prevClick\"\n      })\n    }\n  }\n  nextClick = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"nextClick\"\n      })\n    }\n  }\n  lastClick = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"lastClick\"\n      })\n    }\n  }\n  sureClick = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sureClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<Fragment>\n      <CustomHeader \n           data={{centerText:\"金融对账单\"}} \n           backIsShow={true} \n           filterIsShow={true}\n        \t editIsShow={false}\n           back={me.back.bind(me)}\n        />\n      <div className=\"myScfAccountCheck-filter\">\n        <div className=\"mask\"></div>\n        <div className=\"filter-con\">\n          <div className=\"filter-tit\">选择产品<span className=\"more\"></span></div>\n          <ul className=\"filter-list\">prdList+</ul>\n          <div className=\"filter-tit\">分公司<span className=\"more\"></span></div>\n          <ul className=\"filter-list\">branchList+</ul>\n          <div className=\"filter-tit\">状态<span className=\"more\"></span></div>\n          <ul className=\"filter-list\">\n            <li>申请失败</li>\n            <li>融资申请提交</li>\n            <li>待审核</li>\n            <li>已取消</li>\n            <li>待银行放款</li>\n            <li>审核失败</li>\n            <li>放款成功</li>\n            <li>放款失败</li>\n          </ul>\n          <div className=\"filter-tit\">借款日期</div>\n          <div className=\"filter-date\"><AInput type=\"text\" className=\"Wdate\" /><em>-</em><AInput type=\"text\" className=\"Wdate\" /></div>\n          <div className=\"filter-tit\">到期日期</div>\n          <div className=\"filter-date\"><AInput type=\"text\" className=\"Wdate\" /><em>-</em><input type=\"text\" className=\"Wdate\" /></div>\n        </div>\n        <div className=\"confirm-btn\"><span>重置</span><span className=\"confirm\">确认</span></div>\n      </div>\n      <div className=\"ysp-myScfAccountCheck\">\n        <div className=\"sum-box\">\n          <p className=\"notice\"><i className=\"icon\"></i>请您前往太力商城tlmall.com进行还款操作</p>\n          <ul>\n            <li><span>累计融资(元)</span>{data.mc_financeTAmount}</li>\n            <li><span>累计还款(元)</span>{data.mc_repaymentTAmount}</li>\n            <li><span>累计未还(元)</span>{data.mc_pendingRpPrincipalTAmount}</li>\n            <li><span>累计逾期(元)</span>{data.mc_sumOverdueAmount}</li>\n          </ul>\n        </div>\n        <div className=\"prd-list\">\n          {data.list.length==0 ? \n            <div className=\"no-prd\">抱歉，未查询到明细！</div> :\n            <Fragment>\n            {data.list.map(function(d,i){\n              return(\n              \t<ul className=\"prd\">\n                  <li><span>订单编码：</span>d.orderId<em className=\"status statusNum\">d.orderState</em></li>\n                  <li><span>融资编码：</span>d.loanId</li>\n                  <li>\n                    <div className=\"list-l\"><span>融资金额：</span>d.financeAmount</div>\n                    <div className=\"list-r\"><span>已还本金：</span>d.repaymentAmount</div>\n                    <span className=\"go\"></span>\n                  </li>\n                  <li>\n                    <div className=\"list-l\"><span>待还本金：</span>d.pendingRpPrincipalAmount</div>\n                    <div className=\"list-r\"><span>逾期金额：</span>d.overdueAmount</div>\n                  </li>\n                  <li>\n                    <div className=\"list-l\"><span>放款日期：</span><AInput type=\"date\" /></div>\n                    <div className=\"list-r\"><span>到期日期：</span><AInput type=\"date\" /></div>\n                  </li>\n                </ul>\n              )\n            })\n          }\n          </Fragment>\n        }\n        </div>\n        <CustomPage \n              pageData={data.page} \n              searchClick={me.searchClick.bind(me)}       \n              searchChange={me.searchChange.bind(me)} \n              firstClick={me.firstClick.bind(me)} \n              prevClick={me.prevClick.bind(me)} \n              nextClick={me.nextClick.bind(me)} \n              lastClick={me.lastClick.bind(me)} \n              sureClick={me.sureClick.bind(me)} />\n      </div>\n      </Fragment>\n    )\n  }\n}"
+getData_control42_r1paO6: >-
+  if(!elem){
+    return;
+  }
+
+  let data={
+    mc_financeTAmount:"",
+    mc_repaymentTAmount:"",
+    mc_pendingRpPrincipalTAmount:"",
+    mc_sumOverdueAmount:"",
+    mc_products:"",
+    mc_partnerBank:"",
+    mc_state:"",
+    state:[],
+    mc_financeDateFrom:"",
+    mc_financeDateTo:"",
+    mc_dueDateFrom:"",
+    mc_TotimeEnd:"",
+    list:[],
+    page:[]
+  };
+
+  data.mc_financeTAmount = elem.querySelector("#mc_financeTAmount").textContent;
+
+  data.mc_repaymentTAmount =
+  elem.querySelector("#mc_repaymentTAmount").textContent;
+
+  data.mc_pendingRpPrincipalTAmount =
+  elem.querySelector("#mc_pendingRpPrincipalTAmount").textContent;
+
+  data.mc_sumOverdueAmount =
+  elem.querySelector("#mc_sumOverdueAmount").textContent;
+
+  data.mc_products = elem.querySelector("#mc_products").textContent;
+
+  data.mc_partnerBank = elem.querySelector("#mc_partnerBank").textContent;
+
+  data.mc_state =
+  elem.querySelector("#mc_state").querySelector("option:checked").textContent;
+
+  let states = elem.querySelector("#mc_state").querySelectorAll("option");
+
+  [].map.call(states,function(d,i){
+    data.state.push(d.textContent);
+  });
+
+  data.mc_financeDateFrom =
+  elem.querySelector("#mc_financeDateFrom").textContent;
+
+  data.mc_financeDateTo = elem.querySelector("#mc_financeDateTo").textContent;
+
+  data.mc_dueDateFrom = elem.querySelector("#mc_dueDateFrom").textContent;
+
+  data.mc_TotimeEnd = elem.querySelector("#mc_TotimeEnd").textContent;
+
+  data.page.push(elem.querySelector("#mc_pagination").querySelector(".nowPage").textContent);
+
+  data.page.push(elem.querySelector("#mc_pagination").querySelector(".allPages").textContent);
+
+  let iptShow =
+  elem.querySelector("#mc_pagination").querySelector(".J-paginationjs-go-pagenumber").style.display;
+
+  data.page.push(iptShow);
+
+  data.page.push(elem.querySelector("#mc_pagination").querySelector(".J-paginationjs-go-pagenumber").value);
+
+  return data;
+doAction_uiControl31_1FMGPo: |-
+  let type = data.eventType;
+  if(type == "back"){
+     ysp.appMain.back();
+  }else if(type == "firstClick"){
+    elem.querySelector("#mc_pagination").querySelectorAll("li")[0].click();
+  }else if(type == "prevClick"){
+    elem.querySelector("#mc_pagination").querySelectorAll("li")[1].click();
+  }else if(type == "searchClick"){
+    elem.querySelector("#mc_pagination").querySelectorAll("li")[2].click();
+  }else if(type == "nextClick"){
+    elem.querySelector("#mc_pagination").querySelectorAll("li")[3].click();
+  }else if(type == "lastClick"){
+    elem.querySelector("#mc_pagination").querySelectorAll("li")[4].querySelector("a").click();
+  }else if(type == "searchChange"){
+    let d = data.dataCustom;
+    elem.querySelector("#mc_pagination").querySelectorAll(".J-paginationjs-go-pagenumber").value = d;
+  }else if(type == "sureClick"){
+    elem.querySelector("#mc_pagination").querySelector(".J-paginationjs-go-button").click();
+  }
