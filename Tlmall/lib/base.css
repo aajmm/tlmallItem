@@ -42,6 +42,9 @@ i,
 em {
   font-style: normal;
 }
+.disnone {
+  display: none;
+}
 /*    以上样式为公用样式      */
 .ysp-top {
   position: fixed;
@@ -178,6 +181,21 @@ em {
 }
 .ysp-tip-pop .pop-con .tip-btn-two span {
   width: 40%;
+}
+.ysp-tips {
+  position: fixed;
+  top: 50%;
+  left: 15%;
+  z-index: 500;
+  width: 70%;
+  padding: 10px 0;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateY(-50%);
+}
+.ysp-tips p {
+  color: #fff;
+  text-align: center;
 }
 .ysp-page-box {
   background: #fff;
@@ -1875,8 +1893,18 @@ div[data-ysp-modelid^="contact"] .form-box .form-li textarea {
   resize: none;
   color: #333;
 }
+div[data-ysp-modelid^="contact"] .form-box .edit-tip {
+  width: 90%;
+  height: 20px;
+  margin: 10px auto 0;
+  line-height: 20px;
+  color: #e7350d;
+  font-size: 12px;
+}
+div[data-ysp-modelid^="contact"] .form-box .visible-hide {
+  opacity: 0;
+}
 div[data-ysp-modelid^="contact"] .form-box .save-box {
-  margin-top: 10px;
   margin-bottom: 44px;
 }
 div[data-ysp-modelid^="contact"] .form-box .save-box span {
@@ -1897,7 +1925,7 @@ div[data-ysp-modelid^="contact"] .form-box .save-box span:last-child {
   background-color: #4796ed;
 }
 div[data-ysp-modelid^="contact"] .form-box .save-box span:first-child {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 div[data-ysp-modelid^="rebateConfirMation"] {
@@ -2435,10 +2463,10 @@ div[data-ysp-modelid^="index"] .ysp-footer p {
 div[data-ysp-modelid^="limitSearch"] {
   background: #f3f3f3;
 }
-div[data-ysp-modelid^="limitSearch"] .tab-box {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .tab-box {
   display: flex;
 }
-div[data-ysp-modelid^="limitSearch"] .tab-box li {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .tab-box li {
   width: 50%;
   margin: 5%;
   border-radius: 3px;
@@ -2446,11 +2474,11 @@ div[data-ysp-modelid^="limitSearch"] .tab-box li {
   text-align: center;
   background: #e1e1e1;
 }
-div[data-ysp-modelid^="limitSearch"] .tab-box li.act {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .tab-box li.act {
   background: #e7350d;
   color: #fff;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .filter input {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .filter input {
   width: 70%;
   height: 100%;
   float: right;
@@ -2459,11 +2487,11 @@ div[data-ysp-modelid^="limitSearch"] .filter-box .filter input {
   color: #333;
   font-size: 14px;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .filter input[type="date"] {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .filter input[type="date"] {
   background: #fff url(../local/img/date.png) no-repeat right center;
   background-size: 16px 16px;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .filter .option-show {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .filter .option-show {
   float: right;
   width: 70%;
   line-height: 40px;
@@ -2474,11 +2502,11 @@ div[data-ysp-modelid^="limitSearch"] .filter-box .filter .option-show {
   font-size: 14px;
   color: #999;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .btn-box {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .btn-box {
   text-align: right;
   padding: 10px 0;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box .btn-box span {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .filter-box .btn-box span {
   display: inline-block;
   margin-right: 12px;
   border-radius: 3px;
@@ -2487,43 +2515,70 @@ div[data-ysp-modelid^="limitSearch"] .filter-box .btn-box span {
   color: #fff;
   font-size: 12px;
 }
-div[data-ysp-modelid^="limitSearch"] .filter-box.btm {
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .checked i {
+  background: url(../local/img/round-red.png) no-repeat center center;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .checked input:disabled + i {
+  background: url(../local/img/round-flat-disabled.png) no-repeat center center;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .sel-all-box {
+  position: fixed;
+  left: 0;
+  bottom: 52px;
+  z-index: 200;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
   border-top: 1px solid #e1e1e1;
-  margin-top: 1px;
-  padding: 5px 12px;
-  color: #999;
 }
-.disnone {
-  display: none;
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .sel-all-box .ckeck-label {
+  width: 45%;
+  color: #333;
+  font-size: 14px;
+  padding-left: 35px;
 }
-div[data-ysp-modelid^="immediateRepayment"] {
-  background: #f3f3f3;
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .sel-all-box .ckeck-label i {
+  top: 15px;
+  left: 10px;
+  background-size: 100%;
 }
-div[data-ysp-modelid^="immediateRepayment"] .tip {
-  margin-top: 55px;
+div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .sel-all-box span {
+  display: inline-block;
+  width: 55%;
+  height: 100%;
+  text-align: center;
+  background: #e7350d;
+  color: #fff;
+}
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .tip {
+  margin-top: 44px;
   background: #fff;
   padding: 10px;
+  border-top: 10px solid #f3f3f3;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box {
   background: #fff;
   margin-top: 10px;
   padding-bottom: 10px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tit {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tit {
   height: 40px;
   line-height: 40px;
   padding: 0 10px;
   color: #e7350d;
   border-bottom: 1px solid #e1e1e1;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .branch {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .branch {
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid #e1e1e1;
   padding: 0 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .branch .option-show {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .branch .option-show {
   float: right;
   width: 70%;
   height: 100%;
@@ -2532,11 +2587,11 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .branch .option-show {
   background-size: 10px;
   color: #666;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order {
   margin: 10px 12px 0;
   background: #f3f3f3;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order .tit2 {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order .tit2 {
   height: 34px;
   line-height: 34px;
   padding: 0 10px;
@@ -2544,21 +2599,21 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .order .tit2 {
   font-size: 12px;
   border-bottom: 1px solid #fff;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order ul {
   display: flex;
   padding: 10px 0;
   border-bottom: 1px solid #fff;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul li {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order ul li {
   width: 33.3%;
   text-align: center;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul li span {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order ul li span {
   display: block;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul li input {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order ul li input {
   border: solid 1px #e2e2e2;
   border-radius: 3px;
   background: #fff;
@@ -2570,29 +2625,29 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .order ul li input {
   color: #333;
   margin: 0 auto;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .order .bottom {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .order .bottom {
   height: 34px;
   line-height: 34px;
   padding: 0 10px;
   color: #999;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tit3 {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tit3 {
   height: 40px;
   line-height: 40px;
   margin: 0 10px;
   padding: 0 10px;
   border-bottom: 1px solid #e1e1e1;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab {
   display: flex;
   margin: 0 10px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 {
   width: 50%;
   padding: 10px 0;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 label {
   position: relative;
   display: inline-block;
   padding-left: 30px;
@@ -2600,10 +2655,10 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label {
   margin-bottom: 0;
   font-size: 14px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label input {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 label input {
   display: none;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label i {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 label i {
   position: absolute;
   top: 2px;
   left: 0;
@@ -2613,28 +2668,28 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label i {
   background: url(../local/img/round-gray.png) no-repeat center center;
   background-size: cover;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .tab .tab1 label input:checked + i {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .tab .tab1 label input:checked + i {
   background: url(../local/img/round-red.png) no-repeat center center;
   background-size: cover;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock {
   background: #f3f3f3;
   padding: 10px 10px 0;
   display: flex;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet {
   width: 50%;
   padding: 10px;
   background: #fff;
   text-align: center;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet p {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet p {
   margin-bottom: 3px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet span {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet span {
   color: #e7350d;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet input {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet input {
   display: inline-block;
   width: 80px;
   height: 20px;
@@ -2646,27 +2701,24 @@ div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet input {
   text-align: center;
   font-size: 12px;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .sblock .wallet:first-child {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .sblock .wallet:first-child {
   border-right: 1px solid #e1e1e1;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .num-box {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .num-box {
   border-top: 10px solid #f3f3f3;
   padding: 10px;
   text-align: right;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .num-box span {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .num-box span {
   color: #e7350d;
 }
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .num-box .immediate-pay {
+div[data-ysp-modelid^="limitSearch"] .ysp-immediateRepay .detail-box .num-box .immediate-pay {
   margin-top: 10px;
   text-align: center;
   line-height: 32px;
   color: #fff;
   background: #e7350d;
   border-radius: 3px;
-}
-div[data-ysp-modelid^="immediateRepayment"] .detail-box .disnone {
-  display: none;
 }
 div[data-ysp-modelid^="queryCreditedPaymentHistory"] {
   background: #f3f3f3;
@@ -2924,6 +2976,9 @@ div[data-ysp-modelid^="personal"] .yewu ul li {
   background-repeat: no-repeat;
   background-position: center 8px;
 }
+div[data-ysp-modelid^="personal"] .yewu ul .disnone {
+  display: none;
+}
 div[data-ysp-modelid^="personal"] .yewu ul li[code="10100"] {
   background-image: url(../local/img/DDGL.png);
 }
@@ -2995,6 +3050,9 @@ div[data-ysp-modelid^="personal"] .yewu ul li[code="50600"] {
 }
 div[data-ysp-modelid^="personal"] .yewu ul li[code="70100"] {
   background-image: url(../local/img/muban1127.png);
+}
+div[data-ysp-modelid^="personal"] .yewu ul li[code="70201"] {
+  background-image: url(../local/img/qianzhang1127.png);
 }
 div[data-ysp-modelid^="personal"] .yewu ul li[code="70202"] {
   background-image: url(../local/img/wenjianxiazai1127.png);

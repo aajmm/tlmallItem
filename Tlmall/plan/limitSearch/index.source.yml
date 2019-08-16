@@ -6,13 +6,14 @@ doAction_uiControl29_vTrrKv: |-
   }else if(data.eventType == "home"){
      elem.querySelector(".tl-main-menu").querySelector(".logo").click();
   }
-getTemplate_uiControl30_Ul1T7s: "import {Component,Fragment} from 'react'; \nimport {CustomHeader,SelectPop,CustomPage} from 'ysp-custom-components';\nexport default class extends Component{\n//返回\n  back=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'back'\n    });\n   }\n  }\n  //回到首页\n  home=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'home'\n    });\n   }\n  }\n  //select事件\n  companySel = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"companySel\"\n      })\n    }\n  }\n  stateSel = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"stateSel\"\n      })\n    }\n  }\n  //checkbox\n\tselAllClick = (e) => {\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.checked,\n        eventType:\"selAllClick\"\n      })\n    }\n  }\n\tcheckClick = (e) => {\n    var handler = this.props.customHandler;\n    var target = e.target;\n    if(handler){\n      handler({\n        data:[target.checked,target.dataset.index],\n        eventType:\"checkClick\"\n      })\n    }\n  }\n  //其它事件\n  tabClick1 = () =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"tabClick1\"\n      })\n    }\n  }\n  tabClick2 = () =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"tabClick2\"\n      })\n    }\n  }\n  repayNow = () =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"repayNow\"\n      })\n    }\n  }\n  orderChange = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.value,\n        eventType:\"orderChange\"\n      })\n    }\n  }\n  dateChange1 = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.value,\n        eventType:\"dateChange1\"\n      })\n    }\n  }\n  dateChange2 = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.value,\n        eventType:\"dateChange2\"\n      })\n    }\n  }\n  //取消订单\n  cancelClick = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.dataset.index,\n        eventType:\"cancelClick\"\n      })\n    }\n  }\n  //立即支付\n  payClick = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.dataset.index,\n        eventType:\"payClick\"\n      })\n    }\n  }\n  //分页事件\n\tsearchClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"searchClick1\"\n      })\n    }\n  }\n  searchChange1 = (e) => {\n    let target = e.target;\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"searchClick1\"\n      })\n    }\n  }\n  firstClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"firstClick1\"\n      })\n    }\n  }\n  prevClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"prevClick1\"\n      })\n    }\n  }\n  nextClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"nextClick1\"\n      })\n    }\n  }\n  lastClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"lastClick1\"\n      })\n    }\n  }\n  sureClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sureClick1\"\n      })\n    }\n  }\n\tsearchClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"searchClick2\"\n      })\n    }\n  }\n  searchChange2 = (e) => {\n    let target = e.target;\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"searchClick2\"\n      })\n    }\n  }\n  firstClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"firstClick2\"\n      })\n    }\n  }\n  prevClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"prevClick2\"\n      })\n    }\n  }\n  nextClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"nextClick2\"\n      })\n    }\n  }\n  lastClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"lastClick2\"\n      })\n    }\n  }\n  sureClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sureClick2\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n      <Fragment>\n        <CustomHeader \n             data={{centerText:\"额度查询\"}} \n             backIsShow={true} \n             homeIsShow={true}\n             back={me.back.bind(me)}\n             home={me.home.bind(me)}\n          />\n        <div className=\"ysp-limitSearch\">\n          <ul className=\"num-box\">\n            <li>额度已使用金额：<p><em>{data.creditAmount}</em>元</p></li>\n            <li>额度未还款金额：<p><em>{data.receiveAmount}</em>元</p></li>\n          </ul>\n          <div className=\"filter-box\">\n            <div className=\"filter\">您当前有<em>{data.overSoonNum}</em>笔订单将在3天内到期</div>\n            <div className=\"filter\">您当前有<em>{data.overDueNum}</em>笔订单已过期</div>\n            <div className=\"filter\"><span>订&nbsp;单&nbsp;号</span><AInput onChange={me.orderChange.bind(me)} type=\"text\" value={data.orderId} /></div>\n            <div className=\"filter\"><span>开始时间</span><AInput type=\"date\" onChange={me.dateChange1.bind(me)} value={data.createDate} /></div>\n            <div className=\"filter\"><span>截止时间</span><AInput type=\"date\" onChange={me.dateChange2.bind(me)} value={data.completedDate} /></div>\n            <div className=\"filter\"><span>合作分公司</span><SelectPop selChecked={data.apCompany} optionList={data.apCompanies} sels={me.companySel.bind(me)}/></div>\n            <div className=\"filter\"><span>还款状态</span><SelectPop selChecked={data.orderState} optionList={data.orderStates} sels={me.stateSel.bind(me)}/></div>\n            <div className=\"btn-box\"><span onClick={me.tabClick1.bind(me)}>额度查询</span><span onClick={me.tabClick2.bind(me)}>还款查询</span></div>\n          </div>\n          <ul className=\"tab-box\"><li className={data.tab1} onClick={me.tabClick1.bind(me)}>额度订单明细</li><li className={data.tab2} onClick={me.tabClick2.bind(me)}>额度还款明细</li></ul>\n          <p className=\"tip\"><strong>*</strong>请您在<strong>24</strong>个小时内完成支付，否则还款申请会自动取消</p>\n          <div className={\"list-box \" + data.orderLists.isShow}>\n            {\n              data.orderLists.lists.length == 0 ? \n                <div className=\"no-data\">未查询到明细！</div> : \n                <div className=\"lists\">\n                {\n                  data.orderLists.lists.map(function(d,i){\n                    return(\n                      <ul>\n                        <li className=\"tit\"><label className={\"ckeck-label \"+data.orderLists.lists[i][0]}><AInput type=\"checkbox\" data-index={i} onClick={me.checkClick.bind(me)} disabled={data.orderLists.lists[i][1]} /><i></i></label>订单号：{data.orderLists.lists[i][2]}<span>未还款</span></li>\n                        <li>合作分公司：{data.orderLists.lists[i][3]}</li>\n                        <li>订单金额：{data.orderLists.lists[i][4]}</li>\n                        <li>使用额度：{data.orderLists.lists[i][5]}</li>\n                        <li>未还款额度：{data.orderLists.lists[i][6]}</li>\n                        <li>额度类型：{data.orderLists.lists[i][7]}</li>\n                        <li>还款单号：{data.orderLists.lists[i][10]}</li>\n                        <li className=\"date-box\"><p><span>使用日期：</span>{data.orderLists.lists[i][8]}</p><p><span>到期日期：</span>{data.orderLists.lists[i][9]}</p></li>\n                      </ul>\n                    )\n                  })\n                }\n                </div>\n            }\n            <CustomPage \n              pageData={data.page1} \n              searchClick={me.searchClick1.bind(me)}       \n              searchChange={me.searchChange1.bind(me)} \n              firstClick={me.firstClick1.bind(me)} \n              prevClick={me.prevClick1.bind(me)} \n              nextClick={me.nextClick1.bind(me)} \n              lastClick={me.lastClick1.bind(me)} \n              sureClick={me.sureClick1.bind(me)} />\n            <div className=\"sel-all-box\"><label className=\"ckeck-label\"><AInput type=\"checkbox\" onClick={me.selAllClick.bind(me)} /><i></i>全选</label><span onClick={me.repayNow.bind(me)}>立刻还款</span></div>\n          </div>\n          <div className={\"list-box \" + data.repayLists.isShow}>\n            {\n              data.repayLists.lists.length == 0 ? \n                <div className=\"no-data\">未查询到明细！</div> : \n                <div className=\"lists\">\n                {\n                  data.repayLists.lists.map(function(d,i){\n                    return(\n                      <ul>\n                        <li className=\"tit\">申请单号：{data.repayLists.lists[i][0]}</li>\n                        <li>申请时间：{data.repayLists.lists[i][2]}</li>\n                        <li>电子钱包还款金额：{data.repayLists.lists[i][4]}</li>\n                        <li>现金支付金额：{data.repayLists.lists[i][5]}</li>\n                        <li>销售订单号：{data.repayLists.lists[i][6]}</li>\n                        <li><span className=\"repay-tit\">还款金额：</span>{data.repayLists.lists[i][7]}</li>\n                        <li className=\"btm\">合作分公司：{data.repayLists.lists[i][1]}</li>\n                        {data.repayLists.lists[i][8] == \"取消订单\" ?\n                        <li className=\"btn-box\"><span data-index={i} onClick={me.cancelClick.bind(me)}>取消订单</span><span data-index={i} onClick={me.payClick.bind(me)}>立即支付</span></li> : \"\"}\n                        \n                      </ul>\n                    )\n                  })\n                }\n                </div>\n            }\n            <CustomPage \n              pageData={data.page2} \n              searchClick={me.searchClick2.bind(me)}       \n              searchChange={me.searchChange2.bind(me)} \n              firstClick={me.firstClick2.bind(me)} \n              prevClick={me.prevClick2.bind(me)} \n              nextClick={me.nextClick2.bind(me)} \n              lastClick={me.lastClick2.bind(me)} \n              sureClick={me.sureClick2.bind(me)} />\n          </div>\n        </div>\n      </Fragment>\n    )\n  }\n}"
+getTemplate_uiControl30_Ul1T7s: "import {Component,Fragment} from 'react'; \nimport {CustomHeader,SelectPop,CustomPage} from 'ysp-custom-components';\nexport default class extends Component{\n//返回\n  back=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'back'\n    });\n   }\n  }\n  //回到首页\n  home=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'home'\n    });\n   }\n  }\n  //select事件\n  companySel = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"companySel\"\n      })\n    }\n  }\n  stateSel = (e) => {\n   let handler=this.props.customHandler;\n    let target=e.target;\n    if(handler){\n      handler({\n        data:target.dataset.index,\n        eventType:\"stateSel\"\n      })\n    }\n  }\n  //checkbox\n\tselAllClick = (e) => {\n    var handler = this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.checked,\n        eventType:\"selAllClick\"\n      })\n    }\n  }\n\tcheckClick = (e) => {\n    var handler = this.props.customHandler;\n    var target = e.target;\n    if(handler){\n      handler({\n        data:[target.checked,target.dataset.index],\n        eventType:\"checkClick\"\n      })\n    }\n  }\n  //其它事件\n  tabClick1 = () =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"tabClick1\"\n      })\n    }\n  }\n  tabClick2 = () =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"tabClick2\"\n      })\n    }\n  }\n  repayNow = () =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"repayNow\"\n      })\n    }\n  }\n  orderChange = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.value,\n        eventType:\"orderChange\"\n      })\n    }\n  }\n  dateChange1 = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.value,\n        eventType:\"dateChange1\"\n      })\n    }\n  }\n  dateChange2 = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.value,\n        eventType:\"dateChange2\"\n      })\n    }\n  }\n  //取消订单\n  cancelClick = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.dataset.index,\n        eventType:\"cancelClick\"\n      })\n    }\n  }\n  //立即支付\n  payClick = (e) =>{\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:e.target.dataset.index,\n        eventType:\"payClick\"\n      })\n    }\n  }\n  //分页事件\n\tsearchClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"searchClick1\"\n      })\n    }\n  }\n  searchChange1 = (e) => {\n    let target = e.target;\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"searchClick1\"\n      })\n    }\n  }\n  firstClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"firstClick1\"\n      })\n    }\n  }\n  prevClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"prevClick1\"\n      })\n    }\n  }\n  nextClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"nextClick1\"\n      })\n    }\n  }\n  lastClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"lastClick1\"\n      })\n    }\n  }\n  sureClick1 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sureClick1\"\n      })\n    }\n  }\n\tsearchClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"searchClick2\"\n      })\n    }\n  }\n  searchChange2 = (e) => {\n    let target = e.target;\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        data:target.value,\n        eventType:\"searchClick2\"\n      })\n    }\n  }\n  firstClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"firstClick2\"\n      })\n    }\n  }\n  prevClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"prevClick2\"\n      })\n    }\n  }\n  nextClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"nextClick2\"\n      })\n    }\n  }\n  lastClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"lastClick2\"\n      })\n    }\n  }\n  sureClick2 = () => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"sureClick2\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n      <div className={data.titleMain==\"额度查询\" ? \"\" : \"disnone\"}>\n        <CustomHeader \n             data={{centerText:\"额度查询\"}} \n             backIsShow={true} \n             homeIsShow={true}\n             back={me.back.bind(me)}\n             home={me.home.bind(me)}\n          />\n        <div className=\"ysp-limitSearch\">\n          <ul className=\"num-box\">\n            <li>额度已使用金额：<p><em>{data.creditAmount}</em>元</p></li>\n            <li>额度未还款金额：<p><em>{data.receiveAmount}</em>元</p></li>\n          </ul>\n          <div className=\"filter-box\">\n            <div className=\"filter\">您当前有<em>{data.overSoonNum}</em>笔订单将在3天内到期</div>\n            <div className=\"filter\">您当前有<em>{data.overDueNum}</em>笔订单已过期</div>\n            <div className=\"filter\"><span>订&nbsp;单&nbsp;号</span><AInput onChange={me.orderChange.bind(me)} type=\"text\" value={data.orderId} /></div>\n            <div className=\"filter\"><span>开始时间</span><AInput type=\"date\" onChange={me.dateChange1.bind(me)} value={data.createDate} /></div>\n            <div className=\"filter\"><span>截止时间</span><AInput type=\"date\" onChange={me.dateChange2.bind(me)} value={data.completedDate} /></div>\n            <div className=\"filter\"><span>合作分公司</span><SelectPop selChecked={data.apCompany} optionList={data.apCompanies} sels={me.companySel.bind(me)}/></div>\n            <div className=\"filter\"><span>还款状态</span><SelectPop selChecked={data.orderState} optionList={data.orderStates} sels={me.stateSel.bind(me)}/></div>\n            <div className=\"btn-box\"><span onClick={me.tabClick1.bind(me)}>额度查询</span><span onClick={me.tabClick2.bind(me)}>还款查询</span></div>\n          </div>\n          <ul className=\"tab-box\"><li className={data.tab1} onClick={me.tabClick1.bind(me)}>额度订单明细</li><li className={data.tab2} onClick={me.tabClick2.bind(me)}>额度还款明细</li></ul>\n          <p className=\"tip\"><strong>*</strong>请您在<strong>24</strong>个小时内完成支付，否则还款申请会自动取消</p>\n          <div className={\"list-box \" + data.orderLists.isShow}>\n            {\n              data.orderLists.lists.length == 0 ? \n                <div className=\"no-data\">未查询到明细！</div> : \n                <div className=\"lists\">\n                {\n                  data.orderLists.lists.map(function(d,i){\n                    return(\n                      <ul>\n                        <li className=\"tit\"><label className={\"ckeck-label \"+data.orderLists.lists[i][0]}><AInput type=\"checkbox\" data-index={i} onClick={me.checkClick.bind(me)} disabled={data.orderLists.lists[i][1]} /><i></i></label>订单号：{data.orderLists.lists[i][2]}<span>未还款</span></li>\n                        <li>合作分公司：{data.orderLists.lists[i][3]}</li>\n                        <li>订单金额：{data.orderLists.lists[i][4]}</li>\n                        <li>使用额度：{data.orderLists.lists[i][5]}</li>\n                        <li>未还款额度：{data.orderLists.lists[i][6]}</li>\n                        <li>额度类型：{data.orderLists.lists[i][7]}</li>\n                        <li>还款单号：{data.orderLists.lists[i][10]}</li>\n                        <li className=\"date-box\"><p><span>使用日期：</span>{data.orderLists.lists[i][8]}</p><p><span>到期日期：</span>{data.orderLists.lists[i][9]}</p></li>\n                      </ul>\n                    )\n                  })\n                }\n                </div>\n            }\n            <CustomPage \n              pageData={data.page1} \n              searchClick={me.searchClick1.bind(me)}       \n              searchChange={me.searchChange1.bind(me)} \n              firstClick={me.firstClick1.bind(me)} \n              prevClick={me.prevClick1.bind(me)} \n              nextClick={me.nextClick1.bind(me)} \n              lastClick={me.lastClick1.bind(me)} \n              sureClick={me.sureClick1.bind(me)} />\n            <div className=\"sel-all-box\"><label className=\"ckeck-label\"><AInput type=\"checkbox\" onClick={me.selAllClick.bind(me)} /><i></i>全选</label><span onClick={me.repayNow.bind(me)}>立刻还款</span></div>\n          </div>\n          <div className={\"list-box \" + data.repayLists.isShow}>\n            {\n              data.repayLists.lists.length == 0 ? \n                <div className=\"no-data\">未查询到明细！</div> : \n                <div className=\"lists\">\n                {\n                  data.repayLists.lists.map(function(d,i){\n                    return(\n                      <ul>\n                        <li className=\"tit\">申请单号：{data.repayLists.lists[i][0]}</li>\n                        <li>申请时间：{data.repayLists.lists[i][2]}</li>\n                        <li>电子钱包还款金额：{data.repayLists.lists[i][4]}</li>\n                        <li>现金支付金额：{data.repayLists.lists[i][5]}</li>\n                        <li>销售订单号：{data.repayLists.lists[i][6]}</li>\n                        <li><span className=\"repay-tit\">还款金额：</span>{data.repayLists.lists[i][7]}</li>\n                        <li className=\"btm\">合作分公司：{data.repayLists.lists[i][1]}</li>\n                        {data.repayLists.lists[i][8] == \"取消订单\" ?\n                        <li className=\"btn-box\"><span data-index={i} onClick={me.cancelClick.bind(me)}>取消订单</span><span data-index={i} onClick={me.payClick.bind(me)}>立即支付</span></li> : \"\"}\n                        \n                      </ul>\n                    )\n                  })\n                }\n                </div>\n            }\n            <CustomPage \n              pageData={data.page2} \n              searchClick={me.searchClick2.bind(me)}       \n              searchChange={me.searchChange2.bind(me)} \n              firstClick={me.firstClick2.bind(me)} \n              prevClick={me.prevClick2.bind(me)} \n              nextClick={me.nextClick2.bind(me)} \n              lastClick={me.lastClick2.bind(me)} \n              sureClick={me.sureClick2.bind(me)} />\n          </div>\n        </div>\n      </div>\n    )\n  }\n}"
 getData_control44_R2pKt2: >-
   if(!elem){
     return;
   }
 
   let data={
+    titleMain:"",
     creditAmount:"",
     receiveAmount:"",
     overSoonNum:"",
@@ -39,107 +40,73 @@ getData_control44_R2pKt2: >-
     page2:[]
   };
 
-  data.creditAmount = elem.querySelector("#creditAmount").textContent;
+  data.titleMain = elem.querySelector(".title_main
+  ").querySelector("span").textContent;
 
-  data.receiveAmount = elem.querySelector("#receiveAmount").textContent;
-
-  data.overSoonNum = elem.querySelector("#overSoonNum").textContent;
-
-  data.overDueNum = elem.querySelector("#overDueNum").textContent;
-
-  data.orderId = elem.querySelector("#orderId").value;
-
-  data.createDate = elem.querySelector("#createDate").value;
-
-  data.completedDate = elem.querySelector("#completedDate").value;
-
-  data.apCompany =
-  elem.querySelector("#apCompany").querySelector("option:checked").textContent;
-
-  data.orderState =
-  elem.querySelector("#orderState").querySelector("option:checked").textContent;
-
-  let company = elem.querySelector("#apCompany").querySelectorAll("option");
-
-  [].map.call(company,function(d,i){
-    data.apCompanies.push(d.textContent);
-  });
-
-  let states = elem.querySelector("#orderState").querySelectorAll("option");
-
-  [].map.call(states,function(d,i){
-    data.orderStates.push(d.textContent);
-  });
-
-  data.tab1 = elem.querySelector("#orderStatusTab").className;
-
-  data.tab2 = elem.querySelector("#orderDetailTab").className;
-
-  data.orderLists.isShow = elem.querySelector("#AcLists").children[0].className;
-
-  data.repayLists.isShow = elem.querySelector("#AcLists").children[1].className;
-
-  data.orderLists.selAll.push(elem.querySelector("#tableAll").checked);
-
-  data.orderLists.selAll.push(elem.querySelector("#tableAll").disabled);
-
-  let List1 = elem.querySelector("#tBody_pay").querySelectorAll("tr");
-
-  List1 && [].map.call(List1,function(d,i){
-    let tds = d.querySelectorAll("td");
-    let Tds1 = [];
-    [].map.call(tds,function(m,n){
-      if(n==0){
-        Tds1.push(m.querySelector("div").className);
-        Tds1.push(m.querySelector("input").disabled);
-      }else{
-        Tds1.push(m.textContent);
-      }
+  if(data && data.titleMain=="额度查询"){
+    data.creditAmount = elem.querySelector("#creditAmount").textContent;
+    data.receiveAmount = elem.querySelector("#receiveAmount").textContent;
+    data.overSoonNum = elem.querySelector("#overSoonNum").textContent;
+    data.overDueNum = elem.querySelector("#overDueNum").textContent;
+    data.orderId = elem.querySelector("#orderId").value;
+    data.createDate = elem.querySelector("#createDate").value;
+    data.completedDate = elem.querySelector("#completedDate").value;
+    data.apCompany = elem.querySelector("#apCompany").querySelector("option:checked").textContent;
+    data.orderState = elem.querySelector("#orderState").querySelector("option:checked").textContent;
+    let company = elem.querySelector("#apCompany").querySelectorAll("option");
+    [].map.call(company,function(d,i){
+      data.apCompanies.push(d.textContent);
     });
-    data.orderLists.lists.push(Tds1);
-  });
-
-  let List2 = elem.querySelector("#tbody_repay").querySelectorAll("tr");
-
-  List2 && [].map.call(List2,function(d,i){
-    let tds2 = d.querySelectorAll("td");
-    let Tds2 = [];
-    [].map.call(tds2,function(m,n){
-        Tds2.push(m.textContent);
+    let states = elem.querySelector("#orderState").querySelectorAll("option");
+    [].map.call(states,function(d,i){
+      data.orderStates.push(d.textContent);
     });
-    data.repayLists.lists.push(Tds2);
-  });
+    data.tab1 = elem.querySelector("#orderStatusTab").className;
+    data.tab2 = elem.querySelector("#orderDetailTab").className;
+    data.orderLists.isShow = elem.querySelector("#AcLists").children[0].className;
+    data.repayLists.isShow = elem.querySelector("#AcLists").children[1].className;
+    data.orderLists.selAll.push(elem.querySelector("#tableAll").checked);
+    data.orderLists.selAll.push(elem.querySelector("#tableAll").disabled);
+    let List1 = elem.querySelector("#tBody_pay").querySelectorAll("tr");
+    List1 && [].map.call(List1,function(d,i){
+      let tds = d.querySelectorAll("td");
+      let Tds1 = [];
+      [].map.call(tds,function(m,n){
+        if(n==0){
+          Tds1.push(m.querySelector("div").className);
+          Tds1.push(m.querySelector("input").disabled);
+        }else{
+          Tds1.push(m.textContent);
+        }
+      });
+      data.orderLists.lists.push(Tds1);
+    });
+    let List2 = elem.querySelector("#tbody_repay").querySelectorAll("tr");
+    List2 && [].map.call(List2,function(d,i){
+      let tds2 = d.querySelectorAll("td");
+      let Tds2 = [];
+      [].map.call(tds2,function(m,n){
+          Tds2.push(m.textContent);
+      });
+      data.repayLists.lists.push(Tds2);
+    });
 
+    data.page1.push(elem.querySelector("#pagination").querySelector(".nowPage").textContent);
+    data.page1.push(elem.querySelector("#pagination").querySelector(".allPages").textContent);
+    let iptShow1 = elem.querySelector("#pagination").querySelector(".J-paginationjs-go-pagenumber").style.display;
+    data.page1.push(iptShow1);
+    data.page1.push(elem.querySelector("#pagination").querySelector(".J-paginationjs-go-pagenumber").value);
+    let pageShow2 = elem.querySelector("#pagination2").querySelector(".nowPage");
+    pageShow2 && data.page2.push(elem.querySelector("#pagination2").querySelector(".nowPage").textContent);
+    pageShow2 && data.page2.push(elem.querySelector("#pagination2").querySelector(".allPages").textContent);
+    let iptShow2 = pageShow2 && elem.querySelector("#pagination2").querySelector(".J-paginationjs-go-pagenumber").style.display;
+    data.page2.push(iptShow2);
+    pageShow2 && data.page2.push(elem.querySelector("#pagination2").querySelector(".J-paginationjs-go-pagenumber").value);
+  }
 
-  data.page1.push(elem.querySelector("#pagination").querySelector(".nowPage").textContent);
-
-  data.page1.push(elem.querySelector("#pagination").querySelector(".allPages").textContent);
-
-  let iptShow1 =
-  elem.querySelector("#pagination").querySelector(".J-paginationjs-go-pagenumber").style.display;
-
-  data.page1.push(iptShow1);
-
-  data.page1.push(elem.querySelector("#pagination").querySelector(".J-paginationjs-go-pagenumber").value);
-
-  let pageShow2 = elem.querySelector("#pagination2").querySelector(".nowPage");
-
-  pageShow2 &&
-  data.page2.push(elem.querySelector("#pagination2").querySelector(".nowPage").textContent);
-
-  pageShow2 &&
-  data.page2.push(elem.querySelector("#pagination2").querySelector(".allPages").textContent);
-
-  let iptShow2 = pageShow2 &&
-  elem.querySelector("#pagination2").querySelector(".J-paginationjs-go-pagenumber").style.display;
-
-  data.page2.push(iptShow2);
-
-  pageShow2 &&
-  data.page2.push(elem.querySelector("#pagination2").querySelector(".J-paginationjs-go-pagenumber").value);
 
   return data;
-doAction_uiControl30_Ul1T7s: "let type = data.eventType;\nif(type == \"back\"){\n   ysp.appMain.back();\n}else if(type == \"home\"){\n   elem.querySelector(\".tl-main-menu\").querySelector(\".logo\").click();\n}else if(type == \"tabClick1\"){\n  elem.querySelector(\"#orderStatusTab\").click();\n}else if(type == \"tabClick2\"){\n  elem.querySelector(\"#orderDetailTab\").click();\n}else if(type == \"repayNow\"){\n  elem.querySelector(\"input[value='立即还款']\").click();\n}else if(type == \"orderChange\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#orderId\");\n  ipt.value = d;\n  ipt.dispatchEvent(new Event(\"change\"));\n}else if(type == \"dateChange1\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#createDate\");\n  ipt.value = d;\n  ipt.dispatchEvent(new Event(\"change\"));\n}else if(type == \"dateChange2\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#completedDate\");\n  ipt.value = d;\n  ipt.dispatchEvent(new Event(\"change\"));\n}else if(type == \"companySel\"){\n   let Num = data.dataCustom;\n   let d = Num.indexOf(\"-\");\n   let Num2 = parseInt(Num.substr(d+1,Num.length));\n  elem.querySelector(\"#apCompany\").querySelectorAll(\"option\")[Num2].selected = true;\n}else if(type == \"stateSel1\"){\n   let Num = data.dataCustom;\n   let d = Num.indexOf(\"-\");\n   let Num2 = parseInt(Num.substr(d+1,Num.length));\n  elem.querySelector(\"#orderState\").querySelectorAll(\"option\")[Num2].selected = true;\n}else if(type == \"firstClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[0].click();\n}else if(type == \"prevClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[1].click();\n}else if(type == \"searchClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[2].click();\n}else if(type == \"nextClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[3].click();\n}else if(type == \"lastClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[4].querySelector(\"a\").click();\n}else if(type == \"searchChange1\"){\n  let d = data.dataCustom;\n  elem.querySelector(\"#pagination\").querySelectorAll(\".J-paginationjs-go-pagenumber\").value = d;\n}else if(type == \"sureClick1\"){\n  elem.querySelector(\"#pagination\").querySelector(\".J-paginationjs-go-button\").click();\n}else if(type == \"firstClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[0].click();\n}else if(type == \"prevClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[1].click();\n}else if(type == \"searchClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[2].click();\n}else if(type == \"nextClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[3].click();\n}else if(type == \"lastClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[4].querySelector(\"a\").click();\n}else if(type == \"searchChange2\"){\n  let d = data.dataCustom;\n  elem.querySelector(\"#pagination2\").querySelectorAll(\".J-paginationjs-go-pagenumber\").value = d;\n}else if(type == \"sureClick2\"){\n  elem.querySelector(\"#pagination2\").querySelector(\".J-paginationjs-go-button\").click();\n}else if(type == \"cancelClick\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#tbody_repay\").querySelectorAll(\"tr\")[d].querySelector(\".alink02\");\n  ipt.click();\n}else if(type == \"payClick\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#tbody_repay\").querySelectorAll(\"tr\")[d].querySelector(\".btn_bg01\");\n  ipt.click();\n  ipt.dispatchEvent(new Event(\"click\"));\n}else if(type == \"checkClick\"){\n  let d = data.dataCustom;\n  let num = d[1];\n  let td = elem.querySelector(\"#tBody_pay\").querySelectorAll(\"tr\")[num].querySelectorAll(\"td\")[0];\n  if(d[0]==true){\n  \telem.ownerDocument.defaultView.$(\".input-checkboxAll\").eq(num).iCheck(\"check\");\n  }else{ \n    elem.ownerDocument.defaultView.$(\".input-checkboxAll\").eq(num).iCheck(\"uncheck\");\n  }\n}else if(type == \"selAllClick\"){\n  let d = data.dataCustom;\n  if(d==true){\n  \telem.ownerDocument.defaultView.$(\"#AcLists .input-checkbox\").iCheck(\"check\");\n  }else{ \n    elem.ownerDocument.defaultView.$(\"#AcLists .input-checkbox\").iCheck(\"uncheck\");\n  }\n}"
+doAction_uiControl30_Ul1T7s: "let type = data.eventType;\nif(type == \"back\"){\n   ysp.appMain.back();\n}else if(type == \"home\"){\n   elem.querySelector(\".tl-main-menu\").querySelector(\".logo\").click();\n}else if(type == \"tabClick1\"){\n  elem.querySelector(\"#orderStatusTab\").click();\n}else if(type == \"tabClick2\"){\n  elem.querySelector(\"#orderDetailTab\").click();\n}else if(type == \"repayNow\"){\n  elem.querySelector(\"input[value='立即还款']\").click();\n}else if(type == \"orderChange\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#orderId\");\n  ipt.value = d;\n  ipt.dispatchEvent(new Event(\"change\"));\n}else if(type == \"dateChange1\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#createDate\");\n  ipt.value = d;\n  ipt.dispatchEvent(new Event(\"change\"));\n}else if(type == \"dateChange2\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#completedDate\");\n  ipt.value = d;\n  ipt.dispatchEvent(new Event(\"change\"));\n}else if(type == \"companySel\"){\n   let Num = data.dataCustom;\n   let d = Num.indexOf(\"-\");\n   let Num2 = parseInt(Num.substr(d+1,Num.length));\n  elem.querySelector(\"#apCompany\").querySelectorAll(\"option\")[Num2].selected = true;\n}else if(type == \"stateSel1\"){\n   let Num = data.dataCustom;\n   let d = Num.indexOf(\"-\");\n   let Num2 = parseInt(Num.substr(d+1,Num.length));\n  elem.querySelector(\"#orderState\").querySelectorAll(\"option\")[Num2].selected = true;\n}else if(type == \"firstClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[0].click();\n}else if(type == \"prevClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[1].click();\n}else if(type == \"searchClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[2].click();\n}else if(type == \"nextClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[3].click();\n}else if(type == \"lastClick1\"){\n  elem.querySelector(\"#pagination\").querySelectorAll(\"li\")[4].querySelector(\"a\").click();\n}else if(type == \"searchChange1\"){\n  let d = data.dataCustom;\n  elem.querySelector(\"#pagination\").querySelectorAll(\".J-paginationjs-go-pagenumber\").value = d;\n}else if(type == \"sureClick1\"){\n  elem.querySelector(\"#pagination\").querySelector(\".J-paginationjs-go-button\").click();\n}else if(type == \"firstClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[0].click();\n}else if(type == \"prevClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[1].click();\n}else if(type == \"searchClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[2].click();\n}else if(type == \"nextClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[3].click();\n}else if(type == \"lastClick2\"){\n  elem.querySelector(\"#pagination2\").querySelectorAll(\"li\")[4].querySelector(\"a\").click();\n}else if(type == \"searchChange2\"){\n  let d = data.dataCustom;\n  elem.querySelector(\"#pagination2\").querySelectorAll(\".J-paginationjs-go-pagenumber\").value = d;\n}else if(type == \"sureClick2\"){\n  elem.querySelector(\"#pagination2\").querySelector(\".J-paginationjs-go-button\").click();\n}else if(type == \"cancelClick\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#tbody_repay\").querySelectorAll(\"tr\")[d].querySelector(\".alink02\");\n  ipt.click();\n}else if(type == \"payClick\"){\n  let d = data.dataCustom;\n  let ipt = elem.querySelector(\"#tbody_repay\").querySelectorAll(\"tr\")[d].querySelector(\".btn_bg01\");\n  ipt.click();\n  ipt.dispatchEvent(new Event(\"click\"));\n}else if(type == \"checkClick\"){\n  let d = data.dataCustom;\n  let num = d[1];\n  let td = elem.querySelector(\"#tBody_pay\").querySelectorAll(\"tr\")[num].querySelectorAll(\"td\")[0];\n  console.log(d);\n  if(d[0]==true){\n  \telem.ownerDocument.defaultView.$(\"#tBody_pay .input-checkbox\").eq(num).iCheck(\"check\");\n  }else{ \n    elem.ownerDocument.defaultView.$(\"#tBody_pay .input-checkbox\").eq(num).iCheck(\"uncheck\");\n  }\n}else if(type == \"selAllClick\"){\n  let d = data.dataCustom;\n  if(d==true){\n  \telem.ownerDocument.defaultView.$(\"#AcLists .input-checkbox\").iCheck(\"check\");\n  }else{ \n    elem.ownerDocument.defaultView.$(\"#AcLists .input-checkbox\").iCheck(\"uncheck\");\n  }\n}"
 getTemplate_uiControl18_MOgu9U: "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick(e) {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className=\"ysp-tip-pop\" style={{display:data[0]}}>\n        <div className=\"mask\"></div>\n        <div className=\"pop-con\">\n          <p className=\"tip-con\">{data[1]}</p>\n          <div class=\"tip-btn\"><span className=\"red-btn\" onClick={me.handlerClick.bind(me)}>确认</span></div>\n        </div>\n      </div>\n    )\n  }\n}\n\n\n"
 getData_control38_OLBoGl: |+
   if(!elem){
@@ -156,4 +123,88 @@ doAction_uiControl18_MOgu9U: |-
   if(data.eventType == "click"){
     let btn = elem.querySelector("#errorMsg").querySelector(".alert").querySelector(".close");
     btn.dispatchEvent(new Event("click"));
+  }
+getTemplate_uiControl27_GIMbTR: "import {Component,Fragment} from 'react'; \nimport {CustomHeader,SelectPop,CustomPage} from 'ysp-custom-components';\nexport default class extends Component{\n//返回\n  back=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'back'\n    });\n   }\n  }\n  //回到首页\n  home=()=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'home'\n    });\n   }\n  }\n  //选择分公司\n  selBranch=(e)=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    data:e.target.dataset.index,\n    eventType: 'selBranch'\n    });\n   }\n  }\n  //订单还款总金额\n  payNum=(e)=>{ \n   let handler = this.props.customHandler;\n   let target = e.target;\n   if (handler) {\n    handler({\n    data:[target.dataset.index,target.value],\n    eventType: 'payNum'\n    });\n   }\n  }\n  //使用金额\n  useNum=(e)=>{ \n   let handler = this.props.customHandler;\n   let target = e.target;\n   if (handler) {\n    handler({\n    data:target.value,\n    eventType: 'useNum'\n    });\n   }\n  }\n  //tab切换\n  tabClick=(e)=>{ \n   let handler = this.props.customHandler;\n   let target = e.target;\n   if (handler) {\n    handler({\n    data:[target.checked,target.dataset.index],\n    eventType: 'tabClick'\n    });\n   }\n  }\n  //立即结算\n  payImmediate=(e)=>{ \n   let handler = this.props.customHandler;\n   if (handler) {\n    handler({\n    eventType: 'payImmediate'\n    });\n   }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n    \t<div className={data.titleMain==\"立即还款\" ? \"ysp-immediateRepay\" : \"ysp-immediateRepay disnone\"}>\n        <CustomHeader \n          data={{centerText:\"额度还款申请\"}} \n          backIsShow={true} \n          homeIsShow={true}\n          back={me.back.bind(me)}\n          home={me.home.bind(me)}\n        />\n        <p className=\"tip\">{data.tip}</p>\n        <div className=\"detail-box\">\n          <div className=\"tit\">申请详情</div>\n          <div className=\"branch\"><span>还款分公司：</span><SelectPop selChecked={data.branchCheck} optionList={data.branch} sels={me.selBranch.bind(me)}/></div>\n          {data.orders.map(function(d,i){\n            return(\n            \t<div className=\"order\">\n                <div className=\"tit2\">订单号：{d[0]}</div>\n                <ul>\n                  <li><span>使用额度</span>{d[1]}</li>\n                  <li><span>未还款额度</span>{d[2]}</li>\n                  <li><span>订单还款总金额</span><AInput type=\"text\" value={data[4]} data-index={i} onChange={me.payNum.bind(me)} /></li>\n                </ul>\n                <div className=\"bottom\">到期日期：{d[3]}</div>\n              </div>\n            )\n          })\n          }\n          </div>\n          <div className=\"detail-box\">\n          <div className=\"tit\">支付详情</div>\n          <div className=\"tit3\">电子钱包选择：</div>\n            <div className=\"tab\"><div className=\"tab1\"><label><AInput type=\"radio\" name=\"wallet\" checked={data.tabIpt[0]} data-index={0} onClick={me.tabClick.bind(me)} /><i></i>使用电子钱包</label></div><div className=\"tab1\"><label><AInput type=\"radio\" name=\"wallet\" checked={data.tabIpt[1]} data-index={1} onClick={me.tabClick.bind(me)} /><i></i>不使用电子钱包</label></div></div>\n            <div className={data.tab}><i></i><div className=\"wallet\"><p>可使用电子钱包额度：</p><span>{data.wallet[0]}</span>元</div><div className=\"wallet\"><p>使用金额</p><AInput type=\"text\" value={data.wallet[1]} onChange={me.useNum.bind(me)} />元</div></div>\n            <div className=\"num-box\">\n              <p><span>{data.num[0]}</span>笔订单，总还款金额：<span>{data.num[1]}</span></p>\n              <p>电子钱包：<span>{data.num[2]}</span></p>\n              <p>应付金额：<span>{data.num[3]}</span></p>\n              <div className=\"immediate-pay\" onClick={me.payImmediate.bind(me)}>立即结算</div>\n            </div>\n          </div>\n      </div>\n    )\n  }\n}"
+getData_control30_7WdTGr: >-
+  if(!elem){
+    return;
+  }
+
+  let data={
+    titleMain:"",
+    tip:"",
+    branchCheck:"",
+    branch:[],
+    orders:[],
+    tab:"",
+    tabIpt:[],
+    wallet:[],
+    num:[]
+  };
+
+  data.titleMain =
+  elem.querySelector(".title_main").querySelector("span").textContent;
+
+  if(data && data.titleMain=="立即还款"){
+    data.tip = elem.querySelector(".cr_bk01").textContent;
+    data.branchCheck = elem.querySelector("#RepayCompany").querySelector("option:checked").textContent;
+    let branchs = elem.querySelector("#RepayCompany").querySelectorAll("option");
+    [].map.call(branchs,function(d,i){
+      data.branch.push(d.textContent);
+    });
+    let order = elem.querySelector("#immediatelyRepayTableId").querySelector("tbody").querySelectorAll("tr");
+    [].map.call(order,function(d,i){
+      let orderTr = [];
+      let orderTd = d.querySelectorAll("td");
+      [].map.call(orderTd,function(m,n){
+        if(n != orderTd.length-1){
+          orderTr.push(m.textContent);
+        }else{ 
+          orderTr.push(m.querySelector(".rePayTotalClass").value);
+        }
+      });
+      data.orders.push(orderTr);
+    });
+    data.tab = elem.querySelector("#useElcWBlock").className;
+    data.tabIpt[0] = elem.querySelector("#UseElcW").checked;
+    data.tabIpt[1] = elem.querySelector("#NoUseElcW").checked;
+    data.wallet[0] = elem.querySelector("#canUseEPay").textContent;
+    data.wallet[1] = elem.querySelector("#useEPay").value;
+    data.num[0] = elem.querySelector("#countOrder").textContent;
+    data.num[1] = elem.querySelector("#totalMoney").textContent;
+    data.num[2] = elem.querySelector("#ePayPackage").textContent;
+    data.num[3] = elem.querySelector("#shouldPayMoney").textContent;
+  }
+
+  return data;
+doAction_uiControl27_GIMbTR: |-
+  let type = data.eventType;
+  if(type == "back"){
+     ysp.appMain.back();
+  }else if(type == "home"){
+     elem.querySelector(".tl-main-menu").querySelector(".logo").click();
+  }else if(type=="selBranch"){
+    let d = data.dataCustom;
+    elem.querySelector("#RepayCompany").querySelectorAll("option")[d].selected = true;
+  }else if(type=="payNum"){
+    let d = data.dataCustom;
+    let num = d[0];
+    let ipt = elem.querySelector("#immediatelyRepayTableId").querySelector("tbody").querySelectorAll("tr")[num].querySelector(".rePayTotalClass");
+    ipt.value = d[1];
+    ipt.dispatchEvent(new Event('change'));
+  }else if(type == "useNum"){
+    let d = data.dataCustom;
+    let ipt = elem.querySelector("#useEPay");
+    ipt.value = d;
+    ipt.dispatchEvent(new Event('change'));
+  }else if(type == "tabClick"){
+    let d = data.dataCustom;
+    console.log(d);
+    //let tab = elem.querySelectorAll(".ck_radios")[0].querySelectorAll(".iradio_tlmall")[d];
+    //tab.querySelector("input").checked = d;
+    //ipt.dispatchEvent(new Event('change'));
+  }else if(type == "payImmediate"){
+    let ipt = elem.querySelector("#personalRight").querySelector(".btn_bg01");
+    ipt.click();
+    ipt.dispatchEvent(new Event('click'));
   }
