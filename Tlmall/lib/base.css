@@ -874,8 +874,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type,
 div[data-ysp-modelid^="receivingInformation"] .choose-type,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file,
 div[data-ysp-modelid^="receivingInformation"] .update-file,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard,
@@ -920,8 +922,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone i,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone i,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type i,
 div[data-ysp-modelid^="receivingInformation"] .choose-type i,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard i,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard i,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one i,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one i,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two i,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two i,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file i,
 div[data-ysp-modelid^="receivingInformation"] .update-file i,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard i,
@@ -969,8 +973,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone select,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone select,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type select,
 div[data-ysp-modelid^="receivingInformation"] .choose-type select,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard select,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard select,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one select,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one select,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two select,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two select,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file select,
 div[data-ysp-modelid^="receivingInformation"] .update-file select,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard select,
@@ -1018,8 +1024,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone input,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone input,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type input,
 div[data-ysp-modelid^="receivingInformation"] .choose-type input,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard input,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard input,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one input,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one input,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two input,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two input,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file input,
 div[data-ysp-modelid^="receivingInformation"] .update-file input,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard input,
@@ -1069,8 +1077,10 @@ div[data-ysp-modelid^="enterpriseInformation"] .receive-phone em,
 div[data-ysp-modelid^="receivingInformation"] .receive-phone em,
 div[data-ysp-modelid^="enterpriseInformation"] .choose-type em,
 div[data-ysp-modelid^="receivingInformation"] .choose-type em,
-div[data-ysp-modelid^="enterpriseInformation"] .sign-standard em,
-div[data-ysp-modelid^="receivingInformation"] .sign-standard em,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-one em,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-one em,
+div[data-ysp-modelid^="enterpriseInformation"] .sign-standard-two em,
+div[data-ysp-modelid^="receivingInformation"] .sign-standard-two em,
 div[data-ysp-modelid^="enterpriseInformation"] .update-file em,
 div[data-ysp-modelid^="receivingInformation"] .update-file em,
 div[data-ysp-modelid^="enterpriseInformation"] .update-idCard em,
@@ -1103,18 +1113,29 @@ div[data-ysp-modelid^="receivingInformation"] .submit-immediately button {
   border: 0;
   border-radius: 3px;
 }
-div[data-ysp-modelid^="enterpriseInformation"] {
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-error-msg,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-error-msg,
+div[data-ysp-modelid^="enterpriseInformation"] .receive-error-msg,
+div[data-ysp-modelid^="receivingInformation"] .receive-error-msg {
   width: 100%;
-  height: 100%;
-  overflow: auto;
+  display: flex;
+  justify-content: center;
 }
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation h3 {
-  line-height: 50px;
+div[data-ysp-modelid^="enterpriseInformation"] .enterprise-error-msg p,
+div[data-ysp-modelid^="receivingInformation"] .enterprise-error-msg p,
+div[data-ysp-modelid^="enterpriseInformation"] .receive-error-msg p,
+div[data-ysp-modelid^="receivingInformation"] .receive-error-msg p {
+  width: 92%;
+  color: #E7350E;
+  font-size: 12px;
+  text-align: center;
 }
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .errorIcon {
+div[data-ysp-modelid^="enterpriseInformation"] .errorIcon,
+div[data-ysp-modelid^="receivingInformation"] .errorIcon {
   position: relative;
 }
-div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .errorIcon em {
+div[data-ysp-modelid^="enterpriseInformation"] .errorIcon em,
+div[data-ysp-modelid^="receivingInformation"] .errorIcon em {
   display: block!important;
   width: 16px;
   height: 16px;
@@ -1128,6 +1149,14 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .errorIcon
   top: 14px;
   right: 22px;
   color: #fff;
+}
+div[data-ysp-modelid^="enterpriseInformation"] {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation h3 {
+  line-height: 50px;
 }
 div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .enterpriseInformation-form {
   width: 100%;
@@ -1304,17 +1333,6 @@ div[data-ysp-modelid^="enterpriseInformation"] .enterpriseInformation .contact-i
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
 }
-div[data-ysp-modelid^="enterpriseInformation"] .enterprise-error-msg {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-div[data-ysp-modelid^="enterpriseInformation"] .enterprise-error-msg p {
-  width: 92%;
-  color: #E7350E;
-  font-size: 12px;
-  text-align: center;
-}
 div[data-ysp-modelid^="receivingInformation"] {
   width: 100%;
   height: 100%;
@@ -1402,17 +1420,38 @@ div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-t
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .choose-type p:last-child {
   width: 40%;
 }
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard {
-  display: flex;
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard-one {
   align-items: center;
 }
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard span {
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard-one span {
   width: 24%;
   margin-left: 3px;
 }
-div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard input {
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard-one input {
   border: 0;
   background: none;
+  margin: 0;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard p:first-child {
+  padding: 0 15px;
+  font-size: 12px;
+  color: #e7350d;
+  margin: 0;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard p:first-child a {
+  color: #e7350d;
+  font-size: 12px;
+  text-decoration: underline;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard .sign-standard-two {
+  align-items: center;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard .sign-standard-two span {
+  width: 24%;
+  margin-left: 3px;
+}
+div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .sign-standard .sign-standard-two input {
+  border-radius: 1px solid #ccc;
   margin: 0;
 }
 div[data-ysp-modelid^="receivingInformation"] .receive-iformation-form .update-file input,
@@ -1515,7 +1554,7 @@ div[data-ysp-modelid^="receivingInformation"] .invoice-type div p i {
   top: 45%;
 }
 div[data-ysp-modelid^="receivingInformation"] .submit-immediately {
-  margin: 30px 0 40px;
+  margin-top: 30px;
 }
 div[data-ysp-modelid^="registeredSuccessfully"] div {
   width: 100%;
@@ -2893,6 +2932,175 @@ div[data-ysp-modelid^="personal"] .yewu ul[code="30000"] li,
 div[data-ysp-modelid^="personal"] .yewu ul[code="70000"] li {
   width: 33.3%;
 }
-div[data-ysp-modelid^="personal"] .disnone {
+div[data-ysp-modelid^="billngAddress"] {
+  background-color: #F5F5F5;
+}
+div[data-ysp-modelid^="billngAddress"] .tab-title {
+  background-color: #fff;
+  margin-top: 38px;
+  height: 49px;
+  line-height: 49px;
+  overflow: hidden;
+}
+div[data-ysp-modelid^="billngAddress"] .tab-title .tab-item {
+  float: left;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+div[data-ysp-modelid^="billngAddress"] .tab-title span {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+div[data-ysp-modelid^="billngAddress"] .tab-title span.checked input {
+  color: #E7350D;
+}
+div[data-ysp-modelid^="billngAddress"] .tab-title span.checked:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: url(../local/img/tab-btm-line.png) no-repeat;
+  background-size: 100%;
+}
+div[data-ysp-modelid^="billngAddress"] .tab-title input {
+  border: 0;
+  height: 100%;
+  outline: none;
+  font-size: 14px;
+  color: #666;
+  background-color: transparent;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+}
+div[data-ysp-modelid^="billngAddress"] .status {
+  margin-top: 10px;
+  height: 49px;
+  line-height: 49px;
+  padding: 0 16px;
+  background-color: #fff;
+  overflow: hidden;
+}
+div[data-ysp-modelid^="billngAddress"] .status .content {
+  float: left;
+}
+div[data-ysp-modelid^="billngAddress"] .status .content span {
+  font-size: 12px;
+  color: #999;
+  margin-right: 5px;
+}
+div[data-ysp-modelid^="billngAddress"] .status .content em {
+  font-size: 12px;
+  color: #333;
+}
+div[data-ysp-modelid^="billngAddress"] .status .btn-apply {
+  float: right;
+  font-size: 13px;
+  color: #327BCF;
+  text-decoration: underline;
+}
+div[data-ysp-modelid^="billngAddress"] .status .btn-apply.done {
+  cursor: default;
+  color: #999;
+  text-decoration: none;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content {
+  margin-bottom: 80px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title {
+  overflow: hidden;
+  padding: 16px 16px 8px 16px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title h6,
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title .fr {
+  line-height: 1;
+  font-size: 14px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title h6 {
+  float: left;
+  color: #333;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .item-infor .title .fr {
+  color: #4796ED;
+  text-decoration: underline;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list {
+  background-color: #fff;
+  padding-left: 16px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list {
+  height: 51px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list h5,
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list input,
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list .btnText {
+  line-height: 51px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list h5 {
+  float: left;
+  font-size: 16px;
+  color: #333;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list input {
+  float: right;
+  font-size: 14px;
+  color: #333;
+  border: 0;
+  outline: none;
+  text-align: right;
+  width: 60%;
+  background: transparent;
+  padding: 0 16px 0 0;
+  margin: 0;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list input:disabled {
+  color: #999;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list .btnText {
+  float: right;
+  font-size: 14px;
+  color: #333;
+  padding-right: 16px;
+  padding-left: 50px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .content-list .item-list .btnText .icon-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 8px;
+  height: 15px;
+  background: url(../local/img/icon-arrow-r.png) no-repeat;
+  background-size: 100%;
+  margin-left: 9px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns {
+  text-align: center;
+  padding-top: 32px;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns input[disabled] {
   display: none;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns input {
+  margin: 0 10px;
+  width: 130px;
+  height: 44px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns input.btn_bg02 {
+  border: 1px solid #ccc;
+  color: #333;
+  background-color: #fff;
+}
+div[data-ysp-modelid^="billngAddress"] .address-content .footBtns input.btn_bg01 {
+  border: 0;
+  color: #fff;
+  background: linear-gradient(268deg, #f56522 0%, #e7350e 100%);
 }
