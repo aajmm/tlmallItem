@@ -19,8 +19,6 @@
   "override_urls": [],
   "adapter_urls": [
     {
-<<<<<<< HEAD
-=======
       "title": "login",
       "url": "adapter://Tlmall/plan/login/index.json",
       "matcher": [
@@ -29,7 +27,6 @@
       "demo": []
     },
     {
->>>>>>> 92824ec878fce8ff548ff848d09cddbea4095442
       "title": "contact",
       "url": "adapter://Tlmall/plan/contact/index.json",
       "matcher": [
@@ -162,6 +159,6 @@
   "default_url": "http://192.168.220.23/myaccount/login.jsp",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1565916718232,
+  "update_time": 1565923782871,
   "runtime_env": "1webview"
 }
