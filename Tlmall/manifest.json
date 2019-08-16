@@ -141,6 +141,6 @@
   "default_url": "http://192.168.220.23/myaccount/login.jsp",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1565839224940,
+  "update_time": 1565919423728,
   "runtime_env": "1webview"
 }
