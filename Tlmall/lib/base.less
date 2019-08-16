@@ -66,6 +66,79 @@ strong,i,em{font-style: normal;}
   }
 }
 
+//底部通用样式 xxger
+.ysp-tlmall-navbar{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  z-index: 1000;
+  height:50px;
+  background:#fff;
+  border-top: @theme-border;
+  ul.tlmall-navbar-nav{
+    display: flex;
+    li{
+      position: relative;
+      width:20%;
+      height:100%;
+      padding-top:30px;
+      background-repeat: no-repeat;
+      background-size:auto 22px;
+      background-position: center 4px;
+      text-align: center;
+      font-size:12px;
+      color:#666;
+      .number{
+        position: absolute;
+        top:0;
+        right:0;
+        font-style: normal;
+        background:@theme-red;
+        padding:0 4px;
+        border-radius: 5px;
+        color:#fff;
+        font-size:10px;
+      }
+    }
+    li:nth-child(1){
+      background-image:url(../local/img/icon-home1.png);
+      &.active{
+        color: #E7350D;
+        background-image:url(../local/img/icon-home2.png);
+      }
+    }
+    li:nth-child(2){
+      background-image:url(../local/img/icon-kind1.png);
+      &.active{
+        color: #E7350D;
+        background-image:url(../local/img/icon-kind2.png);
+      }
+    }
+    li:nth-child(3){
+      background-image:url(../local/img/icon-cart1.png);
+      &.active{
+        color: #E7350D;
+        background-image:url(../local/img/icon-cart2.png);
+      }
+    }
+    li:nth-child(4){
+      background-image:url(../local/img/icon-info1.png);
+      &.active{
+        color: #E7350D;
+        background-image:url(../local/img/icon-info2.png);
+      }
+    }
+    li:nth-child(5){
+      background-image:url(../local/img/icon-work1.png);
+      &.active{
+        color: #E7350D;
+        background-image:url(../local/img/icon-work2.png);
+      }
+    }
+  }
+}
+
 //模拟select弹框  xxger
 .ysp-selpop-box {
     display: none;

@@ -3,6 +3,9 @@
   "id": "index",
   "targetURL": "http://192.168.220.23/index.html",
   "jsFile": "index.js",
+  "requires": {
+    "personal": "../personal/index.json"
+  },
   "chineseName": "首页",
   "description": "",
   "firstPaintEnable": false,
@@ -233,6 +236,42 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control45_1HkOGO": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"fixedscroll\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.tl-wrap DIV.tl-fixedscroll"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control45_1HkOGO"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -243,7 +282,8 @@
         "control36_1Ht6sa",
         "control37_7w0gLr",
         "control39_CVGfUQ",
-        "control52_d30rnc"
+        "control52_d30rnc",
+        "control45_1HkOGO"
       ],
       "anchors": [],
       "urlAnchor": []
@@ -274,6 +314,20 @@
       "toContexts": [
         {
           "toContextId": "context2_JFd3LO"
+        }
+      ]
+    },
+    "flow27_UAHzAd": {
+      "fromContextId": "context2_JFd3LO",
+      "fromAction": "doAction",
+      "fromControlId": "control45_1HkOGO",
+      "toContexts": [
+        {
+          "toContextId": "context2_JFd3LO"
+        },
+        {
+          "toContextId": "context3_IigyoX",
+          "toModelId": "personal"
         }
       ]
     }
@@ -371,6 +425,21 @@
               }
             }
           }
+        },
+        {
+          "id": "uiControl32_1eDFSP",
+          "controlId": "control45_1HkOGO",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl32_1eDFSP",
+                "onGetTemplate": "getTemplate_uiControl32_1eDFSP"
+              }
+            }
+          }
         }
       ]
     }
@@ -400,7 +469,8 @@
           "111.200.200.30/index.html?_requestid=11172",
           "192.168.220.23/index.html?_requestid=462",
           "111.200.200.30/index.html?_requestid=12660",
-          "192.168.220.23/index.html?_requestid=30895"
+          "192.168.220.23/index.html?_requestid=30895",
+          "192.168.220.23/?_requestid=98"
         ]
       }
     },

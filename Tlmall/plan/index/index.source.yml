@@ -247,3 +247,83 @@ doAction_uiControl33_TDQe7s: |-
   }else if(data.eventType == "click2"){
     let btn = elem.querySelector("input[value='下次填写']").dispatchEvent(new Event("click"));
   }
+getTemplate_uiControl32_1eDFSP: |-
+  import {Component,Fragment} from 'react'; 
+  import {CustomNavbar} from 'ysp-custom-components';
+  export default class extends Component{
+    homeClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"homeClick"
+        })
+      }
+    }
+    kindClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"kindClick"
+        })
+      }
+    }
+    cartClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"cartClick"
+        })
+      }
+    }
+    infoClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"infoClick"
+        })
+      }
+    }
+    workClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"workClick"
+        })
+      }
+    }
+    render(){
+      let data = this.props.customData;
+      let me=this;
+      return(
+        <CustomNavbar
+          navData={data}
+          homeClick={me.homeClick.bind(me)}
+          kindClick={me.kindClick.bind(me)}
+          cartClick={me.cartClick.bind(me)}
+          infoClick={me.infoClick.bind(me)}
+          workClick={me.workClick.bind(me)}
+        />
+      )
+    }
+  }
+getData_control45_1HkOGO: |-
+  if(!elem){
+    return;
+  }
+  let data=["","","首页"];
+  data[0] = elem.querySelector("#miniCartQtyValue").style.display;
+  data[1] = elem.querySelector("#miniCartQtyValue").textContent;
+  return data;
+doAction_uiControl32_1eDFSP: |-
+  let type = data.eventType;
+  if(type == "homeClick"){
+    elem.querySelector("#homeM").querySelector("a").click();
+  }else if(type == "kindClick"){
+    elem.ownerDocument.defaultView.location.href = "http://192.168.220.23/page/product/list.html";
+  }else if(type == "cartClick"){
+    elem.querySelector("#miniCartQtyValue").parentNode.click();
+  }else if(type == "infoClick"){
+    elem.querySelector("#infoM").querySelector("a").click();
+  }else if(type == "workClick"){
+    elem.ownerDocument.defaultView.location.href = "http://192.168.220.23/personal.html";
+  }
