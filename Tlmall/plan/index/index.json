@@ -5,6 +5,7 @@
   "jsFile": "index.js",
   "chineseName": "首页",
   "description": "",
+  "firstPaintEnable": false,
   "controls": {
     "control32_WMwJBg": {
       "location": {
@@ -394,7 +395,11 @@
           "192.168.220.23/",
           "192.168.220.23/index.html?_requestid=23087",
           "192.168.220.23/index.html?_requestid=23813",
-          "192.168.220.23/index.html?_requestid=30902"
+          "192.168.220.23/index.html?_requestid=30902",
+          "111.200.200.30/index.html?_requestid=10987",
+          "111.200.200.30/index.html?_requestid=11172",
+          "192.168.220.23/index.html?_requestid=462",
+          "111.200.200.30/index.html?_requestid=12660"
         ]
       }
     },
