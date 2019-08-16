@@ -3,8 +3,8 @@ getData_control31_eCGGQi: "if(!elem){\n  return;\n}\nlet data={\n  rc_pengdingCo
 doAction_uiControl20_qwcopo: |-
   var type = data.eventType;
   if(type == "back") {
-    //ysp.appMain.back();
-    elem.ownerDocument.defaultView.location.href = elem.ownerDocument.defaultView.location.href.split('?')[0];
+    ysp.customHelper.back();
+    //elem.ownerDocument.defaultView.location.href = elem.ownerDocument.defaultView.location.href.split('?')[0];
   }else if(type == "startTime") {
     let d = data.dataCustom;
     elem.querySelector("#rc_startTime").value = d;
@@ -160,4 +160,89 @@ doAction_uiControl23_aExU0w: |-
     elem.querySelectorAll(".J-paginationjs-go-pagenumber").value = d;
   }else if(type == "sureClick"){
     elem.querySelector(".J-paginationjs-go-button").click();
+  }
+getTemplate_uiControl36_RXTU7E: |-
+  import {Component,Fragment} from 'react'; 
+  import {CustomNavbar} from 'ysp-custom-components';
+  export default class extends Component{
+    homeClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"homeClick"
+        })
+      }
+    }
+    kindClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"kindClick"
+        })
+      }
+    }
+    cartClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"cartClick"
+        })
+      }
+    }
+    infoClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"infoClick"
+        })
+      }
+    }
+    workClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"workClick"
+        })
+      }
+    }
+    render(){
+      let data = this.props.customData;
+      let me=this;
+      return(
+        <Fragment>
+        {data ?
+          <CustomNavbar
+            navData={data}
+            homeClick={me.homeClick.bind(me)}
+            kindClick={me.kindClick.bind(me)}
+            cartClick={me.cartClick.bind(me)}
+            infoClick={me.infoClick.bind(me)}
+            workClick={me.workClick.bind(me)}
+          /> : ""
+        }
+        </Fragment>
+        
+      )
+    }
+  }
+getData_control46_crtKSS: |-
+  if(!elem){
+    return;
+  }
+  let data=["","","业务中心"];
+  data[0] = elem.querySelector("#miniCartQtyValue").style.display;
+  data[1] = elem.querySelector("#miniCartQtyValue").textContent;
+  return data;
+doAction_uiControl36_RXTU7E: |-
+  let type = data.eventType;
+  if(type == "homeClick"){
+    elem.ownerDocument.defaultView.location.href = ysp.customHelper.indexURL;
+  }else if(type == "kindClick"){
+    elem.ownerDocument.defaultView.location.href = ysp.customHelper.kindURL;
+  }else if(type == "cartClick"){
+    elem.ownerDocument.defaultView.location.href = ysp.customHelper.cartURL;
+  }else if(type == "infoClick"){
+    elem.ownerDocument.defaultView.location.href = ysp.customHelper.infoURL;
+  }else if(type == "workClick"){
+  elem.ownerDocument.defaultView.location.href = ysp.customHelper.workURL;
   }

@@ -88,12 +88,45 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control54_APQ4u3": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"fixedscroll\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.tl-wrap DIV.tl-fixedscroll"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control54_APQ4u3"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context11_e5mv1u": {
       "controls": [
-        "control50_i03eld"
+        "control50_i03eld",
+        "control54_APQ4u3"
       ],
       "anchors": [
         "control49_iT1QvF"
@@ -142,6 +175,21 @@
               }
             }
           }
+        },
+        {
+          "id": "uiControl39_Apheni",
+          "controlId": "control54_APQ4u3",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl39_Apheni",
+                "onGetTemplate": "getTemplate_uiControl39_Apheni"
+              }
+            }
+          }
         }
       ]
     }
@@ -174,6 +222,57 @@
             "defaultKeyword",
             "errorMessage",
             "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "overDueNum",
+            "overSoonNum",
+            "pagination",
+            "payTable",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "receiveAmount",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "tBody_pay",
+            "tableAll",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "AcLists",
+            "allocM",
+            "changeProvince",
+            "creditAmount",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "errorMessage",
+            "errorMsg",
+            "errorMsgUploadFile",
+            "errorMsgUploadFileHtml",
             "fixedscroll",
             "hesrM",
             "homeM",

@@ -26,7 +26,7 @@
     }, doAction_uiControl15_rVvoFf: function (data, elem) {
       "use strict";
       if (data.eventType == "back") {
-        ysp.appMain.back();
+        ysp.customHelper.back();
       } else if (data.eventType == "editbtn") {
         var d = data.dataCustom;var btn = elem.querySelector("#eidtContactList").querySelectorAll(".float_r")[d].querySelector("input[value='编辑']");btn.click();btn.dispatchEvent(new Event("click"));
       } else if (data.eventType == "editDelete") {
@@ -40,7 +40,8 @@
       } else if (data.eventType == "editEmail") {
         var _iptData3 = data.dataCustom;var _d5 = _iptData3[0];var _i3 = _iptData3[1];var _ipt4 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i3].querySelectorAll("input")[3];_ipt4.value = _d5;_ipt4.blur();_ipt4.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editBirthday") {
-        var _iptData4 = data.dataCustom;var _d6 = _iptData4[0];var _i4 = _iptData4[1];var _ipt5 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i4].querySelectorAll("input")[4];_ipt5.value = _d6;_ipt5.dispatchEvent(new Event('change'));
+        var _iptData4 = data.dataCustom;var _d6 = _iptData4[0];var _i4 = _iptData4[1];
+        var _ipt5 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i4].querySelectorAll("input")[4];_ipt5.value = _d6;_ipt5.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editBackground") {
         var _iptData5 = data.dataCustom;var _d7 = _iptData5[0];var _i5 = _iptData5[1];var _ipt6 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i5].querySelectorAll("input")[5];_ipt6.value = _d7;_ipt6.blur();_ipt6.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editJob") {
@@ -50,7 +51,8 @@
       } else if (data.eventType == "editRemark") {
         var _iptData8 = data.dataCustom;var _d10 = _iptData8[0];var _i8 = _iptData8[1];var txtArea = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_i8].querySelector("textarea");txtArea.value = _d10;ipt.blur();txtArea.dispatchEvent(new Event('change'));
       } else if (data.eventType == "editSave") {
-        var _d11 = data.dataCustom;var _btn2 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_d11].querySelector("input[value='保存']"); //btn.click();
+        var _d11 = data.dataCustom;
+        var _btn2 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_d11].querySelector("input[value='保存']"); //btn.click();
         _btn2.dispatchEvent(new Event("click"));
       } else if (data.eventType == "editCancel") {
         var _d12 = data.dataCustom;var _btn3 = elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_d12].querySelector("input[value='取消']");_btn3.click();_btn3.dispatchEvent(new Event("click"));
@@ -74,7 +76,8 @@
       } else if (data.eventType == "addBackground") {
         var _d18 = data.dataCustom;var _ipt14 = elem.querySelector("#contact_background");_ipt14.value = _d18;_ipt14.blur();_ipt14.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addJob") {
-        var _d19 = data.dataCustom;var _ipt15 = elem.querySelector("#contact_job");_ipt15.value = _d19;_ipt15.blur();_ipt15.dispatchEvent(new Event("change"));
+        var _d19 = data.dataCustom;var _ipt15 = elem.querySelector("#contact_job");
+        _ipt15.value = _d19;_ipt15.blur();_ipt15.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addDepartment") {
         var _d20 = data.dataCustom;var _ipt16 = elem.querySelector("#contact_department");_ipt16.value = _d20;_ipt16.blur();_ipt16.dispatchEvent(new Event("change"));
       } else if (data.eventType == "addRemark") {
@@ -92,7 +95,8 @@
       } else if (data.eventType == "editSelContact") {
         var _Num9 = data.dataCustom;var _d27 = _Num9.indexOf("-");var _Num10 = parseInt(_Num9.substr(0, _d27));var _Num11 = parseInt(_Num9.substr(_d27 + 1, _Num9.length));elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_Num10].querySelectorAll("select")[1].querySelectorAll("option")[_Num11].selected = true;
       } else if (data.eventType == "editSelResidence") {
-        var _Num12 = data.dataCustom;var _d28 = _Num12.indexOf("-");var _Num13 = parseInt(_Num12.substr(0, _d28));var _Num14 = parseInt(_Num12.substr(_d28 + 1, _Num12.length));elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_Num13].querySelectorAll("select")[2].querySelectorAll("option")[_Num14].selected = true;
+        var _Num12 = data.dataCustom;var _d28 = _Num12.indexOf("-");var _Num13 = parseInt(_Num12.substr(0, _d28));
+        var _Num14 = parseInt(_Num12.substr(_d28 + 1, _Num12.length));elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_Num13].querySelectorAll("select")[2].querySelectorAll("option")[_Num14].selected = true;
       } else if (data.eventType == "editSelMarital") {
         var _Num15 = data.dataCustom;var _d29 = _Num15.indexOf("-");var _Num16 = parseInt(_Num15.substr(0, _d29));var _Num17 = parseInt(_Num15.substr(_d29 + 1, _Num15.length));elem.querySelector("#eidtContactList").querySelectorAll(".newAddress")[_Num16].querySelectorAll("select")[3].querySelectorAll("option")[_Num17].selected = true;
       }
@@ -119,6 +123,32 @@
     getTemplate_uiControl19_9TG9lv: function () {
       var selfTemplate = "import {Component,Fragment} from 'react'; \nexport default class extends Component{\n  handlerClick(e) {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"click\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n      <Fragment>\n        {data ?<div className=\"ysp-tip-pop\" style={{display:data[0]}}>\n        <div className=\"mask\"></div>\n        <div className=\"pop-con\">\n          <p className=\"tip-con\">{data[1]}</p>\n          <div class=\"tip-btn\"><span className=\"red-btn\" onClick={me.handlerClick.bind(me)}>\u786E\u8BA4</span></div>\n        </div>\n      </div>:\"\"}\n      </Fragment>\n      \n    )\n  }\n}";
       return "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require(\"react\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar _class = function (_Component) {\n  _inherits(_class, _Component);\n\n  function _class() {\n    _classCallCheck(this, _class);\n\n    return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));\n  }\n\n  _createClass(_class, [{\n    key: \"handlerClick\",\n    value: function handlerClick(e) {\n      var handler = this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: \"click\"\n        });\n      }\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var data = this.props.customData;\n      var me = this;\n      return React.createElement(\n        _react.Fragment,\n        null,\n        data ? React.createElement(\n          \"div\",\n          { className: \"ysp-tip-pop\", style: { display: data[0] } },\n          React.createElement(\"div\", { className: \"mask\" }),\n          React.createElement(\n            \"div\",\n            { className: \"pop-con\" },\n            React.createElement(\n              \"p\",\n              { className: \"tip-con\" },\n              data[1]\n            ),\n            React.createElement(\n              \"div\",\n              { \"class\": \"tip-btn\" },\n              React.createElement(\n                \"span\",\n                { className: \"red-btn\", onClick: me.handlerClick.bind(me) },\n                \"\\u786E\\u8BA4\"\n              )\n            )\n          )\n        ) : \"\"\n      );\n    }\n  }]);\n\n  return _class;\n}(_react.Component);\n\nexports.default = _class;";
+    },
+    getData_control47_Oma6rZ: function (elem) {
+      "use strict";
+
+      if (!elem) {
+        return;
+      }var data = ["", "", "业务中心"];data[0] = elem.querySelector("#miniCartQtyValue").style.display;data[1] = elem.querySelector("#miniCartQtyValue").textContent;return data;
+    },
+    doAction_uiControl37_QXuNSM: function (data, elem) {
+      "use strict";
+
+      var type = data.eventType;if (type == "homeClick") {
+        elem.ownerDocument.defaultView.location.href = ysp.customHelper.indexURL;
+      } else if (type == "kindClick") {
+        elem.ownerDocument.defaultView.location.href = ysp.customHelper.kindURL;
+      } else if (type == "cartClick") {
+        elem.ownerDocument.defaultView.location.href = ysp.customHelper.cartURL;
+      } else if (type == "infoClick") {
+        elem.ownerDocument.defaultView.location.href = ysp.customHelper.infoURL;
+      } else if (type == "workClick") {
+        elem.ownerDocument.defaultView.location.href = ysp.customHelper.workURL;
+      }
+    },
+    getTemplate_uiControl37_QXuNSM: function () {
+      var selfTemplate = "import {Component,Fragment} from 'react'; \nimport {CustomNavbar} from 'ysp-custom-components';\nexport default class extends Component{\n  homeClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"homeClick\"\n      })\n    }\n  }\n  kindClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"kindClick\"\n      })\n    }\n  }\n  cartClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"cartClick\"\n      })\n    }\n  }\n  infoClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"infoClick\"\n      })\n    }\n  }\n  workClick = (e) => {\n   let handler=this.props.customHandler;\n    if(handler){\n      handler({\n        eventType:\"workClick\"\n      })\n    }\n  }\n  render(){\n    let data = this.props.customData;\n    let me=this;\n    return(\n      <Fragment>\n      {data ?\n        <CustomNavbar\n          navData={data}\n          homeClick={me.homeClick.bind(me)}\n          kindClick={me.kindClick.bind(me)}\n          cartClick={me.cartClick.bind(me)}\n          infoClick={me.infoClick.bind(me)}\n          workClick={me.workClick.bind(me)}\n        /> : \"\"\n      }\n      </Fragment>\n      \n    )\n  }\n}";
+      return "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _yspCustomComponents = require('ysp-custom-components');\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar _class = function (_Component) {\n  _inherits(_class, _Component);\n\n  function _class() {\n    var _ref;\n\n    var _temp, _this, _ret;\n\n    _classCallCheck(this, _class);\n\n    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _class.__proto__ || Object.getPrototypeOf(_class)).call.apply(_ref, [this].concat(args))), _this), _this.homeClick = function (e) {\n      var handler = _this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: \"homeClick\"\n        });\n      }\n    }, _this.kindClick = function (e) {\n      var handler = _this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: \"kindClick\"\n        });\n      }\n    }, _this.cartClick = function (e) {\n      var handler = _this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: \"cartClick\"\n        });\n      }\n    }, _this.infoClick = function (e) {\n      var handler = _this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: \"infoClick\"\n        });\n      }\n    }, _this.workClick = function (e) {\n      var handler = _this.props.customHandler;\n      if (handler) {\n        handler({\n          eventType: \"workClick\"\n        });\n      }\n    }, _temp), _possibleConstructorReturn(_this, _ret);\n  }\n\n  _createClass(_class, [{\n    key: 'render',\n    value: function render() {\n      var data = this.props.customData;\n      var me = this;\n      return React.createElement(\n        _react.Fragment,\n        null,\n        data ? React.createElement(_yspCustomComponents.CustomNavbar, {\n          navData: data,\n          homeClick: me.homeClick.bind(me),\n          kindClick: me.kindClick.bind(me),\n          cartClick: me.cartClick.bind(me),\n          infoClick: me.infoClick.bind(me),\n          workClick: me.workClick.bind(me)\n        }) : \"\"\n      );\n    }\n  }]);\n\n  return _class;\n}(_react.Component);\n\nexports.default = _class;";
     }
   }, "contact");
 })(window, ysp);

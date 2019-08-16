@@ -4,7 +4,8 @@
   "targetURL": "http://192.168.220.23/personal.html?code=50400",
   "jsFile": "index.js",
   "requires": {
-    "personal": "../personal/index.json"
+    "personal": "../personal/index.json",
+    "index": "../index/index.json"
   },
   "chineseName": "我的联系人",
   "description": "",
@@ -84,13 +85,50 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control47_Oma6rZ": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "userData": {
+          "data": [],
+          "force": false
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"fixedscroll\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.tl-wrap DIV.tl-fixedscroll"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control47_Oma6rZ"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
     "context4_G4wDgT": {
       "controls": [
         "control15_0zwZ6w",
-        "control19_gpIMOV"
+        "control19_gpIMOV",
+        "control47_Oma6rZ"
       ],
       "anchors": [],
       "urlAnchor": [
@@ -129,6 +167,24 @@
           "toContextId": "context4_G4wDgT"
         }
       ]
+    },
+    "flow26_lIfmJg": {
+      "fromContextId": "context4_G4wDgT",
+      "fromAction": "doAction",
+      "fromControlId": "control47_Oma6rZ",
+      "toContexts": [
+        {
+          "toContextId": "context4_G4wDgT"
+        },
+        {
+          "toContextId": "context3_IigyoX",
+          "toModelId": "personal"
+        },
+        {
+          "toContextId": "context2_JFd3LO",
+          "toModelId": "index"
+        }
+      ]
     }
   },
   "pages": {
@@ -161,6 +217,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl19_9TG9lv",
                 "onGetTemplate": "getTemplate_uiControl19_9TG9lv"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl37_QXuNSM",
+          "controlId": "control47_Oma6rZ",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl37_QXuNSM",
+                "onGetTemplate": "getTemplate_uiControl37_QXuNSM"
               }
             }
           }
@@ -268,6 +339,65 @@
             "eidtContactList",
             "errorMessage",
             "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "newAddressDiv",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "allocM",
+            "changeProvince",
+            "contactMessage",
+            "contactMsg",
+            "contact_background",
+            "contact_birthday",
+            "contact_contact",
+            "contact_contactPhone",
+            "contact_department",
+            "contact_email",
+            "contact_fax",
+            "contact_job",
+            "contact_marital",
+            "contact_name",
+            "contact_remark",
+            "contact_residence",
+            "contact_sex",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "eidtContactList",
+            "errorMessage",
+            "errorMsg",
+            "errorMsgUploadFile",
+            "errorMsgUploadFileHtml",
             "fixedscroll",
             "hesrM",
             "homeM",

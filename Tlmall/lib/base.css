@@ -1887,7 +1887,7 @@ div[data-ysp-modelid^="contact"] .contact .contact-list .list-box li:last-child 
 div[data-ysp-modelid^="contact"] .add-contact {
   position: fixed;
   right: 0;
-  bottom: 52px;
+  bottom: 50px;
   left: 0;
   height: 50px;
   background-color: #e7350d;
@@ -2605,7 +2605,7 @@ div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .checked input:d
 div[data-ysp-modelid^="limitSearch"] .ysp-limitSearch .list-box .sel-all-box {
   position: fixed;
   left: 0;
-  bottom: 52px;
+  bottom: 50px;
   z-index: 200;
   width: 100%;
   height: 50px;
