@@ -1,35 +1,8 @@
 {
-    "companyName": "云适配科学研究院",
-    "projectName": "太力商城",
-    "rtVersion": "2.7.0",
-    "studioVersion": "2.2.1-beta.1",
-    "macAddress": "30:9c:23:2f:6f:12",
-    "isUploaded": false,
-    "current_environ": 1,
-    "environments": [
-        {
-            "name": "环境1",
-            "domains": [
-                "http://111.200.200.30",
-                "",
-                ""
-            ]
-        },
-        {
-            "name": "环境2",
-            "domains": [
-                "http://192.168.220.23",
-                "",
-                ""
-            ]
-        },
-        {
-            "name": "环境3",
-            "domains": [
-                "",
-                "",
-                ""
-            ]
-        }
-    ]
+  "companyName": "云适配科学研究院",
+  "projectName": "太力商城",
+  "rtVersion": "2.7.0",
+  "studioVersion": "2.2.1-beta.1",
+  "macAddress": "70:f3:95:1d:d6:da",
+  "isUploaded": false
 }
