@@ -1722,8 +1722,18 @@ div[data-ysp-modelid^="contact"] .form-box .form-li textarea {
   resize: none;
   color: #333;
 }
+div[data-ysp-modelid^="contact"] .form-box .edit-tip {
+  width: 90%;
+  height: 20px;
+  margin: 10px auto 0;
+  line-height: 20px;
+  color: #e7350d;
+  font-size: 12px;
+}
+div[data-ysp-modelid^="contact"] .form-box .visible-hide {
+  opacity: 0;
+}
 div[data-ysp-modelid^="contact"] .form-box .save-box {
-  margin-top: 10px;
   margin-bottom: 44px;
 }
 div[data-ysp-modelid^="contact"] .form-box .save-box span {
@@ -1744,7 +1754,7 @@ div[data-ysp-modelid^="contact"] .form-box .save-box span:last-child {
   background-color: #4796ed;
 }
 div[data-ysp-modelid^="contact"] .form-box .save-box span:first-child {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 div[data-ysp-modelid^="rebateConfirMation"] {
