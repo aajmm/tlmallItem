@@ -153,12 +153,22 @@
       "demo": [
         "http://192.168.220.23/myaccount/login.jsp"
       ]
+    },
+    {
+      "title": "myScfAccountCheck",
+      "url": "adapter://Tlmall/plan/myScfAccountCheck/index.json",
+      "matcher": [
+        "^http:\\/\\/192\\.168\\.220\\.23\\/personal\\.html\\?code=20300"
+      ],
+      "demo": [
+        "http://192.168.220.23/personal.html?code=20300"
+      ]
     }
   ],
   "name": "太力商城",
   "default_url": "http://192.168.220.23/myaccount/login.jsp",
   "scope": "Tlmall",
   "start_url": "http://192.168.220.23/login.html",
-  "update_time": 1565947578578,
+  "update_time": 1565946630657,
   "runtime_env": "1webview"
 }
