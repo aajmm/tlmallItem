@@ -55,7 +55,7 @@ getData_control50_i03eld: >-
 doAction_uiControl34_IAHQ75: |-
   let type = data.eventType;
   if(type == "back"){
-     ysp.appMain.back();
+     ysp.customHelper.back();
   }else if(type == "home"){
      elem.querySelector(".tl-main-menu").querySelector(".logo").click();
   }else if(type == "firstClick1"){
@@ -73,4 +73,89 @@ doAction_uiControl34_IAHQ75: |-
     elem.querySelector("#pagination").querySelectorAll(".J-paginationjs-go-pagenumber").value = d;
   }else if(type == "sureClick1"){
     elem.querySelector("#pagination").querySelector(".J-paginationjs-go-button").click();
+  }
+getTemplate_uiControl39_Apheni: |
+  import {Component,Fragment} from 'react'; 
+  import {CustomNavbar} from 'ysp-custom-components';
+  export default class extends Component{
+    homeClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"homeClick"
+        })
+      }
+    }
+    kindClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"kindClick"
+        })
+      }
+    }
+    cartClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"cartClick"
+        })
+      }
+    }
+    infoClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"infoClick"
+        })
+      }
+    }
+    workClick = (e) => {
+     let handler=this.props.customHandler;
+      if(handler){
+        handler({
+          eventType:"workClick"
+        })
+      }
+    }
+    render(){
+      let data = this.props.customData;
+      let me=this;
+      return(
+        <Fragment>
+        {data ?
+          <CustomNavbar
+            navData={data}
+            homeClick={me.homeClick.bind(me)}
+            kindClick={me.kindClick.bind(me)}
+            cartClick={me.cartClick.bind(me)}
+            infoClick={me.infoClick.bind(me)}
+            workClick={me.workClick.bind(me)}
+          /> : ""
+        }
+        </Fragment>
+        
+      )
+    }
+  }
+getData_control54_APQ4u3: |-
+  if(!elem){
+    return;
+  }
+  let data=["","","业务中心"];
+  data[0] = elem.querySelector("#miniCartQtyValue").style.display;
+  data[1] = elem.querySelector("#miniCartQtyValue").textContent;
+  return data;
+doAction_uiControl39_Apheni: |-
+  let type = data.eventType;
+  if(type == "homeClick"){
+    elem.ownerDocument.defaultView.location.href = ysp.customHelper.indexURL;
+  }else if(type == "kindClick"){
+    elem.ownerDocument.defaultView.location.href = ysp.customHelper.kindURL;
+  }else if(type == "cartClick"){
+    elem.ownerDocument.defaultView.location.href = ysp.customHelper.cartURL;
+  }else if(type == "infoClick"){
+    elem.ownerDocument.defaultView.location.href = ysp.customHelper.infoURL;
+  }else if(type == "workClick"){
+  elem.ownerDocument.defaultView.location.href = ysp.customHelper.workURL;
   }

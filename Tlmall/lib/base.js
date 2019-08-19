@@ -7,8 +7,13 @@
   var utils = ysp.utils;
   ysp.customHelper = {};
   utils.extend(ysp.customHelper, {
+    //该定义对象在适配页面调用方法 ： ysp.customHelper.变量名称
+    indexURL: 'http://192.168.220.23/', //底栏 首页 跳转地址
+    kindURL: 'http://192.168.220.23/page/product/list.html', //底栏 分类 跳转地址
+    cartURL: 'http://192.168.220.23/cart/cart.jsp', //底栏 购物车 跳转地址
+    infoURL: 'http://192.168.220.23/information/list.jsp', //底栏 我的消息 跳转地址
+    workURL: 'http://192.168.220.23/personal.html', //底栏 业务中心 跳转地址
     /* 适配中定制的公共代码放在这里 */
-
     /*
     // 可以实现一个foo方法，在定制适配组件中被使用，如：ysp.customHelper.foo()
     foo: function(){
