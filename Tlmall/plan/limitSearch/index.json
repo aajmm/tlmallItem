@@ -99,6 +99,38 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control53_F6WlPv": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"fixedscroll\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.tl-wrap DIV.tl-fixedscroll"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control53_F6WlPv"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -106,7 +138,8 @@
       "controls": [
         "control44_R2pKt2",
         "control38_OLBoGl",
-        "control30_7WdTGr"
+        "control30_7WdTGr",
+        "control53_F6WlPv"
       ],
       "anchors": [],
       "urlAnchor": [
@@ -196,6 +229,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl27_GIMbTR",
                 "onGetTemplate": "getTemplate_uiControl27_GIMbTR"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl38_cemHiI",
+          "controlId": "control53_F6WlPv",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl38_cemHiI",
+                "onGetTemplate": "getTemplate_uiControl38_cemHiI"
               }
             }
           }
@@ -397,6 +445,68 @@
             "useEPay",
             "useElcWBlock",
             "usePassowrdValidate",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "AcLists",
+            "AcListsTtitle",
+            "allocM",
+            "apCompany",
+            "changeProvince",
+            "completedDate",
+            "createDate",
+            "creditAmount",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "errorMessage",
+            "errorMsg",
+            "errorMsgUploadFile",
+            "errorMsgUploadFileHtml",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "orderDetailTab",
+            "orderId",
+            "orderState",
+            "orderStatusTab",
+            "overDueNum",
+            "overSoonNum",
+            "pagination",
+            "paySearch",
+            "payTable",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rePaySearch",
+            "receiveAmount",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "tBody_pay",
+            "tableAll",
+            "tbody_repay",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
             "xiaoNengIcon",
             "xiaoNengSvcIcon"
           ]

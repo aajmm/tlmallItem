@@ -110,6 +110,38 @@
       "monitored": true,
       "frameXPath": "",
       "componentType": "custom"
+    },
+    "control46_crtKSS": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::DIV[@id=\"fixedscroll\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.tl-wrap DIV.tl-fixedscroll"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[3]"
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control46_crtKSS"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "",
+      "componentType": "custom"
     }
   },
   "contexts": {
@@ -117,7 +149,8 @@
       "controls": [
         "control31_eCGGQi",
         "control33_P4iFS8",
-        "control34_f56u2G"
+        "control34_f56u2G",
+        "control46_crtKSS"
       ],
       "anchors": [],
       "urlAnchor": [
@@ -203,6 +236,21 @@
               "events": {
                 "onDoAction": "doAction_uiControl23_aExU0w",
                 "onGetTemplate": "getTemplate_uiControl23_aExU0w"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl36_RXTU7E",
+          "controlId": "control46_crtKSS",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl36_RXTU7E",
+                "onGetTemplate": "getTemplate_uiControl36_RXTU7E"
               }
             }
           }
@@ -430,6 +478,56 @@
             "defaultKeyword",
             "errorMessage",
             "errorMsg",
+            "fixedscroll",
+            "hesrM",
+            "homeM",
+            "infoM",
+            "lastLoginTime",
+            "lastLoginTimeValue",
+            "loginLinkWhenNoSecureLogin",
+            "miniCartQtyValue",
+            "nav_sidebar",
+            "personalRight",
+            "phoneM",
+            "provinceList",
+            "rc_endTime",
+            "rc_pagination",
+            "rc_pendingConfirmCount",
+            "rc_pengdingConfirmAmount",
+            "rc_startTime",
+            "rc_tbodyList",
+            "rebateConfirMationTemplate",
+            "rebateDetailTemplate",
+            "sealHint",
+            "searchBox",
+            "searchBtn",
+            "searchContainer",
+            "selectedProvince",
+            "smartM",
+            "titleTip",
+            "topBanner",
+            "topBannerBg",
+            "topBannerLink",
+            "topBannerPop",
+            "topBannerPopImg",
+            "topLogin",
+            "topNotLogin",
+            "tucaoIcon",
+            "typeAheadInfo",
+            "typeAheadInfoList",
+            "xiaoNengIcon",
+            "xiaoNengSvcIcon"
+          ],
+          [
+            "allocM",
+            "changeProvince",
+            "custNameAndUserName",
+            "custNameAndUserNameValue",
+            "defaultKeyword",
+            "errorMessage",
+            "errorMsg",
+            "errorMsgUploadFile",
+            "errorMsgUploadFileHtml",
             "fixedscroll",
             "hesrM",
             "homeM",
